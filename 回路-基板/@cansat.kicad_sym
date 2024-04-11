@@ -71,7 +71,7 @@
 			(pin passive line
 				(at -3.81 -25.4 0)
 				(length 2.54)
-				(name "DIO8_TIM0CK-GT"
+				(name "DIO8_TIM0CK-GT_PC1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -89,7 +89,7 @@
 			(pin passive line
 				(at -3.81 -27.94 0)
 				(length 2.54)
-				(name "DIO9_TIM0CAP"
+				(name "DIO9_TIM0CAP_32KTALIN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -107,7 +107,7 @@
 			(pin passive line
 				(at -3.81 -30.48 0)
 				(length 2.54)
-				(name "DIO10_TIM0OUT"
+				(name "DIO10_TIM0OUT_32KTALOUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -143,7 +143,7 @@
 			(pin passive line
 				(at -3.81 -35.56 0)
 				(length 2.54)
-				(name "DIO14_SIF-CLK"
+				(name "DIO14_SIF-CLK_TXD1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -233,7 +233,7 @@
 			(pin passive line
 				(at 39.37 -7.62 180)
 				(length 2.54)
-				(name "DIO18_SPIMOSI"
+				(name "DIO17_COMP1M_PWM4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -269,7 +269,7 @@
 			(pin passive line
 				(at 39.37 -10.16 180)
 				(length 2.54)
-				(name "DIO19_SPISEL0"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -287,7 +287,7 @@
 			(pin passive line
 				(at 39.37 -12.7 180)
 				(length 2.54)
-				(name "VCC"
+				(name "RESETN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -305,7 +305,7 @@
 			(pin passive line
 				(at 39.37 -15.24 180)
 				(length 2.54)
-				(name "DIO4_CTS0"
+				(name "ADC2_VREF"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -323,7 +323,7 @@
 			(pin passive line
 				(at 39.37 -17.78 180)
 				(length 2.54)
-				(name "DIO5_RTS0"
+				(name "ADC1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -341,7 +341,7 @@
 			(pin passive line
 				(at 39.37 -20.32 180)
 				(length 2.54)
-				(name "DIO6__TXD0"
+				(name "DIO0_SPISEL1_ADC3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -359,7 +359,7 @@
 			(pin passive line
 				(at 39.37 -22.86 180)
 				(length 2.54)
-				(name "DIO7_RXD0"
+				(name "DIO1_SPISEL2_ADC4_PC0"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -377,7 +377,7 @@
 			(pin passive line
 				(at 39.37 -25.4 180)
 				(length 2.54)
-				(name "DIO8_TIM0CK-GT"
+				(name "DIO2_ADC5※2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -395,7 +395,7 @@
 			(pin passive line
 				(at 39.37 -27.94 180)
 				(length 2.54)
-				(name "DIO9_TIM0CAP"
+				(name "DIO3_ADC6※2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -413,7 +413,7 @@
 			(pin passive line
 				(at 39.37 -30.48 180)
 				(length 2.54)
-				(name "DIO10_TIM0OUT"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -431,7 +431,7 @@
 			(pin passive line
 				(at 39.37 -33.02 180)
 				(length 2.54)
-				(name "DIO12_PWM2"
+				(name "NC_RF"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -467,7 +467,7 @@
 			(pin passive line
 				(at 39.37 -35.56 180)
 				(length 2.54)
-				(name "DIO14_SIF-CLK"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -485,7 +485,7 @@
 			(pin passive line
 				(at 39.37 -38.1 180)
 				(length 2.54)
-				(name "DIO13_PWM3"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -503,7 +503,7 @@
 			(pin passive line
 				(at 39.37 -40.64 180)
 				(length 2.54)
-				(name "DIO11_PWM1"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)

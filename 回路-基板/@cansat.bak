@@ -71,7 +71,7 @@
 			(pin passive line
 				(at -3.81 -25.4 0)
 				(length 2.54)
-				(name "DIO8_TIM0CK-GT"
+				(name "DIO8_TIM0CK-GT_PC1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -89,7 +89,7 @@
 			(pin passive line
 				(at -3.81 -27.94 0)
 				(length 2.54)
-				(name "DIO9_TIM0CAP"
+				(name "DIO9_TIM0CAP_32KTALIN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -107,7 +107,7 @@
 			(pin passive line
 				(at -3.81 -30.48 0)
 				(length 2.54)
-				(name "DIO10_TIM0OUT"
+				(name "DIO10_TIM0OUT_32KTALOUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -143,7 +143,7 @@
 			(pin passive line
 				(at -3.81 -35.56 0)
 				(length 2.54)
-				(name "DIO14_SIF-CLK"
+				(name "DIO14_SIF-CLK_TXD1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -195,6 +195,60 @@
 				)
 			)
 			(pin passive line
+				(at 39.37 -2.54 180)
+				(length 2.54)
+				(name "DIO15_SIF-D_RXD1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -5.08 180)
+				(length 2.54)
+				(name "DIO16_COMP1P"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -7.62 180)
+				(length 2.54)
+				(name "DIO17_COMP1M_PWM4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
 				(at -3.81 -5.08 0)
 				(length 2.54)
 				(name "DO1_SPIMISO"
@@ -213,6 +267,186 @@
 				)
 			)
 			(pin passive line
+				(at 39.37 -10.16 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -12.7 180)
+				(length 2.54)
+				(name "RESETN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -15.24 180)
+				(length 2.54)
+				(name "ADC2_VREF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -17.78 180)
+				(length 2.54)
+				(name "ADC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -20.32 180)
+				(length 2.54)
+				(name "DIO0_SPISEL1_ADC3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -22.86 180)
+				(length 2.54)
+				(name "DIO1_SPISEL2_ADC4_PC0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -25.4 180)
+				(length 2.54)
+				(name "DIO2_ADC5※2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -27.94 180)
+				(length 2.54)
+				(name "DIO3_ADC6※2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -30.48 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -33.02 180)
+				(length 2.54)
+				(name "NC_RF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
 				(at -3.81 -7.62 0)
 				(length 2.54)
 				(name "DIO18_SPIMOSI"
@@ -223,6 +457,60 @@
 					)
 				)
 				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -35.56 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "30"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -38.1 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 39.37 -40.64 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "32"
 					(effects
 						(font
 							(size 1.27 1.27)
