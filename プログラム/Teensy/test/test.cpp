@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <string>
 
@@ -27,6 +28,7 @@ string characters[11][5] = {
     {"゛", "゜", "削除", "改行", "終了"}
 };
 */
+/*
 
 int main(){
     static Cursor cursor{0,0};
@@ -73,3 +75,4 @@ int main(){
 
     return 0;
 }
+*/
