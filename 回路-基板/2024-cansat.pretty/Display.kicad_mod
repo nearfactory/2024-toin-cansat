@@ -266,4 +266,15 @@
 			(xyz 0 0 0)
 		)
 	)
+	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/Display.step"
+		(offset
+			(xyz 0 -11.5 2.68)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
