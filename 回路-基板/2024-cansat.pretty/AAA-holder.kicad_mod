@@ -1,0 +1,161 @@
+(footprint "AAA-holder"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "1xAAA Battery Holder, Keystone, Plastic Case, http://www.keyelco.com/product-pdf.cfm?p=1031")
+	(tags "AAA battery holder Keystone")
+	(property "Reference" "REF**"
+		(at 24.13 0 180)
+		(layer "F.SilkS")
+		(uuid "5906348c-3d7e-4f17-9177-6b379b3deff0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BatteryHolder_Keystone_2466_1xAAA"
+		(at 22 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "251fc499-25d0-448f-b2d2-9ac501bd0690")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "44f1411b-e2ca-47f9-8c10-25fd1e239f27")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4edbedb9-b4b2-419f-900a-1d800ce68451")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ee8e8fc6-8d9a-4c0f-aff9-db9f58492f47")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -4.25 -0.25)
+		(end -1.75 0.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "657a4806-331c-4662-a06a-ffb33294b147")
+	)
+	(fp_rect
+		(start -3.25 -1.25)
+		(end -2.75 1.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "7866e90d-47ba-440b-b2bf-89cf4c1e43f2")
+	)
+	(fp_rect
+		(start 0.1 -5.25)
+		(end 44.6 5.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "eb94074e-059d-4a0e-805e-3c8eac5a5a07")
+	)
+	(fp_rect
+		(start 46.45 -0.25)
+		(end 48.95 0.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "26b868c0-f3b8-4911-8d30-1613473c0a98")
+	)
+	(fp_rect
+		(start -1 -5.5)
+		(end 46 5.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "6fdd91c3-786a-4780-a9df-55c204ba09ad")
+	)
+	(pad "1" thru_hole oval
+		(at 0 0)
+		(size 1.8 4.5)
+		(drill oval 1 3.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "296997d5-f8a8-42b7-8daa-842979f75b06")
+	)
+	(pad "2" thru_hole oval
+		(at 44.7 0)
+		(size 1.8 4.5)
+		(drill oval 1 3.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e2580534-3ff3-4bb6-9be8-0fcf5f4b54f7")
+	)
+	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA+.step"
+		(offset
+			(xyz -0.15 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
+	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA-.step"
+		(offset
+			(xyz 44.85 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+)
