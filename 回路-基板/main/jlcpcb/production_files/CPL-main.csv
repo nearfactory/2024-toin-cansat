@@ -21,5 +21,6 @@ R11,10K,R_0805_2012Metric,1.0,-8.5,-90.0,top
 R12,10K,R_0805_2012Metric,14.0,-15.0,180.0,top
 R13,10K,R_0805_2012Metric,23.0,-9.0,-90.0,top
 R14,1K,R_0805_2012Metric,-2.5,3.75,0.0,top
+R15,1K,R_0805_2012Metric,-19.5,5.5,180.0,top
 SW6,SW_Push,Tactile1,1.5,0.5,0.0,top
 SW7,SW_Push,Tactile1,1.5,-4.0,0.0,top
