@@ -67,6 +67,18 @@
 		)
 	)
 	(attr through_hole)
+	(fp_poly
+		(pts
+			(xy -8.5 -8.5) (xy -9.5 -9) (xy -9.5 -8)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "B.SilkS")
+		(uuid "0c7ace34-0a1f-44a6-bdb9-6f20418542b1")
+	)
 	(fp_line
 		(start 0 -10.9)
 		(end 10.9 -10.9)
@@ -122,12 +134,13 @@
 			)
 		)
 	)
-	(pad "1" thru_hole circle
+	(pad "1" thru_hole rect
 		(at -7 -8.5)
 		(size 1.35 1.35)
 		(drill 0.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
 		(uuid "2ec737a5-995e-48a5-93da-d869eb7876d9")
 	)
 	(pad "2" thru_hole circle
