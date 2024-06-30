@@ -1,0 +1,58 @@
+// Teensyで動作確認済み
+// Chromeで動作確認済み
+// Consoleに出力されるよ
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="cansat-map.css">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>被災者状況</title>
+    </head>
+    <body>
+        <h1 style = "color : blue">Web Serial API</h1>
+        <br>
+        <button onclick="startSerial()">接続</button>
+        <button onclick="stopSerial()">切断</button>
+        <script>
+            let stopFlag = false;
+            async function startSerial() {
+                try {
+                    console.log("INFO: 接続が確立しました");
+                    stopFlag = false;
+                    const port = await navigator.serial.requestPort();
+                    await port.open({ baudRate: 9600 });
+                    while (port.readable) {
+                        const reader = port.readable.getReader();
+                        try {
+                            while (!stopFlag) {
+                                const { value, done } = await reader.read();
+                                if (done) {
+                                    console.log("INFO: 読込モード終了");
+                                    break;
+                                }
+                                //生データはバイナリなので、ユニコード文字へデコード
+                                const inputValue = new TextDecoder().decode(value);
+                                console.log(inputValue);
+                            }
+                        } catch (error) {
+                            console.log("ERROR: 読み出し失敗");
+                            console.log(error);
+                        } finally {
+                            reader.releaseLock();
+                            await port.close();
+                            console.log("INFO: 接続を切断しました");
+                        }
+                    }
+                } catch (error) {
+                    console.log("ERRORR: ポートが開けません");
+                    console.log(error);
+                }
+            }
+            function stopSerial() {
+                stopFlag = true;
+            }
+        </script>
+    </body>
+</html>
