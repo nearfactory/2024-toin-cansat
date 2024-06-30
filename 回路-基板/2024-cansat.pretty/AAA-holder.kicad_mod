@@ -66,8 +66,8 @@
 	)
 	(attr through_hole)
 	(fp_rect
-		(start -4.25 -0.25)
-		(end -1.75 0.25)
+		(start -3.75 -0.25)
+		(end -1.25 0.25)
 		(stroke
 			(width 0.12)
 			(type default)
@@ -77,8 +77,8 @@
 		(uuid "657a4806-331c-4662-a06a-ffb33294b147")
 	)
 	(fp_rect
-		(start -3.25 -1.25)
-		(end -2.75 1.25)
+		(start -2.75 -1.25)
+		(end -2.25 1.25)
 		(stroke
 			(width 0.12)
 			(type default)
@@ -88,19 +88,19 @@
 		(uuid "7866e90d-47ba-440b-b2bf-89cf4c1e43f2")
 	)
 	(fp_rect
-		(start 0.1 -5.25)
-		(end 44.6 5.25)
+		(start 1 -5.25)
+		(end 45.5 5.25)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(fill none)
 		(layer "F.SilkS")
-		(uuid "eb94074e-059d-4a0e-805e-3c8eac5a5a07")
+		(uuid "4e7259b4-6b68-4d45-8a5a-028cb07ad7b1")
 	)
 	(fp_rect
-		(start 46.45 -0.25)
-		(end 48.95 0.25)
+		(start 49.75 -0.25)
+		(end 52.25 0.25)
 		(stroke
 			(width 0.12)
 			(type default)
@@ -110,8 +110,8 @@
 		(uuid "26b868c0-f3b8-4911-8d30-1613473c0a98")
 	)
 	(fp_rect
-		(start -1 -5.5)
-		(end 46 5.5)
+		(start -0.9 -5.5)
+		(end 49.4 5.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -129,7 +129,7 @@
 		(uuid "296997d5-f8a8-42b7-8daa-842979f75b06")
 	)
 	(pad "2" thru_hole oval
-		(at 44.7 0)
+		(at 48.5 0)
 		(size 1.8 4.5)
 		(drill oval 1 3.7)
 		(layers "*.Cu" "*.Mask")
@@ -149,7 +149,7 @@
 	)
 	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA-.step"
 		(offset
-			(xyz 44.85 0 0)
+			(xyz 48.5 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
