@@ -1,0 +1,5 @@
+In file included from C:/Users/magur/OneDrive/ドキュメント/.ScienceClub/2024-toin-cansat/プログラム/Receiver/2024-07-11/@lib/SSD1306-master/lib/ssd1306.h:29:0,
+                 from C:/Users/magur/OneDrive/ドキュメント/.ScienceClub/2024-toin-cansat/プログラム/Receiver/2024-07-11/main.cpp:4:
+C:/Users/magur/OneDrive/ドキュメント/.ScienceClub/2024-toin-cansat/プログラム/Receiver/2024-07-11/@lib/SSD1306-master/lib/twi.h:22:22: fatal error: avr/io.h: No such file or directory
+compilation terminated.
+make: *** [objs_RED/main.o] Error 1
