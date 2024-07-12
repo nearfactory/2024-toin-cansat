@@ -30,10 +30,10 @@ VERSION_VAR  = 0
 ### Additional Src/Include Path
 # if set, find source files from given dirs.
 #
-#APP_COMMON_SRC_DIR_ADD1 = ./src_dir
-#APP_COMMON_SRC_DIR_ADD2 = ../my_common_dir
-#APP_COMMON_SRC_DIR_ADD3 = 
-#APP_COMMON_SRC_DIR_ADD4 =
+APP_COMMON_SRC_DIR_ADD1 = ./src_dir
+APP_COMMON_SRC_DIR_ADD2 = ../my_common_dir
+APP_COMMON_SRC_DIR_ADD3 = ../libraries
+APP_COMMON_SRC_DIR_ADD4 =
 
 #####################################################################
 ### set misc option for compiler
