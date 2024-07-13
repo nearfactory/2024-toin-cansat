@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PAL_MOT-single</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PAL_MOT-single</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pal_mot-single">PAL_MOT-single</a><ul>
+<li><a href="#explanation-of-act">Explanation of ACT</a><ul>
+<li><a href="#宣言部">宣言部</a></li>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#wakeup">wakeup()</a></li>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#mwx_apiret-txreq">MWX_APIRET TxReq()</a></li>
+<li><a href="#sleepnow">sleepNow()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pal_mot-single">PAL_MOT-single</h1>
+<p>This ACT acquires several samples of acceleration data after sleep recovery and sends that data.</p>
+<div class="success">
+<p>The ACT of the “Act” includes the following</p>
+<ul>
+<li>Sending and receiving wireless packets</li>
+<li>Configuration through Interactive settings mode - <a href="../settings/stg_std.html">&lt;STG_STD&gt;</a></li>
+<li>State transition control by state machine - <a href="../api-reference/classes/smsimple-suttomashin.html">&lt;SM_SIMPLE&gt;</a></li>
+<li><a href="../boards/pal/pal_mot.html">&lt;PAL_MOT&gt;</a> or <a href="../boards/cue.html">&lt;CUE&gt;</a> board operation with board BEHAVIOR</li>
+</ul>
+</div>
+<h2 id="explanation-of-act">Explanation of ACT</h2>
+<p>Wake up → start acquiring accelerometer data → wait for accelerometer FIFO interrupt → retrieve accelerometer data → wireless transmission → sleep.</p>
+<div class="info">
+<p>The accelerometer stops adding data to the FIFO queue when the FIFO queue is full.</p>
+</div>
+<h3 id="宣言部">宣言部</h3>
+<h4 id="インクルード">インクルード</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span><span class="pp"> </span><span class="co">// MWX library basic</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span><span class="pp"> </span><span class="co">// network</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#include </span><span class="im">&lt;SM_SIMPLE&gt;</span><span class="pp"> </span><span class="co">// State machine (state transition)</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="pp">#include </span><span class="im">&lt;STG_STD&gt;</span><span class="pp"> </span><span class="co">// Interactive settings mode</span></a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co">/*** board selection (choose one) */</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="pp">#define U</span>SE_PAL_MOT</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">//#define USE_CUE</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co">// board dependend definitions.</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="pp">#if defined(USE_PAL_MOT)</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="pp">#define BRDN </span>PAL_MOT</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="pp">#define BRDC </span>&lt;PAL_MOT&gt;</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="pp">#elif defined(USE_CUE)</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="pp">#define BRDN </span>CUE</a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="pp">#define BRDC </span>&lt;CUE&gt;</a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="pp">#endif</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="co">// include board support</span></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="pp">#include BRDC</span></a></code></pre></div>
+<p>To support MOT PAL or TWELITE CUE, the include part is a macro. Define either <code>USE_PAL_MOT</code> or <code>USE_CUE</code>.</p>
+<p>If <code>USE_PAL_MOT</code> is defined, the board BEHAVIOR <a href="../boards/pal/pal_MOT.html"><code>&lt;PAL_MOT&gt;</code></a> is included.</p>
+<h4 id="state-defined">state-defined</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">enum</span> <span class="kw">class</span> E_STATE : <span class="dt">uint8_t</span> {</a>
+<a class="sourceLine" id="cb2-2" title="2">    INTERACTIVE = <span class="dv">255</span>,</a>
+<a class="sourceLine" id="cb2-3" title="3">    INIT = <span class="dv">0</span>,</a>
+<a class="sourceLine" id="cb2-4" title="4">    START_CAPTURE,</a>
+<a class="sourceLine" id="cb2-5" title="5">    WAIT_CAPTURE,</a>
+<a class="sourceLine" id="cb2-6" title="6">    REQUEST_TX,</a>
+<a class="sourceLine" id="cb2-7" title="7">    WAIT_TX,</a>
+<a class="sourceLine" id="cb2-8" title="8">    EXIT_NORMAL,</a>
+<a class="sourceLine" id="cb2-9" title="9">    EXIT_FATAL</a>
+<a class="sourceLine" id="cb2-10" title="10">};</a>
+<a class="sourceLine" id="cb2-11" title="11">SM_SIMPLE&lt;E_STATE&gt; step;</a></code></pre></div>
+<p>Define states for sequential processing during <code>loop()</code> and also <a href="../api-reference/classes/smsimple-suttomashin.html">state machine</a><code>step</code> is declared.</p>
+<h4 id="sensor-data-storage">Sensor data storage</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">struct</span> {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="dt">int32_t</span> x_ave, y_ave, z_ave;</a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="dt">int32_t</span> x_min, y_min, z_min;</a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="dt">int32_t</span> x_max, y_max, z_max;</a>
+<a class="sourceLine" id="cb3-5" title="5">    <span class="dt">uint16_t</span> n_seq;</a>
+<a class="sourceLine" id="cb3-6" title="6">    <span class="dt">uint8_t</span> n_samples;</a>
+<a class="sourceLine" id="cb3-7" title="7">} sensor;</a></code></pre></div>
+<p>Data structure for storing sensor data.</p>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="co">/// load board and settings objects</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use BRDC (); <span class="co">// load board support</span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;(); <span class="co">// load save/load settings(interactive mode) support</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;(); <span class="co">// load network support</span></a></code></pre></div>
+<p>Registers board, configuration, and network behavior objects.</p>
+<h4 id="interactive-settings-mode">Interactive settings mode</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="co">// settings: configure items</span></a>
+<a class="sourceLine" id="cb5-2" title="2">set &lt;&lt; SETTINGS::appname(<span class="st">&quot;MOT&quot;</span>);</a>
+<a class="sourceLine" id="cb5-3" title="3">set &lt;&lt; SETTINGS::appid_default(DEFAULT_APP_ID); <span class="co">// set default appID</span></a>
+<a class="sourceLine" id="cb5-4" title="4">set &lt;&lt; SETTINGS::ch_default(DEFAULT_CHANNEL); <span class="co">// set default channel</span></a>
+<a class="sourceLine" id="cb5-5" title="5">set &lt;&lt; SETTINGS::lid_default(<span class="bn">0x1</span>); <span class="co">// set default LID</span></a>
+<a class="sourceLine" id="cb5-6" title="6">set.hide_items(E_STGSTD_SETID::OPT_DWORD2, E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4, E_STGSTD_SETID::ENC_KEY_STRING, E_STGSTD_SETID::ENC_MODE);</a>
+<a class="sourceLine" id="cb5-7" title="7"></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="co">// if SET=LOW is detected, start with intaractive mode.</span></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="cf">if</span> (digitalRead(brd.PIN_SET) == PIN_STATE::LOW) {</a>
+<a class="sourceLine" id="cb5-10" title="10">    set &lt;&lt; SETTINGS::open_at_start();</a>
+<a class="sourceLine" id="cb5-11" title="11">    brd.set_led(LED_TIMER::BLINK, <span class="dv">300</span>); <span class="co">// slower blink</span></a>
+<a class="sourceLine" id="cb5-12" title="12">    step.next(STATE::INTERACTIVE);</a>
+<a class="sourceLine" id="cb5-13" title="13">    <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb5-14" title="14">}</a>
+<a class="sourceLine" id="cb5-15" title="15"></a>
+<a class="sourceLine" id="cb5-16" title="16"><span class="co">// load settings</span></a>
+<a class="sourceLine" id="cb5-17" title="17">set.reload(); <span class="co">// load from EEPROM.</span></a>
+<a class="sourceLine" id="cb5-18" title="18">OPT_BITS = set.u32opt1(); <span class="co">// this value is not used in this example.</span></a></code></pre></div>
+<p>Initialize the Interactive settings mode.</p>
+<p>First, adjust the configuration items. Here, we set the title name <code>SETTINGS::appname</code> to be displayed in menu items, the default value of Application ID <code>SETTINGS::appid_default</code>, the default value of CHANNEL <code>SETTINGS::ch_default</code>, the default value of logical device ID default <code>SETTINGS::lid_default</code>, and <code>.hide_items()</code> for hidden items.</p>
+<p>This sample transitions to Interactive settings mode when the SET pin is LO at startup. If <code>digitalRead(brd.PIN_SET)</code> confirms that the pin is LO, specify <code>SETTINGS::open_at_start()</code>. This specification causes the Interactive settings mode screen to appear immediately after exiting <code>SETUP()</code>. When the screen is displayed, <code>begin()</code> and <code>loop()</code> are executed. In this sample, the state <code>STATE::INTERACTIVE</code> is set so that no action such as sleep is performed during <code>loop()</code> and nothing is done.</p>
+<p>Next, the configuration values are read. To read the configuration values, be sure to execute <code>.reload()</code>. In this sample, the option bit setting <code>.u32opt1()</code> is read.</p>
+<h4 id="the_twelite">the_twelite</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">the_twelite &lt;&lt; set;</a></code></pre></div>
+<p><code>the_twelite</code> is a class object that manages the basic behavior of the system. This object performs various initializations such as Application ID and CHANNEL within <code>setup()</code>.</p>
+<p>Here <a href="../settings/stg_std.html#%22no-1">some of the settings for Interactive settings mode</a> is reflected.</p>
+<div class="info">
+<p>If you wish to change an item reflected in the Interactive settings mode settings to another setting, continue with the setting you wish to override.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">the_twelite &lt;&lt; set;<span class="co">// Interactive settings mode</span></a>
+<a class="sourceLine" id="cb7-2" title="2">the_twelite &lt;&lt; twenet::channel(<span class="dv">19</span>); <span class="co">// set ch overwrite to 19</span></a></code></pre></div>
+</div>
+<h4 id="nwk_simple-object">NWK_SIMPLE Object</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1">nwk &lt;&lt; set;</a></code></pre></div>
+<p>Settings are also made for the network behavior object. The logical device ID (LID) and retransmission settings in Interactive settings mode are reflected.</p>
+<h4 id="other-hardware-initialization-etc.">Other hardware initialization, etc.</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1">brd.set_led(LED_TIMER::BLINK, <span class="dv">100</span>);</a></code></pre></div>
+<p>LED blink settings and other settings.</p>
+<h3 id="begin">begin()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">void</span> begin() { </a>
+<a class="sourceLine" id="cb10-2" title="2">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb10-3" title="3">    <span class="cf">if</span> (!set.is_screen_opened()) {</a>
+<a class="sourceLine" id="cb10-4" title="4">        <span class="co">// sleep immediately, waiting for the first capture.</span></a>
+<a class="sourceLine" id="cb10-5" title="5">        sleepNow();</a>
+<a class="sourceLine" id="cb10-6" title="6">    }</a>
+<a class="sourceLine" id="cb10-7" title="7">}</a></code></pre></div>
+<p>Called after <code>setup()</code> is finished. Here, the first sleep is performed. However, if the screen in Interactive settings mode is displayed, it does not sleep.</p>
+<h3 id="wakeup">wakeup()</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">void</span> wakeup() {</a>
+<a class="sourceLine" id="cb11-2" title="2">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;--- PAL_MOT(OneShot):&quot;</span> </a>
+<a class="sourceLine" id="cb11-3" title="3">           &lt;&lt; FOURCHARS &lt;&lt; <span class="st">&quot; wake up ---&quot;</span> &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb11-4" title="4">    eState = E_STATE::INIT;</a>
+<a class="sourceLine" id="cb11-5" title="5">}</a></code></pre></div>
+<p>After waking up, the state variable <code>eState</code> is set to the initial state INIT. After this, <code>loop()</code> is executed.</p>
+<h3 id="loop">loop()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb12-2" title="2">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_MOT&gt;();</a>
+<a class="sourceLine" id="cb12-3" title="3"></a>
+<a class="sourceLine" id="cb12-4" title="4">    <span class="cf">do</span> {</a>
+<a class="sourceLine" id="cb12-5" title="5">        <span class="cf">switch</span>(step.state()) {</a>
+<a class="sourceLine" id="cb12-6" title="6">            <span class="cf">case</span> STATE::INTERACTIVE:</a>
+<a class="sourceLine" id="cb12-7" title="7">            <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb12-8" title="8">        ...</a>
+<a class="sourceLine" id="cb12-9" title="9">    } <span class="cf">while</span>(step.b_more_loop());</a>
+<a class="sourceLine" id="cb12-10" title="10">}</a></code></pre></div>
+<p>The basic structure of <code>loop()</code> is <code>&lt;SM_STATE&gt;</code> state machine <code>state</code> with <em>switch … . case</em> clause. The initial state is <code>STATE::INIT</code> or <code>STATE::INTERACTIVE</code>.</p>
+<h4 id="stateinteractive">STATE::INTERACTIVE</h4>
+<p>This is the state of the Interactive settings mode screen when it is displayed. Nothing is done. Interactive settings mode is used for Serial input and output in this screen.</p>
+<h4 id="stateinit">STATE::INIT</h4>
+<p>INIT in its initial state.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="cf">case</span> STATE::INIT:</a>
+<a class="sourceLine" id="cb13-2" title="2">    brd.sns_MC3630.get_que().clear(); <span class="co">// clear queue in advance (just in case).</span></a>
+<a class="sourceLine" id="cb13-3" title="3">    memset(&amp;sensor, <span class="dv">0</span>, <span class="kw">sizeof</span>(sensor)); <span class="co">// clear sensor data</span></a>
+<a class="sourceLine" id="cb13-4" title="4">    step.next(STATE::START_CAPTURE);</a>
+<a class="sourceLine" id="cb13-5" title="5"><span class="cf">break</span>;</a></code></pre></div>
+<p>In state INIT, initialization (clearing the queue for storing results) and initialization of the data structure for storing results is performed. transition to STATE::START_CAPTURE. After setting this transition, the <em>while</em> loop is executed again.</p>
+<h4 id="statecapture">STATE::CAPTURE</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="cf">case</span> STATE::START_CAPTURE:</a>
+<a class="sourceLine" id="cb14-2" title="2">    brd.sns_MC3630.begin(</a>
+<a class="sourceLine" id="cb14-3" title="3">        <span class="co">// 400Hz, +/-4G range, get four samples and will average them.</span></a>
+<a class="sourceLine" id="cb14-4" title="4">        SnsMC3630::Settings(</a>
+<a class="sourceLine" id="cb14-5" title="5">            SnsMC3630::MODE_LP_400HZ, SnsMC3630::RANGE_PLUS_MINUS_4G, N_SAMPLES)); </a>
+<a class="sourceLine" id="cb14-6" title="6"></a>
+<a class="sourceLine" id="cb14-7" title="7">    step.set_timeout(<span class="dv">100</span>);</a>
+<a class="sourceLine" id="cb14-8" title="8">    step.next(STATE::WAIT_CAPTURE);</a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="cf">break</span>;</a></code></pre></div>
+<p>In the state START_CAPTURE, the FIFO acquisition of the MC3630 sensor is started. Here, the FIFO interrupt is set to occur when 4 samples are acquired at 400 Hz.</p>
+<p>Set timeout for exception handling and transition to the next state <code>STATE::WAIT_CAPTURE</code>.</p>
+<h4 id="statewait_capture">STATE::WAIT_CAPTURE</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="cf">case</span> STATE::WAIT_CAPTURE:</a>
+<a class="sourceLine" id="cb15-2" title="2">    <span class="cf">if</span> (brd.sns_MC3630.available()) {</a>
+<a class="sourceLine" id="cb15-3" title="3">        brd.sns_MC3630.end(); <span class="co">// stop now!</span></a></code></pre></div>
+<p>In the state WAIT_CAPTURE, it waits for a FIFO interrupt. When an interrupt occurs and data is stored in the result storage queue, <code>sns_MC3630.available()</code> becomes <code>true</code>. Call <code>sns_MC3630.end()</code> to terminate the process.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1">sensor.n_samples = brd.sns_MC3630.get_que().size();</a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="cf">if</span> (sensor.n_samples) sensor.n_seq = brd.sns_MC3630.get_que()[<span class="dv">0</span>].<span class="dt">get_t</span>();</a>
+<a class="sourceLine" id="cb16-3" title="3">...</a></code></pre></div>
+<p>Get the number of samples and sample sequence numbers.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="co">// get all samples and average them.</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; v: brd.sns_MC3630.get_que()) {</a>
+<a class="sourceLine" id="cb17-3" title="3">    sensor.x_ave  += v.x;</a>
+<a class="sourceLine" id="cb17-4" title="4">    sensor.y_ave  += v.y;</a>
+<a class="sourceLine" id="cb17-5" title="5">    sensor.z_ave  += v.z;</a>
+<a class="sourceLine" id="cb17-6" title="6">}</a>
+<a class="sourceLine" id="cb17-7" title="7"></a>
+<a class="sourceLine" id="cb17-8" title="8"><span class="cf">if</span> (sensor.n_samples == N_SAMPLES) {</a>
+<a class="sourceLine" id="cb17-9" title="9">    <span class="co">// if N_SAMPLES == 2^n, division is much faster.</span></a>
+<a class="sourceLine" id="cb17-10" title="10">    sensor.x_ave /= N_SAMPLES;</a>
+<a class="sourceLine" id="cb17-11" title="11">    sensor.y_ave /= N_SAMPLES;</a>
+<a class="sourceLine" id="cb17-12" title="12">    sensor.z_ave /= N_SAMPLES;</a>
+<a class="sourceLine" id="cb17-13" title="13">}</a>
+<a class="sourceLine" id="cb17-14" title="14">...</a></code></pre></div>
+<p>Reads and averages all sample data.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1"><span class="co">// can also be:</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="co">//  int32_t x_max = -999999, x_min = 999999;</span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="co">//  for (auto&amp;&amp; v: brd.sns_MC3630.get_que()) {</span></a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="co">//      if (v.x &gt;= x_max) x_max = v.x;</span></a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="co">//      if (v.y &lt;= x_min) x_min = v.x;</span></a>
+<a class="sourceLine" id="cb18-6" title="6"><span class="co">//      ...</span></a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="co">//  }   </span></a>
+<a class="sourceLine" id="cb18-8" title="8"><span class="kw">auto</span>&amp;&amp; x_minmax = <span class="bu">std::</span>minmax_element(</a>
+<a class="sourceLine" id="cb18-9" title="9">    get_axis_x_iter(brd.sns_MC3630.get_que().begin()),</a>
+<a class="sourceLine" id="cb18-10" title="10">    get_axis_x_iter(brd.sns_MC3630.get_que().end()));</a>
+<a class="sourceLine" id="cb18-11" title="11">sensor.x_min = *x_minmax.first;</a>
+<a class="sourceLine" id="cb18-12" title="12">sensor.x_max = *x_minmax.second;</a>
+<a class="sourceLine" id="cb18-13" title="13">...</a></code></pre></div>
+<p>Here, the maximum and minimum are obtained for the acquired samples using the iterator corresponding to each axis.</p>
+<div class="info">
+<p>The <code>std::mimmax_element</code> is introduced as an example of using the algorithm of the C++ Standard Template Library, but you can also find the maximum and minimum in the for loop as shown in the comments.</p>
+</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1"><span class="cf">if</span> (brd.sns_MC3630.available()) {</a>
+<a class="sourceLine" id="cb19-2" title="2">  ...</a>
+<a class="sourceLine" id="cb19-3" title="3">  brd.sns_MC3630.get_que().clear(); <span class="co">// clean up the queue</span></a>
+<a class="sourceLine" id="cb19-4" title="4">  step.next(STATE::REQUEST_TX); <span class="co">// next state</span></a>
+<a class="sourceLine" id="cb19-5" title="5">} <span class="cf">else</span> <span class="cf">if</span> (step.is_timeout()) {</a>
+<a class="sourceLine" id="cb19-6" title="6">  Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;!!!FATAL: SENSOR CAPTURE TIMEOUT.&quot;</span>;</a>
+<a class="sourceLine" id="cb19-7" title="7">  step.next(STATE::EXIT_FATAL);</a>
+<a class="sourceLine" id="cb19-8" title="8">}</a>
+<a class="sourceLine" id="cb19-9" title="9"><span class="cf">break</span>;</a></code></pre></div>
+<p>Call <code>.sns_MC3630.get_que().clear()</code> to clear the data in the queue. If this is not called, subsequent sample acquisitions will not be possible. After that, it transits to the <code>STATE::REQUEST_TX</code> state.</p>
+<p>. <code>is_timeout()</code> checks for timeout. If timeout occurs, it transits to <code>STATE::EXIT_FATAL</code> as an error.</p>
+<h4 id="staterequest_tx">STATE::REQUEST_TX</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb20-1" title="1"><span class="cf">case</span> STATE::REQUEST_TX:</a>
+<a class="sourceLine" id="cb20-2" title="2">    <span class="cf">if</span> (TxReq()) {</a>
+<a class="sourceLine" id="cb20-3" title="3">        step.set_timeout(<span class="dv">100</span>);</a>
+<a class="sourceLine" id="cb20-4" title="4">        step.clear_flag();</a>
+<a class="sourceLine" id="cb20-5" title="5">        step.next(STATE::WAIT_TX);</a>
+<a class="sourceLine" id="cb20-6" title="6">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb20-7" title="7">        Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;!!!FATAL: TX REQUEST FAILS.&quot;</span>;</a>
+<a class="sourceLine" id="cb20-8" title="8">        step.next(STATE::EXIT_FATAL);</a>
+<a class="sourceLine" id="cb20-9" title="9">    }</a>
+<a class="sourceLine" id="cb20-10" title="10"><span class="cf">break</span>;</a></code></pre></div>
+<p>In state <code>REQUEST_TX</code>, the locally defined function <code>TxReq()</code> is called to process the obtained sensor data and generate and send a transmission packet. The transmission request may fail due to the status of the transmission queue or other factors. If the transmission request succeeds, TxReq()<code>returns as true, but no transmission is performed yet. The</code>on_tx_comp()` callback is called to complete the transmission.</p>
+<p>Also, <code>.clear_flag()</code> clears the flag to indicate that transmission is complete. At the same time, a timeout is set.</p>
+<h4 id="e_satewait_tx">E_SATE::WAIT_TX</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="cf">case</span> STATE::WAIT_TX:</a>
+<a class="sourceLine" id="cb21-2" title="2">    <span class="cf">if</span> (step.is_flag_ready()) {</a>
+<a class="sourceLine" id="cb21-3" title="3">        step.next(STATE::EXIT_NORMAL);</a>
+<a class="sourceLine" id="cb21-4" title="4">    }</a>
+<a class="sourceLine" id="cb21-5" title="5">    <span class="cf">if</span> (step.is_timeout()) {</a>
+<a class="sourceLine" id="cb21-6" title="6">        Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;!!!FATAL: TX TIMEOUT.&quot;</span>;</a>
+<a class="sourceLine" id="cb21-7" title="7">        step.next(STATE::EXIT_FATAL);</a>
+<a class="sourceLine" id="cb21-8" title="8">    }</a>
+<a class="sourceLine" id="cb21-9" title="9"><span class="cf">break</span>;</a></code></pre></div>
+<p>In state <code>STATE::WAIT_TX</code>, it waits for the completion of wireless packet transmission. The flag is set by the <code>on_tx_comp()</code> callback function, and <code>.is_flag_ready()</code> becomes <em>true</em> after it is set.</p>
+<h4 id="e_sateexit_normal-fatal">E_SATE::EXIT_NORMAL, FATAL</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb22-1" title="1"><span class="cf">case</span> STATE::EXIT_NORMAL:</a>
+<a class="sourceLine" id="cb22-2" title="2">    sleepNow();</a>
+<a class="sourceLine" id="cb22-3" title="3"><span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb22-4" title="4"></a>
+<a class="sourceLine" id="cb22-5" title="5"><span class="cf">case</span> STATE::EXIT_FATAL:</a>
+<a class="sourceLine" id="cb22-6" title="6">    Serial &lt;&lt; flush;</a>
+<a class="sourceLine" id="cb22-7" title="7">    the_twelite.reset_system();</a>
+<a class="sourceLine" id="cb22-8" title="8"><span class="cf">break</span>;</a></code></pre></div>
+<p>When a series of operations is completed, it transits to the state <code>STATE::EXIT_NORMAL</code> and calls the locally defined function <code>sleepNow()</code> to execute sleep. When an error is detected, it transits to state <code>STATE::EXIT_FATAL</code> and performs a system reset.</p>
+<h3 id="mwx_apiret-txreq">MWX_APIRET TxReq()</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb23-1" title="1">MWX_APIRET TxReq() {</a>
+<a class="sourceLine" id="cb23-2" title="2">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_MOT&gt;();</a>
+<a class="sourceLine" id="cb23-3" title="3">    MWX_APIRET ret = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb23-4" title="4"></a>
+<a class="sourceLine" id="cb23-5" title="5">    <span class="co">// prepare tx packet</span></a>
+<a class="sourceLine" id="cb23-6" title="6">    <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {       </a>
+<a class="sourceLine" id="cb23-7" title="7">        <span class="co">// set tx packet behavior</span></a>
+<a class="sourceLine" id="cb23-8" title="8">        pkt &lt;&lt; tx_addr(<span class="bn">0x00</span>)  <span class="co">// 0..0xFF (LID 0:parent, FE:child w/ no id, FF:LID broad cast), 0x8XXXXXXX (long address)</span></a>
+<a class="sourceLine" id="cb23-9" title="9">            &lt;&lt; tx_retry(<span class="bn">0x1</span>) <span class="co">// set retry (0x1 send two times in total)</span></a>
+<a class="sourceLine" id="cb23-10" title="10">            &lt;&lt; tx_packet_delay(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>); <span class="co">// send packet w/ delay</span></a>
+<a class="sourceLine" id="cb23-11" title="11">        </a>
+<a class="sourceLine" id="cb23-12" title="12">        <span class="co">// prepare packet (first)</span></a>
+<a class="sourceLine" id="cb23-13" title="13">        pack_bytes(pkt.get_payload() <span class="co">// set payload data objects.</span></a>
+<a class="sourceLine" id="cb23-14" title="14">                , make_pair(FOURCHARS, <span class="dv">4</span>)  <span class="co">// just to see packet identification, you can design in any.</span></a>
+<a class="sourceLine" id="cb23-15" title="15">                , <span class="dt">uint16_t</span>(sensor.n_seq)</a>
+<a class="sourceLine" id="cb23-16" title="16">                , <span class="dt">uint8_t</span>(sensor.n_samples)</a>
+<a class="sourceLine" id="cb23-17" title="17">                , <span class="dt">uint16_t</span>(sensor.x_ave)</a>
+<a class="sourceLine" id="cb23-18" title="18">                , <span class="dt">uint16_t</span>(sensor.y_ave)</a>
+<a class="sourceLine" id="cb23-19" title="19">                , <span class="dt">uint16_t</span>(sensor.z_ave)</a>
+<a class="sourceLine" id="cb23-20" title="20">                , <span class="dt">uint16_t</span>(sensor.x_min)</a>
+<a class="sourceLine" id="cb23-21" title="21">                , <span class="dt">uint16_t</span>(sensor.y_min)</a>
+<a class="sourceLine" id="cb23-22" title="22">                , <span class="dt">uint16_t</span>(sensor.z_min)</a>
+<a class="sourceLine" id="cb23-23" title="23">                , <span class="dt">uint16_t</span>(sensor.x_max)</a>
+<a class="sourceLine" id="cb23-24" title="24">                , <span class="dt">uint16_t</span>(sensor.y_max)</a>
+<a class="sourceLine" id="cb23-25" title="25">                , <span class="dt">uint16_t</span>(sensor.z_max)</a>
+<a class="sourceLine" id="cb23-26" title="26">            );</a>
+<a class="sourceLine" id="cb23-27" title="27"></a>
+<a class="sourceLine" id="cb23-28" title="28">        <span class="co">// perform transmit</span></a>
+<a class="sourceLine" id="cb23-29" title="29">        ret = pkt.transmit();</a>
+<a class="sourceLine" id="cb23-30" title="30"></a>
+<a class="sourceLine" id="cb23-31" title="31">        <span class="cf">if</span> (ret) {</a>
+<a class="sourceLine" id="cb23-32" title="32">            Serial &lt;&lt; <span class="st">&quot;..txreq(&quot;</span> &lt;&lt; <span class="dt">int</span>(ret.get_value()) &lt;&lt; <span class="ch">&#39;)&#39;</span>;</a>
+<a class="sourceLine" id="cb23-33" title="33">        }</a>
+<a class="sourceLine" id="cb23-34" title="34">    }</a>
+<a class="sourceLine" id="cb23-35" title="35"></a>
+<a class="sourceLine" id="cb23-36" title="36">    <span class="cf">return</span> ret;</a>
+<a class="sourceLine" id="cb23-37" title="37">}</a></code></pre></div>
+<p>The last step is to generate a packet and request that it be sent. The packet should include the continuation number, the number of samples, the average value of XYZ, the minimum sample value of XYZ, and the maximum sample value of XYZ.</p>
+<h3 id="sleepnow">sleepNow()</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb24-1" title="1"><span class="dt">void</span> sleepNow() {</a>
+<a class="sourceLine" id="cb24-2" title="2">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;..sleeping now..&quot;</span> &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb24-3" title="3">    Serial.flush();</a>
+<a class="sourceLine" id="cb24-4" title="4">    step.on_sleep(<span class="kw">false</span>); <span class="co">// reset state machine.</span></a>
+<a class="sourceLine" id="cb24-5" title="5">    the_twelite.sleep(<span class="dv">3000</span>, <span class="kw">false</span>); <span class="co">// set longer sleep (PAL must wakeup less than 60sec.)</span></a>
+<a class="sourceLine" id="cb24-6" title="6">}</a></code></pre></div>
+<p>Sleep procedure.</p>
+<ul>
+<li>Serial ports should call <code>Serial.flush()</code> to output all before sleep.</li>
+<li>The <code>&lt;SM_SIMPLE&gt;</code> state machine must do <code>on_sleep()</code>.</li>
+</ul>
+</body>
+</html>

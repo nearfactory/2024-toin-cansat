@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#about-makefile">About Makefile</a></li>
+</ul>
+</nav>
+<h1 id="about-makefile">About Makefile</h1>
+<p>The source code and other definitions to be built are written in the Makefile.</p>
+<table>
+<colgroup>
+<col style="width: 11%"></col>
+<col style="width: 88%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>TWELITE</th>
+<th>Specify the model to be built, BLUE for TWELITE BLUE (TWE-001 Lite) or RED for TWELITE RED.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PROJNAME</td>
+<td>Decide the name of the generated file. If not specified, use. If not specified, the <code>../..</code> folder name will be used.</td>
+</tr>
+<tr class="even">
+<td>APPSRC</td>
+<td>Specify the file to be compiled, using the <code>+=</code> operator, as in <code>APPSRC+=test.c</code>.</td>
+</tr>
+<tr class="odd">
+<td>TARGET_TYPE</td>
+<td>Specify the target to generate. When <code>TARGET_TYPE = bin</code> is specified, the target is an executable, and when <code>TARGET_TYPE = a</code> is specified, the target is a library.。</td>
+</tr>
+<tr class="even">
+<td>TOCONET_DEBUG</td>
+<td>If 1, include the debug code for the stack. The output file name will be prefixed with <code>_TDBG</code>. See the API description for the stack debug code. 0 means do not include it, and the binary size will be slightly smaller.</td>
+</tr>
+<tr class="odd">
+<td>CFLAGS</td>
+<td>Add gcc options at compile time. Use the <code>+=</code> operator, like <code>CFLAGS += -DMY_DEBUG</code>. Do not specify any optimization options, as they are predefined.</td>
+</tr>
+<tr class="even">
+<td>APP_COMMON_SRC_DIR_ADD1 .. 4</td>
+<td>Specify the search path for source and header files. Liks as <code>APP_COMMON_SRC_DIR_ADD1 = ... /mydir</code>, relative to the folder where the Makefile is located.</td>
+</tr>
+<tr class="odd">
+<td>INCFLAGS</td>
+<td>If you want to specify additional include folders only, use relative paths like <code>INCLFAGS == -I.../mydir</code> to specify a relative path.</td>
+</tr>
+<tr class="even">
+<td>ADDITIONAL_LIBS</td>
+<td>Specify additional libraries (<code>.a</code>) to be linked, like <code>ADDITIONAL_LIBS += . /mylib.a</code>.</td>
+</tr>
+<tr class="odd">
+<td>ADDITIONAL_OBJS</td>
+<td>Specify additional object files (.o) to be linked, like<code>ADDITIONAL_OBJS += ../myobj.o</code>.</td>
+</tr>
+<tr class="even">
+<td>LDLIBS</td>
+<td>Specify the compiler libraries (math, spp, etc.) by adding <code>LDLIBS += m</code>. In this specification, -lm is passed to the linker.</td>
+</tr>
+<tr class="odd">
+<td>LDFLAGS</td>
+<td>Additional options to the linker can be specified as <code>LDFLAGS += -u dummy</code>. The options required by TWELITE are pre-defined.</td>
+</tr>
+<tr class="even">
+<td>OBJDIR_SUFF</td>
+<td>Include the string set in the object storage folder name.</td>
+</tr>
+<tr class="odd">
+<td>TARGET_SUFF</td>
+<td>Include the string you set in the target (.bin) file name.</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

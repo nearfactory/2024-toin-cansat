@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>&lt;STG_STD&gt;</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">&lt;STG_STD&gt;</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#stg_std">&lt;STG_STD&gt;</a><ul>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#registration">Registration</a></li>
+<li><a href="#reading-with-setup">Reading with setup()</a></li>
+</ul></li>
+<li><a href="#list-of-settings">List of settings</a></li>
+<li><a href="#customizing-a-setting-behavior">Customizing a setting behavior</a><ul>
+<li><a href="#application_name">application_name</a></li>
+<li><a href="#default-value.">Default value.</a></li>
+<li><a href="#multiple-channel-setting-menu">Multiple CHANNEL setting menu</a></li>
+<li><a href="#display-the-setup-screen-immediately">Display the setup screen immediately</a></li>
+<li><a href="#change-of-item-name-and-description-of-details">Change of item name and description of details</a></li>
+<li><a href="#determine-if-you-are-currently-in-the-settings-screen">Determine if you are currently in the settings screen</a></li>
+<li><a href="#deleting-items">Deleting Items</a></li>
+</ul></li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#reload">reload()</a></li>
+</ul></li>
+<li><a href="#methods-reading-data">Methods (Reading data)</a><ul>
+<li><a href="#reflecting-settings">Reflecting settings</a></li>
+</ul></li>
+<li><a href="#item-id">Item ID</a></li>
+<li><a href="#extra-menu">Extra Menu</a><ul>
+<li><a href="#eeprom-util">EEPROM UTIL</a></li>
+<li><a href="#hw-util">h/w util</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="stg_std">&lt;STG_STD&gt;</h1>
+<p>&lt;STG_STD&gt; is a configuration BEHAVIOR with minimal configuration items.</p>
+<pre><code>　　　　　　　Example of setting screen
+[CONFIG/MY_APP:0/SID=8102ECE3]
+a: (0x1234ABCD) Application ID [HEX:32bit]
+i: (         1) Device ID [1-100,etc]
+c: (        13) Channel [11-26]
+o: (0x00000000) Option Bits [HEX:32bit]
+
+ [ESC]:Back [!]:Reset System [M]:Extr Menu                      </code></pre>
+<div class="info">
+<p>This BEHAVIOR hooks the input/output of the Serial object and performs screen input/output in Interactive settings mode. There is no need to explicitly describe input processing in the application. Screen output from the application is suppressed during Interactive settings mode.</p>
+</div>
+<div class="info">
+<p>Enter the M key to access auxiliary functions. See the Extra Menu item at the end of this section.</p>
+</div>
+<h2 id="usage">Usage</h2>
+<h3 id="registration">Registration</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// use twelite mwx c++ template library</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="pp">#include </span><span class="im">&lt;STG_STD&gt;</span><span class="pp"> </span><span class="co">// interactive mode</span></a></code></pre></div>
+<p>Add <code>#include &lt;STG_STD&gt;</code> as above.</p>
+<h3 id="reading-with-setup">Reading with setup()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">uint32_t</span> APP_ID;</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="dt">uint8_t</span> CHANNEL;</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="dt">uint8_t</span> LID;</a>
+<a class="sourceLine" id="cb3-4" title="4"></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb3-6" title="6">   ...</a>
+<a class="sourceLine" id="cb3-7" title="7">   <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb3-8" title="8"></a>
+<a class="sourceLine" id="cb3-9" title="9">   <span class="co">// call reload() before reading values.   </span></a>
+<a class="sourceLine" id="cb3-10" title="10">   set.reload();</a>
+<a class="sourceLine" id="cb3-11" title="11">   </a>
+<a class="sourceLine" id="cb3-12" title="12">   <span class="co">// read value</span></a>
+<a class="sourceLine" id="cb3-13" title="13">   APP_ID = set.u32appid();</a>
+<a class="sourceLine" id="cb3-14" title="14">   CHANNEL = set.u8ch();</a>
+<a class="sourceLine" id="cb3-15" title="15">   LID = set.u8devid();</a>
+<a class="sourceLine" id="cb3-16" title="16">   </a>
+<a class="sourceLine" id="cb3-17" title="17">   <span class="co">// apply them</span></a>
+<a class="sourceLine" id="cb3-18" title="18">     the_twelite</a>
+<a class="sourceLine" id="cb3-19" title="19">        &lt;&lt; TWENET::appid(APP_ID)</a>
+<a class="sourceLine" id="cb3-20" title="20">        &lt;&lt; TWENET::channel(CHANNEL);</a>
+<a class="sourceLine" id="cb3-21" title="21">        </a>
+<a class="sourceLine" id="cb3-22" title="22">   <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb3-23" title="23">   nwk  &lt;&lt; NWK_SIMPLE::logical_id(LID);</a>
+<a class="sourceLine" id="cb3-24" title="24">}</a></code></pre></div>
+<p>In most cases, settings are read out early in the <code>setup()</code> process.</p>
+<p>The above example first registers the settings behavior with <code>the_twelite.settings.use&lt;STG_STD&gt;()</code>.</p>
+<div class="info">
+<p>Immediately after registration, you can make changes to the configuration behavior, such as changing the default Application ID, which is described later.</p>
+</div>
+<p>Next, call <code>set.reload()</code> to actually read the data from the EEPROM and interpret it. Note that it does not read the data automatically.</p>
+<p><code>set.u32appid()</code>, <code>set.u8ch()</code>, and <code>set.u8devid()</code> get the set values of Application ID, CHANNEL, and logical device ID, respectively. Here, each set value is stored in a variable.</p>
+<div class="info">
+<p>Since the internal data structure storing the setting values is relatively complex, it is necessary to search the data in the design array until the desired setting is obtained. If you are concerned about computational complexity, store the configuration values in a separate variable.</p>
+</div>
+<p>Then, use the setting values to reflect the values of Application ID, CHANNEL, etc.</p>
+<h2 id="list-of-settings">List of settings</h2>
+<p>The following is the list of setting IDs (<code>enum class E_STGSTD_SETID</code>) definition.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Setting ID</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>APPID</code></td>
+<td>Application ID</td>
+</tr>
+<tr class="even">
+<td><code>LOGICALID</code></td>
+<td>Logical device ID (8bit)</td>
+</tr>
+<tr class="odd">
+<td><code>CHANNEL</code></td>
+<td>CHANNEL</td>
+</tr>
+<tr class="even">
+<td><code>CHANNELS_3</code></td>
+<td>Channel (up to 3 channels)</td>
+</tr>
+<tr class="odd">
+<td><code>POWER_N_RETRY</code></td>
+<td>Outputs and retry counts</td>
+</tr>
+<tr class="even">
+<td><code>OPTBITS</code></td>
+<td>Option 1</td>
+</tr>
+<tr class="odd">
+<td><code>OPT_DWORD2</code></td>
+<td>Option 2</td>
+</tr>
+<tr class="even">
+<td><code>OPT_N_RETRY</code></td>
+<td>Output and Retry Count</td>
+</tr>
+<tr class="odd">
+<td><code>OPT_DWORD3</code></td>
+<td>Option 3</td>
+</tr>
+</tbody>
+</table>
+<p>In <code>&lt;STG_STD&gt;</code>, four typical settings and four freely available 32-bit values are defined. These are freely available to the user.</p>
+<div class="info">
+<ul>
+<li>Settings are not reflected by simply reading them from STG_STD&gt;.</li>
+<li>Unnecessary items can be hidden.</li>
+<li>You can change the item name and item details.</li>
+</ul>
+</div>
+<h2 id="customizing-a-setting-behavior">Customizing a setting behavior</h2>
+<p>Customize all items of the configuration BEHAVIOR before <code>.reload()</code>.</p>
+<h3 id="application_name">application_name</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb4-2" title="2">    set &lt;&lt; SETTINGS::appname(<span class="st">&quot;MY_APP&quot;</span>);</a>
+<a class="sourceLine" id="cb4-3" title="3">    ...</a>
+<a class="sourceLine" id="cb4-4" title="4">    set.reload();</a></code></pre></div>
+<p>The application name appears on the first line of the Interactive settings mode.</p>
+<pre><code>[CONFIG/MY_APP:0/SID=8102ECE3]</code></pre>
+<p>Specify a string pointer. Local variables cannot be specified because we do not make copies internally.</p>
+<h3 id="default-value.">Default value.</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb6-2" title="2">    set &lt;&lt; SETTINGS::appid_default(<span class="bn">0x13579be</span>);</a>
+<a class="sourceLine" id="cb6-3" title="3">    set &lt;&lt; SETTINGS::ch_default(<span class="dv">18</span>);</a>
+<a class="sourceLine" id="cb6-4" title="4">    set &lt;&lt; SETTINGS::lid_default(<span class="dv">7</span>);</a>
+<a class="sourceLine" id="cb6-5" title="5">        ...</a>
+<a class="sourceLine" id="cb6-6" title="6">    set.reload();</a></code></pre></div>
+<p>アプリケーションID、チャネル、論理ID(LID)については、デフォルト値を変更できます。</p>
+<h3 id="multiple-channel-setting-menu">Multiple CHANNEL setting menu</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb7-2" title="2">    set &lt;&lt; SETTINGS::ch_multi();</a>
+<a class="sourceLine" id="cb7-3" title="3">    ...</a>
+<a class="sourceLine" id="cb7-4" title="4">    set.reload();</a></code></pre></div>
+<p>When <code>SETTINGS::ch_multi()</code> is specified, multiple CHANNEL settings are specified. When multiple settings are made, <code>.u32chmask()</code> is used to read the setting values.</p>
+<h3 id="display-the-setup-screen-immediately">Display the setup screen immediately</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb8-2" title="2">    set &lt;&lt; SETTINGS::open_at_start();</a>
+<a class="sourceLine" id="cb8-3" title="3">    ...</a>
+<a class="sourceLine" id="cb8-4" title="4">    set.reload();</a></code></pre></div>
+<p>Default values can be changed for Application ID, CHANNEL, and Logical ID.</p>
+<h3 id="change-of-item-name-and-description-of-details">Change of item name and description of details</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="at">const</span> TWESTG_tsMsgReplace SET_MSGS[] = {</a>
+<a class="sourceLine" id="cb9-2" title="2">    { <span class="dt">int</span>(E_STGSTD_SETID::OPTBITS),    <span class="st">&quot;Opt1&quot;</span>, </a>
+<a class="sourceLine" id="cb9-3" title="3">            <span class="st">&quot;Please set option 1&quot;</span> },</a>
+<a class="sourceLine" id="cb9-4" title="4">    { <span class="dt">int</span>(E_STGSTD_SETID::OPT_DWORD2), <span class="st">&quot;Opt2&quot;</span>,</a>
+<a class="sourceLine" id="cb9-5" title="5">            <span class="st">&quot;Please set option 1.</span><span class="sc">\r\n</span><span class="st">Option 2 is ...&quot;</span> },</a>
+<a class="sourceLine" id="cb9-6" title="6">    { <span class="bn">0xFF</span> } <span class="co">// terminator</span></a>
+<a class="sourceLine" id="cb9-7" title="7">};</a>
+<a class="sourceLine" id="cb9-8" title="8"></a>
+<a class="sourceLine" id="cb9-9" title="9">setup() {</a>
+<a class="sourceLine" id="cb9-10" title="10">  <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb9-11" title="11">    set.replace_item_name_desc(SET_MSGS);</a>
+<a class="sourceLine" id="cb9-12" title="12">    ...</a></code></pre></div>
+<p>You can change the item name to something else. In the above example, the Japanese name is set to UTF-8, but it will not be displayed properly unless the conditions, such as terminal display, are met.</p>
+<div class="info">
+<p>In the case of TWELITE STAGE, if the number of characters in the registered font is reduced, some characters may not be displayed. Rebuild to include the necessary strings.</p>
+</div>
+<p>This array is terminated with <code>{ 0xFF }</code> at the end.</p>
+<p>The first entry is the setting ID, the second is the item name, and the third is the description to be displayed when entering the setting. You can use <code>\r\n</code> to start a new line.</p>
+<h3 id="determine-if-you-are-currently-in-the-settings-screen">Determine if you are currently in the settings screen</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">        <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb10-2" title="2">        <span class="cf">if</span> (!set.is_screen_opened()) {</a>
+<a class="sourceLine" id="cb10-3" title="3">           <span class="co">// Processing when the setup screen is not displayed</span></a>
+<a class="sourceLine" id="cb10-4" title="4">        }</a></code></pre></div>
+<p>Output to serial while the setup screen is being output can cause screen corruption. To confirm that it is not the setup screen, use <code>.is_screen_opened()</code>.</p>
+<h3 id="deleting-items">Deleting Items</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb11-2" title="2">set.hide_items(E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4);</a>
+<a class="sourceLine" id="cb11-3" title="3"></a>
+<a class="sourceLine" id="cb11-4" title="4">...</a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="cf">if</span>(set.is_hidden(E_STGSTD_SETID::OPT_DWORD3) {</a>
+<a class="sourceLine" id="cb11-6" title="6">  ; <span class="co">// OPT_DWORD3 is hidden</span></a>
+<a class="sourceLine" id="cb11-7" title="7">}</a></code></pre></div>
+<p>Removes unwanted items. <code>.hide_items</code> hides unnecessary items with the item ID as a parameter (multiple parameters can be specified as variable arguments). You can check whether an item is hidden or not by <code>.is_hidden()</code>.</p>
+<div class="warning">
+<p>Application ID, CHANNEL, and Logical ID (LID) cannot be deleted.</p>
+</div>
+<div class="warning">
+<p>The hide setting uses internal work memory. Since the minimum memory size (32 bytes) is set, if many hidden items are set, they may not be hidden due to insufficient memory. The capacity of work memory can be specified as a compile argument like <code>-DSIZE_SETSTD_CUST_COMMON=48</code>.</p>
+</div>
+<h2 id="methods">Methods</h2>
+<h3 id="reload">reload()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb12-2" title="2">    set &lt;&lt; SETTINGS::appname(APP_NAME)</a>
+<a class="sourceLine" id="cb12-3" title="3">          &lt;&lt; SETTINGS::appid_default(DEF_APP_ID)</a>
+<a class="sourceLine" id="cb12-4" title="4">        &lt;&lt; SETTINGS::open_at_start();</a>
+<a class="sourceLine" id="cb12-5" title="5">   </a>
+<a class="sourceLine" id="cb12-6" title="6">    set.reload();</a></code></pre></div>
+<p>設定を読み込みます。すべてのカスタマイズが終わってから実行します。</p>
+<h2 id="methods-reading-data">Methods (Reading data)</h2>
+<p>The following method is called to read data.</p>
+<div class="warning">
+<p>Be sure to call <code>.reload()</code> before reading.</p>
+</div>
+<table>
+<colgroup>
+<col style="width: 39%"></col>
+<col style="width: 60%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>method</th>
+<th>content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>uint32_t u32appid()</code></td>
+<td>Application ID</td>
+</tr>
+<tr class="even">
+<td><code>uint8_t u8devid()</code></td>
+<td>logical device ID</td>
+</tr>
+<tr class="odd">
+<td><code>uint8_t u8ch()</code></td>
+<td>configuration channel (11..26)</td>
+</tr>
+<tr class="even">
+<td><code>uint32_t u32chmask()</code></td>
+<td>CHANNEL setting mask (specified by bitmask, if 13, set bit to 1UL &lt;&lt; 13)</td>
+</tr>
+<tr class="odd">
+<td><code>uint8_t u8power()</code></td>
+<td>output setting (0..3)</td>
+</tr>
+<tr class="even">
+<td><code>uint8_t u8retry()</code></td>
+<td>Number of retries.</td>
+</tr>
+<tr class="odd">
+<td><code>uint32_t u32opt1()</code></td>
+<td>Option 1</td>
+</tr>
+<tr class="even">
+<td><code>uint32_t u32opt2()</code></td>
+<td>option2</td>
+</tr>
+<tr class="odd">
+<td>Option1</td>
+<td>Option2</td>
+</tr>
+<tr class="even">
+<td>Option3</td>
+<td><code>uint32_t u32opt4()</code></td>
+</tr>
+<tr class="odd">
+<td><code>uint8_t u8encmode()</code></td>
+<td>encryption mode (0: none 1: enable 2: enable, also display plaintext packets)</td>
+</tr>
+<tr class="even">
+<td><code>const uint8_t * u8enckeystr()</code></td>
+<td>get encryption key</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>Internally, a linear search of the structure array is performed to find the setting structure matching the setting ID, which has an overhead. Frequently referenced configuration values should be copied once to another variable for use.</p>
+</div>
+<h3 id="reflecting-settings">Reflecting settings</h3>
+<p>You can use this object to directly reflect settings on <code>the_twelite</code> and <code>&lt;NWK_SIMPLE&gt;</code> objects.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb13-2" title="2">...</a>
+<a class="sourceLine" id="cb13-3" title="3">set.reload(); <span class="co">//This is where the actual settings are read from the EEPROM.</span></a>
+<a class="sourceLine" id="cb13-4" title="4"></a>
+<a class="sourceLine" id="cb13-5" title="5">the_twelite &lt;&lt; set; <span class="co">// Reflecting setting values (e.g. APPID)</span></a>
+<a class="sourceLine" id="cb13-6" title="6"></a>
+<a class="sourceLine" id="cb13-7" title="7"><span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb13-8" title="8"></a>
+<a class="sourceLine" id="cb13-9" title="9">nwk &lt;&lt; set; <span class="co">// Reflection of setting values (LID, etc.)</span></a></code></pre></div>
+<p>The setting values to be reflected are as follows. Items hidden by <code>.hide_items()</code> are not reflected.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Target</th>
+<th>Item ID</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>the_twelite</code></td>
+<td><code>APPID</code></td>
+<td>reflected in <code>TWENET::appid(value)</code>.</td>
+</tr>
+</tbody>
+</table>
+| | <code>CHANNEL</code> |
+<p>
+<p><code>This is reflected in <code>TWENET::channel(value)&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;&lt;code&gt;* Not reflected when SETTINGS::ch_multi()&lt;/code&gt; is specified&lt;/p&gt; | | |</code>CHANNELS_3<code>| &lt;p&gt;&lt;code&gt;Setting by TWENET::chmask(value)&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;&lt;code&gt;* Only when SETTINGS::ch_multi()&lt;/code&gt; is specified, it is reflected as a CHANNEL mask. &lt;/p&gt; | | |</code>POWER_N_RETRY<code>| &lt;p&gt;Setting by &lt;code&gt;TWENET::tx_power(value)&lt;/code&gt; and &lt;code&gt;TWENET::mac_retry_count(value)&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;Note: The retry settings with &lt;code&gt;&amp;#x3C;NWK_SIMPLE&gt;&lt;/code&gt; also refer to the same value. &lt;/p&gt; | |</code><NWK_SIMPLE><code>|</code>LOGICALID<code>| Set by</code>NWK_SIMPLE::logical_id(LID)<code>.                                                                                                            | |</code>POWER_N_RETRY<code>| Set by</code>NWK_SIMPLE::repeat_max(LID)<code>.                                                                                                            | |</code>NWK_SIMPLE::repeat_max(LID)`.</p>
+<h2 id="item-id">Item ID</h2>
+<p>You may specify item IDs with <code>.hide_items()</code> and so on. This item ID is defined in <code>enum class E_STGSTD_SETID</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>E_STGSTD_SETID::</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>APPID</code></td>
+<td>Application ID</td>
+</tr>
+<tr class="even">
+<td><code>LOGICALID</code></td>
+<td>Logical ID (0..100)</td>
+</tr>
+<tr class="odd">
+<td><code>CHANNEL</code></td>
+<td>CHANNEL</td>
+</tr>
+<tr class="even">
+<td><code>CHANNELS_3</code></td>
+<td>CHANNEL(specify multiple)</td>
+</tr>
+<tr class="odd">
+<td><code>POWER_N_RETRY</code></td>
+<td>output and retry settings</td>
+</tr>
+<tr class="even">
+<td><code>OPTBITS</code></td>
+<td>option bits</td>
+</tr>
+<tr class="odd">
+<td><code>UARTBAUD</code></td>
+<td>Baud rate setting for UART</td>
+</tr>
+<tr class="even">
+<td><code>OPT_DWORD2</code></td>
+<td>Option bits 2</td>
+</tr>
+<tr class="odd">
+<td><code>OPT_DWORD2</code></td>
+<td>Optional bits 2</td>
+</tr>
+<tr class="even">
+<td><code>OPT_DWORD4</code></td>
+<td>Option bit 4</td>
+</tr>
+<tr class="odd">
+<td><code>ENC_MODE</code></td>
+<td>Encryption Mode</td>
+</tr>
+<tr class="even">
+<td><code>ENC_KEY_STRING</code></td>
+<td>encryption key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="extra-menu">Extra Menu</h2>
+<pre><code>[ROOT MENU/BAT1/SID=810B645E]
+0: CONFIG
+1: EEPROM UTIL
+2: H/W UTIL
+
+ [ESC]:Back [!]:Reset System                                    </code></pre>
+<p>Enter the M key to access additional menus.</p>
+<ul>
+<li>CONFIG : returns to the setup screen</li>
+<li>EEPROM UTIL : This menu is used to perform EEPROM maintenance</li>
+<li>H/W UTIL: This menu allows you to check hardware status</li>
+</ul>
+<h3 id="eeprom-util">EEPROM UTIL</h3>
+<pre><code>[EEPROM UTIL/BAT1/SID=810B645E]
+r: Read sector.
+R: Read ALL sectors.
+e: Erase sector.
+E: Erase ALL sectors.
+
+ [ESC]:Back [!]:Reset System [M]:Extr Menu</code></pre>
+<p>Reads or deletes a sector. To read all or delete all, enter the three letters “YES” in uppercase.</p>
+<h3 id="hw-util">h/w util</h3>
+<p>`<code>[H/W UTIL/BAT1/SID=810B645E]</code></p>
+<p>The function is not provided in the current version.</p>
+</body>
+</html>

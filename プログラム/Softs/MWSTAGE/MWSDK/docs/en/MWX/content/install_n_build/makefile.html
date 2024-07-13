@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Build definition Makefile</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Build definition Makefile</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#build-definition-makefile">Build definition Makefile</a><ul>
+<li><a href="#parameters-for-make.">Parameters for make.</a><ul>
+<li><a href="#twelite">TWELITE=</a></li>
+<li><a href="#all">all</a></li>
+<li><a href="#clean">clean</a></li>
+<li><a href="#cleanall">cleanall</a></li>
+<li><a href="#use_appdeps0-or-1">USE_APPDEPS=0 or 1</a></li>
+</ul></li>
+<li><a href="#makefile-definition">Makefile definition</a><ul>
+<li><a href="#version_">VERSION_???</a></li>
+<li><a href="#adding-source-files">Adding source files</a></li>
+<li><a href="#compile-and-linker-options">Compile and linker options</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="build-definition-makefile">Build definition Makefile</h1>
+<p>The Makefile is stored in build/Makefile and is pre-defined to build the act by running the make command.</p>
+<div class="info">
+<p><strong>MWSDK 2020-04 automatically detects the .cpp file in the project folder, so there is usually no need to modify the Makefile.</strong></p>
+<p><strong>If the source file is to be stored in a subfolder, it will need to be edited.</strong></p>
+<p><strong>MWSDK 2019-12 requires you to edit the Makefile if you have more than one .cpp file.</strong></p>
+</div>
+<div class="warning">
+<p>After copying the project folder from another environment, make sure to delete the <code>build/objs_???</code> folder. If any intermediate files from the other environment remain, make will fail.</p>
+<p><code>(MWSDK 2020-04)</code> You can avoid errors by adding USE_APPDEPS=0 to clean and then running make again.</p>
+<p><code>$ make USE_APPDEPS=0 TWELITE=BLUE clean</code><br />
+<code>...</code><br />
+<code>$ make TWELITE=BLUE</code></p>
+<p>``</p>
+</div>
+<h2 id="parameters-for-make.">Parameters for make.</h2>
+<h3 id="twelite">TWELITE=</h3>
+<p>Specify the build target as BLUE or RED; for TWELITE BLUE, use <code>make TWELITE=BLUE</code>.</p>
+<h3 id="all">all</h3>
+<p>Run the build. Usually, you can omit this and use <code>make TWELITE=BLUE</code>.</p>
+<h3 id="clean">clean</h3>
+<p>Remove intermediate files from the build. Do this as <code>make TWELITE=BLUE clean</code>.</p>
+<h3 id="cleanall">cleanall</h3>
+<p>Remove all intermediate files. Do this as <code>make cleanall</code>, the same as removing all of the <code>objs_???</code> folder in the build folder.</p>
+<h3 id="use_appdeps0-or-1">USE_APPDEPS=0 or 1</h3>
+<p>When set to 1 (the default), the build file is determined based on file dependencies. For example, if there is a change in a header file, the associated source file will be recompiled.</p>
+<p>If set to 0, the makefile will not error if there are inconsistent intermediate files left.</p>
+<h2 id="makefile-definition">Makefile definition</h2>
+<p>Depending on the size of the act, and when defining behaviours, the source files are usually split and built separately.</p>
+<p>One of the build files is {project folder name.cpp}.</p>
+<p>If you want to define other files, edit the <code>build/Makefile</code> in your project folder.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode perl"><code class="sourceCode perl"><a class="sourceLine" id="cb1-1" title="1"><span class="co">##############################################################################</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># Copyright (C) 2019 Mono Wireless Inc. All Rights Reserved.</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># Released under MW-SLA-*J,*E (MONO WIRELESS SOFTWARE LICENSE</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"># AGREEMENT). </span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">##############################################################################</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co"># USER PROJECT BUILD DEFINITION.</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">##############################################################################</span></a>
+<a class="sourceLine" id="cb1-8" title="8"></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co">#####################################################################</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co">### set TWELITE model</span></a>
+<a class="sourceLine" id="cb1-11" title="11">TWELITE ?= BLUE</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co">#TWELITE = RED</span></a>
+<a class="sourceLine" id="cb1-13" title="13"></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="co">#####################################################################</span></a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="co">### set application version (MUST SET THIS.)</span></a>
+<a class="sourceLine" id="cb1-16" title="16">VERSION_MAIN = <span class="dv">0</span></a>
+<a class="sourceLine" id="cb1-17" title="17">VERSION_SUB  = <span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-18" title="18">VERSION_VAR  = <span class="dv">0</span></a>
+<a class="sourceLine" id="cb1-19" title="19"></a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="co">#####################################################################</span></a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="co">### set an additional source file</span></a>
+<a class="sourceLine" id="cb1-22" title="22"><span class="co">###   the default file name is dirname.</span></a>
+<a class="sourceLine" id="cb1-23" title="23"></a>
+<a class="sourceLine" id="cb1-24" title="24"><span class="co">### for C++ files compiled with g++ (must have .cpp suffix)</span></a>
+<a class="sourceLine" id="cb1-25" title="25">APPSRC_CXX += myAppBhvParent.cpp</a>
+<a class="sourceLine" id="cb1-26" title="26">APPSRC_CXX += myAppBhvParent-handlers.cpp</a>
+<a class="sourceLine" id="cb1-27" title="27">APPSRC_CXX += myAppBhvChild.cpp</a>
+<a class="sourceLine" id="cb1-28" title="28">APPSRC_CXX += myAppBhvChild-handlers.cpp</a>
+<a class="sourceLine" id="cb1-29" title="29"></a>
+<a class="sourceLine" id="cb1-30" title="30"><span class="co">### for C files compiled with gcc (must have .c suffix)</span></a>
+<a class="sourceLine" id="cb1-31" title="31"><span class="co">#APPSRC += my_c_file.c</span></a>
+<a class="sourceLine" id="cb1-32" title="32"></a>
+<a class="sourceLine" id="cb1-33" title="33"><span class="co">### Additional Src/Include Path</span></a>
+<a class="sourceLine" id="cb1-34" title="34"><span class="co"># if set, find source files from given dirs.</span></a>
+<a class="sourceLine" id="cb1-35" title="35"><span class="co">#</span></a>
+<a class="sourceLine" id="cb1-36" title="36">APP_COMMON_SRC_DIR_ADD1 = ..<span class="kw">/</span><span class="ot">Parent</span></a>
+<a class="sourceLine" id="cb1-37" title="37"><span class="ot">APP_COMMON_SRC_DIR_ADD2 = ..</span><span class="kw">/</span>Child</a>
+<a class="sourceLine" id="cb1-38" title="38"><span class="co">#APP_COMMON_SRC_DIR_ADD3 = </span></a>
+<a class="sourceLine" id="cb1-39" title="39"><span class="co">#APP_COMMON_SRC_DIR_ADD4 =</span></a>
+<a class="sourceLine" id="cb1-40" title="40"></a>
+<a class="sourceLine" id="cb1-41" title="41"><span class="co">#####################################################################</span></a>
+<a class="sourceLine" id="cb1-42" title="42"><span class="co">### set misc option for compiler</span></a>
+<a class="sourceLine" id="cb1-43" title="43"></a>
+<a class="sourceLine" id="cb1-44" title="44"><span class="co">### C++ flags passed to g++</span></a>
+<a class="sourceLine" id="cb1-45" title="45"><span class="co"># e.g. CXXFLAGS += -DMY_DEFS</span></a>
+<a class="sourceLine" id="cb1-46" title="46"><span class="co">#CXXFLAGS +=</span></a>
+<a class="sourceLine" id="cb1-47" title="47"></a>
+<a class="sourceLine" id="cb1-48" title="48"><span class="co">### C++/C flags passed to g++/gcc</span></a>
+<a class="sourceLine" id="cb1-49" title="49"><span class="co"># e.g. CFLAGS += -DMY_DEFS</span></a>
+<a class="sourceLine" id="cb1-50" title="50"><span class="co">#CFLAGS +=</span></a>
+<a class="sourceLine" id="cb1-51" title="51"></a>
+<a class="sourceLine" id="cb1-52" title="52"><span class="co">### include opts</span></a>
+<a class="sourceLine" id="cb1-53" title="53"><span class="co"># e.g. INCFLAGS += -I../my_common_src/</span></a>
+<a class="sourceLine" id="cb1-54" title="54"><span class="co">#INCFLAGS +=</span></a>
+<a class="sourceLine" id="cb1-55" title="55"></a>
+<a class="sourceLine" id="cb1-56" title="56"><span class="co">### optimize flag (default is -Os, normally no need to change)</span></a>
+<a class="sourceLine" id="cb1-57" title="57"><span class="co">#OPTFLAG=-O2</span></a>
+<a class="sourceLine" id="cb1-58" title="58"></a>
+<a class="sourceLine" id="cb1-59" title="59"><span class="co">#####################################################################</span></a>
+<a class="sourceLine" id="cb1-60" title="60"><span class="co">### must include mwx.mk (the makefile body part.)</span></a>
+<a class="sourceLine" id="cb1-61" title="61">MWSDK_PATH?=<span class="dt">$(realpath</span> <span class="dt">$(MWSDK_ROOT</span>))</a>
+<a class="sourceLine" id="cb1-62" title="62">include <span class="dt">$(MWSDK_PATH</span>)/MkFiles/mwx.mk</a>
+<a class="sourceLine" id="cb1-63" title="63"><span class="co">#####################################################################</span></a></code></pre></div>
+<p>The above is an example Makefile with sample PAL_AMB-bhv.</p>
+<h3 id="version_">VERSION_???</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode perl"><code class="sourceCode perl"><a class="sourceLine" id="cb2-1" title="1"><span class="co">### set application version (MUST SET THIS.)</span></a>
+<a class="sourceLine" id="cb2-2" title="2">VERSION_MAIN = <span class="dv">0</span></a>
+<a class="sourceLine" id="cb2-3" title="3">VERSION_SUB  = <span class="dv">1</span></a>
+<a class="sourceLine" id="cb2-4" title="4">VERSION_VAR  = <span class="dv">0</span></a></code></pre></div>
+<p>Specify the version number. This will be reflected in the build result file name.</p>
+<p>During compilation, it is passed as a definition like <code>-DVERSION_MAIN=0</code> <code>-DVERSION_SUB=1</code> <code>-DVERSION_VAR=0</code>.</p>
+<h3 id="adding-source-files">Adding source files</h3>
+<div class="success">
+<p><code>(MWSDK 2020-04)</code> If you do not place files in subfolders, you no longer need to specify additions. All .c .cpp files in the project file will be added. </p>
+</div>
+<p>When you add a source file, you need <code>APPSRC_CXX</code> and <code>APP_COMMON_SRC_DIR_ADD?</code>.</p>
+<div class="info">
+<p>If you place source files in a subfolder, you must specify the folder <code>APP_COMMON_SRC_DIR_ADD?</code>.</p>
+</div>
+<p>Append the name of the source file to `APPSRC_CXX’. This file name must <strong>not</strong> contain <strong>a folder name</strong>. Anything in a subfolder should also be specified without a folder (i.e. if the same filename is in a subfolder, the build will fail)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode perl"><code class="sourceCode perl"><a class="sourceLine" id="cb3-1" title="1">APPSRC_CXX += myAppBhvParent.cpp</a>
+<a class="sourceLine" id="cb3-2" title="2">APPSRC_CXX += myAppBhvParent-handlers.cpp</a>
+<a class="sourceLine" id="cb3-3" title="3">APPSRC_CXX += myAppBhvChild.cpp</a>
+<a class="sourceLine" id="cb3-4" title="4">APPSRC_CXX += myAppBhvChild-handlers.cpp</a></code></pre></div>
+<p>Next, specify the search path if the source files are stored in a location other than the project folder. You can set up to <strong>four</strong>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode perl"><code class="sourceCode perl"><a class="sourceLine" id="cb4-1" title="1">APP_COMMON_SRC_DIR_ADD1 = ..<span class="kw">/</span><span class="ot">Parent</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="ot">APP_COMMON_SRC_DIR_ADD2 = ..</span><span class="kw">/</span>Child</a></code></pre></div>
+<p>The folder specification is relative to the Makefile.</p>
+<h3 id="compile-and-linker-options">Compile and linker options</h3>
+<p>A number of other options can be passed to the compiler linker.</p>
+<table>
+<colgroup>
+<col style="width: 9%"></col>
+<col style="width: 90%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Designation</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CXXFLAGS</code></td>
+<td>Specify compilation options for C++ source files.</td>
+</tr>
+<tr class="even">
+<td><code>CFLAGS</code></td>
+<td>Specify compile options for C/C++ source files.</td>
+</tr>
+<tr class="odd">
+<td><code>INCFLAGS</code></td>
+<td>Specify the include file for the header file.</td>
+</tr>
+<tr class="even">
+<td><code>OPTFLAGS</code></td>
+<td>Define this if you have a special reason for wanting to apply a compile option other than <code>-Os</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>LDFLAGS</code></td>
+<td>Specify linker options. (This is not mentioned in the comments of the Makefile above, but can be specified)</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>serparser</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">serparser</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#serparser">serparser</a><ul>
+<li><a href="#constants-format-type">constants (format type)</a></li>
+<li><a href="#about-format">About format</a><ul>
+<li><a href="#ascii-format">ASCII format</a></li>
+<li><a href="#binary-format">Binary Format</a></li>
+</ul></li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#declaration-begin">declaration, begin()</a></li>
+<li><a href="#get_buf">get_buf()</a></li>
+<li><a href="#parse">parse()</a></li>
+<li><a href="#operator-bool">operator bool()</a></li>
+<li><a href="#operator">&lt;&lt; operator</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="serparser">serparser</h1>
+<p>Used for serial format input/output. It has an internal buffer that holds the interpreted binary series. On input, the series is stored in the internal buffer one byte at a time according to the read format, and becomes complete when the interpretation of the series is complete. Conversely, on output, the buffer is output from the internal buffer according to the specified output format.</p>
+<p>Three class names are defined according to the memory buffer handling method (<a href="alloc.html"><code>alloc</code></a>).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// serparser_attach : Use existing buffers</span></a>
+<a class="sourceLine" id="cb1-2" title="2">serparser_attach</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">// serparser : Allocate N bytes of buffer internally</span></a>
+<a class="sourceLine" id="cb1-5" title="5">serparser_local&lt;N&gt;</a>
+<a class="sourceLine" id="cb1-6" title="6"></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">// serparser_heap : Allocate buffers in the heap area</span></a>
+<a class="sourceLine" id="cb1-8" title="8">serparser_heap</a></code></pre></div>
+<h2 id="constants-format-type">constants (format type)</h2>
+<p>The type of format to pass in the initialization parameter of <code>begin()</code>. There are two types here: ASCII format and binary format.</p>
+<table>
+<thead>
+<tr class="header">
+<th>constant</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>uint8_t PARSER::ASCII = 1</code></td>
+<td>ASCII format</td>
+</tr>
+<tr class="even">
+<td><code>uint8_t PARSER::BINARY = 2</code></td>
+<td>binary format</td>
+</tr>
+</tbody>
+</table>
+<div class="warning">
+<p>Binary format is generally more complicated to handle than ASCII format, including the necessary tools and confirmation methods. Normally, ASCII format should be used.</p>
+</div>
+<h2 id="about-format">About format</h2>
+<h3 id="ascii-format">ASCII format</h3>
+<p>The ASCII format is a way to represent a sequence of data in binary as a string.</p>
+<p>For example, <code>00A01301FF123456</code> in ASCII format is expressed as follows. The beginning is <code>:</code>, <code>B1</code> is the checksum, and the end is <code>[CR:0x0d][LF:0x0a]</code>.</p>
+<blockquote>
+<p><code>:00A01301FF123456B1[CR][LF]</code></p>
+</blockquote>
+<p>You can omit the terminating checksum. Replace the CRLF series from the checksum with <code>X</code>. This is useful when you want to send data for experiments, etc., although it is less vulnerable to wrong data series due to garbled characters.</p>
+<blockquote>
+<p><code>:00A01301FF123456X</code></p>
+</blockquote>
+<h4 id="definition.">Definition.</h4>
+<table>
+<colgroup>
+<col style="width: 2%"></col>
+<col style="width: 3%"></col>
+<col style="width: 1%"></col>
+<col style="width: 92%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>======</th>
+<th style="text-align: center;">Bytes of original data</th>
+<th style="text-align: center;">Bytes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>header</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Data part</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">2N</td>
+<td>Each byte of the original data is represented by two ASCII characters (A-F in upper case). <br> For example, 0x1F is represented as <code>1</code> (0x31) <code>F</code> (0x46).</td>
+</tr>
+<tr class="odd">
+<td>checksum</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>The sum of each byte of the data part is calculated in 8-bit width and taken as 2’s complement. In other words, the sum of each byte of the data part plus the checksum byte is calculated to be 0 in 8-bit width. <br>The checksum byte is represented by two ASCII characters. <br>For example, in <code>00A01301FF123456</code>, 0x00 + 0xA0 + … + 0x56 = 0x4F, the two’s complement of which is 0xB1. (i.e. 0x4F + 0xB1 = 0x00)</td>
+</tr>
+<tr class="even">
+<td>footer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>[CR] (0x0D) [LF] (0x0A)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binary-format">Binary Format</h3>
+<div class="warning">
+<p>Normally, <strong>ASCII format</strong> should be used.</p>
+<p>However, to check the transmission and reception in experiments, it is necessary to prepare a special terminal that supports binary communication, and checksum calculation is also required. It is more difficult to use than the ASCII format.</p>
+</div>
+<p>Binary format is a method of sending a sequence of data consisting of binary data with a header and a checksum.</p>
+<p>For example, <code>00A01301FF123456</code> is expressed in binary format as follows.</p>
+<blockquote>
+<p><code>0xA5 0x5A 0x80 0x08 0x00 0xA0 0x13 0x01 0xFF 0x12 0x34 0x56 0x3D</code></p>
+</blockquote>
+<h4 id="definition.-1">Definition.</h4>
+<table>
+<colgroup>
+<col style="width: 4%"></col>
+<col style="width: 6%"></col>
+<col style="width: 7%"></col>
+<col style="width: 82%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>======</th>
+<th style="text-align: center;">Bytes of original data</th>
+<th style="text-align: center;">Bytes in format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>header</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Data Length</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>The data length is two bytes in big-endian format, with MSB (0x8000) set and the length of the data part specified. <br>For example, if the length of the data part is 8 bytes, specify <code>0x80 0x08</code>.</td>
+</tr>
+<tr class="odd">
+<td>Data part</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">N</td>
+<td>Specifies the original data.</td>
+</tr>
+<tr class="even">
+<td>Checksum</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1</td>
+<td>Calculates the XOR of each byte of the data part. <br> For example, if the data part is <code>00A01301FF123456</code>, 0x00 xor 0xA0 xor … 0x56 = 0x3D.</td>
+</tr>
+<tr class="odd">
+<td>footer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">(1)</td>
+<td>The checksum is effectively the end of the line. The output from the radio module will be appended with <code>0x04</code> (EOT).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="methods">Methods</h2>
+<h3 id="declaration-begin">declaration, begin()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// serparser_attach : use existing buffer</span></a>
+<a class="sourceLine" id="cb2-2" title="2">serparser_attach p1;</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="dt">uint8_t</span> buff[<span class="dv">128</span>];</a>
+<a class="sourceLine" id="cb2-5" title="5">p1.begin(ARSER::ASCII, buff, <span class="dv">0</span>, <span class="dv">128</span>);</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">// serparser : allocate N bytes buffer inside</span></a>
+<a class="sourceLine" id="cb2-9" title="9">serparser p2&lt;<span class="dv">128</span>&gt;;</a>
+<a class="sourceLine" id="cb2-10" title="10">p2.begin(PARSER::ASCII);</a>
+<a class="sourceLine" id="cb2-11" title="11"></a>
+<a class="sourceLine" id="cb2-12" title="12"></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="co">// serparser_heap : allocate buffer in heap area</span></a>
+<a class="sourceLine" id="cb2-14" title="14">serparser_heap p3;</a>
+<a class="sourceLine" id="cb2-15" title="15">p3.begin(PARSER::ASCII, <span class="dv">128</span>);</a></code></pre></div>
+<p>The declaration specifies the memory allocation class. Since this specification is complicated, an alias definition is used as described above.</p>
+<table>
+<colgroup>
+<col style="width: 41%"></col>
+<col style="width: 58%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Class name (alias definition) <br>Memory Allocation</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>serparser_attach</code></td>
+<td>specify an already existing buffer with <code>begin()</code></td>
+</tr>
+<tr class="even">
+<td><code>serparser_local&lt;N&gt;</code></td>
+<td>allocate a buffer of N bytes internally</td>
+</tr>
+<tr class="odd">
+<td><code>serparser_heap</code></td>
+<td>allocate a heap of the size specified by the parameters of the <code>begin()</code> method</td>
+</tr>
+</tbody>
+</table>
+<p>Calls the <code>begin()</code> method according to the memory allocation class.</p>
+<h4 id="serparser_attach">serparser_attach </h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> begin(<span class="dt">uint8_t</span> ty, <span class="dt">uint8_t</span> *p, <span class="dt">uint16_t</span> siz, <span class="dt">uint16_t</span> max_siz)</a></code></pre></div>
+<p>The buffer specified by <code>p</code> is used in the [format] (ser_parser.html#&quot;nitsuite) specified by <code>ty</code>. The maximum length of the buffer is specified by <code>max_siz</code> and the effective data length of the buffer by <code>siz</code>.</p>
+<p>This definition is used especially when you want to format output data columns (see <code>&gt;&gt;</code> operator).</p>
+<h4 id="serparser_localn---allocate-internal-buffer">serparser_local&lt;N&gt; - Allocate internal buffer</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> begin(<span class="dt">uint8_t</span> ty)</a></code></pre></div>
+<p>Initialize with the <a href="ser_parser.html#%22nitsuite">format</a> specified by <code>ty</code>.</p>
+<h4 id="serparser_heap---allocated-to-heap">serparser_heap - Allocated to heap</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> begin(<span class="dt">uint8_t</span> ty, <span class="dt">uint16_t</span> siz)</a></code></pre></div>
+<p>Initialize the heap by allocating the size specified by <code>siz</code> to the heap in the <a href="ser_parser.html#%22nitsuite">format</a> specified by <code>ty</code>.</p>
+<div class="warning">
+<p>Once allocated, heap space cannot be released.</p>
+</div>
+<h3 id="get_buf">get_buf()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">BUFTYPE&amp; get_buf()</a></code></pre></div>
+<p>Returns an internal buffer. The buffer will be of type <code>smplbuf&lt;uint8_t, alloc&gt;</code>.</p>
+<h3 id="parse">parse()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> parse(<span class="dt">uint8_t</span> b)</a></code></pre></div>
+<p>Processes input characters. Receives a single byte of input string of formatted input and interprets it according to the format. For example, in ASCII format, it receives a series like <code>:00112233X</code> as input. X<code>, one byte at a time, and when the last</code>X` is entered, the interpretation of the format is completed and reported as done.</p>
+<p>The parameter to <code>parse()</code> is the input byte, and the return value is <code>true</code> if the interpretation is complete.</p>
+<div class="info">
+<p>When <code>parse()</code> reports that reading is complete, the next <code>parse()</code> will return to the reading-in-progress status.</p>
+</div>
+<h4 id="例">例</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="cf">while</span> (Serial.available()) {</a>
+<a class="sourceLine" id="cb8-2" title="2">    <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb8-3" title="3">    </a>
+<a class="sourceLine" id="cb8-4" title="4">    <span class="cf">if</span> (SerialParser.parse(c)) {</a>
+<a class="sourceLine" id="cb8-5" title="5">        <span class="co">// Format interpretation complete, data sequence obtained in b (smplbuf&lt;uint8_t&gt;)</span></a>
+<a class="sourceLine" id="cb8-6" title="6">        <span class="kw">auto</span>&amp;&amp; b = SerialParser.get_buf();</a>
+<a class="sourceLine" id="cb8-7" title="7">        </a>
+<a class="sourceLine" id="cb8-8" title="8">        <span class="co">// The following is the processing of the resulting data sequence</span></a>
+<a class="sourceLine" id="cb8-9" title="9">        <span class="cf">if</span> (b[<span class="dv">0</span>] == <span class="bn">0xcc</span>) {</a>
+<a class="sourceLine" id="cb8-10" title="10">          <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb8-11" title="11">        }</a>
+<a class="sourceLine" id="cb8-12" title="12">    }</a>
+<a class="sourceLine" id="cb8-13" title="13">}</a></code></pre></div>
+<h3 id="operator-bool">operator bool()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">operator</span> <span class="dt">bool</span>() </a></code></pre></div>
+<p>If <code>true</code>, reading is completed by <code>parse()</code>; if <code>false</code>, interpretation is in progress.</p>
+<h4 id="example-parse-example-can-be-rewritten-as-follows">Example (parse() example can be rewritten as follows)</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="cf">while</span> (Serial.available()) {</a>
+<a class="sourceLine" id="cb10-2" title="2">    <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb10-3" title="3">    </a>
+<a class="sourceLine" id="cb10-4" title="4">    SerialParser.parse(c);</a>
+<a class="sourceLine" id="cb10-5" title="5">    </a>
+<a class="sourceLine" id="cb10-6" title="6">    <span class="cf">if</span>(SerialParser) {</a>
+<a class="sourceLine" id="cb10-7" title="7">        <span class="co">// Format interpretation complete, data sequence obtained in b (smplbuf&lt;uint8_t&gt;)</span></a>
+<a class="sourceLine" id="cb10-8" title="8">        <span class="kw">auto</span>&amp;&amp; b = SerialParser.get_buf();</a>
+<a class="sourceLine" id="cb10-9" title="9">        <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb10-10" title="10">    }</a>
+<a class="sourceLine" id="cb10-11" title="11">}</a></code></pre></div>
+<h3 id="operator">&lt;&lt; operator</h3>
+<p>Outputs the internal buffer to the stream (Serial) in a formatted format.</p>
+<h4 id="example">Example</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">uint8_t</span> u8buf[] = { <span class="bn">0x11</span>, <span class="bn">0x22</span>, <span class="bn">0x33</span>, <span class="bn">0xaa</span>, <span class="bn">0xbb</span>, <span class="bn">0xcc</span> };</a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3">ser_parser pout;</a>
+<a class="sourceLine" id="cb11-4" title="4">pout.begin(ARSER::ASCII, u8buf, <span class="dv">6</span>, <span class="dv">6</span>); <span class="co">// Specify 6 bytes of u8buf</span></a>
+<a class="sourceLine" id="cb11-5" title="5"></a>
+<a class="sourceLine" id="cb11-6" title="6">Serial &lt;&lt; pout;<span class="co">// Format output to Serial -&gt; :112233AABBCC??[CR][LF] </span></a></code></pre></div>
+</body>
+</html>

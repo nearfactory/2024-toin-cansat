@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>packet_rx</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">packet_rx</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#packet_rx">packet_rx</a><ul>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#get_payload">get_payload()</a></li>
+<li><a href="#get_psrxdataapp">get_psRxDataApp()</a></li>
+<li><a href="#get_length">get_length()</a></li>
+<li><a href="#get_lqi">get_lqi()</a></li>
+<li><a href="#get_addr_src_long-get_addr_src_lid">get_addr_src_long(), get_addr_src_lid()</a></li>
+<li><a href="#get_addr_dst">get_addr_dst()</a></li>
+<li><a href="#is_secure_pkt">is_secure_pkt()</a></li>
+<li><a href="#get_network_type">get_network_type()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="packet_rx">packet_rx</h1>
+<p>This class is a wrapper class for TWENET’s <code>tsRxDataApp</code> structure.</p>
+<p>This class object is a wrapper class for <a href="../behavior/README.html">behavior</a> callback function or by <a href="../sys_callbacks/on_rx_packet.html"><code>on_rx_packets()</code></a>.</p>
+<p>In <code>packet_rx</code>, in particular, the data payload of the packet can be handled by the <code>smplbuf</code> container, and utility functions such as <code>expand_bytes()</code> simplify the payload interpretation description.</p>
+<div class="info">
+<p>At this time, we have implemented methods and other interfaces, mainly those required for the simple relay network <code>&lt;NWK_SIMPLE&gt;</code>.</p>
+</div>
+<h2 id="methods">Methods</h2>
+<h3 id="get_payload">get_payload()</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1">smplbuf_u8_attach&amp; get_payload()</a></code></pre></div>
+<p>Get the data payload of the packet.</p>
+<div class="info">
+<p>If <code>&lt;NWK_SIMPLE&gt;</code> is used, there is header data for <code>&lt;NWK_SIMPLE&gt;</code> at the beginning. The container referred to in the return will be a sub-array excluding the header. If you want to refer to the header part, refer to the <code>tsRxDataApp</code> structure by <code>get_psRxDataApp()</code>.</p>
+</div>
+<h3 id="get_psrxdataapp">get_psRxDataApp()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="at">const</span> tsRxDataApp* get_psRxDataApp() </a></code></pre></div>
+<p>Obtain the receiving structure of the TWENET C library.</p>
+<h3 id="get_length">get_length()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">uint8_t</span> get_length()</a></code></pre></div>
+<p>Returns the data length of the payload. The value is the same as <code>.get_payload().size()</code>.</p>
+<h3 id="get_lqi">get_lqi()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">uint8_t</span> get_lqi()</a></code></pre></div>
+<p>Obtain the LQI value (Link Quality Indicator).</p>
+<div class="info">
+<p>LQI is a value that indicates the quality of radio communication, expressed as a number from 0 to 255.</p>
+<p>Incidentally, if you want to evaluate it in several levels, you can classify it as follows: less than 50 (bad - less than 80 dbm), 50 to 100 (somewhat bad), 100 to 150 (good), 150 or more (near the antenna), and so on. Please note that these are only guidelines.</p>
+</div>
+<h3 id="get_addr_src_long-get_addr_src_lid">get_addr_src_long(), get_addr_src_lid()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">uint32_t</span> get_addr_src_long()</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="dt">uint8_t</span> get_addr_src_lid()</a></code></pre></div>
+<p>Get the address of the sender.</p>
+<p><code>get_addr_src_long()</code> is the serial number of the sender and MSB(bit31) is always 1.</p>
+<p><code>get_addr_src_lid()</code> is the logical ID of the sender and takes values from <code>0x00</code>-<code>0xFE</code> (the logical ID specified by <code>&lt;NWK_SIMPLE&gt;</code>).</p>
+<h3 id="get_addr_dst">get_addr_dst()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">uint32_t</span> get_addr_dst()</a></code></pre></div>
+<p>Gets the destination address.</p>
+<p>The destination address is specified by the source, and the range of values varies depending on the type of destination.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MSB (bit31) is set.</td>
+<td><code>0x00</code>-<code>0xFF</code></td>
+</tr>
+<tr class="even">
+<td>Logical ID (8bit) is specified as the destination.</td>
+<td><code>0x00</code>-<code>0xFF</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_secure_pkt">is_secure_pkt()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">bool</span> is_secure_pkt()</a></code></pre></div>
+<p>Returns <code>true</code> for encrypted packets and <code>false</code> for plaintext.</p>
+<h3 id="get_network_type">get_network_type()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">uint8_t</span> <span class="dt">get_network_type</span>() </a></code></pre></div>
+<p>Returns network type of the packet identified by Network BEHAVIOR.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mwx::NETWORK::LAYERED</code></td>
+<td>packets from <code>&lt;NWK_LAYERED&gt;</code></td>
+</tr>
+<tr class="even">
+<td><code>mwx::NETWORK::SIMPLE</code></td>
+<td>packets from <code>&lt;NWK_SIMPLE&gt;</code></td>
+</tr>
+<tr class="odd">
+<td><code>mwx::NETWORK::NONE</code></td>
+<td>neworkless packets</td>
+</tr>
+<tr class="even">
+<td>others</td>
+<td>error or unknow packet type</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

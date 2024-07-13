@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>EASTL</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">EASTL</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#eastl">EASTL</a><ul>
+<li><a href="#use-in-twenet">Use in TWENET</a><ul>
+<li><a href="#embedding-and-compiling-methods">Embedding and Compiling Methods</a></li>
+<li><a href="#how-to-incorporate-details">How to incorporate (details)</a></li>
+</ul></li>
+<li><a href="#about-coding">About Coding</a><ul>
+<li><a href="#about-std-and-eastl">About <code>std::</code> and <code>eastl::</code></a></li>
+<li><a href="#global-object-initialization-1-placement-new">Global object initialization 1 (placement new)</a></li>
+<li><a href="#global-object-initialization-2-unique_ptr">Global object initialization 2 (unique_ptr)</a></li>
+<li><a href="#about-intrusive-containers">About intrusive containers</a></li>
+</ul></li>
+<li><a href="#reference-information">Reference Information</a></li>
+<li><a href="#about-this-sample">About this sample</a></li>
+<li><a href="#code-example">Code Example</a><ul>
+<li><a href="#fixed_vector">fixed_vector</a></li>
+<li><a href="#fixed_list">fixed_list</a></li>
+<li><a href="#intrusive_list">intrusive_list</a></li>
+<li><a href="#ring_buffer">ring_buffer</a></li>
+<li><a href="#intrusive_hash_map">intrusive_hash_map</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="eastl">EASTL</h1>
+<p><a target=_blank href="https://github.com/electronicarts/EASTL">EASTL</a> is a standard template library (containers and algorithms) maintained by Electronic Arts, and is implemented in the manner of the STL (Standard Template Library) of C++. It has been developed for the development of game consoles with many restrictions, and containers and algorithms have been prepared for environments with large memory handling restrictions.</p>
+<p>This library makes EASTL available within TWENET.</p>
+<p>The following is a list of EASTL’s features.</p>
+<ul>
+<li>Container with fixed memory allocation (<code>fixed_</code>) : Containers with a fixed number of elements can be declared without dynamic allocation. If declared globally, a fixed memory area is allocated at compile time. If declared locally, the memory area is allocated in the stack area and can be used within its scope.</li>
+<li>Intrusive containers：While ordinary containers can store arbitrary data structures, Intrusive containers inherit a dedicated base class for data structures, which holds link information and other information to maintain link structures and other structures within the container. Although each element in a container is dedicated to that container, lists and map structures are very efficient in memory usage.（Reference: <a target=_blank href="https://www.boost.org/doc/libs/1_35_0/doc/html/intrusive/intrusive_vs_nontrusive.html">Intrusive and non-intrusive containers</a>）</li>
+</ul>
+<p>The 2007 article <a target=_blank href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2271.html">EASTL (open-std.org)</a> describes the motivation behind the development.</p>
+<h2 id="use-in-twenet">Use in TWENET</h2>
+<p>Please keep in mind the following</p>
+<p><strong>We do not perform comprehensive verification of the library’s operation. Please verify the operation of the library by yourself. We also cannot respond to inquiries about how to use EASTL. Please refer to the information such as opening materials and library resource codes of the distribution source.</strong></p>
+<ul>
+<li>Use the <a target=_blank href="https://github.com/electronicarts/EASTL/releases/tag/3.07.00">EASTL3.07</a> (2018/1/31) version. (the last version that can be compiled in C++11)</li>
+<li>The following libraries are not incorporated.
+<ul>
+<li><code>test/packages/EAAssert</code>, <code>source/assert.cpp</code></li>
+<li><code>test/packages/EATest</code></li>
+<li><code>test/packages/EAThread</code>, <code>source/thread_support.cpp</code></li>
+</ul></li>
+<li>The test code <code>test/source</code> has not been ported to work.</li>
+<li>In <em>sprintf</em> related matters, <code>EA::StdC::Vsnprintf(char8_t*, ...)</code> is only solved by calling <code>vsnprintf_()</code> in the printf.h library.</li>
+</ul>
+<h3 id="embedding-and-compiling-methods">Embedding and Compiling Methods</h3>
+<p>EASTL can be used when writing an ACT Act.</p>
+<p>Add include paths and libraries as required by the development environment for TWELITE. Please include the library headers in the code you create.</p>
+<pre><code>#include &lt;TWELITE&gt;
+#include &lt;EASTL/fixed_string.h&gt;
+
+using namespace eastl;
+using tstr128 = fixed_string&lt;char, 127 + 1, false&gt;;
+
+void setup() {
+    tstr128 s1;
+    s1 = &quot;Hello World&quot;;
+    Serial &lt;&lt; s1.c_str();
+}
+void loop() {
+    ;
+}</code></pre>
+<h3 id="how-to-incorporate-details">How to incorporate (details)</h3>
+<p>Library compilation and include path settings have already been performed in the directories under MWSDK/TWENET, but the internal settings are described below.</p>
+<ul>
+<li>Compile the code in EASTL/source as a library archive (<code>libEASTL.a</code>). Reference to this library is required at link time.</li>
+<li>Add the following include paths at compile time.</li>
+</ul>
+<p>If <code>$(PATH_EASTL)</code> is the EASTL directory, the include path would be</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/include</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EAAssert/include</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EABase/include/Common</a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EAMain/include</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EAStdC/include</a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EATest/include</a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="ex">-I</span><span class="va">$(</span><span class="ex">PATH_EASTL</span><span class="va">)</span>/test/packages/EAThread/include</a></code></pre></div>
+<h2 id="about-coding">About Coding</h2>
+<h3 id="about-std-and-eastl">About <code>std::</code> and <code>eastl::</code></h3>
+<p>MWX Live internally also uses the standard libraries in the <code>std::</code> namespace.</p>
+<p>The standard library (<code>std::</code>) and EASTL (<code>eastl::</code>) have the same name and the same functionality defined. They may be mixed, but their use may result in errors. In other words, for EASTL use, the definitions in EASTL are usually used (e.g., trying to store <code>eastl::fixed_string</code> in <code>std::unique_ptr</code> will result in a compiler error).</p>
+<p>Also, when using statements such as <code>using namespace std;</code>, be careful of name collisions.</p>
+<h3 id="global-object-initialization-1-placement-new">Global object initialization 1 (placement new)</h3>
+<p>In the development of TWENET, the constructor of the globally declared object is not executed due to compiler constraints. The memory area of the globally declared object is simply cleared to zero. If the code is executed as is, it will hang due to null pointer access in most cases.</p>
+<p>Use <em>placement new</em> to initialize this object。</p>
+<pre><code>#include &lt;TWELITE&gt;
+#include &lt;EASTL/fixed_string.h&gt;
+
+using namespace eastl;
+using tstr128 = fixed_string&lt;char, 127 + 1, false&gt;;
+
+tstr128 g_str1; // constructor is NOT called! needs to be initialized before use.
+
+void setup() {
+    (void) new ((void*)&amp;g_str1) tstr128(&quot;Hello World&quot;);
+    Serial &lt;&lt; g_str1.c_str();
+}</code></pre>
+<p>*The code for <em>placement new</em> looks a bit messy, so we provide an auxiliary function <code>mwx::pnew()</code>. The previous example can be rewritten as follows</p>
+<pre><code>(void) new ((void*)&amp;g_str1) tstr128(&quot;Hello World&quot;);
+// ↓
+mwx::pnew(g_str1, &quot;Hello World&quot;);</code></pre>
+<p>The second and subsequent arguments are variable numbers and are passed directly to the constructor.</p>
+<h3 id="global-object-initialization-2-unique_ptr">Global object initialization 2 (unique_ptr)</h3>
+<p>Another way to initialize global objects is to use <code>unique_ptr</code> (<a target=_blank href="https://cpprefjp.github.io/reference/memory/unique_ptr.html">description of std::unique_ptr</a>). Although <code>unique_ptr</code> is available in both <code>std::</code> and <code>eastl::</code>, EASTL classes use the one in <code>eastl::</code>.</p>
+<p>Call <code>.reset()</code> at the time of initialization as follows.</p>
+<pre><code>#include &lt;TWELITE&gt;
+#include &lt;EASTL/unique_ptr.h&gt;
+#include &lt;EASTL/fixed_string.h&gt;
+
+using namespace eastl;
+using tstr128 = fixed_string&lt;char, 127 + 1, false&gt;;
+
+eastl::unique_ptr&lt;tstr128&gt; uq_str1;
+
+void setup() {
+    uq_str1.reset(new tstr128(&quot;Hello World&quot;));
+    if (uq_str1) { // true: object is stored.
+        Serial &lt;&lt; uq_str1-&gt;c_str();
+    }
+}</code></pre>
+<h3 id="about-intrusive-containers">About intrusive containers</h3>
+<p>The following is an example of an element definition for <code>intrusive_list</code>. It has only <code>int mX</code> members.</p>
+<pre><code>struct IntNode : public eastl::intrusive_list_node { 
+    int mX;
+    IntNode(int x = 0) : mX(x) { }
+        // no need to call super class&#39;s constructor eastl::intrusive_list_node()
+};
+
+inline bool operator&lt;(const IntNode&amp; a, const IntNode&amp; b) { return a.mX &lt; b.mX; }
+inline bool operator&gt;(const IntNode&amp; a, const IntNode&amp; b) { return a.mX &gt; b.mX; }</code></pre>
+<p>Elements of <code>intrusive_list</code> must have <code>intrusive_list_node</code> in the base class. Within the base class are link pointers to maintain the list. This section further defines the comparison operators used for <code>sort</code> and so on.</p>
+<pre><code>using tiList = intrusive_list&lt;IntNode&gt;;
+
+void setup() {
+    IntNode nodeA(5);
+    IntNode nodeB(1);
+    IntNode nodeC(9);
+    IntNode nodeD(2);
+    IntNode nodeE(4);
+
+    tiList l; // intrusive_list body
+    
+    l.push_front(nodeA); // forming list strucure 
+                         //   by updating link info in intrusive_list_node.
+    l.push_front(nodeB);
+    l.push_front(nodeC);
+    l.push_front(nodeD);
+    l.push_front(nodeE);
+    
+    l.sort(); // sort, using &lt; operator
+    l.sort(eastl::greater&lt;tilist::value_type&gt;()); // sort, using &gt; operator
+}</code></pre>
+<h2 id="reference-information">Reference Information</h2>
+<ul>
+<li><a target=_blank href="https://eastl.docsforge.com/">EA Standard Template Library</a> ーNote that the libraries included in TWENET are for EASTL 3.07 and contain elements that have been implemented or modified since then.)</li>
+<li><a target=_blank href="https://en.cppreference.com/">C++ reference</a> ーThis is a C++ reference, but the STL explanation is helpful.</li>
+</ul>
+<h2 id="about-this-sample">About this sample</h2>
+<p>The license description of EASTL is as follows</p>
+<p><em>Modified BSD License (3-Clause BSD license) see the file LICENSE in the project root.</em></p>
+<pre><code>/*
+Copyright (C) 2015 Electronic Arts Inc.  All rights reserved.
+  
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+  
+1.  Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+2.  Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+3.  Neither the name of Electronic Arts, Inc. (&quot;EA&quot;) nor the names of
+    its contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+  
+THIS SOFTWARE IS PROVIDED BY ELECTRONIC ARTS AND ITS CONTRIBUTORS &quot;AS IS&quot; AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL ELECTRONIC ARTS OR ITS CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/</code></pre>
+<p>The sample code applies MWSLA-1J/E.</p>
+<h2 id="code-example">Code Example</h2>
+<h3 id="fixed_vector">fixed_vector</h3>
+<p>An array with a fixed maximum length (i.e., not expandable). (* <code>mwx::smplbuf</code> is also a fixed maximum length array, but it is partially specialized for internal processing of the MWX library)</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="pp">#include </span><span class="im">&lt;EASTL/fixed_vector.h&gt;</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="pp">#include </span><span class="im">&lt;EASTL/sort.h&gt;</span></a>
+<a class="sourceLine" id="cb9-4" title="4"></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="kw">using</span> tvct = eastl::fixed_vector&lt;<span class="dt">uint16_t</span>, <span class="dv">64</span>, <span class="kw">false</span>&gt;;</a>
+<a class="sourceLine" id="cb9-6" title="6">tvct v;</a>
+<a class="sourceLine" id="cb9-7" title="7"></a>
+<a class="sourceLine" id="cb9-8" title="8"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb9-9" title="9">    mwx::pnew(v); <span class="co">// initialize</span></a>
+<a class="sourceLine" id="cb9-10" title="10">    v = { <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span> ,<span class="dv">4</span> }; <span class="co">// set initial list.</span></a>
+<a class="sourceLine" id="cb9-11" title="11"></a>
+<a class="sourceLine" id="cb9-12" title="12">    <span class="co">// push and pop</span></a>
+<a class="sourceLine" id="cb9-13" title="13">    v.pop_back();   <span class="co">// 3, 1, 2</span></a>
+<a class="sourceLine" id="cb9-14" title="14">    v.push_back(<span class="dv">5</span>); <span class="co">// 3, 1, 2, 5</span></a>
+<a class="sourceLine" id="cb9-15" title="15">    </a>
+<a class="sourceLine" id="cb9-16" title="16">    <span class="co">// sort</span></a>
+<a class="sourceLine" id="cb9-17" title="17">    eastl::sort(v.begin(), v.end(), eastl::less&lt;tvct::<span class="dt">value_type</span>&gt;());</a>
+<a class="sourceLine" id="cb9-18" title="18">                    <span class="co">// 1, 2, 3, 5</span></a>
+<a class="sourceLine" id="cb9-19" title="19">    </a>
+<a class="sourceLine" id="cb9-20" title="20">    <span class="co">// disp all</span></a>
+<a class="sourceLine" id="cb9-21" title="21">    <span class="cf">for</span> (<span class="kw">auto</span> x : v) { Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x); }</a>
+<a class="sourceLine" id="cb9-22" title="22"></a>
+<a class="sourceLine" id="cb9-23" title="23">    Serial &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb9-24" title="24">    </a>
+<a class="sourceLine" id="cb9-25" title="25">    <span class="co">// using operator []</span></a>
+<a class="sourceLine" id="cb9-26" title="26">    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; v.size(); i++) { Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, v[i]); }</a>
+<a class="sourceLine" id="cb9-27" title="27">}</a></code></pre></div>
+<p>There are three template arguments for <code>fixed_vector</code>, the first is the type, the second is the maximum number, and the third is <em>false</em>. For manipulating arrays, <code>.puch_back()</code>, <code>.pop_back()</code>, and <code>[] operators</code> similar to the general <code>std::vector</code> are available.</p>
+<p>It is also possible to apply sorting algorithms, etc. In the above example, <code>eastl::sort</code> is applied with ascending order <code>eastl::less</code>.</p>
+<h3 id="fixed_list">fixed_list</h3>
+<p>A list structure with a fixed maximum number of elements (see also <code>intrusive_list</code>).</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="pp">#include </span><span class="im">&lt;EASTL/fixed_list.h&gt;</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="pp">#include </span><span class="im">&lt;EASTL/sort.h&gt;</span></a>
+<a class="sourceLine" id="cb10-4" title="4"></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="kw">using</span> tdata = eastl::pair&lt;<span class="dt">uint8_t</span>, <span class="dt">void</span> (*)(<span class="dt">uint8_t</span>)&gt;; <span class="co">// element data type</span></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="kw">using</span> tlst = eastl::fixed_list&lt;tdata, <span class="dv">3</span>, <span class="kw">false</span>&gt;; <span class="co">// fixed_list with 3 elements.</span></a>
+<a class="sourceLine" id="cb10-7" title="7">tlst l; <span class="co">// list object</span></a>
+<a class="sourceLine" id="cb10-8" title="8"></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb10-10" title="10">    mwx::pnew(l); <span class="co">// initialize (call constructor)</span></a>
+<a class="sourceLine" id="cb10-11" title="11">    <span class="co">// add</span></a>
+<a class="sourceLine" id="cb10-12" title="12">    <span class="cf">if</span> (!l.full()) l.insert(l.begin(), eastl::make_pair(<span class="ch">&#39;A&#39;</span>, [](<span class="dt">uint8_t</span> v){ Serial &lt;&lt; format(<span class="st">&quot;(1:</span><span class="sc">%c</span><span class="st">)&quot;</span>, v); } ));</a>
+<a class="sourceLine" id="cb10-13" title="13">    <span class="cf">if</span> (!l.full()) l.insert(l.begin(), eastl::make_pair(<span class="ch">&#39;B&#39;</span>, [](<span class="dt">uint8_t</span> v){ Serial &lt;&lt; format(<span class="st">&quot;(2:</span><span class="sc">%c</span><span class="st">)&quot;</span>, v); } ));</a>
+<a class="sourceLine" id="cb10-14" title="14">    <span class="cf">if</span> (!l.full()) l.insert(l.begin(), eastl::make_pair(<span class="ch">&#39;C&#39;</span>, [](<span class="dt">uint8_t</span> v){ Serial &lt;&lt; format(<span class="st">&quot;(3:</span><span class="sc">%c</span><span class="st">)&quot;</span>, v); } ));</a>
+<a class="sourceLine" id="cb10-15" title="15">    <span class="cf">if</span> (!l.full()) l.insert(l.begin(), eastl::make_pair(<span class="ch">&#39;D&#39;</span>, [](<span class="dt">uint8_t</span> v){ Serial &lt;&lt; format(<span class="st">&quot;(4:</span><span class="sc">%c</span><span class="st">)&quot;</span>, v); } )); <span class="co">// fails</span></a>
+<a class="sourceLine" id="cb10-16" title="16">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;init: &quot;</span>; <span class="cf">for</span>(<span class="kw">auto</span> &amp;x: l) x.second(x.first);</a>
+<a class="sourceLine" id="cb10-17" title="17">    <span class="co">// find &amp; erase</span></a>
+<a class="sourceLine" id="cb10-18" title="18">    <span class="kw">auto</span> p = eastl::find_if(l.begin(), l.end(), [](tdata&amp; x) { <span class="cf">return</span> (x.first == <span class="ch">&#39;B&#39;</span>); } );</a>
+<a class="sourceLine" id="cb10-19" title="19">    <span class="cf">if</span> (p != l.end()) l.erase(p);</a>
+<a class="sourceLine" id="cb10-20" title="20">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;find&amp;erase: &quot;</span>; <span class="cf">for</span>(<span class="kw">auto</span> &amp;x: l) x.second(x.first);</a>
+<a class="sourceLine" id="cb10-21" title="21">    <span class="co">// append</span></a>
+<a class="sourceLine" id="cb10-22" title="22">    <span class="cf">if</span> (!l.full()) l.insert(l.end(), eastl::make_pair(<span class="ch">&#39;D&#39;</span>, [](<span class="dt">uint8_t</span> v){ Serial &lt;&lt; format(<span class="st">&quot;(4:</span><span class="sc">%c</span><span class="st">)&quot;</span>, v); } ));</a>
+<a class="sourceLine" id="cb10-23" title="23">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;append: &quot;</span>; <span class="cf">for</span>(<span class="kw">auto</span> &amp;x: l) x.second(x.first);</a>
+<a class="sourceLine" id="cb10-24" title="24">    <span class="co">// sort</span></a>
+<a class="sourceLine" id="cb10-25" title="25">    eastl::sort(l.begin(), l.end(), eastl::less&lt;tlst::<span class="dt">value_type</span>&gt;());</a>
+<a class="sourceLine" id="cb10-26" title="26">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;sort:&quot;</span>; <span class="cf">for</span>(<span class="kw">auto</span> &amp;x: l) x.second(x.first);</a>
+<a class="sourceLine" id="cb10-27" title="27">    <span class="co">// sort reverse</span></a>
+<a class="sourceLine" id="cb10-28" title="28">    eastl::sort(l.begin(), l.end(), eastl::greater&lt;tlst::<span class="dt">value_type</span>&gt;());</a>
+<a class="sourceLine" id="cb10-29" title="29">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;sort(rev):&quot;</span>; <span class="cf">for</span>(<span class="kw">auto</span> &amp;x: l) x.second(x.first);</a>
+<a class="sourceLine" id="cb10-30" title="30">}</a></code></pre></div>
+<p>There are three template arguments for <code>fixed_list</code>: the first is the type, the second is the maximum number, and the third is <em>false</em>. For manipulating the list, <code>.insert()</code>, <code>.erase()</code>, etc. similar to the general <code>std::list</code> are available.</p>
+<p>In the above code, the list contains the elements of a pair <code>eastl::pair</code>, where the first of the pair is an integer of type <code>uint8_t</code> and the second is a function pointer to <code>void (*)(uint8_t)</code>. In the code, the lambda expression is written directly. The <code>x.second(x.first);</code> in the code implies that the value of first is given to the function obtained from second.</p>
+<p>This list can be searched for elements using <code>eastl::find_if</code> and sorted using <code>bubble_sort</code>.</p>
+<h3 id="intrusive_list">intrusive_list</h3>
+<p>While a normal list can have any data structure as an element, <code>intrusive_list</code> constructs a data structure by assigning specific data to an element and using that data.</p>
+<p>In the following example, to be an element of the <code>intruslve_list</code> data structure, it must be a data element type that inherits from <code>eastl::intrusive_list_node</code>. The <code>eastl::intrusive_list_node</code> is an extension that allows pointers to the previous and next elements to be stored。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="pp">#include </span><span class="im">&lt;EASTL/fixed_vector.h&gt;</span></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="pp">#include </span><span class="im">&lt;EASTL/intrusive_list.h&gt;</span></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="pp">#include </span><span class="im">&lt;EASTL/unique_ptr.h&gt;</span></a>
+<a class="sourceLine" id="cb11-5" title="5"></a>
+<a class="sourceLine" id="cb11-6" title="6"><span class="co">// list element of intrusive_list.</span></a>
+<a class="sourceLine" id="cb11-7" title="7"><span class="kw">struct</span> IntNode : <span class="kw">public</span> eastl::intrusive_list_node { </a>
+<a class="sourceLine" id="cb11-8" title="8">    <span class="dt">int</span> mX;</a>
+<a class="sourceLine" id="cb11-9" title="9">    IntNode(<span class="dt">int</span> x = <span class="dv">0</span>) : mX(x) { }</a>
+<a class="sourceLine" id="cb11-10" title="10">};</a>
+<a class="sourceLine" id="cb11-11" title="11"><span class="kw">inline</span> <span class="dt">bool</span> <span class="kw">operator</span>&gt;(<span class="at">const</span> IntNode&amp; a, <span class="at">const</span> IntNode&amp; b) { <span class="cf">return</span> a.mX &gt; b.mX; } <span class="co">// for sort</span></a>
+<a class="sourceLine" id="cb11-12" title="12"></a>
+<a class="sourceLine" id="cb11-13" title="13"><span class="kw">using</span> tpool = eastl::fixed_vector&lt;IntNode, <span class="dv">16</span>, <span class="kw">false</span>&gt;;</a>
+<a class="sourceLine" id="cb11-14" title="14"><span class="kw">using</span> tlst = eastl::intrusive_list&lt;IntNode&gt;;</a>
+<a class="sourceLine" id="cb11-15" title="15"></a>
+<a class="sourceLine" id="cb11-16" title="16">tpool pool; <span class="co">// instance pool.</span></a>
+<a class="sourceLine" id="cb11-17" title="17">tlst l; <span class="co">// list object</span></a>
+<a class="sourceLine" id="cb11-18" title="18"></a>
+<a class="sourceLine" id="cb11-19" title="19"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb11-20" title="20">    mwx::pnew(pool); <span class="co">// prepare isntances</span></a>
+<a class="sourceLine" id="cb11-21" title="21">    mwx::pnew(l); <span class="co">// initialize (call constructor)</span></a>
+<a class="sourceLine" id="cb11-22" title="22"></a>
+<a class="sourceLine" id="cb11-23" title="23">    pool.resize(<span class="dv">5</span>); <span class="co">// create 4 instances into pool</span></a>
+<a class="sourceLine" id="cb11-24" title="24"></a>
+<a class="sourceLine" id="cb11-25" title="25">    <span class="co">// insert an IntNode element into List.</span></a>
+<a class="sourceLine" id="cb11-26" title="26">    <span class="dt">int</span> i = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb11-27" title="27">    pool[i].mX = <span class="dv">5</span>; l.push_front(pool[i]); i++;</a>
+<a class="sourceLine" id="cb11-28" title="28">    pool[i].mX = <span class="dv">1</span>; l.push_front(pool[i]); i++;</a>
+<a class="sourceLine" id="cb11-29" title="29">    pool[i].mX = <span class="dv">2</span>; l.push_front(pool[i]); i++;</a>
+<a class="sourceLine" id="cb11-30" title="30">    pool[i].mX = <span class="dv">4</span>; l.push_front(pool[i]); i++;</a>
+<a class="sourceLine" id="cb11-31" title="31">    pool[i].mX = <span class="dv">3</span>; l.push_front(pool[i]); i++;</a>
+<a class="sourceLine" id="cb11-32" title="32">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;init: &quot;</span>;</a>
+<a class="sourceLine" id="cb11-33" title="33">    <span class="cf">for</span>(<span class="kw">auto</span>&amp; x : l) { Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x.mX); }</a>
+<a class="sourceLine" id="cb11-34" title="34"></a>
+<a class="sourceLine" id="cb11-35" title="35">    l.remove(pool[<span class="dv">2</span>]);</a>
+<a class="sourceLine" id="cb11-36" title="36">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;remove: &quot;</span>;</a>
+<a class="sourceLine" id="cb11-37" title="37">    <span class="cf">for</span>(<span class="kw">auto</span>&amp; x : l) { Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x.mX); }</a>
+<a class="sourceLine" id="cb11-38" title="38"></a>
+<a class="sourceLine" id="cb11-39" title="39">    l.sort(eastl::greater&lt;tlst::<span class="dt">value_type</span>&gt;());</a>
+<a class="sourceLine" id="cb11-40" title="40">    Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;sort: &quot;</span>;</a>
+<a class="sourceLine" id="cb11-41" title="41">    <span class="cf">for</span>(<span class="kw">auto</span>&amp; x : l) { Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x.mX); }</a>
+<a class="sourceLine" id="cb11-42" title="42">}</a></code></pre></div>
+<p>In this example, <code>eastl::fixed_vector&lt;&gt;</code> is used for the purpose of allocating the required number of elements of the <code>IntNode</code>, not that <code>fixed_vector</code> was needed. 5 elements are used to store the test values and Construct an intrusive_list. The example calls <code>l.push_pront()</code> to store the elements one by one in the list. Actually, it is not storing, but rewiring the pointers of each element <code>IntNode</code>.</p>
+<p>Sorting is described by calling a member function like <code>l.sort()</code>.</p>
+<h3 id="ring_buffer">ring_buffer</h3>
+<p>The ring buffer <code>ring_buffer</code> is constructed in combination with another container (<code>fixed_vector</code> in the example).</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="pp">#include </span><span class="im">&lt;EASTL/fixed_vector.h&gt;</span></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="pp">#include </span><span class="im">&lt;EASTL/bonus/ring_buffer.h&gt;</span></a>
+<a class="sourceLine" id="cb12-4" title="4"></a>
+<a class="sourceLine" id="cb12-5" title="5"><span class="at">const</span> <span class="dt">size_t</span> N_RING_ELE = <span class="dv">4</span>; <span class="co">// element max for RING BUFFER.</span></a>
+<a class="sourceLine" id="cb12-6" title="6"><span class="kw">using</span> tvec = eastl::fixed_vector&lt;<span class="dt">uint8_t</span>, N_RING_ELE + <span class="dv">1</span>, <span class="kw">false</span>&gt;; <span class="co">// One extra element is required.</span></a>
+<a class="sourceLine" id="cb12-7" title="7"><span class="kw">using</span> tring = eastl::ring_buffer&lt;<span class="dt">uint8_t</span>, tvec&gt;;</a>
+<a class="sourceLine" id="cb12-8" title="8">tring rb;</a>
+<a class="sourceLine" id="cb12-9" title="9"></a>
+<a class="sourceLine" id="cb12-10" title="10"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb12-11" title="11">    mwx::pnew(rb, N_RING_ELE);</a>
+<a class="sourceLine" id="cb12-12" title="12"></a>
+<a class="sourceLine" id="cb12-13" title="13">    rb.push_front(<span class="dv">5</span>);</a>
+<a class="sourceLine" id="cb12-14" title="14">    rb.push_front(<span class="dv">1</span>);</a>
+<a class="sourceLine" id="cb12-15" title="15">    rb.push_front(<span class="dv">4</span>);</a>
+<a class="sourceLine" id="cb12-16" title="16">    rb.push_front(<span class="dv">2</span>);</a>
+<a class="sourceLine" id="cb12-17" title="17">    Serial &lt;&lt; crlf; <span class="cf">for</span> (<span class="kw">auto</span> x : rb) Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x);</a>
+<a class="sourceLine" id="cb12-18" title="18">    rb.push_front(<span class="dv">3</span>);</a>
+<a class="sourceLine" id="cb12-19" title="19">    Serial &lt;&lt; crlf; <span class="cf">for</span> (<span class="kw">auto</span> x : rb) Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x);</a>
+<a class="sourceLine" id="cb12-20" title="20">    rb.push_front(<span class="dv">8</span>);</a>
+<a class="sourceLine" id="cb12-21" title="21">    Serial &lt;&lt; crlf; <span class="cf">for</span> (<span class="kw">auto</span> x : rb) Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x);</a>
+<a class="sourceLine" id="cb12-22" title="22">    rb.push_front(<span class="dv">9</span>);</a>
+<a class="sourceLine" id="cb12-23" title="23">    Serial &lt;&lt; crlf; <span class="cf">for</span> (<span class="kw">auto</span> x : rb) Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x);</a>
+<a class="sourceLine" id="cb12-24" title="24"></a>
+<a class="sourceLine" id="cb12-25" title="25">    Serial &lt;&lt; crlf &lt;&lt; format(<span class="st">&quot;back=</span><span class="sc">%d</span><span class="st">&quot;</span>, rb.back()) &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb12-26" title="26">    rb.pop_back();</a>
+<a class="sourceLine" id="cb12-27" title="27">    <span class="cf">for</span> (<span class="kw">auto</span> x : rb) Serial &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%d</span><span class="st">&quot;</span>, x);</a>
+<a class="sourceLine" id="cb12-28" title="28">}</a></code></pre></div>
+<p>The definition of <code>ring_buffer</code> is a combination of an element type and its container type. The element type should have one extra element.</p>
+<p>In the above example, <code>.push_front()</code> inserts the element at the top. If it overflows, the tail will disappear. The oldest element is taken out by <code>.back()</code>. Remove the oldest element by <code>.pop_back()</code>.</p>
+<h3 id="intrusive_hash_map">intrusive_hash_map</h3>
+<p>The map structure is a key-value data structure designed to efficiently extract elements by key value. The <code>intrusive_hash_map</code> is implemented using the intrusive structure and hash values. It is somewhat complicated to define, but memory consumption can be reduced.</p>
+<p>As with intrusive_list, you need to define your own element type <code>IntNode</code> by inheriting from <code>eastl::intrusive_hash_node_key&lt;element type&gt;</code>. Also, a maximum hash value (<code>N_BUCKET_CT</code>) must be defined to use hashing. This value should be set to an appropriate prime number depending on the expected number of elements to be stored.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="pp">#include </span><span class="im">&lt;EASTL/internal/intrusive_hashtable.h&gt;</span></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="pp">#include </span><span class="im">&lt;EASTL/intrusive_hash_map.h&gt;</span></a>
+<a class="sourceLine" id="cb13-4" title="4"></a>
+<a class="sourceLine" id="cb13-5" title="5"><span class="at">static</span> <span class="at">const</span> <span class="dt">unsigned</span> N_BUCKET_CT = <span class="dv">7</span>;</a>
+<a class="sourceLine" id="cb13-6" title="6"></a>
+<a class="sourceLine" id="cb13-7" title="7"><span class="co">// intrusive element type</span></a>
+<a class="sourceLine" id="cb13-8" title="8"><span class="kw">struct</span> IntNode : <span class="kw">public</span> eastl::intrusive_hash_node_key&lt;<span class="dt">uint8_t</span>&gt; {</a>
+<a class="sourceLine" id="cb13-9" title="9">    <span class="kw">using</span> SUP = intrusive_hash_node_key;</a>
+<a class="sourceLine" id="cb13-10" title="10">    <span class="dt">void</span> (*<span class="va">m_func</span>)(); <span class="co">// member variable is func pointer.</span></a>
+<a class="sourceLine" id="cb13-11" title="11">    IntNode(<span class="dt">uint8_t</span> key = <span class="dv">0</span>) { SUP::mKey = key; } <span class="co">// key will be passed by the constructor.</span></a>
+<a class="sourceLine" id="cb13-12" title="12">};</a>
+<a class="sourceLine" id="cb13-13" title="13"></a>
+<a class="sourceLine" id="cb13-14" title="14"><span class="co">// intrusive map type</span></a>
+<a class="sourceLine" id="cb13-15" title="15"><span class="kw">using</span> tmap = eastl::intrusive_hash_map&lt;<span class="dt">uint8_t</span>, IntNode, N_BUCKET_CT&gt;;</a>
+<a class="sourceLine" id="cb13-16" title="16"></a>
+<a class="sourceLine" id="cb13-17" title="17">tmap mp;</a>
+<a class="sourceLine" id="cb13-18" title="18">IntNode nd_a, nd_b, nd_c, nd_d;</a>
+<a class="sourceLine" id="cb13-19" title="19"></a>
+<a class="sourceLine" id="cb13-20" title="20"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb13-21" title="21">    mwx::pnew(mp); <span class="co">// initialize (call constructor)</span></a>
+<a class="sourceLine" id="cb13-22" title="22"></a>
+<a class="sourceLine" id="cb13-23" title="23">    mwx::pnew(nd_a, <span class="ch">&#39;A&#39;</span>)-&gt;<span class="va">m_func</span> = []() { Serial &lt;&lt; <span class="st">&quot;FuncA&quot;</span>; };</a>
+<a class="sourceLine" id="cb13-24" title="24">    mwx::pnew(nd_b, <span class="ch">&#39;B&#39;</span>)-&gt;<span class="va">m_func</span> = []() { Serial &lt;&lt; <span class="st">&quot;FuncB&quot;</span>; };</a>
+<a class="sourceLine" id="cb13-25" title="25">    mwx::pnew(nd_c, <span class="ch">&#39;C&#39;</span>)-&gt;<span class="va">m_func</span> = []() { Serial &lt;&lt; <span class="st">&quot;FuncC&quot;</span>; };</a>
+<a class="sourceLine" id="cb13-26" title="26">    mwx::pnew(nd_d, <span class="ch">&#39;D&#39;</span>)-&gt;<span class="va">m_func</span> = []() { Serial &lt;&lt; <span class="st">&quot;FuncD&quot;</span>; };</a>
+<a class="sourceLine" id="cb13-27" title="27"></a>
+<a class="sourceLine" id="cb13-28" title="28">    mp.insert(nd_a);</a>
+<a class="sourceLine" id="cb13-29" title="29">    mp.insert(nd_b);</a>
+<a class="sourceLine" id="cb13-30" title="30">    mp.insert(nd_c);</a>
+<a class="sourceLine" id="cb13-31" title="31">    mp.insert(nd_d);</a>
+<a class="sourceLine" id="cb13-32" title="32">}</a>
+<a class="sourceLine" id="cb13-33" title="33"></a>
+<a class="sourceLine" id="cb13-34" title="34"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb13-35" title="35">    <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb13-36" title="36">    <span class="cf">if</span>(c != -<span class="dv">1</span>) {</a>
+<a class="sourceLine" id="cb13-37" title="37">        Serial &lt;&lt; crlf &lt;&lt; <span class="ch">&#39;[&#39;</span> &lt;&lt; <span class="dt">uint8_t</span>(c) &lt;&lt; <span class="ch">&#39;]&#39;</span>;</a>
+<a class="sourceLine" id="cb13-38" title="38">        <span class="kw">auto</span>&amp;&amp; it = mp.find(<span class="dt">uint8_t</span>(c));</a>
+<a class="sourceLine" id="cb13-39" title="39">        <span class="cf">if</span> (it != mp.end()) it-&gt;<span class="va">m_func</span>();</a>
+<a class="sourceLine" id="cb13-40" title="40">    }</a>
+<a class="sourceLine" id="cb13-41" title="41">}</a></code></pre></div>
+<p>The above example assumes that the key of the map is a single character of type <code>uint8_t</code> and the value part of the map is a function pointer. In <code>loop()</code>, the function is executed according to the key input, and so on.</p>
+<p>First, since the table and elements are defined as global objects, we initialize the data elements (<code>nd_a, nd_b, nd_c, nd_d</code>) and initialize the hashmap (<code>mp</code>) by calling <code>mwx::pnew()</code> in <code>setup()</code>. The return value of <code>mwx::pnew()</code> is a pointer to the constructed object, so we write the values (lambda expressions) to the member variables directly after initialization.</p>
+<p>After setting the initials and values of the elements (<code>nd_a, nd_b, nd_c, nd_d</code>), insert the elements into the map as in <code>mp.insert(nd_a)</code>.</p>
+<p>In <code>loop()</code>, a search of the hashmap is performed each time a character is entered from the serial. The search calls the <code>mp.find()</code> method, which returns an iterator, or <code>mp.end()</code> if the search fails. If the search succeeds, <code>(*it)</code> can be used to refer to the element that was found.</p>
+<div class="info">
+<p><code>intrusive_hash_multimap</code> is a multimap that allows duplicate values. Its usage is almost the same as hashmap, except that it uses <code>.equal_range()</code> when searching and treats it as a pair of iterators.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">using</span> tmap = eastl::intrusive_hash_multimap&lt;<span class="dt">uint8_t</span>, IntNode, N_BUCKET_CT&gt;;</a>
+<a class="sourceLine" id="cb14-2" title="2">...</a>
+<a class="sourceLine" id="cb14-3" title="3">    <span class="co">// find emelents by key `c&#39;</span></a>
+<a class="sourceLine" id="cb14-4" title="4">    <span class="kw">auto</span> ip = mp.equal_range(<span class="dt">uint8_t</span>(c));</a>
+<a class="sourceLine" id="cb14-5" title="5">    <span class="cf">for</span>(<span class="kw">auto</span>&amp;&amp; it = ip.first; it != ip.second; it++) {</a>
+<a class="sourceLine" id="cb14-6" title="6">        it-&gt;<span class="va">m_func</span>();</a>
+<a class="sourceLine" id="cb14-7" title="7">    }</a></code></pre></div>
+</div>
+</body>
+</html>

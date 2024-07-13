@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#nbビーコン方式の接続">NBビーコン方式の接続</a><ul>
+<li><a href="#プログラミングについて">プログラミングについて</a></li>
+<li><a href="#上位ノード決定方法について">上位ノード決定方法について</a></li>
+<li><a href="#制限事項">制限事項</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="nbビーコン方式の接続">NBビーコン方式の接続</h1>
+<p>中継器や親機は定期的にNBビーコンを送出し、このビーコンを受信したルータは、受信した NBビーコンにもとづき上位ノードを決定する方法です。</p>
+<div class="info">
+<p>各ノードが始動時などに<a href="../../../twelite-net-api-ref/mojru-raiburari/nb-scan.html">近隣探索</a>(NBSCAN)を実行し、上位ノードを決定する方法もあります。これに比べ以下のメリットがあります。</p>
+<ul>
+<li>ネットワークが一斉に始動した時の混乱を避けられる</li>
+<li>非常に混雑したネットワークでの探索失敗リスクが減少する</li>
+</ul>
+<p>反面NBビーコンを受信できるまで上位ノードが決定できないため、電波条件が良い場合は余分に時間を必要とすることです。</p>
+</div>
+<div class="warning">
+<p>TWELITE NET 1.2 では、従来提供していた<a href="../../../twelite-net-api-ref/mojru-raiburari/nb-scan.html">近隣探索</a>(NBSCAN)を用いた方式も動作可能ですが、新規実装には推奨しません。</p>
+</div>
+<h2 id="プログラミングについて">プログラミングについて</h2>
+<p><code>tsToCoNet_NwkLyTr_Config</code> 構造体の設定パラメータにより NB ビーコンモードを設定する。本モードを利用する場合 Parent ならびに Router は必ず設定が必要である。</p>
+<p>コード例</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1">tsToCoNet_NwkLyTr_Config sNwkLayerTreeConfig;</a>
+<a class="sourceLine" id="cb1-2" title="2">  </a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co">// set NB beacon mode</span></a>
+<a class="sourceLine" id="cb1-4" title="4">sNwkLayerTreeConfig.u8Second_To_Beacon = <span class="dv">3</span>; <span class="co">// set NB beacon interval</span></a>
+<a class="sourceLine" id="cb1-5" title="5">sNwkLayerTreeConfig.u8StartOpt = <span class="bn">0x02</span>; <span class="co">// set NB beacon mode</span></a>
+<a class="sourceLine" id="cb1-6" title="6">  </a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">// set as Router</span></a>
+<a class="sourceLine" id="cb1-8" title="8">sAppData.sNwkLayerTreeConfig.u8Role = TOCONET_NWK_ROLE_ROUTER;</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="co">/* 親機の場合 TOCONET_NWK_ROLE_PARENT を設定する */</span>;</a>
+<a class="sourceLine" id="cb1-10" title="10">pContextNwk = ToCoNet_NwkLyTr_psConfig(&amp;ssNwkLayerTreeConfig);</a></code></pre></div>
+<h2 id="上位ノード決定方法について">上位ノード決定方法について</h2>
+<p>上位ノードは原則として約10秒に１回NBビーコン送信を行います。過去 120 秒以内に到達したパケットで、到達回数や<a href="../../yong-yu.html#%22lqi">LQI</a>を評価して上位ノードを決定します。</p>
+<p>到達履歴として最大６ノード、各ノードにつき８パケット分を評価します。</p>
+<h2 id="制限事項">制限事項</h2>
+<ul>
+<li>子機は LAYERTREE_MININODE 方式、中継器、親機は NBビーコン方式という組み合わせを想定します 。（App_Tag向け）</li>
+<li>同一レイヤ内を中継する SUBTREE には対応しません。</li>
+</ul>
+</body>
+</html>

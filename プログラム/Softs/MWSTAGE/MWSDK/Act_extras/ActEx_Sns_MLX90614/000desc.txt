@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=Actエクストラ — Sns_MLX90614
+DESC=Melexis の非接触赤外温度センサー MLX90614 を利用したサンプルです。
+URL=https://github.com/monowireless/ActEx_Sns_MLX90614
+[ENGLISH]
+TITLE=Act Extra — Sns_MLX90614
+DESC=Act sample using Melexis MLX90614 non-contact IR temperature sensors
+URL=https://github.com/monowireless/ActEx_Sns_MLX90614

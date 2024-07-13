@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>サンプルアクト</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">サンプルアクト</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#サンプルアクト">サンプルアクト</a><ul>
+<li><a href="#サンプルアクトの紹介">サンプルアクトの紹介</a><ul>
+<li><a href="#無線通信を行わなずマイコン機能のみの短いアクト">無線通信を行わなず、マイコン機能のみの短いアクト</a></li>
+<li><a href="#i2c-センサーを用いたアクトの記述例">I2C センサーを用いたアクトの記述例</a></li>
+<li><a href="#無線通信を行う基本的なアクト">無線通信を行う基本的なアクト</a></li>
+<li><a href="#親機側のアクト">親機側のアクト</a></li>
+<li><a href="#インタラクティブモードを追加するためのアクト">インタラクティブモードを追加するためのアクト</a></li>
+<li><a href="#センサーなどのデバイスを動作させるためのアクト">センサーなどのデバイスを動作させるためのアクト</a></li>
+<li><a href="#twelite-pal-を使用するためのアクト">TWELITE PAL を使用するためのアクト</a></li>
+<li><a href="#twelite-cue-を使用するためのアクト">TWELITE CUE を使用するためのアクト</a></li>
+<li><a href="#twelite-aria-を使用するためのアクト">TWELITE ARIA を使用するためのアクト</a></li>
+<li><a href="#単体機能を紹介したact">単体機能を紹介したAct</a></li>
+</ul></li>
+<li><a href="#最新版の入手">最新版の入手</a></li>
+<li><a href="#共通の記述">共通の記述</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="サンプルアクト">サンプルアクト</h1>
+<p>アクトの動作を理解するため、いくつかのサンプルを用意しています。</p>
+<div class="info">
+<p><strong>サンプルは MWSDK をインストールしたフォルダにある <code>Act_samples</code> にあります。</strong></p>
+</div>
+<h2 id="サンプルアクトの紹介">サンプルアクトの紹介</h2>
+<p>以下には、目的別のアクトを紹介します。</p>
+<h3 id="無線通信を行わなずマイコン機能のみの短いアクト">無線通信を行わなず、マイコン機能のみの短いアクト</h3>
+<ul>
+<li><a href="act_opening.html">act0..4</a>は、無線機能などを使わないごくシンプルな例です。Actの基本構造が理解できます。</li>
+</ul>
+<h3 id="i2c-センサーを用いたアクトの記述例">I2C センサーを用いたアクトの記述例</h3>
+<p>I2Cセンサーを接続し、スリープによる簡潔動作を行いながら無線パケットを送信する、無線センサーの実装例です。比較的簡潔、かつ、代表的な構造ですので、<code>act0</code>～<code>act4</code>を確認後に参照することを推奨します。</p>
+<ul>
+<li><a href="brd_i2c_temphumid.html">BRD_I2C_TEMPHUMID</a></li>
+</ul>
+<p>TWELITE で無線センサーを実装するための代表的な要素（<a href="../networks/nwk_simple.html">シンプル中継ネット <code>&lt;NWK_SIMPLE&gt;</code></a> の利用・<a href="../settings/stg_std.html">インタラクティブモード <code>&lt;STG_STD&gt;</code></a>、<a href="../api-reference/predefined_objs/wire/README.html">I2Cセンサーの取り扱い <code>Wire</code></a>、スリープによる間欠動作など）が含まれます。</p>
+<h3 id="無線通信を行う基本的なアクト">無線通信を行う基本的なアクト</h3>
+<p>無線パケットを送信、または送受信するサンプルですが、各々少し違った視点で実装されています。</p>
+<ul>
+<li><a href="scratch.html">Scratch</a> は、UARTから１バイトコマンドを受けて、送信などを行うシンプルなコードです。</li>
+<li><a href="slp_wk_and_tx.html">Slp_Wk_and_Tx</a>は、ステートマシンを用い、スリープを用いた間欠動作で、スリープ復帰→無線送信→スリープを繰り返します。</li>
+<li><a href="pingpong.html">PingPong</a>は、一方から他方にパケットを送信し、受信した他方がパケットを送り返すサンプルです。送信と受信についての基本的な手続きが含まれます。</li>
+<li><a href="wirelessuart.html">WirelessUART</a>は、UART入力を<a href="../api-reference/classes/ser_parser.html">serparser</a>を用いアスキー形式を解釈し、これを送信します。</li>
+</ul>
+<h3 id="親機側のアクト">親機側のアクト</h3>
+<div class="info">
+<p>注：このサンプルに含まれるアクトの無線パケットの受信には <a target=_blank href="https://wings.twelite.info/">App_Wings</a> を利用することもできます。</p>
+</div>
+<p>独自の受信側親機アプリケーションを実装するときに参照してください。</p>
+<ul>
+<li><a href="parent_monostick.html">Parent_MONOSTICK</a>は、専ら受信のみを行い、シリアルポートへ受信結果を出力します。このサンプルの無線パケットで、親機向け(0x00)や子機ブロードキャスト(0xFE)とアドレス設定しているものは受信できます。またインタラクティブモード<a href="../settings/stg_std.html">&lt;STG_STD&gt;</a>をActに追加するための手続きが含まれます。</li>
+<li><a href="rcv_univsl.html">Rcv_Univsl</a> はユニバーサルパケットレシーバ (TWENETレイヤーツリーネットワーク, App_Twelite, Act, … など) のサンプルコードです。また、コンテナやアルゴリズムにEASTLライブラリを使用しています。</li>
+</ul>
+<h3 id="インタラクティブモードを追加するためのアクト">インタラクティブモードを追加するためのアクト</h3>
+<p>インタラクティブモードを使用するアクトの解説には大まかな流れを記しています（ここでは上述の BRD_I2C_TEMPHUMID を引用します）。どのサンプルの解説も大きな差はありません。</p>
+<ul>
+<li><a href="brd_i2c_temphumid.html">BRD_I2C_TEMPHUMID</a>は、I2Cセンサーデバイスの読み書きコマンドを実行し I2C センサーから得られた計測値を無線送信します。またインタラクティブモード<a href="../settings/stg_std.html">&lt;STG_STD&gt;</a>をActに追加するための手続きが含まれます。</li>
+<li>Settings は、インタラクティブモード<a href="../settings/stg_std.html">&lt;STG_STD&gt;</a>のより高度なカスタマイズを行います。詳細はコードを参照ください。</li>
+</ul>
+<h3 id="センサーなどのデバイスを動作させるためのアクト">センサーなどのデバイスを動作させるためのアクト</h3>
+<p>内蔵ペリフェラルや外部センサーデバイスからセンサー情報を得るサンプルです。</p>
+<ul>
+<li><a href="brd_apptwelite.html">BRD_APPTWELITE</a>はディジタル入力、アナログ入力、ディジタル出力、アナログ出力を用いた双方向通信を行っています。またインタラクティブモード<a href="../settings/stg_std.html">&lt;STG_STD&gt;</a>をActに追加するための手続きが含まれます。</li>
+<li><a href="brd_i2c_temphumid.html">BRD_I2C_TEMPHUMID</a>は、I2Cセンサーデバイスの読み書きコマンドを実行し I2C センサーから得られた計測値を無線送信します。またインタラクティブモード<a href="../settings/stg_std.html">&lt;STG_STD&gt;</a>をActに追加するための手続きが含まれます。</li>
+<li><a href="pulsecounter.html">PulseCounter</a> は、パルスカウンター機能を用い、スリープ中も含め入力ポートで検出したパルス数を計数し、これを無線送信します。</li>
+<li><a href="pal_amb-behavior.html">PAL_AMB_behavior</a> は、ビヘイビアを用いた例です。PAL_AMBでは温湿度センサーはライブラリ内部のコードが呼ばれますが、このサンプルでは温湿度センサーのアクセスのための独自の手続きも含まれます。</li>
+</ul>
+<h3 id="twelite-pal-を使用するためのアクト">TWELITE PAL を使用するためのアクト</h3>
+<p>TWELITE PAL には標準的なPALアプリが書き込まれていますが、PALアプリを用いずアクトによる記述を行うことができます。MWXライブラリには、PALで使用するセンサーを動作させるための標準的な手続きが用意されています。</p>
+<p>各種PAL基板用のサンプルです。PAL基板上のセンサー値を取得し、送信し、スリープします。</p>
+<ul>
+<li><a href="pal_amb.html">PAL_AMB</a></li>
+<li><a href="pal_mot-oneshot.html">PAL_MOT-single</a></li>
+<li><a href="pal_mag.html">PAL_MAG</a></li>
+</ul>
+<p>以下は応用例で、上記のアクトより少し複雑な記述になっています。 * <a href="pal_amb-usenap.html">PAL_AMB_usenap</a> は、数十msかかるセンサーの動作時間にTWELITEマイコンを短くスリープさせ、より省電力を目指すサンプルです。 * <a href="pal_amb-behavior.html">PAL_AMB_behavior</a> は、ビヘイビアを用いた例です。PAL_AMBでは温湿度センサーはライブラリ内部のコードが呼ばれますが、このサンプルでは温湿度センサーのアクセスのための独自の手続きも含まれます。 * <a href="pal_mot.html">PAL_MOT_fifo</a> は、加速度センサーのFIFOおよびFIFOの割り込みを用いて、サンプルを中断することなく、連続的に取得し無線送信するためのサンプルです。</p>
+<h3 id="twelite-cue-を使用するためのアクト">TWELITE CUE を使用するためのアクト</h3>
+<p>PAL_MOT 用のアクトが利用できます。小修整が必要な場合があります。</p>
+<ul>
+<li><a href="pal_mot-oneshot.html">PAL_MOT-single</a></li>
+<li><a href="pal_mot.html">PAL_MOT_fifo</a> は、加速度センサーのFIFOおよびFIFOの割り込みを用いて、サンプルを中断することなく、連続的に取得し無線送信するためのサンプルです。</li>
+</ul>
+<h3 id="twelite-aria-を使用するためのアクト">TWELITE ARIA を使用するためのアクト</h3>
+<ul>
+<li>[BRD_ARIA] は、TWELITE ARIA を動作させるためのアクトです。</li>
+<li><a href="brd_i2c_temphumid.html">BRD_I2C_TEMPHUMID</a> は、I2C センサー利用のためのテンプレートですが、実装例として TWELITE ARIA で利用する SHT40 センサー用のコードが含まれます。</li>
+<li>PAL_AMB 用のアクトを小修整することで利用可能です。</li>
+</ul>
+<h3 id="単体機能を紹介したact">単体機能を紹介したAct</h3>
+<p><a href="unit_acts.html">Unitから始まる名前のAct</a>は機能やAPIの紹介を目的としています。</p>
+<h2 id="最新版の入手">最新版の入手</h2>
+<div class="info">
+<p>最新版のコードや MWSDK バージョン間の修正履歴を確認する目的で Github にソース一式を置いています。以下のリンク先を参照してください。</p>
+<p><a target=_blank href="https://github.com/monowireless/Act_samples">https://github.com/monowireless/Act_samples</a></p>
+</div>
+<h2 id="共通の記述">共通の記述</h2>
+<p>アクトのサンプル中で以下の項目は共通の設定項目になり、以下で解説します。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="at">const</span> <span class="dt">uint32_t</span> APP_ID = <span class="bn">0x1234abcd</span>;</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="at">const</span> <span class="dt">uint8_t</span> CHANNEL = <span class="dv">13</span>;</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="at">const</span> <span class="dt">char</span> APP_FOURCHAR[] = <span class="st">&quot;BAT1&quot;</span>;</a></code></pre></div>
+<div class="info">
+<p>サンプルアクト共通として以下の設定をしています。</p>
+<ul>
+<li>アプリケーションID <code>0x1234abcd</code></li>
+<li>チャネル <code>13</code></li>
+</ul>
+<p>アプリケーションIDとチャネルはともに他のネットワークと混在しないようにする仕組みです。</p>
+<p><strong>アプリケーションIDが異なる者同士は、チャネルが同じであっても混信することはありません</strong>。ただし、別のアプリケーションIDのシステムが頻繁に無線送信しているような場合はその無線送信が妨害となりますので影響は出ます。</p>
+<p>チャネルは通信に使う周波数を決めます。TWELITE無線モジュールでは原則として<strong>１６個のチャネル</strong>が利用でき、通常のシステムでは実施しないような極めて例外的な場合を除き、<strong>違うチャネルとは通信できません</strong>。</p>
+<p>サンプルアクト共通の仕様として、パケットのペイロード(データ部)の先頭には4バイトの文字列(<code>APP_FOURCHAR[]</code>)を格納しています。種別の識別性には1バイトで十分ですが、解説のための記述です。こういった<strong>システム特有の識別子やデータ構造</strong>を含めるのも混信対策の一つです。</p>
+</div>
+</body>
+</html>

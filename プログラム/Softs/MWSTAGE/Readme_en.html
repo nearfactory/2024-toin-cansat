@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>TWELITE STAGE SDK (English)</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TWELITE STAGE SDK (English)</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-stage-sdk">TWELITE STAGE SDK</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#file-list">File List</a></li>
+<li><a href="#english-support">English support</a></li>
+<li><a href="#documents">Documents</a></li>
+<li><a href="#use-with-vscode-visual-studio-code">Use with VSCode (Visual Studio Code)</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#release-notes">Release Notes</a><ul>
+<li><a href="#mwstage2022_08-812022">MWSTAGE2022_08 (8/1/2022)</a></li>
+<li><a href="#mwstage2022_07-7122022">MWSTAGE2022_07 (7/12/2022)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-stage-sdk">TWELITE STAGE SDK</h1>
+<p>TWELITE STAGE SDK is a comprehensive package for developing and testing TWELITE wireless modules with the <a href="TWELITE_Stage/MANUAL/en/index.html">TWELITE STAGE application</a> at its core.</p>
+<h2 id="installation">Installation</h2>
+<p>Extract the TWELITE STAGE SDK archive to an appropriate folder.</p>
+<p><strong>The destination folder of the TWELITE STAGE SDK must not contain spaces, Japanese strings, or symbol characters other than <code>.</code> <code>-</code> <code>_</code> </strong></p>
+<h2 id="file-list">File List</h2>
+<pre><code>TWELITE_Stage.xxx : TWELITE STAGE APP Executable file (please run this file)
+  TWELITE_stage.exe（Windows）
+  TWELITE_stage.command（macOS）
+  TWELITE_stage.run（Linux/Raspberry Pi 2+）
+TWELITE_Stage.sav  : TWELITE STAGE APP Setting file
+TWELITE_Stage.ini  : Additional settings such as MWSDK directory selection
+
+TWELTIE_Stage_VSCode.xxx : TWELITE STAGE APP in VSCode use configuration
+  TWELITE_stage_VSCode.exe（Windows）
+  TWELITE_stage_VSCode.command（macOS）
+  TWELITE_stage_VSCode.run（Linux）
+TWELTIE_Stage_VSCode.sav : Pre-configured configuration file for VSCode use
+TWELITE_Stage_VSCode.ini : Additional settings such as MWSDK directory selection
+*Configuration files and additional configuration files should match the file name of the executable.
+
+The following TWELITE STAGE APP is included only in the Rasbperry Pi version.
+TWELITE_Stage_nox.run        : TWELITE STAGE APP Executable file without X11 (Rasbperry Pi 2+)
+TWELITE_Stage_nox.sav        : TWELITE STAGE APP Setting file without X11 (Rasbperry Pi 2+)
+TWELITE_Stage_nox.ini        : Additional settings such as MWSDK directory selection (Rasbperry Pi2+)
+TWELITE_Stage_Zero.run       : TWELITE STAGE APP Executable file for X11 use (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_v6.sav    : TWELITE STAGE APP Setting file for X11 use (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero.ini       : Additional settings such as MWSDK directory selection (Raspberry Pi Zero/1A/1B )
+TWELITE_Stage_Zero_nox.run   : TWELITE STAGE APP Executable file without X11 (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_nox.sav   : TWELITE STAGE APP Setting file without X11 (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_nox.ini   : Additional settings such as MWSDK directory selection (Raspberry Pi Zero/1A/1B)
+
+flask_wsns_db/       : Simple web server with Python, Flask, sqlite3
+  _readme/               : Images etc
+  static/                : CSS etc
+  templates/             : HTML templates
+  app.py                 : Main Program
+  README.md/.html        : Documents
+
+ftd2xx.dll         : Libraries required to run the above executables (Windows)
+
+BIN/               : BIN file for TWELITE wireless microcontroller
+log/               : Where TWELITE STAGE APP logging data are stored
+
+MWSDK/             : MWSDK environment files, sample files
+  000manifest      : MWSDK version information
+  LICENSE          : MWSDK License Description
+  README.md        : README
+  ReleaseNotes.md  : Update History (Top page)
+  ReleaseNotes_en.md  : Update History (English)
+  ReleaseNotes_jp.md  : Update History (Japanese)
+
+  Act_samples/     : ACT&#39;s (Act) Build Project
+  Wks_TweApps/     : TWELITE APPS (ready-made software) build project
+  Act_extras/      : Additional ACT build projects
+
+  TWENET/          : TWENET C/C++ library source code
+  ChipLib/         : Semiconductor Chip Library
+  MkFiles/         : Makefile body processing section
+
+MWSDK{YYYY}_{MM}/  : Older version (can be specified in TWELITE_Stage.ini)
+
+Tools/             : Toolchain for compilation, etc.
+
+TWELITE_Stage/     : TWELITE STAGE APP Related Files
+  readme-j.txt     : TWELITE STAGE APP license description
+  INSTALL/         : TWELITE STAGE APP Installation Complement
+  LICENSE/         : TWELITE STAGE APP License
+  MANUAL/            : TWELITE STAGE APP Manual</code></pre>
+<h2 id="english-support">English support</h2>
+<p>The TWELITE STAGE App can be switched to English user interface. Please edit its configuration file as below:</p>
+<ol type="1">
+<li>If the app is running, close it.</li>
+<li>Open the <code>.ini</code> file for the TWELITE_Stage to be used. e.g. <code>TWELITE_Stage.ini</code></li>
+<li>Add a line below:</li>
+</ol>
+<pre><code>LANG=en</code></pre>
+<ol start="4" type="1">
+<li>Save and close the <code>.ini</code> file.</li>
+<li>(Re)Launch the app.</li>
+</ol>
+<p>Note: Reference - <a href="TWELITE_Stage/MANUAL/en/content/misc/cmdargs_and_ini.html">command line arguments and ini files</a></p>
+<h2 id="documents">Documents</h2>
+<ul>
+<li><a href="TWELITE_Stage/MANUAL/en/index.html">TWELITE STAGE App Manual</a></li>
+<li><a href="MWSDK/docs/en/MWX/index.html">TWELITE STAGE SDK and MWX Library Manual</a> - Installation, Quick develop guide and reference manual of MWX library.</li>
+<li><a href="MWSDK/docs/en/TWENET_C/index.html">(TWELITE NET C Library Manual)</a> - (NOTE: This is NOT mandate to refer initially, but if you need to develop with C API or see SDK structure.)</li>
+<li><a href="flask_wsns_db/README.html">Simple web server with Python, Flask, sqlite3</a> - Manual of a simple server in Python, Flask, and sqlite3.</li>
+</ul>
+<p>Note: The link above is pointing to the latest sub folders in <code>MWSDK/docs/</code>, where documents are stored that match the library version.</p>
+<h2 id="use-with-vscode-visual-studio-code">Use with VSCode (Visual Studio Code)</h2>
+<p>In order to improve convenience when using VSCode, the TWELITE STAGE SDK includes TWELITE STAGE application features (configuration required) and pre-configured project settings. Therefore, proper installation and configuration of VSCode is required. In particular, it is necessary to configure VSCode so that it can be started with the code command, which requires additional configuration on some systems.</p>
+<p>See <a href="MWSDK/docs/en/MWX/content/install_n_build/install_vscode.html">Installing VSCode</a> for more information.</p>
+<h2 id="license">License</h2>
+<ul>
+<li>The TWELITE STAGE APP executable files applies MW-SLA-1J,E.</li>
+<li>Executable files (firmwares, applications) for TWELITE wireless microcontrollers applies MW-SLA-1J,E.</li>
+<li>Source codes included in this package are subject to the license described in source codes.</li>
+<li>The deliverables of open source projects such as toolchain are subject to their respective licenses.</li>
+</ul>
+<p>Unless otherwise stated, the provisions described in MW-SLA-1J and 1E apply.</p>
+<h2 id="release-notes">Release Notes</h2>
+<h3 id="mwstage2022_08-812022">MWSTAGE2022_08 (8/1/2022)</h3>
+<ul>
+<li>Modified TWELITE STAGE APP manual.</li>
+</ul>
+<h4 id="twelite-apps">TWELITE APPS</h4>
+<h5 id="app_cueapp_cue_ota-v1.1.1">App_CUE/App_CUE_OTA v1.1.1</h5>
+<ul>
+<li>Fixed unintended output of PALID in MOTION SENSE PAL mode (single shot).</li>
+</ul>
+<h5 id="app_ariaapp_aria_ota-v1.1.1">App_ARIA/App_ARIA_OTA v1.1.1</h5>
+<ul>
+<li>Fixed an anomalous value when the measured temperature reaches 42°C or higher.</li>
+</ul>
+<h5 id="app_pal-v1.5.2">App_PAL v1.5.2</h5>
+<ul>
+<li>Fixed unintended output of PALID in MOTION SENSE PAL (single shot).</li>
+<li>Fixed an anomalous value when the measured temperature reaches 42°C or higher. (This is a modification for TWELITE ARIA. There are no modifications to the AMBIENT SENSE PAL program.)</li>
+</ul>
+<h5 id="app_pal-v1.2.1">App_PAL v1.2.1</h5>
+<ul>
+<li>Fixed a problem in which the output of App_PAL data sometimes resulted in unintended values.</li>
+</ul>
+<h5 id="app_uart-v1.4.7">App_Uart v1.4.7</h5>
+<ul>
+<li>Changed default retransmission count to 2 times.</li>
+</ul>
+<h4 id="act_extras">Act_extras</h4>
+<h5 id="actex_aqm0802">ActEx_AQM0802</h5>
+<ul>
+<li>Supported MWX stream output.</li>
+<li>Supported AQM1602 (16x2 row LCD).</li>
+<li>Added of a contrast adjustment function.</li>
+</ul>
+<h3 id="mwstage2022_07-7122022">MWSTAGE2022_07 (7/12/2022)</h3>
+<ul>
+<li>Addition of flask_wsns_db
+<ul>
+<li>Sample script to access the database created by Graph Viewer in the TWELITE STAGE APP written in Python
+<ul>
+<li>This sample converts data into tables and graphs that can be viewed in a web browser</li>
+</ul></li>
+</ul></li>
+<li>Modified documentation for TWELITE STAGE APP, MWX library, and TWELITE NET C library to be included in this SDK</li>
+</ul>
+<h4 id="twelite-stage-app-v1.3.8">TWELITE STAGE APP v1.3.8</h4>
+<ul>
+<li>Added ability to draw real-time graphs for TWELITE CUE</li>
+<li>Added ability to save sensor data received from TWELITE ARIA, TWELITE PAL, and TWELITE CUE to SQLite before graphing</li>
+<li>Increased window size to 640x480</li>
+<li>Added ability to specify window position at startup</li>
+<li>Changed to display local HTML when help is selected</li>
+<li>Added partial support for English</li>
+<li>Changed menu structure</li>
+</ul>
+<h4 id="mwx-library-v0.2.0">MWX Library v0.2.0</h4>
+<ul>
+<li>Changed wire object to allocate memory to heap area</li>
+<li>Changed function name from G_OCTET() to G_BYTE() to avoid name conflict in utils.h</li>
+<li>Changed the order of vAHI_DioInterruptEnable() in attachIntDio()</li>
+<li>Added the_twelite.network2 to support universal receivers (NWK_LAYERED, NWK_SIMPLE or networkless packets in the same executable code)</li>
+<li>Added NWK_LAYERED (only Parent Node reception is supported at this time)</li>
+<li>Introduced MWX_Set_Usder_App_Ver() function to set application version at MWX initialization</li>
+<li>mwx::pnew() was added to simplify description of deployment new</li>
+<li>added support for EASTL</li>
+<li>added new[] operator for EASTL</li>
+<li>Precompiled most of the MWX source code to speed up compilation</li>
+<li>Fixed DIO events being passed to unrelated ports</li>
+</ul>
+<h4 id="twelite-apps.">TWELITE APPS.</h4>
+<ul>
+<li>Added English translation to 000desc.txt</li>
+<li>Changed Samp_PingPong and Samp_I2C to newly adopted deprecated</li>
+</ul>
+<h5 id="cue-apps-app_cueapp_cue_ota-v1.1.0">CUE APPS (App_CUE/App_CUE_OTA) v1.1.0</h5>
+<ul>
+<li>Added ability to send one sample of acceleration at each specified interval</li>
+<li>Addition of function to send average, minimum and maximum values of acceleration measured for a certain period of time</li>
+</ul>
+<h5 id="aria-app-app_ariaapp_aria_ota-v1.1.0">Aria App (App_ARIA/App_ARIA_OTA) v1.1.0</h5>
+<ul>
+<li>Added the ability to multiply temperature and humidity measurements by an offset and a factor</li>
+</ul>
+<h5 id="pal-app-app_pal-v1.5.1">Pal App (App_PAL) v1.5.1</h5>
+<ul>
+<li>Added ability to send acceleration one sample at a time with motion sensor PAL</li>
+<li>Added ability to send average, minimum and maximum values of acceleration measured for a certain period of time in motion sensor PAL</li>
+<li>Added the ability to multiply the measured values of temperature and humidity by an offset and a factor in the environment sensor pal</li>
+</ul>
+<h5 id="parent-node-and-repeater-application-app_pal-v1.2.0">Parent Node and Repeater Application (App_PAL) v1.2.0</h5>
+<ul>
+<li>Add function to output average, maximum and minimum values of acceleration</li>
+</ul>
+<h4 id="act_samples">Act_samples</h4>
+<ul>
+<li>Added English translation to 000desc.txt</li>
+<li>Add BRD_I2C_TEMPHUMID
+<ul>
+<li>Sample using I2C sensor device to measure and transmit from periodic wake-up</li>
+</ul></li>
+</ul>
+<h4 id="act_extras-1">Act_extras</h4>
+<ul>
+<li>Added English translation to 000desc.txt</li>
+<li>Added ActEx_AQM0802
+<ul>
+<li>Sample using LCD module AQM0802 implementing Sitronix I2C connected LCD controller ST7032</li>
+</ul></li>
+</ul>
+</body>
+</html>

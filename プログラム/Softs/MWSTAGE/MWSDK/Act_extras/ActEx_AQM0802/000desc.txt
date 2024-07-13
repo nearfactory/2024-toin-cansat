@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=Actエクストラ - AQM0802 / AQM1602 サンプル
+DESC=Sitronix社のI2C接続LCDコントローラST7032を実装したLCDモジュール AQM0802 または AQM1602 を使用してカウント値を表示するサンプルです。
+URL=https://github.com/monowireless/ActEx_AQM0802
+[ENGLISH]
+TITLE=Act Extra - AQM0802 / AQM1602 Sample
+DESC=Counter sample using AQM0802 / AQM1602 LCD modules built with the Sitronix ST7032 I2C controller
+URL=https://github.com/monowireless/ActEx_AQM0802

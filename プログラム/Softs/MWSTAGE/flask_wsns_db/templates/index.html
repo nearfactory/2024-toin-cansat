@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60">
+    <title>センサーノード</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>SID</th>
+                    <th>詳細</th>
+                    <th>センサー種別</th>
+                    <th>最新データ</th>
+                    <th>LID</th>
+                    <th>LQI</th>
+                    <th>value</th>
+                    <th>value1</th>
+                    <th>value2</th>
+                    <th>value3</th>
+                    <th>val_vcc_mv</th>
+                    <th>EVENT</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>
+                        <a href="/{{item[1]}}">{{item[1]}}</a>
+                    </td>
+                    <td>{{item[2]}}</td><!-- desc -->
+                    <td>{{item[5][0]}}</td>
+                    <td>
+                        <a href="/{{item[1]}}/g">{{item[4]}}</a>
+                    </td><!-- timestamp -->
+                    <td>{{item[5][1]}}</td>
+                    <td>{{item[5][2]}}</td>
+                    <td>{{item[5][3]}}</td>
+                    <td>{{item[5][4]}}</td>
+                    <td>{{item[5][5]}}</td>
+                    <td>{{item[5][6]}}</td>
+                    <td>{{item[5][7]}}</td>
+                    <td>{{item[5][9]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="lastupd">
+        Last updated at 
+        <SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+            options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            document.write(new Intl.DateTimeFormat('default', options).format(new Date()) + ".");
+        </SCRIPT>
+    </div>
+</body>
+</html>

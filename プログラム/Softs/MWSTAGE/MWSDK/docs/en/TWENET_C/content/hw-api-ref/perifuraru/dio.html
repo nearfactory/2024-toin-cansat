@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#dio">DIO</a><ul>
+<li><a href="#about-port-numbers">About port numbers</a></li>
+<li><a href="#about-negative-logic">About negative logic</a></li>
+<li><a href="#state-at-start-up">State at start-up</a></li>
+<li><a href="#input">Input</a><ul>
+<li><a href="#output">Output</a></li>
+<li><a href="#pull-up">Pull-up</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="dio">DIO</h1>
+<p>The DIO (General Purpose IO) can be input or output as desired under the control of the firmware.</p>
+<div class="info">
+<p>Also commonly referred to as GPIO, but referred to as DIO throughout this manual.</p>
+</div>
+<p>The following can be done with general purpose IO:</p>
+<ul>
+<li>Digital input (H or L level readout)
+<ul>
+<li>Pull-up (50kΩ, typ) can be set.</li>
+</ul></li>
+<li>Digital output (H or L level output)
+<ul>
+<li>The maximum value of the supply or suction current (3 mA at 3 V typ).</li>
+</ul></li>
+<li>Interrupt (rising or falling)
+<ul>
+<li>The rise and fall cannot be detected simultaneously.</li>
+<li>It is also available in sleep mode.</li>
+</ul></li>
+</ul>
+<h2 id="about-port-numbers">About port numbers</h2>
+<p>There are 20 DIOs, numbered 0 to 19. These are called in order DIO0 … DIO19. The following APIs allow you to specify the DIO number directly.</p>
+<pre><code>vPortAsInput(10); // set DIO10 as input
+bool_t bPort = bPortRead(10);
+   // TRUE: DIO10 is LO(GND) level
+   // FALSE: DIO10 is HIGH(VCC) level</code></pre>
+<h2 id="about-negative-logic">About negative logic</h2>
+<p>For TWELITE wireless microcontrollers, the port state at power-on reset is at the High (Vcc) level, so in principle TWELITE NET sets the High (Vcc) level to 0 and the Lo (GND) level to 1.</p>
+<h2 id="state-at-start-up">State at start-up</h2>
+<p>On power-up, all ports are initialised in the following state</p>
+<ul>
+<li>Input</li>
+<li>Pull-up enabled</li>
+</ul>
+<h2 id="input">Input</h2>
+<p>To change a port to an input, call <code>vPortAsInput()</code>.</p>
+<pre><code>#define PORT_DI1 11 // DIO11
+vPortAsInput(PORT_DI1);</code></pre>
+<p>To read the status of a port, call <code>bPortRead()</code>.</p>
+<pre><code>bool_t bPortStat;
+bPortStat = bPortRead(PORT_DI1);</code></pre>
+<h3 id="output">Output</h3>
+<p>To change the port to an output, call <code>vPortAsOutput(c)</code>. Also, to set the value of a port, call <code>vPortSetLo()</code>, <code>vPortSetHi()</code>, or <code>vPortSet_TrueAsLo()</code>.</p>
+<pre><code>#define PORT_DO1 18 // DIO18
+vPortSet_TrueAsLo(PORT_DO1, TRUE); // TRUE: set Lo
+vPortAsOutput(PORT_DO1);</code></pre>
+<div class="info">
+<p>t is recommended to set the output setpoint of the port before setting the output. This is because when observing the voltage of the port from the outside, it may behave, for example, to drop to GND for a moment and then return to the Vcc level.</p>
+</div>
+<h3 id="pull-up">Pull-up</h3>
+<p>You can stop the pull-up by calling <code>vPortDisablePullup()</code>.</p>
+<pre><code>#define PORT_DI1 11 // DIO11
+
+vPortDisablePullup(PORT_DI1);
+vPortAsInput(PORT_DI1);</code></pre>
+<div class="info">
+<p>Stopping pull-ups saves power in the following cases</p>
+<ul>
+<li>External is Lo level at input port</li>
+<li>Setting the Lo level on the output port</li>
+</ul>
+</div>
+<div class="warning">
+<p>However, on ports where pull-ups have been stopped, care should be taken to use</p>
+<ul>
+<li>Nothing connected to the input port (or equivalent)
+<ul>
+<li>Extra current consumption may occur</li>
+</ul></li>
+<li>Stop pull-ups on ports that do not require configuration
+<ul>
+<li>Extra current consumption may occur</li>
+</ul></li>
+<li>When the input port is used as an interrupt wakeup pin
+<ul>
+<li>An external pull-up is mandatory when connecting buttons etc.</li>
+</ul></li>
+</ul>
+</div>
+</body>
+</html>

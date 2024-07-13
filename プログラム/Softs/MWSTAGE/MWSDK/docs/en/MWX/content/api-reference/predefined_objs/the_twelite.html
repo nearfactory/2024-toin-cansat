@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#the_twelite">the_twelite</a><ul>
+<li><a href="#summary.">summary.</a></li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#operator-setting"><code>&lt;&lt;operator</code> (setting)</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#change_channel">change_channel()</a></li>
+<li><a href="#get_channel_phys">get_channel_phys()</a></li>
+<li><a href="#get_hw_serial">get_hw_serial()</a></li>
+<li><a href="#sleep">sleep()</a></li>
+<li><a href="#is_wokeup_by_dio">is_wokeup_by_dio()</a></li>
+<li><a href="#is_wokeup_by_wktimer">is_wokeup_by_wktimer()</a></li>
+<li><a href="#reset_system">reset_system()</a></li>
+<li><a href="#stop_watchdog">stop_watchdog()</a></li>
+<li><a href="#restart_watchdog">restart_watchdog()</a></li>
+</ul></li>
+<li><a href="#behavior.">Behavior.</a><ul>
+<li><a href="#useb">use&lt;B&gt;()</a></li>
+</ul></li>
+<li><a href="#class-object.">class object.</a><ul>
+<li><a href="#tx_status">tx_status</a></li>
+<li><a href="#receiver">receiver</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="the_twelite">the_twelite</h1>
+<p>The <code>the_twelite</code> object summarizes the procedures for using TWENET and includes procedures for operating the wireless microcontroller, such as basic wireless settings, sleep, and other procedures.</p>
+<h2 id="summary.">summary.</h2>
+<p><code>the_twelite</code> is set up in the <code>setup()</code> function, which also calls <code>the_twelite.begin()</code> to start the process. It is not possible to set up <code>the_twelite</code> except in <code>setup()</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-2" title="2">  ...</a>
+<a class="sourceLine" id="cb1-3" title="3">    the_twelite</a>
+<a class="sourceLine" id="cb1-4" title="4">        &lt;&lt; TWENET::appid(APP_ID)    </a>
+<a class="sourceLine" id="cb1-5" title="5">        &lt;&lt; TWENET::channel(CHANNEL) </a>
+<a class="sourceLine" id="cb1-6" title="6">        &lt;&lt; TWENET::rx_when_idle();  </a>
+<a class="sourceLine" id="cb1-7" title="7">  ...</a>
+<a class="sourceLine" id="cb1-8" title="8">  the_twelite.begin();</a>
+<a class="sourceLine" id="cb1-9" title="9">}</a></code></pre></div>
+<p>In the above example, the application ID is set, the communication channel is set, and the receiving circuit is set.</p>
+<p>Various procedures are included.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// Get a serial number</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="dt">uint32_t</span> u32hwser = the_twelite.get_hw_serial();</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">// Set channel to 11</span></a>
+<a class="sourceLine" id="cb2-5" title="5">the_twelite.change_channel(<span class="dv">11</span>);</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co">// Sleep for 1 second.</span></a>
+<a class="sourceLine" id="cb2-8" title="8">the_twelite.sleep(<span class="dv">1000</span>);</a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">// Perform a reset</span></a>
+<a class="sourceLine" id="cb2-11" title="11">the_twelite.reset_system();</a></code></pre></div>
+<p>It is also possible to register classes that handle wireless networks, classes that summarize board support, and classes that perform event-driven processing described by the user. By registering these classes, dedicated functions can be easily used. These classes are referred to as “<a href="the_twelite.html#%22biheibia">behaviors</a>” in this explanation.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="co">/*** SETUP section */</span></a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="co">// use PAL_AMB board support.</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb3-5" title="5">    </a>
+<a class="sourceLine" id="cb3-6" title="6">    ...</a>
+<a class="sourceLine" id="cb3-7" title="7">    </a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb3-9" title="9">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb3-10" title="10">    nwk &lt;&lt; NWK_SIMPLE::logical_id(u8ID);</a></code></pre></div>
+<p>In the above example, two types of behaviors are registered: environmental sensor pal behavior <code>&lt;PAL_AMB&gt;</code> and simple relay network <code>&lt;NWK_SIMPLE&gt;</code>. By registering these, hardware such as sensors on the environmental sensor pal can be easily handled. In addition, the complicated handling of wireless packets can be implicitly provided with functions such as relay processing and automatic discarding of duplicate packet arrivals.</p>
+<h2 id="methods">Methods</h2>
+<div class="warning">
+<p>The MWX library defines other methods in addition to those introduced here.</p>
+<p>Act descriptions include those that are not directly related to the act description, those that are set up but do not function effectively, and those that are used internally.</p>
+</div>
+<h3 id="operator-setting"><code>&lt;&lt;operator</code> (setting)</h3>
+<p>The <code>&lt;&lt;</code> operator is used to initialize the object <code>the_twelite</code>.</p>
+<p>The following configuration class objects are used as input, and default values are applied if no configuration is made.</p>
+<h4 id="twenetappiduint32_t-id">TWENET::appid(uint32_t id)</h4>
+<p>Set the parameter <code>id</code> to the specified application ID. This is a required specification.</p>
+<p>Reading the settings is done with <code>uint32_t the_twelite.get_appid()</code>.</p>
+<h4 id="twenetchanneluint8_t-ch">TWENET::channel(uint8_t ch)</h4>
+<p>Set the specified channel number (<code>11</code>..<code>26</code>) in parameter <code>ch</code>.</p>
+<p>Reading the settings is done with <code>uint8_t</code> <code>the_twelite.get_channel()</code>.</p>
+<h4 id="twenettx_poweruint8_t-pw">TWENET::tx_power(uint8_t pw)</h4>
+<p>Parameter <code>pw</code> is set to (<code>0</code>. <code>3</code>) for the radio output. The default is (3: no output attenuation).</p>
+<p>Reading the settings is done with <code>uint8_t the_twelite.get_tx_power()</code>.</p>
+<h4 id="twenetrx_when_idleuint8_t-benable">TWENET::rx_when_idle(uint8_t bEnable)</h4>
+<p>If the parameter <code>bEnable</code> is <code>1</code>, the receiver circuit is always activated and can receive radio packets from others. The default is <code>0</code>, which is dedicated to transmission only.</p>
+<p>Reading the settings is done with <code>uint8_t the_twelite.get_rx_when_idle()</code>.</p>
+<h4 id="twenetchmgruint8_t-ch1-18-uint8_t-ch2-0-uint8_t-ch3-0">TWENET::chmgr(uint8_t ch1 = 18, uint8_t ch2 = 0, uint8_t ch3 = 0)</h4>
+<p>Enables the channel manager. If multiple channels are specified, sending/receiving is performed on multiple channels; if 0 is specified for ch2 and ch3, the specification is disabled.</p>
+<h4 id="stg_std">STG_STD</h4>
+<p>Reflects the setting <a href="../../settings/stg_std.html#%22no-1">values in interactive mode</a>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb4-2" title="2">...</a>
+<a class="sourceLine" id="cb4-3" title="3">set.reload();       <span class="co">// Load settings</span></a>
+<a class="sourceLine" id="cb4-4" title="4">the_twelite &lt;&lt; set; <span class="co">// Reflects interactive mode settings</span></a></code></pre></div>
+<p>The items that will be reflected are as follows</p>
+<ul>
+<li><strong>app_id</strong></li>
+<li><strong>channel</strong></li>
+<li><strong>tx_power</strong></li>
+<li>Number of retransmissions when MAC ack is used</li>
+</ul>
+<div class="warning">
+<p>There are other settings in the MWX library code that are irrelevant to the library’s functionality at this time or that may cause conflicts if set.</p>
+</div>
+<h3 id="begin">begin()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> begin()</a></code></pre></div>
+<p>It is executed after preconfiguration (see <code>&lt;&lt;</code> operator) and registration of the behavior. It is usually placed at the end of the <code>setup()</code> function.</p>
+<ul>
+<li><code>the_twelite</code> finished setting up</li>
+<li>Behavior initialization</li>
+</ul>
+<div class="warning">
+<p>TWENET initialization is also performed after the <code>setup()</code> function exits. Since many processes are to be executed after <code>setup()</code> exits, do not do anything other than initialization here.</p>
+</div>
+<h4 id="例">例</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb6-2" title="2">    <span class="co">// use PAL_AMB board support.</span></a>
+<a class="sourceLine" id="cb6-3" title="3">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb6-4" title="4">    </a>
+<a class="sourceLine" id="cb6-5" title="5">    <span class="co">// settings</span></a>
+<a class="sourceLine" id="cb6-6" title="6">    the_twelite</a>
+<a class="sourceLine" id="cb6-7" title="7">        &lt;&lt; TWENET::appid(APP_ID)    </a>
+<a class="sourceLine" id="cb6-8" title="8">        &lt;&lt; TWENET::channel(CHANNEL) </a>
+<a class="sourceLine" id="cb6-9" title="9">        &lt;&lt; TWENET::rx_when_idle();  </a>
+<a class="sourceLine" id="cb6-10" title="10">    </a>
+<a class="sourceLine" id="cb6-11" title="11">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb6-12" title="12">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb6-13" title="13">    nwk &lt;&lt; NWK_SIMPLE::logical_id(u8ID);</a>
+<a class="sourceLine" id="cb6-14" title="14">    </a>
+<a class="sourceLine" id="cb6-15" title="15">    <span class="co">// somo others</span></a>
+<a class="sourceLine" id="cb6-16" title="16">    </a>
+<a class="sourceLine" id="cb6-17" title="17">    <span class="co">// begin the TWENET!</span></a>
+<a class="sourceLine" id="cb6-18" title="18">    the_twelite.begin();</a>
+<a class="sourceLine" id="cb6-19" title="19">}</a></code></pre></div>
+<h3 id="change_channel">change_channel()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> change_channel(<span class="dt">uint8_t</span> u8Channel)</a></code></pre></div>
+<p>Changes channel settings. On failure, the channel is not changed and <code>false</code> is returned.</p>
+<h3 id="get_channel_phys">get_channel_phys()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">uint8_t</span> get_channel_phys()</a></code></pre></div>
+<p>Obtains the currently set channel number (11..26) from the MAC layer API.</p>
+<h3 id="get_hw_serial">get_hw_serial()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">inline</span> <span class="dt">uint32_t</span> get_hw_serial()</a></code></pre></div>
+<p>Get the module serial number.</p>
+<h3 id="sleep">sleep()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> sleep(</a>
+<a class="sourceLine" id="cb10-2" title="2">        <span class="dt">uint32_t</span> u32Periodms, </a>
+<a class="sourceLine" id="cb10-3" title="3">        <span class="dt">bool_t</span> bPeriodic = <span class="kw">true</span>, </a>
+<a class="sourceLine" id="cb10-4" title="4">        <span class="dt">bool_t</span> bRamOff = <span class="kw">false</span>, </a>
+<a class="sourceLine" id="cb10-5" title="5">        <span class="dt">uint8_t</span> u8Device = TWENET::SLEEP_WAKETIMER_PRIMARY)</a></code></pre></div>
+<p>Put the module to sleep.</p>
+<table>
+<thead>
+<tr class="header">
+<th>parameter</th>
+<th>explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u32Periodms</code></td>
+<td>Sleep duration[ms]</td>
+</tr>
+</tbody>
+</table>
+| <code>bPeriodic</code> |
+<p>
+Recalculate the next wake-up time based on the previous wake-up time.<br>※It may be from the current timing for reasons such as the next wake-up timing is imminent.
+</p>
+| | <code>bRamoff</code> | Set to <code>true</code> to sleep without retaining RAM (must be reinitialized from <code>setup()</code> instead of <code>wakeup()</code> after wakeup) | | <code>u8Device</code> |
+<p>
+Designation of a wake-up timer to be used for sleep. Specify
+</p>
+<p>
+<code>TWENET::SLEEP_WAKETIMER_PRIMARY</code>or<code>TWENET::SLEEP_WAKETIMER_SECONDARY</code>.
+</p>
+<pre><code> |</code></pre>
+<div class="info">
+<p>Before sleep, the <code>on_sleep()</code> method of the built-in object or behavior is called to perform the pre-sleep procedure. After returning from sleep, the opposite procedure is performed by the <code>on_wakeup()</code> method.</p>
+</div>
+<h3 id="is_wokeup_by_dio">is_wokeup_by_dio()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="dt">bool</span> is_wokeup_by_dio(<span class="dt">uint8_t</span> port)</a></code></pre></div>
+<p>Returns <code>true</code> if the return factor from sleep is the specified digital pin.</p>
+<h3 id="is_wokeup_by_wktimer">is_wokeup_by_wktimer()</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="dt">bool</span> is_wokeup_by_wktimer()</a></code></pre></div>
+<p>Returns <code>true</code> if the wake-up timer is the wake-up factor for returning from sleep.</p>
+<h3 id="reset_system">reset_system()</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> reset_system()</a></code></pre></div>
+<p>Resets the system. After reset, the process starts from <code>setup()</code>.</p>
+<h3 id="stop_watchdog">stop_watchdog()</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> stop_watchdog()</a></code></pre></div>
+<p>Stops the watchdog timer. Stop the timer if you are going to wait for polling for a long time.</p>
+<div class="info">
+<p>The watchdog timer is restarted each time in the main loop inside the library. It takes about 4 seconds for the timer to run out and reset.</p>
+</div>
+<h3 id="restart_watchdog">restart_watchdog()</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> restart_watchdog()</a></code></pre></div>
+<p>Restart the watchdog timer.</p>
+<h2 id="behavior.">Behavior.</h2>
+<p>Three behaviors can be registered with <code>the_twelite</code>, and the following class objects are defined to store them.</p>
+<ul>
+<li><code>network</code> : A behavior that implements a network. Normally, <a href="../../networks/nwk_simple.html"><code>&lt;NWK_SIMPLE&gt;</code></a> is registered.</li>
+<li><code>network2</code> : BEHAVIOR that implements networking. Use this behavior if you want another network BEHAVIOR to process packets which were not accepted by the first <code>network</code> due to the data structure of the payload or other reasons. (<a href="../../networks/nwk_layered.html">Reference: Using NWK_LAYERED and NWK_SIMPLE together</a>)</li>
+<li><code>board</code>: Behaviors for board support. Procedures for using each device on the board are added.</li>
+<li><code>app</code>: Behaviors describing user applications. Behaviors can be written in terms of interrupts, events, and state transitions using state machines. It is also easy to define multiple application descriptions and select an application with completely different behavior at startup.</li>
+<li><code>settings</code>: Behavior for performing configuration (interactive mode). Registers <a href="../../settings/stg_std.html"><code>&lt;STG_STD&gt;</code></a>.</li>
+</ul>
+<h3 id="useb">use&lt;B&gt;()</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="co">// example</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a></code></pre></div>
+<p>Register behavior <strong>.</strong> Registration is done within <a href="../functions/setup.html"><code>setup()</code></a>. The return value is a reference to the object corresponding to the registered behavior.</p>
+<p>After registration, the object is retrieved in the same way as at the time of registration.</p>
+<div class="danger">
+<p>If an incorrect behavior is specified, a panic operation (infinite loop) occurs and program operation stops.</p>
+</div>
+<div class="info">
+<p>It is not intended to declare objects of the behavior as global variables. Please use <code>use&lt;B&gt;()</code> for each use.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb18-2" title="2">  <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb18-3" title="3">}</a></code></pre></div>
+<p>However, it is possible to define a pointer to an object in a global variable and write as follows (The MWX library has a policy of minimizing the use of pointer types and using reference types, so the following description is not recommended.)</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1">NWK_SIMPLE *pNwk = <span class="kw">nullptr</span>;</a>
+<a class="sourceLine" id="cb19-2" title="2"></a>
+<a class="sourceLine" id="cb19-3" title="3">setup() {</a>
+<a class="sourceLine" id="cb19-4" title="4">  <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb19-5" title="5">    pNwk = &amp;nwk;</a>
+<a class="sourceLine" id="cb19-6" title="6">}</a>
+<a class="sourceLine" id="cb19-7" title="7"></a>
+<a class="sourceLine" id="cb19-8" title="8"><span class="dt">void</span> transmit() {</a>
+<a class="sourceLine" id="cb19-9" title="9">  <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = pNwk-&gt;prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb19-10" title="10">    ...</a>
+<a class="sourceLine" id="cb19-11" title="11">  }</a>
+<a class="sourceLine" id="cb19-12" title="12">}</a></code></pre></div>
+</div>
+<h2 id="class-object.">class object.</h2>
+<p><code>the_twelite</code> defines the three class objects <code>board</code>, <code>network</code>, and <code>app</code> mentioned above, but also the following</p>
+<h3 id="tx_status">tx_status</h3>
+<p>Notification of transmission completion status.</p>
+<div class="info">
+<p>The description of the event-driven behavior is managed by the <code>transmit_complete()</code> callback.</p>
+</div>
+<h4 id="is_complete">is_complete()</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb20-1" title="1"><span class="dt">bool</span> is_complete(<span class="dt">uint8_t</span> cbid)</a></code></pre></div>
+<p>Returns <code>true</code> when the packet with the specified ID has completed transmission.</p>
+<h4 id="is_success">is_success()</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="dt">bool</span> is_success(<span class="dt">uint8_t</span> cbid)</a></code></pre></div>
+<p>Returns <code>true</code> when the packet with the specified ID has completed transmission and has been successfully sent.</p>
+<h3 id="receiver">receiver</h3>
+<p>Retrieve incoming packets.</p>
+<div class="info">
+<p>In the event-driven behavior description, it is obtained in the <code>receive()</code> callback.</p>
+</div>
+<div class="warning">
+<p>The received packet data obtained by the <code>read()</code> method is designed to be overwritten when subsequent packets are received and processed. If you read the data immediately after <code>available()</code> and do some short processing, this will not be a problem, but as a general rule, read the data, copy the data needed for application use, and finish <code>loop()</code> promptly. For example, a long <code>delay()</code> during <code>loop()</code> will cause incoming packets to be dropped.</p>
+</div>
+<h4 id="available">available()</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb22-1" title="1"><span class="dt">bool</span> available()</a></code></pre></div>
+<p>Returns <code>true</code> if there is an incoming packet that has not yet been read.</p>
+<h4 id="read">read()</h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb23-1" title="1">packet_rx&amp; read()</a></code></pre></div>
+<p>Read packets.</p>
+</body>
+</html>

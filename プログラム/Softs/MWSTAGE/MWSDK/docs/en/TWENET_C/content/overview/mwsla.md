@@ -1,0 +1,219 @@
+# Mono Wireless Software License Agreement
+
+Please see the [link](https://mono-wireless.com/jp/products/TWE-NET/license.html) for the latest version of the license and English version.
+
+{% code title="MW-SLA-E.txt" %}
+```
+            MONO WIRELESS SOFTWARE LICENSE AGREEMENT
+            
+  VERSION 1, 8-DEC-2016 (MW-SLA-1E)
+  Copyright (C) Mono Wireless Inc.
+
+    This is an agreement (“Agreement”) between Mono Wireless Inc.
+(“Licensor”) and Customer (“Licensee”), who is being licensed to use
+Licensor software products (“Licensed Products”).
+
+    1.	DIFINITIONS
+    1-1 “Licensed Products” means a set provided by Licensor as source
+code, library, script file, utility, manual and others.
+    1-2 “Intellectual Property Right” means all rights in and to any
+copyright, patent or any such application, trademark, know-hows,
+trade secrets and all other rights and their legal fruits, resulting
+from intellectual activity.
+
+    2. INTELLECTUAL PROPERTY RIGHTS
+    All Intellectual Property Rights over and in respect of Licensed
+Products are owned by Licensor. The Licensee does not acquire any
+rights of ownership in Licensed Products.
+
+    3. LICENSE 
+    Subject to all of the terms and conditions of this Agreement,
+Licensor grants to the Licensee non-exclusive license under following
+conditions. 
+    (1) To use Licensed Products in the system using a wireless
+microcomputer manufactured by the Licensor. 
+    (2) To build and run the source code of Licensed Products on a
+wireless microcomputer manufactured by the Licensor. 
+    (3) To modify, change, translate, adapt or create derivative
+works to all or part of the source code of Licensed Products. 
+    (4) To reproduce and distribute (including commercial purposes)
+the source code (including 3(3)) of Licensed Products along with the
+copy of this Agreement.
+
+    4. LIMITATION OF THE LICENSE Licensee shall not attempt
+activities described below. 
+    (1) To build and/or run the source code of Licensed Products
+(including modified, changed, translated, adapted source code and
+derivative works as set forth in 3(2)) on a third-party processor.
+    (2) To use Licensed Products (include modified, changed,
+translated, adapted source code and derivative works as set forth in
+3(2)) in order to develop system on a third-party processor.
+    (3) To attempt to reverse engineering, decompile, disassemble and
+analysis, re-build or discovery of other source code and the
+underlying idea or algorithm of Licensed Products.
+
+    ５．DISCLAIMER 
+    5-1 LICENSOR, EXCEPT AS EXPRESSLY SET FORTH IN A SEPARATE
+AGREEMENT, SHALL　PROVIDE LICENSED PRODUCTS IN THE "AS IS". LICENSOR
+SHALL NOT GUARANTEE THAT THE QUALITY AND FUNCTIONALITY OF THIS
+PRODUCT IS TO CONFIRM TO THE LICENSEE OF THE INTENDED USE, OPERATES
+WITHOUT INTERRUPTION, ERROR OR INFRINGES ANY INTELLECTUAL PROPERTY
+RIGHTS OF ANY THIRD PARTIES AND THAT THERE IS NO BUGS AND PROBLEMS.
+LICENSOR SHALL NOT ASSUME ANY WARRANTY TO LICENSED PRODUCTS. 
+    5-2 LICENSOR SHALL NOT BE LIABLE AGAINST DIRECT, INDIRECT,
+CONSEQUENTIAL, ACCIDENTAL OR ANY DAMAGE THAT WAS ARISEN FROM THE
+NON-USE OR THE USE OF LICENSED PRODUCTS EVEN IF LICENSOR HAVE BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN THE EVENT THAT THE
+LICENSOR WAS SUPPOSED TO BEAR THE LIABILITY FOR DAMAGES, BY ANY
+REASON, SHALL BE UPPER LIMITED TO THE AMOUNT LICENSEE ACTUALLY PAID
+FOR LICENSED PRODUCTS.
+
+    6. ASSIGNMENT Licensee shall not assign any rights or obligations
+provided hereunder to any third party.
+
+    7 VALIDITY PERIOD Unless the period is specified separately or
+the licensor is cancelled in accordance with the provisions of the
+Agreement, the validity period shall be defined between start date to
+use Licensed Products, and terminate date to use Licensed Products.
+
+    8. CANCELLATION
+    8-1 In the event that Licensee breaches any of the provisions of
+this Agreement, Licensor shall have the right of cancel this
+Agreement. In this case, Licensee shall not be able to use Licensed
+Products, and Licensor shall not accept claim to refund of the amount
+paid by Licensee.
+    8-2 The Licensee shall have right of cancel this Agreement by
+dispose Licensed Products. In this case, the amount Licensee paid
+shall not be refunded by any reason.
+    8-3 Upon termination or cancellation of this Agreement, Licensee
+shall return to Licensor or destroy Licensed Products.
+
+    9. COMPLIANCE FOR EXPORTATION Licensee shall not attempt to ship,
+transfer, or re-export Licensed Product to other countries that are
+prohibited in the laws of Japan and shall comply with the law on the
+export of Japan. If the Licensee has exported or used Licensed
+Products to the outside of Japan, Licensee shall bear all the
+responsibilities arising from the act.
+
+    10. GENERAL PROVISIONS
+    10-1 This Agreement shall constitute the entire agreement between
+the parties with respect to any and all subjects and shall supersede
+all previous negotiations, understandings and agreements the parties
+thereto.
+    10-2 This Agreement is executed in Japanese edition, and all
+correspondence between the parties shall be in Japanese. In case,
+there are contradictions between Japanese Agreement and English
+Translation, Japanese agreement will be applied.
+    10-3 This Agreement shall be governed by and construed in
+accordance with the laws of Japan.
+    10-4 The parties agree that any disputes arising out of this
+Agreement shall be brought to before the Yokohama District Court of
+Japan for the first instance.
+
+                                                                    EOL
+```
+{% endcode %}
+
+{% code title="MW-SLA-1J.txt" %}
+```
+
+              モノワイヤレスソフトウェア使用許諾契約書
+
+    VERSION 1, 8-DEC-2016 (MW-SLA-1J)
+    Copyright (C) 2016 Mono Wireless Inc.
+
+    本契約は、モノワイヤレス株式会社（以下、ライセンサー）が提供するソフト
+ウェア製品（以下、本製品）をお客様（ライセンシー）がご利用する際に必要とな
+る使用許諾を締結するものです。
+
+    第１条（定義）
+    １．本契約において、「本製品」とは、ライセンサーが提供するソースコード
+およびライブラリ、スクリプトファイル、ユーティリティならびに取扱い説明書な
+ど一式をいいます。
+    ２．本契約において「知的財産権」とは、著作権、特許権（特許出願権を含む）、
+商標権、ノウハウおよびその他の知的創作物に対する権利または法律上の利益をい
+います。
+
+    第２条（知的財産権の帰属）
+    本製品に対する知的財産権の一切は、ライセンサーに帰属します。本契約の締
+結によっても本製品の知的財産権がライセンサーからライセンシーに移転するもの
+ではありません。
+
+第３条（使用許諾）
+    ライセンサーは、本契約の全項目に合意することを条件として、ライセンシー
+に対し次の各号について非排他的な許諾を付与します。
+    （１）本製品を、ライセンサー製の無線マイコンを用いたシステム内で利用す
+ること
+    （２）本製品におけるソースコードを、ライセンサー製の無線マイコン上向け
+にビルドし、ライセンサー製の無線マイコン上で動作させること
+    （３）本製品におけるソースコードの全部もしくは一部を修正、改変、翻訳、
+翻案し、またはこれらを基づいて二次的著作物を創作すること
+    （４）本契約の複製とともに、本製品におけるソースコード（前号を含む）を
+複製、配布（商用目的も含む）すること
+
+    第４条（禁止事項）
+    ライセンシーは、次の各号の行為を行うことはできません。
+    （１）本製品におけるソースコード（前条２号に定める修正、改変、翻訳、翻
+案したソースコードおよび二次的著作物を含む）を、他社製のプロセッサ向けにビル
+ド、動作、又は双方を行うこと
+    （２）本製品（前条２号に定める修正、改変、翻訳、翻案したソースコードお
+よび二次的著作物を含む）を、他社製プロセッサ上のシステムを開発する目的で利用
+すること
+    （３）本製品におけるライブラリ等、バイナリコードに対して、リバース・エ
+ンジニアリング、逆コンパイル、逆アセンブルその他ソースコードおよび基礎とな
+るアイデアまたはアルゴリズムの解析、再構築もしくは発見を試みること。
+
+    第５条（免責）
+    １．ライセンサーは、個別契約書に明示的に規定された場合を除き、「現状有
+姿のまま」で本製品を提供します。ライセンサーは本製品の品質および機能がライ
+センシーの使用目的に適合すること、中断または誤りなく動作すること、第三者の
+知的財産権を侵害していないことおよびバグや不具合のないことを保証するもので
+はなく、ライセンサーは本製品についての一切の責任は負いません。
+    ２．ライセンサーは、本製品の使用または使用不能から発生した、直接的、間
+接的、派生的、偶発的等いかなる損害に対して、一切責任を負わないものとします。
+たとえライセンサーがかかる損害の可能性について知らされていた場合も同様です。
+また、ライセンサーが損害賠償責任を負う事になった場合であっても、ライセンサー
+の損害賠償責任は、その理由を問わず、本製品についてライセンシーが実際に支払っ
+た金額を上限とします。
+
+    第６条（譲渡）
+    ライセンシーは、本契約に基づく権利または義務を第三者に譲渡することはで
+きません。
+
+    第７条（有効期間）
+    本契約の有効期間は、ライセンサーが別途有効期間を定めた場合および本契約
+の規定に従って解除される場合を除き、ライセンシーが本製品を使用した時からラ
+イセンシーが本ソフトウェア製品の使用を停止するまでとします。
+
+    第８条（本契約の解除）
+    １．ライセンシーが本契約に違反した場合、ライセンサーは本契約を解除する
+ことができます。この場合、ライセンシーは、本製品を一切使用することができな
+いものとします。また、ライセンシーがライセンサーに支払った対価についても、
+解除による返金には応じられません
+    ２．ライセンシーは、本製品を破棄することにより本契約を終了させることが
+できます。この場合、ライセンシーがライセンサーに支払った対価は返却いたしま
+せん。
+    ３．本契約が終了するか又は解除された場合、ライセンシーは、本製品をライ
+センサーへ返却するか、または破棄するものとします。
+
+    第９条（輸出の制限）
+    ライセンシーは、輸出管理法令、日本の政府機関が要求する条件等を遵守する
+ものとします。関連する輸出入に関する法規を順守せず、本製品を日本国外へ輸出
+することおよび国外で使用することはできません。ライセンシーが本製品を日本国
+外へ輸出または国外で使用した場合、当該行為から生ずる一切の責任はライセンシー
+が負うものとします。
+
+    第１０条（一般条項）
+    １．本契約は、本製品の使用許諾に関し、本契約の締結以前にライセンシーと
+ライセンサーとの間になされたすべての取り決めに優先して適用されます。
+    ２．本契約は日本語版により締結され、当事者間のすべての伝達は日本語によ
+るものします。この場合、本契約とその英訳に矛盾があった場合、日本語による本
+契約の解釈を優先します．
+    ３．本契約は、日本国法に準拠し、これに従って解釈されるものとします。
+    ４．本契約に関連して発生した一切の紛争については、横浜地方裁判所を第一
+審の専属的合意管轄裁判所とします。
+
+                                                          以上
+```
+{% endcode %}
+

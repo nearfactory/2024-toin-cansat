@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#モジュール">モジュール</a></li>
+</ul>
+</nav>
+<h1 id="モジュール">モジュール</h1>
+<p>TWELITE NET のライブラリの機能取捨選択をコンパイル時に行います。いくつかの機能は依存関係があります。</p>
+<table>
+<colgroup>
+<col style="width: 37%"></col>
+<col style="width: 62%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>モジュール定義</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ToCoNet_REG_MOD_ENERGYSCAN</td>
+<td>チャネルの入力レベルを計測します。入力時には送受信が不可能になります。<br>関数： ToCoNet_EnergyScan_bStart()イベント：E_EVENT_TOCONET_ENERGY_SCAN_COMPLETE</td>
+</tr>
+<tr class="even">
+<td>ToCoNet_USE_MOD_NBSCAN<br>ToCoNet_USE_MOD_NBSCAN_SLAVE</td>
+<td>近隣のモジュールを探索します。関数：ToCoNet_NbScan_bStart(), ToCoNet_NbScan_bStartToFindRole(), ToCoNet_NbScan_bStartToFindAddr()イベント：E_EVENT_TOCONET_NWK_SCAN_COMPLETE</td>
+</tr>
+<tr class="odd">
+<td>ToCoNet_USE_MOD_RAND_XOR_SHIFT <br></td>
+<td>乱数生成アルゴリズムを登録します。登録しない場合は、内蔵のハードウェア乱数が使用されます。ただし、連続的に 32bit の乱数系列が必要な場合はソフトウェア乱数を使用します。外部の32kHz水晶振動子や発振器を接続する場合は、XOR_SHIFT の定義が必要です。</td>
+</tr>
+<tr class="even">
+<td>ToCoNet_USE_MOD_NWK_LAYERTREE</td>
+<td>レイヤーツリー型ネットワーク層を利用します。依存モジュール： ToCoNet_USE_MOD_NBSCAN, ToCoNet_USE_MOD_NBSCAN_SLAVE, ToCoNet_USE_MOD_DUPCHK</td>
+</tr>
+<tr class="odd">
+<td>ToCoNet_USE_MOD_NWK_ LAYERTREE_MININODES</td>
+<td>同報送信専用のレイヤーツリー型ネットワークにデータ送信可能な省電力「ミニノード」。依存モジュール: ToCoNet_USE_MOD_DUCHK</td>
+</tr>
+<tr class="even">
+<td>ToCoNet_USE_MOD_DUPCHK</td>
+<td>パケットの重複チェッカ。最大４０ノードまでの重複パケットを管理する。レイヤーツリー型「ミニノード」を使用する時には必須定義モジュール。</td>
+</tr>
+<tr class="odd">
+<td>ToCoNet_REG_MOD_NWK _MESSAGE_POOL</td>
+<td>メッセージプール機能を利用します。依存モジュール：ToCoNet_USE_MOD_NWK_LAYERTREE</td>
+</tr>
+<tr class="even">
+<td>ToCoNet_USE_MOD_CHANNEL_MGR</td>
+<td>チャネルアジリティを利用します。u32ChMask に指定したチャネルを利用して、複数チャネル駆動の通信を行います。</td>
+</tr>
+<tr class="odd">
+<td>ToCoNet_USE_MOD_TXRXQUEUE_SMALL　ToCoNet_USE_MOD_TXRXQUEUE_MID　ToCoNet_USE_MOD_TXRXQUEUE_BIG</td>
+<td>送信キューのサイズを決定します。SMALLは送信用で 3ヶ、MIDは6ヶ、BIGは20ヶのキューを確保します。パケット分割を行うような一度に多くのパケットを連続的に送信する場合はBIGを指定します。１ヶあたり約128バイトのメモリを消費し、未定義時は MID となります。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

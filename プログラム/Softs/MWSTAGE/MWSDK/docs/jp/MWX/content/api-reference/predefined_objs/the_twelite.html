@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>the_twelite</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">the_twelite</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#the_twelite">the_twelite</a><ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#演算子-設定"><code>&lt;&lt;</code>演算子 (設定)</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#change_channel">change_channel()</a></li>
+<li><a href="#get_channel_phys">get_channel_phys()</a></li>
+<li><a href="#get_hw_serial">get_hw_serial()</a></li>
+<li><a href="#sleep">sleep()</a></li>
+<li><a href="#is_wokeup_by_dio">is_wokeup_by_dio()</a></li>
+<li><a href="#is_wokeup_by_wktimer">is_wokeup_by_wktimer()</a></li>
+<li><a href="#reset_system">reset_system()</a></li>
+<li><a href="#stop_watchdog">stop_watchdog()</a></li>
+<li><a href="#restart_watchdog">restart_watchdog()</a></li>
+</ul></li>
+<li><a href="#ビヘイビア">ビヘイビア</a><ul>
+<li><a href="#useb">use&lt;B&gt;()</a></li>
+</ul></li>
+<li><a href="#クラスオブジェクト">クラスオブジェクト</a><ul>
+<li><a href="#tx_status">tx_status</a></li>
+<li><a href="#receiver">receiver</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="the_twelite">the_twelite</h1>
+<p><code>the_twelite</code>オブジェクトは、TWENETの利用手続きをまとめたもので、無線の基本設定やスリープ等の手続きなど無線マイコンを操作するための手続きが含まれます。</p>
+<h2 id="概要">概要</h2>
+<p><code>the_twelite</code>は<code>setup()</code>関数内で設定と開始<code>the_twelite.begin()</code>を行います。<code>setup()</code>以外では設定は行えません。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-2" title="2">  ...</a>
+<a class="sourceLine" id="cb1-3" title="3">    the_twelite</a>
+<a class="sourceLine" id="cb1-4" title="4">        &lt;&lt; TWENET::appid(APP_ID)    </a>
+<a class="sourceLine" id="cb1-5" title="5">        &lt;&lt; TWENET::channel(CHANNEL) </a>
+<a class="sourceLine" id="cb1-6" title="6">        &lt;&lt; TWENET::rx_when_idle();  </a>
+<a class="sourceLine" id="cb1-7" title="7">  ...</a>
+<a class="sourceLine" id="cb1-8" title="8">  the_twelite.begin();</a>
+<a class="sourceLine" id="cb1-9" title="9">}</a></code></pre></div>
+<p>上記の例では、アプリケーションIDの設定、通信チャネルの設定、受信回路の設定を行っています。</p>
+<p>様々な手続きが含まれます。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// シリアル番号を得る</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="dt">uint32_t</span> u32hwser = the_twelite.get_hw_serial();</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">// チャネルを 11 に設定する</span></a>
+<a class="sourceLine" id="cb2-5" title="5">the_twelite.change_channel(<span class="dv">11</span>);</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co">// １秒のスリープを行う</span></a>
+<a class="sourceLine" id="cb2-8" title="8">the_twelite.sleep(<span class="dv">1000</span>);</a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">// リセットを行う</span></a>
+<a class="sourceLine" id="cb2-11" title="11">the_twelite.reset_system();</a></code></pre></div>
+<p>また無線ネットワークを取り扱うクラスやボード対応をまとめたクラス、ユーザ記述のイベントドリブン処理を行うクラスを登録できるようになっています。このクラスを登録することにより、専用化した機能を手軽に利用できるようになります。これらのクラスを本解説中では「<a href="../behavior/README.html"><strong>ビヘイビア</strong></a>」と呼称します。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="co">/*** SETUP section */</span></a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="co">// use PAL_AMB board support.</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb3-5" title="5">    </a>
+<a class="sourceLine" id="cb3-6" title="6">    ...</a>
+<a class="sourceLine" id="cb3-7" title="7">    </a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb3-9" title="9">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb3-10" title="10">    nwk &lt;&lt; NWK_SIMPLE::logical_id(u8ID);</a></code></pre></div>
+<p>上記の例では環境センサーパル<code>&lt;PAL_AMB&gt;</code>と、シンプル中継ネットワーク<code>&lt;NWK_SIMPLE&gt;</code>の２種類を登録しています。これらを登録することにより環境センサーパル上のセンサーなどハードウェアを簡易に取り扱うことが出来ます。また煩雑な無線パケットの取り扱いについて中継の処理や重複で届いたパケットの自動破棄などの機能を暗黙に持たせることが出来ます。</p>
+<h2 id="メソッド">メソッド</h2>
+<div class="warning">
+<p>MWXライブラリには、ここで紹介したメソッド以外にも定義されています。</p>
+<p>アクト記述には直接関係ないもの、設定しても有効に機能しないもの、内部的に使用されているものが含まれます。</p>
+</div>
+<h3 id="演算子-設定"><code>&lt;&lt;</code>演算子 (設定)</h3>
+<p>オブジェクト<code>the_twelite</code>の初期設定を行うために<code>&lt;&lt;</code>演算子を用います。</p>
+<p>以下に挙げる設定用のクラスオブジェクトを入力とし、設定をしなければデフォルト値が適用されます。</p>
+<h4 id="twenetappiduint32_t-id">TWENET::appid(uint32_t id)</h4>
+<p>パラメータ<code>id</code>に指定したアプリケーションIDを設定します。これは必須指定です。</p>
+<p>設定の読み出しは <code>uint32_t the_twelite.get_appid()</code> で行います。</p>
+<h4 id="twenetchanneluint8_t-ch">TWENET::channel(uint8_t ch)</h4>
+<p>パラメータ<code>ch</code>に指定したチャネル番号（<code>11</code>..<code>26</code>)を設定します。</p>
+<p>設定の読み出しは<code>uint8_t the_twelite.get_channel()</code>で行います。</p>
+<h4 id="twenettx_poweruint8_t-pw">TWENET::tx_power(uint8_t pw)</h4>
+<p>パラメータ<code>pw</code>に指定した出力設定を(<code>0</code>..<code>3</code>)を設定します。デフォルトは(3:出力減衰無し)です。</p>
+<p>設定値の読み出しは<code>uint8_t the_twelite.get_tx_power()</code>で行います。</p>
+<h4 id="twenetrx_when_idleuint8_t-benable">TWENET::rx_when_idle(uint8_t bEnable)</h4>
+<p>パラメータ<code>bEnable</code>が<code>1</code>であれば常に受信回路を動作させ、他からの無線パケットを受信できるようになります。デフォルトは<code>0</code>で、もっぱら送信専用となります。</p>
+<p>設定値の読み出しは<code>uint8_t the_twelite.get_rx_when_idle()</code>で行います。</p>
+<h4 id="twenetchmgruint8_t-ch1-18-uint8_t-ch2-0-uint8_t-ch3-0">TWENET::chmgr(uint8_t ch1 = 18, uint8_t ch2 = 0, uint8_t ch3 = 0)</h4>
+<p>チャネルマネージャを有効にします。チャネルを複数指定すると複数チャネルでの送受信を行います。<code>ch2</code>,<code>ch3</code>に0を指定すると、その指定は無効になります。</p>
+<h4 id="stg_std">STG_STD</h4>
+<p><a href="../../settings/stg_std.html#%22no-1">インタラクティブモードの設定値</a>を反映します。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb4-2" title="2">...</a>
+<a class="sourceLine" id="cb4-3" title="3">set.reload();       <span class="co">// 設定値をロード</span></a>
+<a class="sourceLine" id="cb4-4" title="4">the_twelite &lt;&lt; set; <span class="co">// インタラクティブモードの設定値を反映</span></a></code></pre></div>
+<p>反映される項目は以下です。</p>
+<ul>
+<li><strong>app_id</strong></li>
+<li><strong>channel</strong></li>
+<li><strong>tx_power</strong></li>
+<li>MAC ack 使用時の再送回数</li>
+</ul>
+<div class="warning">
+<p>MWXライブラリコード中には他にも設定項目がありますが、現時点ではライブラリの機能に無関係な設定であったり、設定を行うと矛盾を起こす可能性があるものです。</p>
+</div>
+<h3 id="begin">begin()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> begin()</a></code></pre></div>
+<p>事前に設定（<code>&lt;&lt;</code>演算子参照)や、ビヘイビアの登録を済ませた後に実行します。通常は<code>setup()</code>関数内の一番最後に記述します。</p>
+<ul>
+<li><code>the_twelite</code> 設定完了</li>
+<li>ビヘイビアの初期化</li>
+</ul>
+<div class="warning">
+<p>TWENETの初期化は <code>setup()</code> 関数が終了した後にも実行されます。多くの処理は<code>setup()</code>が終了した後に実行するようになっているため、ここでは初期化以外の処理を行わないようにしてください。</p>
+</div>
+<h4 id="例">例</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb6-2" title="2">    <span class="co">// use PAL_AMB board support.</span></a>
+<a class="sourceLine" id="cb6-3" title="3">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb6-4" title="4">    </a>
+<a class="sourceLine" id="cb6-5" title="5">    <span class="co">// settings</span></a>
+<a class="sourceLine" id="cb6-6" title="6">    the_twelite</a>
+<a class="sourceLine" id="cb6-7" title="7">        &lt;&lt; TWENET::appid(APP_ID)    </a>
+<a class="sourceLine" id="cb6-8" title="8">        &lt;&lt; TWENET::channel(CHANNEL) </a>
+<a class="sourceLine" id="cb6-9" title="9">        &lt;&lt; TWENET::rx_when_idle();  </a>
+<a class="sourceLine" id="cb6-10" title="10">    </a>
+<a class="sourceLine" id="cb6-11" title="11">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb6-12" title="12">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb6-13" title="13">    nwk &lt;&lt; NWK_SIMPLE::logical_id(u8ID);</a>
+<a class="sourceLine" id="cb6-14" title="14">    </a>
+<a class="sourceLine" id="cb6-15" title="15">    <span class="co">// somo others</span></a>
+<a class="sourceLine" id="cb6-16" title="16">    </a>
+<a class="sourceLine" id="cb6-17" title="17">    <span class="co">// begin the TWENET!</span></a>
+<a class="sourceLine" id="cb6-18" title="18">    the_twelite.begin();</a>
+<a class="sourceLine" id="cb6-19" title="19">}</a></code></pre></div>
+<h3 id="change_channel">change_channel()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> change_channel(<span class="dt">uint8_t</span> u8Channel)</a></code></pre></div>
+<p>チャネル設定を変更します。失敗時にはチャネルは変更されず<code>false</code>を戻します。</p>
+<h3 id="get_channel_phys">get_channel_phys()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">uint8_t</span> get_channel_phys()</a></code></pre></div>
+<p>現在設定中のチャネル番号(11..26)を取得する。MAC層のAPIより取得します。</p>
+<h3 id="get_hw_serial">get_hw_serial()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">inline</span> <span class="dt">uint32_t</span> get_hw_serial()</a></code></pre></div>
+<p>モジュールのシリアル番号を取得します。</p>
+<h3 id="sleep">sleep()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> sleep(</a>
+<a class="sourceLine" id="cb10-2" title="2">        <span class="dt">uint32_t</span> u32Periodms, </a>
+<a class="sourceLine" id="cb10-3" title="3">        <span class="dt">bool_t</span> bPeriodic = <span class="kw">true</span>, </a>
+<a class="sourceLine" id="cb10-4" title="4">        <span class="dt">bool_t</span> bRamOff = <span class="kw">false</span>, </a>
+<a class="sourceLine" id="cb10-5" title="5">        <span class="dt">uint8_t</span> u8Device = TWENET::SLEEP_WAKETIMER_PRIMARY)</a></code></pre></div>
+<p>モジュールをスリープさせる。</p>
+<table>
+<colgroup>
+<col style="width: 8%"></col>
+<col style="width: 91%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>パラメータ</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u32Periodms</code></td>
+<td>スリープ時間[ms]</td>
+</tr>
+<tr class="even">
+<td><code>bPeriodic</code></td>
+<td>前回の起床時間をもとに次の起床時間を再計算する。<br>※次の起床タイミングが迫っているなどの理由で、現在のタイミングからになる場合もあります。</td>
+</tr>
+<tr class="odd">
+<td><code>bRamoff</code></td>
+<td><code>true</code>に設定すると、RAMを保持しないスリープになる（起床後は<code>wakeup()</code>ではなく<code>setup()</code>から再初期化する必要がある)</td>
+</tr>
+<tr class="even">
+<td><code>u8Device</code></td>
+<td>スリープに用いるウェイクアップタイマーの指定。<code>TWENET::SLEEP_WAKETIMER_PRIMARY</code>または <code>TWENET::SLEEP_WAKETIMER_SECONDARY</code>を指定する。</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>スリープ前に組み込みオブジェクトやビヘイビアの <code>on_sleep()</code> メソッドが呼び出され、スリープ前の手続きを行います。スリープ復帰後は反対に <code>on_wakeup()</code> メソッドにより復帰処理が行われます。</p>
+</div>
+<h3 id="is_wokeup_by_dio">is_wokeup_by_dio()</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">bool</span> is_wokeup_by_dio(<span class="dt">uint8_t</span> port)</a></code></pre></div>
+<p>スリープからの復帰要因が指定したディジタルピンである場合に<code>true</code>を返します。</p>
+<h3 id="is_wokeup_by_wktimer">is_wokeup_by_wktimer()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="dt">bool</span> is_wokeup_by_wktimer()</a></code></pre></div>
+<p>スリープからの復帰要因がウェイクアップタイマーである場合に<code>true</code>を返します。</p>
+<h3 id="reset_system">reset_system()</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> reset_system()</a></code></pre></div>
+<p>システムをリセットします。リセット後は<code>setup()</code>からの処理となります。</p>
+<h3 id="stop_watchdog">stop_watchdog()</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> stop_watchdog()</a></code></pre></div>
+<p>ウォッチドッグタイマーを停止します。長時間のポーリング待ちを行うような場合はタイマーを停止します。</p>
+<div class="info">
+<p>ウォッチドッグタイマーはライブラリ内部のメインループで都度再開（restart）しています。タイマーが切れリセットがかかるまで約４秒です。</p>
+</div>
+<h3 id="restart_watchdog">restart_watchdog()</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">inline</span> <span class="dt">void</span> restart_watchdog()</a></code></pre></div>
+<p>ウォッチドッグタイマーを再開します。</p>
+<h2 id="ビヘイビア">ビヘイビア</h2>
+<p><code>twe_twelite</code>には３つのビヘイビアを登録でき、これらを格納する以下のクラスオブジェクトを定義されています。</p>
+<ul>
+<li><code>network</code> : ネットワークを実装するビヘイビアです。通常は<a href="../../networks/nwk_simple.html"><code>&lt;NWK_SIMPLE&gt;</code></a>を登録します。</li>
+<li><code>network2</code> : ネットワークを実装するビヘイビアです。最初に <code>network</code>でペイロードのデータ構造などの判定により受理しなかったパケットを、別のネットワーク ビヘイビアで処理させたい場合に使用します。(<a href="../../networks/nwk_layered.html">参考: NWK_LAYERED と NWK_SIMPLEの併用</a>)</li>
+<li><code>board</code>: ボード対応のビヘイビアです。ボード上の各デバイス利用手続きが付加されます。</li>
+<li><code>app</code>: ユーザアプリケーションを記述したビヘイビアです。割り込みやイベント記述、ステートマシンによる状態遷移によるふるまいの記述が可能です。また複数のアプリケーション記述を定義しておいて、起動時に全く振る舞いの違うアプリケーションを選択する記述が容易に行えます。</li>
+<li><code>settings</code>: 設定（インタラクティブモード）を実行するためのビヘイビアです。<code>&lt;SET_STD&gt;</code>を登録します。</li>
+</ul>
+<h3 id="useb">use&lt;B&gt;()</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="co">// 例</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a></code></pre></div>
+<p>ビヘイビア&lt;B&gt;を登録します。登録は<a href="../sys_callbacks/setup.html"><code>setup()</code></a>内で行います。戻り値は登録したビヘイビアに対応するオブジェクトの参照です。</p>
+<p>登録後は登録時と同じ書式でオブジェクトの取得を行います。</p>
+<div class="danger">
+<p>誤ったビヘイビアを指定した場合は、パニック動作（無限ループ）となりプログラムの動作が停止します。</p>
+</div>
+<div class="info">
+<p>グローバル変数としてビヘイビアのオブジェクトを宣言することを想定していません。利用都度<code>use&lt;B&gt;()</code>を用いてください。</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb17-2" title="2">  <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb17-3" title="3">}</a></code></pre></div>
+<p>ただし、グローバル変数にオブジェクトのポインタを定義して以下のように記述することは可能です。（MWXライブラリでは原則としてポインタ型の利用を最小限にとどめ参照型を利用する方針ですので、下記のような記述は推奨しません）</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1">NWK_SIMPLE *pNwk = <span class="kw">nullptr</span>;</a>
+<a class="sourceLine" id="cb18-2" title="2"></a>
+<a class="sourceLine" id="cb18-3" title="3">setup() {</a>
+<a class="sourceLine" id="cb18-4" title="4">  <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb18-5" title="5">    pNwk = &amp;nwk;</a>
+<a class="sourceLine" id="cb18-6" title="6">}</a>
+<a class="sourceLine" id="cb18-7" title="7"></a>
+<a class="sourceLine" id="cb18-8" title="8"><span class="dt">void</span> transmit() {</a>
+<a class="sourceLine" id="cb18-9" title="9">  <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = pNwk-&gt;prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb18-10" title="10">    ...</a>
+<a class="sourceLine" id="cb18-11" title="11">  }</a>
+<a class="sourceLine" id="cb18-12" title="12">}</a></code></pre></div>
+</div>
+<h2 id="クラスオブジェクト">クラスオブジェクト</h2>
+<p><code>the_twelite</code>には上述の<code>board</code>, <code>network</code>, <code>app</code>の３つのクラスオブジェクトが定義されていますが他に以下が定義されています。</p>
+<h3 id="tx_status">tx_status</h3>
+<p>送信完了状態を通知する。</p>
+<div class="info">
+<p>イベントドリブンのビヘイビアの記述では<a href="../behavior/#transmit_complete">transmit_complete()コールバック</a>で管理します。</p>
+</div>
+<h4 id="is_complete">is_complete()</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1"><span class="dt">bool</span> is_complete(<span class="dt">uint8_t</span> cbid)</a></code></pre></div>
+<p>指定したIDのパケットが送信完了したときに<code>true</code>を返す。</p>
+<h4 id="is_success">is_success()</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb20-1" title="1"><span class="dt">bool</span> is_success(<span class="dt">uint8_t</span> cbid)</a></code></pre></div>
+<p>指定したIDのパケットが送信完了し、かつ送信成功したときに<code>true</code>を返す。</p>
+<h3 id="receiver">receiver</h3>
+<p>受信パケットを取得する。</p>
+<div class="warning">
+<p><code>the_twelite.receiver</code>は推奨されません。</p>
+<p>従来<code>loop()</code>内での記述を意図して <code>the_twelite.receiver</code> による処理を行っていましたが、キューによる遅延処理である点で原理的に取りこぼしが発生し、また記述も煩雑になりがちである点から <code>on_rx_packet()</code> を追加しました。</p>
+</div>
+<div class="info">
+<ul>
+<li>イベントドリブンのビヘイビアの記述では<a href="../behavior/#receive">receive()コールバック</a>で取得します。</li>
+</ul>
+</div>
+<div class="warning">
+<p><code>read()</code>メソッドで得られる受信パケットデータは、続くパケットが受信処理時に上書きされる設計となっています。<code>available</code>直後に読み出してなにか短い処理をする場合は問題になることはありませんが、原則として読み出し→アプリケーションが使うため必要なデータのコピー→<code>loop()</code>の終了を速やかに行います。例えば<code>loop()</code>中で長い<code>delay()</code>を行うと受信パケットの取りこぼしなどが発生します。</p>
+</div>
+<h4 id="available">available()</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="dt">bool</span> available()</a></code></pre></div>
+<p>まだ読み出していない受信パケットが存在する場合に<code>true</code>を返す。</p>
+<h4 id="read">read()</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb22-1" title="1">packet_rx&amp; read()</a></code></pre></div>
+<p>パケットを読み出します。</p>
+</body>
+</html>

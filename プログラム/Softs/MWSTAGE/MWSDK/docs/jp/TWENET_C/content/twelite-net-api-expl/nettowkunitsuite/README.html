@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#ネットワークについて">ネットワークについて</a><ul>
+<li><a href="#単純ネット">単純ネット</a></li>
+<li><a href="#中継ネット">中継ネット</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ネットワークについて">ネットワークについて</h1>
+<p>TWELITE NETでは無線パケットの配送について、2つの方式を用意しています。</p>
+<h2 id="単純ネット">単純ネット</h2>
+<p>単純ネットでは、アプリケーションIDとアドレスのみでの通信を行います。電波範囲内の通信は自由です。親機と子機という概念も存在せず、アプリケーションが役割を決定します。</p>
+<p>例えば、ショートアドレスを 0 を親局とし、子局は1〜100の最大101台のネットワークです。子局は常にアドレス 0 に送信すれば親局への通信となります。</p>
+<p>単純ネットでは以下の通信を行います。</p>
+<ul>
+<li><a href="../paketto/adoresuno.html#%22shtoadoresu">ショートアドレス</a>を指定した通信</li>
+<li><a href="../paketto/adoresuno.html#%22ronguadoresu">ロングアドレス</a>を指定した通信</li>
+<li>電波到達範囲全てに行う同報通信</li>
+</ul>
+<p>また、通信の成功を知る方法も用意されています。</p>
+<ul>
+<li>送信先から確認パケットを受け取る <a href="../yong-yu.html#%22mac-ackackackki">MAC ACK 通信</a></li>
+</ul>
+<div class="info">
+<p>MAC ACK は、相手先への到着確認が出来る（例外的に正しく確認ができない場合があります。）という点で便利ですが、相手先のアドレスが事前にわかっていなければなりません。</p>
+<p>MAC ACK を使用する場合は、一定回数の再送が自動的に行われますが、電波状況が良い場合は再送がありませんが、悪い場合は最大回数再送を行う振る舞いをします。対して使用しない場合は、常に2回または3回同じパケットを送信します。どちらが良いかはケースバイケースです。</p>
+<p>MAC ACK を使用する場合の難点の一つが、中継を行う場合です。子局が親局へ中継機を通じて通信したい場合、子局は送信前に親局へ直接送信するか、中継機に送信するかを決めなければ MAC ACK は利用できません。事前に設置時に送り先が決まっていれば問題ありませんが、多くのアプリケーションでは動的に近い局に送信するような設置をする要求がありますが、最も近在にあり通信可能性が高い局を決定するには、少なくとも１往復の通信が必要になります。この通信は失敗する場合もありますし不確実な中継先を選ぶ可能性もあります。また電池消耗の原因にもなります。安定した通信が見込める中継機が確定し、その状態が維持される限り効率的な通信が可能ですがそうでない場合は、通信途絶など不安定なネットワークになります。</p>
+<p><a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/">App_Twelite</a> など、単純ネットを用いるアプリケーションでは、MAC ACK を敢えて使用せず、同報通信により中継を行っています。パケットが一定回数中継したらそれ以上中継しない、同じパケットは再度中継しないという２つの単純なルールにより中継を行います。中継段数が多くない場合はそれほど効率は悪化しませんし、なによりも、子局がパケットを送りさえすれば、周りに中継機が居る限り常に親局へ届く可能性が高いという点で安定的です。</p>
+</div>
+<h2 id="中継ネット">中継ネット</h2>
+<p>中継ネットは、ネットワークの構成などに一定の条件を定め、その範囲で中継ネットワークの構築と配送を自動化します。</p>
+</body>
+</html>

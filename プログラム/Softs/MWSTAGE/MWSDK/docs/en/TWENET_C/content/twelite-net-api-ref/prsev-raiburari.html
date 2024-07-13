@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#prsev-library">PRSEV library</a><ul>
+<li><a href="#defining-a-callback-function">Defining a callback function</a></li>
+<li><a href="#state-definitions">State definitions</a></li>
+<li><a href="#event-handling-functions">Event handling functions</a></li>
+<li><a href="#initialisation-process">Initialisation process</a></li>
+<li><a href="#running-the-application">Running the application</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="prsev-library">PRSEV library</h1>
+<p>It provides a way to store several differently behaving applications in a single binary, and a way to define a function for each event state.</p>
+<div class="info">
+<p>The <strong>App_Tag</strong> end device combines the handling of several sensors into a single application and switches the behaviour depending on the configuration.</p>
+<p>Each <code>vProcessEv_? .c</code> file contains the definition of the application and the procedures for its individual behaviour.</p>
+</div>
+<h2 id="defining-a-callback-function">Defining a callback function</h2>
+<p><a href="krubakku/README.html">Callback functions</a> are defined statically, which is not a good way to combine multiple application behaviours into one. Here, they are defined static in the source file.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"> * Hardware interrupt</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32DeviceId</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32ItemBitmap</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co"> * </span><span class="an">@return</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="dt">static</span> uint8 cbAppToCoNet_u8HwInt(uint32 u32DeviceId, uint32 u32ItemBitmap) {</a>
+<a class="sourceLine" id="cb1-8" title="8">    uint8 u8handled = FALSE;</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="cf">switch</span> (u32DeviceId) {</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="cf">default</span>:</a>
+<a class="sourceLine" id="cb1-11" title="11">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb1-12" title="12">    }</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="cf">return</span> u8handled;</a>
+<a class="sourceLine" id="cb1-14" title="14">}</a>
+<a class="sourceLine" id="cb1-15" title="15"></a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="co"> * Hardware events (delayed execution)</span></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32DeviceId</span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32ItemBitmap</span></a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="dt">static</span> <span class="dt">void</span> cbAppToCoNet_vHwEvent(uint32 u32DeviceId, uint32 u32ItemBitmap) {</a>
+<a class="sourceLine" id="cb1-22" title="22">}</a>
+<a class="sourceLine" id="cb1-23" title="23"></a>
+<a class="sourceLine" id="cb1-24" title="24"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-25" title="25"><span class="co"> * Main processing</span></a>
+<a class="sourceLine" id="cb1-26" title="26"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-27" title="27"><span class="dt">static</span> <span class="dt">void</span> cbAppToCoNet_vMain() {</a>
+<a class="sourceLine" id="cb1-28" title="28">    <span class="co">/* handle serial input */</span></a>
+<a class="sourceLine" id="cb1-29" title="29">    vHandleSerialInput();</a>
+<a class="sourceLine" id="cb1-30" title="30">}</a>
+<a class="sourceLine" id="cb1-31" title="31"></a>
+<a class="sourceLine" id="cb1-32" title="32"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-33" title="33"><span class="co"> * Network events</span></a>
+<a class="sourceLine" id="cb1-34" title="34"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">eEvent</span></a>
+<a class="sourceLine" id="cb1-35" title="35"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32arg</span></a>
+<a class="sourceLine" id="cb1-36" title="36"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-37" title="37"><span class="dt">static</span> <span class="dt">void</span> cbAppToCoNet_vNwkEvent(teEvent eEvent, uint32 u32arg) {</a>
+<a class="sourceLine" id="cb1-38" title="38">}</a>
+<a class="sourceLine" id="cb1-39" title="39"></a>
+<a class="sourceLine" id="cb1-40" title="40"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-41" title="41"><span class="co"> * RX events</span></a>
+<a class="sourceLine" id="cb1-42" title="42"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">pRx</span></a>
+<a class="sourceLine" id="cb1-43" title="43"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-44" title="44"><span class="dt">static</span> <span class="dt">void</span> cbAppToCoNet_vRxEvent(tsRxDataApp *pRx) {</a>
+<a class="sourceLine" id="cb1-45" title="45">}</a>
+<a class="sourceLine" id="cb1-46" title="46"></a>
+<a class="sourceLine" id="cb1-47" title="47"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb1-48" title="48"><span class="co"> * TX events</span></a>
+<a class="sourceLine" id="cb1-49" title="49"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u8CbId</span></a>
+<a class="sourceLine" id="cb1-50" title="50"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">bStatus</span></a>
+<a class="sourceLine" id="cb1-51" title="51"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-52" title="52"><span class="dt">static</span> <span class="dt">void</span> cbAppToCoNet_vTxEvent(uint8 u8CbId, uint8 bStatus) {</a>
+<a class="sourceLine" id="cb1-53" title="53">    <span class="co">// tx complete</span></a>
+<a class="sourceLine" id="cb1-54" title="54">    ToCoNet_Event_Process(E_ORDER_KICK, <span class="dv">0</span>, vProcessEvCore);</a>
+<a class="sourceLine" id="cb1-55" title="55">}</a></code></pre></div>
+<p>Finally, we have the <code>tsCbHandler</code> structure in the list.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb2-1" title="1"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co"> * Application Handler Definition</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co"> *   If it is not used, set it to `NULL`.</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="dt">static</span> tsCbHandler sCbHandler = {</a>
+<a class="sourceLine" id="cb2-6" title="6">    NULL, <span class="co">// cbAppToCoNet_u8HwInt,</span></a>
+<a class="sourceLine" id="cb2-7" title="7">    cbAppToCoNet_vHwEvent,</a>
+<a class="sourceLine" id="cb2-8" title="8">    NULL, <span class="co">// cbAppToCoNet_vMain,</span></a>
+<a class="sourceLine" id="cb2-9" title="9">    NULL, <span class="co">// cbAppToCoNet_vNwkEvent,</span></a>
+<a class="sourceLine" id="cb2-10" title="10">    NULL, <span class="co">// cbAppToCoNet_vRxEvent,</span></a>
+<a class="sourceLine" id="cb2-11" title="11">    cbAppToCoNet_vTxEvent</a>
+<a class="sourceLine" id="cb2-12" title="12">};</a></code></pre></div>
+<h2 id="state-definitions">State definitions</h2>
+<p>You can define as many events as you wish to use.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb3-1" title="1"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="co"> * Event processing function list</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="dt">static</span> <span class="dt">const</span> tsToCoNet_Event_StateHandler asStateFuncTbl[] = {</a>
+<a class="sourceLine" id="cb3-5" title="5">    PRSEV_HANDLER_TBL_DEF(E_STATE_IDLE),</a>
+<a class="sourceLine" id="cb3-6" title="6">    PRSEV_HANDLER_TBL_DEF(E_STATE_RUNNING),</a>
+<a class="sourceLine" id="cb3-7" title="7">    PRSEV_HANDLER_TBL_DEF(E_STATE_APP_WAIT_TX),</a>
+<a class="sourceLine" id="cb3-8" title="8">    PRSEV_HANDLER_TBL_DEF(E_STATE_APP_SLEEP),</a>
+<a class="sourceLine" id="cb3-9" title="9">    PRSEV_HANDLER_TBL_TRM</a>
+<a class="sourceLine" id="cb3-10" title="10">};</a></code></pre></div>
+<p>An entity is defined as follows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb4-1" title="1">PRSEV_HANDLER_TBL_DEF(E_STATE_IDLE, tsEvent *pEv, teEvent eEvent, uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb4-2" title="2">    <span class="co">// State at the start</span></a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="cf">if</span> (eEvent == E_EVENT_START_UP) {</a>
+<a class="sourceLine" id="cb4-4" title="4">        <span class="co">// Event handling on power-up or sleep-wake</span></a>
+<a class="sourceLine" id="cb4-5" title="5">        ...</a>
+<a class="sourceLine" id="cb4-6" title="6">        ToCoNet_Event_SetState(pEv, E_STATE_RUNNING);</a>
+<a class="sourceLine" id="cb4-7" title="7">    }</a>
+<a class="sourceLine" id="cb4-8" title="8">}</a>
+<a class="sourceLine" id="cb4-9" title="9"></a>
+<a class="sourceLine" id="cb4-10" title="10">PRSEV_HANDLER_TBL_DEF(E_STATE_RUNNING, tsEvent *pEv, teEvent eEvent, uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb4-11" title="11">    <span class="co">// Running (acquisition of sensors data, transmission requests, etc.)</span></a>
+<a class="sourceLine" id="cb4-12" title="12">    bOk = bTransmitToParent( ... ); <span class="co">// Sending process.</span></a>
+<a class="sourceLine" id="cb4-13" title="13">    <span class="cf">if</span> ( bOk ) {</a>
+<a class="sourceLine" id="cb4-14" title="14">        ToCoNet_Event_SetState(pEv, E_STATE_APP_WAIT_TX);</a>
+<a class="sourceLine" id="cb4-15" title="15">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb4-16" title="16">        ToCoNet_Event_SetState(pEv, E_STATE_APP_SLEEP);</a>
+<a class="sourceLine" id="cb4-17" title="17">    }</a>
+<a class="sourceLine" id="cb4-18" title="18">}</a>
+<a class="sourceLine" id="cb4-19" title="19"></a>
+<a class="sourceLine" id="cb4-20" title="20">PRSEV_HANDLER_TBL_DEF(E_STATE_APP_WAIT_TX, tsEvent *pEv, teEvent eEvent, uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb4-21" title="21">    <span class="co">// Waiting for transmission completion</span></a>
+<a class="sourceLine" id="cb4-22" title="22">    <span class="cf">if</span> (..) {</a>
+<a class="sourceLine" id="cb4-23" title="23">        ToCoNet_Event_SetState(pEv, E_STATE_APP_SLEEP); <span class="co">// スリープ状態へ遷移</span></a>
+<a class="sourceLine" id="cb4-24" title="24">    }</a>
+<a class="sourceLine" id="cb4-25" title="25">}</a>
+<a class="sourceLine" id="cb4-26" title="26"></a>
+<a class="sourceLine" id="cb4-27" title="27">PRSEV_HANDLER_DEF(E_STATE_APP_SLEEP, tsEvent *pEv, teEvent eEvent, uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb4-28" title="28">    <span class="co">// Sleep procedure (example code below)</span></a>
+<a class="sourceLine" id="cb4-29" title="29">    <span class="cf">if</span> (eEvent == E_EVENT_NEW_STATE) {</a>
+<a class="sourceLine" id="cb4-30" title="30">        <span class="co">// Sleep API is always called in a place where it is called only once, such as in `E_EVENT_NEW_STATE`.</span></a>
+<a class="sourceLine" id="cb4-31" title="31">        V_PRINTF(LB<span class="st">&quot;Sleeping...&quot;</span>);</a>
+<a class="sourceLine" id="cb4-32" title="32">        V_FLUSH();</a>
+<a class="sourceLine" id="cb4-33" title="33"></a>
+<a class="sourceLine" id="cb4-34" title="34">        <span class="co">// In the case of Mininode, there is no special processing, but the pause processing</span></a>
+<a class="sourceLine" id="cb4-35" title="35">        ToCoNet_Nwk_bPause(sAppData.pContextNwk);</a>
+<a class="sourceLine" id="cb4-36" title="36"></a>
+<a class="sourceLine" id="cb4-37" title="37">        <span class="co">// Enters cyclic sleep</span></a>
+<a class="sourceLine" id="cb4-38" title="38">        <span class="co">//  - 5 seconds after the first time, 5 seconds after the next time, based on the return to sleep</span></a>
+<a class="sourceLine" id="cb4-39" title="39">        vSleep(sAppData.sFlash.sData.u32Slp, sAppData.u16frame_count == <span class="dv">1</span> ? FALSE : TRUE, FALSE);</a>
+<a class="sourceLine" id="cb4-40" title="40">    }</a>
+<a class="sourceLine" id="cb4-41" title="41">}</a></code></pre></div>
+<h2 id="event-handling-functions">Event handling functions</h2>
+<p>The event handling function is defined as follows. The event processing is done according to <code>asStateFuncTbl</code> prepared in the previous state definition.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb5-1" title="1"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="co"> * Event handling function</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">pEv</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">eEvent</span></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32evarg</span></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="dt">static</span> <span class="dt">void</span> vProcessEvCore(tsEvent *pEv, teEvent eEvent, uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb5-8" title="8">    ToCoNet_Event_StateExec(asStateFuncTbl, pEv, eEvent, u32evarg);</a>
+<a class="sourceLine" id="cb5-9" title="9">}</a></code></pre></div>
+<h2 id="initialisation-process">Initialisation process</h2>
+<p>We will prepare an initialization function to store values in <code>psCbHandler</code> and <code>pvProcessEv1</code>, which are prepared as global variables as follows.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb6-1" title="1"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="co"> * Init the app.</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="dt">void</span> vInitAppStandard() {</a>
+<a class="sourceLine" id="cb6-5" title="5">    psCbHandler = &amp;sCbHandler;</a>
+<a class="sourceLine" id="cb6-6" title="6">    pvProcessEv1 = vProcessEvCore;</a>
+<a class="sourceLine" id="cb6-7" title="7">}</a></code></pre></div>
+<h2 id="running-the-application">Running the application</h2>
+<p>This section describes the main file which contains the callback functions. The main file handles the calling of the functions for the individual processes defined above.</p>
+<p>The user-defined event processing function and the TWELITE NET callback function should be defined as follows Call the application’s own callback function, specified by the function pointer, to execute the application’s own user-defined event processing.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">void</span> cbAppColdStart(bool_t bInit) {</a>
+<a class="sourceLine" id="cb7-2" title="2">    <span class="cf">if</span> (bInit == FALSE) {</a>
+<a class="sourceLine" id="cb7-3" title="3">        ...</a>
+<a class="sourceLine" id="cb7-4" title="4">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb7-5" title="5">        <span class="cf">switch</span>(u8AppType) {</a>
+<a class="sourceLine" id="cb7-6" title="6">        <span class="cf">case</span> <span class="bn">0x00</span>: vInitAppStandard(); <span class="cf">break</span>;<span class="co">// AppStandard で起動</span></a>
+<a class="sourceLine" id="cb7-7" title="7">        ...</a>
+<a class="sourceLine" id="cb7-8" title="8">        }</a>
+<a class="sourceLine" id="cb7-9" title="9">        ...</a>
+<a class="sourceLine" id="cb7-10" title="10">        ToCoNet_Event_Register_State_Machine(pvProcessEv1);</a>
+<a class="sourceLine" id="cb7-11" title="11">    }</a>
+<a class="sourceLine" id="cb7-12" title="12">}</a>
+<a class="sourceLine" id="cb7-13" title="13"></a>
+<a class="sourceLine" id="cb7-14" title="14"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-15" title="15"><span class="co"> * main procedure</span></a>
+<a class="sourceLine" id="cb7-16" title="16"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-17" title="17"><span class="dt">void</span> cbToCoNet_vMain(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb7-18" title="18">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_vMain) {</a>
+<a class="sourceLine" id="cb7-19" title="19">        (*psCbHandler-&gt;pf_cbToCoNet_vMain)();</a>
+<a class="sourceLine" id="cb7-20" title="20">    }</a>
+<a class="sourceLine" id="cb7-21" title="21">}</a>
+<a class="sourceLine" id="cb7-22" title="22"></a>
+<a class="sourceLine" id="cb7-23" title="23"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-24" title="24"><span class="co"> * rx events</span></a>
+<a class="sourceLine" id="cb7-25" title="25"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-26" title="26"><span class="dt">void</span> cbToCoNet_vRxEvent(tsRxDataApp *pRx) {</a>
+<a class="sourceLine" id="cb7-27" title="27">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_vRxEvent) {</a>
+<a class="sourceLine" id="cb7-28" title="28">        (*psCbHandler-&gt;pf_cbToCoNet_vRxEvent)(pRx);</a>
+<a class="sourceLine" id="cb7-29" title="29">    }</a>
+<a class="sourceLine" id="cb7-30" title="30">}</a>
+<a class="sourceLine" id="cb7-31" title="31"></a>
+<a class="sourceLine" id="cb7-32" title="32"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-33" title="33"><span class="co"> * tx completion event</span></a>
+<a class="sourceLine" id="cb7-34" title="34"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-35" title="35"><span class="dt">void</span> cbToCoNet_vTxEvent(uint8 u8CbId, uint8 bStatus) {</a>
+<a class="sourceLine" id="cb7-36" title="36">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_vTxEvent) {</a>
+<a class="sourceLine" id="cb7-37" title="37">        (*psCbHandler-&gt;pf_cbToCoNet_vTxEvent)(u8CbId, bStatus);</a>
+<a class="sourceLine" id="cb7-38" title="38">    }</a>
+<a class="sourceLine" id="cb7-39" title="39">}</a>
+<a class="sourceLine" id="cb7-40" title="40"></a>
+<a class="sourceLine" id="cb7-41" title="41"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-42" title="42"><span class="co"> * network event</span></a>
+<a class="sourceLine" id="cb7-43" title="43"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">eEvent</span></a>
+<a class="sourceLine" id="cb7-44" title="44"><span class="co"> * </span><span class="an">@param</span><span class="co"> </span><span class="cv">u32arg</span></a>
+<a class="sourceLine" id="cb7-45" title="45"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-46" title="46"><span class="dt">void</span> cbToCoNet_vNwkEvent(teEvent eEvent, uint32 u32arg) {</a>
+<a class="sourceLine" id="cb7-47" title="47">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_vNwkEvent) {</a>
+<a class="sourceLine" id="cb7-48" title="48">        (*psCbHandler-&gt;pf_cbToCoNet_vNwkEvent)(eEvent, u32arg);</a>
+<a class="sourceLine" id="cb7-49" title="49">    }</a>
+<a class="sourceLine" id="cb7-50" title="50">}</a>
+<a class="sourceLine" id="cb7-51" title="51"></a>
+<a class="sourceLine" id="cb7-52" title="52"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-53" title="53"><span class="co"> * Hardware event processing (interrupt delayed execution)</span></a>
+<a class="sourceLine" id="cb7-54" title="54"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-55" title="55"><span class="dt">void</span> cbToCoNet_vHwEvent(uint32 u32DeviceId, uint32 u32ItemBitmap) {</a>
+<a class="sourceLine" id="cb7-56" title="56">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_vHwEvent) {</a>
+<a class="sourceLine" id="cb7-57" title="57">        (*psCbHandler-&gt;pf_cbToCoNet_vHwEvent)(u32DeviceId, u32ItemBitmap);</a>
+<a class="sourceLine" id="cb7-58" title="58">    }</a>
+<a class="sourceLine" id="cb7-59" title="59">}</a>
+<a class="sourceLine" id="cb7-60" title="60"></a>
+<a class="sourceLine" id="cb7-61" title="61"><span class="co">/**</span></a>
+<a class="sourceLine" id="cb7-62" title="62"><span class="co"> * Hardware interrupt handler</span></a>
+<a class="sourceLine" id="cb7-63" title="63"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb7-64" title="64">uint8 cbToCoNet_u8HwInt(uint32 u32DeviceId, uint32 u32ItemBitmap) {</a>
+<a class="sourceLine" id="cb7-65" title="65">    bool_t bRet = FALSE;</a>
+<a class="sourceLine" id="cb7-66" title="66">    <span class="cf">if</span> (psCbHandler &amp;&amp; psCbHandler-&gt;pf_cbToCoNet_u8HwInt) {</a>
+<a class="sourceLine" id="cb7-67" title="67">        bRet = (*psCbHandler-&gt;pf_cbToCoNet_u8HwInt)(u32DeviceId, u32ItemBitmap);</a>
+<a class="sourceLine" id="cb7-68" title="68">    }</a>
+<a class="sourceLine" id="cb7-69" title="69">    <span class="cf">return</span> bRet;</a>
+<a class="sourceLine" id="cb7-70" title="70">}</a></code></pre></div>
+</body>
+</html>

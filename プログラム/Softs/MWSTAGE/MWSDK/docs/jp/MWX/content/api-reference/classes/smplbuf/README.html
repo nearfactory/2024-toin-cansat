@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>smplbuf</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">smplbuf</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#smplbuf">smplbuf</a><ul>
+<li><a href="#宣言初期化">宣言・初期化</a></li>
+<li><a href="#初期化子リスト">初期化子リスト</a></li>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#append-push_back-pop_back">append(), push_back(), pop_back()</a></li>
+<li><a href="#empty-size-capacity">empty(), size(), capacity()</a></li>
+<li><a href="#reserve-reserve_head-redim">reserve(), reserve_head(), redim()</a></li>
+<li><a href="#operator">operator []</a></li>
+</ul></li>
+<li><a href="#mwxstreamへの出力">mwx::streamへの出力</a><ul>
+<li><a href="#演算子">&lt;&lt; 演算子</a></li>
+<li><a href="#to_stream">to_stream()</a></li>
+</ul></li>
+<li><a href="#mwxstreamでデータ生成">mwx::streamでデータ生成</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="smplbuf">smplbuf</h1>
+<p>内部が配列構造のコンテナクラスです。初期化時にバッファの最大サイズを決定しますが、その最大サイズまでの範囲で可変長の配列として振る舞います。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt; smplbuf_local</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; smplbuf_attach</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; smplbuf_heap</a></code></pre></div>
+<p><code>smplbuf</code>は要素の型<code>T</code>と<a href="../alloc.html">メモリの確保方法<code>alloc</code></a>で指定したメモリ領域に対して配列の操作を提供するコンテナクラスです。<code>alloc</code>の指定は煩雑であるため<code>using</code>を用いた別名定義が行っています。</p>
+<p>オブジェクトの宣言例です。宣言の直後に初期化用のメソッド呼び出しを行います。いずれも初期化直後の最大サイズは128バイトで、サイズは0です。必要に応じてサイズを拡張しながら使用します。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// 配列領域は、クラスメンバー変数の固定配列</span></a>
+<a class="sourceLine" id="cb2-2" title="2">smplbuf_local&lt;<span class="dt">uint8_t</span>, <span class="dv">128</span>&gt; b1;</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">// 配列領域は、すでにある領域を参照</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="dt">uint8_t</span> buf[<span class="dv">128</span>];</a>
+<a class="sourceLine" id="cb2-6" title="6">smplbuf_attach&lt;<span class="dt">uint8_t</span>&gt; b2(;</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">// 配列領域は、ヒープに確保</span></a>
+<a class="sourceLine" id="cb2-9" title="9">smplbuf_heap&lt;<span class="dt">uint8_t</span>&gt; b3;</a>
+<a class="sourceLine" id="cb2-10" title="10"></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co">// 初期化（グローバル定義の場合はsetup()で行う）</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-13" title="13">    b1.init_local();</a>
+<a class="sourceLine" id="cb2-14" title="14">    b2.attach(buf, <span class="dv">0</span>, <span class="dv">128</span>);</a>
+<a class="sourceLine" id="cb2-15" title="15">    b3.init_heap(<span class="dv">128</span>);</a>
+<a class="sourceLine" id="cb2-16" title="16">} </a>
+<a class="sourceLine" id="cb2-17" title="17"></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="co">// 処理関数内</span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="dt">void</span> some_func() {</a>
+<a class="sourceLine" id="cb2-20" title="20">    smplbuf_local&lt;<span class="dt">uint8_t</span>, <span class="dv">128</span>&gt; bl;</a>
+<a class="sourceLine" id="cb2-21" title="21">    <span class="co">// bl.init_local(); // smplbuf_localがローカル定義の場合は省略可能</span></a>
+<a class="sourceLine" id="cb2-22" title="22">    </a>
+<a class="sourceLine" id="cb2-23" title="23">    bl.push_back(<span class="ch">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb2-24" title="24">}</a></code></pre></div>
+<p>上記の<code>uint8_t</code>型に限り別名定義があります。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;</a>
+<a class="sourceLine" id="cb3-2" title="2">smplbuf_u8</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="co">// smplbuf&lt;uint8_t, alloc_local&lt;uint8_t, N&gt;&gt;</span></a>
+<a class="sourceLine" id="cb3-4" title="4"></a>
+<a class="sourceLine" id="cb3-5" title="5">smplbuf_u8_attach</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="co">// smplbuf&lt;uint8_t, alloc_attach&lt;uint8_t&gt;&gt;</span></a>
+<a class="sourceLine" id="cb3-7" title="7"></a>
+<a class="sourceLine" id="cb3-8" title="8">smplbuf_u8_heap</a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="co">// smplbuf&lt;uint8_t, alloc_heap&lt;uint8_t&gt;&gt;</span></a></code></pre></div>
+<p>通常の配列のように[]演算子などを用いて要素にアクセスできますし、イテレータを用いたアクセスも可能です。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> begin() { <span class="co">// begin()は起動時１回だけ動作する</span></a>
+<a class="sourceLine" id="cb4-2" title="2">  smplbuf_u8&lt;<span class="dv">32</span>&gt; b1;</a>
+<a class="sourceLine" id="cb4-3" title="3">  b1.reserve(<span class="dv">5</span>); <span class="co">// 5バイト分利用領域に初期化(b1[0..5]にアクセスできる)</span></a>
+<a class="sourceLine" id="cb4-4" title="4">  </a>
+<a class="sourceLine" id="cb4-5" title="5">  b1[<span class="dv">0</span>] = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb4-6" title="6">  b1[<span class="dv">1</span>] = <span class="dv">4</span>;</a>
+<a class="sourceLine" id="cb4-7" title="7">  b1[<span class="dv">2</span>] = <span class="dv">9</span>;</a>
+<a class="sourceLine" id="cb4-8" title="8">  b1[<span class="dv">3</span>] = <span class="dv">16</span>;</a>
+<a class="sourceLine" id="cb4-9" title="9">  b1[<span class="dv">4</span>] = <span class="dv">25</span>;</a>
+<a class="sourceLine" id="cb4-10" title="10">  </a>
+<a class="sourceLine" id="cb4-11" title="11">  <span class="cf">for</span>(<span class="dt">uint8_t</span> x : b1) { <span class="co">// 暗黙に .begin() .end() を用いたループ</span></a>
+<a class="sourceLine" id="cb4-12" title="12">    Serial &lt;&lt; <span class="dt">int</span>(x) &lt;&lt; <span class="st">&quot;,&quot;</span>;</a>
+<a class="sourceLine" id="cb4-13" title="13">  }</a>
+<a class="sourceLine" id="cb4-14" title="14">}</a></code></pre></div>
+<p><code>push_back()</code>メソッドを定義しています。末尾にデータを追記するタイプのアルゴリズムが使用可能になります。</p>
+<h2 id="宣言初期化">宣言・初期化</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1">smplbuf_local&lt;T,N&gt;()</a>
+<a class="sourceLine" id="cb5-2" title="2">smplbuf_local&lt;T,N&gt;::init_local()</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4">smplbuf_attach&lt;T&gt;(T* buf, <span class="dt">uint16_t</span> size, <span class="dt">uint16_t</span> N)</a>
+<a class="sourceLine" id="cb5-5" title="5">smplbuf_attach&lt;T&gt;::attach(T* buf, <span class="dt">uint16_t</span> size, <span class="dt">uint16_t</span> N)</a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7">smplbuf_heap&lt;T&gt;()</a>
+<a class="sourceLine" id="cb5-8" title="8">smplbuf_heap&lt;T&gt;::init_heap(<span class="dt">uint16_t</span> N)</a>
+<a class="sourceLine" id="cb5-9" title="9"></a>
+<a class="sourceLine" id="cb5-10" title="10"><span class="co">// 例</span></a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="co">// 内部に固定配列</span></a>
+<a class="sourceLine" id="cb5-12" title="12">smplbuf_local&lt;<span class="dt">uint8_t</span>, <span class="dv">128</span>&gt; b1;</a>
+<a class="sourceLine" id="cb5-13" title="13">b1.init_local();</a>
+<a class="sourceLine" id="cb5-14" title="14"></a>
+<a class="sourceLine" id="cb5-15" title="15"><span class="co">// すでにある配列を利用する</span></a>
+<a class="sourceLine" id="cb5-16" title="16"><span class="dt">uint8_t</span> buf[<span class="dv">128</span>];</a>
+<a class="sourceLine" id="cb5-17" title="17">smplbuf_attach&lt;<span class="dt">uint8_t</span>&gt; b2;</a>
+<a class="sourceLine" id="cb5-18" title="18">b2.attach(buf, <span class="dv">0</span>, <span class="dv">128</span>);</a>
+<a class="sourceLine" id="cb5-19" title="19"></a>
+<a class="sourceLine" id="cb5-20" title="20"><span class="co">// ヒープに確保する</span></a>
+<a class="sourceLine" id="cb5-21" title="21">smplbuf_heap&lt;<span class="dt">uint8_t</span>&gt; b3;</a>
+<a class="sourceLine" id="cb5-22" title="22">b3.init_heap(<span class="dv">128</span>); </a></code></pre></div>
+<p>型<code>T</code>でサイズ<code>N</code>のコンテナを宣言します。宣言後に初期化のメソッドを呼び出します。</p>
+<p><code>smplbuf_local</code>は、内部に固定配列により領域を確保します。コンストラクタによる初期化も可能です。</p>
+<p><code>smplbuf_attach</code>では、使用するバッファの先頭ポインタ<code>T* buf</code>と配列の初期サイズ<code>size</code>と最大サイズ<code>N</code>を指定します。コンストラクタによる初期化も可能です。</p>
+<p><code>smplbuf_heap</code>は、HEAP領域（解放は不可能だが随時確保可能なメモリ領域）にメモリを確保します。一度確保したら開放できない領域ですので通常はグローバル領域に定義します。領域確保は<code>init_heap()</code>で行います。コンストラクタによるメモリ確保はできません。必ず<code>init_heap()</code>を呼び出して利用してください。</p>
+<div class="danger">
+<p>グローバルオブジェクトを生成する場合は、コンストラクタによる初期化が行なえません。実行初期（<code>setup()</code>を推奨）に初期化関数<code>init_local()</code>,<code>attach()</code>,<code>init_heap()</code>を呼び出すようにしてください。</p>
+</div>
+<h2 id="初期化子リスト">初期化子リスト</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> in_some_func() {</a>
+<a class="sourceLine" id="cb6-2" title="2">    smplbuf_local&lt;<span class="dt">uint8_t</span>, <span class="dv">5</span>&gt; b1;</a>
+<a class="sourceLine" id="cb6-3" title="3">    b1.init_local();</a>
+<a class="sourceLine" id="cb6-4" title="4">    </a>
+<a class="sourceLine" id="cb6-5" title="5">    b1 = { <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span> };</a>
+<a class="sourceLine" id="cb6-6" title="6">    </a>
+<a class="sourceLine" id="cb6-7" title="7">    smplbuf_local&lt;<span class="dt">uint8_t</span>, <span class="dv">5</span>&gt; b2{<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>};</a>
+<a class="sourceLine" id="cb6-8" title="8">}</a></code></pre></div>
+<p>初期化子リスト（イニシャライザリスト）<code>{ ... }</code> によるメンバーの初期化をできます。<code>smplbuf_local</code>のローカル宣言でのコンストラクタでの利用を除き、初期化のメソッドを呼び出した後に有効です。</p>
+<ul>
+<li>代入演算子の右辺値 (<code>smplbuf_local</code>, <code>smplbuf_attach</code>, <code>smplbuf_heap</code>)</li>
+<li>コンストラクタ(<code>smplbuf_local</code>のローカル宣言、グローバル宣言は不可)</li>
+</ul>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="append-push_back-pop_back">append(), push_back(), pop_back()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> append(T&amp;&amp; c)</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="kw">inline</span> <span class="dt">bool</span> append(<span class="at">const</span> T&amp; c)</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="kw">inline</span> <span class="dt">void</span> push_back(T&amp;&amp; c)</a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="kw">inline</span> <span class="dt">void</span> push_back(<span class="at">const</span> T&amp; c)</a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="kw">inline</span> <span class="dt">void</span> pop_back()</a></code></pre></div>
+<p>末尾にメンバー<code>c</code>を追加します。<code>append()</code>の戻り値は<code>bool</code>で、バッファが一杯で追加できないときに<code>false</code>が返ります。</p>
+<p><code>pop_back()</code>は末尾のエントリを抹消します。ただしエントリのクリアはしません。</p>
+<h3 id="empty-size-capacity">empty(), size(), capacity()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> empty()</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="kw">inline</span> <span class="dt">bool</span> is_end()</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="kw">inline</span> <span class="dt">uint16_t</span> size()</a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="kw">inline</span> <span class="dt">uint16_t</span> capacity()</a></code></pre></div>
+<p><code>empty()</code>は配列に要素が格納されていない場合に<code>true</code>を戻します。<code>is_end()</code>は反対に配列サイズ一杯まで要素が格納されているときに<code>true</code>を戻します。</p>
+<p><code>size()</code>は配列の要素数を返します。</p>
+<p><code>capacity()</code>は配列の最大格納数を返します。</p>
+<h3 id="reserve-reserve_head-redim">reserve(), reserve_head(), redim()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> reserve(<span class="dt">uint16_t</span> len)</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="kw">inline</span> <span class="dt">void</span> reserve_head(<span class="dt">uint16_t</span> len)</a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="kw">inline</span> <span class="dt">void</span> redim(<span class="dt">uint16_t</span> len)</a></code></pre></div>
+<p><code>reserve()</code>は配列のサイズを拡張します。配列が格納されていない領域はデフォルトで初期化されます。</p>
+<p><code>reserve_hear()</code>は配列の先頭部に指定したサイズの領域を確保します。コンテナオブジェクトからは参照できない領域となります。例えばパケットペイロードのヘッダ部分を読み飛ばした部分配列にアクセスするようなコンテナとして利用できるようにします。確保した領域を戻しすべてアクセスできるようにコンテナを戻すには確保時と同じ負の値を与えます。</p>
+<p><code>redim()</code>は利用領域のサイズを変更します。<code>reserve()</code>と違い、未使用領域の初期化を行いません。</p>
+<h3 id="operator">operator []</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">inline</span> T&amp; <span class="kw">operator</span> [] (<span class="dt">int</span> i) </a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="kw">inline</span> T <span class="kw">operator</span> [] (<span class="dt">int</span> i) <span class="at">const</span></a></code></pre></div>
+<p>要素にアクセスします。</p>
+<p><code>i</code>に負の値を与えるとバッファー末尾からの要素となります。<code>-1</code>の場合は末尾の要素、<code>-2</code>は末尾から一つ手前となります。</p>
+<h2 id="mwxstreamへの出力">mwx::streamへの出力</h2>
+<p><code>uint8_t</code>型の配列オブジェクト(<code>smplbuf&lt;uint8_t, *&gt;</code>)は、<code>mwx::stream</code>の派生オブジェクトに対して、そのまま出力できます。</p>
+<h3 id="演算子">&lt;&lt; 演算子</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">template</span> &lt;<span class="kw">class</span> L_STRM, <span class="kw">class</span> AL&gt;</a>
+<a class="sourceLine" id="cb11-2" title="2">    mwx::stream&lt;L_STRM&gt;&amp; <span class="kw">operator</span> &lt;&lt; (</a>
+<a class="sourceLine" id="cb11-3" title="3">            mwx::stream&lt;L_STRM&gt;&amp; lhs, mwx::_smplbuf&lt;<span class="dt">uint8_t</span>, AL&gt;&amp; rhs) </a>
+<a class="sourceLine" id="cb11-4" title="4">            </a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="co">//例</span></a>
+<a class="sourceLine" id="cb11-6" title="6">smplbuf_u8&lt;<span class="dv">128</span>&gt; buf;</a>
+<a class="sourceLine" id="cb11-7" title="7">buf.push_back(<span class="ch">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb11-8" title="8">buf.push_back(<span class="ch">&#39;b&#39;</span>);</a>
+<a class="sourceLine" id="cb11-9" title="9">buf.push_back(<span class="ch">&#39;c&#39;</span>);</a>
+<a class="sourceLine" id="cb11-10" title="10"></a>
+<a class="sourceLine" id="cb11-11" title="11">Serial &lt;&lt; buf;</a>
+<a class="sourceLine" id="cb11-12" title="12"><span class="co">// 出力: abc</span></a></code></pre></div>
+<p><code>Serial</code>など<code>mwx::stream</code>の派生オブジェクトに対して、バイト列を出力します。</p>
+<h3 id="to_stream">to_stream()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">inline</span> <span class="bu">std::</span>pair&lt;T*, T*&gt; to_stream()</a>
+<a class="sourceLine" id="cb12-2" title="2"></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="co">//例</span></a>
+<a class="sourceLine" id="cb12-4" title="4">smplbuf_u8&lt;<span class="dv">128</span>&gt; buf;</a>
+<a class="sourceLine" id="cb12-5" title="5">buf.push_back(<span class="ch">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb12-6" title="6">buf.push_back(<span class="ch">&#39;b&#39;</span>);</a>
+<a class="sourceLine" id="cb12-7" title="7">buf.push_back(<span class="ch">&#39;c&#39;</span>);</a>
+<a class="sourceLine" id="cb12-8" title="8"></a>
+<a class="sourceLine" id="cb12-9" title="9">Serial &lt;&lt; buf.to_stream();</a>
+<a class="sourceLine" id="cb12-10" title="10"><span class="co">// 出力:0123</span></a></code></pre></div>
+<p>ストリームへの出力目的で利用します。&lt;&lt;演算子の実装に用いられています。</p>
+<h2 id="mwxstreamでデータ生成">mwx::streamでデータ生成</h2>
+<p><code>mwx::stream</code>では<code>&lt;&lt;</code>演算子や<code>printfmt()</code>メソッドと行ったストリームに対してバイト列を出力するための関数・演算子が定義されています。<code>uint8_t</code>型のsmplbufの配列を出力先と見立ててストリーム出力手続きを行えます。</p>
+<p>方法は２種類あります。</p>
+<ul>
+<li><a href="get_stream_helper.html"><code>.get_stream_helper()</code></a>により生成されるヘルパーオブジェクトを利用する。</li>
+<li><code>mwx::stream</code>を<a href="smplbuf_strm_u8.html">継承したsmplbufクラス</a>を利用する。</li>
+</ul>
+</body>
+</html>

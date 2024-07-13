@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Installing VSCode</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Installing VSCode</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#installing-vscode">Installing VSCode</a><ul>
+<li><a href="#installing-vscode-1">Installing VSCode</a><ul>
+<li><a href="#special-note-for-each-os">Special note for each OS</a></li>
+<li><a href="#installing-plug-ins">Installing plug-ins</a></li>
+</ul></li>
+<li><a href="#notes">Notes</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="installing-vscode">Installing VSCode</h1>
+<p>VisualStudio Code (VSCode) is recommended to make Act (source code) writing easier. The attached Act contains a file that has been configured to ensure that the code is interpreted properly in VSCode.</p>
+<div class="warning">
+<p>VSCode reads source files and header files and interprets the source code, thus providing function definition information and function and method name completion to help you write source code. The MWX library requires more header files to be loaded than the C library. In comparison to C development, the MWX library requires more header files to be loaded and the editor may be slower in some environments.</p>
+</div>
+<p>The project settings of VSCode requires some information, such as library source code location, to analyse source codes. These inforamtion are passed by TWELITE STAGE app as environmental variable when launching VSCode. Therefore, application instance of VSCode should not be present when launching from TWELITE STAGE app, otherwise VSCode will not refer to these environmental values.</p>
+<h2 id="installing-vscode-1">Installing VSCode</h2>
+<div class="danger">
+<p>Please note that this support does not cover questions about how to install or use VSCode. Please refer to the information available in the public domain.</p>
+<p>Depending on your environment, you may need to configure security settings or other settings in order to install the software. Please check with your system administrator whether installation is possible, and refer to the distributor or general information for instructions.</p>
+</div>
+<p>VSCode allows you to do the following:</p>
+<ul>
+<li>Editing the source code</li>
+<li>The IntelliSense based on source code interpretation (*not all definitions can be guaranteed to be interpreted correctly)</li>
+</ul>
+<p>VSCode can be downloaded from the link below.</p>
+<div class="pageref">
+<a target=_blank href="https://code.visualstudio.com">https://code.visualstudio.com</a>
+</div>
+<h3 id="special-note-for-each-os">Special note for each OS</h3>
+<p>The <code>code</code> command must be enabled to invoke VSCode from TWELITE STAGE.</p>
+<p>The following information is from code.visualstudio.com</p>
+<ul>
+<li><a target=_blank href="https://code.visualstudio.com/docs/setup/mac">macOS</a> - PATH must be set so that the <code>code</code> command can be executed.</li>
+<li><a target=_blank href="https://code.visualstudio.com/docs/setup/windows">Windows</a></li>
+<li><a target=_blank href="https://code.visualstudio.com/docs/setup/linux">Linux</a></li>
+</ul>
+<h3 id="installing-plug-ins">Installing plug-ins</h3>
+<p>To enable Visual Studio Code to interpret C/C++ language descriptions, install a plugin.</p>
+<ul>
+<li>C/C++ for Visual Studio Code</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<div class="warning">
+<p>The MWX library examples include a <code>.vscode</code> definition. This definition uses the MWSDK_ROOT environment variable to identify the source code of the library (under <code>{MWSDK_ROOT}/TWENET/current</code>).</p>
+<p>When launching VSCode from TWELITE STAGE, those settings such as <code>MWSDK_ROOT</code> will be setup automatically. In some cases, such as when you have already started VSCode, the settings may not be reflected.</p>
+</div>
+<div class="warning">
+<p>VSCode’s interpretation of source code is not always the same as the compiler’s interpretation. Also, depending on how the source code is edited, the interpretation may be more incomplete.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Environment (OS, etc.)</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Environment (OS, etc.)</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#environment-os-etc.">Environment (OS, etc.)</a><ul>
+<li><a href="#windows1011">Windows10,11</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#macos">macOS</a></li>
+<li><a href="#differences-by-build-environment">Differences by build environment</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="environment-os-etc.">Environment (OS, etc.)</h1>
+<div class="warning">
+<p>In order to create a development environment, you need to install the software and agree to the license agreement. In addition, you may need to configure security settings on your PC or workstation.</p>
+<ul>
+<li>Although we take great care when distributing the software, we ask that you also check for viruses.</li>
+<li>Please check with the administrator of your environment regarding your security approach and operations (e.g., whether or not to install external applications).</li>
+</ul>
+<p>In addition, the installation and operation of the development environment may require the intervention and configuration of the operating system (e.g., running an application whose developer is unknown; many of the development environments and tools introduced here do not have a built-in mechanism to prove the origin of the application) Please refer to the general information on how to configure.</p>
+</div>
+<p>To write an application using the MWX library, you will need the following:</p>
+<ul>
+<li>MWSDK(Software Development Environment)</li>
+<li>An editor for development (Microsoft’s VisualStudio Code will be introduced)</li>
+</ul>
+<h3 id="windows1011">Windows10,11</h3>
+<p>Compiler toolchains, etc., are relatively less dependent on the environment, so they can be expected to work in many environments, but we recommend the Windows 10 version that is currently supported. If your system does not work due to differences in the operating environment, please prepare a separate environment by referring to the environment we have confirmed.</p>
+<p>The following is the version we are using for development.</p>
+<ul>
+<li>Windows11 21H2 (Visual Studio 2019)</li>
+<li>FTDI driver must be running (to run MONOSTICK, TWELITE R)</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<p>Compiler toolchains, for example, are relatively less dependent on the environment, so they can be expected to work in many environments, but we recommend distributions that are currently supported. If your system does not work due to differences in the operating environment, please prepare a separate environment by referring to the environment that we have confirmed.</p>
+<p>The following is the version we are using for development.</p>
+<ul>
+<li>Ubuntu 18.04 LTS 64bit</li>
+<li>Ubuntu 20.04 LTS 64bit</li>
+</ul>
+<p>32bit systems are not supported.</p>
+<h3 id="macos">macOS</h3>
+<p>Compiler toolchains, for example, are relatively less dependent on the environment, so they can be expected to work in many environments, but we recommend distributions that are currently supported. If your system does not work due to differences in the operating environment, please prepare a separate environment by referring to the environment that we have confirmed.</p>
+<p>The following is the version we are using for development.</p>
+<ul>
+<li>macOS 10.14 (Mojave, Intel)</li>
+<li>macOS 12.4 (Monterey, Apple Silicon)</li>
+</ul>
+<p>About Visual Studio Code and other development environments</p>
+<p>For information on how to run and use the development environment, please refer to the information of its developer or community.</p>
+<div class="info">
+<p>The use of Visual Studio Code (VSCode) is recommended for efficient code writing.</p>
+<p>The MWX library requires more PC resources to interpret the code on VSCode, etc., since there are more header files to read compared to C language development.</p>
+</div>
+<h2 id="differences-by-build-environment">Differences by build environment</h2>
+<div class="warning">
+<p>The build results for Linux/macOS are different from the results for Windows 10. As far as we know, there is no difference in the normal operation, but the binary size tends to be a few percent larger, especially since the LTO of gcc is disabled.</p>
+<p>If you have any doubts about the operation, be sure to run the build on Windows 10 and confirm that it reproduces before contacting us.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#toconet_nwk_btx">ToCoNet_Nwk_bTx()</a><ul>
+<li><a href="#解説">解説</a><ul>
+<li><a href="#宛先について">宛先について</a></li>
+</ul></li>
+<li><a href="#引数">引数</a></li>
+<li><a href="#戻り値">戻り値</a></li>
+<li><a href="#サンプル">サンプル</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="toconet_nwk_btx">ToCoNet_Nwk_bTx()</h1>
+<h2 id="解説">解説</h2>
+<p>中継ネットでの無線パケットの送信要求を行う。</p>
+<div class="warning">
+<p>配送に関する詳細は <a href="../structure/tstxdataapp-netto.html"><code>tsTxDataApp</code></a> 構造体の解説を参照してください。</p>
+</div>
+<h3 id="宛先について">宛先について</h3>
+<p>配送先は２種類選択できます。</p>
+<div class="info">
+<p><code>TOCONET_NWK_ADDR_NEIGHBOUR_ABOVE</code> を指定することで、近隣の親機、中継器に直接伝達されますが、この時の子機と親機、中継器間の LQI を集計することで、どの親機、中継器が子機に近い位置にいるかどうかを判定できます。</p>
+<p><em>LQIと距離の精度は高くなく、１m以内といったごく近い位置にいるか、それ以外かを弁別できる程度です。</em></p>
+</div>
+<table>
+<colgroup>
+<col style="width: 33%"></col>
+<col style="width: 66%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>宛先アドレス</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>TOCONET_NWK_ADDR_NEIGHBOUR_ABOVE</code></td>
+<td>電波到達可能な親機または中継器（複数あればその全て）に直接伝達する。</td>
+</tr>
+<tr class="even">
+<td><code>TOCONET_NWK_ADDR_PARENT</code></td>
+<td>親機宛に配送する。（中継器がパケットを受信しても <code>ToCoNet_vRxEvent()</code> によりパケットの受信を知ることは出来ない)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="引数">引数</h2>
+<table>
+<thead>
+<tr class="header">
+<th>型</th>
+<th>名前</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../structure/tstoconet_nwk_context.html"><code>tsToCoNet_Nwk_Context</code></a><code>*</code></td>
+<td>pContextNwk</td>
+<td>中継ネットの内部情報を管理する構造体。</td>
+</tr>
+<tr class="even">
+<td><a href="../structure/tstxdataapp-netto.html"><code>tsTxDataApp</code></a><code>*</code></td>
+<td>sTx</td>
+<td>送信データを格納した構造体。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="戻り値">戻り値</h2>
+<table>
+<thead>
+<tr class="header">
+<th>型</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bool_t</td>
+<td><code>TRUE</code>: 要求が受け付けられた、<code>FALSE</code>: 要求が受け付けられなかった</td>
+</tr>
+</tbody>
+</table>
+<h2 id="サンプル">サンプル</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">static</span> tsToCoNet_NwkLyTr_Config sNwkLayerTreeConfig;</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="dt">static</span> tsToCoNet_Nwk_Context* pContextNwk;</a>
+<a class="sourceLine" id="cb1-3" title="3">...</a>
+<a class="sourceLine" id="cb1-4" title="4">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-5" title="5">        <span class="co">// </span></a>
+<a class="sourceLine" id="cb1-6" title="6">        tsTxDataApp sTx;</a>
+<a class="sourceLine" id="cb1-7" title="7">        memset(&amp;sTx, <span class="dv">0</span>, <span class="kw">sizeof</span>(sTx)); <span class="co">// 必ず０クリアしてから使う！</span></a>
+<a class="sourceLine" id="cb1-8" title="8">        uint8 *q =  sTx.auData;</a>
+<a class="sourceLine" id="cb1-9" title="9">    </a>
+<a class="sourceLine" id="cb1-10" title="10">        sTx.u32SrcAddr = ToCoNet_u32GetSerial();</a>
+<a class="sourceLine" id="cb1-11" title="11">    </a>
+<a class="sourceLine" id="cb1-12" title="12">        <span class="cf">if</span> (IS_APPCONF_OPT_TO_ROUTER()) {</a>
+<a class="sourceLine" id="cb1-13" title="13">            <span class="co">// ルータがアプリ中で一度受信して、ルータから親機に再配送</span></a>
+<a class="sourceLine" id="cb1-14" title="14">            sTx.u32DstAddr = TOCONET_NWK_ADDR_NEIGHBOUR_ABOVE;</a>
+<a class="sourceLine" id="cb1-15" title="15">        } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-16" title="16">            <span class="co">// ルータがアプリ中では受信せず、単純に中継する</span></a>
+<a class="sourceLine" id="cb1-17" title="17">            sTx.u32DstAddr = TOCONET_NWK_ADDR_PARENT;</a>
+<a class="sourceLine" id="cb1-18" title="18">        }</a>
+<a class="sourceLine" id="cb1-19" title="19">    </a>
+<a class="sourceLine" id="cb1-20" title="20">        <span class="co">// ペイロードの準備</span></a>
+<a class="sourceLine" id="cb1-21" title="21">        S_OCTET(<span class="ch">&#39;T&#39;</span>);</a>
+<a class="sourceLine" id="cb1-22" title="22">        S_OCTET(sAppData.sFlash.sData.u8id);</a>
+<a class="sourceLine" id="cb1-23" title="23">        S_BE_WORD(sAppData.u16frame_count);     </a>
+<a class="sourceLine" id="cb1-24" title="24">​</a>
+<a class="sourceLine" id="cb1-25" title="25">        <span class="co">//  センサ固有のデータ</span></a>
+<a class="sourceLine" id="cb1-26" title="26">        memcpy(q,pu8Data,u8Len);</a>
+<a class="sourceLine" id="cb1-27" title="27">        q += u8Len;</a>
+<a class="sourceLine" id="cb1-28" title="28">    </a>
+<a class="sourceLine" id="cb1-29" title="29">        sTx.u8Cmd = <span class="dv">0</span>; <span class="co">// 0..7 の値を取る。パケットの種別を分けたい時に使用する</span></a>
+<a class="sourceLine" id="cb1-30" title="30">        sTx.u8Len = q - sTx.auData; <span class="co">// パケットのサイズ</span></a>
+<a class="sourceLine" id="cb1-31" title="31">        sTx.u8CbId = sAppData.u16frame_count &amp; <span class="bn">0xFF</span>; <span class="co">// TxEvent で通知される番号、送信先には通知されない</span></a>
+<a class="sourceLine" id="cb1-32" title="32">        sTx.u8Seq = sAppData.u16frame_count &amp; <span class="bn">0xFF</span>; <span class="co">// シーケンス番号(送信先に通知される)</span></a>
+<a class="sourceLine" id="cb1-33" title="33">        sTx.u8Retry = sAppData.u8Retry;</a>
+<a class="sourceLine" id="cb1-34" title="34">​</a>
+<a class="sourceLine" id="cb1-35" title="35">        <span class="cf">if</span> (ToCoNet_Nwk_bTx(pNwk, &amp;sTx)) {</a>
+<a class="sourceLine" id="cb1-36" title="36">            ToCoNet_Event_SetState(pEv, E_STATE_APP_WAIT_TX);</a>
+<a class="sourceLine" id="cb1-37" title="37">        } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-38" title="38">            <span class="co">// ...失敗した（スリープ処理)</span></a>
+<a class="sourceLine" id="cb1-39" title="39">            ToCoNet_Event_SetState(pEv, E_STATE_SLEEP);</a>
+<a class="sourceLine" id="cb1-40" title="40">        }</a></code></pre></div>
+</body>
+</html>

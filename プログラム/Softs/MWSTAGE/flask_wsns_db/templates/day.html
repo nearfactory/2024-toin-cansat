@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>センサーノード{{sid}} - {{desc}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="node">{{sid}} {{year}}/{{month}}</div>
+    <div class="desc">{{desc}}</div>
+    <p>i32sid={{i32sid}} year={{year}} month={{month}} data={{data}}</p>
+    <div>
+        <table>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{year}}/{{month}}/{{item[0]}}</td>
+                    <td>
+                        <a href="/{{sid}}/{{year}}/{{month}}/{{item[0]}}/l">１日分のセンサーデータを表で見る</a>
+                    </td>    
+                    <td>
+                        <a href="/{{sid}}/{{year}}/{{month}}/{{item[0]}}/g">１日分のセンサーデータをグラフで見る</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="/">一覧に戻る</a>
+</body>
+</html>

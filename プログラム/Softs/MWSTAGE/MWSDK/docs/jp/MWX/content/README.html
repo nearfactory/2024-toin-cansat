@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>The MWX Library</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The MWX Library</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#the-mwx-library">The MWX Library</a></li>
+</ul>
+</nav>
+<h1 id="the-mwx-library">The MWX Library</h1>
+<div class="success">
+<p><a target=_blank href="https://twelite.gitbook.io/general/about_documents">資料の取り扱いについて</a>をご参照ください。 お気付きの点がありましたら、当サポート窓口にご連絡いただければ幸いです。</p>
+</div>
+<div class="danger">
+<p>このページには開発中の情報が含まれます。本ページの内容は、まだ公開ソースコードに反映されていない場合があります。</p>
+</div>
+<p>MWX ライブラリは、TWELITE 無線モジュールのコード表記を簡素化することを目的としています。MWXで作成されたプログラムを<strong>アクト</strong> act と呼びます。アクトにはループによる記述と、イベントによる記述（<strong>ビヘイビア</strong> behavior と呼びます）の二種類があります。</p>
+<p>本ページではアクトの主な特徴を紹介します。</p>
+<ul>
+<li>ループによる記述 (<code>setup(), loop()</code>)。小規模な機能を記述するのに向いています。</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="at">const</span> <span class="dt">uint8_t</span> PIN_LED = <span class="dv">5</span>;</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-5" title="5">  pinMode(PIN_LED, OUTPUT);</a>
+<a class="sourceLine" id="cb1-6" title="6">}</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb1-9" title="9">  <span class="cf">if</span> (TickTimer.available()) {</a>
+<a class="sourceLine" id="cb1-10" title="10">    uint32 t_now = millis();</a>
+<a class="sourceLine" id="cb1-11" title="11">    </a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="co">// blink LED every 1024ms</span></a>
+<a class="sourceLine" id="cb1-13" title="13">    digitalWrite(PIN_LED, (t_now &gt;&gt; <span class="dv">10</span>) &amp; <span class="dv">1</span> ? HIGH : LOW);</a>
+<a class="sourceLine" id="cb1-14" title="14">  }</a>
+<a class="sourceLine" id="cb1-15" title="15">}   </a></code></pre></div>
+<ul>
+<li>イベントドリブンのアプリケーション記述。各種イベント・割り込みハンドラの定義、アプリケーションの複雑な振る舞いを記述するのに向いたステートマシンをクラス内に定義して見通しの良いコードを記述できます。この記述を<strong>ビヘイビア</strong>と呼びます。</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// myApp.hpp</span></a>
+<a class="sourceLine" id="cb2-2" title="2">...</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="kw">class</span> myApp : MWX_APPDEFS_CRTP(myApp) {</a>
+<a class="sourceLine" id="cb2-4" title="4">...</a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="co">// main loop</span></a>
+<a class="sourceLine" id="cb2-7" title="7">  }</a>
+<a class="sourceLine" id="cb2-8" title="8">  </a>
+<a class="sourceLine" id="cb2-9" title="9">  <span class="dt">void</span> receive(mwx::packet_rx&amp; rx) {</a>
+<a class="sourceLine" id="cb2-10" title="10">    <span class="co">// on receive</span></a>
+<a class="sourceLine" id="cb2-11" title="11">  }</a>
+<a class="sourceLine" id="cb2-12" title="12">};</a>
+<a class="sourceLine" id="cb2-13" title="13"></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co">// myApp.cpp</span></a>
+<a class="sourceLine" id="cb2-15" title="15">...</a>
+<a class="sourceLine" id="cb2-16" title="16">MWX_DIO_EVENT(<span class="dv">12</span>, <span class="dt">uint32_t</span> arg) {</a>
+<a class="sourceLine" id="cb2-17" title="17">        <span class="co">// on event from DIO12</span></a>
+<a class="sourceLine" id="cb2-18" title="18">}</a></code></pre></div>
+<ul>
+<li>ペリフェラルの手続きを簡素化。よく使われる UART, I2C, SPI, ADC, DIO, タイマー, パルスカウンタを取り扱うクラスオブジェクトを定義しています。</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="cf">while</span>(Serial.available() { </a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="kw">auto</span> x = Serial.read(); ... } <span class="co">// serial message</span></a>
+<a class="sourceLine" id="cb3-4" title="4">  <span class="cf">if</span> (Analogue.available() {</a>
+<a class="sourceLine" id="cb3-5" title="5">    <span class="kw">auto</span> x = Analogue.read(...); } <span class="co">// adc values</span></a>
+<a class="sourceLine" id="cb3-6" title="6">  <span class="cf">if</span> (Buttons.available() { </a>
+<a class="sourceLine" id="cb3-7" title="7">    Buttons.read(...); } <span class="co">// DIO changes</span></a>
+<a class="sourceLine" id="cb3-8" title="8">  <span class="cf">if</span> (the_twelite.receiver.available()) { </a>
+<a class="sourceLine" id="cb3-9" title="9">    <span class="kw">auto</span>&amp;&amp; rx = the_twelite.receiver.read(); } <span class="co">// on rx packet</span></a>
+<a class="sourceLine" id="cb3-10" title="10">}</a></code></pre></div>
+<ul>
+<li>シンプルな中継ネットワークを定義。この中継ネットワークは TWELITE 標準アプリケーションと同等の実装で、個体アドレスの管理は 8bit の論理IDで行うこと、ネットワーク構築のための通信を行わないため電源投入後すぐにネットワーク宛に無線パケットを送ることができる点が特徴です。</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a>
+<a class="sourceLine" id="cb4-3" title="3"></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb4-5" title="5">  ...</a>
+<a class="sourceLine" id="cb4-6" title="6">  <span class="kw">auto</span>&amp;&amp; nwksmpl = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb4-7" title="7">    nwksmpl &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>) </a>
+<a class="sourceLine" id="cb4-8" title="8">               <span class="co">// set Logical ID. (0xFE means a child device with no ID)</span></a>
+<a class="sourceLine" id="cb4-9" title="9">            &lt;&lt; NWK_SIMPLE::repeat_max(<span class="dv">3</span>);</a>
+<a class="sourceLine" id="cb4-10" title="10">               <span class="co">// can repeat a packet up to three times.</span></a>
+<a class="sourceLine" id="cb4-11" title="11">}</a>
+<a class="sourceLine" id="cb4-12" title="12"></a>
+<a class="sourceLine" id="cb4-13" title="13"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb4-14" title="14">  ...</a>
+<a class="sourceLine" id="cb4-15" title="15">  vTransmit();</a>
+<a class="sourceLine" id="cb4-16" title="16">  ...</a>
+<a class="sourceLine" id="cb4-17" title="17">}</a>
+<a class="sourceLine" id="cb4-18" title="18"></a>
+<a class="sourceLine" id="cb4-19" title="19"><span class="dt">void</span> vTransmit() {</a>
+<a class="sourceLine" id="cb4-20" title="20">  <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt =</a>
+<a class="sourceLine" id="cb4-21" title="21">    the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet(); </a>
+<a class="sourceLine" id="cb4-22" title="22">  pkt &lt;&lt; tx_addr(<span class="bn">0x00</span>)  <span class="co">// to parent </span></a>
+<a class="sourceLine" id="cb4-23" title="23">        &lt;&lt; tx_retry(<span class="bn">0x3</span>); <span class="co">// set retry</span></a>
+<a class="sourceLine" id="cb4-24" title="24">    </a>
+<a class="sourceLine" id="cb4-25" title="25">    pack_bytes(pkt.get_payload() <span class="co">// prepare payload data</span></a>
+<a class="sourceLine" id="cb4-26" title="26">        , <span class="dt">uint8_t</span>(<span class="bn">0x01</span>)</a>
+<a class="sourceLine" id="cb4-27" title="27">        , <span class="dt">uint16_t</span>(analogRead(PIN_ANALOGUE::A1))</a>
+<a class="sourceLine" id="cb4-28" title="28">        , <span class="dt">uint16_t</span>(analogRead_mv(PIN_ANALOGUE::VCC)));</a>
+<a class="sourceLine" id="cb4-29" title="29">    </a>
+<a class="sourceLine" id="cb4-30" title="30">    pkt.transmit(); <span class="co">// transmit!</span></a>
+<a class="sourceLine" id="cb4-31" title="31">}</a></code></pre></div>
+<div class="info">
+<p>TWELITE 標準アプリケーションとのパケットの相互通信はできませんが、以下の点で自由度が上がっています。</p>
+<ul>
+<li>論理IDは 0 が親機である点は同様ですが、子機アドレスとして 0x01..0xEF を利用できるため、識別数を 200 以上とすることができます。</li>
+<li>原則３回までとしていた中継回数について、最大数を64回までを設定できるようにしています。（※ パケットが遠回りして一定時間経過後に戻ってきた場合、重複パケットの管理テーブルがクリアされ中継済みのパケットであっても、再中継が発生する場合があります。中継回数を大きくする設定は注意してください）</li>
+</ul>
+</div>
+<ul>
+<li>PAL や MONOSTICK 向けのボード定義。ボード上のセンサーなどを容易に取り扱えます。</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="pp">#include </span><span class="im">&lt;PAL_AMB&gt;</span><span class="pp"> </span><span class="co">// include the board support of PAL_AMB</span></a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb5-5" title="5">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;(); <span class="co">// use PAL AMB</span></a>
+<a class="sourceLine" id="cb5-6" title="6">    <span class="dt">uint8_t</span> u8dip = brd.get_DIP_SW();   <span class="co">// check DIP s/w status</span></a>
+<a class="sourceLine" id="cb5-7" title="7">    brd.set_led(LED_TIMER::BLINK, <span class="dv">100</span>); <span class="co">// LED switchs on/off every 100ms</span></a>
+<a class="sourceLine" id="cb5-8" title="8">    ...</a>
+<a class="sourceLine" id="cb5-9" title="9">    </a>
+<a class="sourceLine" id="cb5-10" title="10">    <span class="co">// start capture of sensors</span></a>
+<a class="sourceLine" id="cb5-11" title="11">    brd.sns_SHTC3.begin();</a>
+<a class="sourceLine" id="cb5-12" title="12">}</a>
+<a class="sourceLine" id="cb5-13" title="13"></a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb5-15" title="15">    <span class="cf">if</span> (TickTime.available()) { <span class="co">// check every ms</span></a>
+<a class="sourceLine" id="cb5-16" title="16">        <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb5-17" title="17"></a>
+<a class="sourceLine" id="cb5-18" title="18">        <span class="cf">if</span> (brd.sns_LTR308ALS.available()) {</a>
+<a class="sourceLine" id="cb5-19" title="19">          Serial &lt;&lt; brd.sns_SHTC3..get_temp();</a>
+<a class="sourceLine" id="cb5-20" title="20">        } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb5-21" title="21">          <span class="co">// notify sensor that 1ms passed.</span></a>
+<a class="sourceLine" id="cb5-22" title="22">            brd.sns_SHTC3.process_ev(E_EVENT_TICK_TIMER);</a>
+<a class="sourceLine" id="cb5-23" title="23">        }</a>
+<a class="sourceLine" id="cb5-24" title="24">    }</a>
+<a class="sourceLine" id="cb5-25" title="25">}</a></code></pre></div>
+</body>
+</html>

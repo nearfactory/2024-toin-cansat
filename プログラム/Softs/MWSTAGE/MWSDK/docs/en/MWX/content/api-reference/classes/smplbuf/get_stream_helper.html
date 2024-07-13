@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>.get_stream_helper()</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">.get_stream_helper()</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#get_stream_helper">.get_stream_helper()</a></li>
+</ul>
+</nav>
+<h1 id="get_stream_helper">.get_stream_helper()</h1>
+<p>Operators and methods by <a href="../twe-stream/README.html"><code>mwx::stream</code></a> via a <a href="../twe-stream/stream_helper.html">stream_helper</a> <a href="../twe-stream/stream_helper.html">helper object</a> that references a smplbuf array of type <code>uint8_t</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1">smplbuf_u8&lt;<span class="dv">32</span>&gt; b;</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">auto</span>&amp;&amp; bs = b.get_stream_helper(); <span class="co">// helper object</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">// Data String Generation</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="dt">uint8_t</span> FOURCHARS[]={<span class="ch">&#39;A&#39;</span>, <span class="ch">&#39;B&#39;</span>, <span class="ch">&#39;C&#39;</span>, <span class="ch">&#39;D&#39;</span>};</a>
+<a class="sourceLine" id="cb1-6" title="6">bs &lt;&lt; FOURCHARS;</a>
+<a class="sourceLine" id="cb1-7" title="7">bs &lt;&lt; <span class="ch">&#39;;&#39;</span>;</a>
+<a class="sourceLine" id="cb1-8" title="8">bs &lt;&lt; <span class="dt">uint32_t</span>(<span class="bn">0x30313233</span>); <span class="co">// &quot;0123&quot;</span></a>
+<a class="sourceLine" id="cb1-9" title="9">bs &lt;&lt; format(<span class="st">&quot;;</span><span class="sc">%d</span><span class="st">&quot;</span>, <span class="dv">99</span>);</a>
+<a class="sourceLine" id="cb1-10" title="10"></a>
+<a class="sourceLine" id="cb1-11" title="11">Serial &lt;&lt; b &lt;&lt; crlf; <span class="co">// Output to Serial via smplbuf_u8&lt;32&gt; class</span></a>
+<a class="sourceLine" id="cb1-12" title="12"></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="co">//Result: ABCD;0123;99</span></a></code></pre></div>
+<p>Helper object type names are resolved by <code>auto&amp;&amp;</code> because they are long. The interfaces defined in <code>mwx::stream</code>, such as <code>&lt;&lt;</code> operator, can be used for this object.</p>
+<p>The generated helper object <code>bs</code> starts reading/writing from the beginning of the main array <code>b</code> when it is created. If it is at the end of the array, data is added by <code>append()</code>. Each time a read/write operation is performed, the position is moved to the next one.</p>
+<p>Helper functions can use the <code>&gt;&gt;</code> operator for reading.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">//..Continuation of the above example</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">// ABCD;0123;99 &lt;- stored in b</span></a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">//Variable for storing read data</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="dt">uint8_t</span> FOURCHARS_READ[<span class="dv">4</span>];</a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="dt">uint32_t</span> u32val_read;</a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="dt">uint8_t</span> c_read[<span class="dv">2</span>];</a>
+<a class="sourceLine" id="cb2-8" title="8"></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">// Read out by operator&gt;&gt;</span></a>
+<a class="sourceLine" id="cb2-10" title="10">bs.rewind();                <span class="co">//Rewind the position to the beginning.</span></a>
+<a class="sourceLine" id="cb2-11" title="11">bs &gt;&gt; FOURCHARS_READ;      <span class="co">//4 chars</span></a>
+<a class="sourceLine" id="cb2-12" title="12">bs &gt;&gt; mwx::null_stream(<span class="dv">1</span>); <span class="co">//1 char skipping</span></a>
+<a class="sourceLine" id="cb2-13" title="13">bs &gt;&gt; u32val_read;         <span class="co">//32bit data</span></a>
+<a class="sourceLine" id="cb2-14" title="14">bs &gt;&gt; mwx::null_stream(<span class="dv">1</span>); <span class="co">//1 char skipping</span></a>
+<a class="sourceLine" id="cb2-15" title="15">bs &gt;&gt; c_read;              <span class="co">//2 chars</span></a>
+<a class="sourceLine" id="cb2-16" title="16"></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="co">// Result</span></a>
+<a class="sourceLine" id="cb2-18" title="18">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;4chars=&quot;</span> &lt;&lt; FOURCHARS_READ;</a>
+<a class="sourceLine" id="cb2-19" title="19">Serial &lt;&lt; crlf &lt;&lt; format(<span class="st">&quot;32bit val=0x%08x&quot;</span>, u32val_read);</a>
+<a class="sourceLine" id="cb2-20" title="20">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;2chars=&quot;</span> &lt;&lt; c_read;</a>
+<a class="sourceLine" id="cb2-21" title="21"></a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="co">// 4chars=ABCD</span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="co">// 32bit val=0x30313233</span></a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="co">// 2chars=99</span></a></code></pre></div>
+</body>
+</html>

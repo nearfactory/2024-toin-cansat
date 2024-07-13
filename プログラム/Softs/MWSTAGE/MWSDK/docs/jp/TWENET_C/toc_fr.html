@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<h3 id="twelite-sdk-mwsdk-マニュアル"><a target="main" href="content//README.html">TWELITE SDK (MWSDK) マニュアル</a></h3>
+<h3 id="はじめに"><a target="main" href="content//overview/README.html">はじめに</a></h3>
+<p>　 <a target="main" href="content//overview/mwsla.html">モノワイヤレスソフトウェア使用許諾書</a> <br /> 　 <a target="main" href="content//overview/policy.html">TWELITE SDK 利用規定</a> <br /> 　 <a target="main" href="content//overview/sdk_structure.html">TWELITE SDKの構成</a> <br /> 　 <a target="main" href="content//overview/support.html">サポート、対応</a> <br /></p>
+<h3 id="最新版の取得"><a target="main" href="content//latest/README.html">最新版の取得</a></h3>
+<p>　 <a target="main" href="content//latest/sdk_changes.html">TWELITE SDK 改版履歴</a> <br /></p>
+<h3 id="twelite-sdkの使用法"><a target="main" href="content//twelite-sdk-howto/README.html">TWELITE SDKの使用法</a></h3>
+<p>　 <a target="main" href="content//twelite-sdk-howto/birudonitsuite/README.html">ビルド定義について</a> <br /> 　　 <a target="main" href="content//twelite-sdk-howto/birudonitsuite/binfuiru.html">binファイル命名則</a> <br /> 　　 <a target="main" href="content//twelite-sdk-howto/birudonitsuite/makefile-nitsuite.html">Makefile について</a> <br /> 　　 <a target="main" href="content//twelite-sdk-howto/birudonitsuite/versionmk-nitsuite.html">Version.mk について</a> <br /> 　 <a target="main" href="content//twelite-sdk-howto/derekutori.html">フォルダ構成</a> <br /> 　 <a target="main" href="content//twelite-sdk-howto/fumuua/README.html">ファームウェア書換</a> <br /> 　　 <a target="main" href="content//twelite-sdk-howto/fumuua/fumuua.html">ファームウェア書換用配線</a> <br /> 　　 <a target="main" href="content//twelite-sdk-howto/fumuua/tweterm.py.html">tweterm.py</a> <br /> 　 <a target="main" href="content//twelite-sdk-howto/komandoraindenobirudo.html">コマンドラインでのビルド方法</a> <br /> 　 <a target="main" href="content//twelite-sdk-howto/twelite-sdknoinsutru.html">TWELITE SDKのインストール</a> <br /> 　 <a target="main" href="content//twelite-sdk-howto/vscode-deno.html">VSCode での利用</a> <br /></p>
+<h3 id="tweliet-net-api-解説"><a target="main" href="content//twelite-net-api-expl/README.html">TWELIET NET API 解説</a></h3>
+<p>　 <a target="main" href="content//twelite-net-api-expl/mojru.html">モジュール</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/README.html">ネットワークについて</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/README.html">中継ネット</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/adoresuwoshita.html">上位アドレスを固定した静的中継</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/nbbkonno.html">NBビーコン方式の接続</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/nettonoadoresu.html">中継ネットのアドレス</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/no-1.html">中継器の実装</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/no-mininodes.html">子機の実装 (MININODES)</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto-1/no.html">親機の実装</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto/README.html">単純ネット</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto/shou-xin.html">受信</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-expl/nettowkunitsuite/netto/song-xin.html">送信</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/paketto/README.html">無線パケット</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/paketto/adoresuno.html">アドレスの指定</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/paketto/apurikshonid.html">アプリケーションID</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/paketto/pakettono.html">パケットの最大長</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/ssukdono.html">ソースコードの構造</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/twelite-net-raiburari.html">TWELITE NET ライブラリ構造</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/README.html">TWENET 動作フロー</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/fur-1.html">無線関連フロー</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/fur.html">始動フロー</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/hdouafur.html">ハードウェアフロー</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/meinrpufur.html">メインループフロー</a> <br /> 　　 <a target="main" href="content//twelite-net-api-expl/twenet-fur/yzaibentofur.html">ユーザ定義イベント処理関数フロー</a> <br /> 　 <a target="main" href="content//twelite-net-api-expl/yong-yu.html">用語</a> <br /></p>
+<h3 id="twelite-net-api-リファレンス"><a target="main" href="content//twelite-net-api-ref/README.html">TWELITE NET API リファレンス</a></h3>
+<p>　 <a target="main" href="content//twelite-net-api-ref/gou-zao-ti/README.html">構造体</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/gou-zao-ti/stoconet_appcontext.html">sToCoNet_AppContext</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/gou-zao-ti/tsrxdataapp.html">tsRxDataApp</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/gou-zao-ti/tstxdataapp.html">tsTxDataApp</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/gurbaru/README.html">グローバル変数</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/gurbaru/stoconetappcontext-jing-de-bian-shu.html">sToCoNet_AppContext (静的変数)</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/gurbaru/uint32-u32tickcount_ms.html">uint32 u32TickCount_ms</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/krubakku/README.html">コールバック関数</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbappcoldstart.html">cbAppColdStart()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbappwarmstart.html">cbAppWarmStart()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_u8hwint.html">cbToCoNet_u8HwInt()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_vhwevent.html">cbToCoNet_vHwEvent()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_vmain.html">cbToCoNet_vMain()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_vnwkevent.html">cbToCoNet_vNwkEvent()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_vrxevent.html">cbToCoNet_vRxEvent()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/krubakku/cbtoconet_vtxevent.html">cbToCoNet_vTxEvent()</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/mojru-raiburari/README.html">モジュール ライブラリ</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/mojru-raiburari/energy-scan.html">ENERGY SCAN</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/mojru-raiburari/nb-scan.html">NB SCAN</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/netto-api/README.html">中継ネット API</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/README.html">functions</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/toconet_nwk_binit.html">ToCoNet_Nwk_bInit()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/toconet_nwk_bpause.html">ToCoNet_Nwk_bPause()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/toconet_nwk_bresume.html">ToCoNet_Nwk_bResume()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/toconet_nwk_bstart.html">ToCoNet_Nwk_bStart()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/functions/toconet_nwk_btx.html">ToCoNet_Nwk_bTx()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/netto-api/layertree-netto/README.html">LayerTree ネット</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/layertree-netto/toconet_nwklytr_psconfig.html">ToCoNet_NwkLyTr_psConfig()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/layertree-netto/toconet_nwklytr_psconfig_mininodes.html">ToCoNet_NwkLyTr_psConfig_MiniNodes()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/layertree-netto/tstoconet_nwklytr_context.html">tsToCoNet_NwkLyTr_Context</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/netto-api/structure/README.html">Structure</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/structure/tsrxdataapp-netto.html">tsRxDataApp (中継ネット)</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/structure/tstoconet_nwk_context.html">tsToCoNet_Nwk_Context</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/netto-api/structure/tstxdataapp-netto.html">tsTxDataApp (中継ネット)</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/panic.html">PANIC</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/prsev-raiburari.html">PRSEV ライブラリ</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/README.html">TWELITE NET関数</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_bmactxreq.html">ToCoNet_bMacTxReq()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_bregisteraeskey.html">ToCoNet_bRegisterAesKey()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_tx_vprocesseventqueue.html">ToCoNet_Tx_vProcessEventQueue()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_u16rccalib.html">ToCoNet_u16RcCalib()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_u32getrand.html">ToCoNet_u32GetRand()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_u32getserial.html">ToCoNet_u32GetSerial()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_u32getversion.html">ToCoNet_u32GetVersion()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vchconfig.html">ToCoNet_vChConfig()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vdebuginit.html">ToCoNet_vDebugInit()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vdebuglevel.html">ToCoNet_vDebugLevel()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vmacstart.html">ToCoNet_vMacStart()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vrfconfig.html">ToCoNet_vRfConfig()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-guan-shu/toconet_vsleep.html">ToCoNet_vSleep()</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/twelite-net-makuro/README.html">TWELITE NET マクロ</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-makuro/toconet_reg_mod_all.html">ToCoNet_REG_MOD_ALL()</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/twelite-net-makuro/utils.h.html">utils.h</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/typedef-yokuumakuro.html">型 typedef, よく使うマクロ</a> <br /> 　 <a target="main" href="content//twelite-net-api-ref/yzaibento/README.html">ユーザ定義イベント処理関数</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/ibento.html">イベント</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/sutto.html">ステート（状態）</a> <br /> 　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/README.html">ToCoNet_Event API</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/toconet_event_process.html">ToCoNet_Event_Process()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/toconet_event_register_state_machine.html">ToCoNet_Event_Register_State_Machine()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/toconet_event_setstate.html">ToCoNet_Event_SetState()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/toconet_event_u32tickfrnewstate.html">ToCoNet_Event_u32TickFrNewState()</a> <br /> 　　　 <a target="main" href="content//twelite-net-api-ref/yzaibento/toconet_event-api/toconet_event_vkeepstateonramholdsleep.html">ToCoNet_Event_vKeepStateOnRamHoldSleep()</a> <br /></p>
+<h3 id="hw-api-リファレンス"><a target="main" href="content//hw-api-ref/README.html">HW API リファレンス</a></h3>
+<p>　 <a target="main" href="content//hw-api-ref/flash-eeprom/README.html">Flash, EEPROM</a> <br /> 　　 <a target="main" href="content//hw-api-ref/flash-eeprom/eeprom.html">EEPROM</a> <br /> 　　 <a target="main" href="content//hw-api-ref/flash-eeprom/flash.html">Flash</a> <br /> 　 <a target="main" href="content//hw-api-ref/perifuraru/README.html">ペリフェラル</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/adc/README.html">ADC</a> <br /> 　　　 <a target="main" href="content//hw-api-ref/perifuraru/adc/adc.c.html">adc.c</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/dio.html">DIO</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/i2c.html">I2C</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/spi.html">SPI</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/ticktimer.html">TickTimer</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/README.html">Timer</a> <br /> 　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/README.html">Timerライブラリ</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/tstimercontext.html">tsTimerContext</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/vtimerconfig.html">vTimerConfig()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/vtimerdisable.html">vTimerDisable()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/vtimerstart.html">vTimerStart()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/timer/timerraiburari/vtimerstop.html">vTimerStop()</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/README.html">UART</a> <br /> 　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/fprintf-raiburari/README.html">fprintf ライブラリ</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/fprintf-raiburari/tsfile.html">tsFILE</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/fprintf-raiburari/vfprintf.html">vfPrintf()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/fprintf-raiburari/vputchar.html">vPutChar()</a> <br /> 　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/README.html">SERIAL ライブラリ</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/serial_brxqueueempty.html">SERIAL_bRxQueueEmpty()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/serial_i16rxchar.html">SERIAL_i16RxChar()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/serial_vflush.html">SERIAL_vFlush()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/serial_vinit.html">SERIAL_vInit()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/serial_vinitex.html">SERIAL_vInitEx()</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/tsserialportsetup.html">tsSerialPortSetup</a> <br /> 　　　　 <a target="main" href="content//hw-api-ref/perifuraru/uart/serial-raiburari/tsuartopt.html">tsUartOpt</a> <br /> 　　 <a target="main" href="content//hw-api-ref/perifuraru/waketimer.html">WakeTimer</a> <br /></p>
+<h3 id="utils-リファレンス他"><a target="main" href="content//utils-ref/README.html">Utils リファレンス、他</a></h3>
+<p>　 <a target="main" href="content//utils-ref/btmraiburari-dio.html">BTMライブラリ(連照式 DIO 入力 )</a> <br /> 　 <a target="main" href="content//utils-ref/bytequeue.html">ByteQueue</a> <br /> 　 <a target="main" href="content//utils-ref/sprintfraiburari.html">SPRINTFライブラリ</a> <br /> 　 <a target="main" href="content//utils-ref/u8ccitt8.html">u8CCITT8()</a> <br /></p>
+</body>
+</html>

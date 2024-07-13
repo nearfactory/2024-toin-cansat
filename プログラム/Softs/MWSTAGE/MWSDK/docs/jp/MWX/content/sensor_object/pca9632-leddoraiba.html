@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PCA9632 - LEDドライバ</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PCA9632 - LEDドライバ</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pca9632---ledドライバ">PCA9632 - LEDドライバ</a><ul>
+<li><a href="#処理の流れ">処理の流れ</a></li>
+<li><a href="#pca9632について">PCA9632について</a></li>
+<li><a href="#動作に必要な手続き">動作に必要な手続き</a><ul>
+<li><a href="#wireバス">Wireバス</a></li>
+<li><a href="#スリープ復帰時の手続き">スリープ復帰時の手続き</a></li>
+<li><a href="#コード例">コード例</a></li>
+</ul></li>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#コンストラクタ-setup">コンストラクタ, setup()</a></li>
+<li><a href="#reset">reset()</a></li>
+<li><a href="#set_mode2">set_mode2()</a></li>
+<li><a href="#set_power_mode">set_power_mode()</a></li>
+<li><a href="#set_blink_cycle-set_blink_cycle_ms">set_blink_cycle() set_blink_cycle_ms()</a></li>
+<li><a href="#set_blink_duty">set_blink_duty()</a></li>
+<li><a href="#set_led_duty"> set_led_duty()</a></li>
+<li><a href="#set_led_duty_all">set_led_duty_all()</a></li>
+<li><a href="#set_led_status">set_led_status()</a></li>
+<li><a href="#probe">probe()</a></li>
+<li><a href="#show_registers">show_registers()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pca9632---ledドライバ">PCA9632 - LEDドライバ</h1>
+<p>通知パル (NOTICE PAL) に使用されている LED ドライバです。</p>
+<div class="info">
+<p>通知PAL上での制御は<a href="../boards/pal/pal_notice.html">ボード(BRD) PAL_NOTICE</a>より行います。</p>
+</div>
+<h2 id="処理の流れ">処理の流れ</h2>
+<ol type="1">
+<li><code>Wire.begin()</code>: バスの初期化</li>
+<li><code>.setup()</code>: クラスオブジェクトの初期化</li>
+<li><code>.reset()</code>: ドライバの初期化</li>
+<li>各種手続き</li>
+</ol>
+<h2 id="pca9632について">PCA9632について</h2>
+<p>4chのLEDドライバです。</p>
+<ul>
+<li>各chは消灯・全点灯・PWM点灯・点滅の４つの状態を指定できる</li>
+<li>各chで独立して照度制御(PWM)できる</li>
+<li>点滅指定したchはすべて同じ点滅パターンとなる</li>
+<li>点滅時はPWMによる各ch個別の照度制御ができる</li>
+</ul>
+<h2 id="動作に必要な手続き">動作に必要な手続き</h2>
+<h3 id="wireバス">Wireバス</h3>
+<p><code>setup()</code>メソッド呼び出し前に<code>Wire.begin()</code>によりWireが動作状態にしておきます。</p>
+<h3 id="スリープ復帰時の手続き">スリープ復帰時の手続き</h3>
+<p>スリープ直前もWireバスが動作状態にしておきます（スリープ復帰後自動でWireを回復します）。</p>
+<h3 id="コード例">コード例</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;SNS_PCA9632&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4">SNS_PCA9632 pca;</a></code></pre></div>
+<p><code>#include &lt;SNS_PCA9632&gt;</code>と<code>SNS_PCA9632</code>クラスオブジェクトの宣言が必要です。</p>
+<h4 id="初期化リセット">初期化&amp;リセット</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-2" title="2">    Wire.begin();</a>
+<a class="sourceLine" id="cb2-3" title="3">    pca.setup();</a>
+<a class="sourceLine" id="cb2-4" title="4">    pca.reset();</a>
+<a class="sourceLine" id="cb2-5" title="5">}</a></code></pre></div>
+<h4 id="点灯">点灯</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">...</a>
+<a class="sourceLine" id="cb3-2" title="2"> ​  pca.set_led_duty_all(</a>
+<a class="sourceLine" id="cb3-3" title="3">      <span class="dv">127</span>,</a>
+<a class="sourceLine" id="cb3-4" title="4">      <span class="dv">127</span>,</a>
+<a class="sourceLine" id="cb3-5" title="5">      <span class="dv">127</span>,</a>
+<a class="sourceLine" id="cb3-6" title="6">      <span class="dv">127</span></a>
+<a class="sourceLine" id="cb3-7" title="7">   );</a>
+<a class="sourceLine" id="cb3-8" title="8">   </a>
+<a class="sourceLine" id="cb3-9" title="9">   pca.set_led_status(</a>
+<a class="sourceLine" id="cb3-10" title="10">      SNS_PCA9632::LED_PWM,</a>
+<a class="sourceLine" id="cb3-11" title="11">      SNS_PCA9632::LED_NOP,</a>
+<a class="sourceLine" id="cb3-12" title="12">      SNS_PCA9632::LED_PWM,</a>
+<a class="sourceLine" id="cb3-13" title="13">      SNS_PCA9632::LED_NOP);</a></code></pre></div>
+<p>上記の例ではLED1,3をPWM制御により点灯します。</p>
+<div class="warning">
+<p>点灯時はドライバが消費する電流値に気を付けてください。</p>
+</div>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="コンストラクタ-setup">コンストラクタ, setup()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">SnsPCA9632(<span class="dt">uint8_t</span> i2c_addr = DEFAULT_I2C_ADDRESS)</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="dt">void</span> setup(<span class="dt">uint8_t</span> i2c_addr = DEFAULT_I2C_ADDRESS)</a></code></pre></div>
+<p>コンストラクタでは<code>i2c_addr</code>を指定します。</p>
+<p>グローバル宣言でクラスオブジェクトを定義した場合、コンストラクタが呼びだされませんので、<code>setup()</code>を呼び出すようにしてください。</p>
+<h3 id="reset">reset()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">bool</span> reset()</a></code></pre></div>
+<p>デバイスを初期化します。<br />
+レジスタアドレス 0x0 から順に<code>{0x81, 0x35, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x0B, 0x00}</code> を書き込みます。</p>
+<h3 id="set_mode2">set_mode2()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">bool</span> set_mode2(<span class="dt">uint8_t</span> u8var = <span class="bn">0x35</span>)</a></code></pre></div>
+<p>MODE2レジスタに値を書き込みます。</p>
+<h3 id="set_power_mode">set_power_mode()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">bool</span> set_power_mode(<span class="dt">bool</span> b_pow_on)</a></code></pre></div>
+<p><code>b_pow_on</code>を<code>true</code>にすると通常運用、<code>false</code>にするとスリープします。</p>
+<h3 id="set_blink_cycle-set_blink_cycle_ms">set_blink_cycle() set_blink_cycle_ms()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">bool</span> set_blink_cycle(<span class="dt">uint8_t</span> u8var)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="dt">bool</span> set_blink_cycle_ms(<span class="dt">uint16_t</span> u16ms)</a></code></pre></div>
+<p>点滅(グループPWM)周期を決めます。</p>
+<p><code>u8var</code>を指定すると周期は<code>(u8var+1)/24</code>[秒]となります。</p>
+<p><code>u16ms</code>は周期を[ms]で指定します。</p>
+<h3 id="set_blink_duty">set_blink_duty()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">bool</span> set_blink_duty(<span class="dt">uint8_t</span> u8duty);</a></code></pre></div>
+<p>点滅(グループPWM)のデューティ比を決めます。点灯期間は<code>u8duty/256</code>となり、0は消灯相当、255は全灯相当になります。</p>
+<h3 id="set_led_duty"> set_led_duty()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">bool</span> set_led_duty(<span class="dt">uint8_t</span> port, <span class="dt">uint8_t</span> duty)</a></code></pre></div>
+<p>明るさ（PMW制御のデューティ比）を指定します。</p>
+<p><code>port</code>は対象のLED(<code>SNS_PCA9632::LED1..4</code>)を指定します。</p>
+<p><code>duty</code>は0..255を指定し、比率<code>duty/256</code>で点灯します。</p>
+<h3 id="set_led_duty_all">set_led_duty_all()</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">bool</span> set_led_duty_all(<span class="dt">uint8_t</span> p1, <span class="dt">uint8_t</span> p2, <span class="dt">uint8_t</span> p3, <span class="dt">uint8_t</span> p4)</a></code></pre></div>
+<p>全てのLEDに対して明るさ（PMW制御のデューティ比）を指定します。</p>
+<p><code>p1,p2,p3,p4</code>はLED1..4のデューティで0..255を指定します。比率<code>duty/256</code>で点灯します。</p>
+<h3 id="set_led_status">set_led_status()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="dt">bool</span> set_led_status(<span class="dt">uint8_t</span> u8led1, <span class="dt">uint8_t</span> u8led2, <span class="dt">uint8_t</span> u8led3, <span class="dt">uint8_t</span> u8led4)</a></code></pre></div>
+<p>全てのLEDの点灯状態を変更します。</p>
+<p><code>u8led1..4</code>は順にLED1..4の状態を指定します。</p>
+<p>指定できる状態は、以下の通りです。</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>SNS_PCA9632::LED_OFF</code></td>
+<td>消灯</td>
+</tr>
+<tr class="even">
+<td><code>SNS_PCA9632::LED_ON</code></td>
+<td>全灯</td>
+</tr>
+<tr class="odd">
+<td><code>SNS_PCA9632::LED_PWM</code></td>
+<td>照度制御(PWM)</td>
+</tr>
+<tr class="even">
+<td><code>SNS_PCA9632::LED_BLINK</code></td>
+<td>点滅制御(グループPWM)</td>
+</tr>
+<tr class="odd">
+<td><code>SNS_PCA9632::LED_NOP</code></td>
+<td>状態を変更しない</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probe">probe()</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="dt">bool</span> probe()</a></code></pre></div>
+<p>I2Cバス上にデバイスが存在すれば<code>true</code>を返します。</p>
+<h3 id="show_registers">show_registers()</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="dt">void</span> show_registers()</a></code></pre></div>
+<p>レジスタ(0x0-0x8)の値を表示します。</p>
+</body>
+</html>

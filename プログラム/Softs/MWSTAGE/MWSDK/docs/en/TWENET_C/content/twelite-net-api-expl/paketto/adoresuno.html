@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#addressing-conventions">Addressing conventions</a><ul>
+<li><a href="#for-simple-nets">For simple nets</a><ul>
+<li><a href="#long-address">Long address</a></li>
+<li><a href="#short-address">Short address</a></li>
+<li><a href="#broadcast-communicationshort-address-of-0xffff">broadcast communication（Short address of 0xFFFF）</a></li>
+</ul></li>
+<li><a href="#for-simple-nets-1">For simple nets</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="addressing-conventions">Addressing conventions</h1>
+<h2 id="for-simple-nets">For simple nets</h2>
+<p>There are two ways of specifying the sender and destination address: long address and short address.</p>
+<h3 id="long-address">Long address</h3>
+<p>Specifies the 32bit module serial number (32bit) of the TWELITE. The address can be obtained by ToCoNet_u32GetSerial() API.</p>
+<p>It is also the 7-digit hexadecimal S/N (serial number) displayed on the shield can of the TWELITE module plus 0x80000000. For example, a serial number of 1012ABC would be 0x81012ABC.</p>
+<div class="warning">
+<p>When the destination is specified as long, the payload size of the packet becomes small. (<a href="pakettono.html">Maximum length of a packet</a>)</p>
+</div>
+<div class="info">
+<p>IEEE802.15.4 standard uses 64bit MAC address. 64bit MAC address is specified based on 32bit module address.</p>
+</div>
+<h3 id="short-address">Short address</h3>
+<p>Addresses between 0x0000 and 0x0FFF can be specified. The address is set to <a href="../../twelite-net-api-ref/gou-zao-ti/stoconet_appcontext.html"><code>sToCoNet_AppContext.u16ShortAddress</code></a> in the <a href="../../twelite-net-api-ref/krubakku/cbappcoldstart.html"><code>cbAppColdStart()</code></a> function.</p>
+<h3 id="broadcast-communicationshort-address-of-0xffff">broadcast communication（Short address of 0xFFFF）</h3>
+<p>This address is used for broadcast communication.</p>
+<h2 id="for-simple-nets-1">For simple nets</h2>
+<p>The long address is mostly used for LayerTree Relay net, where some <a href="../nettowkunitsuite/netto-1/nettonoadoresu.html">special addresses</a> is defined.</p>
+<p>see <a href="../nettowkunitsuite/netto-1/README.html">Relay net</a> for details.</p>
+</body>
+</html>

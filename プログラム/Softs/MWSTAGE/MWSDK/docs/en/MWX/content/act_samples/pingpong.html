@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PingPong</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PingPong</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pingpong">PingPong</a><ul>
+<li><a href="#how-to-use-act">how to use act</a><ul>
+<li><a href="#required-twelite">Required TWELITE</a></li>
+</ul></li>
+<li><a href="#explanation-of-act">Explanation of ACT</a><ul>
+<li><a href="#include">Include</a></li>
+<li><a href="#declaration-section">Declaration section</a></li>
+<li><a href="#セットアップ-setup">セットアップ setup()</a></li>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#transmit">transmit()</a></li>
+<li><a href="#on_rx_packet">on_rx_packet()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pingpong">PingPong</h1>
+<p>Send a PING wireless packet from one of the two serially connected TWELITEs and receive a PONG wireless packet back from the other.</p>
+<div class="success">
+<p>This ACT includes.</p>
+<ul>
+<li>Sending a prompt response from the receipt of a wireless packet</li>
+<li>Transmission with direct address of the peer</li>
+<li>Input from serial port - <a href="../api-reference/classes/twe-stream/README.html">Serial</a></li>
+<li>Digital (button) input - <a href="../api-reference/predefined_objs/buttons.html">Buttons</a></li>
+<li>Analogue input - <a href="../api-reference/predefined_objs/analogue.html">Analogue</a></li>
+</ul>
+</div>
+<h2 id="how-to-use-act">how to use act</h2>
+<h3 id="required-twelite">Required TWELITE</h3>
+<p>Two of any of the following.</p>
+<ul>
+<li><a target=_blank href="https://mono-wireless.com/jp/products/MoNoStick/index.html">MONOSTICK BLUE or RED</a></li>
+<li><a target=_blank href="https://mono-wireless.com/jp/">TWELITE DIP</a> connected to UART with <a target=_blank href="https://mono-wireless.com/jp/products/TWE-LITE-R/index.html">TWELITE R</a> products/TWE-Lite-DIP/index.html), etc.</li>
+</ul>
+<h2 id="explanation-of-act">Explanation of ACT</h2>
+<h3 id="include">Include</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// use twelite mwx c++ template library</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a></code></pre></div>
+<p>Include <code>&lt;TWELITE&gt;</code> in all ACTs. Here, the simple network <a href="../networks/nwk_simple.html"><code>&lt;NWK_SIMPLE&gt;</code></a> should be included.</p>
+<h3 id="declaration-section">Declaration section</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// application ID</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="at">const</span> <span class="dt">uint32_t</span> APP_ID = <span class="bn">0x1234abcd</span>;</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">// channel</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="at">const</span> <span class="dt">uint8_t</span> CHANNEL = <span class="dv">13</span>;</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co">// DIO pins</span></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="at">const</span> <span class="dt">uint8_t</span> PIN_BTN = <span class="dv">12</span>;</a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">/*** function prototype */</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="dt">void</span> vTransmit(<span class="at">const</span> <span class="dt">char</span>* msg, <span class="dt">uint32_t</span> addr);</a>
+<a class="sourceLine" id="cb2-12" title="12"></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="co">/*** application defs */</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co">// packet message</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="at">const</span> <span class="dt">int</span> MSG_LEN = <span class="dv">4</span>;</a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="at">const</span> <span class="dt">char</span> MSG_PING[] = <span class="st">&quot;PING&quot;</span>;</a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="at">const</span> <span class="dt">char</span> MSG_PONG[] = <span class="st">&quot;PONG&quot;</span>;</a></code></pre></div>
+<ul>
+<li>Sample act common declarations</li>
+<li>Prototype declarations for longer processes (sending and receiving), since they are made into functions</li>
+<li>Variables for holding data in the application</li>
+</ul>
+<h3 id="セットアップ-setup">セットアップ setup()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="co">/*** SETUP section */</span></a>
+<a class="sourceLine" id="cb3-3" title="3">    Buttons.setup(<span class="dv">5</span>); <span class="co">// init button manager with 5 history table.</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    Analogue.setup(<span class="kw">true</span>, <span class="dv">50</span>); <span class="co">// setup analogue read (check every 50ms)</span></a>
+<a class="sourceLine" id="cb3-5" title="5"></a>
+<a class="sourceLine" id="cb3-6" title="6">    <span class="co">// the twelite main class</span></a>
+<a class="sourceLine" id="cb3-7" title="7">    the_twelite</a>
+<a class="sourceLine" id="cb3-8" title="8">        &lt;&lt; TWENET::appid(APP_ID)    <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb3-9" title="9">        &lt;&lt; TWENET::channel(CHANNEL) <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb3-10" title="10">        &lt;&lt; TWENET::rx_when_idle();  <span class="co">// open receive circuit (if not set, it can&#39;t listen packts from others)</span></a>
+<a class="sourceLine" id="cb3-11" title="11"></a>
+<a class="sourceLine" id="cb3-12" title="12">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb3-13" title="13">    <span class="kw">auto</span>&amp;&amp; nwksmpl = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb3-14" title="14">    nwksmpl &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>) <span class="co">// set Logical ID. (0xFE means a child device with no ID)</span></a>
+<a class="sourceLine" id="cb3-15" title="15">            &lt;&lt; NWK_SIMPLE::repeat_max(<span class="dv">3</span>);   <span class="co">// can repeat a packet up to three times. (being kind of a router)</span></a>
+<a class="sourceLine" id="cb3-16" title="16"></a>
+<a class="sourceLine" id="cb3-17" title="17">    <span class="co">/*** </span><span class="re">BEGIN</span><span class="co"> section */</span></a>
+<a class="sourceLine" id="cb3-18" title="18">    Buttons.begin(pack_bits(PIN_BTN), <span class="dv">5</span>, <span class="dv">10</span>); <span class="co">// check every 10ms, a change is reported by 5 consequent values.</span></a>
+<a class="sourceLine" id="cb3-19" title="19">    Analogue.begin(pack_bits(PIN_ANALOGUE::A1, PIN_ANALOGUE::VCC)); <span class="co">// _start continuous adc capture.</span></a>
+<a class="sourceLine" id="cb3-20" title="20"></a>
+<a class="sourceLine" id="cb3-21" title="21">    the_twelite.begin(); <span class="co">// start twelite!</span></a>
+<a class="sourceLine" id="cb3-22" title="22"></a>
+<a class="sourceLine" id="cb3-23" title="23">    <span class="co">/*** INIT message */</span></a>
+<a class="sourceLine" id="cb3-24" title="24">    Serial &lt;&lt; <span class="st">&quot;--- PingPong sample (press &#39;t&#39; to transmit) ---&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb3-25" title="25">}</a></code></pre></div>
+<p>The general flow of the program is the initial setup of each section and the start of each section.</p>
+<h4 id="the_twelite">the_twelite</h4>
+<p>This object is the core class object for manipulating TWENET.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">    <span class="co">// the twelite main class</span></a>
+<a class="sourceLine" id="cb4-2" title="2">    the_twelite</a>
+<a class="sourceLine" id="cb4-3" title="3">        &lt;&lt; TWENET::appid(APP_ID)    <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb4-4" title="4">        &lt;&lt; TWENET::channel(CHANNEL) <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb4-5" title="5">        &lt;&lt; TWENET::rx_when_idle();  <span class="co">// open receive circuit (if not set, it can&#39;t listen packts from others)</span></a></code></pre></div>
+<p><code>the_twelite</code> に設定を反映するには <code>&lt;&lt;</code> を用います。</p>
+<p>Use <code>&lt;&lt;</code> to reflect the setting in <code>the_twelite</code>.</p>
+<ul>
+<li><code>TWENET::appid(APP_ID)</code> to specify the Application ID.</li>
+<li><code>TWENET::channel(CHANNEL)</code> to specify the channel.</li>
+<li><code>TWENET::rx_when_idle()</code> Specifies that the receive circuit is open.</li>
+</ul>
+<div class="info">
+<p>The <code>&lt;&lt;, &gt;&gt;</code> operator is originally a bit shift operator, but it is used differently from its meaning.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="co">// The following statements are not available in the MWX library</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;hello world&quot;</span> &lt;&lt; <span class="bu">std::</span>endl;</a></code></pre></div>
+</div>
+<p>Next, register the network.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">auto</span>&amp;&amp; nwksmpl = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb6-2" title="2">nwksmpl &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>);</a>
+<a class="sourceLine" id="cb6-3" title="3">        &lt;&lt; NWK_SIMPLE::repeat_max(<span class="dv">3</span>);</a></code></pre></div>
+<p>The first line is written in the same way as the board registration, specifying <code>&lt;&gt;</code> as <code>&lt;NWK_SIMPLE&gt;</code>.</p>
+<p>The second line specifies <code>&lt;NWK_SIMPLE&gt;</code>, specifying <code>0xFE</code> (<code>WK_SIMPLE</code> is a <strong>Child Node with an unset ID</strong>).</p>
+<p>The third line specifies the maximum number of relays. This explanation does not touch on relaying, but packets are relayed when operating with multiple units.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">the_twelite.begin(); <span class="co">// start twelite!</span></a></code></pre></div>
+<p>Execute <code>the_twelite.begin()</code> at the end of the <code>setup()</code> function.</p>
+<h4 id="analogue">Analogue</h4>
+<p>Class object that handles ADCs (analog-to-digital converters).</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1">Analogue.setup(<span class="kw">true</span>);</a></code></pre></div>
+<p>Initialization <code>Analogue.setup()</code>. The parameter <code>true</code> specifies to wait in place until the ADC circuit is stable.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1">Analogue.begin(pack_bits(PIN_ANALOGUE::A1, PIN_ANALOGUE::VCC), <span class="dv">50</span>); </a></code></pre></div>
+<p>To start the ADC, call <code>Analogue.begin()</code>. The parameter is a bitmap corresponding to the pin to be ADC’d.</p>
+<p>The <code>pack_bits()</code> function is used to specify the bitmap. It is a function with variable number of arguments, each argument specifies a bit position to be set to 1. For example, <code>pack_bits(1,3,5)</code> returns the binary value <code>101010</code>. This function has the <code>constexpr</code> specification, so if the parameters are constants only, they are expanded to constants.</p>
+<p>The parameters are specified as <code>PIN_ANALOGUE::A1</code> (ADC0) and <code>PIN_ANALOGUE::VCC</code> (module supply voltage).</p>
+<p>The second parameter is specified as <code>50</code>, and the ADC operation is started by default with TickTimer, which is set to</p>
+<div class="info">
+<p>Except for the first time, the ADC is started in an interrupt handler.</p>
+</div>
+<h4 id="buttons">Buttons</h4>
+<p>Detects changes in DIO (digital input) values; Buttons only detect a change in value after the same value has been detected a certain number of times in order to reduce the effects of mechanical button chattering.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">Buttons.setup(<span class="dv">5</span>);</a></code></pre></div>
+<p>Initialization is done with <code>Buttons.setup()</code>. The parameter 5 is the number of detections required to determine the value, but it is the maximum value that can be set. Internally, the internal memory is allocated based on this number.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1">Buttons.begin(pack_bits(PIN_BTN),</a>
+<a class="sourceLine" id="cb11-2" title="2">                    <span class="dv">5</span>,      <span class="co">// history count</span></a>
+<a class="sourceLine" id="cb11-3" title="3">                    <span class="dv">10</span>);    <span class="co">// tick delta</span></a></code></pre></div>
+<p>The start is done with <code>Buttons.begin()</code> The first parameter is the DIO to be detected. The second parameter is the number of detections required to determine the state. The third parameter is the detection interval. Since <code>10</code> is specified, the HIGH and LOW states are determined when the same value is detected five times in a row every 10 ms.</p>
+<div class="info">
+<p>The detection of the DIO state in Buttons is done by an event handler. Event handlers are called in the application loop after an interrupt has occurred, so there is a delay compared to interrupt handlers.</p>
+</div>
+<h4 id="serial">Serial</h4>
+<p>Serial objects can be used without initialization or initiation procedures.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1">Serial &lt;&lt; <span class="st">&quot;--- PingPong sample (press &#39;t&#39; to transmit) ---&quot;</span> &lt;&lt; mwx::crlf;</a></code></pre></div>
+<p>Outputs a string to the serial port. <code>mwx::crlf</code> is a newline character.</p>
+<h3 id="loop">loop()</h3>
+<p>Loop function are called as callback functions from the main loop of the TWENET library. The basic description here is to wait for the object to be used to become available and then process it. This section describes the use of some objects used in ACT.</p>
+<div class="warning">
+<p>The main loop of the TWENET library processes incoming packets and interrupt information stored in the FIFO queue in advance as events, after which <code>loop()</code> is called. After exiting <code>loop()</code>, the CPU enters DOZE mode and waits until a new interrupt occurs with low current consumption.</p>
+<p>Therefore, code that assumes the CPU is always running will not work well.</p>
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb13-2" title="2">      <span class="co">// read from serial</span></a>
+<a class="sourceLine" id="cb13-3" title="3">        <span class="cf">while</span>(Serial.available())  {</a>
+<a class="sourceLine" id="cb13-4" title="4">                <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb13-5" title="5">                Serial &lt;&lt; mwx::crlf &lt;&lt; <span class="dt">char</span>(c) &lt;&lt; <span class="ch">&#39;:&#39;</span>;</a>
+<a class="sourceLine" id="cb13-6" title="6">                <span class="cf">switch</span>(c) {</a>
+<a class="sourceLine" id="cb13-7" title="7">                    <span class="cf">case</span> <span class="ch">&#39;t&#39;</span>:</a>
+<a class="sourceLine" id="cb13-8" title="8">                          vTransmit(MSG_PING, <span class="bn">0xFF</span>);</a>
+<a class="sourceLine" id="cb13-9" title="9">                        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb13-10" title="10">                    <span class="cf">default</span>:</a>
+<a class="sourceLine" id="cb13-11" title="11">                              <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb13-12" title="12">                }</a>
+<a class="sourceLine" id="cb13-13" title="13">        }</a>
+<a class="sourceLine" id="cb13-14" title="14"></a>
+<a class="sourceLine" id="cb13-15" title="15"></a>
+<a class="sourceLine" id="cb13-16" title="16">    <span class="co">// Button press</span></a>
+<a class="sourceLine" id="cb13-17" title="17">    <span class="cf">if</span> (Buttons.available()) {</a>
+<a class="sourceLine" id="cb13-18" title="18">        <span class="dt">uint32_t</span> btn_state, change_mask;</a>
+<a class="sourceLine" id="cb13-19" title="19">        Buttons.read(btn_state, change_mask);</a>
+<a class="sourceLine" id="cb13-20" title="20"></a>
+<a class="sourceLine" id="cb13-21" title="21">        <span class="co">// Serial &lt;&lt; fmt(&quot;&lt;BTN %b:%b&gt;&quot;, btn_state, change_mask);</span></a>
+<a class="sourceLine" id="cb13-22" title="22">        <span class="cf">if</span> (!(change_mask &amp; <span class="bn">0x80000000</span>) &amp;&amp; (btn_state &amp;&amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; PIN_BTN))) {</a>
+<a class="sourceLine" id="cb13-23" title="23">            <span class="co">// PIN_BTN pressed</span></a>
+<a class="sourceLine" id="cb13-24" title="24">            vTransmit(MSG_PING, <span class="bn">0xFF</span>);</a>
+<a class="sourceLine" id="cb13-25" title="25">        }</a>
+<a class="sourceLine" id="cb13-26" title="26">    }</a>
+<a class="sourceLine" id="cb13-27" title="27">}</a></code></pre></div>
+<h4 id="serial-1">Serial</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1">        <span class="cf">while</span>(Serial.available())  {</a>
+<a class="sourceLine" id="cb14-2" title="2">                <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb14-3" title="3">                Serial &lt;&lt; mwx::crlf &lt;&lt; <span class="dt">char</span>(c) &lt;&lt; <span class="ch">&#39;:&#39;</span>;</a>
+<a class="sourceLine" id="cb14-4" title="4">                <span class="cf">switch</span>(c) {</a>
+<a class="sourceLine" id="cb14-5" title="5">                    <span class="cf">case</span> <span class="ch">&#39;t&#39;</span>:</a>
+<a class="sourceLine" id="cb14-6" title="6">                          vTransmit(MSG_PING, <span class="bn">0xFF</span>);</a>
+<a class="sourceLine" id="cb14-7" title="7">                        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb14-8" title="8">                    <span class="cf">default</span>:</a>
+<a class="sourceLine" id="cb14-9" title="9">                              <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb14-10" title="10">                }</a>
+<a class="sourceLine" id="cb14-11" title="11">        }</a></code></pre></div>
+<p>While <code>Serial.available()</code> is <code>true</code>, there is input from the serial port. The data is stored in the internal FIFO queue, so there is some leeway, but it should be read out promptly. To read data, call <code>Serial.read()</code>.</p>
+<p>Here, the <code>vTransmit()</code> function is called to send a PING packet in response to a <code>&#39;t&#39;</code> key input.</p>
+<h4 id="buttons-1">Buttons</h4>
+<p>It becomes available at the timing when a change in DIO (digital IO) input is detected, and is read by <code>Buttons.read()</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1">    <span class="cf">if</span> (Buttons.available()) {</a>
+<a class="sourceLine" id="cb15-2" title="2">        <span class="dt">uint32_t</span> btn_state, change_mask;</a>
+<a class="sourceLine" id="cb15-3" title="3">        Buttons.read(btn_state, change_mask);</a></code></pre></div>
+<p>The first parameter is a bitmap of the HIGH/LOW of the current DIO, ordered from bit0 to DIO0,1,2,… . and so on, starting from bit 0. For example, for DIO12, HIGH / LOW can be determined by evaluating <code>btn_state &amp; (1UL &lt;&lt; 12)</code>. If the bit is set to 1, it is HIGH.</p>
+<div class="info">
+<p>When the IO state is determined for the first time, MSB (bit31) is set to 1. The initial determination process is also performed when the device returns from sleep.</p>
+</div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="co">// Serial &lt;&lt; fmt(&quot;&lt;BTN %b:%b&gt;&quot;, btn_state, change_mask);</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="cf">if</span> (!(change_mask &amp; <span class="bn">0x80000000</span>) &amp;&amp; (btn_state &amp;&amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; PIN_BTN))) {</a>
+<a class="sourceLine" id="cb16-3" title="3">    <span class="co">// PIN_BTN pressed</span></a>
+<a class="sourceLine" id="cb16-4" title="4">    vTransmit(MSG_PING, <span class="bn">0xFF</span>);</a></code></pre></div>
+<p>The <code>vTransmit()</code> is called at the timing when the button is <strong>released</strong> except for the initial confirmation. To make the timing of the press <code>(! (btn_state &amp;&amp; (1UL &lt;&lt; PIN_BTN)))</code> to invert the condition logically.</p>
+<h3 id="transmit">transmit()</h3>
+<p>This function requests TWENET to send a wireless packet. At the end of this function, the wireless packet is not yet processed. The actual transmission will be completed in a few ms or later, depending on the transmission parameters. This section describes typical transmission request methods.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="dt">void</span> vTransmit(<span class="at">const</span> <span class="dt">char</span>* msg, <span class="dt">uint32_t</span> addr) {</a>
+<a class="sourceLine" id="cb17-2" title="2">    Serial &lt;&lt; <span class="st">&quot;vTransmit()&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb17-3" title="3"></a>
+<a class="sourceLine" id="cb17-4" title="4">    <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb17-5" title="5">        <span class="co">// set tx packet behavior</span></a>
+<a class="sourceLine" id="cb17-6" title="6">        pkt &lt;&lt; tx_addr(addr)  <span class="co">// 0..0xFF (LID 0:parent, FE:child w/ no id, FF:LID broad cast), 0x8XXXXXXX (long address)</span></a>
+<a class="sourceLine" id="cb17-7" title="7">            &lt;&lt; tx_retry(<span class="bn">0x3</span>) <span class="co">// set retry (0x3 send four times in total)</span></a>
+<a class="sourceLine" id="cb17-8" title="8">            &lt;&lt; tx_packet_delay(<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">20</span>); <span class="co">// send packet w/ delay (send first packet with randomized delay from 100 to 200ms, repeat every 20ms)</span></a>
+<a class="sourceLine" id="cb17-9" title="9"></a>
+<a class="sourceLine" id="cb17-10" title="10">        <span class="co">// prepare packet payload</span></a>
+<a class="sourceLine" id="cb17-11" title="11">        pack_bytes(pkt.get_payload() <span class="co">// set payload data objects.</span></a>
+<a class="sourceLine" id="cb17-12" title="12">            , make_pair(msg, MSG_LEN) <span class="co">// string should be paired with length explicitly.</span></a>
+<a class="sourceLine" id="cb17-13" title="13">            , <span class="dt">uint16_t</span>(analogRead(PIN_ANALOGUE::A1)) <span class="co">// possible numerical values types are uint8_t, uint16_t, uint32_t. (do not put other types)</span></a>
+<a class="sourceLine" id="cb17-14" title="14">            , <span class="dt">uint16_t</span>(analogRead_mv(PIN_ANALOGUE::VCC)) <span class="co">// A1 and VCC values (note: alalog read is valid after the first (Analogue.available() == true).)</span></a>
+<a class="sourceLine" id="cb17-15" title="15">            , <span class="dt">uint32_t</span>(millis()) <span class="co">// put timestamp here.</span></a>
+<a class="sourceLine" id="cb17-16" title="16">        );</a>
+<a class="sourceLine" id="cb17-17" title="17">    </a>
+<a class="sourceLine" id="cb17-18" title="18">        <span class="co">// do transmit </span></a>
+<a class="sourceLine" id="cb17-19" title="19">        pkt.transmit();</a>
+<a class="sourceLine" id="cb17-20" title="20">    }</a>
+<a class="sourceLine" id="cb17-21" title="21">}</a></code></pre></div>
+<h4 id="getting-network-and-packet-objects">Getting Network and Packet Objects</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1">    <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a></code></pre></div>
+<p>Get a network object with <code>the_twelite.network.use&lt;NWK_SIMPLE&gt;()</code>. Use that object to get a <code>pkt</code> object by <code>.prepare_tx_packet()</code>.</p>
+<p>Here it is declared in the conditional expression of the if statement. The declared <code>pkt</code> object is valid until the end of the if clause. pkt object gives a response of type bool, which here is <code>true</code> if there is a free space in TWENET’s send request queue and the send request is accepted, or <code>false</code> if there is no space.</p>
+<h4 id="settings-for-sending-packets">Settings for sending packets</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1">        pkt &lt;&lt; tx_addr(addr)  <span class="co">// 0..0xFF (LID 0:parent, FE:child w/ no id, FF:LID broad cast), 0x8XXXXXXX (long address)</span></a>
+<a class="sourceLine" id="cb19-2" title="2">            &lt;&lt; tx_retry(<span class="bn">0x3</span>) <span class="co">// set retry (0x3 send four times in total)</span></a>
+<a class="sourceLine" id="cb19-3" title="3">            &lt;&lt; tx_packet_delay(<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">20</span>); <span class="co">// send packet w/ delay (send first packet with randomized delay from 100 to 200ms, repeat every 20ms)</span></a></code></pre></div>
+<p>Packets are configured using the <code>&lt;&lt;</code> operator as in <code>the_twelite</code> initialization setup.</p>
+<ul>
+<li>Specify the destination address in the <code>tx_addr()</code> parameter. If it is <code>0x00</code>, it means that you are the Child Node and broadcast to the Parent Node, and if it is <code>0xFE</code>, it means that you are the Parent Node and broadcast to any Child Node.</li>
+<li>The <code>tx_retry()</code> parameter specifies the number of retransmissions. In the example <code>3</code> means that the number of retransmissions is 3, i.e., the packet is sent 4 times in total. Sending only one wireless packet may fail a few percent of the time even under good conditions.</li>
+<li><code>tx_packet_delay()</code> Sets the transmission delay. The first parameter is the minimum wait time to start sending and the second is the maximum wait time. The third is the retransmission interval. The third is the retransmission interval, meaning that a retransmission is performed every 20 ms after the first packet is sent.</li>
+</ul>
+<h4 id="data-payload-in-a-packet">Data Payload in a Packet</h4>
+<p>Payload means a loaded item, but in wireless packets it is often used to mean “the main body of data to be sent”. In addition to the main body of data, the data in a wireless packet also contains some auxiliary information, such as address information.</p>
+<p>For correct transmission and reception, please be aware of the data order of the data payload. In this example, the data order is as follows. Construct the data payload according to this data order.</p>
+<pre><code># Index of first byte: Data type : Number of bytes : Contents
+
+00: uint8_t[4] : 4 : four-character identifier
+08: uint16_t   : 2 : ADC value of AI1 (0..1023)
+06: uint16_t   : 2 : Voltage value of Vcc (2000..3600)
+10: uint32_t   : 4 : millis() system time</code></pre>
+<div class="info">
+<p>The data payload can contain 90 bytes (actually a few more bytes).</p>
+<p>Every byte in an IEEE802.15.4 wireless packet is precious. There is a limit to the amount of data that can be sent in a single packet. If a packet is split, the cost of the split packet is high because it must take into account transmission failures. Also, sending one extra byte consumes energy equivalent to approximately 16 µs x current during transmission, which can be significant, especially for battery-powered applications. {endhint %}</p>
+<p>Let’s actually build the data structure of the above data payload. The data payload can be referenced as a container of type <code>simplbuf&lt;uint8_t&gt;</code> via <code>pkt.get_payload()</code>. In this container, we build the data based on the above specification.</p>
+<p>It can be written as above, but the MWX library provides an auxiliary function <code>pack_bytes()</code> for data payload construction.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="co">// prepare packet payload</span></a>
+<a class="sourceLine" id="cb21-2" title="2">pack_bytes(pkt.get_payload() <span class="co">// set payload data objects.</span></a>
+<a class="sourceLine" id="cb21-3" title="3">    , make_pair(msg, MSG_LEN) <span class="co">// string should be paired with length explicitly.</span></a>
+<a class="sourceLine" id="cb21-4" title="4">    , <span class="dt">uint16_t</span>(analogRead(PIN_ANALOGUE::A1)) <span class="co">// possible numerical values types are uint8_t, uint16_t, uint32_t. (do not put other types)</span></a>
+<a class="sourceLine" id="cb21-5" title="5">    , <span class="dt">uint16_t</span>(analogRead_mv(PIN_ANALOGUE::VCC)) <span class="co">// A1 and VCC values (note: alalog read is valid after the first (Analogue.available() == true).)</span></a>
+<a class="sourceLine" id="cb21-6" title="6">    , <span class="dt">uint32_t</span>(millis()) <span class="co">// put timestamp here.</span></a>
+<a class="sourceLine" id="cb21-7" title="7">);</a></code></pre></div>
+<p>The first parameter of <code>pack_bytes</code> specifies the container. In this case, it is <code>pkt.get_payload()</code>.</p>
+<p>The parameters after that are variable arguments, specifying as many values of the corresponding type in <code>pack_bytes</code> as needed. The <code>pack_bytes</code> internally calls the <code>.push_back()</code> method to append the specified value at the end.</p>
+<p>The third line, <code>make_pair()</code>, is a standard library function to generate <code>std::pair</code>. This is specified to avoid confusion of string types (specifically, whether or not to include null characters when storing payloads). The first parameter of <code>make_pair()</code> is the string type (<code>char*</code>, <code>uint8_t*</code>, <code>uint8_t[]</code>, etc.) The second parameter is the number of bytes to store in the payload.</p>
+<p>Lines 4, 5, and 6 store values of numeric types (<code>uint8_t</code>, <code>uint16_t</code>, <code>uint32_t</code>). Numeric types such as signed, or even the same numeric type such as <code>char</code> are cast to the three types listed on the left and submitted.</p>
+<p><code>analogRead()</code> and <code>analogRead_mv()</code> get the result of ADC. The former is the ADC value (0..1023) and the latter is the voltage[mv](0..2470). The supply voltage of the module is read internally from the value of the voltage divider resistor, so we use <code>adalogRead_mv()</code> to perform that conversion.</p>
+<p>This completes the packet preparation. Now all that remains is to make a request for transmission.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb22-1" title="1">pkt.transmit();</a></code></pre></div>
+<p>Packets are sent using the <code>pkt.transmit()</code> method of the <code>pkt</code> object.</p>
+<div class="info">
+<p>Although not used in this ACT, the return value contains information about the success or failure of the request and the number corresponding to the request. Use this return value if the process waits until the transmission is complete.</p>
+</div>
+<h3 id="on_rx_packet">on_rx_packet()</h3>
+<p>This is the process when there is an incoming packet.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb23-1" title="1"><span class="dt">void</span> on_rx_packet(packet_rx&amp; rx, <span class="dt">bool_t</span> &amp;handled) {</a>
+<a class="sourceLine" id="cb23-2" title="2">        <span class="dt">uint8_t</span> msg[MSG_LEN];</a>
+<a class="sourceLine" id="cb23-3" title="3">        <span class="dt">uint16_t</span> adcval, volt;</a>
+<a class="sourceLine" id="cb23-4" title="4">        <span class="dt">uint32_t</span> timestamp;</a>
+<a class="sourceLine" id="cb23-5" title="5"></a>
+<a class="sourceLine" id="cb23-6" title="6">        <span class="co">// expand packet payload (shall match with sent packet data structure, see pack_bytes())</span></a>
+<a class="sourceLine" id="cb23-7" title="7">        expand_bytes(rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb23-8" title="8">                    , msg       <span class="co">// 4bytes of msg</span></a>
+<a class="sourceLine" id="cb23-9" title="9">                                            <span class="co">//   also can be -&gt; std::make_pair(&amp;msg[0], MSG_LEN)</span></a>
+<a class="sourceLine" id="cb23-10" title="10">                    , adcval    <span class="co">// 2bytes, A1 value [0..1023]</span></a>
+<a class="sourceLine" id="cb23-11" title="11">                  , volt      <span class="co">// 2bytes, Module VCC[mV]</span></a>
+<a class="sourceLine" id="cb23-12" title="12">                    , timestamp <span class="co">// 4bytes of timestamp</span></a>
+<a class="sourceLine" id="cb23-13" title="13">        );</a>
+<a class="sourceLine" id="cb23-14" title="14">        </a>
+<a class="sourceLine" id="cb23-15" title="15">        <span class="co">// if PING packet, respond pong!</span></a>
+<a class="sourceLine" id="cb23-16" title="16">    <span class="cf">if</span> (!strncmp((<span class="at">const</span> <span class="dt">char</span>*)msg, <span class="st">&quot;PING&quot;</span>, MSG_LEN)) {</a>
+<a class="sourceLine" id="cb23-17" title="17">                <span class="co">// transmit a PONG packet with specifying the address.</span></a>
+<a class="sourceLine" id="cb23-18" title="18">        vTransmit(MSG_PONG, rx.get_psRxDataApp()-&gt;u32SrcAddr);</a>
+<a class="sourceLine" id="cb23-19" title="19">    }</a>
+<a class="sourceLine" id="cb23-20" title="20"></a>
+<a class="sourceLine" id="cb23-21" title="21">        <span class="co">// display the packet</span></a>
+<a class="sourceLine" id="cb23-22" title="22">        Serial &lt;&lt; format(<span class="st">&quot;&lt;RX ad=</span><span class="sc">%x</span><span class="st">/lq=</span><span class="sc">%d</span><span class="st">/ln=</span><span class="sc">%d</span><span class="st">/sq=</span><span class="sc">%d</span><span class="st">:&quot;</span> <span class="co">// note: up to 4 args!</span></a>
+<a class="sourceLine" id="cb23-23" title="23">                    , rx.get_psRxDataApp()-&gt;u<span class="dv">32</span><span class="er">SrcAddr</span></a>
+<a class="sourceLine" id="cb23-24" title="24">                    , rx.get_lqi()</a>
+<a class="sourceLine" id="cb23-25" title="25">                    , rx.get_length()</a>
+<a class="sourceLine" id="cb23-26" title="26">                    , rx.get_psRxDataApp()-&gt;u<span class="dv">8</span><span class="er">Seq</span></a>
+<a class="sourceLine" id="cb23-27" title="27">                    )</a>
+<a class="sourceLine" id="cb23-28" title="28">                &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%s</span><span class="st"> AD=</span><span class="sc">%d</span><span class="st"> V=</span><span class="sc">%d</span><span class="st"> TS=</span><span class="sc">%d</span><span class="st">ms&gt;&quot;</span> <span class="co">// note: up to 4 args!</span></a>
+<a class="sourceLine" id="cb23-29" title="29">                    , msg</a>
+<a class="sourceLine" id="cb23-30" title="30">                    , adcval</a>
+<a class="sourceLine" id="cb23-31" title="31">                    , volt</a>
+<a class="sourceLine" id="cb23-32" title="32">                    , timestamp</a>
+<a class="sourceLine" id="cb23-33" title="33">                    )</a>
+<a class="sourceLine" id="cb23-34" title="34">               &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb23-35" title="35">               &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb23-36" title="36">    }</a></code></pre></div>
+<p>First, the data of the incoming packet is passed as parameter <code>rx</code>. From <code>rx</code>, the address information and data payload of the wireless packet is accessed.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb24-1" title="1"><span class="cf">while</span> (the_twelite.receiver.available()) {</a>
+<a class="sourceLine" id="cb24-2" title="2">        <span class="kw">auto</span>&amp;&amp; rx = the_twelite.receiver.read();</a></code></pre></div>
+<p>In the next line, the received packet data refers to the source address (32-bit long address and 8-bit logical address) and other information.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb25-1" title="1">Serial &lt;&lt; format(<span class="st">&quot;..receive(%08x/</span><span class="sc">%d</span><span class="st">) : &quot;</span>,</a>
+<a class="sourceLine" id="cb25-2" title="2">   rx.get_addr_src_long(), rx.get_addr_src_lid());</a></code></pre></div>
+<div class="info">
+<p>In <code>&lt;NWK_SIMPLE&gt;</code>, two types of addresses are always exchanged: an 8-bit logical ID and a 32-bit long address. When specifying the destination, either the long address or the logical address is specified. When receiving, both addresses are included.</p>
+</div>
+<p>The MWX library provides a function <code>expand_bytes()</code> as a counterpart to <code>pack_bytes()</code> used in <code>transmit()</code>.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb26-1" title="1"><span class="dt">uint8_t</span> msg[MSG_LEN];</a>
+<a class="sourceLine" id="cb26-2" title="2"><span class="dt">uint16_t</span> adcval, volt;</a>
+<a class="sourceLine" id="cb26-3" title="3"><span class="dt">uint32_t</span> timestamp;</a>
+<a class="sourceLine" id="cb26-4" title="4"></a>
+<a class="sourceLine" id="cb26-5" title="5"><span class="co">// expand packet payload (shall match with sent packet data structure, see pack_bytes())</span></a>
+<a class="sourceLine" id="cb26-6" title="6">expand_bytes(rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb26-7" title="7">        , msg       <span class="co">// 4bytes of msg</span></a>
+<a class="sourceLine" id="cb26-8" title="8">                                <span class="co">//   also can be -&gt; std::make_pair(&amp;msg[0], MSG_LEN)</span></a>
+<a class="sourceLine" id="cb26-9" title="9">        , adcval    <span class="co">// 2bytes, A1 value [0..1023]</span></a>
+<a class="sourceLine" id="cb26-10" title="10">      , volt      <span class="co">// 2bytes, Module VCC[mV]</span></a>
+<a class="sourceLine" id="cb26-11" title="11">        , timestamp <span class="co">// 4bytes of timestamp</span></a>
+<a class="sourceLine" id="cb26-12" title="12">    );</a></code></pre></div>
+<p>Lines 1 through 3 specify variables to store data.</p>
+<p>The first parameter specifies the first iterator of the container (a <code>uint8_t*</code> pointer), which can be retrieved by the <code>.begin()</code> method. The second parameter is the next iterator after the end of the container and can be retrieved with the <code>.end()</code> method.</p>
+<p>The third and subsequent parameters enumerate variables. The payloads are read and stored in the order in which they are listed.</p>
+<div class="info">
+<p>This ACT omits error checking, such as if the packet length is wrong. If you want to make the check strict, judge by the return value of <code>expand_bytes()</code>.</p>
+<p>The return value of <code>expand_bytes()</code> is <code>uint8_t*</code>, but returns <code>nullptr (null pointer)</code> in case of access beyond the end.</p>
+</div>
+<p>The process sends a PONG message if the identifier of the 4-byte string read in <code>msg</code> is <code>&quot;PING&quot;</code>.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb27-1" title="1"><span class="cf">if</span> (!strncmp((<span class="at">const</span> <span class="dt">char</span>*)msg, <span class="st">&quot;PING&quot;</span>, MSG_LEN)) {</a>
+<a class="sourceLine" id="cb27-2" title="2">    vTransmit(MSG_PONG, rx.get_psRxDataApp()-&gt;u32SrcAddr);</a>
+<a class="sourceLine" id="cb27-3" title="3">}</a></code></pre></div>
+<p>It then displays information on packets that have arrived.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb28-1" title="1">        Serial &lt;&lt; format(<span class="st">&quot;&lt;RX ad=</span><span class="sc">%x</span><span class="st">/lq=</span><span class="sc">%d</span><span class="st">/ln=</span><span class="sc">%d</span><span class="st">/sq=</span><span class="sc">%d</span><span class="st">:&quot;</span> <span class="co">// note: up to 4 args!</span></a>
+<a class="sourceLine" id="cb28-2" title="2">                    , rx.get_psRxDataApp()-&gt;u<span class="dv">32</span><span class="er">SrcAddr</span></a>
+<a class="sourceLine" id="cb28-3" title="3">                    , rx.get_lqi()</a>
+<a class="sourceLine" id="cb28-4" title="4">                    , rx.get_length()</a>
+<a class="sourceLine" id="cb28-5" title="5">                                        , rx.get_psRxDataApp()-&gt;u<span class="dv">8</span><span class="er">Seq</span></a>
+<a class="sourceLine" id="cb28-6" title="6">                    )</a>
+<a class="sourceLine" id="cb28-7" title="7">           &lt;&lt; format(<span class="st">&quot; </span><span class="sc">%s</span><span class="st"> AD=</span><span class="sc">%d</span><span class="st"> V=</span><span class="sc">%d</span><span class="st"> TS=</span><span class="sc">%d</span><span class="st">ms&gt;&quot;</span> <span class="co">// note: up to 4 args!</span></a>
+<a class="sourceLine" id="cb28-8" title="8">                    , msg</a>
+<a class="sourceLine" id="cb28-9" title="9">                    , adcval</a>
+<a class="sourceLine" id="cb28-10" title="10">                    , volt</a>
+<a class="sourceLine" id="cb28-11" title="11">                    , timestamp</a>
+<a class="sourceLine" id="cb28-12" title="12">                    )</a>
+<a class="sourceLine" id="cb28-13" title="13">         &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb28-14" title="14">               &lt;&lt; mwx::flush;</a></code></pre></div>
+<p>The <code>format()</code> is used because numeric formatting output is required. helper class that allows the same syntax as <em>printf()</em> for <code>&gt;&gt;</code> operators, but <strong>limits</strong> the number of arguments to a maximum of 8 (for 32-bit parameters). (A compile error will occur if the limit is exceeded. Note that <code>Serial.printfmt()</code> has no limit on the number of arguments.)</p>
+<p>The <code>mwx::crlf</code> specifies a newline character (CR LF), and <code>mwx::flush</code> waits for completion of output. (<code>mxw::flush</code> may be written as <code>Serial.flush()</code>)</p>
+</body>
+</html>

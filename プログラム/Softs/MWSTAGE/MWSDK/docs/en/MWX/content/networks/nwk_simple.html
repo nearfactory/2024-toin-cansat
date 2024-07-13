@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Simple Relay Net NWK_SIMPLE</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Simple Relay Net NWK_SIMPLE</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#simple-relay-network-nwk_simple">simple relay network &lt;NWK_SIMPLE&gt;</a><ul>
+<li><a href="#declaration-and-registration">Declaration and registration</a></li>
+<li><a href="#configuration.">Configuration.</a><ul>
+<li><a href="#operator-configuration"><code>&lt;&lt;</code> operator (configuration)</a></li>
+</ul></li>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#prepare_tx_packet">prepare_tx_packet()</a></li>
+</ul></li>
+<li><a href="#send_object">send_object</a><ul>
+<li><a href="#bool-operator">bool operator</a></li>
+<li><a href="#transmit">transmit()</a></li>
+</ul></li>
+<li><a href="#maximum-packet-length-and-structure">Maximum packet length and structure</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="simple-relay-network-nwk_simple">simple relay network &lt;NWK_SIMPLE&gt;</h1>
+<p>A network BEHAVIOR that implements a simple relay network.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">auto</span>&amp;&amp; nwksmpl = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb1-2" title="2">nwksmpl &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">        &lt;&lt; NWK_SIMPLE::repeat_max(<span class="dv">3</span>);</a></code></pre></div>
+<p>Above is an example of network usage declaration and configuration. The details will be explained later, but we will first explain the basics, such as the concept of network addresses.</p>
+<div class="info">
+<p>For actual usage examples, please refer to <a href="../act_samples/README.html">Explanation of sample acts</a> for actual usage examples.</p>
+</div>
+<p>Each radio station in this network is identified by an 8-bit logical ID. This value is set independently by each radio station at startup. Duplicate logical IDs are allowed, but communication must be based on the assumption that duplicate IDs are used.</p>
+<p>Set the ID for each radio station. Normally, a network will have a radio station in the role of Parent Node and a radio station in the role of Child Node. A network with only Child Nodes can also be operated.</p>
+<p>Child Nodes can also play the role of a repeater.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Radio station identification ID</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0x00</code></td>
+<td>Parent station</td>
+</tr>
+<tr class="even">
+<td><code>0x01</code>. <code>0xEF</code></td>
+<td>Child station</td>
+</tr>
+<tr class="odd">
+<td><code>0xFE</code></td>
+<td>child station that does not assign an ID</td>
+</tr>
+</tbody>
+</table>
+<p>Logical IDs can be specified as destinations, but <code>0xFE</code> and <code>0xFF</code> have special meanings. The table below summarizes the destination designation.</p>
+<table>
+<colgroup>
+<col style="width: 34%"></col>
+<col style="width: 65%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Destination ID</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0x00</code></td>
+<td>Designation of a parent station from a child station. Designation from a parent station is invalid.</td>
+</tr>
+<tr class="even">
+<td><code>0x01</code>. <code>0xEF</code></td>
+<td>Specify a specific child station.</td>
+</tr>
+<tr class="odd">
+<td><code>0xFE</code></td>
+<td>Broadcast communication (broadcast) specifying all child stations.</td>
+</tr>
+<tr class="even">
+<td><code>0xFF</code></td>
+<td>broadcast broadcast specifying all radio stations.</td>
+</tr>
+</tbody>
+</table>
+<p>A serial number, specified in 32 bits, can also be used to identify a radio station.</p>
+<p>Packet delivery uses IEEE802.15.4 broadcast, which does not use ACK, so the success of delivery cannot be determined by the sender.</p>
+<p>This may seem inefficient for large-scale, frequent communication, but it can be more efficient for networks that only collect data and have a relatively small number of relay stages.</p>
+<p>In addition, since no communication is required to build the network, in principle it is less likely that communication will stop completely even in exceptional situations such as failures. As long as the Parent Node is receiving and within wireless range of the Child Node, and the Child Node transmits a packet, the Parent Node can receive it in most cases. In a network where communication is required to establish the network, once configuration information has been lost, data cannot be sent until communication between the Parent Node and Child Node is completed again to establish communication. This is the reason why the network behavior <code>&lt;NWK_SIMPLE&gt;</code> is simple in its naming.</p>
+<p>For this simple network to work, it is often necessary to ignore retransmitted packets (identical packets) that arrive multiple times. Identification of identical packets in <code>&lt;NWK_SIMPLE&gt;</code> is based on the serial number of the sender and the sequence number of the packet when sent (called a duplicate checker). The sequential numbers are assigned in order as 0…63, and the assumption is made that the sequential numbers of packets arriving at close time are close numbers. The duplicate checker will time out packets that have been received more than a certain amount of time and are far away in terms of number (if packet 10 is received now, packets in the 40s are considered to have been sent some time ago) and exclude them from duplicate checker.</p>
+<p>Considerations for the duplicate checker are as follows</p>
+<div class="info">
+<p>Under general usage conditions (e.g., less than 3 relay stages and packets per second arriving from less than 10 stations), no special considerations are required.</p>
+</div>
+<ul>
+<li>Number of elements that can be checked (increasing the number increases memory consumption and processing time for checking)</li>
+<li>Timeout time setting.</li>
+</ul>
+<p>By default, the timeout is 1 second and the number of radio stations to check is 16. This means that if a relay packet is passed around for more than 1 second, it will no longer be considered a duplicate packet. If packets from more than 16 wireless packets arrive in the short term, the duplicate packets will not be checked.</p>
+<p>If the number of relay stages or at least the number of relay stations is large, or if retransmissions are made at very long intervals, you may need to consider this setting.</p>
+<h2 id="declaration-and-registration">Declaration and registration</h2>
+<p>Here is an example of using the network behavior <code>&lt;NWK_SIMPLE&gt;</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-5" title="5">  ...</a>
+<a class="sourceLine" id="cb2-6" title="6">  </a>
+<a class="sourceLine" id="cb2-7" title="7">  <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb2-8" title="8">}</a></code></pre></div>
+<p>Include the definition information of <code>&lt;NWK_SIMPLE&gt;</code> in line 2. register <code>&lt;NWK_SIMPLE&gt;</code> in <code>the_twelite</code> in line 7.</p>
+<h2 id="configuration.">Configuration.</h2>
+<p>Configure after registering <code>&lt;NWK_SIMPLE&gt;</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="kw">auto</span>&amp;&amp; nwksmpl = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb3-3" title="3">  nwksmpl &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>);</a>
+<a class="sourceLine" id="cb3-4" title="4">}</a></code></pre></div>
+<p>Settings are made with the <code>&lt;&lt;</code> operator.</p>
+<h3 id="operator-configuration"><code>&lt;&lt;</code> operator (configuration)</h3>
+<p>The <code>&lt;&lt;</code> operator is used to configure the initial settings of the object <code>the_twelite</code>.</p>
+<p>The following configuration class objects are used as input, and default values are applied if no configuration is made.</p>
+<h4 id="nwk_simplelogical_iduint8_t-id">NWK_SIMPLE::logical_id(uint8_t id)</h4>
+<p>Set the logical device ID specified in parameter <code>id</code>. Default is <code>0xFE</code> (ID not set Child Node).</p>
+<h4 id="nwk_simpleretry_defaultuint8_t-val">NWK_SIMPLE::retry_default(uint8_t val)</h4>
+<p>The number of times specified in parameter <code>val</code> is the default number of retransmissions when sending.</p>
+<h4 id="nwk_simpleretry_maxuint8_t-val">NWK_SIMPLE::retry_max(uint8_t val)</h4>
+<p>The number of times specified in parameter <code>val</code> is set to the maximum number of relays. Default is <code>2</code>.</p>
+<p>If you do not want to relay, specify <code>0</code>.</p>
+<div class="info">
+<p><a href="../api-reference/predefined_objs/the_twelite.html#%22twenet-rx_when_idle-uint-8-_t-benable">Set not to run receiving circuit</a>, the TWELITE wireless microcontroller cannot receive wireless packets. relay operation will not be performed.</p>
+</div>
+<h4 id="nwk_simpledup_checkuint8_t-maxnodes-uint16_t-timeout_ms-uint8_t-tickscale">NWK_SIMPLE::dup_check(uint8_t maxnodes, uint16_t timeout_ms, uint8_t tickscale)</h4>
+<p>Parameters of the duplicate packet detection algorithm.</p>
+<div class="warning">
+<p>Consideration should be given if there are many relay stages or if the packet retransmission interval is long, but <strong>no configuration change is required for general use. </strong></p>
+</div>
+<p>** <code>maxnodes</code> is the number of radio stations (nodes) to keep the history. If the number of nodes is set to a small number, some nodes will not be deduplicated if more packets from more than the set number of nodes arrive in a short period of time. If the node cannot be deduplicated, problems will occur such as data being displayed more than once when received, or more packets being relayed than necessary. The default is <code>16</code>, which consumes 21 bytes of memory per node. * <code>timeout_ms</code> is the timeout time in milliseconds before the history is erased. The timeout is managed in blocks of continuation numbers, and timeout processing is done in blocks. The default is <code>1000</code>[ms]. * <code>tickscale</code> is a unit of time to manage timeouts and is <code>2^tickscale</code>[ms]. Since time is managed in 7 bits, it should be set so that <code>127*(2^tickscale) &gt; timeout_ms</code>. The default is <code>5</code>(32ms).</p>
+<h4 id="nwk_simplesecure_pktconst-uint8_t-pukey-bool-b_recv_plain_pkt-false">NWK_SIMPLE::secure_pkt(const uint8_t *pukey, bool b_recv_plain_pkt = false)</h4>
+<p>Enables encrypted packets.</p>
+<ul>
+<li><code>pukey</code> specifies the encryption key in 16 bytes (128bit).</li>
+<li><code>b_recv_plain_pkt</code>, if set to <code>true</code>, will receive plaintext packets with the same Application ID and channel.</li>
+</ul>
+<div class="info">
+<p>Whether a packet is plaintext or not can be determined by <code>packet_rx::is_secure_pkt()</code> with <code>true</code> (encrypted) or <code>false</code> (plaintext).</p>
+</div>
+<h4 id="stg_std">STG_STD</h4>
+<p>Reflects the values set in <a href="../settings/stg_std.html#%22no-1">Interactive settings mode</a>. The following values are reflected.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb4-3" title="3">...</a>
+<a class="sourceLine" id="cb4-4" title="4">set.reload(); <span class="co">// Load configuration values</span></a>
+<a class="sourceLine" id="cb4-5" title="5">nwk &lt;&lt; set;   <span class="co">// Reflects Interactive settings mode</span></a></code></pre></div>
+<ul>
+<li><strong>logical_id</strong></li>
+<li><strong>retry_default</strong></li>
+</ul>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="prepare_tx_packet">prepare_tx_packet()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="co">// The type name is packet_tx_nwk_simple&lt;NWK_SIMPLE&gt;, but it is written auto&amp;&amp;.</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">auto</span>&amp;&amp;  preare_tx_packet()</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="co">//Example</span></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = </a>
+<a class="sourceLine" id="cb5-6" title="6">  the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb5-7" title="7">  ...</a>
+<a class="sourceLine" id="cb5-8" title="8">  pkt.transmit();</a>
+<a class="sourceLine" id="cb5-9" title="9">}</a></code></pre></div>
+<p>Gets the send object. The object will be a class derived from <a href="../api-reference/classes/packet_tx.html"><code>packet_tx</code></a>. This object contains the transmission address and payload, and the <code>.transmit()</code> method is used to send the packet.</p>
+<p>The <code>bool</code> operator is defined in this object. If TWENET cannot accept the send request when the object is created, it returns <code>false</code>.</p>
+<h2 id="send_object">send_object</h2>
+<p>The method of the send object obtained by <code>.prepare_tx_packet()</code> method.</p>
+<h3 id="bool-operator">bool operator</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">operator</span> <span class="dt">bool</span>()</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co">//Example</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = </a>
+<a class="sourceLine" id="cb6-5" title="5">  the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a></code></pre></div>
+<p>Returns <code>false</code> if TWENET cannot accept the request for transmission at the time of object creation.</p>
+<h3 id="transmit">transmit()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">MWX_APIRET transmit()</a>
+<a class="sourceLine" id="cb7-2" title="2"></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co">//Example</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="dt">uint8_t</span> txid;</a>
+<a class="sourceLine" id="cb7-5" title="5"></a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = </a>
+<a class="sourceLine" id="cb7-7" title="7">  the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb7-8" title="8">  </a>
+<a class="sourceLine" id="cb7-9" title="9">  ...</a>
+<a class="sourceLine" id="cb7-10" title="10">  </a>
+<a class="sourceLine" id="cb7-11" title="11">  MWX_APIRET ret = pkt.transmit();</a>
+<a class="sourceLine" id="cb7-12" title="12">  <span class="cf">if</span> (ret) {</a>
+<a class="sourceLine" id="cb7-13" title="13">    txid = pkt.get_value();</a>
+<a class="sourceLine" id="cb7-14" title="14">  }</a>
+<a class="sourceLine" id="cb7-15" title="15">}</a></code></pre></div>
+<p>Processes the packet for transmission. If <code>MWX_APIRET</code> is <code>true</code>, the request is successful, but the sending process does not start at this request.</p>
+<p>The transmission ID of the packet is stored in the value part obtained by <a href="../api-reference/classes/mwx_apiret.html"><code>MWX_APIRET::get_value()</code></a>. the_twelite.x_status.is_complete() or <a href="../api-reference/behavior/#transmit_complete"><code>transmit_complete()</code></a> can be used to confirm completion of the transmission.</p>
+<h2 id="maximum-packet-length-and-structure">Maximum packet length and structure</h2>
+<p>The maximum packet length is shown below. When the destination is LID (logical device ID), it is the destination short column and can contain up to 87 bytes without encryption.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Network Layer</th>
+<th>Encryption</th>
+<th>Maximum Payload</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NWK_SIMPLE</td>
+<td>None</td>
+<td>91</td>
+</tr>
+<tr class="even">
+<td>NWK_SIMPLE</td>
+<td>Yes</td>
+<td>89</td>
+</tr>
+</tbody>
+</table>
+<p>Two bytes are set aside as a reserve for future use. This reserve byte can be used at the user’s discretion.</p>
+<p>The structure of the packet is as follows.</p>
+<pre><code>|MacH:17[........................................] MacF:2|
+         TWENET:3[.....................] TwenetF:1
+                  NWK_SIMPLE:11|PAYLOAD
+                         　　             (:n is the number of bytes)
+
+1: MacH is IEEE802.15.4 MAC header information
+2: TwenetH is information for TWENET identification
+3: NWK_SIMPLE is control information for NWK_SIMPLE network
+  |Type:1|Src LID:1|Src Addr:4|Dest LID:1|Dst Addr:4|Repeat:1|
+4: PAYLOAD is payload
+5: TwenetF is a CRC8 checksum (to discriminate TWENET packets)
+6: MacF is a CRC16 MAC layer checksum</code></pre>
+</body>
+</html>

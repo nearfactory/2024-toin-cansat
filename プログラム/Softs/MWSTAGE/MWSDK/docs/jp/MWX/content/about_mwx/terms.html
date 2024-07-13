@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>用語</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">用語</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#用語">用語</a><ul>
+<li><a href="#一般的な用語">一般的な用語</a><ul>
+<li><a href="#sdk-twelite-sdk-mwsdk">SDK (TWELITE SDK, MWSDK)</a></li>
+<li><a href="#ieee802.15.4">IEEE802.15.4</a></li>
+<li><a href="#パケット">パケット</a></li>
+<li><a href="#ペイロード">ペイロード</a></li>
+<li><a href="#ノード">ノード</a></li>
+</ul></li>
+<li><a href="#mwxライブラリ特有の用語">MWXライブラリ特有の用語</a><ul>
+<li><a href="#アクト">アクト</a></li>
+<li><a href="#ビヘイビア"><span>ビヘイビア</span></a></li>
+<li><a href="#クラスオブジェクト">クラスオブジェクト</a></li>
+</ul></li>
+<li><a href="#cに関する用語">C++に関する用語</a><ul>
+<li><a href="#c">C++</a></li>
+<li><a href="#c11">C++11</a></li>
+<li><a href="#クラス">クラス</a></li>
+<li><a href="#ラッパークラス">ラッパークラス</a></li>
+<li><a href="#メソッドメンバー関数">メソッド・メンバー関数</a></li>
+<li><a href="#オブジェクトインスタンス">オブジェクト（インスタンス）</a></li>
+<li><a href="#コンストラクタ">コンストラクタ</a></li>
+<li><a href="#デストラクタ">デストラクタ</a></li>
+<li><a href="#抽象クラス">抽象クラス</a></li>
+<li><a href="#スコープ">スコープ</a></li>
+<li><a href="#名前空間-namespace">名前空間 (namespace)</a></li>
+<li><a href="#テンプレート-template">テンプレート (template)</a></li>
+<li><a href="#nullptr">nullptr</a></li>
+<li><a href="#参照型">参照型</a></li>
+<li><a href="#型推論">型推論</a></li>
+<li><a href="#コンテナ">コンテナ</a></li>
+<li><a href="#イテレータ-.begin-.end">イテレータ, .begin(), .end()</a></li>
+<li><a href="#c標準ライブラリ">C++標準ライブラリ</a></li>
+<li><a href="#アルゴリズム">アルゴリズム</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="用語">用語</h1>
+<p>本資料で利用する用語について補足します。</p>
+<div class="warning">
+<p>用語の解説は、規格などで定められる定義に沿っていない場合があります。</p>
+</div>
+<h2 id="一般的な用語">一般的な用語</h2>
+<h3 id="sdk-twelite-sdk-mwsdk">SDK (TWELITE SDK, MWSDK)</h3>
+<p>ソフトウェア開発環境</p>
+<div class="info">
+<p>TWELITE無線マイコンのソフトウェア開発用のSDKをTWELITE SDK (またはMWSDK)と呼称します。</p>
+</div>
+<h3 id="ieee802.15.4">IEEE802.15.4</h3>
+<p>TWELITE無線モジュールが利用する無線規格です。MWXライブラリを使用する限り、無線規格の詳細を意識する必要はありません。</p>
+<h3 id="パケット">パケット</h3>
+<p>無線通信における最小の通信単位です。</p>
+<p>最大量は通信方式や通信時の設定によって変わりますが、MWXライブラリ標準の通信&lt;NWK_SIMPLE&gt;では、ユーザが１パケットで送信できるデータ量は９０バイトです。</p>
+<h3 id="ペイロード">ペイロード</h3>
+<p>「貨物」といった意味合いですが、無線パケットに含まれるデータ本体のことをいいます。</p>
+<h3 id="ノード">ノード</h3>
+<p>「点・節」といった意味合いですが、無線ネットワーク内の無線局のことを言います。</p>
+<h2 id="mwxライブラリ特有の用語">MWXライブラリ特有の用語</h2>
+<h3 id="アクト">アクト</h3>
+<p>本ライブラリを用いて作成したプログラム。そのソースコードまたは動作するプログラムのことを言います。</p>
+<h3 id="ビヘイビア"><a href="../api-reference/behavior/README.html">ビヘイビア</a></h3>
+<p>アクトの中でも特にイベント形式のプログラム。そのソースコードまたは動作するプログラムのことを言います。</p>
+<p>ビヘイビアは１つのクラス定義による記述で、TWENETからのコールバック関数やイベントや割り込み処理を記述しひとまとめにしています。MWXライブラリでは以下の３種類のビヘイビアがあります。</p>
+<ul>
+<li>アプリケーションビヘイビア：イベントドリブンでのアプリケーション記述を行い、ユーザが定義するクラス。</li>
+<li>ボードビヘイビア：TWELITE無線モジュールを実装するボードの機能利用を簡素化するためのクラス。</li>
+<li>ネットワークビヘイビア：無線ネットワークの手続きを簡素化するためのクラス。</li>
+</ul>
+<p>ビヘイビア名は <code>&lt; &gt;</code> で括って表記します。例えばシンプル中継ネットワークのビヘイビア名は <code>&lt;NWK_SIMPLE&gt;</code> です。</p>
+<h3 id="クラスオブジェクト">クラスオブジェクト</h3>
+<p>本ライブラリの解説では、ライブラリで最初からグローバル宣言されたオブジェクトをクラスオブジェクトと呼称します。<code>Serial</code>, <code>Wire</code> などです。これらクラスオブジェクトは手続きなしまたは開始手続きを行うことで利用できます。</p>
+<p>メモリを比較的多く消費するクラスオブジェクトは、初期化手続きの際(<code>.setup()</code>または<code>.begin()</code>メソッド)に初期化パラメータに沿ったメモリを確保します。</p>
+<h2 id="cに関する用語">C++に関する用語</h2>
+<div class="info">
+<p>一般の用語です。C言語の知識を前提に解説します。</p>
+</div>
+<h3 id="c">C++</h3>
+<p>C++言語のこと。</p>
+<div class="info">
+<p>MWXライブラリはC++とC言語によって記述されています。</p>
+</div>
+<h3 id="c11">C++11</h3>
+<p>C++規格のバージョンの一つ。2011年式のC++といった意味合いで、2011年にISOで規格化されています。直前のC++03から大きく機能拡張されています。C++14, C++17といったより新しいバージョンがあります。</p>
+<div class="info">
+<p>MWXライブラリはC++11で追加された機能や構文を用いて実装されています。<a href="design_policy.html#%22c-yan-yu-gui-ge">MWSDKのコンパイラ対応</a>はC++11までとなります。</p>
+</div>
+<h3 id="クラス">クラス</h3>
+<p>あるデータに注目して、その手続きをひとまとめにしたもの。構造体に、その構造体を取り扱うための手続きが含まれています。実際にはもっと深い話題に発展しますが、専門書を参考にしてください。</p>
+<p>C++においては、キーワードの <code>struct</code>と <code>class</code>は本質的には同じもので、いずれのキーワードで宣言してもクラスとなります。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">struct</span> myhello {</a>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;hello </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); }</a>
+<a class="sourceLine" id="cb1-4" title="4">};</a></code></pre></div>
+<p>上記のクラス定義をC言語でも行った場合、例えば以下のようになります。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">typedef</span> <span class="kw">struct</span> _c_myhello {</a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb2-3" title="3">  <span class="dt">void</span> (*pf_say_hello)(<span class="kw">struct</span> _c_myhello *);</a>
+<a class="sourceLine" id="cb2-4" title="4">} c_myhello;</a>
+<a class="sourceLine" id="cb2-5" title="5"></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="dt">void</span> say_hello(c_myhello*p) { p-&gt;pf_say_hello(); }</a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="dt">void</span> init_c_my_hello(c_myhello*p) {</a>
+<a class="sourceLine" id="cb2-8" title="8">  p-&gt;pf_say_hello = say_hello;</a>
+<a class="sourceLine" id="cb2-9" title="9">}</a></code></pre></div>
+<h3 id="ラッパークラス">ラッパークラス</h3>
+<p>既存のC言語のライブラリやその内部の構造体などをクラスに包含し、C++特有の機能性を追加するなどして、利用の便を図ったものです。解説中でも「～構造体をラップした」といった記述をする場合があります。</p>
+<div class="info">
+<p>MWXライブラリは、TWENETのCライブラリのラッパークラスと、新たに実装したクラス群との組み合わせになっています。</p>
+</div>
+<h3 id="メソッドメンバー関数">メソッド・メンバー関数</h3>
+<p>クラスに定義される関数で、クラスに紐付いています。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">struct</span> myhello {</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;hello </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); } <span class="co">//メソッド</span></a>
+<a class="sourceLine" id="cb3-4" title="4">};</a></code></pre></div>
+<h3 id="オブジェクトインスタンス">オブジェクト（インスタンス）</h3>
+<p>クラスを実体化（メモリ確保）したもの。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> func() {</a>
+<a class="sourceLine" id="cb4-2" title="2">    myhello obj_hello; <span class="co">// obj_helloがmyhelloクラスのオブジェクト</span></a>
+<a class="sourceLine" id="cb4-3" title="3">    obj_hello._i = <span class="dv">10</span>;</a>
+<a class="sourceLine" id="cb4-4" title="4">    obj_hello.say_hello();</a>
+<a class="sourceLine" id="cb4-5" title="5">}</a></code></pre></div>
+<p>本解説ではオブジェクトとインスタンスは同じ意味合いとして取り扱っています。</p>
+<h3 id="コンストラクタ">コンストラクタ</h3>
+<p>オブジェクト生成時の初期化手続き。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">struct</span> myhello {</a>
+<a class="sourceLine" id="cb5-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb5-3" title="3">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;hello </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); }</a>
+<a class="sourceLine" id="cb5-4" title="4">  </a>
+<a class="sourceLine" id="cb5-5" title="5">  myhello(<span class="dt">int</span> i = <span class="dv">0</span>) : _i(i) {} <span class="co">// コンストラクタ</span></a>
+<a class="sourceLine" id="cb5-6" title="6">};</a>
+<a class="sourceLine" id="cb5-7" title="7"></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb5-9" title="9">  myhello helo(<span class="dv">10</span>); <span class="co">// ここでコンストラクタが呼び出され_i=10にセットされる</span></a>
+<a class="sourceLine" id="cb5-10" title="10">}</a></code></pre></div>
+<h3 id="デストラクタ">デストラクタ</h3>
+<p>コンストラクタと対になってオブジェクトが破棄されるときの手続きです。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">struct</span> myhello {</a>
+<a class="sourceLine" id="cb6-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb6-3" title="3">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;hello! </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); }</a>
+<a class="sourceLine" id="cb6-4" title="4">  </a>
+<a class="sourceLine" id="cb6-5" title="5">  myhello(<span class="dt">int</span> i = <span class="dv">0</span>) : _i(i) {} <span class="co">// コンストラクタ</span></a>
+<a class="sourceLine" id="cb6-6" title="6">  ~myhello() {</a>
+<a class="sourceLine" id="cb6-7" title="7">    printf(<span class="st">&quot;good bye! </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i);</a>
+<a class="sourceLine" id="cb6-8" title="8">  } <span class="co">//デストラクタ</span></a>
+<a class="sourceLine" id="cb6-9" title="9">};</a></code></pre></div>
+<h3 id="抽象クラス">抽象クラス</h3>
+<p>C++では仮想クラスによりポリモーフィズム（多態性）を実現します。具体的には<code>virtual</code>キーワードで指定た純粋仮想関数を定義したクラスです。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">struct</span> Base {</a>
+<a class="sourceLine" id="cb7-2" title="2">  <span class="kw">virtual</span> <span class="dt">void</span> say_hello() = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb7-3" title="3">};</a>
+<a class="sourceLine" id="cb7-4" title="4"></a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="kw">struct</span> DeriveEng : <span class="kw">public</span> Base {</a>
+<a class="sourceLine" id="cb7-6" title="6">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;Hello!&quot;</span>); }</a>
+<a class="sourceLine" id="cb7-7" title="7">};</a>
+<a class="sourceLine" id="cb7-8" title="8"></a>
+<a class="sourceLine" id="cb7-9" title="9"><span class="kw">struct</span> DeriveJpn : <span class="kw">public</span> Base {</a>
+<a class="sourceLine" id="cb7-10" title="10">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;Kontiwa!&quot;</span>); }</a>
+<a class="sourceLine" id="cb7-11" title="11">};</a></code></pre></div>
+<div class="warning">
+<p>MWXライブラリでは、コンパイラの制限や性能上の理由で仮想関数を使用しません。ポリモーフィズムを実現するのに<a href="design_policy.html#%22crtpnishitatenpurtopatn">別の手法</a>を用いています。</p>
+</div>
+<h3 id="スコープ">スコープ</h3>
+<p>C/C++言語では <code>{ }</code> で括った範囲と考えてください。この中で生成したオブジェクトは、スコープから出るときに破棄されます。この時デストラクタが呼び出されます。</p>
+<p>以下は、明示的にスコープを設定したものです。<code>helo2</code>は8行目まで実行された時点で破棄され、デストラクタが呼び出されます。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb8-2" title="2">  myhello helo1(<span class="dv">1</span>);</a>
+<a class="sourceLine" id="cb8-3" title="3">  helo1.say_hello();</a>
+<a class="sourceLine" id="cb8-4" title="4">  </a>
+<a class="sourceLine" id="cb8-5" title="5">  {</a>
+<a class="sourceLine" id="cb8-6" title="6">    myhello helo2(<span class="dv">2</span>);</a>
+<a class="sourceLine" id="cb8-7" title="7">    helo2.say_hello();</a>
+<a class="sourceLine" id="cb8-8" title="8">  }</a>
+<a class="sourceLine" id="cb8-9" title="9">}</a>
+<a class="sourceLine" id="cb8-10" title="10"></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="co">// hello! 1</span></a>
+<a class="sourceLine" id="cb8-12" title="12"><span class="co">// hello! 2</span></a>
+<a class="sourceLine" id="cb8-13" title="13"><span class="co">// good bye! 2</span></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="co">// good bye! 1</span></a></code></pre></div>
+<p>MWXライブラリでは以下のような記法を用いています。ここではif文の条件判定式内で宣言（C89といった旧いC言語ではこういった場所での宣言はできません）されたオブジェクトの有効期間は、if文の<code>{}</code>内になります。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">struct</span> myhello {</a>
+<a class="sourceLine" id="cb9-2" title="2">  <span class="dt">int</span> _i;</a>
+<a class="sourceLine" id="cb9-3" title="3">  <span class="dt">void</span> say_hello() { printf(<span class="st">&quot;hello! </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); }</a>
+<a class="sourceLine" id="cb9-4" title="4">  <span class="kw">operator</span> <span class="dt">bool</span>() { <span class="cf">return</span> <span class="kw">true</span>; } <span class="co">// if()での判定用の演算子</span></a>
+<a class="sourceLine" id="cb9-5" title="5">  </a>
+<a class="sourceLine" id="cb9-6" title="6">  myhello(<span class="dt">int</span> i = <span class="dv">0</span>) : _i(i) {} <span class="co">// コンストラクタ</span></a>
+<a class="sourceLine" id="cb9-7" title="7">  ~myhello() { printf(<span class="st">&quot;good bye! </span><span class="sc">%d\n</span><span class="st">&quot;</span>, _i); } <span class="co">// コンストラクタ</span></a>
+<a class="sourceLine" id="cb9-8" title="8">};</a>
+<a class="sourceLine" id="cb9-9" title="9"></a>
+<a class="sourceLine" id="cb9-10" title="10"><span class="co">// myhello オブジェクトを生成する関数 (ジェネレータ)</span></a>
+<a class="sourceLine" id="cb9-11" title="11">myhello gen_greeting() { <span class="cf">return</span> my_hello(); }</a>
+<a class="sourceLine" id="cb9-12" title="12"></a>
+<a class="sourceLine" id="cb9-13" title="13"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb9-14" title="14">  <span class="cf">if</span> (myhello x = gen_greeting()) {</a>
+<a class="sourceLine" id="cb9-15" title="15">    <span class="co">// myhelloのオブジェクト x は if文中有効</span></a>
+<a class="sourceLine" id="cb9-16" title="16">    x.say_hello();</a>
+<a class="sourceLine" id="cb9-17" title="17">  }</a>
+<a class="sourceLine" id="cb9-18" title="18">  <span class="co">// if 分を抜けるときにオブジェクトxは破棄される</span></a>
+<a class="sourceLine" id="cb9-19" title="19">}</a></code></pre></div>
+<p>例えば二線シリアルバスなど、開始と終了の手続きがあって、その間だけオブジェクトによってバスを操作するような手続きです。オブジェクトの生成後、バスの接続が適切であればif文のtrue節が実行され、生成したオブジェクトによってバスの書き込みまたは読み出しを行います。バスの読み書き操作が終了したらif文を脱出し、この時デストラクタが呼び出され、バスの利用終了手続きが行われます。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="at">const</span> <span class="dt">uint8_t</span> DEV_ADDR = <span class="bn">0x70</span>;</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(DEV_ADDR)) { <span class="co">//バスの初期化、接続判定</span></a>
+<a class="sourceLine" id="cb10-3" title="3">    wrt(SHTC3_TRIG_H); <span class="co">// 書き出し</span></a>
+<a class="sourceLine" id="cb10-4" title="4">    wrt(SHTC3_TRIG_L);</a>
+<a class="sourceLine" id="cb10-5" title="5">} <span class="co">// バスの利用終了手続き</span></a></code></pre></div>
+<h3 id="名前空間-namespace">名前空間 (namespace)</h3>
+<p>定義名の重複を避けるためC++では名前空間が積極的に用いられます。名前空間にある定義にアクセスするには<code>::</code>を用います。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">namespace</span> MY_NAME { <span class="co">// 名前空間の宣言</span></a>
+<a class="sourceLine" id="cb11-2" title="2">  <span class="at">const</span> <span class="dt">uint8_t</span> MYVAL1 = <span class="bn">0x00</span>;</a>
+<a class="sourceLine" id="cb11-3" title="3">}</a>
+<a class="sourceLine" id="cb11-4" title="4"></a>
+<a class="sourceLine" id="cb11-5" title="5">...</a>
+<a class="sourceLine" id="cb11-6" title="6"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb11-7" title="7">  <span class="dt">uint8_t</span> i = MY_NAME::MYVAL1; <span class="co">// MY_NAME の参照</span></a>
+<a class="sourceLine" id="cb11-8" title="8">}</a></code></pre></div>
+<h3 id="テンプレート-template">テンプレート (template)</h3>
+<p>テンプレートはC言語のマクロを拡張したものと考えてください。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;</a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="kw">class</span> myary {</a>
+<a class="sourceLine" id="cb12-3" title="3">  T _buf[N];</a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb12-5" title="5">  myary() : _buf{} {}</a>
+<a class="sourceLine" id="cb12-6" title="6">  T <span class="kw">operator</span> [] (<span class="dt">int</span> i) { <span class="cf">return</span> _buf[i % N]; }</a>
+<a class="sourceLine" id="cb12-7" title="7">};</a>
+<a class="sourceLine" id="cb12-8" title="8"></a>
+<a class="sourceLine" id="cb12-9" title="9">myary&lt;<span class="dt">int</span>, <span class="dv">10</span>&gt; a1; <span class="co">// int 型で要素数10の配列</span></a>
+<a class="sourceLine" id="cb12-10" title="10">myary&lt;<span class="dt">char</span>, <span class="dv">128</span>&gt; a2; <span class="co">// char 型の要素数128の配列</span></a></code></pre></div>
+<p>この例では、簡単な配列を定義しています。<code>T</code>と<code>N</code>はテンプレートのパラメータで、<code>T</code>は型名を<code>N</code>は数値を指定し、<code>T</code>型で要素数<code>N</code>の配列クラスを定義しています。</p>
+<h3 id="nullptr">nullptr</h3>
+<p>C++11ではNULLポインタを<code>nullptr</code>と記述するようになりました。</p>
+<h3 id="参照型">参照型</h3>
+<p>C++では、参照型を利用できます。これはポインタによるアクセスに似ていますが、必ずオブジェクトを参照しなければならないという制約があります。</p>
+<p>以下のような参照渡しのパラメータを持つ関数では<code>i</code>の値を<code>incr()</code>内で書き換えることが出来ます。</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="dt">void</span> incr(<span class="dt">int</span>&amp; lhs, <span class="dt">int</span> rhs) { lhs += rhs; }</a>
+<a class="sourceLine" id="cb13-2" title="2"></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb13-4" title="4">  <span class="dt">int</span> i = <span class="dv">10</span>; j = <span class="dv">20</span>;</a>
+<a class="sourceLine" id="cb13-5" title="5">  incr(i, j);</a>
+<a class="sourceLine" id="cb13-6" title="6">}</a></code></pre></div>
+<p>テンプレートの解説例ですが<code>operator[]</code>の戻り型を<code>T&amp;</code>に変更しています。こうすることで<code>a[0]=1</code>のように配列内部のデータに対して直接代入操作ができるようになります。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;</a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="kw">class</span> myary {</a>
+<a class="sourceLine" id="cb14-3" title="3">  T _buf[N];</a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb14-5" title="5">  myary() : _buf{} {}</a>
+<a class="sourceLine" id="cb14-6" title="6">  T&amp; <span class="kw">operator</span> [] (<span class="dt">int</span> i) { <span class="cf">return</span> _buf[i % N]; }</a>
+<a class="sourceLine" id="cb14-7" title="7">};</a>
+<a class="sourceLine" id="cb14-8" title="8"></a>
+<a class="sourceLine" id="cb14-9" title="9">myary&lt;<span class="dt">int</span>, <span class="dv">10</span>&gt; a1;</a>
+<a class="sourceLine" id="cb14-10" title="10"><span class="dt">void</span> my_main() {</a>
+<a class="sourceLine" id="cb14-11" title="11">  a1[<span class="dv">0</span>] = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb14-12" title="12">  a1[<span class="dv">1</span>] = <span class="dv">2</span>;</a>
+<a class="sourceLine" id="cb14-13" title="13">}</a></code></pre></div>
+<div class="info">
+<p>MWXライブラリのプログラミングインタフェースは、原則といてポインタ型の利用をせず、参照型を用いています。</p>
+</div>
+<h3 id="型推論">型推論</h3>
+<p>C++11 では型推論の<code>auto</code>キーワードが導入されています。これはコンパイラが初期化の記述からそのオブジェクトの型を推論するため、具体的な型名の記述を省略できます。これはtemplateを用いたクラス名が非常に長くなるような場合に効果的です。</p>
+<p>解説中では多くの場合ユニバーサル参照と呼ばれる<code>auto&amp;&amp;</code>を用いています。ユニバーサル参照については、ここでは参照渡しの場合も意識せずに記述できるものと考えてください。</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">auto</span>&amp;&amp; p = <span class="bu">std::</span>make_pair(<span class="st">&quot;HELLO&quot;</span>, <span class="dv">5</span>);</a>
+<a class="sourceLine" id="cb15-2" title="2">       <span class="co">// const char* と int のペア std::pair</span></a></code></pre></div>
+<h3 id="コンテナ">コンテナ</h3>
+<p>配列など特定のデータ型のオブジェクトを複数個格納するためのクラスをコンテナと呼びます。テンプレートの例で挙げた<code>myary</code>のような配列クラスもコンテナと呼んでいます。</p>
+<div class="info">
+<p>MWXライブラリでは、配列クラス<code>smplbuf</code>とFIFOキュークラス<code>smplque</code>を用意しています。</p>
+</div>
+<h3 id="イテレータ-.begin-.end">イテレータ, .begin(), .end()</h3>
+<p>C言語で言うところのポインタ（もちろんC++でも同じようにポインタは使えます）を拡張した概念です。C言語のポインタは、メモリが連続した要素を先頭から末尾まで連続的にアクセスする手段と考えることが出来ます。FIFOキューを考えてみます。もっとも単純なキューの実装はリングバッファによるものですが、メモリーの連続性はありません。こういったデータ構造であっても、イテレータを用いるとポインタと同じように記述できます。</p>
+<p>イテレータを取得するため<code>.begin()</code>,<code>.end()</code> のメソッドが用いられます。コンテナの<strong>先頭</strong>を指すイテレータを<code>.begin()</code>で取得します。<strong>末尾の次</strong>を指すイテレータを<code>.end()</code>で取得します。末尾ではなく、末尾の次である理由にはforやwhile文のループ記述の明快さ、コンテナに格納される要素数が0の場合の取り扱いが挙げられます。</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1">my_queue que; <span class="co">// my_queue はキューのクラス</span></a>
+<a class="sourceLine" id="cb16-2" title="2"></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="kw">auto</span>&amp;&amp; p = que.begin();</a>
+<a class="sourceLine" id="cb16-4" title="4"><span class="kw">auto</span>&amp;&amp; e = que.end();</a>
+<a class="sourceLine" id="cb16-5" title="5"></a>
+<a class="sourceLine" id="cb16-6" title="6"><span class="cf">while</span>(p != e) {</a>
+<a class="sourceLine" id="cb16-7" title="7">  some_process(*p);</a>
+<a class="sourceLine" id="cb16-8" title="8">  ++p;</a>
+<a class="sourceLine" id="cb16-9" title="9">}</a></code></pre></div>
+<p>上記では、<code>que</code>の各要素について、イテレータ<code>p</code>を用いて各要素に<code>some_process()</code>を適用しています。<code>p</code>は<code>++</code>演算子によって次の要素を指すイテレータとしてインクリメントしています。本来ポインタでは記述できないデータ構造を持つコンテナであっても、このようにポインタを用いた処理と同じような処理が出来ます。</p>
+<p><code>.end()</code>が末尾の次を示すため、while文の終了判定は<code>(p != e)</code>のように簡潔です。キューに要素がない場合は<code>.begin()</code>は<code>.end()</code>と同じイテレータを返します。（何も格納されていない要素のイテレータの次ですから、最初に格納すべき領域を示すイテレータと考えればよいでしょう）</p>
+<p>メモリ上で連続したコンテナの場合、通常、そのイテレータは通常のポインタとなります。その操作時に大きなオーバーヘッドにはならないことが期待できます。</p>
+<h3 id="c標準ライブラリ">C++標準ライブラリ</h3>
+<p>C++の標準ライブラリにはSTL(Standard Template Library)が含まれます。MWXライブラリでの一部を利用しています。</p>
+<div class="warning">
+<p>TWELITE向けのC/C++コンパイラの<a href="./#zhi-xian-shi-xiang">制約</a>から、利用できる機能はごく一部です。</p>
+</div>
+<h3 id="アルゴリズム">アルゴリズム</h3>
+<p>例えば最大や最小値を求めるといった処理をC言語では型に応じて別々に記述していました。こういったコードは型の部分だけ違って他は同じといったものも少なくありません。C++ではtemplateやイテレータなどを用いて、こういった処理を型に依存せず記述することができます。これをアルゴリズムと呼んでいます。</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="co">// 任意のイテレータをパラメータとし最大値を持つイテレータを戻す</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="kw">template</span> &lt;<span class="kw">class</span> Iter&gt;</a>
+<a class="sourceLine" id="cb17-3" title="3">Iter find_max(Iter b, Iter e) {</a>
+<a class="sourceLine" id="cb17-4" title="4">  Iter m = b; ++b;</a>
+<a class="sourceLine" id="cb17-5" title="5">  <span class="cf">while</span>(b != e) {</a>
+<a class="sourceLine" id="cb17-6" title="6">    <span class="cf">if</span> (*b &gt; *m) { m = b; }</a>
+<a class="sourceLine" id="cb17-7" title="7">    ++b;</a>
+<a class="sourceLine" id="cb17-8" title="8">  }</a>
+<a class="sourceLine" id="cb17-9" title="9">  <span class="cf">return</span> m;</a>
+<a class="sourceLine" id="cb17-10" title="10">}</a></code></pre></div>
+<p>例えば上記のように最大値を求めるアルゴリズムです。このアルゴリズムは型に依存しません。(ジェネリックプログラミングと呼ばれます）</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1"><span class="pp">#include </span><span class="im">&lt;algorithm&gt;</span></a>
+<a class="sourceLine" id="cb18-2" title="2"></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="kw">auto</span>&amp;&amp; minmax = <span class="bu">std::</span>minmax_element( <span class="co">// 最大最小を得るアルゴリズム</span></a>
+<a class="sourceLine" id="cb18-4" title="4">  que.begin(), que.end());</a>
+<a class="sourceLine" id="cb18-5" title="5"></a>
+<a class="sourceLine" id="cb18-6" title="6"><span class="kw">auto</span>&amp;&amp; min_val = *minmax.first;</a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="kw">auto</span>&amp;&amp; max_val = *minmax.second;</a></code></pre></div>
+<p>ここでは<code>que</code>のイテレータを指定し、その最大と最小を得るアルゴリズム<code>std::minmax_elenet</code>を適用しています。<code>std::minmax_elemet</code>はC++標準ライブラリ内に定義されています。その戻り値は任意の２つの値を組み合わせる<code>std::pair</code>です。このアルゴリズムは、イテレータの示す要素同士で<code>&lt;,&gt;,==</code>といった演算子での比較が出来れば最大と最小を計算してくれます。戻り型もイテレータの型から導かれます。</p>
+</body>
+</html>

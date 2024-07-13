@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#送信">送信</a><ul>
+<li><a href="#サンプルコード">サンプルコード</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="送信">送信</h1>
+<p>単純ネットワークでの送信手続きは、<a href="../../../twelite-net-api-ref/gou-zao-ti/tstxdataapp.html">tsTxDataApp</a> 構造体を確保し、この構造体に送信に必要な情報を格納します。</p>
+<ol type="1">
+<li>ローカル変数として tsTxDataApp 構造体を確保し、構造体全体をゼロクリアする。</li>
+<li>送信したいデータを .auData にコピーする（ペイロード）。</li>
+<li>ペイロードの格納バイト数を .u8Len に格納する。</li>
+<li>.u32DstAddr を格納する（宛先）</li>
+<li>.u32SrcAddr を格納する（送り元のアドレス）</li>
+<li>その他送信オプションを指定します。</li>
+<li><a href="../../../twelite-net-api-ref/twelite-net-guan-shu/toconet_bmactxreq.html">ToCoNet_bMacTxReq</a>() を実行します。</li>
+<li>TWENET 内での送信処理が終了すると <a href="../../../twelite-net-api-ref/krubakku/cbtoconet_vtxevent.html">cbToCoNet_TxEvent</a>() が実行されます。</li>
+</ol>
+<div class="warning">
+<p>完了イベントが消滅することは例外的ですが、タイムアウトを設け例外処理するようにしてください。 tsTxDataApp 構造体中で遅延や再送遅延が極端に長く設定されていないなら、通常 100ms も必要としません。</p>
+</div>
+<h3 id="サンプルコード">サンプルコード</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">static</span> int16 i16TransmitIoData() {</a>
+<a class="sourceLine" id="cb1-2" title="2">  tsTxDataApp sTx;</a>
+<a class="sourceLine" id="cb1-3" title="3">  memset(&amp;sTx, <span class="dv">0</span>, <span class="kw">sizeof</span>(sTx)); <span class="co">// ゼロクリア</span></a>
+<a class="sourceLine" id="cb1-4" title="4">  uint8 *q = sTx.auData;</a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6">  <span class="co">// ペイロードを構成</span></a>
+<a class="sourceLine" id="cb1-7" title="7">  S_OCTET(sAppData.u8AppIdentifier);</a>
+<a class="sourceLine" id="cb1-8" title="8">  S_BE_WORD(sAppData.sIOData_now.u16Volt);</a>
+<a class="sourceLine" id="cb1-9" title="9">  ...</a>
+<a class="sourceLine" id="cb1-10" title="10">    </a>
+<a class="sourceLine" id="cb1-11" title="11">  <span class="co">// 送信</span></a>
+<a class="sourceLine" id="cb1-12" title="12">  sTx.u8Len = q - sTx.auData; <span class="co">// パケット長</span></a>
+<a class="sourceLine" id="cb1-13" title="13">  sTx.u8Cmd = TOCONET_PACKET_CMD_APP_USER_IO_DATA; <span class="co">// パケット種別</span></a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">  <span class="co">// 送信する</span></a>
+<a class="sourceLine" id="cb1-16" title="16">  sTx.u32DstAddr  = TOCONET_MAC_ADDR_BROADCAST; <span class="co">// ブロードキャスト</span></a>
+<a class="sourceLine" id="cb1-17" title="17">  sTx.u8Retry     = <span class="bn">0x81</span>; <span class="co">// 1回再送</span></a>
+<a class="sourceLine" id="cb1-18" title="18"></a>
+<a class="sourceLine" id="cb1-19" title="19">  <span class="co">// フレームカウントとコールバック識別子の指定</span></a>
+<a class="sourceLine" id="cb1-20" title="20">  sAppData.u16TxFrame++;</a>
+<a class="sourceLine" id="cb1-21" title="21">  sTx.u8Seq = (sAppData.u16TxFrame &amp; <span class="bn">0xFF</span>);</a>
+<a class="sourceLine" id="cb1-22" title="22">  sTx.u8CbId = sTx.u8Seq;</a>
+<a class="sourceLine" id="cb1-23" title="23"></a>
+<a class="sourceLine" id="cb1-24" title="24">  <span class="co">/* MAC モードでは細かい指定が可能 */</span></a>
+<a class="sourceLine" id="cb1-25" title="25">  sTx.bAckReq = FALSE;</a>
+<a class="sourceLine" id="cb1-26" title="26">  sTx.u32SrcAddr = sToCoNet_AppContext.u16ShortAddress;</a>
+<a class="sourceLine" id="cb1-27" title="27">  sTx.u16RetryDur = <span class="dv">4</span>; <span class="co">// 再送間隔[ms]</span></a>
+<a class="sourceLine" id="cb1-28" title="28">  sTx.u16DelayMax = <span class="dv">16</span>; <span class="co">// 送信開始タイミングにブレを作る(最大16ms)</span></a>
+<a class="sourceLine" id="cb1-29" title="29"></a>
+<a class="sourceLine" id="cb1-30" title="30">  <span class="co">// 送信API</span></a>
+<a class="sourceLine" id="cb1-31" title="31">  <span class="cf">if</span> (ToCoNet_bMacTxReq(&amp;sTx)) {</a>
+<a class="sourceLine" id="cb1-32" title="32">    <span class="co">// 成功（処理が終わると cbToCoNet_vTxEvent() が発生する</span></a>
+<a class="sourceLine" id="cb1-33" title="33">    <span class="cf">return</span> sTx.u8CbId; <span class="co">// 成功</span></a>
+<a class="sourceLine" id="cb1-34" title="34">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-35" title="35">    <span class="co">// 失敗</span></a>
+<a class="sourceLine" id="cb1-36" title="36">    <span class="cf">return</span> -<span class="dv">1</span>; <span class="co">// 失敗</span></a>
+<a class="sourceLine" id="cb1-37" title="37">  }</a>
+<a class="sourceLine" id="cb1-38" title="38">}</a></code></pre></div>
+<div class="info">
+<p><a href="../../../twelite-net-api-ref/twelite-net-makuro/utils.h.html#%22s_octet-x">S_OCTET</a>() <a href="../../../twelite-net-api-ref/twelite-net-makuro/utils.h.html#%22s_be_word-x-s_le_word-x">S_BE_WORD</a>() <a href="../../../twelite-net-api-ref/twelite-net-makuro/utils.h.html#%22s_be_word-x-s_le_word-x">S_BE_DWORD</a>() マクロは、uint8 *q をペイロード格納領域のポインタとして宣言しておいた時に使う 1,2,4 バイト格納マクロです。</p>
+</div>
+</body>
+</html>

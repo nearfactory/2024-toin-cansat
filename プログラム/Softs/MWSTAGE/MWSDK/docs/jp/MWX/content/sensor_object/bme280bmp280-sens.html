@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>BMx280 - 環境センサー</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BMx280 - 環境センサー</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#bmx280---環境センサー">BMx280 - 環境センサー</a><ul>
+<li><a href="#処理の流れ">処理の流れ</a></li>
+<li><a href="#動作に必要な手続き">動作に必要な手続き</a><ul>
+<li><a href="#wireバス">Wireバス</a></li>
+<li><a href="#スリープ復帰時の手続き">スリープ復帰時の手続き</a></li>
+<li><a href="#コード例">コード例</a></li>
+</ul></li>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#get_press">get_press()</a></li>
+<li><a href="#get_temp-get_temp_cent">get_temp(), get_temp_cent()</a></li>
+<li><a href="#get_humid-get_humid_per_dmil">get_humid(), get_humid_per_dmil()</a></li>
+</ul></li>
+<li><a href="#共通メソッド">共通メソッド</a><ul>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#begin-end">begin(), end()</a></li>
+<li><a href="#process_ev">process_ev()</a></li>
+<li><a href="#available">available()</a></li>
+<li><a href="#probe">probe()</a></li>
+<li><a href="#sns_stat">sns_stat()</a></li>
+<li><a href="#sns_opt">sns_opt()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="bmx280---環境センサー">BMx280 - 環境センサー</h1>
+<p>I2Cバスを利用した気圧・温度・湿度（BME280のみ）センサーです。</p>
+<div class="info">
+<p>本センサーはTWELITE PALシリーズでは使用されていません。利用例は以下を参照ください。<br />
+<a target=_blank href="https://github.com/monowireless/ActEx_Sns_BME280_SHT30">https://github.com/monowireless/ActEx_Sns_BME280_SHT30</a></p>
+</div>
+<h2 id="処理の流れ">処理の流れ</h2>
+<ol type="1">
+<li><code>Wire.begin()</code>: バスの初期化</li>
+<li><code>.setup()</code>: センサーの初期化</li>
+<li><code>.begin()</code>: センサーの動作開始</li>
+<li>時間待ち数ms</li>
+<li><code>.available()</code>が<code>true</code>になる</li>
+<li><code>.get_press(), .get_temp(), .get_humid()</code>: 値の読み出し</li>
+</ol>
+<h2 id="動作に必要な手続き">動作に必要な手続き</h2>
+<h3 id="wireバス">Wireバス</h3>
+<p><code>setup()</code>メソッド呼び出し前に<code>Wire.begin()</code>によりWireが動作状態にしておきます。</p>
+<h3 id="スリープ復帰時の手続き">スリープ復帰時の手続き</h3>
+<p>スリープ直前もWireバスが動作状態にしておきます（スリープ復帰後自動でWireを回復します）。</p>
+<h3 id="コード例">コード例</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;SNS_BME280&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4">SNS_BME280 sns_bme280; <span class="co">// オブジェクトの宣言</span></a></code></pre></div>
+<p><code>#include &lt;SNS_SHT3X&gt;</code>と<code>SNS_SHT3X</code>クラスオブジェクトの宣言が必要です。</p>
+<h4 id="初期化">初期化</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-2" title="2">    Wire.begin();</a>
+<a class="sourceLine" id="cb2-3" title="3">    sns_bme280.setup();</a>
+<a class="sourceLine" id="cb2-4" title="4">}</a></code></pre></div>
+<h4 id="センサー値の取得開始">センサー値の取得開始</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="cf">if</span>(eState == E_STATE::INIT) {</a>
+<a class="sourceLine" id="cb3-4" title="4">    sns_bme280.begin();</a>
+<a class="sourceLine" id="cb3-5" title="5">    eState = E_STATE::CAPTURE;</a>
+<a class="sourceLine" id="cb3-6" title="6">  }</a>
+<a class="sourceLine" id="cb3-7" title="7"></a>
+<a class="sourceLine" id="cb3-8" title="8">}</a></code></pre></div>
+<p>センサー値の取得開始には<code>.begin()</code>を呼び出します。完了まで数msかかります。</p>
+<p>※ 上記 <code>loop()</code>内は状態変数eStateにより処理が分岐する設計とします。（<a href="../act_samples/slp_wk_and_tx.html">参考</a>）</p>
+<h4 id="センサー値の取得待ち">センサー値の取得待ち</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">  <span class="cf">if</span>(eState == E_STATE::CAPTURE) {</a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="cf">if</span> (sns_bme280.available()) {</a>
+<a class="sourceLine" id="cb4-5" title="5">      <span class="co">// センサー値読み出し可能</span></a>
+<a class="sourceLine" id="cb4-6" title="6">    }</a>
+<a class="sourceLine" id="cb4-7" title="7">  }</a>
+<a class="sourceLine" id="cb4-8" title="8"></a>
+<a class="sourceLine" id="cb4-9" title="9">}</a></code></pre></div>
+<p>センサー値が準備できたかどうかは<code>.available()</code>により判定できます。</p>
+<h4 id="センサー値の読み出し">センサー値の読み出し</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3">  <span class="cf">if</span>(eState == E_STATE::CAPTURE) {</a>
+<a class="sourceLine" id="cb5-4" title="4">    <span class="cf">if</span> (sns_bme280.available()) {</a>
+<a class="sourceLine" id="cb5-5" title="5">      Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;BMx280:&quot;</span></a>
+<a class="sourceLine" id="cb5-6" title="6">            &lt;&lt; <span class="st">&quot; P=&quot;</span> &lt;&lt; <span class="dt">int</span>(sns_bme280.get_press()) &lt;&lt; <span class="st">&quot;hP&quot;</span>;</a>
+<a class="sourceLine" id="cb5-7" title="7">            &lt;&lt; <span class="st">&quot; T=&quot;</span> &lt;&lt; sns_bme280.get_temp() &lt;&lt; <span class="ch">&#39;C&#39;</span></a>
+<a class="sourceLine" id="cb5-8" title="8">                        &lt;&lt; <span class="st">&quot; H=&quot;</span> &lt;&lt; sns_bme280.get_humid() &lt;&lt; <span class="ch">&#39;%&#39;</span>;</a>
+<a class="sourceLine" id="cb5-9" title="9">    }</a>
+<a class="sourceLine" id="cb5-10" title="10">  }</a>
+<a class="sourceLine" id="cb5-11" title="11"></a>
+<a class="sourceLine" id="cb5-12" title="12">}</a></code></pre></div>
+<p>センサー値が準備出来次第、値を読み出すことが出来ます。</p>
+<p><code>.get_temp(), get_humid()</code>は浮動小数点演算が含まれます。100倍整数値を取得することもできます。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">auto</span> temp = div100(sns_bme280.get_temp_cent());</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">auto</span> humd = div100(sns_bme280.get_humid_per_dmil);</a>
+<a class="sourceLine" id="cb6-3" title="3"></a>
+<a class="sourceLine" id="cb6-4" title="4">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;BMx280:&quot;</span></a>
+<a class="sourceLine" id="cb6-5" title="5">  &lt;&lt; <span class="st">&quot; P=&quot;</span> &lt;&lt; <span class="dt">int</span>(sns_bme280.get_press()) &lt;&lt; <span class="st">&quot;hP&quot;</span>;</a>
+<a class="sourceLine" id="cb6-6" title="6">  &lt;&lt; format(<span class="st">&quot; T=</span><span class="sc">%c%d</span><span class="st">.%02d&quot;</span>, temp.neg ? <span class="ch">&#39;-&#39;</span> : <span class="ch">&#39; &#39;</span>, temp.quo, temp.rem)</a>
+<a class="sourceLine" id="cb6-7" title="7">  &lt;&lt; format(<span class="st">&quot; T=</span><span class="sc">%c%d</span><span class="st">.%02d&quot;</span>, humd.neg ? <span class="ch">&#39;-&#39;</span> : <span class="ch">&#39; &#39;</span>, humd.quo, humd.rem);</a></code></pre></div>
+<p>ここでは<a href="../api-reference/funcs/utility/div100.html"><code>div100()</code></a>を用いて100倍値を整数部と小数部に分解しています。</p>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="get_press">get_press()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int16_t</span> get_press()</a></code></pre></div>
+<p>気圧を読み出します。単位はヘクトパスカル(<em>hectopascal</em> )で、通常は1000前後の値を示します。</p>
+<h3 id="get_temp-get_temp_cent">get_temp(), get_temp_cent()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">double</span> get_temp()</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="dt">int16_t</span> get_temp_cent()</a></code></pre></div>
+<p>温度を読み出す。<code>get_temp()</code>は℃で、<code>get_temp_cent()</code>は℃の100倍の値を整数値で返します。</p>
+<p>エラー時は-32760～-32768の値が返ります。</p>
+<h3 id="get_humid-get_humid_per_dmil">get_humid(), get_humid_per_dmil()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">double</span> get_humid()</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="dt">int16_t</span> get_humid_per_dmil()</a></code></pre></div>
+<p>湿度を読み出す。<code>get_humid()</code>は%で、<code>get_humid_per_dmil()</code>は%の100倍の値を整数値で返します。</p>
+<p>エラー時は-32760～-32768の値が返ります。</p>
+<h2 id="共通メソッド">共通メソッド</h2>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">void</span> setup(<span class="dt">uint32_t</span> arg1 = <span class="dv">0</span><span class="bu">UL</span>) </a></code></pre></div>
+<p>センサー用のメモリ領域の確保や初期化を行います。</p>
+<p><code>arg1</code>のLSBから8bitには、I2Cアドレスを格納することが出来ます。指定しない場合は0としておきます。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="pp">#include </span><span class="im">&lt;SNS_BME280&gt;</span></a>
+<a class="sourceLine" id="cb11-2" title="2">SNS_BME280 sns_bme280;</a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="dt">bool</span> b_found_bme280 = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb11-4" title="4"></a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb11-6" title="6">  ...</a>
+<a class="sourceLine" id="cb11-7" title="7">  sns_bme280.setup();</a>
+<a class="sourceLine" id="cb11-8" title="8">    <span class="cf">if</span> (!sns_bme280.probe()) {</a>
+<a class="sourceLine" id="cb11-9" title="9">            delayMicroseconds(<span class="dv">100</span>); <span class="co">// device needs small time for further I2C comm.</span></a>
+<a class="sourceLine" id="cb11-10" title="10">            sns_bme280.setup(<span class="bn">0x77</span>); <span class="co">// alternative ID</span></a>
+<a class="sourceLine" id="cb11-11" title="11">            <span class="cf">if</span> (sns_bme280.probe()) b_found_bme280 = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb11-12" title="12">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb11-13" title="13">            b_found_bme280 = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb11-14" title="14">    }</a>
+<a class="sourceLine" id="cb11-15" title="15">    ...</a></code></pre></div>
+<p>上記のコードではまずデフォルトのI2C IDでデバイスが応答するかを試し、応答が無ければ <code>0x77</code>で試みます。</p>
+<h3 id="begin-end">begin(), end()</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="dt">void</span> begin()</a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="dt">void</span> end()</a></code></pre></div>
+<p>センサーの取得を開始します。センサーの値を読み出すまで数ms必要で<code>available()</code>が<code>true</code>になるまで待つ必要があります。</p>
+<p><code>end()</code>には対応しません。</p>
+<h3 id="process_ev">process_ev()</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="dt">void</span> process_ev(<span class="dt">uint32_t</span> arg1, <span class="dt">uint32_t</span> arg2 = <span class="dv">0</span>)</a></code></pre></div>
+<p>待ち時間処理のセンサーの場合は<code>arg1</code>に<code>E_EVENT_TICK_TIMER</code>または<code>E_EVENT_START_UP</code>を与え時間の経過を知らせます。このメソッド呼出し後に、必要な時間が経過していれば<code>available()</code>が<code>true</code>になり、センサー値の読み出しが可能になります。</p>
+<h3 id="available">available()</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="dt">bool</span> available()</a></code></pre></div>
+<p>センサーが読み出し条件を満足したときに<code>true</code>を返します。</p>
+<h3 id="probe">probe()</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="dt">bool</span> probe()</a></code></pre></div>
+<p>センサーが接続されているときに<code>true</code>を返します。</p>
+<h3 id="sns_stat">sns_stat()</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="dt">uint32_t</span> sns_stat()</a></code></pre></div>
+<p>センサーデバイスの諸情報が格納されます。</p>
+<ul>
+<li>下位8bitにはBME280/BMP280のチップモデルが格納されます。<code>0x60</code>ならBME280, <code>0x58</code>ならBMP280となります。</li>
+</ul>
+<h3 id="sns_opt">sns_opt()</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="dt">uint32_t</span>&amp; sns_opt()</a></code></pre></div>
+<p><code>setup(uint32_t arg1)</code>で渡した値が格納されています。</p>
+<ul>
+<li>下位8bitには指定したI2Cデバイスのアドレスが格納されます。</li>
+</ul>
+</body>
+</html>

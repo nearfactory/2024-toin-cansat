@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#simplenet">SimpleNet</a><ul>
+<li><a href="#about-the-relay">About the relay</a></li>
+<li><a href="#about-the-role-and-destination">About the role and destination</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="simplenet">SimpleNet</h1>
+<p>In simple nets, simple node-to-node communication is used without the intervention of relay delivery procedures within TWENET. Two methods of communication are used, one by addressing and the other by broadcast communication. Many applications, such as the standard application App_Twelite, use this simple net.</p>
+<h3 id="about-the-relay">About the relay</h3>
+<p>The communication supported by SimpleNet is itself a star network with no relaying, but there are ways to implement relaying that are simple and practical.</p>
+<div class="info">
+<p>There are a number of ways in which you can make a relay delivery. Here are some of the most common relay methods.</p>
+<p>This is a method of relaying by means of broadcast communication. The received packets contain lifetime data, which is the number of times they are relayed, and each time they are relayed, the lifetime count is reduced and the packets are relayed a certain number of times unconditionally.</p>
+</div>
+<div class="info">
+<p>It is also possible to implement networks based on specific requirements. For example, a linear network with a predetermined short address.</p>
+<p>The parent station has an address of 0x0000, and the short addresses are assigned in order from the parent station to 0x0001 0x0002 … and so on. It is assumed that the addresses before and after the own station are always available for communication.</p>
+<p>This way, deliveries from the child station to the parent station will be made to an address that is one less than its own.</p>
+</div>
+<div class="danger">
+<h4 id="about-the-automatic-configuration-of-the-network">About the automatic configuration of the network</h4>
+<p>Searching for repeaters in the surrounding area and determining the relay station is not recommended in many applications because of the very high overhead in radio communication.</p>
+<ul>
+<li>A number of radio transmissions are required to determine the destination of the communication.
+<ul>
+<li>Battery drain</li>
+<li>It takes a long time to be able to communicate after start-up</li>
+</ul></li>
+<li>A relay station which is not highly stable may be selected.
+<ul>
+<li>If the search conditions are set to the best communication at the time, a distant station with good conditions will be chosen by chance.</li>
+</ul></li>
+<li>It also takes time to learn of a communication breakdown at the other end.
+<ul>
+<li>It is not possible to assume that a communication partner has ceased to exist until conditions such as a series of communication failures are met, so a long period of time is required before a communication partner can be found again (or a prescription such as dynamically switching communication partners is necessary).</li>
+</ul></li>
+<li>A large number of radio transmissions are required to maintain the relay network.
+<ul>
+<li>This results in a squeeze on bandwidth and consequently a reduction in the number of nodes that can be accommodated.</li>
+</ul></li>
+</ul>
+<p>There are principle issues involved in determining and maintaining relay stations as described above. Any approach has its advantages and disadvantages and must be considered in accordance with the requirements.</p>
+<p>In general, this type of communication is not practical for battery-powered nodes.</p>
+</div>
+<h3 id="about-the-role-and-destination">About the role and destination</h3>
+<p>Even a SimpleNet Network is usually a network with defined roles, such as parent and child. There are a number of ways in which this role can be implemented in wireless packet communications.</p>
+<div class="info">
+<h4 id="by-address">By address</h4>
+<p>This is a method of realising a role in an application using the same addressing scheme supported by radio packets. Specifically, we use short addresses, where the address of the parent station is 0x0000 and the address of the child station is 0x0001 …</p>
+<p>When delivering to the parent station, the child station only needs to deliver to 0x0000 at all times, and when no relay is required, efficient radio delivery can be achieved using ACK communication.</p>
+</div>
+<div class="info">
+<h4 id="by-data-in-the-packet.">By data in the packet.</h4>
+<p>If you want to achieve relay, you store the equivalent of an address or role (here called a logical address) as data in the radio packet.</p>
+<p>The parent station is assigned the logical address 0x00. The child station is allocated the logical address 0x01… The logical address is stored as data in the packet for wireless transmission. This logical address is stored as the data in the packet during wireless transmission as sender and destination.</p>
+<p>We would like to use the short address mechanism, but it is not convenient for relaying (because we send relay packets with the short address of the relay station as the source address), so we store the data in the packet.</p>
+<p>Therefore, all radio packets are sent as broadcast. Because they are broadcast packets, all nodes within radio range will receive them. (Note: Even if a packet has a specific destination, its contents will be received by all nodes within radio range. They just ignore the incoming data because it has a different destination).</p>
+<p>The data in the received packet is used by the application to decide whether the packet should be processed at its own station or relayed.</p>
+</div>
+</body>
+</html>

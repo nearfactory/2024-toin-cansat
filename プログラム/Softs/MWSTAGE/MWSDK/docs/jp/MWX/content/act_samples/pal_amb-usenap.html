@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PAL_AMB-usenap</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PAL_AMB-usenap</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pal_amb-usenap">PAL_AMB-usenap</a><ul>
+<li><a href="#アクトの解説">アクトの解説</a><ul>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#wakeup">wakeup()</a></li>
+<li><a href="#napnow">napNow()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pal_amb-usenap">PAL_AMB-usenap</h1>
+<p><a href="pal_amb.html">PAL_AMB</a>のサンプルを少し改良して、センサーデータ取得中の待ち時間（約50ms)を、スリープで待つようにします。</p>
+<div class="success">
+<p>このアクトの解説の前に<a href="pal_amb.html">PAL_AMB</a>のアクトの解説をご覧ください。</p>
+</div>
+<h2 id="アクトの解説">アクトの解説</h2>
+<h3 id="begin">begin()</h3>
+<p><code>begin()</code>関数は<code>setup()</code>関数を終了し(そのあとTWENETの初期化が行われる)一番最初の<code>loop()</code>の直前で呼ばれます。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> begin() {</a>
+<a class="sourceLine" id="cb1-2" title="2">    sleepNow(); <span class="co">// the first time is just sleeping.</span></a>
+<a class="sourceLine" id="cb1-3" title="3">}</a></code></pre></div>
+<p><code>setup()</code>終了後に初回スリープを実行します。<code>setup()</code>中にセンサーデータ取得を開始していますが、この結果は評価せず、センサーを事前に一度は動かしておくという意味あいで、必ずしも必要な手続きではありません。</p>
+<h3 id="wakeup">wakeup()</h3>
+<p>起床後の手続きです。以下の処理を行います。</p>
+<ul>
+<li>まだセンサーデータの取得開始をしていない場合、センサーデータ取得を行い、短いスリープに入る。</li>
+<li>直前にセンサーデータ取得開始を行ったので、データを確認して無線送信する。</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> wakeup() {</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="cf">if</span> (!b_senser_started) {</a>
+<a class="sourceLine" id="cb2-3" title="3">        <span class="co">// delete/make shorter this message if power requirement is harder. </span></a>
+<a class="sourceLine" id="cb2-4" title="4">        Serial  &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb2-5" title="5">                &lt;&lt; <span class="st">&quot;--- PAL_AMB:&quot;</span> &lt;&lt; FOURCHARS &lt;&lt; <span class="st">&quot; wake up ---&quot;</span></a>
+<a class="sourceLine" id="cb2-6" title="6">                &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb2-7" title="7">                &lt;&lt; <span class="st">&quot;..start sensor capture again.&quot;</span></a>
+<a class="sourceLine" id="cb2-8" title="8">                &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10">        startSensorCapture();</a>
+<a class="sourceLine" id="cb2-11" title="11">        b_senser_started = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb2-12" title="12"></a>
+<a class="sourceLine" id="cb2-13" title="13">        napNow(); <span class="co">// short period sleep.</span></a>
+<a class="sourceLine" id="cb2-14" title="14">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb2-15" title="15">        Serial &lt;&lt; <span class="st">&quot;..wake up from short nap..&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb2-16" title="16"></a>
+<a class="sourceLine" id="cb2-17" title="17">        <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb2-18" title="18"></a>
+<a class="sourceLine" id="cb2-19" title="19">        b_senser_started = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb2-20" title="20"></a>
+<a class="sourceLine" id="cb2-21" title="21">        <span class="co">// tell sensors waking up.</span></a>
+<a class="sourceLine" id="cb2-22" title="22">        brd.sns_LTR308ALS.process_ev(E_EVENT_START_UP);</a>
+<a class="sourceLine" id="cb2-23" title="23">        brd.sns_SHTC3.process_ev(E_EVENT_START_UP);</a>
+<a class="sourceLine" id="cb2-24" title="24">    }</a>
+<a class="sourceLine" id="cb2-25" title="25">}</a></code></pre></div>
+<p>上記の分岐をグローバル変数の<code>b_sensor_started</code>により制御しています。<code>!b_sensor_started</code>の場合はセンサー取得開始(<code>startSensorCapture()</code>)を行い、<code>napNow()</code>により短いスリープに入ります。時間は100msです。</p>
+<p><code>napNow()</code>によるスリープ復帰後、<code>b_sensor_started==true</code>の節が実行されます。ここでは、2つのセンサーに対して<code>E_EVENT_START_UP</code>イベントを通知しています。このイベントは、センサーの取得が終了するのに十分な時間が経過したことを意味します。この通知をもとに<code>sns_LTR308ALS</code>と<code>sns_SHTC3</code>はavailableになります。この後<code>loop()</code>に移行し、無線パケットが送信されます。</p>
+<div class="warning">
+<p>センサーに通知するイベントは必要な時間待ちが終わったかどうかを判定するために使われます。実際時間が経過しているかどうかは<code>napNow()</code>で正しい時間を設定したかどうかで決まります。短い時間で起床した場合は、必要とされる時間経過に足りないため、続く処理でセンサーデータが得られないなどのエラーが出ることが想定されます。</p>
+</div>
+<h3 id="napnow">napNow()</h3>
+<p>ごく短いスリープを実行する。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> napNow() {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="dt">uint32_t</span> u32ct = <span class="dv">100</span>;</a>
+<a class="sourceLine" id="cb3-3" title="3">    Serial &lt;&lt; <span class="st">&quot;..nap &quot;</span> &lt;&lt; <span class="dt">int</span>(u32ct) &lt;&lt; <span class="st">&quot;ms.&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb3-4" title="4">    the_twelite.sleep(u32ct, <span class="kw">false</span>, <span class="kw">false</span>, TWENET::SLEEP_WAKETIMER_SECONDARY);</a>
+<a class="sourceLine" id="cb3-5" title="5">}</a></code></pre></div>
+<p>sleepのパラメータの2番目をtrueにすると前回のスリープ復帰時刻をもとに次の復帰時間を調整します。常に5秒おきに起床したいような場合設定します。</p>
+<p>3番目をtrueにするとメモリーを保持しないスリープになります。復帰後はwakup()は呼び出されじ、電源再投入と同じ処理になります。</p>
+<p>4番目はウェイクアップタイマーの2番目を使う指定です。ここでは1番目は通常のスリープに使用して、2番目を短いスリープに用いています。このアクトでは2番目を使う強い理由はありませんが、例えば上述の5秒おきに起床したいような場合、短いスリープに1番目のタイマーを用いてしまうとカウンター値がリセットされてしまい、経過時間の補正計算が煩雑になるため2番目のタイマーを使用します。</p>
+<div class="info">
+<p>あまり短いスリープ時間を設定してもスリープ復帰後のシステムの再初期化などのエネルギーコストと釣り合いません。目安として最小時間を30-50ms程度とお考え下さい。</p>
+</div>
+</body>
+</html>

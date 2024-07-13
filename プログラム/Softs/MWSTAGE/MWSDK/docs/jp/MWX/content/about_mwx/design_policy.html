@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>設計情報</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">設計情報</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#設計情報">設計情報</a><ul>
+<li><a href="#設計方針について">設計方針について</a></li>
+<li><a href="#c-コンパイラについて">C++ コンパイラについて</a></li>
+<li><a href="#c-の制限事項">C++ の制限事項</a></li>
+<li><a href="#設計メモ">設計メモ</a><ul>
+<li><a href="#現状の実装">現状の実装</a></li>
+<li><a href="#名前空間">名前空間</a></li>
+<li><a href="#crtp奇妙に再帰したテンプレートパターン">CRTP(奇妙に再帰したテンプレートパターン) </a></li>
+<li><a href="#crtp-での仮想化">CRTP での仮想化</a></li>
+<li><a href="#new-new-演算子">new, new[] 演算子</a></li>
+<li><a href="#コンテナクラス">コンテナクラス</a></li>
+<li><a href="#可変数引数">可変数引数</a></li>
+<li><a href="#イテレータ">イテレータ</a></li>
+<li><a href="#割り込みイベント状態ハンドラの実装">割り込み・イベント・状態ハンドラの実装</a></li>
+<li><a href="#streamクラス">Streamクラス</a></li>
+<li><a href="#wire-spiのワーカーオブジェクト">Wire, SPIのワーカーオブジェクト</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="設計情報">設計情報</h1>
+<p>MWX ライブラリ内で用いる C++ 言語について、その仕様、制限事項、本書記載留意事項、設計メモを記載します。</p>
+<div class="danger">
+<p><strong>MWXライブラリでアプリケーション記述する場合は、このページを読み飛ばしても差し支えありません。</strong></p>
+</div>
+<div class="info">
+<p>このページはライブラリの動作の理解や改造などのためライブラリソースコードを参照する場面を想定しています。ライブラリを利用するのと比べより高度なC++言語に関する知識を前提となります。</p>
+</div>
+<h2 id="設計方針について">設計方針について</h2>
+<ul>
+<li>アプリケーションのループ記述では、一般によく用いられる API 体系に近い記述を出来ることを目的とするが、TWELITEの特性に合わせた実装とする。</li>
+<li>TWENET はイベントドリブンによるコード記述であり、これを扱えるようにクラス化を行う。上記クラス化によりアプリケーションのふるまいをカプセル化できるようにする。</li>
+<li>イベントドリブンとループの記述は共存できる形とする。</li>
+<li>代表的なペリフェラルはクラス化して手続きを簡素化する。可能な限りループ記述でアクセスできるようにする。</li>
+<li>当社で販売する MONOSTICK/PAL といったボードを利用する手続きをクラス化し手続きを簡素化する。（例えば外部のウォッチドッグタイマーの利用を自動化する）</li>
+<li>アプリケーションクラスやボードクラスは、ポリモーフィズムの考え方を導入し、統一した手続きによって利用できるようにする。（例えば、いくつかの振る舞いをするアプリケーションクラスを始動時にロードするような場合、また TWENET C ライブラリの接続部のコードを都度定義しなくてよいようにするため）。</li>
+<li>C++の機能については、特に制限を設けず利用する。例えば、無線パケットを取り扱うにあたり煩雑なパケット構築、分解といった代表的な手続きを簡略化する手段を提供する。</li>
+<li>演算子 <code>-&gt;</code> を極力使用しないようにし、原則として参照型による API とする。</li>
+</ul>
+<div class="info">
+<p>限られた時間で実装を進めているため、細かい点まで網羅した設計ではありませんが、設計・実装等でお気づきの点がありましたら、当社サポートにご連絡ください。</p>
+</div>
+<h2 id="c-コンパイラについて">C++ コンパイラについて</h2>
+<h4 id="バージョン">バージョン</h4>
+<p>gcc version 4.7.4</p>
+<h4 id="c言語規格">C++言語規格</h4>
+<p>C++11 (コンパイラ対応状況は一般の情報を参考にしてください）</p>
+<ul>
+<li><a target=_blank href="https://gcc.gnu.org/gcc-4.7/cxx0x_status.html">https://gcc.gnu.org/gcc-4.7/cxx0x_status.html</a> </li>
+<li><a target=_blank href="https://cpprefjp.github.io/implementation-status.html">https://cpprefjp.github.io/implementation-status.html</a> </li>
+</ul>
+<h2 id="c-の制限事項">C++ の制限事項</h2>
+<p>※ 当社で把握しているものについての記載です。</p>
+<ul>
+<li><code>new, new[]</code> 演算子でのメモリ確保は行えますが、確保したメモリを破棄することはできません。C++ライブラリで動的メモリ確保をするものは殆どが事実上利用不可能です。一度だけ生成してそれ以降破棄しないオブジェクトに使用しています。</li>
+<li>グローバルオブジェクトのコンストラクタが呼び出されません。<br />
+参考：必要な場合は、初期化関数(<code>setup()</code>) で <code>new ((void*)&amp;obj_global) class_foo();</code>のように初期化することでコンストラクタの呼び出しを含めた初期化を行えます。</li>
+<li>例外 <code>exception</code>が使用できません。</li>
+<li>仮想関数 <code>virtual</code>が使用できません。</li>
+</ul>
+<h2 id="設計メモ">設計メモ</h2>
+<p>本節ではMWXライブラリのコードを参照する際に理解の助けとなる情報を記載します。</p>
+<h3 id="現状の実装">現状の実装</h3>
+<p>限られた時間で実装を進めているため、詳細部分の整備が十分でない場合があります。例えば const に対する考慮は多くのクラスで十分なされていません。</p>
+<h3 id="名前空間">名前空間</h3>
+<p>名前空間について、以下の方針としています。</p>
+<ul>
+<li>定義は原則として共通の名前空間<code>mwx</code>に配置する。</li>
+<li>名前空間の識別子なしで利用できるようにしたいが、一部の定義は識別子を必須としたい。</li>
+<li>クラス名については比較的長い命名とし、ユーザが利用するものは別名定義とする。</li>
+</ul>
+<p>クラス・関数・定数は一部の例外を除き<code>mwx</code>名(正確には<code>inline namespace L1</code> で囲んだ<code>mwx::L1</code>)の名前空間内に定義しています。<code>inline namespace</code>を指定しているのは、<code>mwx::</code>の指定を必須とする定義と、必須としない定義を共存させるためです。 </p>
+<p>殆どの定義は<code>using namespace</code>により名前空間名を指定しなくても良いようになっています。これらの指定はライブラリ内の<code>using_mwx_def.hpp</code>で行っています。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// at some header file.</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">namespace</span> mwx {</a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="kw">inline</span> <span class="kw">namespace</span> L1 {</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="kw">class</span> foobar {</a>
+<a class="sourceLine" id="cb1-5" title="5">      <span class="co">// class definition...</span></a>
+<a class="sourceLine" id="cb1-6" title="6">    };</a>
+<a class="sourceLine" id="cb1-7" title="7">  }</a>
+<a class="sourceLine" id="cb1-8" title="8">}</a>
+<a class="sourceLine" id="cb1-9" title="9"></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co">// at using_mwx_def.hpp</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="kw">using</span> <span class="kw">namespace</span> mwx::L1; <span class="co">// mwx::L1 内の定義は mwx:: なしでアクセスできる</span></a>
+<a class="sourceLine" id="cb1-12" title="12">                         <span class="co">// しかし mwx::L2 は mwx:: が必要。</span></a></code></pre></div>
+<p>例外的に比較的短い名前については<code>mwx::crlf, mwx::flush</code>のように指定します。これらは<code>inline namespace</code>の<code>mwx::L2</code>の名前空間に配置されています。<code>using namespace mwx::L2;</code>を指定することで名前空間名の指定なしで利用できるようになります。</p>
+<p>また、いくつかのクラス名は<code>using</code>指定をしています。</p>
+<p>MWXライブラリ内で利用する<code>std::make_pair</code>を<code>using</code>指定しています。</p>
+<h3 id="crtp奇妙に再帰したテンプレートパターン">CRTP(奇妙に再帰したテンプレートパターン) </h3>
+<p>仮想関数 (virtual), 実行時型情報(RTTI) が利用できない、かつ利用できるようにしたとしても、パフォーマンス面で難があるため、これに代わる設計手法として <a target=_blank href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">CRTP (Curiously recurring template pattern : 奇妙に再帰したテンプレートパターン）</a>を用いています。CRTPは、継承元の親クラスから子クラスのメソッドを呼び出すためのテンプレートパターンです。</p>
+<p>以下の例では <code>Base</code>を継承した <code>Derived</code>クラスに <code>interface()</code> というインタフェースを実装する例です。<code>Base</code>からは<code>Derived::print()</code>メソッドを呼び出しています。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">class</span> Base {</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb2-4" title="4">  <span class="dt">void</span> intrface() {</a>
+<a class="sourceLine" id="cb2-5" title="5">    T* derived = <span class="kw">static_cast</span>&lt;T*&gt;(<span class="kw">this</span>);</a>
+<a class="sourceLine" id="cb2-6" title="6">    derived-&gt;prt();</a>
+<a class="sourceLine" id="cb2-7" title="7">  }</a>
+<a class="sourceLine" id="cb2-8" title="8">};</a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="kw">class</span> Derived : <span class="kw">public</span> <span class="kw">class</span> Base&lt;Derived&gt; {</a>
+<a class="sourceLine" id="cb2-11" title="11">  <span class="dt">void</span> prt() {</a>
+<a class="sourceLine" id="cb2-12" title="12">     <span class="co">// print message here!</span></a>
+<a class="sourceLine" id="cb2-13" title="13">     my_print(<span class="st">&quot;foo&quot;</span>);</a>
+<a class="sourceLine" id="cb2-14" title="14">  }</a>
+<a class="sourceLine" id="cb2-15" title="15">}</a></code></pre></div>
+<p>MWXライブラリで利用されている主要クラスは以下です。</p>
+<ul>
+<li>イベント処理の基本部分<code>mwx::appdefs_crtp</code></li>
+<li>ステートマシン<code>public mwx::processev_crtp</code></li>
+<li>ストリーム <code>mwx::stream</code></li>
+</ul>
+<h3 id="crtp-での仮想化">CRTP での仮想化</h3>
+<p>CRTPクラスは、継承元のクラスはインスタンスごとに違います。このため、親クラスにキャストして、同じ仲間として取り扱うといったこともできませんし、仮想関数(<code>virtual</code>)やRTTI（実行時型情報）を用いたような高度なポリモーフィズムも使うことが出来ません。</p>
+<p>以下は上述のCRTPの例を、仮想関数で実装した例です。CRTPでは<code>Base* b[2]</code>のように同じ配列にインスタンスをまとめて管理することは、そのままではできません。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">class</span> Base {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="kw">virtual</span> <span class="dt">void</span> prt() = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="dt">void</span> intrface() { prt(); }</a>
+<a class="sourceLine" id="cb3-5" title="5">};</a>
+<a class="sourceLine" id="cb3-6" title="6"></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="kw">class</span> Derived1 : <span class="kw">public</span> Base {</a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="dt">void</span> prt() { my_print(<span class="st">&quot;foo&quot;</span>); }</a>
+<a class="sourceLine" id="cb3-9" title="9">};</a>
+<a class="sourceLine" id="cb3-10" title="10"></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="kw">class</span> Derived2 : <span class="kw">public</span> Base {</a>
+<a class="sourceLine" id="cb3-12" title="12">    <span class="dt">void</span> prt() { my_print(<span class="st">&quot;bar&quot;</span>); }</a>
+<a class="sourceLine" id="cb3-13" title="13">};</a>
+<a class="sourceLine" id="cb3-14" title="14"></a>
+<a class="sourceLine" id="cb3-15" title="15">Derived1 d1;</a>
+<a class="sourceLine" id="cb3-16" title="16">Derived2 d2;</a>
+<a class="sourceLine" id="cb3-17" title="17">Base* b[<span class="dv">2</span>] = { &amp;d1, &amp;d2 };</a>
+<a class="sourceLine" id="cb3-18" title="18"></a>
+<a class="sourceLine" id="cb3-19" title="19"><span class="dt">void</span> tst() {</a>
+<a class="sourceLine" id="cb3-20" title="20">    <span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; x : b) { x-&gt;intrface(); }</a>
+<a class="sourceLine" id="cb3-21" title="21">}</a></code></pre></div>
+<p>MWXライブラリでは、CRTP のクラスインスタンスを格納するための専用クラスを定義し、このクラスに同様のインタフェースを定義することで解決しています。以下にコード例を挙げます。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">class</span> VBase {</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb4-3" title="3">    <span class="dt">void</span>* p_inst;</a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="dt">void</span> (*pf_intrface)(<span class="dt">void</span>* p);</a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb4-7" title="7">    <span class="dt">void</span> intrface() {</a>
+<a class="sourceLine" id="cb4-8" title="8">        <span class="cf">if</span> (p_inst != <span class="kw">nullptr</span>) {</a>
+<a class="sourceLine" id="cb4-9" title="9">            pf_intrface(p_inst);</a>
+<a class="sourceLine" id="cb4-10" title="10">        }</a>
+<a class="sourceLine" id="cb4-11" title="11">    }</a>
+<a class="sourceLine" id="cb4-12" title="12">};</a>
+<a class="sourceLine" id="cb4-13" title="13"></a>
+<a class="sourceLine" id="cb4-14" title="14"><span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;</a>
+<a class="sourceLine" id="cb4-15" title="15"><span class="kw">class</span> Base {</a>
+<a class="sourceLine" id="cb4-16" title="16">    <span class="kw">friend</span> <span class="kw">class</span> VBase;</a>
+<a class="sourceLine" id="cb4-17" title="17">    <span class="at">static</span> <span class="dt">void</span> <span class="va">s_intrface</span>(<span class="dt">void</span>* p) {</a>
+<a class="sourceLine" id="cb4-18" title="18">        T* derived = <span class="kw">static_cast</span>&lt;T*&gt;(p);</a>
+<a class="sourceLine" id="cb4-19" title="19">        derived-&gt;intrface();</a>
+<a class="sourceLine" id="cb4-20" title="20">    }</a>
+<a class="sourceLine" id="cb4-21" title="21"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb4-22" title="22">    <span class="dt">void</span> intrface() {</a>
+<a class="sourceLine" id="cb4-23" title="23">        T* derived = <span class="kw">static_cast</span>&lt;T*&gt;(<span class="kw">this</span>);</a>
+<a class="sourceLine" id="cb4-24" title="24">        derived-&gt;prt();</a>
+<a class="sourceLine" id="cb4-25" title="25">    }</a>
+<a class="sourceLine" id="cb4-26" title="26">};</a>
+<a class="sourceLine" id="cb4-27" title="27"></a>
+<a class="sourceLine" id="cb4-28" title="28"><span class="kw">class</span> Derived1 : <span class="kw">public</span> Base&lt;Derived1&gt; {</a>
+<a class="sourceLine" id="cb4-29" title="29">    <span class="kw">friend</span> <span class="kw">class</span> Base&lt;Derived1&gt;;</a>
+<a class="sourceLine" id="cb4-30" title="30">    <span class="dt">void</span> prt() { my_print(<span class="st">&quot;foo&quot;</span>); }</a>
+<a class="sourceLine" id="cb4-31" title="31">};</a>
+<a class="sourceLine" id="cb4-32" title="32"></a>
+<a class="sourceLine" id="cb4-33" title="33"><span class="kw">class</span> Derived2 : <span class="kw">public</span> Base&lt;Derived2&gt; {</a>
+<a class="sourceLine" id="cb4-34" title="34">    <span class="kw">friend</span> <span class="kw">class</span> Base&lt;Derived2&gt;;</a>
+<a class="sourceLine" id="cb4-35" title="35">    <span class="dt">void</span> prt() { my_print(<span class="st">&quot;bar&quot;</span>); }</a>
+<a class="sourceLine" id="cb4-36" title="36">};</a>
+<a class="sourceLine" id="cb4-37" title="37"></a>
+<a class="sourceLine" id="cb4-38" title="38">Derived1 d1;</a>
+<a class="sourceLine" id="cb4-39" title="39">Derived2 d2;</a>
+<a class="sourceLine" id="cb4-40" title="40"></a>
+<a class="sourceLine" id="cb4-41" title="41">VBase b[<span class="dv">2</span>];</a>
+<a class="sourceLine" id="cb4-42" title="42"></a>
+<a class="sourceLine" id="cb4-43" title="43"><span class="dt">void</span> tst() {</a>
+<a class="sourceLine" id="cb4-44" title="44">    b[<span class="dv">0</span>] = d1;</a>
+<a class="sourceLine" id="cb4-45" title="45">    b[<span class="dv">1</span>] = d2;</a>
+<a class="sourceLine" id="cb4-46" title="46"></a>
+<a class="sourceLine" id="cb4-47" title="47">    <span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; x : b) {</a>
+<a class="sourceLine" id="cb4-48" title="48">        x.intrface();</a>
+<a class="sourceLine" id="cb4-49" title="49">    }</a>
+<a class="sourceLine" id="cb4-50" title="50">}</a></code></pre></div>
+<p><code>VBase</code> クラスのメンバ変数<code>p_inst</code>は、<code>Base &lt;T&gt;</code> 型のオブジェクトへのポインタを格納し、<code>pf_intrface</code>は <code>Base&lt;T&gt;::s_intrface</code> へのメンバ関数ポインタです。 <code>Base&lt;T&gt;::s_intrface</code> は、自身のオブジェクトインスタンスを引数として渡され、<code>T</code>型に<code>static_cast</code>することで<code>T::intrface</code>メソッドを呼び出します。</p>
+<p><code>VBase</code>への格納は、ここでは <code>=</code> 演算子のオーバーロードによって実装しています（ソース例は後述）。</p>
+<p>上記の例では<code>b[0].intrface()</code>の呼び出しを行う際には、<code>VBase::pf_intrface</code>関数ポインタを参照し<code>Base&lt;Derived1&gt;::s_intrface()</code>が呼び出されることになります。さらに<code>Derived1::intrface()</code>の呼び出しを行うことになります。この部分はコンパイラによるinline展開が期待できます。</p>
+<p><code>VBase</code>型から元の<code>Derived1</code>や<code>Derived2</code>への変換を行うことも、強制的なキャストにより可能ですが、<code>void*</code>で格納されたポインタの型を直接知る方法はありません。完全に安全な方法はないものの、以下のようにクラスごとに一意のID(<code>TYPE_ID</code>)を設けて、キャスト実行時(<code>get()</code>メソッド)にIDのチェックを行うようにしています。違う型を指定して <code>get()</code>メソッドを呼び出したときは、エラーメッセージを表示するといった対処になります。</p>
+<p><code>Base&lt;T&gt;</code>型としてのポインタが格納されると<code>T</code>型に正しく変換できない可能性（<code>T</code>が多重継承している場合など）あるため、<code>&lt;type_trails&gt;</code>の<code>is_base_of</code>により<code>Base&lt;T&gt;</code>型の派生であることをコンパイル時に <code>static_assert</code>による判定を行っています。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="pp">#include </span><span class="im">&lt;type_trails&gt;</span></a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">class</span> Derived1 : <span class="kw">public</span> Base&lt;Derived1&gt; {</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb5-5" title="5">   <span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> TYPE_ID = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb5-6" title="6">}</a>
+<a class="sourceLine" id="cb5-7" title="7"></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="kw">class</span> Derived1 : <span class="kw">public</span> Base&lt;Derived1&gt; {</a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb5-10" title="10">   <span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> TYPE_ID = <span class="dv">2</span>;</a>
+<a class="sourceLine" id="cb5-11" title="11">}</a>
+<a class="sourceLine" id="cb5-12" title="12"></a>
+<a class="sourceLine" id="cb5-13" title="13"><span class="kw">class</span> VBase {</a>
+<a class="sourceLine" id="cb5-14" title="14">  <span class="dt">uint8_t</span> type_id;</a>
+<a class="sourceLine" id="cb5-15" title="15"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb5-16" title="16">    </a>
+<a class="sourceLine" id="cb5-17" title="17">    <span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;</a>
+<a class="sourceLine" id="cb5-18" title="18">    <span class="dt">void</span> <span class="kw">operator</span> = (T&amp; t) {</a>
+<a class="sourceLine" id="cb5-19" title="19">        <span class="kw">static_assert</span>(<span class="bu">std::</span>is_base_of&lt;Base&lt;T&gt;, T&gt;::value == <span class="kw">true</span>,</a>
+<a class="sourceLine" id="cb5-20" title="20">                        <span class="st">&quot;is not base of Base&lt;T&gt;.&quot;</span>);</a>
+<a class="sourceLine" id="cb5-21" title="21"></a>
+<a class="sourceLine" id="cb5-22" title="22">        type_id = T::TYPE_ID;</a>
+<a class="sourceLine" id="cb5-23" title="23">        p_inst = &amp;t;</a>
+<a class="sourceLine" id="cb5-24" title="24">        pf_intrface = T::<span class="va">s_intrface</span>;</a>
+<a class="sourceLine" id="cb5-25" title="25">    }</a>
+<a class="sourceLine" id="cb5-26" title="26">    </a>
+<a class="sourceLine" id="cb5-27" title="27">  <span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;</a>
+<a class="sourceLine" id="cb5-28" title="28">  T&amp; get() {</a>
+<a class="sourceLine" id="cb5-29" title="29">    <span class="kw">static_assert</span>(<span class="bu">std::</span>is_base_of&lt;Base&lt;T&gt;, T&gt;::value == <span class="kw">true</span>,</a>
+<a class="sourceLine" id="cb5-30" title="30">                      <span class="st">&quot;is not base of Base&lt;T&gt;.&quot;</span>);</a>
+<a class="sourceLine" id="cb5-31" title="31">            </a>
+<a class="sourceLine" id="cb5-32" title="32">        <span class="cf">if</span>(T::TYPE_ID == type_id) {</a>
+<a class="sourceLine" id="cb5-33" title="33">            <span class="cf">return</span> *<span class="kw">reinterpret_cast</span>&lt;T*&gt;(p_inst);</a>
+<a class="sourceLine" id="cb5-34" title="34">        } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb5-35" title="35">            <span class="co">// panic code here!</span></a>
+<a class="sourceLine" id="cb5-36" title="36">        }</a>
+<a class="sourceLine" id="cb5-37" title="37">  }</a>
+<a class="sourceLine" id="cb5-38" title="38">}</a>
+<a class="sourceLine" id="cb5-39" title="39"></a>
+<a class="sourceLine" id="cb5-40" title="40">Derived1 d1;</a>
+<a class="sourceLine" id="cb5-41" title="41">Derived2 d2;</a>
+<a class="sourceLine" id="cb5-42" title="42"></a>
+<a class="sourceLine" id="cb5-43" title="43">VBase b[<span class="dv">2</span>];</a>
+<a class="sourceLine" id="cb5-44" title="44"></a>
+<a class="sourceLine" id="cb5-45" title="45"><span class="dt">void</span> tst() {</a>
+<a class="sourceLine" id="cb5-46" title="46">    b[<span class="dv">0</span>] = d1;</a>
+<a class="sourceLine" id="cb5-47" title="47">    b[<span class="dv">1</span>] = d2;</a>
+<a class="sourceLine" id="cb5-48" title="48">    </a>
+<a class="sourceLine" id="cb5-49" title="49">  Derived1 e1 = b[<span class="dv">0</span>].get&lt;Derived1&gt;(); <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb5-50" title="50">  Derived2 e2 = b[<span class="dv">1</span>].get&lt;Derived2&gt;(); <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb5-51" title="51">  </a>
+<a class="sourceLine" id="cb5-52" title="52">  Derived2 e3 = b[<span class="dv">1</span>].get&lt;Derived1&gt;(); <span class="co">// PANIC!</span></a>
+<a class="sourceLine" id="cb5-53" title="53">}</a></code></pre></div>
+<h3 id="new-new-演算子">new, new[] 演算子</h3>
+<p>TWELITEモジュールのマイコンには十分なメモリもなければ、高度なメモリ管理もありません。しかしマイコンのメモリマップの末尾からスタックエリアまでの領域はヒープ領域として、必要に応じて確保できる領域があります。以下にメモリマップの概要を図示します。APPがアプリケーションコードで確保されたRAM領域、HEAPはヒープ領域、STACKはスタック領域です。</p>
+<pre><code>|====APP====:==HEAP==..   :==STACK==|
+0                                  32KB</code></pre>
+<p>たとえ<code>delete</code>できなくても<code>new</code>演算子が有用である場面も想定されます。そのため、以下のように<code>new, new[]</code>演算子を定義しています。<code>pvHear_Alloc()</code>は半導体ライブラリで提供されているメモリ確保の関数で、<code>u32HeapStart, u32HeapEnd</code>も同様です。<code>0xdeadbeef</code>はダミーアドレスです。beefがdeadなのは変だとかいう指摘はしないでください。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">void</span>* <span class="kw">operator</span> <span class="kw">new</span>(<span class="dt">size_t</span> size) <span class="kw">noexcept</span> {</a>
+<a class="sourceLine" id="cb7-2" title="2">    <span class="cf">if</span> (u32HeapStart + size &gt; u32HeapEnd) {</a>
+<a class="sourceLine" id="cb7-3" title="3">        <span class="cf">return</span> (<span class="dt">void</span>*)<span class="bn">0xdeadbeef</span>;</a>
+<a class="sourceLine" id="cb7-4" title="4">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb7-5" title="5">        <span class="dt">void</span> *blk = pvHeap_Alloc(NULL, size, <span class="dv">0</span>);   </a>
+<a class="sourceLine" id="cb7-6" title="6">        <span class="cf">return</span> blk;</a>
+<a class="sourceLine" id="cb7-7" title="7">    }</a>
+<a class="sourceLine" id="cb7-8" title="8">}</a>
+<a class="sourceLine" id="cb7-9" title="9"><span class="dt">void</span>* <span class="kw">operator</span> <span class="kw">new</span>[](<span class="dt">size_t</span> size) <span class="kw">noexcept</span> {</a>
+<a class="sourceLine" id="cb7-10" title="10">    <span class="cf">return</span> <span class="kw">operator</span> <span class="kw">new</span>(size); }</a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="dt">void</span> <span class="kw">operator</span> <span class="kw">delete</span>(<span class="dt">void</span>* ptr) <span class="kw">noexcept</span> {}</a>
+<a class="sourceLine" id="cb7-12" title="12"><span class="dt">void</span> <span class="kw">operator</span> <span class="kw">delete</span>[](<span class="dt">void</span>* ptr) <span class="kw">noexcept</span> {}</a></code></pre></div>
+<p>例外も使えないため失敗したときの対処はありません。また、メモリ容量を意識せず確保を続けた場合、スタック領域と干渉する可能性もあります。</p>
+<div class="info">
+<p>システム（MAC層など）が確保するメモリは約2.5KBです。</p>
+</div>
+<h3 id="コンテナクラス">コンテナクラス</h3>
+<p>MWXライブラリでは、マイコンのリソースが小さい点、メモリーの動的確保ができない点を考慮し標準ライブラリで提供されるコンテナクラスの利用はせず、シンプルなコンテナクラスを２種類定義しています。コンテナクラスにはイテレータや<code>begin(), end()</code>メソッドを定義しているため、範囲for文やSTLのアルゴリズムの一部を利用できます。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1">smplbuf&lt;<span class="dt">int16_t</span>, alloc_local&lt;<span class="dt">int16_t</span>, <span class="dv">16</span>&gt;&gt; buf;</a>
+<a class="sourceLine" id="cb8-2" title="2">buf.push_back(-<span class="dv">1</span>); <span class="co">// push_back() は末尾に追加</span></a>
+<a class="sourceLine" id="cb8-3" title="3">buf.push_back(<span class="dv">2</span>);</a>
+<a class="sourceLine" id="cb8-4" title="4">...</a>
+<a class="sourceLine" id="cb8-5" title="5">buf.push_back(<span class="dv">10</span>);</a>
+<a class="sourceLine" id="cb8-6" title="6"></a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co">//範囲for文</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="cf">for</span>(<span class="kw">auto</span>&amp;&amp; x : buf) { Serial &lt;&lt; <span class="dt">int</span>(x) &lt;&lt; <span class="ch">&#39;,&#39;</span> }</a>
+<a class="sourceLine" id="cb8-9" title="9"><span class="co">//アルゴリズム std::minmax</span></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="kw">auto</span>&amp;&amp; minmax = <span class="bu">std::</span>minmax_element(buf.begin(), buf.end());</a>
+<a class="sourceLine" id="cb8-11" title="11">Serial &lt;&lt; <span class="st">&quot;Min=&quot;</span> &lt;&lt; <span class="dt">int</span>(*minmax.first)</a>
+<a class="sourceLine" id="cb8-12" title="12">       &lt;&lt; <span class="st">&quot;,Max=&quot;</span> &lt;&lt; <span class="dt">int</span>(*minmax.second);</a></code></pre></div>
+<table>
+<colgroup>
+<col style="width: 5%"></col>
+<col style="width: 94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>クラス名</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>smplbuf</code></td>
+<td>配列クラスで、最大領域 (capacity) と最大領域範囲内で都度サイズを指定できる利用領域(size)を管理します。また本クラスは stream インタフェースを実装しているため、&lt;&lt; 演算子を用いてデータを書き込むことができます。</td>
+</tr>
+<tr class="even">
+<td><code>smplque</code></td>
+<td>FIFOキューを実装しています。キューのサイズはテンプレートのパラメータで決定します。割り込み禁止を用いキューを操作するためのテンプレート引数もあります。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="section"></h4>
+<h4 id="コンテナクラスのメモリについて">コンテナクラスのメモリについて</h4>
+<p>コンテナクラスではメモリの確保方法を<code>template</code>引数のパラメータとして指定します。</p>
+<table>
+<colgroup>
+<col style="width: 13%"></col>
+<col style="width: 86%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>クラス名</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>alloc_attach</code></td>
+<td>すでに確保済みのバッファメモリを指定する。Cライブラリ向けに確保したメモリ領域を管理したいとき、同じバッファ領域の分断領域として処理したい時などに使用します。</td>
+</tr>
+<tr class="even">
+<td><code>alloc_static</code></td>
+<td>クラス内に静的配列として確保する。事前にサイズが決まっていたり、一時利用の領域として使用します。</td>
+</tr>
+<tr class="odd">
+<td><code>alloc_heap</code></td>
+<td>ヒープ領域に確保する。<br>システムのヒープに確保後は破棄できませんが、初期化時にアプリケーションの設定などに従い領域を確保するといった使い方に向いています。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="可変数引数">可変数引数</h3>
+<p>MWXライブラリでは、バイト列やビット列の操作、<code>printf</code>相当の処理を行う処理に可変数引数を用いています。下記の例は指定のビット位置に1をセットする処理です。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="co">// packing bits with given arguments, which specifies bit position.</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="co">//   pack_bits(5, 0, 1) -&gt; (b100011) bit0,1,5 are set.</span></a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="co">// 再帰取り出しの一番最初の関数</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="kw">template</span> &lt;<span class="kw">typename</span> Head&gt;</a>
+<a class="sourceLine" id="cb9-6" title="6"><span class="kw">constexpr</span> <span class="dt">uint32_t</span> pack_bits(Head head) { <span class="cf">return</span>  <span class="dv">1</span><span class="bu">UL</span> &lt;&lt; head; }</a>
+<a class="sourceLine" id="cb9-7" title="7"></a>
+<a class="sourceLine" id="cb9-8" title="8"><span class="co">// head を取り出し、残りのパラメータを再帰呼び出しにて pack_bits に転送</span></a>
+<a class="sourceLine" id="cb9-9" title="9"><span class="kw">template</span> &lt;<span class="kw">typename</span> Head, <span class="kw">typename</span>... Tail&gt;</a>
+<a class="sourceLine" id="cb9-10" title="10"><span class="kw">constexpr</span> <span class="dt">uint32_t</span> pack_bits(Head head, Tail&amp;&amp;... tail) {</a>
+<a class="sourceLine" id="cb9-11" title="11">  <span class="cf">return</span> (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; head) | pack_bits(<span class="bu">std::</span>forward&lt;Tail&gt;(tail)...);</a>
+<a class="sourceLine" id="cb9-12" title="12">}</a>
+<a class="sourceLine" id="cb9-13" title="13"></a>
+<a class="sourceLine" id="cb9-14" title="14"><span class="co">// コンパイル後、以下の２つは同じ結果になります。</span></a>
+<a class="sourceLine" id="cb9-15" title="15"><span class="kw">constexpr</span> <span class="dt">uint32_t</span> b1 = pack_bits(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">8</span>);</a>
+<a class="sourceLine" id="cb9-16" title="16"><span class="co">// b1 and b2 are the same! </span></a>
+<a class="sourceLine" id="cb9-17" title="17"><span class="at">const</span> <span class="dt">uint32_t</span> b2 = (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">1</span>)|(<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">4</span>)|(<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">0</span>)|(<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">8</span>);</a></code></pre></div>
+<p>この処理では template のパラメータパック (<code>typename...</code> の部分) で、再帰的な処理を行い引数の展開を行っています。上記の例では<code>constexpr</code>の指定があるため、コンパイル時に計算が行われマクロ定義や<code>b2</code>のような<code>const</code>値の指定と同等の結果になります。また変数を引数として動的に計算する関数としても振る舞うこともできます。</p>
+<p>以下の例では、<code>expand_bytes</code>関数により、受信パケットのデータ列からローカル変数に値を格納しています。パラメータパックを用いた場合各引数の型を把握できるため、下記のように、受信パケットのバイト列から、サイズや異なる型にあった値を格納することができます。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">auto</span>&amp;&amp; rx = the_twelite.receiver.read(); <span class="co">// 受信パケット</span></a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="co">// 展開後のパケットの内容を格納する変数</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="co">// パケットのペイロードはバイト列で以下のように並んでいる。</span></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="co">//   [B0][B1][B2][B3][B4][B5][B6][B7][B8][B9][Ba][Bb]</span></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="co">//   &lt;message       &gt;&lt;adc*  &gt;&lt;vcc*  &gt;&lt;timestamp*    &gt;</span></a>
+<a class="sourceLine" id="cb10-7" title="7"><span class="co">//   * 数値型はビッグエンディアン並び</span></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="dt">uint8_t</span> msg[MSG_LEN];</a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="dt">uint16_t</span> adcval, volt;</a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="dt">uint32_t</span> timestamp;</a>
+<a class="sourceLine" id="cb10-11" title="11"></a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="co">// expand packet payload</span></a>
+<a class="sourceLine" id="cb10-13" title="13">expand_bytes(rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb10-14" title="14">        , msg       <span class="co">// 4bytes of msg</span></a>
+<a class="sourceLine" id="cb10-15" title="15">        , adcval    <span class="co">// 2bytes, A1 value [0..1023]</span></a>
+<a class="sourceLine" id="cb10-16" title="16">      , volt      <span class="co">// 2bytes, Module VCC[mV]</span></a>
+<a class="sourceLine" id="cb10-17" title="17">      , timestamp <span class="co">// 4bytes of timestamp</span></a>
+<a class="sourceLine" id="cb10-18" title="18">);</a></code></pre></div>
+<h3 id="イテレータ">イテレータ</h3>
+<p>イテレータはポインタの抽象化で、例えばメモリの連続性のないようなデータ構造においても、あたかもポインタを使ったようにデータ構造にアクセスできる効果があります。</p>
+<div class="info">
+<p>C++のSTLでは、<code>begin()</code>メソッドで得られるコンテナの先頭を示すイテレータと、<code>end()</code>メソッドで得られるコンテナの末尾の「次」を示すイテレータの組み合わせが良く用いられます。</p>
+<p>コンテナの末尾の「次」を<code>end()</code>としているのは、以下のような記述を想定しているためです。MWXライブラリでもこれに倣ってコンテナの実装を行っています。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1">smplque&lt;<span class="dt">uint8_t</span>, alloc_local&lt;<span class="dt">uint8_t</span>, <span class="dv">5</span>&gt; &gt; que;</a>
+<a class="sourceLine" id="cb11-2" title="2">que.push(<span class="ch">&#39;a&#39;</span>); que.push(<span class="ch">&#39;b&#39;</span>); que.pop(); que.push(<span class="ch">&#39;c&#39;</span>); ...</a>
+<a class="sourceLine" id="cb11-3" title="3"></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="kw">auto</span>&amp;&amp; p = que.begin();</a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="kw">auto</span>&amp;&amp; e = que.end();</a>
+<a class="sourceLine" id="cb11-6" title="6"></a>
+<a class="sourceLine" id="cb11-7" title="7"><span class="cf">while</span>(p != e) { <span class="co">// pがeまで進んだ＝全要素処理した</span></a>
+<a class="sourceLine" id="cb11-8" title="8">  Serial &lt;&lt; *p;</a>
+<a class="sourceLine" id="cb11-9" title="9">  ++p; <span class="co">// イテレータのインクリメントは前置演算子を使います。</span></a>
+<a class="sourceLine" id="cb11-10" title="10">  　　　<span class="co">// この場合、p++ と記述すると、コンパイラによる最適化が行われる可能性は</span></a>
+<a class="sourceLine" id="cb11-11" title="11">       <span class="co">// 高いものの、コード上はイテレータのコピーが発生します。</span></a>
+<a class="sourceLine" id="cb11-12" title="12">}</a></code></pre></div>
+<p>イテレータを標準ライブラリの仕様に適合させることで、範囲for文が利用できたり、標準ライブラリのアルゴリズムを利用できるようになります。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode csharp"><code class="sourceCode cs"><a class="sourceLine" id="cb12-1" title="1">#include &lt;algorithm&gt;</a>
+<a class="sourceLine" id="cb12-2" title="2">#include &lt;cctype&gt;</a>
+<a class="sourceLine" id="cb12-3" title="3"></a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="co">// ラムダ式による文字変換</span></a>
+<a class="sourceLine" id="cb12-5" title="5">std::<span class="fu">for_each</span>(que.<span class="fu">begin</span>(), que.<span class="fu">end</span>(), </a>
+<a class="sourceLine" id="cb12-6" title="6">  [](uint8_t&amp; x) { x = std::<span class="fu">toupper</span>(x); });</a>
+<a class="sourceLine" id="cb12-7" title="7"></a>
+<a class="sourceLine" id="cb12-8" title="8"><span class="co">// 範囲for文</span></a>
+<a class="sourceLine" id="cb12-9" title="9"><span class="kw">for</span> (uint8_t x : que) {</a>
+<a class="sourceLine" id="cb12-10" title="10">  Serial &lt;&lt; x;</a>
+<a class="sourceLine" id="cb12-11" title="11">}</a></code></pre></div>
+<p>（MWXライブラリではC++標準ライブラリに対する適合度や互換性についての検証は行っていません。動作確認の上利用ください）</p>
+</div>
+<p>以下の例では、通常のポインタでは連続的なアクセスができないFIFOキューのイテレータ、さらに、FIFOキューの構造体の特定メンバー(例ではX軸)のみを抽出するイテレータを利用する例です。</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1"><span class="co">// XYZTの４軸構造体を要素とする要素数５のキュー</span></a>
+<a class="sourceLine" id="cb13-2" title="2">smplque&lt;axis_xyzt, alloc_local&lt;axis_xyzt, <span class="dv">5</span>&gt; &gt; que;</a>
+<a class="sourceLine" id="cb13-3" title="3"></a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="co">// テスト用にデータを投入</span></a>
+<a class="sourceLine" id="cb13-5" title="5">que.push(axis_xyzt(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>));</a>
+<a class="sourceLine" id="cb13-6" title="6">que.push(axis_xyzt(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>));</a>
+<a class="sourceLine" id="cb13-7" title="7">...</a>
+<a class="sourceLine" id="cb13-8" title="8"></a>
+<a class="sourceLine" id="cb13-9" title="9"><span class="co">// 構造体としてのイテレータを用いたアクセス</span></a>
+<a class="sourceLine" id="cb13-10" title="10"><span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; e : v) { Serial &lt;&lt; <span class="dt">int</span>(e.x) &lt;&lt; <span class="ch">&#39;,&#39;</span>; }</a>
+<a class="sourceLine" id="cb13-11" title="11"></a>
+<a class="sourceLine" id="cb13-12" title="12"><span class="co">// キューの中の X 軸を取り出す</span></a>
+<a class="sourceLine" id="cb13-13" title="13"><span class="kw">auto</span>&amp;&amp; vx = get_axis_x(que);</a>
+<a class="sourceLine" id="cb13-14" title="14"><span class="co">// X軸のイテレータを用いたアクセス</span></a>
+<a class="sourceLine" id="cb13-15" title="15"><span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; e : vx) { Serial &lt;&lt; <span class="dt">int</span>(e) &lt;&lt; <span class="ch">&#39;,&#39;</span>; }</a>
+<a class="sourceLine" id="cb13-16" title="16"></a>
+<a class="sourceLine" id="cb13-17" title="17"><span class="co">// int16_t要素のイテレータなので、STLのアルゴリズム（最大最小）が使える</span></a>
+<a class="sourceLine" id="cb13-18" title="18"><span class="kw">auto</span>&amp;&amp; minmax = <span class="bu">std::</span>minmax_element(vx.begin(), vx.end());</a></code></pre></div>
+<p> 以下は <code>smplque</code> クラスのイテレータの実装の抜粋です。このイテレータでは、キューオブジェクトの実体と、インデックスにより管理しています。キューのメモリが不連続になる（末尾の次は先頭を指す必要があるリングバッファ構造）部分は<code>smplque::operator []</code>で解決しています。オブジェクトのアドレスが一致することとインデックスが一致すればイテレータは同じものを指していることになります。</p>
+<p>この実装部分には <code>&lt;iterator&gt;</code> が要求する typedef なども含まれ、より多くのSTLのアルゴリズムが適用できるようになります。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">class</span> iter_smplque {</a>
+<a class="sourceLine" id="cb14-2" title="2">    <span class="kw">typedef</span> smplque&lt;T, alloc, INTCTL&gt; BODY;</a>
+<a class="sourceLine" id="cb14-3" title="3"></a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="kw">private</span>:</a>
+<a class="sourceLine" id="cb14-5" title="5">    <span class="dt">uint16_t</span> _pos; <span class="co">// index</span></a>
+<a class="sourceLine" id="cb14-6" title="6">    BODY* _body;   <span class="co">// point to original object</span></a>
+<a class="sourceLine" id="cb14-7" title="7"></a>
+<a class="sourceLine" id="cb14-8" title="8"><span class="kw">public</span>: <span class="co">// for &lt;iterator&gt;</span></a>
+<a class="sourceLine" id="cb14-9" title="9">    <span class="kw">typedef</span> iter_smplque <span class="dt">self_type</span>;</a>
+<a class="sourceLine" id="cb14-10" title="10">    <span class="kw">typedef</span> T <span class="dt">value_type</span>;</a>
+<a class="sourceLine" id="cb14-11" title="11">    <span class="kw">typedef</span> T&amp; reference;</a>
+<a class="sourceLine" id="cb14-12" title="12">    <span class="kw">typedef</span> T* pointer;</a>
+<a class="sourceLine" id="cb14-13" title="13">    <span class="kw">typedef</span> <span class="bu">std::</span>forward_iterator_tag iterator_category;</a>
+<a class="sourceLine" id="cb14-14" title="14">    <span class="kw">typedef</span> <span class="dt">int</span> <span class="dt">difference_type</span>;</a>
+<a class="sourceLine" id="cb14-15" title="15"></a>
+<a class="sourceLine" id="cb14-16" title="16"><span class="kw">public</span>: <span class="co">// pick some methods</span></a>
+<a class="sourceLine" id="cb14-17" title="17">    <span class="kw">inline</span> reference <span class="kw">operator</span> *() {</a>
+<a class="sourceLine" id="cb14-18" title="18">        <span class="cf">return</span> (*_body)[_pos];</a>
+<a class="sourceLine" id="cb14-19" title="19">    }</a>
+<a class="sourceLine" id="cb14-20" title="20">    </a>
+<a class="sourceLine" id="cb14-21" title="21">    <span class="kw">inline</span> <span class="dt">self_type</span>&amp; <span class="kw">operator</span> ++() {</a>
+<a class="sourceLine" id="cb14-22" title="22">        _pos++;</a>
+<a class="sourceLine" id="cb14-23" title="23">        <span class="cf">return</span> *<span class="kw">this</span>;</a>
+<a class="sourceLine" id="cb14-24" title="24">    }</a>
+<a class="sourceLine" id="cb14-25" title="25">};</a></code></pre></div>
+<p>構造体を格納したコンテナ中の、特定構造体メンバーだけアクセスするイテレータは少々煩雑です。構造体のメンバーにアクセスするメンバー関数を予め定義しておきます。このメンバー関数をパラメータ（<code>R&amp; (T::*get)()</code>）としたテンプレートを定義します。<code>Iter</code>はコンテナクラスのイテレータ型です。</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">struct</span> axis_xyzt {</a>
+<a class="sourceLine" id="cb15-2" title="2">    <span class="dt">int16_t</span> x, y, z;</a>
+<a class="sourceLine" id="cb15-3" title="3">    <span class="dt">uint16_t</span> t;</a>
+<a class="sourceLine" id="cb15-4" title="4">    <span class="dt">int16_t</span>&amp; get_x() { <span class="cf">return</span> x; }</a>
+<a class="sourceLine" id="cb15-5" title="5">    <span class="dt">int16_t</span>&amp; get_y() { <span class="cf">return</span> y; }</a>
+<a class="sourceLine" id="cb15-6" title="6">    <span class="dt">int16_t</span>&amp; get_z() { <span class="cf">return</span> z; }</a>
+<a class="sourceLine" id="cb15-7" title="7">};</a>
+<a class="sourceLine" id="cb15-8" title="8"></a>
+<a class="sourceLine" id="cb15-9" title="9"><span class="kw">template</span> &lt;<span class="kw">class</span> Iter, <span class="kw">typename</span> T, <span class="kw">typename</span> R, R&amp; (T::*get)()&gt;</a>
+<a class="sourceLine" id="cb15-10" title="10"><span class="kw">class</span> _iter_axis_xyzt {</a>
+<a class="sourceLine" id="cb15-11" title="11">    Iter _p;</a>
+<a class="sourceLine" id="cb15-12" title="12">    </a>
+<a class="sourceLine" id="cb15-13" title="13"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb15-14" title="14">    <span class="kw">inline</span> <span class="dt">self_type</span>&amp; <span class="kw">operator</span> ++() {</a>
+<a class="sourceLine" id="cb15-15" title="15">        _p++;</a>
+<a class="sourceLine" id="cb15-16" title="16">        <span class="cf">return</span> *<span class="kw">this</span>; }</a>
+<a class="sourceLine" id="cb15-17" title="17"></a>
+<a class="sourceLine" id="cb15-18" title="18">    <span class="kw">inline</span> reference <span class="kw">operator</span> *() {</a>
+<a class="sourceLine" id="cb15-19" title="19">        <span class="cf">return</span> (*_p.*get)(); }</a>
+<a class="sourceLine" id="cb15-20" title="20">};</a>
+<a class="sourceLine" id="cb15-21" title="21"></a>
+<a class="sourceLine" id="cb15-22" title="22"><span class="kw">template</span> &lt;<span class="kw">class</span> Ixyz, <span class="kw">class</span> Cnt&gt;</a>
+<a class="sourceLine" id="cb15-23" title="23"><span class="kw">class</span> _axis_xyzt_iter_gen {</a>
+<a class="sourceLine" id="cb15-24" title="24">    Cnt&amp; _c;</a>
+<a class="sourceLine" id="cb15-25" title="25">    </a>
+<a class="sourceLine" id="cb15-26" title="26"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb15-27" title="27">    _axis_xyzt_iter_gen(Cnt&amp; c) : _c(c) {}</a>
+<a class="sourceLine" id="cb15-28" title="28">    Ixyz begin() { <span class="cf">return</span> Ixyz(_c.begin()); }</a>
+<a class="sourceLine" id="cb15-29" title="29">    Ixyz end() { <span class="cf">return</span> Ixyz(_c.end()); }</a>
+<a class="sourceLine" id="cb15-30" title="30">};</a>
+<a class="sourceLine" id="cb15-31" title="31"></a>
+<a class="sourceLine" id="cb15-32" title="32"><span class="co">// 長いので using で短縮</span></a>
+<a class="sourceLine" id="cb15-33" title="33"><span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int16_t</span>&amp; (axis_xyzt::*get)()&gt;</a>
+<a class="sourceLine" id="cb15-34" title="34"><span class="kw">using</span> _axis_xyzt_axis_ret = _axis_xyzt_iter_gen&lt;</a>
+<a class="sourceLine" id="cb15-35" title="35">    _iter_axis_xyzt&lt;<span class="kw">typename</span> T::iterator, axis_xyzt, <span class="dt">int16_t</span>, get&gt;, T&gt;;</a>
+<a class="sourceLine" id="cb15-36" title="36"></a>
+<a class="sourceLine" id="cb15-37" title="37"><span class="co">// X 軸を取り出すジェネレータ</span></a>
+<a class="sourceLine" id="cb15-38" title="38"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</a>
+<a class="sourceLine" id="cb15-39" title="39">_axis_xyzt_axis_ret&lt;T, &amp;axis_xyzt::get_x&gt;</a>
+<a class="sourceLine" id="cb15-40" title="40">get_axis_x(T&amp; c) {</a>
+<a class="sourceLine" id="cb15-41" title="41">    <span class="cf">return</span> _axis_xyzt_axis_ret&lt;T, &amp;axis_xyzt::get_x&gt;(c);</a>
+<a class="sourceLine" id="cb15-42" title="42">}</a></code></pre></div>
+<p>値にアクセスする<code>operator *</code>この上述のメンバー関数を呼び出しています。（<code>*_p</code>は<code>axis_xyzt</code>構造体で、<code>(*_p.*get)()</code>は、<code>T::*get</code>に<code>&amp;axis_xyzt::get_x</code>を指定した場合<code>_p-&gt;get_x()</code>を呼び出します）</p>
+<p><code>_axis_xyzt_iter_gen</code>クラスは<code>begin(), end()</code>のみを実装し、上記のイテレータを生成します。これで範囲for文やアルゴリズムが利用できるようになります。</p>
+<p>このクラス名は非常に長くなりソースコード中に記述するのは困難です。このクラスを生成するためのジェネレータ関数を用意します。下記の例では末尾の行の <code>get_axis_x()</code> です。このジェネレータ関数を用いることで冒頭のような<code>auto&amp;&amp; vx = get_axis_x(que);</code>といった簡潔な記述になります。</p>
+<p>また、この軸だけを抽出するイテレータは、配列型の<code>smplbuf</code>クラスでも同様に利用できます。</p>
+<h3 id="割り込みイベント状態ハンドラの実装">割り込み・イベント・状態ハンドラの実装</h3>
+<p>ユーザ定義クラスによりアプリケーション動作を記述するため、代表的なハンドラは必須メソッドとして定義が必要ですが、それ以外に多数ある割り込みハンドラ、イベントハンドラ、ステートマシンの状態ハンドラをすべて定義するのは煩雑です。ユーザが定義したものだけ定義され、それのみのコードが実行されるのが理想です。</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">class</span> my_app_def {</a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="kw">public</span>: <span class="co">// 必須メソッドの定義</span></a>
+<a class="sourceLine" id="cb16-3" title="3">    <span class="dt">void</span> network_event(twe::packet_ev_nwk&amp; pEvNwk) {}</a>
+<a class="sourceLine" id="cb16-4" title="4">    <span class="dt">void</span> receive(twe::packet_rx&amp; rx) {}</a>
+<a class="sourceLine" id="cb16-5" title="5">    <span class="dt">void</span> transmit_complete(twe::packet_ev_tx&amp; pEvTx) {}</a>
+<a class="sourceLine" id="cb16-6" title="6">    <span class="dt">void</span> loop() {}</a>
+<a class="sourceLine" id="cb16-7" title="7">    <span class="dt">void</span> on_sleep(<span class="dt">uint32_t</span>&amp; val) {}</a>
+<a class="sourceLine" id="cb16-8" title="8">    <span class="dt">void</span> warmboot(<span class="dt">uint32_t</span>&amp; val) {}</a>
+<a class="sourceLine" id="cb16-9" title="9">    <span class="dt">void</span> wakeup(<span class="dt">uint32_t</span>&amp; val) {}</a>
+<a class="sourceLine" id="cb16-10" title="10">    </a>
+<a class="sourceLine" id="cb16-11" title="11"><span class="kw">public</span>: <span class="co">// これらを必須記述とするのは煩雑</span></a>
+<a class="sourceLine" id="cb16-12" title="12">  <span class="co">// DIO割り込みハンドラ 20種類ある</span></a>
+<a class="sourceLine" id="cb16-13" title="13">  <span class="co">// DIOイベントハンドラ 20種類ある</span></a>
+<a class="sourceLine" id="cb16-14" title="14">  <span class="co">// タイマー割り込みハンドラ 5種類ある</span></a>
+<a class="sourceLine" id="cb16-15" title="15">  <span class="co">// タイマーイベントハンドラ 5種類ある</span></a>
+<a class="sourceLine" id="cb16-16" title="16">  <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb16-17" title="17">}</a></code></pre></div>
+<p>MWXライブラリでは、数の多い DIO割り込みハンドラ（TWELITEハード上は単一の割り込みですが、利用しやすさのためDIO一つずつにハンドラを割り当てることにしました）などを、テンプレートによる空のハンドラーとして定義した上、ユーザ定義のメンバー関数をそのテンプレートの特殊化することにより定義する手法を採用しました。</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="co">// hpp file</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="kw">class</span> my_app_def : <span class="kw">class</span> app_defs&lt;my_app_def&gt;, ... {</a>
+<a class="sourceLine" id="cb17-3" title="3">  <span class="co">// 空のハンドラ</span></a>
+<a class="sourceLine" id="cb17-4" title="4">  <span class="kw">template</span>&lt;<span class="dt">int</span> N&gt; <span class="dt">void</span> int_dio_handler(<span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled) { ; }</a>
+<a class="sourceLine" id="cb17-5" title="5"></a>
+<a class="sourceLine" id="cb17-6" title="6">  ...   </a>
+<a class="sourceLine" id="cb17-7" title="7">  <span class="co">// 12番だけ実装する</span></a>
+<a class="sourceLine" id="cb17-8" title="8">  </a>
+<a class="sourceLine" id="cb17-9" title="9"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb17-10" title="10">  <span class="co">// TWENET から呼び出されるコールバック関数</span></a>
+<a class="sourceLine" id="cb17-11" title="11">  uint8 cbTweNet_u8HwInt(uint32 u32DeviceId, uint32 u32ItemBitmap);</a>
+<a class="sourceLine" id="cb17-12" title="12">};</a>
+<a class="sourceLine" id="cb17-13" title="13"></a>
+<a class="sourceLine" id="cb17-14" title="14"><span class="co">// cpp file</span></a>
+<a class="sourceLine" id="cb17-15" title="15"><span class="kw">template</span> &lt;&gt;</a>
+<a class="sourceLine" id="cb17-16" title="16"><span class="dt">void</span> my_app_def::int_dio_handler&lt;<span class="dv">12</span>&gt;(<span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled) {</a>
+<a class="sourceLine" id="cb17-17" title="17">  digitalWrite(<span class="dv">5</span>, LOW);</a>
+<a class="sourceLine" id="cb17-18" title="18">  handled = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb17-19" title="19">  <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb17-20" title="20">}</a>
+<a class="sourceLine" id="cb17-21" title="21"></a>
+<a class="sourceLine" id="cb17-22" title="22"><span class="dt">void</span> cbTweNet_u8HwInt(uint32 u32DeviceId, uint32 u32ItemBitmap) {</a>
+<a class="sourceLine" id="cb17-23" title="23">  <span class="dt">uint8_t</span> b_handled = FALSE;</a>
+<a class="sourceLine" id="cb17-24" title="24">  <span class="cf">switch</span>(u32DeviceId) {</a>
+<a class="sourceLine" id="cb17-25" title="25">    <span class="cf">case</span> E_AHI_DEVICE_SYSCTRL:</a>
+<a class="sourceLine" id="cb17-26" title="26">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">0</span>)){int_dio_handler&lt;<span class="dv">0</span>&gt;(<span class="dv">0</span>, b_handled);}</a>
+<a class="sourceLine" id="cb17-27" title="27">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">1</span>)){int_dio_handler&lt;<span class="dv">1</span>&gt;(<span class="dv">1</span>, b_handled);}</a>
+<a class="sourceLine" id="cb17-28" title="28">      ...</a>
+<a class="sourceLine" id="cb17-29" title="29">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">12</span>)){int_dio_handler&lt;<span class="dv">12</span>&gt;(<span class="dv">12</span>, b_handled);}</a>
+<a class="sourceLine" id="cb17-30" title="30">      ...</a>
+<a class="sourceLine" id="cb17-31" title="31">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">19</span>)){int_dio_handler&lt;<span class="dv">19</span>&gt;(<span class="dv">19</span>, b_handled);}</a>
+<a class="sourceLine" id="cb17-32" title="32">    <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb17-33" title="33">  }</a>
+<a class="sourceLine" id="cb17-34" title="34">}</a></code></pre></div>
+<p>実際のユーザ記述コードは、マクロ化やヘッダファイルのインクルードを行うことで、簡素化されていますが、上記は解説のために必要なコードを含めています。</p>
+<p>TWENETからの割り込みハンドラから<code>my_app_def::cbTweNet_u8HwInt()</code> が呼び出されます。cppファイル中では、<code>int_dio_handler&lt;12&gt;</code>のみが特殊化されて記載された内容でインスタンス化されます。12番以外はhppファイル中のテンプレートからインスタンス化されます。結局以下のように展開されることになります。</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1">    <span class="cf">case</span> E_AHI_DEVICE_SYSCTRL:</a>
+<a class="sourceLine" id="cb18-2" title="2">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">0</span>)){;}</a>
+<a class="sourceLine" id="cb18-3" title="3">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">1</span>)){;}</a>
+<a class="sourceLine" id="cb18-4" title="4">      ...</a>
+<a class="sourceLine" id="cb18-5" title="5">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">12</span>)){</a>
+<a class="sourceLine" id="cb18-6" title="6">          int_dio_handler&lt;<span class="dv">12</span>&gt;(<span class="dv">12</span>, b_handled);}</a>
+<a class="sourceLine" id="cb18-7" title="7">      ...</a>
+<a class="sourceLine" id="cb18-8" title="8">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">19</span>)){;}</a>
+<a class="sourceLine" id="cb18-9" title="9">      <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb18-10" title="10">      </a>
+<a class="sourceLine" id="cb18-11" title="11">    <span class="co">// ↓　↓　↓</span></a>
+<a class="sourceLine" id="cb18-12" title="12">    </a>
+<a class="sourceLine" id="cb18-13" title="13">    <span class="co">// 結局、このように最適化されることが期待できる。</span></a>
+<a class="sourceLine" id="cb18-14" title="14">    <span class="cf">case</span> E_AHI_DEVICE_SYSCTRL:</a>
+<a class="sourceLine" id="cb18-15" title="15">      <span class="cf">if</span> (u32ItemBitmap &amp; (<span class="dv">1</span><span class="bu">UL</span> &lt;&lt; <span class="dv">12</span>)){</a>
+<a class="sourceLine" id="cb18-16" title="16">        <span class="co">// int_dio_handler&lt;12&gt; もinline展開</span></a>
+<a class="sourceLine" id="cb18-17" title="17">        digitalWrite(<span class="dv">5</span>, LOW);</a>
+<a class="sourceLine" id="cb18-18" title="18">        handled = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb18-19" title="19">      }</a>
+<a class="sourceLine" id="cb18-20" title="20">      <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb18-21" title="21">    </a></code></pre></div>
+<p>最終的に、コンパイラの最適化により12番以外のコードは無意味と判断されコード中から消えてしまうことが期待できます（ただし、上記のように最適化されることを保証するものではありません）。</p>
+<p>つまりユーザコード上では12番の割り込み時の振る舞いを定義したいときは<code>int_dio_handler&lt;12&gt;</code> を記述するだけで良い、ということになります（注：DIO割り込みを有効にするには <code>attachInterrupt()</code> を呼び出す必要があります）。登録しないハンドラはコンパイル時の最適化により低コストな呼び出しで済むことが期待できます。</p>
+<div class="info">
+<p>ユーザが関数を定義したときにこれを有効にし、定義しない場合は別の関数を呼び出す手法として、リンク時の解決方法があります。下記のように<code>__attribute__((weak))</code> の指定します。ユーザコードで <code>wakeup()</code>関数が定義された場合は、ユーザーコードを関数をリンクし、未定義の場合は中身が空の関数をリンクします。</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1"><span class="co">// mwx_appcore.cpp</span></a>
+<a class="sourceLine" id="cb19-2" title="2"><span class="dt">void</span> wakeup() __attribute__((weak));</a>
+<a class="sourceLine" id="cb19-3" title="3"><span class="dt">void</span> wakeup() { }</a></code></pre></div>
+<p>上記ハンドラの実装においてはweak指定したメンバー変数を明示的に生成する必要があり、またinline化による最適化が行いにくいため使用しませんが、<code>wakeup()</code>といったいくつかのTWENETからのコールバック関数の受け皿としてweak指定の関数を定義しています。</p>
+</div>
+<h3 id="streamクラス">Streamクラス</h3>
+<p>ストリームクラスは、主にUART(シリアルポート)の入出力に用います。MWXライブラリでは、出力用の手続きを主に定義しています。一部入力用の定義もあります。</p>
+<p>ここでは派生クラスが必要とする実装について解説します。</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">template</span> &lt;<span class="kw">class</span> D&gt;</a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="kw">class</span> stream {</a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="kw">protected</span>:</a>
+<a class="sourceLine" id="cb20-4" title="4">    <span class="dt">void</span>* pvOutputContext; <span class="co">// TWE_tsFILE*</span></a>
+<a class="sourceLine" id="cb20-5" title="5"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb20-6" title="6">  <span class="kw">inline</span> D* get_Derived() { <span class="cf">return</span> <span class="kw">static_cast</span>&lt;D*&gt;(<span class="kw">this</span>); }</a>
+<a class="sourceLine" id="cb20-7" title="7">    <span class="kw">inline</span> D&amp; <span class="kw">operator</span> &lt;&lt; (<span class="dt">char</span> c) {</a>
+<a class="sourceLine" id="cb20-8" title="8">        get_Derived()-&gt;write(c);</a>
+<a class="sourceLine" id="cb20-9" title="9">        <span class="cf">return</span> *get_Derived();</a>
+<a class="sourceLine" id="cb20-10" title="10">    }</a>
+<a class="sourceLine" id="cb20-11" title="11">};</a>
+<a class="sourceLine" id="cb20-12" title="12"></a>
+<a class="sourceLine" id="cb20-13" title="13"><span class="kw">class</span> serial_jen : <span class="kw">public</span> mwx::stream&lt;serial_jen&gt; {</a>
+<a class="sourceLine" id="cb20-14" title="14"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb20-15" title="15">    <span class="kw">inline</span> <span class="dt">size_t</span> write(<span class="dt">int</span> n) {</a>
+<a class="sourceLine" id="cb20-16" title="16">        <span class="cf">return</span> (<span class="dt">int</span>)SERIAL_bTxChar(_serdef._u8Port, n);</a>
+<a class="sourceLine" id="cb20-17" title="17">    }</a>
+<a class="sourceLine" id="cb20-18" title="18">};</a></code></pre></div>
+<p>上記は1文字書き出す<code>write()</code>メソッドの実装です。親クラスの<code>stream&lt;serial_jen&gt;</code>からはキャストを実行する<code>get_Drived()</code>メソッドを用いて、<code>serial_jen::write()</code>メソッドにアクセスしています。</p>
+<p>必要に応じて <code>write(), read(), flush(), available()</code> といったメソッドを定義します。</p>
+<p>書式出力にはMarco Paland氏による<a target=_blank href="https://github.com/mpaland/printf">printfライブラリ</a>を利用しています。MWXライブラリから利用するための実装が必要になります。下記の例で派生クラスの<code>serial_jen</code>で必要なことは1バイト出力のための <code>vOutput()</code> メソッドを定義することと、<code>vOutput()</code>がstaticメソッドであるため出力のための補助情報を親クラスの<code>pvOutputContext</code>に保存することです。</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="kw">template</span> &lt;<span class="kw">class</span> D&gt;</a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="kw">class</span> stream {</a>
+<a class="sourceLine" id="cb21-3" title="3"><span class="kw">protected</span>:</a>
+<a class="sourceLine" id="cb21-4" title="4">    <span class="dt">void</span>* pvOutputContext; <span class="co">// TWE_tsFILE*</span></a>
+<a class="sourceLine" id="cb21-5" title="5"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb21-6" title="6">    <span class="kw">inline</span> tfcOutput get_pfcOutout() { <span class="cf">return</span> get_Derived()-&gt;vOutput; }</a>
+<a class="sourceLine" id="cb21-7" title="7">    </a>
+<a class="sourceLine" id="cb21-8" title="8">    <span class="kw">inline</span> D&amp; <span class="kw">operator</span> &lt;&lt; (<span class="dt">int</span> i) {</a>
+<a class="sourceLine" id="cb21-9" title="9">        (<span class="dt">size_t</span>)fctprintf(get_pfcOutout(), pvOutputContext, <span class="st">&quot;</span><span class="sc">%d</span><span class="st">&quot;</span>, i);</a>
+<a class="sourceLine" id="cb21-10" title="10">        <span class="cf">return</span> *get_Derived();</a>
+<a class="sourceLine" id="cb21-11" title="11">    }</a>
+<a class="sourceLine" id="cb21-12" title="12">};</a>
+<a class="sourceLine" id="cb21-13" title="13"></a>
+<a class="sourceLine" id="cb21-14" title="14"><span class="kw">class</span> serial_jen : <span class="kw">public</span> mwx::stream&lt;serial_jen&gt; {</a>
+<a class="sourceLine" id="cb21-15" title="15">    <span class="kw">using</span> SUPER = mwx::stream&lt;serial_jen&gt;;</a>
+<a class="sourceLine" id="cb21-16" title="16">    TWE_tsFILE* _psSer; <span class="co">// シリアル出力のためのローレベル構造体</span></a>
+<a class="sourceLine" id="cb21-17" title="17"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb21-18" title="18">  <span class="dt">void</span> begin() {</a>
+<a class="sourceLine" id="cb21-19" title="19">    SUPER::pvOutputContext = (<span class="dt">void</span>*)_psSer;</a>
+<a class="sourceLine" id="cb21-20" title="20">  }</a>
+<a class="sourceLine" id="cb21-21" title="21">  </a>
+<a class="sourceLine" id="cb21-22" title="22">    <span class="at">static</span> <span class="dt">void</span> vOutput(<span class="dt">char</span> out, <span class="dt">void</span>* vp) {</a>
+<a class="sourceLine" id="cb21-23" title="23">        TWE_tsFILE* fp = (TWE_tsFILE*)vp;</a>
+<a class="sourceLine" id="cb21-24" title="24">        fp-&gt;fp_putc(out, fp);</a>
+<a class="sourceLine" id="cb21-25" title="25">    }</a>
+<a class="sourceLine" id="cb21-26" title="26">};</a></code></pre></div>
+<p><code>get_pfcOutput()</code>により、派生クラスで定義した<code>vOutput()</code>関数を指定し、そのパラメータとして<code>pvOutputContext</code>が渡されます。上記の例では<code>&lt;&lt;</code>演算子がint型で呼び出されたとき<code>serial_jen::vOutput()</code>とUART用に設定済みの<code>TWE_tsFILE*</code>を<code>fctprintf()</code>関数に渡しています。</p>
+<h3 id="wire-spiのワーカーオブジェクト">Wire, SPIのワーカーオブジェクト</h3>
+<p><code>Wire</code>クラスでは、2線デバイスとの送信・受信時に、通信開始から終了までを管理する必要があります。ワーカーオブジェクトを利用する記述について内容を記述します。</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb22-1" title="1"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(SHTC3_ADDRESS)) {</a>
+<a class="sourceLine" id="cb22-2" title="2">    Serial &lt;&lt; <span class="st">&quot;{I2C SHTC3 connected.&quot;</span>;</a>
+<a class="sourceLine" id="cb22-3" title="3">    wrt &lt;&lt; SHTC3_TRIG_H;</a>
+<a class="sourceLine" id="cb22-4" title="4">    wrt &lt;&lt; SHTC3_TRIG_L;</a>
+<a class="sourceLine" id="cb22-5" title="5">    Serial &lt;&lt; <span class="st">&quot; end}&quot;</span>;</a>
+<a class="sourceLine" id="cb22-6" title="6">}</a></code></pre></div>
+<p><code>periph_twowire::writer</code> クラスの抜粋です。streamインタフェースを実装するために <code>mwx::stream&lt;writer&gt;</code> を継承しています。steamインタフェースを利用するために <code>write()</code> と <code>vOutput()</code>メソッドの実装を行っています。</p>
+<p>コンストラクタでは2線シリアルの通信開始を、デストラクタで通信終了のメソッドを呼び出しています。また、<code>operator bool()</code>演算子では、2線シリアルのデバイスの通信開始に成功した場合 <code>true</code>を返すようになっています。</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb23-1" title="1"><span class="kw">class</span> periph_twowire {</a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb23-3" title="3">    <span class="kw">class</span> writer : <span class="kw">public</span> mwx::stream&lt;writer&gt; {</a>
+<a class="sourceLine" id="cb23-4" title="4">        <span class="kw">friend</span> <span class="kw">class</span> mwx::stream&lt;writer&gt;;</a>
+<a class="sourceLine" id="cb23-5" title="5">        periph_twowire&amp; _wire;</a>
+<a class="sourceLine" id="cb23-6" title="6">    </a>
+<a class="sourceLine" id="cb23-7" title="7">    <span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb23-8" title="8">        writer(periph_twowire&amp; ref, <span class="dt">uint8_t</span> devid) : _wire(ref) {</a>
+<a class="sourceLine" id="cb23-9" title="9">        _wire.beginTransmission(devid); <span class="co">// コンストラクタで通信開始</span></a>
+<a class="sourceLine" id="cb23-10" title="10">        }</a>
+<a class="sourceLine" id="cb23-11" title="11">    </a>
+<a class="sourceLine" id="cb23-12" title="12">        ~writer() {</a>
+<a class="sourceLine" id="cb23-13" title="13">            _wire.endTransmission(); <span class="co">// デストラクタで通信終了</span></a>
+<a class="sourceLine" id="cb23-14" title="14">        }</a>
+<a class="sourceLine" id="cb23-15" title="15">    </a>
+<a class="sourceLine" id="cb23-16" title="16">        <span class="kw">operator</span> <span class="dt">bool</span>() {</a>
+<a class="sourceLine" id="cb23-17" title="17">            <span class="cf">return</span> (_wire._mode == periph_twowire::MODE_TX);</a>
+<a class="sourceLine" id="cb23-18" title="18">        }</a>
+<a class="sourceLine" id="cb23-19" title="19">    </a>
+<a class="sourceLine" id="cb23-20" title="20">    <span class="kw">private</span>: <span class="co">// stream interface</span></a>
+<a class="sourceLine" id="cb23-21" title="21">        <span class="kw">inline</span> <span class="dt">size_t</span> write(<span class="dt">int</span> n) {</a>
+<a class="sourceLine" id="cb23-22" title="22">            <span class="cf">return</span> _wire.write(val);</a>
+<a class="sourceLine" id="cb23-23" title="23">        }</a>
+<a class="sourceLine" id="cb23-24" title="24">    </a>
+<a class="sourceLine" id="cb23-25" title="25">        <span class="co">// for upper class use</span></a>
+<a class="sourceLine" id="cb23-26" title="26">        <span class="at">static</span> <span class="dt">void</span> vOutput(<span class="dt">char</span> out, <span class="dt">void</span>* vp) {</a>
+<a class="sourceLine" id="cb23-27" title="27">            periph_twowire* p_wire = (periph_twowire*)vp;</a>
+<a class="sourceLine" id="cb23-28" title="28">            <span class="cf">if</span> (p_wire != <span class="kw">nullptr</span>) {</a>
+<a class="sourceLine" id="cb23-29" title="29">                p_wire-&gt;write(<span class="dt">uint8_t</span>(out));</a>
+<a class="sourceLine" id="cb23-30" title="30">            }</a>
+<a class="sourceLine" id="cb23-31" title="31">        }</a>
+<a class="sourceLine" id="cb23-32" title="32">    };</a>
+<a class="sourceLine" id="cb23-33" title="33">    </a>
+<a class="sourceLine" id="cb23-34" title="34"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb23-35" title="35">    writer get_writer(<span class="dt">uint8_t</span> address) {</a>
+<a class="sourceLine" id="cb23-36" title="36">        <span class="cf">return</span> writer(*<span class="kw">this</span>, address);</a>
+<a class="sourceLine" id="cb23-37" title="37">    }</a>
+<a class="sourceLine" id="cb23-38" title="38">};</a>
+<a class="sourceLine" id="cb23-39" title="39"><span class="kw">class</span> periphe_twowire Wire; <span class="co">// global instance</span></a>
+<a class="sourceLine" id="cb23-40" title="40"></a>
+<a class="sourceLine" id="cb23-41" title="41"><span class="co">// ユーザコード</span></a>
+<a class="sourceLine" id="cb23-42" title="42"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(SHTC3_ADDRESS)) {</a>
+<a class="sourceLine" id="cb23-43" title="43">    Serial &lt;&lt; <span class="st">&quot;{I2C SHTC3 connected.&quot;</span>;</a>
+<a class="sourceLine" id="cb23-44" title="44">    wrt &lt;&lt; SHTC3_TRIG_H;</a>
+<a class="sourceLine" id="cb23-45" title="45">    wrt &lt;&lt; SHTC3_TRIG_L;</a>
+<a class="sourceLine" id="cb23-46" title="46">    Serial &lt;&lt; <span class="st">&quot; end}&quot;</span>;</a>
+<a class="sourceLine" id="cb23-47" title="47">}</a></code></pre></div>
+<p><code>get_writer()</code>メソッドによりオブジェクト<code>wrt</code>を生成します。この時にオブジェクトのコピーは通常発生しません。C++コンパイラのRVO(Return Value Optimization)という最適化により、<code>writer</code>は<code>wrt</code>に直接生成されるためコピーは発生せず、コンストラクタで実行されているバスの初期化を多重に行ったりすることはありません。ただしRVOはC++の仕様では保証されておらず、念のためMWXライブラリ中ではコピー、代入演算子の削除、moveコンストラクタを定義しています（moveコンストラクタが評価される可能性はないと考えられますが）。</p>
+<p>if節の中の <code>wrt</code>は、まずコンストラクタにより初期化され同時に通信開始します。通信開始でエラーがなければ、条件判定時のbool演算子が<code>true</code>を返し、if節スコープ内の処理が行われます。スコープを脱出するとデストラクタにより、2線シリアルバスの利用終了処理を行います。通信の相手先がない場合は <code>false</code>が戻り、<code>wrt</code>オブジェクトは破棄されます。</p>
+<p>Wire, SPI特有の定義として<code>operator &lt;&lt; (int)</code>の定義をオーバーライドしています。ストリームのデフォルトの振る舞いは、数値を文字列に変換して出力するのですが、WireやSPIで数値文字列をバスに書き込むことは稀で、反対に設定値など数値型のリテラルをそのまま入力したいことが多いのですが、数値型リテラルは多くの場合int型として評価されるため、この振舞を変更します。</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb24-1" title="1">            writer&amp; <span class="kw">operator</span> &lt;&lt; (<span class="dt">int</span> v) {</a>
+<a class="sourceLine" id="cb24-2" title="2">                _wire.write(<span class="dt">uint8_t</span>(v &amp; <span class="bn">0xFF</span>));</a>
+<a class="sourceLine" id="cb24-3" title="3">                <span class="cf">return</span> *<span class="kw">this</span>;</a>
+<a class="sourceLine" id="cb24-4" title="4">            }</a></code></pre></div>
+<p>ここではint型の値については8bitに切り詰めて、その値を出力しています。</p>
+</body>
+</html>

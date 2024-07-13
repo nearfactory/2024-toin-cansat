@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PAL_AMB-behavior</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PAL_AMB-behavior</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pal_amb-behavior">PAL_AMB-behavior</a><ul>
+<li><a href="#act-features.">ACT FEATURES.</a></li>
+<li><a href="#how-to-use-act">How to use ACT</a><ul>
+<li><a href="#preparation-for-twelite">Preparation for TWELITE</a></li>
+</ul></li>
+<li><a href="#file-structure">File Structure</a></li>
+<li><a href="#initialization-setup">Initialization setup()</a></li>
+<li><a href="#parent-node-behavior">Parent Node BEHAVIOR</a><ul>
+<li><a href="#my_app_parentreceive">MY_APP_PARENT::receive()</a></li>
+<li><a href="#my_app_parentmwx_ticktimer_int">MY_APP_PARENT::MWX_TICKTIMER_INT()</a></li>
+<li><a href="#my_app_parentmwx_dio_eventpal_ambpin_btn">MY_APP_PARENT::MWX_DIO_EVENT(PAL_AMB::PIN_BTN)</a></li>
+<li><a href="#my_app_parentmwx_statee_mwxstate_0-..-3">MY_APP_PARENT::MWX_STATE(E_MWX::STATE_0 .. 3)</a></li>
+</ul></li>
+<li><a href="#behavior-of-child-node">BEHAVIOR of Child Node</a><ul>
+<li><a href="#my_app_childon_begin">MY_APP_CHILD::on_begin()</a></li>
+<li><a href="#my_app_childwakeup">MY_APP_CHILD::wakeup()</a></li>
+<li><a href="#my_app_childtransmit_complete">MY_APP_CHILD::transmit_complete()</a></li>
+<li><a href="#my_app_childtransmit_complete-1">MY_APP_CHILD::transmit_complete()</a></li>
+<li><a href="#my_app_childshtc3_">MY_APP_CHILD::shtc3_???()</a></li>
+<li><a href="#my_app_childltr308als_">MY_APP_CHILD::ltr308als_???()</a></li>
+<li><a href="#my_app_childstate_idle-0">MY_APP_CHILD::STATE_IDLE (0)</a></li>
+<li><a href="#my_app_childstate_sensor">MY_APP_CHILD::STATE_SENSOR</a></li>
+<li><a href="#my_app_childstate_tx">MY_APP_CHILD::STATE_TX</a></li>
+<li><a href="#my_app_childstate_sleep">MY_APP_CHILD::STATE_SLEEP</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pal_amb-behavior">PAL_AMB-behavior</h1>
+<p><a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/amb-pal.html">PAL AMBIENT SENSE PAL</a> is used to acquire sensor values.</p>
+<ul>
+<li>[BEHAVIOR] (./README.html) is used to describe the Parent Node Child Node.</li>
+<li>The sensor is described directly using <a href="../predefined_objs/wire/README.html"><code>Wire</code></a> instead of using the <a href="../../boards/pal/pal_amb.html">board behavior</a> function to obtain values.</li>
+<li>Child Nodes are described by a state machine.</li>
+</ul>
+<div class="success">
+<p>See <a href="../../act_samples/brd_apptwelite.html">the explanation of BRD_APPTWELITE</a>, <a href="../../act_samples/pal_amb.html">the explanation of PAL_AMB</a>, and <a href="../../act_samples/pal_amb-usenap.html">the explanation of PAL_AMB-usenap</a> before the explanation of this ACT. Also see <a href="./README.html">the description of BEHAVIOR</a>.</p>
+</div>
+<div class="info">
+<p>This sample shows how to write <a href="./README.html">BEHAVIOR</a>. BEHAVIORS are used to describe more complex applications.</p>
+</div>
+<h2 id="act-features.">ACT FEATURES.</h2>
+<ul>
+<li>Uses the environmental sensor PAL AMBIENT SENSE PAL to acquire sensor values.</li>
+<li>Use the sleep function to operate with coin cell batteries.</li>
+</ul>
+<h2 id="how-to-use-act">How to use ACT</h2>
+<h3 id="preparation-for-twelite">Preparation for TWELITE</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Parent Node</td>
+<td><a target=_blank href="https://mono-wireless.com/jp/products/MoNoStick/">MONOSTICK BLUE or RED</a></td>
+</tr>
+<tr class="even">
+<td>Child Node</td>
+<td><a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/BnR/index.html">BLUE PAL or RED PAL</a> + <a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/amb-pal.html">AMBIENT SENSE PAL</a></td>
+</tr>
+</tbody>
+</table>
+<div class="warning">
+<p>When using PAL as the Parent Node, coin cell batteries cannot be used. As a rule of thumb, prepare a power supply environment that can provide a stable current of 50 mA or more.</p>
+</div>
+<h2 id="file-structure">File Structure</h2>
+<ul>
+<li>PAL_AMB-behavior.hpp : Only <code>setup()</code> is defined. read DIP-SW and if D1..D3 is upper position, it works as Parent Node, otherwise it sets ID corresponding to DIP SW as Child Node.</li>
+<li>Parent/myAppBhvParent.hpp : behavior class definition for Parent Node</li>
+<li>Parent/myAppBhvParent.cpp : implementation </li>
+<li>Parent/myAppBhvParent-handlers.cpp : implementation of handlers</li>
+<li>Parent/myAppBhvParent.hpp : behavior class definition for Child Nodes</li>
+<li>Parent/myAppBhvParent.cpp : implementation</li>
+<li>Parent/myAppBhvParent-handlers.cpp : implementation of handlers</li>
+</ul>
+<p>The Parent Node’s BEHAVIOR name is <code>&lt;MY_APP_PARENT&gt;</code> and the Child Node is <code>&lt;MY_APP_CHILD&gt;</code>.</p>
+<div class="info">
+<p>Build files can be added by <a href="...">Makefile description</a> /… /install_n_build/makefile.html).</p>
+</div>
+<h2 id="initialization-setup">Initialization setup()</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// now read DIP sw status can be read.</span></a>
+<a class="sourceLine" id="cb1-2" title="2">u8ID = (brd.get_DIPSW_BM() &amp; <span class="bn">0x07</span>);</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">// Register App Behavior (set differnt Application by DIP SW settings)</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="cf">if</span> (u8ID == <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="co">// put settings to the twelite main object.</span></a>
+<a class="sourceLine" id="cb1-7" title="7">    the_twelite</a>
+<a class="sourceLine" id="cb1-8" title="8">        &lt;&lt; TWENET::appid(APP_ID)     <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb1-9" title="9">        &lt;&lt; TWENET::channel(CHANNEL)  <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb1-10" title="10">        &lt;&lt; TWENET::rx_when_idle();   <span class="co">// open RX channel</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12">    the_twelite.app.use&lt;MY_APP_PARENT&gt;();</a>
+<a class="sourceLine" id="cb1-13" title="13">} <span class="cf">else</span> {        </a>
+<a class="sourceLine" id="cb1-14" title="14">    <span class="co">// put settings to the twelite main object.</span></a>
+<a class="sourceLine" id="cb1-15" title="15">    the_twelite</a>
+<a class="sourceLine" id="cb1-16" title="16">        &lt;&lt; TWENET::appid(APP_ID)     <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb1-17" title="17">        &lt;&lt; TWENET::channel(CHANNEL); <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb1-18" title="18"></a>
+<a class="sourceLine" id="cb1-19" title="19">    the_twelite.app.use&lt;MY_APP_CHILD&gt;();</a>
+<a class="sourceLine" id="cb1-20" title="20">}</a></code></pre></div>
+<p>If the DIP SW reading is 0, register the behavior <code>&lt;MY_APP_PARENT&gt;</code> for the Parent Node, otherwise register the behavior <code>&lt;MY_APP_CHILD&gt;</code> for the Child Node.</p>
+<div class="warning">
+<p>If the Parent Node is MONOSTICK, the DIP SW for PAL reads 0 and behaves as the Parent Node. However, this behavior is not defined in the MONOSTICK specifications.</p>
+</div>
+<h2 id="parent-node-behavior">Parent Node BEHAVIOR</h2>
+<p>The Parent Node behaves as a non-sleeping receiver and outputs packet information to the serial port when it receives a packet from a Child Node.</p>
+<h3 id="my_app_parentreceive">MY_APP_PARENT::receive()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> MY_APP_PARENT::receive(mwx::packet_rx&amp; rx) {</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="dt">uint8_t</span> msg[<span class="dv">4</span>];</a>
+<a class="sourceLine" id="cb2-3" title="3">    <span class="dt">uint32_t</span> lumi;</a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="dt">uint16_t</span> u16temp, u16humid;</a>
+<a class="sourceLine" id="cb2-5" title="5"></a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="co">// expand packet payload (shall match with sent packet data structure, see pack_bytes())</span></a>
+<a class="sourceLine" id="cb2-7" title="7">    <span class="kw">auto</span>&amp;&amp; np = expand_bytes(rx.get_payload().begin(), rx.get_payload().end(), msg);</a>
+<a class="sourceLine" id="cb2-8" title="8">    </a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="co">// if PING packet, respond pong!</span></a>
+<a class="sourceLine" id="cb2-10" title="10">    <span class="cf">if</span> (!strncmp((<span class="at">const</span> <span class="dt">char</span>*)msg, (<span class="at">const</span> <span class="dt">char</span>*)FOURCHARS, <span class="dv">4</span>)) {</a>
+<a class="sourceLine" id="cb2-11" title="11">        <span class="co">// get rest of data</span></a>
+<a class="sourceLine" id="cb2-12" title="12">        expand_bytes(np, rx.get_payload().end(), lumi, u16temp, u16humid);</a>
+<a class="sourceLine" id="cb2-13" title="13"></a>
+<a class="sourceLine" id="cb2-14" title="14">        <span class="co">// print them</span></a>
+<a class="sourceLine" id="cb2-15" title="15">        Serial &lt;&lt; format(<span class="st">&quot;Packet(</span><span class="sc">%x</span><span class="st">:</span><span class="sc">%d</span><span class="st">/lq=</span><span class="sc">%d</span><span class="st">/sq=</span><span class="sc">%d</span><span class="st">): &quot;</span>,</a>
+<a class="sourceLine" id="cb2-16" title="16">                            rx.get_addr_src_long(), rx.get_addr_src_lid(),</a>
+<a class="sourceLine" id="cb2-17" title="17">                            rx.get_lqi(), rx.get_psRxDataApp()-&gt;u8Seq)</a>
+<a class="sourceLine" id="cb2-18" title="18">               &lt;&lt; <span class="st">&quot;temp=&quot;</span> &lt;&lt; <span class="dt">double</span>(<span class="dt">int16_t</span>(u16temp)/<span class="fl">100.0</span>)</a>
+<a class="sourceLine" id="cb2-19" title="19">               &lt;&lt; <span class="st">&quot;C humid=&quot;</span> &lt;&lt; <span class="dt">double</span>(<span class="dt">int16_t</span>(u16humid)/<span class="fl">100.0</span>)</a>
+<a class="sourceLine" id="cb2-20" title="20">               &lt;&lt; <span class="st">&quot;% lumi=&quot;</span> &lt;&lt; <span class="dt">int</span>(lumi)</a>
+<a class="sourceLine" id="cb2-21" title="21">               &lt;&lt; mwx::crlf &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb2-22" title="22">    }</a>
+<a class="sourceLine" id="cb2-23" title="23">}</a></code></pre></div>
+<p>When a packet is received for the Parent Node, if the first four characters of the packet can be matched (<code>FOURCHARS</code>), the contents of the packet are displayed.</p>
+<h3 id="my_app_parentmwx_ticktimer_int">MY_APP_PARENT::MWX_TICKTIMER_INT()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">MWX_TICKTIMER_INT(<span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled) {</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="co">// blink LED</span></a>
+<a class="sourceLine" id="cb3-3" title="3">  digitalWrite(PAL_AMB::PIN_LED, </a>
+<a class="sourceLine" id="cb3-4" title="4">    ((millis() &gt;&gt; <span class="dv">9</span>) &amp; <span class="dv">1</span>) ? PIN_STATE::HIGH : PIN_STATE::LOW);</a>
+<a class="sourceLine" id="cb3-5" title="5">}</a></code></pre></div>
+<p>The Parent Node’s interrupt handler blinks the LED.</p>
+<h3 id="my_app_parentmwx_dio_eventpal_ambpin_btn">MY_APP_PARENT::MWX_DIO_EVENT(PAL_AMB::PIN_BTN)</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">MWX_DIO_EVENT(PAL_AMB::PIN_BTN, <span class="dt">uint32_t</span> arg) {</a>
+<a class="sourceLine" id="cb4-2" title="2">    Serial &lt;&lt; <span class="st">&quot;Button Pressed&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb4-3" title="3">    </a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="at">static</span> <span class="dt">uint32_t</span> u32tick_last;</a>
+<a class="sourceLine" id="cb4-5" title="5">    <span class="dt">uint32_t</span> tick = millis();</a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7">    <span class="cf">if</span> (tick - u32tick_last &gt; <span class="dv">100</span>) {</a>
+<a class="sourceLine" id="cb4-8" title="8">        PEV_Process(E_ORDER_KICK, <span class="dv">0</span><span class="bu">UL</span>);</a>
+<a class="sourceLine" id="cb4-9" title="9">    }</a>
+<a class="sourceLine" id="cb4-10" title="10"></a>
+<a class="sourceLine" id="cb4-11" title="11">    u32tick_last = tick;</a>
+<a class="sourceLine" id="cb4-12" title="12">}</a></code></pre></div>
+<p>When the button (5) on the PAL is pressed, the <code>E_ORDER_KICK</code> event is issued to the state machine.</p>
+<h3 id="my_app_parentmwx_statee_mwxstate_0-..-3">MY_APP_PARENT::MWX_STATE(E_MWX::STATE_0 .. 3)</h3>
+<p>The state machine is described as a reference for state transitions and is not meaningful for the operation of the application. It executes state transitions by the E_ORDER_KICK event sent from the button, timeouts, and so on.</p>
+<h2 id="behavior-of-child-node">BEHAVIOR of Child Node</h2>
+<p>The behavior flow of the Child Node is the same as that of the PAL_AMB-usenap. From the initial sleep, “wake up → start sensor operation → short sleep → wake up → acquire sensor value → wireless transmission → wait for wireless transmission completion → sleep” is repeated.</p>
+<h3 id="my_app_childon_begin">MY_APP_CHILD::on_begin()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> _begin() {</a>
+<a class="sourceLine" id="cb5-2" title="2">    <span class="co">// sleep immediately.</span></a>
+<a class="sourceLine" id="cb5-3" title="3">    Serial &lt;&lt; <span class="st">&quot;..go into first sleep (1000ms)&quot;</span> &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb5-4" title="4">    the_twelite.sleep(<span class="dv">1000</span>);</a>
+<a class="sourceLine" id="cb5-5" title="5">}</a></code></pre></div>
+<p>The <code>_begin()</code> function, called from <code>on_begin()</code>, executes the first sleep.</p>
+<p>(*It is acceptable to describe this process directly in <code>on_begin()</code> without describing it in <code>_begin()</code> function.)</p>
+<h3 id="my_app_childwakeup">MY_APP_CHILD::wakeup()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> wakeup(<span class="dt">uint32_t</span> &amp; val) {</a>
+<a class="sourceLine" id="cb6-2" title="2">    Serial &lt;&lt; mwx::crlf &lt;&lt; <span class="st">&quot;..wakeup&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb6-3" title="3">    <span class="co">// init wire device.</span></a>
+<a class="sourceLine" id="cb6-4" title="4">    Wire.begin();</a>
+<a class="sourceLine" id="cb6-5" title="5">    </a>
+<a class="sourceLine" id="cb6-6" title="6">    <span class="co">// turn on LED</span></a>
+<a class="sourceLine" id="cb6-7" title="7">    digitalWrite(PAL_AMB::PIN_LED, PIN_STATE::LOW);</a>
+<a class="sourceLine" id="cb6-8" title="8"></a>
+<a class="sourceLine" id="cb6-9" title="9">    <span class="co">// KICK it!</span></a>
+<a class="sourceLine" id="cb6-10" title="10">    PEV_Process(E_ORDER_KICK, <span class="dv">0</span>); <span class="co">// pass the event to state machine</span></a>
+<a class="sourceLine" id="cb6-11" title="11">}</a></code></pre></div>
+<p>This is a description of the process of waking up from sleep.</p>
+<p>The first time <code>Wire.begin()</code> is executed here, which is redundant for the second and later times when the device wakes from sleep. This process can be moved to <code>on_begin()</code>.</p>
+<h3 id="my_app_childtransmit_complete">MY_APP_CHILD::transmit_complete()</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">void</span> transmit_complete(mwx::packet_ev_tx&amp; txev) {</a>
+<a class="sourceLine" id="cb7-2" title="2">    Serial &lt;&lt; <span class="st">&quot;..txcomp=&quot;</span> &lt;&lt; <span class="dt">int</span>(txev.u8CbId) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb7-3" title="3">    PEV_Process(E_ORDER_KICK, txev.u8CbId); <span class="co">// pass the event to state machine</span></a>
+<a class="sourceLine" id="cb7-4" title="4">}</a></code></pre></div>
+<p>Processes <code>E_ORDER_KICK</code> messages to the state machine upon completion of transmission.</p>
+<h3 id="my_app_childtransmit_complete-1">MY_APP_CHILD::transmit_complete()</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> STATE_IDLE = E_MWX::STATE_0;</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> STATE_SENSOR = E_MWX::STATE_1;</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> STATE_TX = E_MWX::STATE_2;</a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> STATE_SLEEP = E_MWX::STATE_3;</a></code></pre></div>
+<p>Defines the state name.</p>
+<h3 id="my_app_childshtc3_">MY_APP_CHILD::shtc3_???()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1">MWX_APIRET MY_APP_CHILD::shtc3_start()</a>
+<a class="sourceLine" id="cb9-2" title="2">MWX_APIRET MY_APP_CHILD::shtc3_read()</a></code></pre></div>
+<p>This is an example of sensor acquisition implementation for SHTC3. For details on sending commands, etc., refer to the SHTC3 datasheet.</p>
+<h3 id="my_app_childltr308als_">MY_APP_CHILD::ltr308als_???()</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">MWX_APIRET MY_APP_CHILD::ltr308als_read()</a>
+<a class="sourceLine" id="cb10-2" title="2">MWX_APIRET MY_APP_CHILD::ltr308als_start()</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="at">static</span> MWX_APIRET WireWriteAngGet(<span class="dt">uint8_t</span> addr, <span class="dt">uint8_t</span> cmd)</a></code></pre></div>
+<p>This is an example of LTR308ALS sensor acquisition implementation. Please refer to the LTR308ALS datasheet for details on sending commands, etc.</p>
+<p><code>WireWriteAndGet()</code> sends 1 byte of <code>cmd</code> to the device of <code>addr</code>, then receives 1 byte and returns the value.</p>
+<h3 id="my_app_childstate_idle-0">MY_APP_CHILD::STATE_IDLE (0)</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1">MWX_STATE(MY_APP_CHILD::STATE_IDLE, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb11-2" title="2">    <span class="cf">if</span> (PEV_is_coldboot(ev,evarg)) {</a>
+<a class="sourceLine" id="cb11-3" title="3">        Serial &lt;&lt; <span class="st">&quot;[STATE_IDLE:START_UP(&quot;</span> &lt;&lt; <span class="dt">int</span>(evarg) &lt;&lt; <span class="st">&quot;)]&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb11-4" title="4">        <span class="co">// then perform the first sleep at on_begin().</span></a>
+<a class="sourceLine" id="cb11-5" title="5">    } <span class="cf">else</span></a>
+<a class="sourceLine" id="cb11-6" title="6">    <span class="cf">if</span> (PEV_is_warmboot(ev,evarg)) {</a>
+<a class="sourceLine" id="cb11-7" title="7">        Serial &lt;&lt; <span class="st">&quot;[STATE_IDLE:START_UP(&quot;</span> &lt;&lt; <span class="dt">int</span>(evarg) &lt;&lt; <span class="st">&quot;)]&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb11-8" title="8">        PEV_SetState(STATE_SENSOR);</a>
+<a class="sourceLine" id="cb11-9" title="9">    }</a>
+<a class="sourceLine" id="cb11-10" title="10">}</a></code></pre></div>
+<p>State 0 has a special meaning. It is the state immediately after startup or after returning from sleep.</p>
+<p>Immediately after startup <code>PEV_is_coldboot(ev,evarg)</code> judgment becomes <code>true</code> and is called. Since it goes straight to sleep from <code>on_begin()</code>, it does not contain any code that transitions the state. <strong>At this point, the major initialization has not yet been completed, so complex processing such as sending wireless packets cannot be performed. </strong>In order to perform the first state transition for such processing, send an event from <code>on_begin()</code> and perform the state transition according to that event.</p>
+<p>After returning from sleep, there is a first call to <code>PEV_is_warmboot(ev,evarg)</code> which will be <code>true</code>. A call to <code>PEV_SetState()</code> will transition to the <code>STATE_SENSOR</code> state.</p>
+<h3 id="my_app_childstate_sensor">MY_APP_CHILD::STATE_SENSOR</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1">MWX_STATE(MY_APP_CHILD::STATE_SENSOR, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb12-2" title="2">    <span class="cf">if</span> (ev == E_EVENT_NEW_STATE) {</a>
+<a class="sourceLine" id="cb12-3" title="3">        Serial &lt;&lt; <span class="st">&quot;[STATE_SENSOR:NEW] Start Sensor.&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb12-4" title="4"></a>
+<a class="sourceLine" id="cb12-5" title="5">        <span class="co">// start sensor capture</span></a>
+<a class="sourceLine" id="cb12-6" title="6">        shtc3_start();</a>
+<a class="sourceLine" id="cb12-7" title="7">        ltr308als_start();</a>
+<a class="sourceLine" id="cb12-8" title="8"></a>
+<a class="sourceLine" id="cb12-9" title="9">        <span class="co">// take a nap waiting finish of capture.</span></a>
+<a class="sourceLine" id="cb12-10" title="10">        Serial &lt;&lt; <span class="st">&quot;..nap for 66ms&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb12-11" title="11">        Serial.flush();</a>
+<a class="sourceLine" id="cb12-12" title="12">        PEV_KeepStateOnWakeup(); <span class="co">// stay this state on waking up.</span></a>
+<a class="sourceLine" id="cb12-13" title="13">        the_twelite.sleep(<span class="dv">66</span>, <span class="kw">false</span>, <span class="kw">false</span>, TWENET::SLEEP_WAKETIMER_SECONDARY);</a>
+<a class="sourceLine" id="cb12-14" title="14">    } <span class="cf">else</span></a>
+<a class="sourceLine" id="cb12-15" title="15">    <span class="cf">if</span> (PEV_is_warmboot(ev,evarg)) {</a>
+<a class="sourceLine" id="cb12-16" title="16">        <span class="co">// on wakeup, code starts here.</span></a>
+<a class="sourceLine" id="cb12-17" title="17">        Serial &lt;&lt; <span class="st">&quot;[STATE_SENSOR:START_UP] Wakeup.&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb12-18" title="18"></a>
+<a class="sourceLine" id="cb12-19" title="19">        PEV_SetState(STATE_TX);</a>
+<a class="sourceLine" id="cb12-20" title="20">    }</a>
+<a class="sourceLine" id="cb12-21" title="21">}</a></code></pre></div>
+<p>When the transition is made from <code>STATE_IDLE</code> after returning from sleep, the state handler for <code>STATE_SENSOR</code> is called continuously. The event <code>ev</code> at this time is <code>E_EVENT_NEW_STATE</code>.</p>
+<p>Here, the operation of two sensors, SHTC3 and LTR308ALS, is started. After a certain period of time, the sensors will be ready to acquire data. This time wait is done with the sleep setting of <code>66</code>ms. Note that <code>PEV_KeepStateOnWakeup()</code> is called before sleep. After this call, the state after returning from sleep is not <code>STATE_IDLE</code>, but the state it was in when it went to sleep, i.e. <code>STATE_SENSOR</code>.</p>
+<p>When returning from a short sleep, a call is first made with the <code>PEV_is_warmboot(ev,evarg)</code> decision set to <code>true</code>. At the time of this call, wireless packets can be sent, etc. Transition to <code>STATE_TX</code>.</p>
+<h3 id="my_app_childstate_tx">MY_APP_CHILD::STATE_TX</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1">MWX_STATE(MY_APP_CHILD::STATE_TX, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg)</a>
+<a class="sourceLine" id="cb13-2" title="2">    <span class="at">static</span> <span class="dt">int</span> u8txid;</a>
+<a class="sourceLine" id="cb13-3" title="3"></a>
+<a class="sourceLine" id="cb13-4" title="4">    <span class="cf">if</span> (ev == E_EVENT_NEW_STATE) {</a>
+<a class="sourceLine" id="cb13-5" title="5">        Serial &lt;&lt; <span class="st">&quot;[STATE_TX:NEW]&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb13-6" title="6">        u8txid = -<span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb13-7" title="7"></a>
+<a class="sourceLine" id="cb13-8" title="8">        <span class="kw">auto</span>&amp;&amp; r1 = shtc3_read();</a>
+<a class="sourceLine" id="cb13-9" title="9">        <span class="kw">auto</span>&amp;&amp; r2 = ltr308als_read();</a>
+<a class="sourceLine" id="cb13-10" title="10"></a>
+<a class="sourceLine" id="cb13-11" title="11">        Serial &lt;&lt; <span class="st">&quot;..shtc3 t=&quot;</span> &lt;&lt; <span class="dt">int</span>(i16Temp) &lt;&lt; <span class="st">&quot;, h=&quot;</span> &lt;&lt; <span class="dt">int</span>(i16Humd) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb13-12" title="12">        Serial &lt;&lt; <span class="st">&quot;..ltr308als l=&quot;</span> &lt;&lt; <span class="dt">int</span>(u32Lumi) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb13-13" title="13"></a>
+<a class="sourceLine" id="cb13-14" title="14">        <span class="cf">if</span> (r1 &amp;&amp; r2) {</a>
+<a class="sourceLine" id="cb13-15" title="15">            <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a></code></pre></div>
+<p>Here, at the time of the <code>E_EVENT_NEW_STATE</code> event, the sensor data reading and wireless packet transmission procedures are started. Please refer to other act sample examples for details of the transmission procedure.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="dt">void</span> transmit_complete(mwx::packet_ev_tx&amp; txev) {</a>
+<a class="sourceLine" id="cb14-2" title="2">    Serial &lt;&lt; <span class="st">&quot;..txcomp=&quot;</span> &lt;&lt; <span class="dt">int</span>(txev.u8CbId) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb14-3" title="3">    PEV_Process(E_ORDER_KICK, txev.u8CbId); <span class="co">// pass the event to state machine</span></a>
+<a class="sourceLine" id="cb14-4" title="4">}</a>
+<a class="sourceLine" id="cb14-5" title="5"></a>
+<a class="sourceLine" id="cb14-6" title="6">    <span class="co">// ↓　↓　↓ Send a message</span></a>
+<a class="sourceLine" id="cb14-7" title="7"></a>
+<a class="sourceLine" id="cb14-8" title="8">} <span class="cf">else</span> <span class="cf">if</span> (ev == E_ORDER_KICK &amp;&amp; evarg == <span class="dt">uint32_t</span>(u8txid)) {</a>
+<a class="sourceLine" id="cb14-9" title="9">        Serial &lt;&lt; <span class="st">&quot;[STATE_TX] SUCCESS TX(&quot;</span> &lt;&lt; <span class="dt">int</span>(evarg) &lt;&lt; <span class="ch">&#39;)&#39;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb14-10" title="10">        PEV_SetState(STATE_SLEEP);</a>
+<a class="sourceLine" id="cb14-11" title="11">}</a></code></pre></div>
+<p>Unlike the ACT description in the loop, the process of waiting for the message by <code>PEV_Process()</code> from <code>transmit_complete()</code> is used as a confirmation of completion. Sleep is performed upon receipt of the message. Sleep processing is done by transitioning to <code>STATE_SLEEP</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1">    <span class="cf">if</span> (PEV_u32Elaspsed_ms() &gt; <span class="dv">100</span>) {</a>
+<a class="sourceLine" id="cb15-2" title="2">        <span class="co">// does not finish TX!</span></a>
+<a class="sourceLine" id="cb15-3" title="3">        Serial &lt;&lt; <span class="st">&quot;[STATE_TX] FATAL, TX does not finish!&quot;</span> &lt;&lt; mwx::crlf &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb15-4" title="4">        the_twelite.reset_system();</a>
+<a class="sourceLine" id="cb15-5" title="5">    }</a></code></pre></div>
+<p>Finally, timeout processing is performed. This is in case the completion message of the sent packet has not been returned. <code>PEV_u32Elaspsed_ms()</code> returns the elapsed time since the transition to that state in milliseconds [ms]. If the time has elapsed, the above will perform a system reset <code>the_twelite.reset_system()</code> (assuming this timeout is too much).</p>
+<h3 id="my_app_childstate_sleep">MY_APP_CHILD::STATE_SLEEP</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1">MWX_STATE(MY_APP_CHILD::STATE_SLEEP, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb16-2" title="2">    <span class="cf">if</span> (ev == E_EVENT_NEW_STATE) {</a>
+<a class="sourceLine" id="cb16-3" title="3">        Serial &lt;&lt; <span class="st">&quot;..sleep for 5000ms&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb16-4" title="4">        pinMode(PAL_AMB::PIN_BTN, PIN_MODE::WAKE_FALLING_PULLUP);</a>
+<a class="sourceLine" id="cb16-5" title="5">        digitalWrite(PAL_AMB::PIN_LED, PIN_STATE::HIGH);</a>
+<a class="sourceLine" id="cb16-6" title="6">        Serial.flush();</a>
+<a class="sourceLine" id="cb16-7" title="7"></a>
+<a class="sourceLine" id="cb16-8" title="8">        the_twelite.sleep(<span class="dv">5000</span>); <span class="co">// regular sleep</span></a>
+<a class="sourceLine" id="cb16-9" title="9">    }</a>
+<a class="sourceLine" id="cb16-10" title="10">}</a></code></pre></div>
+<p>Perfom sleep. Describe it in <code>E_EVENT_NEW_STATE</code> immediately after the transition from the previous state. Since other events may be called just before sleep, be sure to execute <code>the_twelite.sleep()</code> in a decision expression that is executed only once.</p>
+</body>
+</html>
