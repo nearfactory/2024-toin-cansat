@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=2つのLEDを制御
+DESC=2つのTimerを使って、2つのLEDを点滅させるサンプルです。
+URL=jp/MWX/content/act_samples/act_opening.html
+[ENGLISH]
+TITLE=Blinking two LEDs
+DESC=Act sample for blinking 2 LEDs with 2 timers.
+URL=en/MWX/content/act_samples/act_opening.html
