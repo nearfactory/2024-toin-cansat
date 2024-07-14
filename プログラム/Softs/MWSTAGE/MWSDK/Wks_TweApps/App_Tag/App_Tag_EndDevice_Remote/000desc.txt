@@ -1,0 +1,6 @@
+[JAPANESE]
+TITLE=無線タグアプリ（App_Tag）
+DESC=起床時にMessagePoolからデータを取得するリモコンのサンプルです。
+[ENGLISH]
+TITLE=App_Tag (EndDevice, Remote control)
+DESC=Sample that retrieves data from MessagePool upon waking.

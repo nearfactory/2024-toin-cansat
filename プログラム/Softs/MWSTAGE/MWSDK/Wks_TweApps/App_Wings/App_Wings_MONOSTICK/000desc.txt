@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=親機・中継機アプリ（App_Wings）
+DESC=共通の親機または中継機として使うアプリです。
+MONOSTICKにプリインストールされています。
+URL=https://wings.twelite.info/
+[ENGLISH]
+TITLE=App_Wings
+DESC=Designed for the parent or router devices.
+Pre-installed on the MONOSTICK.
+URL=https://wings.twelite.info/

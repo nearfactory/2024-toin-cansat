@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=サンプル-パケットエラー率計測
+DESC=子機側です。常時給電(単４x２本など)が必要です。
+URL=https://github.com/monowireless/Samp_PER
+[ENGLISH]
+TITLE=Samp_PER (Child)
+DESC=This application is for the child device. Requires a constant power supply (e.g., 2 x AAA).
+URL=https://github.com/monowireless/Samp_PER

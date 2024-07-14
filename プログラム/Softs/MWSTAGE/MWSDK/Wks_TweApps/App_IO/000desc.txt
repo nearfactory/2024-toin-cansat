@@ -1,0 +1,9 @@
+[JAPANESE]
+TITLE=リモコンアプリ（App_IO）
+DESC=超簡単！標準アプリ（App_Twelite）のデジタルIO伝送機能に特化したアプリです。
+最大12ポートまで利用できるように拡張しています。
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_IO/
+[ENGLISH]
+TITLE=App_IO
+DESC=Designed for digital IO transmissions. Can control up to 12 ports.
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_IO/

@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=親機・中継機アプリ（App_Wings）
+DESC=共通の親機または中継機として使うアプリです。
+TWELITE APPSおよびActの全てのデータパケットを処理することができます。
+URL=https://wings.twelite.info/
+[ENGLISH]
+TITLE=App_Wings
+DESC=Designed for the parent or router devices.
+Can receive all data packets from TWELITE APPS and Act.
+URL=https://wings.twelite.info/

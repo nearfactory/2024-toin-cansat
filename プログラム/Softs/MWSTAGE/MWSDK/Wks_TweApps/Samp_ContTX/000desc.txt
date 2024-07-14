@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=連続送信 サンプル
+DESC=出来る限り送信間隔を短くして、連続的に無線パケットを送信するサンプルです。
+URL=https://github.com/monowireless/Samp_ContTX
+[ENGLISH]
+TITLE=Samp_ContTX
+DESC=App sample that sends packets continuously with the transmission interval as short as possible.
+URL=https://github.com/monowireless/Samp_ContTX

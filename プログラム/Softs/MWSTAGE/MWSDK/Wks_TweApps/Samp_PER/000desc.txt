@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=パケットエラー率計測 サンプル
+DESC=パケットエラーを計測するサンプルです。
+親機側はシリアル接続が必要です。
+URL=https://github.com/monowireless/Samp_PER
+[ENGLISH]
+TITLE=Samp_PER
+DESC=Act sample for the packet error rate measurement.
+The parent device requires serial connections.
+URL=https://github.com/monowireless/Samp_PER

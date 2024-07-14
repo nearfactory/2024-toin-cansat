@@ -1,0 +1,11 @@
+[JAPANESE]
+TITLE=（非推奨*）PingPong サンプル
+DESC=相手から受信したパケットをそのまま相手に送信するサンプルです。
+複数のTWELITEにこのアプリを書き込みます。
+*Act_samples/PingPongをご利用ください
+URL=https://github.com/monowireless/Samp_PingPong
+[ENGLISH]
+TITLE=(Deprecated*) Samp_PingPong
+DESC=App sample that sends received packets as they are. Write this app to multiple devices.
+*Use Act_samples/PingPong instead.
+URL=https://github.com/monowireless/Samp_PingPong

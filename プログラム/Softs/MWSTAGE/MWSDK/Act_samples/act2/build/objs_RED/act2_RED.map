@@ -1,0 +1,1567 @@
+Archive member included because of file (symbol)
+
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_event.o)
+                              objs_RED/act2.o (symbol from plugin) (PRSEV_u8RegisterEx)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_main.o)
+                              objs_RED/act2.o (symbol from plugin) (sToCoNet_Context)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_utils.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_u32GetVersion)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Nwk_Common.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_vRxProc_Mod)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Channel_Mgr.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_ChMgr_bCh_Reconfig)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetVersionInfo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(AppQueueApi_ToCoNet.o)
+                              ToCoNet_main.o (symbol from plugin) (_u32_INT_ticktimer)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(AppStart.o)
+                              (AppColdStart)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(getMacAddr.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_u32GetSerialOnBoot)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(mac.o)
+                              ToCoNet_main.o (symbol from plugin) (Mac_vInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(AES_CCM.o)
+                              AppStart.o (symbol from plugin) (bAES_CCM_KeyReg)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(no_ack_handler.o)
+                              AppStart.o (symbol from plugin) (vInstallNoAckHandler)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetExtVersionInfo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(serial.o)
+                              objs_RED/act2.o (symbol from plugin) (SERIAL_bTxChar)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(uart.o)
+                              serial.o (symbol from plugin) (UART_vInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ByteQueue.o)
+                              ToCoNet_main.o (symbol from plugin) (QUEUE__vInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ccitt8.o)
+                              AppStart.o (symbol from plugin) (u8CCITT8)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(utils.o)
+                              ToCoNet_main.o (symbol from plugin) (vTimerConfig)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ccm.o)
+                              AES_CCM.o (symbol from plugin) (ccm_init_and_key)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetUtilsVersionInfo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aescrypt.o)
+                              ccm.o (symbol from plugin) (aes_encrypt)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aeskey.o)
+                              ccm.o (symbol from plugin) (aes_encrypt_key)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aestab.o)
+                              aeskey.o (symbol from plugin) (t_im)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweinteractive.o)
+                              objs_RED/act2.o (symbol from plugin) (TWEINTRCT_bIsVerbose)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweprintf.o)
+                              tweinteractive.o (symbol from plugin) (TWE_fprintf)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(twesercmd_plus3.o)
+                              tweinteractive.o (symbol from plugin) (TWESERCMD_Plus3_u8Parse)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweserial.o)
+                              tweinteractive.o (symbol from plugin) (_TWE_fputs)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweserial_jen.o)
+                              objs_RED/act2.o (symbol from plugin) (TWETERM_vInitJen)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(twesysutils.o)
+                              objs_RED/act2.o (symbol from plugin) (TWESYSUTL_vWaitPoll)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(printf.o)
+                              objs_RED/act2.o (symbol from plugin) (fctprintf)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweinputstring.o)
+                              tweinteractive.o (symbol from plugin) (TWEINPSTR_vInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_debug.o)
+                              objs_RED/act2.o (symbol from plugin) (MWX_DebugMsg)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_appcore.o)
+                              ToCoNet_main.o (symbol from plugin) (cbToCoNet_vMain)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_memory.o)
+                              objs_RED/act2.o (symbol from plugin) (operator new(unsigned long))
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_dio.o)
+                              objs_RED/act2.o (symbol from plugin) (pinMode(unsigned char, mwx::L1::enum_wapper<PIN_MODE::eMWX_DIO_MODE, unsigned char>))
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_buttons.o)
+                              mwx_appcore.o (symbol from plugin) (mwx::L1::periph_buttons::begin(unsigned long, unsigned char, unsigned short))
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_analogue.o)
+                              objs_RED/act2.o (symbol from plugin) (mwx::L1::periph_analogue::ADC_handler(unsigned long, unsigned long))
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_stgs_standard.o)
+                              objs_RED/_mwx_version.o (symbol from plugin) (INTRCT_USER_APP_ID)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_nwk_simple.o)
+                              objs_RED/act2.o (symbol from plugin) (mwx::L1::NwkSimple::on_create(unsigned long&))
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_duplicate_checker.o)
+                              mwx_nwk_simple.o (symbol from plugin) (mwx::L1::duplciate_checker::begin())
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppApi.o)
+                              (pvAppApiDefGetMacHandle)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppApiSleep.o)
+                              (vAppApiDefSaveMacSettings)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_main.o)
+                              AppApi.o (symbol from plugin) (MAC_pvCtor)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_mcps.o)
+                              AppApi.o (symbol from plugin) (MAC_vHandleMcpsReqRsp)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_mlme.o)
+                              AppApi.o (symbol from plugin) (MAC_vHandleMlmeReqRsp)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pib.o)
+                              AppStart.o (symbol from plugin) (MAC_psPibGetHandle)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pib_mlme.o)
+                              mac_main.o (symbol from plugin) (mac_vPibSetDefaults)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pmic.o)
+                              mac_main.o (symbol from plugin) (vPMICreset)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_ind.o)
+                              AppApi.o (symbol from plugin) (MAC_vRegisterMlmeDcfmIndCallbacks)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_scan.o)
+                              mac_main.o (symbol from plugin) (mac_eScanInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_lp.o)
+                              mac_pmic.o (symbol from plugin) (g_sLP)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(MCPS.o)
+                              mac_mcps.o (symbol from plugin) (vTAM_MCPSdataRequest)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(phy_pib.o)
+                              AppApi.o (symbol from plugin) (phy_ePibGet)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM.o)
+                              MCPS.o (symbol from plugin) (bTAMinPAN)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMCO.o)
+                              TAM.o (symbol from plugin) (vTAMCOsetCoordinator)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMDE.o)
+                              TAM.o (symbol from plugin) (vTAMDEdetermineNullState)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_MEM.o)
+                              TAM.o (symbol from plugin) (vMEMreset)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_MLME.o)
+                              mac_scan.o (symbol from plugin) (vMLMEbeaconNotify)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAH.o)
+                              TAMCO.o (symbol from plugin) (vTAHsetCutOff)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAI.o)
+                              TAM.o (symbol from plugin) (vTAIsetCapTime)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAT.o)
+                              TAMDE.o (symbol from plugin) (vTATstartReceiveAt)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMcommon.o)
+                              mac_scan.o (symbol from plugin) (bTACassessBeaconForPayload)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMevent.o)
+                              mac_lp.o (symbol from plugin) (vTAMinsertEvent)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMqueue.o)
+                              TAMcommon.o (symbol from plugin) (vTAQaddToFifo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMrxEnable.o)
+                              TAMevent.o (symbol from plugin) (vTAMRXEint2Fired)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMsecurity.o)
+                              TAMcommon.o (symbol from plugin) (vTSCgetIncomingInfo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMsideways.o)
+                              mac_pmic.o (symbol from plugin) (eTAStransmitRequest)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMtime.o)
+                              TAM.o (symbol from plugin) (vTTIBLETimerExpired)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_AES.o)
+                              TAMsecurity.o (symbol from plugin) (u8TAM_AES_WriteAuxilliarySecurityHeaderIntoBuffer)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(Endian.o)
+                              TAM_AES.o (symbol from plugin) (vFromU16ToLe)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_acl.o)
+                              TAMsecurity.o (symbol from plugin) (MAC_u8AclFindInfo)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_misc.o)
+                              mac_mlme.o (symbol from plugin) (vMAC_MISCpollRequest)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTimerServer_JN516x.a(tsv_main.o)
+                              AppApiSleep.o (symbol from plugin) (s_sTimerList)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_main.o)
+                              AppApi.o (symbol from plugin) (XCV_vCtor)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_access.o)
+                              mac_main.o (symbol from plugin) (XCV_vDevWriteIER)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_isr.o)
+                              AppApi.o (symbol from plugin) (vXCV_IntHandlerPhy)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                              phy_pib.o (symbol from plugin) (vMMAC_SetChannelAndPower)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a(MMAC_RadioInit_JN5169.o)
+                              xcv_main.o (symbol from plugin) (vMMAC_ConfigureRadio)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                              AppApi.o (symbol from plugin) (vJPT_CustomBmodTable)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
+                              MMAC_RadioInit_JN5169.o (symbol from plugin) (bJPT_InitRadio_JN5169)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorCCM.o)
+                              AES_CCM.o (symbol from plugin) (bACI_CCMstar)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AES_CCM_Star.o)
+                              TAM_AES.o (symbol from plugin) (vACI_OptimisedCcmStar)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorAPI.o)
+                              AES_CCM_Star.o (symbol from plugin) (vACI_CmdWaitBusy)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Analogue.o)
+                              objs_RED/act2.o (symbol from plugin) (bAHI_APRegulatorEnabled)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_BrownOut.o)
+                              mwx_appcore.o (symbol from plugin) (vAHI_BrownOutConfigure)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Dio.o)
+                              mwx_periph_dio.o (symbol from plugin) (vAHI_DioSetDirection)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_PulseCounter.o)
+                              mwx_appcore.o (symbol from plugin) (bAHI_Read16BitCounter)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Reset.o)
+                              ToCoNet_main.o (symbol from plugin) (vAHI_SwReset)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_SpiRegisterCallback)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_System.o)
+                              AppApiSleep.o (symbol from plugin) (u8AHI_PowerStatus)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
+                              utils.o (symbol from plugin) (vAHI_TimerEnable)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_TimerInt.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_Timer0RegisterCallback)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                              objs_RED/act2.o (symbol from plugin) (vAHI_UartSetBaudDivisor)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                              ToCoNet_utils.o (symbol from plugin) (vAHI_WakeTimerEnable)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
+                              AHI_System.o (symbol from plugin) (vAHI_FlashAndEEPROMControllerIntHandler)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Infrared.o)
+                              AHI_TimerInt.o (symbol from plugin) (vAHI_IntHandlerInfrared)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_DO.o)
+                              mwx_periph_dio.o (symbol from plugin) (bAHI_DoEnableOutputs)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(InternalFlashApi.o)
+                              AHI_Flash.o (symbol from plugin) (bFlashErase)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_FlashIndexSector.o)
+                              AppStart.o (symbol from plugin) (bAHI_ReadMACID)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Si.o)
+                              objs_RED/act2.o (symbol from plugin) (vAHI_SiMasterConfigure)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_TickTimerInit)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+                              AppApi.o (symbol from plugin) (vAHI_InterruptSetPriority)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Init.o)
+                              AppStart.o (symbol from plugin) (u32AHI_Init)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_SpiSlave.o)
+                              AHI_Init.o (symbol from plugin) (vAHI_IntHandlerSpiSlave)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
+                              ToCoNet_main.o (symbol from plugin) (vMicroIntEnableOnly)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                              AHI_Reset.o (symbol from plugin) (vMicroSyscall)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(Heap.o)
+                              (u32HeapStart)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                              (_exception_external_interrupt)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Tx.o)
+                              mwx_appcore.o (symbol from plugin) (ToCoNet_vReg_mod_Tx_Standard)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_TxRxQueue.o)
+                              mwx_appcore.o (symbol from plugin) (ToCoNet_vReg_mod_TxRxQueueSmall)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppHousekeeping.o)
+                              mac_scan.o (symbol from plugin) (sAppHousekeeping)
+C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorAPIinterrupts.o)
+                              AHI_Init.o (symbol from plugin) (vACI_IntHandlerAes)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                              objs_RED/act2.o (symbol from plugin) (memset)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o (memcmp)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o (memcpy)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o (__udivsi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o (__divsi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__umodsi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__modsi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__fixunsdfsi)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__udivdi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__umoddi3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__adddf3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__divdf3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__nedf2)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__gedf2)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__ledf2)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__muldf3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__subdf3)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__fixdfsi)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o (__floatsidf)
+c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                              C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o (__floatunsidf)
+
+Allocating common symbols
+Common symbol       size              file
+
+apvHwIndBufferData  0x2c              AppQueueApi_ToCoNet.o (symbol from plugin)
+prMAC_TofMlmeReqHandler
+                    0x4               mac_mlme.o (symbol from plugin)
+apvMlmeIndBufferData
+                    0x14              AppQueueApi_ToCoNet.o (symbol from plugin)
+_TWENET_TX_POWER_VALUE
+                    0x1               AppStart.o (symbol from plugin)
+g_tSpiConfiguration
+                    0x4               AHI_Flash.o (symbol from plugin)
+u8TAM_TxStatusOverride
+                    0x1               TAMevent.o (symbol from plugin)
+prMAC_TofRxHandler  0x4               TAMcommon.o (symbol from plugin)
+_MAC_u8TxFailReason
+                    0x1               mac.o (symbol from plugin)
+apvMcpsIndBufferData
+                    0x14              AppQueueApi_ToCoNet.o (symbol from plugin)
+bAHI_ExtendedTemperatureOperation
+                    0x1               AHI_System.o (symbol from plugin)
+bMAC_DiscardUnsuccessfulAssocResponses
+                    0x1               mac_pmic.o (symbol from plugin)
+u8Msq               0x1               TAM_TAT.o (symbol from plugin)
+g_bLegacyHwBugEmulation
+                    0x1               AES_CCM_Star.o (symbol from plugin)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 objs_RED/_mwx_version.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+ .bss           0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .text.exit     0x0000000000000000        0x3 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .text.startup  0x0000000000000000      0x101 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .ctors         0x0000000000000000        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans17.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+ .bss           0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x38 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .eh_frame      0x0000000000000000       0x38 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .text          0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE15_cbTweNet_vMainEPv
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE19_cbTweNet_vNwkEventEPvRNS0_13packet_ev_nwkE
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L114processev_crtpINS0_9NwkSimpleEE14vProcessEvCoreEP8_tsEvent7teEventm
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE9_on_eventEPvmRm
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vRxEventEPvRNS0_9packet_rxE
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vHwEventEPvmm
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE17_cbTweNet_u8HwIntEPvmm
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L110serial_jen7vOutputEcPv
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vTxEventEPvRNS0_12packet_ev_txE
+                0x0000000000000000        0x0 objs_RED/act2.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 objs_RED/font.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 objs_RED/lets_use_display.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_event.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_utils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Nwk_Common.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Channel_Mgr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppQueueApi_ToCoNet.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppStart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 getMacAddr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AES_CCM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 no_ack_handler.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 serial.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 uart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ByteQueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ccitt8.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 utils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ccm.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aescrypt.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aeskey.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aestab.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweinteractive.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweprintf.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 twesercmd_plus3.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweserial.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweserial_jen.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 twesysutils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 printf.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweinputstring.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_debug.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_appcore.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_memory.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_dio.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_buttons.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_analogue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_stgs_standard.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_nwk_simple.o (symbol from plugin)
+ .gnu.linkonce.t._ZZN3mwx2L110twenet_mac8transmitERNS0_9packet_txEE5u8seq
+                0x0000000000000000        0x0 mwx_nwk_simple.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_duplicate_checker.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppApi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppApiSleep.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_mcps.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_mlme.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pib.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pib_mlme.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pmic.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_ind.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_scan.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_lp.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MCPS.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 phy_pib.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMCO.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMDE.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_MEM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_MLME.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAH.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAI.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAT.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMcommon.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMevent.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMqueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMrxEnable.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMsecurity.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMsideways.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMtime.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_AES.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Endian.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_acl.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_misc.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tsv_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_access.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_isr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MMAC.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MMAC_RadioInit_JN5169.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 JPT_RadioTxPowerTests.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 JPT_RadioSettings_JN5169.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorCCM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AES_CCM_Star.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorAPI.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Analogue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_BrownOut.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Dio.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_PulseCounter.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Reset.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Spi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_System.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Timer.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_TimerInt.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Uart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_WakeTimer.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Flash.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Infrared.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_DO.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 InternalFlashApi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_FlashIndexSector.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Si.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_TickTimer.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+ .bss           0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+ .text          0x0000000000000000        0x0 AHI_Init.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_SpiSlave.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MicroInt_ba.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .data          0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .bss           0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .text          0x0000000000000000        0x0 Heap.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .data          0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .bss           0x0000000000000000        0x0 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Tx.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_TxRxQueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppHousekeeping.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorAPIinterrupts.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x0000000000080000 0x0000000000080000
+ram              0x000000000400004c 0x0000000000007fb4
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD objs_RED/_mwx_version.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans17.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+LOAD C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD objs_RED/act2.o
+LOAD objs_RED/font.o
+LOAD objs_RED/lets_use_display.o
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libEASTL_RED.a
+START GROUP
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTimerServer_JN516x.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTOF_JN516x.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libPDM_EEPROM_JN516x_NO_RTOS.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a
+LOAD C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/TWENET/current/lib/libEASTL_RED.a
+END GROUP
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libstdc++.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libm.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a
+LOAD c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+                0x0000000000000800                _stack_size = 0x800
+                0x0000000000080038                exception_vsr_table = 0x80038
+                0x0000000004000000                pSPIflashFncTable = 0x4000000
+                0x0000000000000044                restore_state = 0x44
+                0x000000000000004a                bZSPIWaitWIPClear = 0x4a
+                0x0000000000000050                u16ZSPIflashRDID = 0x50
+                0x0000000000000056                u8SelectFlashChipType = 0x56
+                0x000000000000005c                memcpy = 0x5c
+                0x0000000000000066                vBootFlashProg = 0x66
+                [0x0000000000000d16]                __minimum_heap_size = DEFINED (__minimum_heap_size)?__minimum_heap_size:0xd16
+                [0x0000000000000800]                __stack_size = DEFINED (__stack_size)?__stack_size:0x800
+                0x0000000000000000                _SwConfig = (DEFINED (g_bSWConf_Debug) | (DEFINED (g_bSWConf_AltDebugPort) << 0x1))
+
+.version        0x000000000007fffc        0x4
+                0x000000000007fffc        0x4 LONG 0xf03000b
+
+.bir            0x0000000000080000       0x10
+                0x0000000000080000                _flash_start = ABSOLUTE (.)
+                0x0000000000080000                _flash_beg = ABSOLUTE (.)
+                0x0000000000080000        0x4 LONG 0x12345678
+                0x0000000000080004        0x4 LONG 0x11223344
+                0x0000000000080008        0x4 LONG 0x55667788
+                0x000000000008000c        0x1 BYTE 0x8
+                0x000000000008000d        0x1 BYTE 0x1
+                0x000000000008000e        0x2 SHORT 0x0
+
+.flashheader    0x0000000000080010       0x28
+                0x0000000000080010        0x4 LONG 0x0
+                0x0000000000080014        0x4 LONG 0x0
+                0x0000000000080018        0x4 LONG 0x0
+                0x000000000008001c        0x2 SHORT 0x0
+                0x000000000008001e        0x2 SHORT 0x0 ABSOLUTE (_SwConfig)
+                0x0000000000080020                _enc_start = ABSOLUTE (.)
+                0x0000000000080020        0x4 LONG 0x1030c ABSOLUTE (_image_len)
+                0x0000000000080024        0x4 LONG 0x902fc ABSOLUTE (_flash_data_start)
+                0x0000000000080028        0x2 SHORT 0x13 ((ABSOLUTE (_ram_data_start) / 0x4) & 0xffff)
+                0x000000000008002a        0x2 SHORT 0x4 ((ABSOLUTE (_ram_data_len) / 0x4) & 0xffff)
+                0x000000000008002c        0x2 SHORT 0x17 ((ABSOLUTE (_bss_start) / 0x4) & 0xffff)
+                0x000000000008002e        0x2 SHORT 0x57e ((ABSOLUTE (_bss_len) / 0x4) & 0xffff)
+                0x0000000000080030        0x4 LONG 0x893a4 ABSOLUTE (AppWarmStart)
+                0x0000000000080034        0x4 LONG 0x89d54 ABSOLUTE (AppColdStart)
+                0x0000000000000000                _enc_offset = (_enc_start & 0xf)
+                0x0000000000000044                PROVIDE (vException_BusError, restore_state)
+                0x0000000000000044                PROVIDE (vException_UnalignedAccess, restore_state)
+                0x0000000000000044                PROVIDE (vException_IllegalInstruction, restore_state)
+                0x0000000000000044                PROVIDE (vException_SysCall, restore_state)
+                0x0000000000000044                PROVIDE (vException_Trap, restore_state)
+                0x0000000000000044                PROVIDE (vException_StackOverflow, restore_state)
+                0x0000000000080038                . = ABSOLUTE (exception_vsr_table)
+
+.vsr_table      0x0000000000080038       0x18
+                0x0000000000080038        0x4 LONG 0x44 ABSOLUTE (vException_BusError)
+                0x000000000008003c        0x4 LONG 0x44 ABSOLUTE (vException_UnalignedAccess)
+                0x0000000000080040        0x4 LONG 0x44 ABSOLUTE (vException_IllegalInstruction)
+                0x0000000000080044        0x4 LONG 0x44 ABSOLUTE (vException_SysCall)
+                0x0000000000080048        0x4 LONG 0x44 ABSOLUTE (vException_Trap)
+                0x000000000008004c        0x4 LONG 0x44 ABSOLUTE (vException_StackOverflow)
+
+.vsr_handlers   0x0000000000080050       0xaa
+ *(.vsr_handlers)
+ .vsr_handlers  0x0000000000080050       0xaa C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                0x0000000000080050                _exception_external_interrupt
+                0x00000000000800f8                _default_vsr_dummy
+
+.rodata         0x0000000000080100      0x8b6
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000080100       0xae C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+                                         0xb0 (size before relaxing)
+ .rodata        0x00000000000801ae      0x107 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .rodata        0x00000000000802b5      0x1cb C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+ .rodata        0x0000000000080480        0x8 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+                0x0000000000080480                au32UartAddrOffset
+ .rodata.str1.1
+                0x0000000000080488       0x1f C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+ .rodata        0x00000000000804a7       0x17 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+ *fill*         0x00000000000804be        0x2 00
+ .rodata        0x00000000000804c0       0xd4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+                0x00000000000804c0                s_aprScanHandleEvt.15753
+                0x00000000000804f0                apvActionCalls
+                0x0000000000080578                aprLPBMacVectorRamTable
+                0x000000000008058c                psTamMacContext
+                0x0000000000080590                psTAMcontext
+ .rodata        0x0000000000080594        0xa C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+ .rodata.str1.1
+                0x000000000008059e       0x3e C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+ .rodata        0x00000000000805dc       0x1c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+ .rodata.str1.1
+                0x00000000000805f8       0x88 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .rodata        0x0000000000080680        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+ .rodata        0x0000000000080684        0x6 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+                0x0000000000080684                aeXcvPhyEvtToScanEvt.5424.15756
+ .rodata.str1.1
+                0x000000000008068a       0x11 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+ *fill*         0x000000000008069b        0x1 00
+ .rodata        0x000000000008069c       0x7c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+                0x00000000000806d0                u32MacLow_TOCOS
+                0x00000000000806d4                u32MacHigh_TOCOS
+ .rodata.str1.1
+                0x0000000000080718       0x11 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+                                         0x22 (size before relaxing)
+ *fill*         0x0000000000080729        0x3 00
+ .rodata        0x000000000008072c       0x38 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+                0x000000000008072c                asStateFuncTbl.27507
+ .rodata        0x0000000000080764       0x1c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+                0x0000000000080764                psTamXcvContext
+ .rodata.str1.1
+                0x0000000000080780       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+ *fill*         0x0000000000080792        0x6 00
+ .rodata        0x0000000000080798       0xc0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+ .rodata        0x0000000000080858       0x21 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+ .rodata.str1.1
+                0x0000000000080879       0xfc C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+ *fill*         0x0000000000080975        0x3 00
+ .rodata        0x0000000000080978       0x28 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+                0x0000000000080978                au32TimerBaseAddress
+                0x000000000008098c                CSWTCH.35.26342.26342
+ .rodata.str1.1
+                0x00000000000809a0       0x16 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+
+.text           0x00000000000809b8     0xf943
+ *(.text*)
+ .text          0x00000000000809b8      0xe61 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+                0x00000000000809b8                ToCoNet_vMain
+ .text          0x0000000000081819      0xf05 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+                0x0000000000081819                mac_vLPBAdjustBeaconOffset
+                0x0000000000081876                mac_u32LPBGetBeaconTimeout
+                0x000000000008187f                eWEnDTmrExpiry.15394
+                0x000000000008188a                eWEnDEdDone.15391
+                0x00000000000818e5                eGenlDontCare.15388
+                0x00000000000818ea                eGenlIllegal.15013
+                0x00000000000818f1                u32GetTimer0
+                0x00000000000818f8                vSetTimer0
+                0x0000000000081907                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vHwEventEPvmm.local.198
+                0x000000000008190a                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE17_cbTweNet_u8HwIntEPvmm.local.197
+                0x000000000008190f                _out_fct.6721
+                0x0000000000081921                _out_null.6727
+                0x0000000000081924                vOutputStream.6513
+                0x0000000000081930                _ZN3mwx2L110serial_jen7vOutputEcPv.local.196
+                0x0000000000081957                vHandlerPatch.5626
+                0x000000000008198e                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vTxEventEPvRNS0_12packet_ev_txE.local.195
+                0x00000000000819a8                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE19_cbTweNet_vNwkEventEPvRNS0_13packet_ev_nwkE.local.202
+                0x00000000000819b1                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE15_cbTweNet_vMainEPv.local.203
+                0x00000000000819b4                u8TSCframeIncrease
+                0x00000000000819ed                vCopyToDataFromMacAddr.22415
+                0x0000000000081a20                psTAQsearchFifo
+                0x0000000000081a69                bTAQremoveFromFifo
+                0x0000000000081aa6                vTAMinsertEvent
+                0x0000000000081b0c                vTAM_TxRetryTimeout
+                0x0000000000081b10                vTACsetTxFrameDefaults
+                0x0000000000081b36                u8TACgetHeaderSize
+                0x0000000000081b73                u32TACpayloadToU32M
+                0x0000000000081b94                vTACu32ToPayloadM
+                0x0000000000081bac                vTACbuildBeacon
+                0x0000000000081db4                bTACframeInProgress
+                0x0000000000081dde                bTACassessBeaconForPayload
+                0x0000000000081e2f                bIsBbcSafeForTx
+                0x0000000000081e64                vTATwriteAclMaterialToHardware
+                0x0000000000081e89                vTATsetBLE
+                0x0000000000081ec0                vTATgetFramePayload
+                0x0000000000081edd                eTATreadTXstatus
+                0x0000000000081f23                vTAHsetPhyStateDirect.part.0.19874
+                0x0000000000081f3f                vDoGoOff.21695
+                0x0000000000081f59                vMEMreturn
+                0x0000000000081fca                vTACinformOriginator
+                0x0000000000081fec                pvMEMget
+                0x0000000000082018                vTAMDEdetermineNullState
+                0x0000000000082032                vTAMCOupdatePendingList
+                0x0000000000082104                vTAMCOsetCoordinator
+                0x000000000008212a                eScanHandleEvt.part.0.15424
+                0x0000000000082153                mac_eDcfmIndPost
+                0x0000000000082174                mac_psDcfmIndGetBuf
+                0x0000000000082195                vMLMErxEnableConfirm
+                0x00000000000821c7                vMLMEcommStatus
+                0x000000000008222a                vMLMEcommStatusFromFrame
+                0x000000000008226e                vTSCpostTransmitUpdate
+                0x000000000008229d                vMLMEsyncLoss
+                0x00000000000822d0                vPMICpostFailedAssocDcfm
+                0x0000000000082308                vPMICassocReqTO_2.13841
+                0x000000000008231f                MAC_vPibSetPanId
+                0x000000000008233a                vHandleTofRequest.11947
+                0x000000000008233d                vAppApiDefSetPrbsSeed
+                0x0000000000082361                mwx::L1::duplciate_checker::_node_ele_init(mwx::L1::duplciate_checker::_node_ele*)
+                0x0000000000082380                _ZN3mwx2L113serial_parserINS0_10alloc_heapIhEEEC1Ev.local.52
+                0x00000000000823a2                _ZN3mwx2L16twenetC1Ev.local.58
+                0x0000000000082439                _ZN3mwx2L110serial_jenC1Eh.local.107
+                0x0000000000082469                _ZN3mwx2L115periph_analogueC1Ev.local.125
+                0x0000000000082494                _ZN3mwx2L112appdefs_virt8on_eventEmRm.local.134
+                0x00000000000824ac                _ZN3mwx2L112appdefs_virt18cbToCoNet_vHwEventEmm.local.136
+                0x00000000000824c4                _ZN3mwx2L112appdefs_virt18cbToCoNet_vTxEventERNS0_12packet_ev_txE.local.137
+                0x00000000000824dc                _ZN3mwx2L112appdefs_virt19cbToCoNet_vNwkEventERNS0_13packet_ev_nwkE.local.139
+                0x00000000000824f4                u8CCITT8
+                0x000000000008251a                bAES_CCM_KeyReg
+                0x0000000000082559                bFifoPush.4327
+                0x0000000000082592                vAppQApiPostMlme.4313
+                0x00000000000825b1                vAppQApiPostMcps.4320
+                0x00000000000825cc                pvFifoPull.4324
+                0x00000000000825f3                psAppQApiGetMlmeBuffer.4310
+                0x00000000000825fb                psAppQApiGetMcpsBuffer.4317
+                0x0000000000082603                PRSEV_vSetState
+                0x0000000000082613                PRSEV_vProcessEv_core.3197
+                0x00000000000826b5                PRSEV_vProcessEvPost
+                0x00000000000826e7                _PRSEV_vProcessEvSingle
+                0x00000000000826f4                ToCoNet_vMacStart
+                0x0000000000082701                _ZN3mwx2L18_smplbufIhNS0_12alloc_attachIhEEE9push_backEOh.local.168
+ .text.unlikely
+                0x000000000008271e       0x65 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+                0x000000000008271e                _ZN3mwx2L112appdefs_virt18cbToCoNet_vRxEventERNS0_9packet_rxE.local.138
+                0x0000000000082736                PRSEV_u8Register
+                0x0000000000082774                _PRSEV_vProcessEvSingleH
+ *fill*         0x0000000000082783        0x1 00
+ .text          0x0000000000082784      0x964 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+                0x0000000000082784                vAHI_IntHandlerTickTimer
+                0x000000000008290e                vHnd_E_STATE_FINISH_TX_FAIL.27452
+                0x00000000000829c4                vHnd_E_STATE_FINISH_TX_SUCCESS.27457
+                0x0000000000082cdb                pinMode(unsigned char, mwx::L1::enum_wapper<PIN_MODE::eMWX_DIO_MODE, unsigned char>)
+                0x0000000000082e5f                _ZN3mwx2L110serial_jen5beginEmh.part.26.7639
+                0x0000000000082edc                _ZN3mwx2L110serial_jen10_on_wakeupEv.part.27.7654
+                0x0000000000082f07                _MWX_periph_init()
+                0x0000000000082fc3                vTAMCOstartBeacon
+                0x0000000000082fff                vStartStoreValues.18056
+                0x00000000000830b6                bStartCallback.18085
+ .text          0x00000000000830e8      0x8f4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+                0x00000000000830e8                UART_vHandleUartInterrupt.5753
+                0x000000000008316f                _ZN3mwx2L114processev_crtpINS0_9NwkSimpleEE14vProcessEvCoreEP8_tsEvent7teEventm.local.201
+                0x0000000000083222                vXCV_IntHandlerPhy
+                0x00000000000832d4                vScanHandleTimer.15010
+                0x00000000000832d9                bAES_CCM_EncodeKey
+                0x0000000000083386                vXCV_IntHandlerBbc
+                0x0000000000083429                _ZN3mwx2L114periph_twowire9busy_waitEv.isra.1.2918
+                0x0000000000083472                _ZN3mwx2L110serial_jen13_set_baudrateEt.isra.2.7476
+                0x0000000000083523                UART_vSetTxInterrupt
+                0x000000000008356e                u8TAM_AES_WriteAuxilliarySecurityHeaderIntoBuffer
+                0x00000000000835e0                u32AHI_ReadIndexSectorBits.constprop.224
+                0x0000000000083641                vTAIsetCapTime
+                0x0000000000083662                vTAIsetRxEnableTime
+                0x0000000000083683                vDoGoActive.21697
+                0x00000000000836a5                vTAMRXEint2Fired
+                0x00000000000836db                _ZN3mwx2L115periph_analogue5setupEbhPFvvE.local.124.constprop.305
+                0x0000000000083778                _ZN3mwx2L115periph_analogue5beginEv.local.120.constprop.304
+                0x00000000000837e3                vTAMRXEsetPhy
+                0x00000000000838a6                vTAHsetPhyState
+                0x00000000000838d6                vTAMCOint2Fired
+                0x00000000000838f6                vSetPHYfromMacValue.18531
+                0x0000000000083928                vTAMDEint1FiredWaitDR
+                0x0000000000083935                vTACsetPHYfromMacValue
+                0x0000000000083956                vTAMRXEsetReceiveForPibChange
+                0x0000000000083996                bAHI_ReadMACID
+ .text.unlikely
+                0x00000000000839dc       0xaf C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+                0x00000000000839dc                _ZL5delaym.1880.constprop.318
+ *fill*         0x0000000000083a8b        0x1 00
+ .text          0x0000000000083a8c      0xba4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+                0x0000000000083a8c                eWBRTTxDone.15410
+                0x0000000000083aaa                vTAMCOframeTXgoingIdle
+                0x0000000000083ac3                vTAMCOframeTXcap
+                0x0000000000083ae8                eWCoRRxDone.15401
+                0x0000000000083b92                eWBcnRxDone.15413
+                0x000000000008417e                vTAMCOframeRXcap
+                0x0000000000084190                vTAMCOframeRXgoingIdle
+                0x00000000000841a6                vTAMCOframeRXnobeacon
+                0x00000000000841b8                vTAMDEframeRX
+                0x00000000000841e0                vTAMDEframeRXtrackingDR
+                0x0000000000084223                vTAMDEframePreSyncReq
+                0x000000000008423b                vTAMCOframeTXbeacon
+                0x0000000000084302                vTAMDEframeRXsyncReq
+                0x0000000000084551                vTAMDEint1FiredTrackingCAPgts
+                0x0000000000084602                eWONTTxDone.15407
+ .text          0x0000000000084630      0xa9a C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+                0x0000000000084790                bAES_CCM_DecodeKey
+                0x000000000008484c                bTAM_AES_CCMstarPatch
+                0x0000000000084990                bTAM_AES_CCMstarPatch2006
+                0x0000000000084c6f                bTATsendFrame
+                0x0000000000084cc2                vTrySendFromDirectCAP.17988
+                0x0000000000084cdd                vTrySendFromDirectNoBeacon.17992
+                0x0000000000084d08                vTAMCOint1Fired
+                0x0000000000084e24                vTAMCOint1FiredCAP
+                0x0000000000084e96                vTAMCOreqTXnoBeacon
+                0x0000000000084ea7                vTAMCOreqTXinCAP
+                0x0000000000084ecd                vTrySendUnslotted.18533
+                0x0000000000084ee7                bSendDataRequest.18535
+                0x0000000000084ff9                bProcessBeaconRX.18538
+ .text.unlikely
+                0x00000000000850ca      0x108 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+                0x00000000000850ca                bStartXtal32k.26013
+ .text          0x00000000000851d2      0xf93 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+                0x00000000000851d2                vMLMEbeaconNotify
+                0x0000000000085330                vMCPSframeReceived
+                0x00000000000853f3                ToCoNet_vInit
+                0x0000000000085736                vExpireHead.24958
+                0x0000000000085766                _etoa.6815.constprop.340
+                0x0000000000085b11                _vsnprintf.constprop.338
+                0x0000000000086124                MWX_DebugMsg
+ .text.unlikely
+                0x0000000000086165       0x37 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+                0x0000000000086165                u32AppQApiInitInt_PATCH
+                0x0000000000086174                fctprintf.constprop.296
+ .text          0x000000000008619c      0x7c3 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+                0x000000000008619c                vHnd_E_STATE_RUNNING.27483
+                0x00000000000863e6                SERIAL_vTxReady
+                0x0000000000086447                TWETERM_vFlush.6589
+                0x00000000000864fe                vAppQApiPostHwIntT.4306
+                0x00000000000865d1                SERIAL_bTxChar
+                0x0000000000086682                TWETERM_iPutS.6612
+                0x00000000000866a7                TWETERM_iPutC.6616
+                0x00000000000866b8                TWETERM_iGetC.6620
+                0x000000000008671b                MWX_Panic
+                0x000000000008677f                _ZN3mwx2L110serial_jen5writeEi.local.146
+                0x000000000008678e                _ZN3mwx2L16streamINS0_10serial_jenEE7printlnEv.local.155
+                0x00000000000867a6                _ZN3mwx2L16streamINS0_10serial_jenEE6_printEPKc.local.154
+                0x00000000000867c7                _ZN3mwx2L16streamINS0_10serial_jenEE7printlnEPKc.local.152
+                0x00000000000867dc                _ZN3mwx2L114periph_twowire14cmd_tx_no_stopEb.isra.4.2922.constprop.285
+                0x00000000000867ea                _ZN3mwx2L114periph_twowire5writeEh.local.158.constprop.283
+                0x0000000000086827                _ZN3mwx2L114periph_twowire15endTransmissionEb.part.6.2928
+                0x0000000000086843                _ZN3mwx2L114periph_twowire17beginTransmissionEh.local.157.constprop.286
+                0x0000000000086878                _Z13displayLocatehii.constprop.279
+                0x00000000000868d5                _Z12displayClearh.constprop.278
+ .text.unlikely
+                0x000000000008695f       0xa5 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+                0x000000000008695f                Delay.26007.constprop.239
+                0x00000000000869d8                _ZN3mwx2L16streamINS0_10serial_jenEE8printfmtEPKcz.local.176.constprop.297
+ .text          0x0000000000086a04      0xafd C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+                0x0000000000086a19                mac_vLPBStartTimer
+                0x0000000000086b55                vProcessEvCoreTx.27444
+                0x0000000000086c45                vMMAC_ConfigureRadio
+                0x0000000000086df0                bAHI_SetClockRate
+                0x0000000000086efb                vAHI_SiMasterConfigure.constprop.317
+                0x0000000000086f2f                _ZN3mwx2L115periph_analogue10_adc_startEv.local.43.constprop.309
+                0x0000000000087018                mwx::L1::periph_analogue::ADC_handler(unsigned long, unsigned long)
+                0x000000000008705f                u8HwEventHandler.3407
+                0x0000000000087107                _ZN3mwx2L16twenet5beginEv.local.112.constprop.275
+                0x000000000008714c                vAHI_DoSetPullup.constprop.274
+                0x000000000008716c                vAHI_DioWakeEnable.constprop.273
+                0x0000000000087180                vTimerStart
+                0x0000000000087299                vAHI_TimerEnable.part.1.26209.constprop.242
+                0x0000000000087304                bAES_CCMstar
+                0x00000000000873d0                pvHeap_Alloc
+                0x00000000000873d3                operator new(unsigned long)
+                0x00000000000873f6                _ZN3mwx2L114periph_twowireC1Eh.local.76
+                0x0000000000087433                u32AHI_Init
+                0x00000000000874f5                vMicroIntRestoreState
+ .text.unlikely
+                0x0000000000087501       0x45 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+                0x0000000000087501                vAHI_MemoryHold.26106
+ .text          0x0000000000087546      0x5b3 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+                0x0000000000087546                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE18_cbTweNet_vRxEventEPvRNS0_9packet_rxE.local.199
+                0x0000000000087a94                vAppApiDefMlmeRequest
+                0x0000000000087abf                pvAppApiDefGetMacHandle
+                0x0000000000087ac8                _ZN3mwx2L114periph_twowire8_init_hwEb.isra.17.1916.constprop.315
+ *fill*         0x0000000000087af9        0x3 00
+ .text.unlikely
+                0x0000000000087afc      0x310 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+                0x0000000000087b19                vProcessIncomingHwEvent.3576
+ .text          0x0000000000087e0c      0xaba C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+                0x0000000000087e0c                vAHI_IntHandlerSpiSlave
+                0x0000000000087e17                vAHI_IntHandlerSi
+                0x0000000000087e62                vAHI_IntHandlerTimer2
+                0x0000000000087e82                vAHI_IntHandlerSysCtrl
+                0x0000000000087edc                vAHI_IntHandlerUart1
+                0x0000000000087f07                vAHI_IntHandlerUart0
+                0x0000000000087f32                vAHI_IntHandlerTimer4
+                0x0000000000087f53                vAHI_IntHandlerTimer3
+                0x0000000000087f74                vAHI_IntHandlerTimer1
+                0x0000000000087f94                vAHI_IntHandlerTimer0
+                0x0000000000087fb5                vTimerCallback.25989
+                0x0000000000087fc0                vAHI_IntHandlerSpiMaster
+                0x0000000000087fe6                vAHI_IntHandlerAnalogPeriph
+                0x0000000000088006                vTTIBLETimerExpired
+                0x0000000000088011                vTTITimer2Expired
+                0x0000000000088016                vTTITimer1Expired
+                0x000000000008801b                vTTITransactionTimerExpired
+                0x0000000000088044                bUpdateTime.20733
+                0x000000000008807f                bAHI_DoEnableOutputs
+                0x00000000000880a8                u8AHI_WakeTimerFiredStatus
+                0x00000000000880bc                vAHI_WakeTimerStop.part.3.26674
+                0x00000000000880dc                mac_vLPBStopTimer
+                0x00000000000880e6                vAHI_UartSetClocksPerBit.part.18.26470
+                0x000000000008810d                vAHI_UartSetRTSCTS.part.15.26455
+                0x0000000000088134                vAHI_UartReset.part.4.26428
+                0x000000000008816c                vAHI_UartSetControl.part.2.26412
+                0x00000000000881bd                vAHI_UartSetBaudDivisor.part.1.26408
+                0x00000000000881fc                vAHI_WatchdogStop
+                0x0000000000088213                _ZN3mwx2L120periph_pulse_counter10_on_wakeupEv.part.18.7510
+                0x0000000000088289                u32AHI_DioWakeStatus
+                0x000000000008829a                vAHI_DioWakeEdge
+                0x00000000000882ba                vAHI_DioSetPullup
+                0x00000000000882da                vAHI_DioSetOutput
+                0x00000000000882ee                vAHI_DioSetDirection
+                0x0000000000088302                vACI_CmdWaitBusy
+                0x0000000000088366                vACI_OptimisedCcmStar
+                0x000000000008857e                vTAIdisableInterrupt
+                0x0000000000088597                psRemove.part.0.24953
+                0x00000000000885c6                vMAC_MISCpollConfirm
+                0x00000000000885f7                MAC_u8AclFindInfo
+                0x0000000000088721                vTASretrieveSecurity
+                0x0000000000088743                MAC_bLookUpKeyDescriptor.22505
+                0x00000000000887bd                bTSCgetOutgoingInfo
+ .text.unlikely
+                0x00000000000888c6       0x24 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+                0x00000000000888c6                vAHI_CpuDoze
+                0x00000000000888d9                vStartXtal32kExternalRc.26003
+ .text          0x00000000000888ea      0x9e5 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+                0x00000000000888ea                vTACintRXheader
+                0x00000000000890e5                cbAppColdStart.part.32.8136
+ *fill*         0x00000000000892cf        0x1 00
+ .text          0x00000000000892d0      0xa84 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+                0x00000000000892d0                vPostDcfm.15397
+                0x00000000000893a4                AppWarmStart
+                0x0000000000089474                vSetNextChannel.15445
+                0x00000000000894cd                MAC_vHandleMlmeReqRsp
+                0x0000000000089c7d                vTAMDEint1FiredTracking
+                0x0000000000089ced                vTAMDEint1FiredSyncReq
+ .text          0x0000000000089d54      0x55c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+                0x0000000000089d54                AppColdStart
+ .text.unlikely
+                0x000000000008a2b0      0x43c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+                0x000000000008a2b0                ToCoNet_vStart
+ .text          0x000000000008a6ec      0xc78 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+                0x000000000008a6ec                TSV_eStart
+                0x000000000008a7d0                eTAStransmitRequest
+                0x000000000008ab6b                TSV_eOpen
+                0x000000000008ab73                vAppApiDefRestoreMacSettings
+                0x000000000008ac5a                vAppApiDefSaveMacSettings
+                0x000000000008acb7                mac_vLPBSleep
+                0x000000000008ad75                pvAppApiDefGetMacAddrLocation
+                0x000000000008ad7e                eAppApiDefPlmeGet
+                0x000000000008add0                eAppApiDefPlmeSet
+                0x000000000008ae41                vAppApiDefMcpsRequest
+                0x000000000008ae6c                vHnd_E_STATE_PREPARE_TX.27462
+ *fill*         0x000000000008b364        0x0 00
+ .text          0x000000000008b364      0xa38 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+                0x000000000008b364                vPMICassocReqTO_1.13834
+                0x000000000008b3ec                vTAM_MCPSdataRequest
+                0x000000000008b42f                bTACcheckPANconflict
+                0x000000000008b4e8                vTAMDEstartSync
+                0x000000000008b567                eTAMselect
+                0x000000000008b6a8                MAC_pvCtor
+                0x000000000008bad1                u32AppApiDefInit
+                0x000000000008bb9c                vDeterminePowerState.18655
+                0x000000000008bc21                vTAMDEint1FiredTrackingBeacon
+                0x000000000008bcc1                vTAMDEint2FiredTrackingDR
+                0x000000000008bce6                vTAMDEframeTXtrackingDR
+                0x000000000008bd40                vTAMDEint2FiredPollActive
+                0x000000000008bd74                vTAMDEreqTXnullTrackingCAP
+                0x000000000008bd8d                vTAM_TxRetryTimer
+ .text          0x000000000008bd9c      0xbb0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+                0x000000000008bf94                _ftoa.6795.constprop.342
+                0x000000000008c2ed                _ntoa_long_long.6769.constprop.339
+                0x000000000008c3c2                _ntoa_long.6757.constprop.344
+                0x000000000008c48f                vMicroIntEnableOnly.constprop.334
+                0x000000000008c4bb                vMMAC_SetChannelAndPower
+                0x000000000008c664                vPhySetChannel
+                0x000000000008c683                QUEUE__u8RemoveItem.part.1.5828
+                0x000000000008c6be                QUEUE__vAddItem.constprop.324
+                0x000000000008c6f0                vRxChar.5651
+                0x000000000008c741                _ToCoNet_bRfChChannel
+                0x000000000008c7d6                ToCoNet_ChMgr_bCh_Reconfig
+                0x000000000008c83e                ToCoNet_ChMgr_vCh_TxFin
+                0x000000000008c86a                vHnd_E_STATE_WAIT_TX.27475
+                0x000000000008c8da                vHnd_E_STATE_IDLE.27467
+                0x000000000008c93e                vAHI_ProtocolPower.constprop.333
+ .text.unlikely
+                0x000000000008c94c      0x205 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+                0x000000000008c94c                _ZN3mwx2L110twenet_mac8transmitERNS0_9packet_txE.local.32.constprop.323
+ *fill*         0x000000000008cb51        0x3 00
+ .text          0x000000000008cb54      0x784 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans17.ltrans.o
+                0x000000000008cb54                eGenTmrExpiry.15706
+                0x000000000008cb96                eWEDTEdDone.15709
+                0x000000000008cbba                TSV_eStop
+                0x000000000008cc79                bPMICdisassocReqSent.13830
+                0x000000000008cd33                MAC_vHandleMcpsReqRsp
+                0x000000000008cdc0                bMCPSframeTXcomplete.16441
+                0x000000000008ce15                bSendSyncLoss.20668
+                0x000000000008ce2d                bPollReqSent.24264
+                0x000000000008ce45                bTASsendCommStatusInd
+                0x000000000008ce5a                bAssocRespSent.13826
+                0x000000000008ce6d                eTACprocessFrameTXcomplete
+                0x000000000008cfe9                vTAMCOframeTXnobeacon
+                0x000000000008cfff                vTAMCOframeStarting
+                0x000000000008d019                vTAMDEframeTXDEnull
+                0x000000000008d03c                vTAMDEframeTXtrackingCAPgts
+                0x000000000008d069                bPMICassocReqSent.13822
+                0x000000000008d0eb                bPMICassocReqPollSent.13837
+                0x000000000008d13f                eWChCChanChgd.15421
+ .text          0x000000000008d2d8      0x515 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+                0x000000000008d2d8                _ToCoNet_vMacInit
+                0x000000000008d33e                _ToCoNet_vRfConfig
+                0x000000000008d4da                mwx::L1::NwkSimple::on_create(unsigned long&)
+                0x000000000008d52a                _ZN3mwx2L123twenet_instance_manager3useINS0_9NwkSimpleEEERT_Rm.local.170.constprop.291
+                0x000000000008d696                setup()
+ *fill*         0x000000000008d7ed        0x3 00
+ .text          0x000000000008d7f0      0x3f0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+                0x000000000008d7f0                eGenRxHdrDone.15404
+                0x000000000008d800                vTimerConfig
+                0x000000000008da0d                cbAppWarmStart.part.28.7915
+ .text          0x000000000008dbe0      0x157 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+                0x000000000008dbe0                _ZN3mwx2L112appdefs_crtpINS0_9NwkSimpleEE9_on_eventEPvmRm.local.200
+                0x000000000008dccf                vProcessEvCoreMac
+ .text          0x000000000008dd37       0x25 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                0x000000000008dd37                memcmp
+ .text          0x000000000008dd5c       0x19 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ *fill*         0x000000000008dd75        0x3 00
+ .text          0x000000000008dd78      0x204 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+                0x000000000008dd78                __udivsi3
+ .text          0x000000000008df7c       0x30 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+                0x000000000008df7c                __divsi3
+ .text          0x000000000008dfac      0x1b0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+                0x000000000008dfac                __umodsi3
+ .text          0x000000000008e15c       0x24 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+                0x000000000008e15c                __modsi3
+ .text          0x000000000008e180       0x39 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                0x000000000008e180                __fixunsdfsi
+ .text          0x000000000008e1b9      0x350 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                0x000000000008e1b9                __udivdi3
+ .text          0x000000000008e509      0x312 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                0x000000000008e509                __umoddi3
+ .text          0x000000000008e81b      0x682 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                0x000000000008e81b                __adddf3
+ *fill*         0x000000000008ee9d        0x3 00
+ .text          0x000000000008eea0      0x5c8 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                0x000000000008eea0                __divdf3
+ .text          0x000000000008f468       0x7f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                0x000000000008f468                __nedf2
+                0x000000000008f468                __eqdf2
+ .text          0x000000000008f4e7       0xca c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                0x000000000008f4e7                __gedf2
+                0x000000000008f4e7                __gtdf2
+ .text          0x000000000008f5b1       0xcb c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                0x000000000008f5b1                __ledf2
+                0x000000000008f5b1                __ltdf2
+ .text          0x000000000008f67c      0x488 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                0x000000000008f67c                __muldf3
+ .text          0x000000000008fb04      0x693 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                0x000000000008fb04                __subdf3
+ .text          0x0000000000090197       0x64 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                0x0000000000090197                __fixdfsi
+ .text          0x00000000000901fb       0x61 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                0x00000000000901fb                __floatsidf
+ .text          0x000000000009025c       0x4f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                0x000000000009025c                __floatunsidf
+ .text          0x00000000000902ab       0x27 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+                0x00000000000902ab                vAHI_InterruptSetPriority
+                0x00000000000902c9                vAHI_InterruptSetActivePriorityLevel
+ .text.vMicroSyscall
+                0x00000000000902d2       0x17 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                0x00000000000902d2                vMicroSyscall
+ .text          0x00000000000902e9       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                0x00000000000902e9                memset
+                0x00000000000902fb                _flash_end = ABSOLUTE (.)
+
+.rela.dyn       0x00000000000902fc        0x0
+ .rela.text     0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .rela.text.unlikely
+                0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .rela.rodata   0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .rela.data     0x0000000000000000        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+                0x000000000400004c                . = ORIGIN (ram)
+
+.data           0x000000000400004c       0x10 load address 0x00000000000902fc
+                0x000000000400004c                _ram_data_start = ABSOLUTE (.)
+ *(.data*)
+ .data          0x000000000400004c        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .data          0x0000000004000050        0x8 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+                0x0000000004000050                u32HeapStart
+ .data          0x0000000004000058        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+                0x0000000004000058                _toconet_tx_u8_init_queue_flag
+ .data          0x0000000004000059        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+                0x0000000004000059                u8TxWkrNow.27585
+ .data          0x000000000400005a        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+ .data.initinboot
+                0x000000000400005b        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+                0x000000000400005b                gMAC_u8MaxBuffers
+ *(.data.*)
+                0x000000000400005c                . = ALIGN (0x4)
+                0x000000000400005c                _ram_data_end = ABSOLUTE (.)
+
+.bss            0x000000000400005c     0x15f8 load address 0x000000000009030c
+                0x000000000400005c                _bss_start = ABSOLUTE (.)
+ *(.bss*)
+ .bss           0x000000000400005c      0x100 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+                0x000000000400005c                sMcpsIndQueue.4545
+                0x000000000400006c                sMcpsIndBufferQueue.4543
+                0x000000000400007c                sMlmeIndQueue.4546
+                0x000000000400008c                sMlmeIndBufferQueue.4544
+                0x000000000400009c                sHwIndQueue.4547
+                0x00000000040000ac                sHwIndBufferQueue.4548
+                0x00000000040000bc                _u32_INT_adc_comp
+                0x00000000040000c0                _u32_INT_ticktimer
+                0x00000000040000c4                the_vsettings
+                0x00000000040000c8                the_vhw
+                0x00000000040000cc                the_vapp
+                0x00000000040000d0                the_vnet2
+                0x00000000040000d4                the_vnet
+                0x00000000040000d8                the_mac
+                0x00000000040000f4                Wire
+                0x000000000400010c                Serial
+                0x000000000400012c                Analogue
+                0x0000000004000144                _periph_availmap
+ .bss           0x000000000400015c        0xc C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+ .bss           0x0000000004000168       0xbc C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+                0x0000000004000168                prUart1AppCallback.26649
+                0x000000000400016c                prUart0AppCallback.26648
+                0x0000000004000170                asUARTS.5795
+                0x0000000004000190                sOpt.5802
+                0x00000000040001a0                asSerialPorts
+                0x00000000040001d8                _psSerial
+ .bss           0x0000000004000224       0x24 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+                0x0000000004000224                bTxEventQueued.21563
+                0x0000000004000225                u8TxEventStatus.21564
+                0x0000000004000228                sAppHousekeeping
+                0x0000000004000240                prApAppCallback.25743
+                0x0000000004000244                bIntEnableFlag.25740
+ .bss           0x0000000004000248       0x40 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+                0x0000000004000248                g_sLP
+                0x0000000004000284                g_pvMac
+ .bss.initinboot
+                0x0000000004000288      0x1c0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+                0x0000000004000288                g_sMac
+ .bss.dontinitinboot
+                0x0000000004000448        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+ *fill*         0x0000000004000449        0x3 00
+ .bss           0x000000000400044c      0x718 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+                0x000000000400044c                prSpiAppCallback.25977
+                0x0000000004000450                prSiAppCallback.27212
+                0x0000000004000454                prAppMcpsCallback.4549
+                0x0000000004000458                prAppMlmeCallback.4550
+ .bss.initinboot
+                0x0000000004000b64        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+                0x0000000004000b64                prSysCtrlAppCallback.26185
+ .bss           0x0000000004000b68       0x18 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+                0x0000000004000b68                sSerCmd_P3.6465
+                0x0000000004000b74                prAppHwCallback.4551
+                0x0000000004000b78                _SERIAL_bmTxIntEnabled
+                0x0000000004000b7c                TxWorker_u8Num.27542
+                0x0000000004000b7d                gbTimeOutFlag.26181
+ .bss           0x0000000004000b80        0x2 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+ *fill*         0x0000000004000b82        0x2 00
+ .bss.dontinitinboot
+                0x0000000004000b84        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+ .bss           0x0000000004000b88       0x9c C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+                0x0000000004000b88                Timer4
+                0x0000000004000b90                Timer3
+                0x0000000004000b98                Timer2
+                0x0000000004000ba0                Timer1
+                0x0000000004000ba8                Timer0
+                0x0000000004000bb0                SPI
+                0x0000000004000bb4                SerialParser
+                0x0000000004000bf0                Serial1
+                0x0000000004000c10                Buttons
+                0x0000000004000c18                PulseCounter1
+                0x0000000004000c1c                PulseCounter0
+ .bss           0x0000000004000c24        0x4 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+ .bss           0x0000000004000c28      0x618 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+ .bss           0x0000000004001240       0x90 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+                0x0000000004001240                _ZL5_vcbs.8288
+                0x0000000004001254                sToCoNet_AppContext
+                0x0000000004001270                sToCoNet_Context
+                0x00000000040012b8                sAssocSecurity.14451
+                0x00000000040012c4                g_bJenieBackwardsCompatibilityMode
+ .bss           0x00000000040012d0      0x290 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+                0x00000000040012d0                u8AppId_Pkt_head.5499
+                0x00000000040012d4                u32AppId.5496
+                0x00000000040012d8                u32MyAddr.5498
+                0x00000000040012dc                bRxQueue_Init.5497
+                0x00000000040012e0                psRxQueueList.5495
+                0x00000000040012f4                asEventHandler.3264
+                0x0000000004001394                sEvVars
+                0x00000000040013b0                u32TickCount_ms
+                0x00000000040013b4                au8Txdatabuff_idx_sTxQueue
+                0x00000000040013b8                u8TxBuffSiz_sTxQueue
+                0x00000000040013bc                sTxdatabuff_sTxQueue
+                0x00000000040013c0                sTxQueue
+                0x00000000040013dc                au8Rxdatabuff_idx_sRxQueue
+                0x00000000040013e0                u8RxBuffSiz_sRxQueue
+                0x00000000040013e4                sRxdatabuff_sRxQueue
+                0x00000000040013e8                sRxQueue
+                0x0000000004001404                au8Rxdatabuff_idx_sRxQueueCmd
+                0x0000000004001408                u8RxBuffSiz_sRxQueueCmd
+                0x000000000400140c                sRxdatabuff_sRxQueueCmd
+                0x0000000004001410                sRxQueueCmd.3715
+                0x000000000400142c                sContext.5620
+                0x0000000004001458                the_twelite
+                0x00000000040014f0                TWENET_u8RFdevice_minor.4920
+                0x00000000040014f1                TWENET_u8RFdevice_major.4919
+                0x00000000040014f2                _TWENET_TX_POWER_MAX
+                0x00000000040014f4                sToCoNet_Modules
+ .bss           0x0000000004001560       0x28 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+                0x0000000004001560                sCh_Context.4183
+                0x0000000004001564                asTx.27541
+ .bss.initinboot
+                0x0000000004001588        0x1 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+ *fill*         0x0000000004001589        0x3 00
+ .bss           0x000000000400158c       0x10 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+                0x000000000400158c                i8TxPower.17241
+                0x0000000004001590                g_sXcv
+                0x0000000004001594                prMcpsRequest.10835
+                0x0000000004001598                prMlmeRequest.10834
+ .bss.initinboot
+                0x000000000400159c        0x8 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+                0x000000000400159c                g_u32MacAddrLocation
+                0x00000000040015a0                prvUserTxStartedCallback
+ .bss           0x00000000040015a4       0x24 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+                0x00000000040015a4                pvPostFunc.3278
+                0x00000000040015a8                u32PostArg.3277
+                0x00000000040015ac                evPost.3276
+ .bss           0x00000000040015c8       0x14 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans17.ltrans.o
+                0x00000000040015c8                s_sTimerList
+                0x00000000040015d8                u8AssocResponsesInProgress.14450
+ .bss           0x00000000040015dc       0x14 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+                0x00000000040015dc                prOriginalHandler.5630
+ .bss           0x00000000040015f0       0x24 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+                0x00000000040015f0                apfTimerAppCallback.26394
+                0x0000000004001604                prTickTimeAppCallback
+                0x0000000004001608                au16TimerSettings.26343
+ .bss.dontinitinboot
+                0x0000000004001614       0x40 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                0x0000000004001614                isr_handlers
+ *(.bss.*)
+ *(.scommon*)
+ *(.scommon.*)
+ *(COMMON)
+                0x0000000004001654                . = ALIGN (0x4)
+                0x0000000004001654                _bss_end = ABSOLUTE (.)
+                0x0000000004001654                end = .
+
+.sbss           0x0000000004001654        0x0 load address 0x0000000000091904
+ .sbss          0x0000000004001654        0x0 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+
+.heap           0x0000000004001654      0xd16 load address 0x0000000000091904
+                0x0000000004001654                _heap_start = ABSOLUTE (.)
+                0x000000000400236a                . = (. + __minimum_heap_size)
+ *fill*         0x0000000004001654      0xd16 00
+
+.stack          0x0000000004007800      0x800 load address 0x0000000000097ab0
+                0x0000000004007800                _heap_end = ABSOLUTE (.)
+                0x0000000004007800                _stack_low_water_mark = ABSOLUTE (.)
+                0x0000000004008000                . = (. + __stack_size)
+ *fill*         0x0000000004007800      0x800 00
+                0x0000000004008000                _stack = .
+
+.test           0x000000000009030c        0x1
+                0x000000000009030c        0x1 BYTE 0xff
+                0x00000000000902fc                _flash_data_start = LOADADDR (.data)
+                0x0000000000000010                _ram_data_len = (((_ram_data_end - _ram_data_start) + 0x3) & 0xfffffffffffffffc)
+                0x00000000000015f8                _bss_len = (((_bss_end - _bss_start) + 0x3) & 0xfffffffffffffffc)
+                0x000000000001030c                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
+                0x0000000004008000                _ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
+                0x0000000004008000                ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
+                0x0000000001001580                _app_ram_start = 0x1001580
+                0x0000000004000050                PROVIDE (_heap_location, u32HeapStart)
+                0x0000000004000050                PROVIDE (heap_location, u32HeapStart)
+                0x000000000008ab6b                TSV_eOpenVector = TSV_eOpen
+                0x000000000008a6ec                TSV_eStartVector = TSV_eStart
+                0x000000000008cbba                TSV_eStopVector = TSV_eStop
+                0x0000000000087abf                pvAppApiGetMacHandle = pvAppApiDefGetMacHandle
+                0x000000000008bad1                u32AppApiInit = u32AppApiDefInit
+                0x0000000000087a94                vAppApiMlmeRequest = vAppApiDefMlmeRequest
+                0x000000000008ae41                vAppApiMcpsRequest = vAppApiDefMcpsRequest
+                0x000000000008add0                eAppApiPlmeSet = eAppApiDefPlmeSet
+                0x000000000008ad7e                eAppApiPlmeGet = eAppApiDefPlmeGet
+                0x000000000008ad75                pvAppApiGetMacAddrLocation = pvAppApiDefGetMacAddrLocation
+                0x000000000008ac5a                vAppApiSaveMacSettings = vAppApiDefSaveMacSettings
+                0x000000000008ab73                vAppApiRestoreMacSettings = vAppApiDefRestoreMacSettings
+OUTPUT(objs_RED/act2_RED_L1305_V0-1-0.elf elf32-ba)
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans1.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans2.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans3.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans4.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans5.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans6.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans7.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans8.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans9.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans10.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans11.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans12.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans13.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans14.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans15.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans16.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans17.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans18.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans19.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\桐蔭高~1\AppData\Local\Temp\ccpUxOWm.ltrans20.ltrans.o
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .comment       0x0000000000000000       0x11 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_info     0x0000000000000000     0x3453
+ .debug_info    0x0000000000000000       0xf3 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_info    0x00000000000000f3      0x106 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_info    0x00000000000001f9       0xb7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_info    0x00000000000002b0       0xb7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_info    0x0000000000000367       0xb7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_info    0x000000000000041e       0xb7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_info    0x00000000000004d5       0xd3 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_info    0x00000000000005a8      0x648 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000000bf0      0x69d c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_info    0x000000000000128d      0x4b2 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_info    0x000000000000173f      0x5c5 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_info    0x0000000000001d04      0x1e7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_info    0x0000000000001eeb      0x20b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_info    0x00000000000020f6      0x20b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_info    0x0000000000002301      0x5c7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_info    0x00000000000028c8      0x4b2 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_info    0x0000000000002d7a      0x1b7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_info    0x0000000000002f31      0x1d6 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_info    0x0000000000003107      0x1cb c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_info    0x00000000000032d2       0xaa C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_info    0x000000000000337c       0xd7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_abbrev   0x0000000000000000     0x113e
+ .debug_abbrev  0x0000000000000000       0x8e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x000000000000008e       0xa4 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000132       0x14 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_abbrev  0x0000000000000146       0x14 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_abbrev  0x000000000000015a       0x14 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_abbrev  0x000000000000016e       0x14 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_abbrev  0x0000000000000182       0x60 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_abbrev  0x00000000000001e2      0x15d c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000000000000033f      0x175 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x00000000000004b4      0x133 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_abbrev  0x00000000000005e7      0x12f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_abbrev  0x0000000000000716      0x128 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_abbrev  0x000000000000083e      0x137 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_abbrev  0x0000000000000975      0x139 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_abbrev  0x0000000000000aae      0x141 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_abbrev  0x0000000000000bef      0x133 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_abbrev  0x0000000000000d22      0x12a c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_abbrev  0x0000000000000e4c      0x128 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_abbrev  0x0000000000000f74      0x128 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_abbrev  0x000000000000109c       0x14 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_abbrev  0x00000000000010b0       0x8e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_loc      0x0000000000000000     0x599c
+ .debug_loc     0x0000000000000000       0x73 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_loc     0x0000000000000073       0x39 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_loc     0x00000000000000ac       0x48 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_loc     0x00000000000000f4      0xa7b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_loc     0x0000000000000b6f      0x985 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_loc     0x00000000000014f4     0x10f3 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_loc     0x00000000000025e7     0x117e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_loc     0x0000000000003765       0x83 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_loc     0x00000000000037e8      0x154 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_loc     0x000000000000393c       0xe6 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_loc     0x0000000000003a22      0xa0e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_loc     0x0000000000004430     0x114e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_loc     0x000000000000557e       0xa8 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_loc     0x0000000000005626      0x1be c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_loc     0x00000000000057e4      0x179 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_loc     0x000000000000595d       0x3f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_aranges  0x0000000000000000      0x2a0
+ .debug_aranges
+                0x0000000000000000       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000020       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000040       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_aranges
+                0x0000000000000060       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_aranges
+                0x0000000000000080       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_aranges
+                0x0000000000000100       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_aranges
+                0x0000000000000120       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_aranges
+                0x0000000000000140       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_aranges
+                0x0000000000000160       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_aranges
+                0x0000000000000180       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_aranges
+                0x0000000000000200       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_aranges
+                0x0000000000000220       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_aranges
+                0x0000000000000240       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_aranges
+                0x0000000000000260       0x20 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_aranges
+                0x0000000000000280       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_line     0x0000000000000000     0x2bd2
+ .debug_line    0x0000000000000000      0x15a c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_line    0x000000000000015a      0x14e c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_line    0x00000000000002a8      0x47b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_line    0x0000000000000723       0xbb c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_line    0x00000000000007de      0x3c7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_line    0x0000000000000ba5       0xa3 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_line    0x0000000000000c48       0x9f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_line    0x0000000000000ce7      0x1b7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_line    0x0000000000000e9e      0x1b7 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_line    0x0000000000001055      0x63d c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_line    0x0000000000001692      0x3b5 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_line    0x0000000000001a47       0xf1 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_line    0x0000000000001b38      0x15f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_line    0x0000000000001c97      0x15f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_line    0x0000000000001df6      0x269 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_line    0x000000000000205f      0x656 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_line    0x00000000000026b5       0xc8 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_line    0x000000000000277d       0xbc c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_line    0x0000000000002839       0xbe c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_line    0x00000000000028f7      0x197 C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/プログラム/Softs/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_line    0x0000000000002a8e      0x144 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_str      0x0000000000000000      0x6be
+ .debug_str     0x0000000000000000       0x49 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                                        0x155 (size before relaxing)
+ .debug_str     0x0000000000000049       0x5d c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+                                        0x169 (size before relaxing)
+ .debug_str     0x00000000000000a6       0xc5 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                                        0x169 (size before relaxing)
+ .debug_str     0x000000000000016b       0x7b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                                        0x1d7 (size before relaxing)
+ .debug_str     0x00000000000001e6        0xa c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                                        0x1d7 (size before relaxing)
+ .debug_str     0x00000000000001f0       0xc6 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                                        0x1ba (size before relaxing)
+ .debug_str     0x00000000000002b6       0x7a c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                                        0x1f9 (size before relaxing)
+ .debug_str     0x0000000000000330       0x3f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                                        0x16e (size before relaxing)
+ .debug_str     0x000000000000036f       0x57 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                                        0x186 (size before relaxing)
+ .debug_str     0x00000000000003c6       0x3f c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                                        0x186 (size before relaxing)
+ .debug_str     0x0000000000000405       0x72 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                                        0x1eb (size before relaxing)
+ .debug_str     0x0000000000000477       0x41 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                                        0x1ba (size before relaxing)
+ .debug_str     0x00000000000004b8       0x4b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                                        0x17f (size before relaxing)
+ .debug_str     0x0000000000000503       0x54 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                                        0x188 (size before relaxing)
+ .debug_str     0x0000000000000557       0x4b c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                                        0x185 (size before relaxing)
+ .debug_str     0x00000000000005a2      0x11c c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                                        0x155 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x24c
+ .debug_frame   0x0000000000000000       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000020       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000040       0x2c c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x000000000000006c       0x30 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_frame   0x000000000000009c       0x34 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_frame   0x00000000000000d0       0x30 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_frame   0x0000000000000100       0x34 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_frame   0x0000000000000134       0x34 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_frame   0x0000000000000168       0x34 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_frame   0x000000000000019c       0x30 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_frame   0x00000000000001cc       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_frame   0x00000000000001ec       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_frame   0x000000000000020c       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_frame   0x000000000000022c       0x20 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_ranges   0x0000000000000000      0x558
+ .debug_ranges  0x0000000000000000       0xa0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_ranges  0x00000000000000a0       0x80 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_ranges  0x0000000000000120       0x80 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_ranges  0x00000000000001a0       0xb0 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_ranges  0x0000000000000250       0x38 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_ranges  0x0000000000000288       0x58 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_ranges  0x00000000000002e0       0x40 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_ranges  0x0000000000000320      0x1a8 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_ranges  0x00000000000004c8       0x78 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_ranges  0x0000000000000540       0x18 c:/users/桐蔭高校科学部/desktop/github/2024-toin-cansat/プログラム/softs/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)

@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=省電力子機の下り通信 サンプル
+DESC=MessagePoolを利用して子機からデータを送信後、ネットワークからのメッセージを受信し、メッセージ受信が終了した時点でスリープするサンプルです。
+URL=https://github.com/monowireless/Samp_Wayback
+[ENGLISH]
+TITLE=Samp_Wayback
+DESC=After sending data from the child unit using MessagePool, it receives a message from the network and goes to sleep.
+URL=https://github.com/monowireless/Samp_Wayback

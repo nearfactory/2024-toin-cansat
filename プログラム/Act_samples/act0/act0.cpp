@@ -1,11 +1,11 @@
 #include <TWELITE>
 #include <NWK_SIMPLE>
 
-int up = 0;
-int down = 0;
-int right = 0;
-int left = 0;
-int center = 0;
+// int up = 0;
+// int down = 0;
+// int right = 0;
+// int left = 0;
+// int center = 0;
 char english[27] = {'!', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 char output[] = {' '};
 char confirmed[] = {' '};
@@ -19,6 +19,14 @@ void setup() {
     pinMode(1, INPUT);//up
     pinMode(17, INPUT);//down
     Analogue.setup();
+
+    /*
+    up      1
+    right   0
+    down    17
+    left    A2
+    center  A1
+    */
 }
 
 void loop() {
