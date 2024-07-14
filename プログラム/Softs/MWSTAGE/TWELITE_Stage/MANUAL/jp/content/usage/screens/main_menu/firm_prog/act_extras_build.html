@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Actエクストラ</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Actエクストラ</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#actエクストラ">Actエクストラ</a><ul>
+<li><a href="#フォルダ">フォルダ</a></li>
+<li><a href="#操作">操作</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="actエクストラ">Actエクストラ</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>アクト(Act)のビルドと書き換えを行います。</p>
+<div class="success">
+<p>Actエクストラには、外部のオープンソースライブラリなどを利用したものや、比較的複雑な処理を行うものを収録しています。</p>
+</div>
+<figure>
+<img src="data:image/png;base64,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ROQlswMw6nUAlwxL1h2Ie08lyuTi8N324fZ1T0SoC7PMYwlKqj3ryqkVla/v6lWa+6wLAJrYHvDCZxblr/ttS6vL7ybb7Z4V57MWXW1yS253XXf1dga4Z4/Nka4zmnUE3/pwX93/ro6i6kZDycSuVQY4lDdD0O1L3f7fKqLSfZVuWcWzhJv5J633pLcKcASPzeCioXWjN/BGDXW9yVVquHMM73zSd7RwuQ4wy4zfAe/wM6SDjISvpSKNxBjAnYi8F3Svt71u8PR6ZrvVKqQNka/zdtv59m5aArCbGVdBb9Ety/+gtjdN6rLeYQ0XXl9dUquSeStmz8tc+J2v8+QaTd5KGoB1PVwul8zbN3kg3vpBDkdbLgAHdI8BDADhPA8YAAIIYAAI8PCi+Sy6DgBwd/SAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgg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GAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgACP0RUAjuv7V9+3fz97/iywJvDqX75vmub5P9/OfqgHDAABHp59dKbWxLotoGtpecNldetQVwJnNNz3hp/+cK8YTp8vYVjaWq592fJe7HD6uSVwTMfpR6Zqkq/hceq/nB4wAAQ4zTngbl9hbgsoP/3yllSql1PSP07VsKSc7rv5efP9MEoMt2eqLzv300/1AFK6dcifo833WbvzdunjMlR+RCovp2TKbsm3d+zSAwaAACfoAaf6c2u1hsrPww174Vuoa13eXtvwmErOV+XP9R7nk0r1mLvvugqaobljNkuWctv9YD1gAAhw6B5wybnb5dfLlbekUr3wYeuv/Bxe6vW5Lcq6uVgiPyIyPFuc/9zLlzgsodtbXbefqtfLkh7nutfrXN1G3/dKDxgAAhy6B1zS0pnbGprbWy1ZSt3Vy3OXkvp16bAE/eAtDLd/+ZXnea5R55bkR4OWlHN79IABIMChe8BLpNpca/1edv/WmV5RrOHoQn40pe4uPyl6xtQp2XPW3VeXjOh0p7yH8Tw9YAAIcLM94LnKr6keTr/WVdCcS/nYScn5++W2uxaa8yq5An+LffK2e65reeejjz6KrgMA3Jenp6fHjz/6+LvvvouuyZqWtOnyrcX8s27Kl77kF3VzyympMyVSVwzkrzPovlJyhnjuHd/qerqedHRvyvfAknfzU25xP/yb9MH7H7zz/BfPo6sBAPflg6cPHn/1T7/6j3//5s//+V/RldlV6lrW4X2Luq9vd1Yj34ua258ueYUlyveHo13Jqe97z7a4i/7yo80d9n2bpvnwJx/+w98/e+fTv/zr5f/ei64MANyFh4eHT37xyQ8//PfD7373ux9++OGP//bHb7795k9//lN0xQDgZn34kw9//rOfv/fu+69evfq7L7744vHx8eOff/zLf/zl+++9/9577/34vz/++OOP0ZUEgBvx7rvv/vTDn/7s2c8+/eTTv/zwP9drn/8fpZ0f08qQVyQAAAAASUVORK5CYII=" alt="選択画面" /><figcaption>選択画面</figcaption>
+</figure>
+<p>この画面を開くと、プロジェクト一覧が表示されます。書き込みたいプロジェクトを選択すると、ビルド～書き込みを行います。書き込み終了後に<code>Enter</code>または<code>[ B ]</code>ボタンを押すことで、TWELITE をリセットし、インタラクティブモード画面（またはターミナル画面、要設定）に遷移します。</p>
+<p><a href="build_screen.html">ビルド～書き込み画面</a></p>
+<p>VSCodeを利用する設定（アプリ書換＞codeでフォルダを開く）になっている場合は、ビルドは行わず <code>build/</code> 以下の<a href="bin.html">BINファイルを書き込む画面</a>を開きます。</p>
+<h3 id="フォルダ">フォルダ</h3>
+<p>ビルド対象となるプロジェクトは以下になります。</p>
+<pre><code>{MWSTAGEインストールフォルダ}/MWSTAGE/Act_extras</code></pre>
+<h3 id="操作">操作</h3>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>メニュー選択 ↑</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜けて、前のメニューに戻ります。</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>選択</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>関連ウェブサイト（プロジェクトフォルダの<code>000desc.txt</code>に登録がある場合）をOS標準のブラウザで開きます。</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>メニュー選択 ↓</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>フォルダ（プロジェクト、関連フォルダ）を開きます。設定メニューでVS Codeで開くように設定できます。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>この画面を終了し、書換メニューに戻ります。</td>
+</tr>
+<tr class="even">
+<td>マウスクリック [ﾍﾙﾌﾟ]</td>
+<td>関連ウェブサイトを開きます。</td>
+</tr>
+<tr class="odd">
+<td>マウスクリック [ﾌｫﾙﾀﾞ] または [VSCode]</td>
+<td>関連フォルダを開きます。</td>
+</tr>
+<tr class="even">
+<td>マウスクリック [▽] または [△]</td>
+<td>次ページ、前ページに移動します。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>改訂履歴</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">改訂履歴</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#改訂履歴">改訂履歴</a><ul>
+<li><a href="#mwstage2022_07収録版">1.3.8 MWSTAGE2022_07収録版</a></li>
+<li><a href="#mwstage2021_09収録版">1.0.8 MWSTAGE2021_09収録版</a></li>
+<li><a href="#pre2">1.0.7pre2</a></li>
+<li><a href="#mwstage2020_12収録版">1.0.3 MWSTAGE2020_12収録版</a><ul>
+<li><a href="#既知の問題">既知の問題</a></li>
+</ul></li>
+<li><a href="#mwstage2020_10-raspberry-pi-版-暫定版">0.9.11 MWSTAGE2020_10, Raspberry Pi 版 (暫定版)</a></li>
+<li><a href="#mwstage2020_10収録版">0.9.9 - MWSTAGE2020_10収録版</a></li>
+<li><a href="#mwstage2020_12収録版-1">1.0.3 MWSTAGE2020_12収録版</a><ul>
+<li><a href="#既知の問題-1">既知の問題</a></li>
+</ul></li>
+<li><a href="#mwstage2020_10-raspberry-pi-版-暫定版-1">0.9.11 MWSTAGE2020_10, Raspberry Pi 版 (暫定版)</a></li>
+<li><a href="#mwstage2020_10収録版-1">0.9.9 - MWSTAGE2020_10収録版</a></li>
+<li><a href="#a">0.9.8a</a></li>
+<li><a href="#section">0.9.8</a><ul>
+<li><a href="#改定内容">改定内容</a></li>
+<li><a href="#既知の問題-2">既知の問題</a></li>
+</ul></li>
+<li><a href="#section-1">0.8.9</a></li>
+<li><a href="#section-2">0.8.6</a></li>
+<li><a href="#section-3">0.8.5</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="改訂履歴">改訂履歴</h1>
+<p>ソースコードの変更履歴は <a target=_blank href="https://mwm5.twelite.info/changes">https://mwm5.twelite.info/changes</a> および　<a target=_blank href="https://github.com/monowireless/mwm5">https://github.com/monowireless/mwm5</a> を参照ください。</p>
+<p>プラットフォームによっては、配布中の最新バージョンと改訂履歴の最新バージョンが一致しない場合があります。</p>
+<h2 id="mwstage2022_07収録版">1.3.8 MWSTAGE2022_07収録版</h2>
+<p>メジャーバージョンアップ。</p>
+<ul>
+<li>内部描画解像度を320x240から640x480ピクセルに変更</li>
+<li>加速度センサーのリアルタイムグラフの追加</li>
+<li>センサーデータの保存とグラフ表示を行うセンサーグラフを追加</li>
+<li>英語表示に対応</li>
+<li>主要マニュアルをローカルhtmlファイルに変更</li>
+</ul>
+<h2 id="mwstage2021_09収録版">1.0.8 MWSTAGE2021_09収録版</h2>
+<ul>
+<li><code>[ A ]</code> <code>[ B ]</code> <code>[ C ]</code>ボタンで、ポインタから外れたボタンが残ってしまう場合があった</li>
+<li>STAGE APPでEnter入力の際にTWELITEに対してCRLFを送信するようにした</li>
+<li>MacのFTDIライブラリを更新しApple Silicon(M1)でもシリアル仲介プログラムを利用しなくても、動作できるようになった</li>
+<li>Windowsでmsysツール群のPATHを内部設定し、期待しないmakeが呼び出されないようにした</li>
+<li>TWELITE未接続でも書き込み画面に移動できるようにした(B,Rキーを入力し、対象のTWELITEモデルを指定する)</li>
+<li>VSCodeを利用する設定を行った場合は、ActやTweAppsを選択したときに、ビルドを実行せず、build/以下の.binファイルを書き込む画面を開くようにした。（ビルドはVSCodeから実施します）</li>
+<li>いくつかの環境変数を内部的に設定し、TWELITE STAGEから起動したVSCodeにこれらを参照させることで、VSCodeから適切なビルドを実行、VSCodeのコード解釈に対して適切なライブラリソースを参照できるようにした</li>
+<li>MWSDKフォルダ以下にサンプルコードが格納されているが、ビルド対象のフォルダをドロップすることで、MWSDK以外のフォルダでもビルドや書き込み作業をできるようにした（フォルダ名に空白や日本語文字などが含まれてはいけません）</li>
+<li>始動時のコンソール画面に、内部のフォルダ設定や環境変数の設定内容を表示するようにした</li>
+<li>終了時は１秒待ってからSTAGE APPを終了するようにした</li>
+</ul>
+<h2 id="pre2">1.0.7pre2</h2>
+<ul>
+<li>Raspberry Pi の対応を強化 (1.0.7pre2)
+<ul>
+<li>serial0 の対応（TWELITE STAGE HAT)</li>
+<li>Zero 向けビルドを追加(対応ライブラリでビルド＆描画フェード機能を無効化)</li>
+<li>X11 デスクトップ向けビルドを追加</li>
+</ul></li>
+<li>一般のFTDIデバイス(FT232,FT230)でも利用できるようにした。ファームウェア書き込みモードは手動で行う必要があります</li>
+<li>Windowsで、シリアルポート選択画面で<code>c</code>キーを押すことでWindowsで割り当てられているCOMポートを表示する機能を追加した</li>
+<li>ボーレートを115200bpsから変更できるようにした</li>
+<li>描画フェード機能を無効にするコマンドラインオプション(<code>-E 0</code>)を追加。</li>
+</ul>
+<h2 id="mwstage2020_12収録版">1.0.3 MWSTAGE2020_12収録版</h2>
+<ul>
+<li>TWELITE CUE対応（パーサー・CUEビューア）</li>
+<li>書換メニューで、書き込み時にベリファイ（比較）を行うようにした。</li>
+<li>Apple Silicon暫定対応（<code>TWELITE_Stage.command</code> はユニバーサルアプリ、シリアル処理用の外部コマンド<code>sersrv_ftdi.command</code>、Toolsは Rosetta2 で動作可能な intel バイナリを再ビルド、シリアル通信は外部コマンド経由のため遅くなります)</li>
+<li>フォルダ構成で <code>MWSTAGE/MWSDK/Tools</code> を <code>MWSTAGE/Tools</code>に移動した。(MWSDKをMWSDK_COMMONレポジトリをそのまま利用できるようにするため)</li>
+<li>TWELITE_Stage.ini (起動ファイル名から拡張子を取り除き .ini を付加) を、起動時に読み込みMWSDKフォルダを選択できるようにした。(古い版のライブラリ一式を簡単に切り替えられるようにした)</li>
+<li>画面描画用のSDL2ライブラリを 2.0.12 に変更した (Windows, MacOS, RaspberryPi)。</li>
+<li>Windows では static ビルドとして DLL ファイル不要とした。</li>
+<li>make -j による並列ビルド数を(物理CPU数 - 1)とした。</li>
+<li>書換メニューのいくつかの場所で、シリアルポートの再オープンを明示的に行うようにした。デバイスの抜き差しを行ったときなどにUSB接続が切断した場合などに、復帰しやすいようにした。</li>
+<li><p>Alt(Cmd)+Shift+m, t で mwx, twesettings を開くとき <code>TWENET/usever.mk</code> 記載のフォルダを</p>
+　開くようにした。</li>
+<li><p>[Raspberry Pi] 初回起動時に /dev/serial0 での書込メニュー遷移が失敗する問題を修正。</p></li>
+</ul>
+<h3 id="既知の問題">既知の問題</h3>
+<ul>
+<li>起動時にAlt(Cmd)押し下げ時のヘルプメッセージが出現しない場合がある。Alt(Cmd)+0を入力することで表示されます。</li>
+<li>書換メニューでファイル名が長すぎる場合に、行の行事が乱れる場合がある。</li>
+<li>Apple Siliconでの動作については十分な検証を行っていません。</li>
+</ul>
+<h2 id="mwstage2020_10-raspberry-pi-版-暫定版">0.9.11 MWSTAGE2020_10, Raspberry Pi 版 (暫定版)</h2>
+<p>(※包括的な検証を実施しないバージョンです)</p>
+<ul>
+<li>Raspberry Pi での動作</li>
+<li>その他、機能調整</li>
+</ul>
+<h2 id="mwstage2020_10収録版">0.9.9 - MWSTAGE2020_10収録版</h2>
+<ul>
+<li>最上位メニューにも [ｳｪﾌﾞ] ボタンを追加し、関連リンクをブラウザで開けるようにした。</li>
+<li>Linux版のフォルダ、ウェブ、VS Code で開く機能を実装した。</li>
+<li>TWELITE が頻繁に UART 出力している場合に、書き込みメニューへ遷移しづらいことがあった</li>
+</ul>
+<h2 id="mwstage2020_12収録版-1">1.0.3 MWSTAGE2020_12収録版</h2>
+<ul>
+<li>TWELITE CUE対応（パーサー・CUEビューア）</li>
+<li>書換メニューで、書き込み時にベリファイ（比較）を行うようにした。</li>
+<li>Apple Silicon暫定対応（<code>TWELITE_Stage.command</code> はユニバーサルアプリ、シリアル処理用の外部コマンド<code>sersrv_ftdi.command</code>、Toolsは Rosetta2 で動作可能な intel バイナリを再ビルド、シリアル通信は外部コマンド経由のため遅くなります)</li>
+<li>フォルダ構成で <code>MWSTAGE/MWSDK/Tools</code> を <code>MWSTAGE/Tools</code>に移動した。(MWSDKをMWSDK_COMMONレポジトリをそのまま利用できるようにするため)</li>
+<li>TWELITE_Stage.ini (起動ファイル名から拡張子を取り除き .ini を付加) を、起動時に読み込みMWSDKフォルダを選択できるようにした。(古い版のライブラリ一式を簡単に切り替えられるようにした)</li>
+<li>画面描画用のSDL2ライブラリを 2.0.12 に変更した (Windows, MacOS, RaspberryPi)。</li>
+<li>Windows では static ビルドとして DLL ファイル不要とした。</li>
+<li>make -j による並列ビルド数を(物理CPU数 - 1)とした。</li>
+<li>書換メニューのいくつかの場所で、シリアルポートの再オープンを明示的に行うようにした。デバイスの抜き差しを行ったときなどにUSB接続が切断した場合などに、復帰しやすいようにした。</li>
+</ul>
+<h3 id="既知の問題-1">既知の問題</h3>
+<ul>
+<li>起動時にAlt(Cmd)押し下げ時のヘルプメッセージが出現しない場合がある。Alt(Cmd)+0を入力することで表示されます。</li>
+<li>書換メニューでファイル名が長すぎる場合に、行の行事が乱れる場合がある。</li>
+<li>Apple Siliconでの動作については十分な検証を行っていません。</li>
+</ul>
+<h2 id="mwstage2020_10-raspberry-pi-版-暫定版-1">0.9.11 MWSTAGE2020_10, Raspberry Pi 版 (暫定版)</h2>
+<p>(※包括的な検証を実施しないバージョンです)</p>
+<ul>
+<li>Raspberry Pi での動作</li>
+<li>その他、機能調整</li>
+</ul>
+<h2 id="mwstage2020_10収録版-1">0.9.9 - MWSTAGE2020_10収録版</h2>
+<ul>
+<li>最上位メニューにも [ｳｪﾌﾞ] ボタンを追加し、関連リンクをブラウザで開けるようにした。</li>
+<li>Linux版のフォルダ、ウェブ、VS Code で開く機能を実装した。</li>
+<li>TWELITE が頻繁に UART 出力している場合に、書き込みメニューへ遷移しづらいことがあった</li>
+</ul>
+<h2 id="a">0.9.8a</h2>
+<blockquote>
+<p><a target=_blank href="https://github.com/monowireless/TWELITE_STAGE_Bin_M5Stack/releases/tag/0.9.8a">https://github.com/monowireless/TWELITE_STAGE_Bin_M5Stack/releases/tag/0.9.8a</a></p>
+</blockquote>
+<p>M5Stack版で <code>MW-SLA-1J,E</code> / <code>MW-OSSLA-1J,E</code> のデュアルライセンスとし、<code>readme-j.txt</code> を更新した。</p>
+<h2 id="section">0.9.8</h2>
+<p>ビューア一覧表示に[ｳｪﾌﾞ]ボタンを追加し、関連サイトを開く機能を追加など。</p>
+<h3 id="改定内容">改定内容</h3>
+<ul>
+<li>ビューア＞コマンダーの追加
+<ul>
+<li>標準アプリ 0x80 コマンド</li>
+<li>NOTICE PALのLED制御 (App_Wingsにコマンドを送付)</li>
+</ul></li>
+<li>ビューア＞PALビューアのNOTICE PAL対応。</li>
+<li>Actエクストラのメニューを追加
+<ul>
+<li>Act_samplesより高度なもの</li>
+<li>外部のオープンソースライブラリ（センサー手続きなど）を利用したもの</li>
+</ul></li>
+<li>マウスによる操作を拡大 (リスト、ボタン、タブ)
+<ul>
+<li>マウス移動でフォーカス、左クリックで確定、右クリックは[ESC]キー入力</li>
+</ul></li>
+<li>画面表示負荷の低減
+<ul>
+<li>アプリケーションがバックグラウンドの時はスクリーンセーバーを無効にした</li>
+<li>アプリケーションがバックグラウンドの時は、描画回数を減らして CPU 負荷を減らした</li>
+</ul></li>
+<li>ビルドプロジェクト(Act, TWE_Apps, Actエクストラ)の一覧の機能強化
+<ul>
+<li>項目選択時に下部に概要を表示 (000desc.txtを読み込む。TWE_Descクラスにより処理)</li>
+<li>プロジェクトフォルダを開く（またはVSCodeで開く)機能</li>
+<li>関連ウェブサイトを開く機能</li>
+<li>ALt+Shift+m mwxライブラリ、Alt+Shift+t twesettingsライブラリを開く機能</li>
+<li>ビルドメニュー中で選択中のフォルダやビルドエラーファイルを開けるようにした。</li>
+</ul></li>
+<li>ログ（シリアルポート入出力）機能の追加
+<ul>
+<li>(Alt/Cmd+L)でログの開始・終了</li>
+<li>ログファイルを {TWELITE_Stage 実行形式のあるフォルダ}/log に格納</li>
+<li>ファイル名は twestage_{日付-時刻}.log</li>
+<li>Shift+Alt/Cmd+L でログファイルフォルダを開く</li>
+</ul></li>
+<li>その他、変更・修正など
+<ul>
+<li>シリアル(FTDI)デバイス名、IDの表示方法を変更</li>
+<li>App_UARTでインタラクティブモードに遷移しなかった問題を修正</li>
+<li>フォルダドロップ時の挙動を変更した (これまではバイナリ書き込みになる場合があったが、メニュー遷移とした)</li>
+<li>ターミナル長押し時[C]でリセットに加え、画面クリアするようにした。</li>
+</ul></li>
+</ul>
+<h3 id="既知の問題-2">既知の問題</h3>
+<ul>
+<li>M5Stack で設定を保存するときにハングアップし、設定内容が初期化される場合があります。</li>
+</ul>
+<h2 id="section-1">0.8.9</h2>
+<p>2020_05 リリース版</p>
+<ul>
+<li>ウインドウアイコンの追加</li>
+<li>BINファイル一覧画面での最大リスト数の制約を緩和 (win/linux/mac)</li>
+<li>Glancerビューアの追加</li>
+<li>解説文面等の調整</li>
+<li>コンソール画面の描画の調整</li>
+<li>ファーム書き込み後の移動先画面(インタラクティブモードかターミナルか）の設定が動作していなかった</li>
+<li>Alt(or Cmd)+W の割り当てを変更</li>
+<li>その他不具合の修正</li>
+</ul>
+<h2 id="section-2">0.8.6</h2>
+<p>Linux 版リリース初版</p>
+<h2 id="section-3">0.8.5</h2>
+<p>リリース初版</p>
+</body>
+</html>

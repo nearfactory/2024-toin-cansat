@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Command line arguments and ini file.</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Command line arguments and ini file.</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#command-line-arguments-and-ini-file.">Command line arguments and ini file.</a><ul>
+<li><a href="#command-line-arguments">command line arguments</a></li>
+<li><a href="#an-ini-file.">an ini file.</a><ul>
+<li><a href="#syntax">Syntax</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#different-settings-of-twelite-stage-app.">different settings of TWELITE STAGE App.</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="command-line-arguments-and-ini-file.">Command line arguments and ini file.</h1>
+<h2 id="command-line-arguments">command line arguments</h2>
+<p>Command line arguments provides some minor settings of TWELITE Stage.</p>
+<table>
+<colgroup>
+<col style="width: 42%"></col>
+<col style="width: 57%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Arg</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-E 0</code></td>
+<td>Disable graphical effect like fading out</td>
+</tr>
+<tr class="even">
+<td><code>-R {type}</code></td>
+<td>Set rendering type by <code>{type}</code> value: <br><code>0</code>: default<br><code>1</code>: OpenGL<br> <code>2</code>: DirectX(Windows) Metal(macOS)<br> <code>3</code>: Software.</td>
+</tr>
+<tr class="odd">
+<td><code>-J</code></td>
+<td>Enable game controller.</td>
+</tr>
+<tr class="even">
+<td><code>-x {x_pos}</code>, <code>-y {y_pos}</code></td>
+<td>Set position of TWELITE STAGE App graphical winodow at launch. The <code>{x_pos}</code> and <code>{y_pos}</code> is the screen coordinate of window top-left.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="an-ini-file.">an ini file.</h2>
+<p>The ini file is used to set some fundamental settings of TWELITE STAGE (like reference MWSDK folder).</p>
+<p>The ini file name is {basename of TWELITE STAGE app executable} + <code>.ini</code>, which is normally <code>TWELITE_Stage.ini</code>.</p>
+<pre class="text"><code>;;; change MWSDK reference.
+; MWSDK=MWSDK
+MWSDK=MWSDK2020_10
+
+;;; Interface language
+LANG=en
+
+;;; Window geometry
+;GEOM_X=200
+;GEOM_Y=100</code></pre>
+<h3 id="syntax">Syntax</h3>
+<ul>
+<li>The <code>ini</code> file is described as a plain text file.</li>
+<li>A key and value is stored in a single line separated with <code>=</code> character (e.g. <code>KEY=value</code>).</li>
+<li>A key value string shall begin with line head. (No spaces or other character allowed before a key string.)</li>
+<li>No space allowed between the <code>=</code> character.</li>
+<li>Comment line is started from <code>;</code> or <code>#</code> characacter.</li>
+</ul>
+<h3 id="settings">Settings</h3>
+<table>
+<colgroup>
+<col style="width: 42%"></col>
+<col style="width: 57%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Key</th>
+<th>Value.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>MWSDK</code></td>
+<td>Change MWSDK folder to another one. The default folder is <code>MWSDK</code> at the same folder where TWELITE STAGE App executable is located. If you need to use older or custom MWSDK, you can specify the name of its folder.</td>
+</tr>
+<tr class="even">
+<td><code>LANG</code></td>
+<td><code>LANG=en</code> will change the user interface language from default(Japanese) to English.</td>
+</tr>
+<tr class="odd">
+<td><code>GEOM_X</code>, <code>GEOM_Y</code></td>
+<td>Change the location of TWELITE STAGE App window is shown</td>
+</tr>
+</tbody>
+</table>
+<h3 id="different-settings-of-twelite-stage-app.">different settings of TWELITE STAGE App.</h3>
+<p>If you need to different setting type of TWELITE STAGE App, just copy an executable at same folder of the original TWELITE_Stage executable.</p>
+<p>e.g. if you needs English interface vesion, you just copy <code>TWELITE_Stage.exe</code>(Note: .exe is suffix of Windows executable) to <code>TWELITE_Stage_en.exe</code> and create <code>.ini</code> file with <code>LANG=en</code> setting.</p>
+<pre><code>  TWELITE_Stage.exe 
+  TWELITE_Stage.ini     | no special settings
+
+  TWELITE_Stage_en.exe  | copy of TWELITE_Stage.exe
+  TWELITE_Stage_en.ini  | LANG=en is set</code></pre>
+</body>
+</html>

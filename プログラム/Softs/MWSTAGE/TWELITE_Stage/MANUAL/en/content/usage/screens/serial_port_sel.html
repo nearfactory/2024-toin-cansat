@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Serial Port Selection</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Serial Port Selection</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#serial-port-selection">Serial Port Selection</a></li>
+</ul>
+</nav>
+<h1 id="serial-port-selection">Serial Port Selection</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<figure>
+<img src="data:image/png;base64,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" alt="Serial Port Selection" /><figcaption>Serial Port Selection</figcaption>
+</figure>
+<p>On Windows/macOS/Linux, a screen will appear at startup to select the serial port to which the TWELITE wireless microcontroller is connected. The serial port can be connected later without selecting it on this screen.</p>
+<div class="info">
+<p>In the TWELITE STAGE application, the serial port selection is not linked to the processing of each screen. For example, if you start the viewer without selecting a serial port, the display will not be updated. If the serial port is selected in this state, the display will be updated. The serial port can be selected by `Alt(Cmdr)’.</p>
+<p>The serial port can be switched at any time by pressing <code>Alt(Cmd)+0,1,2,....</code> key operation.</p>
+</div>
+<h4 id="windows">Windows</h4>
+<p>Pressing the <code>c</code> key displays the COM port name of the serial port currently inverted in the list.</p>
+<h4 id="raspi">RasPi</h4>
+<p>On the Raspberry Pi, <code>serial0</code> and <code>serial1</code> will be displayed if there is a <code>/dev/serial0</code> <code>/dev/serial1</code> in addition to the USB device. Usually <code>serial0</code> is used.</p>
+</body>
+</html>

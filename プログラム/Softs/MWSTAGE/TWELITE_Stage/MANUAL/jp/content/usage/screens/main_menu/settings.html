@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>TWELITE STAGEの設定</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TWELITE STAGEの設定</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-stageの設定">TWELITE STAGEの設定</a><ul>
+<li><a href="#ルートメニュー">ルートメニュー</a></li>
+<li><a href="#共通設定">共通設定</a></li>
+<li><a href="#アプリ書換">アプリ書換</a></li>
+<li><a href="#セーブデータユーティリティ">セーブデータユーティリティ</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-stageの設定">TWELITE STAGEの設定</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>各種設定を行います。</p>
+<figure>
+<img src="data:image/png;base64,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" alt="設定画面" /><figcaption>設定画面</figcaption>
+</figure>
+<div class="warning">
+<ul>
+<li>この画面のメニューはマウス操作できません。</li>
+<li>画面の色を変更した場合に見づらくなる場合があります。</li>
+</ul>
+</div>
+<p>以下の解説のメニュー中には、プラットフォームによっては存在しない項目がありますが、全てを列挙して解説します。</p>
+<p>共通メニュー以外の色設定については、解説を省略します。</p>
+<h3 id="ルートメニュー">ルートメニュー</h3>
+<pre class="text"><code>共通設定
+ ターミナル
+ 標準アプリ ビューア
+ グラフ表示 (加速度ﾘｱﾙﾀｲﾑ/ｾﾝｻｰ)
+ 簡易モニター (CUA/ARIA/Glancer)
+ グランサー(簡易モニタ)
+ コマンダー
+ アプリ書換
+ インタラクティブモード
+ｾｰﾌﾞﾃﾞｰﾀ ﾕｰﾃｨﾘﾃｨ(ﾀﾞﾝﾌﾟ/消去)
+情報</code></pre>
+<h3 id="共通設定">共通設定</h3>
+<pre class="text"><code>a: (      0x00) 起動アプリ指定
+G: (      0x00) 画面サイズ・描画方法
+F: (          ) シリアルデバイスID
+f: (0x00FFFFFF) 文字色
+b: (0x005A0032) 背景色
+B: (    115200) ボーレート</code></pre>
+<table>
+<colgroup>
+<col style="width: 28%"></col>
+<col style="width: 71%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">起動アプリ</td>
+<td style="text-align: left;">TWELITE STAGE始動時にビューアアプリに移動する設定です。設定値は1..{ビューアアプリメニューで列挙されている数}です。 ※ シリアルデバイスIDを設定しておかないと、始動時に接続するシリアルデバイス選択画面で入力待ちになります。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">画面サイズ・描画方法</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> XYの２桁の文字で指定します(X:画面サイズ Y:描画方法)X 0:640x480 1:1280x720 2:1280x960 3:1920x1440 4:2560x1440 5:320x240, Y 0:LCD風 1:CRT風 2:ぼやけ 3:ブロック</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">シリアルデバイスID</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> 設定はシリアルデバイス名または数値の1..9 を指定します。 ※ 数値の場合はデバイス列挙順になります。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">文字色・背景色</td>
+<td style="text-align: left;">文字色、背景色を指定します。共通設定の色設定値は他の画面の設定にも継承されます。他の画面で未設定の場合は共通設定の色設定が採用されます。色はRGB 24bitを１６進数で指定しますが、内部的には16bit 565 形式に値が丸められます。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ボーレート</td>
+<td style="text-align: left;">TWELITE 側のボーレートが 115200 でない場合に、ターミナルなどの表示が化けないように設定します。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="アプリ書換">アプリ書換</h3>
+<pre class="text"><code>f: (0x00FFFFFF) 文字色
+b: (0x005A0032) 背景色
+j: (         0) ビルド時のmakeジョブ数
+v: (         0) codeでフォルダを開く(VSCode)
+l: (         0) LTOを行わない
+n: (         0) 書換完了後の画面</code></pre>
+<table>
+<colgroup>
+<col style="width: 32%"></col>
+<col style="width: 67%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ビルド時のmakeジョブ数</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> ビルドを行う際の並列ジョブ数です。適切な数を設定することでビルド時間の短縮を期待できます。 規定値0は(物理プロセッサ数-1)でジョブ数を計算しています。目安としては論理プロセッサ数を上限とすると良いでしょう。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">codeでフォルダを開く (VSCode)</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> 1を設定することでOS標準のフォルダウインドウの替わりにcodeコマンド（VS Code）でフォルダを開きます。<code>TWELITE_Stage_VSCode</code>では有効になっています。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">書換完了後の画面</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> 1を設定することでインタラクティブモード画面の替わりに、ターミナルを開きます。2を設定することで、書換メニューに戻ります。<code>TWELITE_Stage_VSCode</code>では2に設定されています。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LTOを行わない</td>
+<td style="text-align: left;"><code>Windows</code> WindowのコンパイラはLTOの仕組みにより少しだけ小さいバイナリを生成することが可能ですがリンクに時間がかかります。この手順を省略しより高速なリンクを可能とします。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="セーブデータユーティリティ">セーブデータユーティリティ</h3>
+<pre class="text"><code>r: Read sector.
+R: Read ALL sectors.
+e: Erase sector.
+E: Erase ALL sectors.</code></pre>
+<p>この画面は、データセーブ領域のメンテナンスを行うユーティリティです。EEPROM(64バイトを１セクタとして最大60セクタ、3840バイト)をエミュレートしています。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">r</td>
+<td style="text-align: left;">セクタを読み出します。0..59を入力すると、入力したセクタ番号のセクタの内容を表示します。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">（YESを入力すると全セクタの読み出しを行いますが、一番最後の部分しか表示されません）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">セクタを消去(0xFF)します。0..59を入力すると、入力したセクタ番号のセクタが消去されます。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">YESを入力すると全セクタを消去します。</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>Raspberry Pi</code> では、 <code>{実行形式名}.sav</code> すなわち <code>TWELITE_Stage.sav</code> ファイルに保存されます。</p>
+</div>
+</body>
+</html>

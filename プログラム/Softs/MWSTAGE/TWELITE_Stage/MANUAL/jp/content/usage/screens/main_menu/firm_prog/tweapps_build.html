@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>TWELITE APPS ビルド＆書換</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TWELITE APPS ビルド＆書換</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-apps-ビルド書換">TWELITE APPS ビルド＆書換</a><ul>
+<li><a href="#フォルダ">フォルダ</a></li>
+<li><a href="#操作">操作</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-apps-ビルド書換">TWELITE APPS ビルド＆書換</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>TWELITE APPSのビルドと書き換えを行います。</p>
+<div class="success">
+<p>TWENET C API によるC言語で記述され、そのまま利用いただく比較的規模の大きいソースコードが中心です。</p>
+</div>
+<figure>
+<img src="data:image/png;base64,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Su+//U5qrpaTUz+eK2FOOuOt6c+m62HkCM/nXF127bc/VwOYMy5Duo82XWcdf3ZMHZdQ/hUpP52cPccp39+1Sw0YABo4QQ14rj63191Qfj9cWAuvoezu8v7uDfuU01+V7uvt55uaqzGPtxoFTWhtm82WXO67HqwGDAANdF0Dzum73T5eLv9Oaq4WHt795ffhzb2/9o6y7FNskW4RCXuL0997fo5hCuPa6r71VLVettQ49x2vc3Mfdd8bNWAAaKDrGnDOnc7au6G1tdWcXMpGL6/NZe7p0jAF9eAawvOfP/I8zRh17km6NWhLOvdHDRgAGui6BrzF3D3XXs/LHn93plbUVti6kG5NKZvlZ46aMWVyfjn7/la3tOiM93yE9jw1YABo4G5rwGvlj6kO999rFDTnkt92ktN/v129sdCcV84I/Bq/yfuuue7l+dOnT63LAACP5dOnTy+//fTbv/zlL61Lsqct93Tpu8X0Wjf5uW95om5tOjllJsfciIH0OIPxOzk9xGtnfCur6Vrp6NHk/wJztqb3rDEf/l367affPr9+em1dDAB4LK+fXl9+93e/++mXn375v7+0Lsyh5sayhvMWjd+v16uRrkWtrU/nvMMW+b+H3kZyqvs+shqz6G+/2jxg3fdyuXz5t1/+7u9+9/zTTz9984/ftC4MADyEp6enb/7xm59++unp8+fPf/jDH/77//33f/34Xz//8nPrggHA3fryb7/8+9///RcvX/zpT3/6zVdfffXzzz//zRd/80/f/NNvnn/z/JvnX//666+//tq6kABwJ7744ouvvvzq9//r9//8+Z9/+fmXP//5z3/961//P6syND9wJnyeAAAAAElFTkSuQmCC" alt="TWELITE APPS ビルド＆書換" /><figcaption>TWELITE APPS ビルド＆書換</figcaption>
+</figure>
+<p>この画面を開くと、プロジェクト一覧が表示されます。書き込みたいプロジェクトを選択すると、ビルド～書き込みを行います。書き込み終了後に<code>Enter</code>または<code>[ B ]</code>ボタンを押すことで、TWELITE をリセットし、インタラクティブモード画面（またはターミナル画面、要設定）に遷移します。</p>
+<p><a href="build_screen.html">ビルド～書き込み画面</a></p>
+<p>VSCodeを利用する設定（アプリ書換＞codeでフォルダを開く）になっている場合は、ビルドは行わず<code>build/</code>以下の<a href="bin.html">BINファイルを書き込む画面</a>を開きます。</p>
+<h3 id="フォルダ">フォルダ</h3>
+<p>ビルド対象となるプロジェクトは以下になります。</p>
+<pre><code>{MWSTAGEインストールフォルダ}/MWSTAGE/Wks_TweApps</code></pre>
+<h3 id="操作">操作</h3>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>メニュー選択 ↑</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜け、前メニューに戻る</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>選択</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>関連ウェブサイト（プロジェクトフォルダの<code>000desc.txt</code>に登録がある場合）をOS標準のブラウザで開きます。</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>メニュー選択 ↓</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>フォルダ（プロジェクト、関連フォルダ）を開きます。設定メニューでVS Codeで開くように設定できます。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>この画面を終了し、書換メニューに戻ります。</td>
+</tr>
+<tr class="even">
+<td>マウスクリック [ﾍﾙﾌﾟ]</td>
+<td>関連ウェブサイトを開きます。</td>
+</tr>
+<tr class="odd">
+<td>マウスクリック [ﾌｫﾙﾀﾞ] または [VSCode]</td>
+<td>関連フォルダを開きます。</td>
+</tr>
+<tr class="even">
+<td>マウスクリック [▽] または [△]</td>
+<td>次ページ、前ページに移動します。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

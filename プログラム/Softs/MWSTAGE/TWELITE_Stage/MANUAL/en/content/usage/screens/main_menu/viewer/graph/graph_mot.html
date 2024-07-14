@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Accel real-time graph</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Accel real-time graph</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#accel-real-time-graph">Accel real-time graph</a><ul>
+<li><a href="#typical-cue-interactive-settings-mode-settings">Typical CUE Interactive settings mode settings</a></li>
+<li><a href="#operation">Operation</a></li>
+<li><a href="#sample-rate-estimation">Sample Rate Estimation</a></li>
+<li><a href="#open-at-startup-of-cue-graph-mode.">Open at startup of CUE graph mode.</a></li>
+<li><a href="#log-output-data-save">Log Output (Data Save)</a></li>
+<li><a href="#log-output-auto-save">Log output (auto save)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="accel-real-time-graph">Accel real-time graph</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> </p>
+<p>Used for the purpose of referencing sample data from <a target=_blank href="https://mono-wireless.com/cue">TWELITE CUE</a> and <a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/motion-pal.html">TWELITE MOTION SENSE PAL</a>.</p>
+<figure>
+<img src="data:image/png;base64,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" alt="Showing demo data" /><figcaption>Showing demo data</figcaption>
+</figure>
+<div class="info">
+<p>Note: The <a href="graph_sns.html">Sensor Graph Function</a> records one packet as one sample, even when continuous measurement is performed such that multiple samples are included in one packet.</p>
+</div>
+<p>CUE mode, MOT mode, and 2525 FIFO mode.</p>
+<p>When the number of consecutive samples exceeds a certain number (analysis window), the XYZ axis is displayed with frequency analysis. However, in 2525 FIFO mode, it is always assumed to be continuous.</p>
+<p>When a packet is explicitly delimited (when more than 3 seconds have elapsed since the previous packet, every packet in CUE mode, or when the sequence number of packets becomes discontinuous in MOT mode), a dummy of 4 samples is (When more than 3 seconds have elapsed since the last packet.</p>
+<p>Data is stored for up to 4 nodes in order of arrival first.</p>
+<div class="warning">
+<p>During multi-node operation, communication failures often occur due to mutual packet collisions. In particular, in FIFO mode, the transmission cycle is almost constant, and packets are attempted to be sent at almost the same time to each other, resulting in transmission failures due to interference, which may continue for a long time. In principle, one node per CHANNEL should be used.</p>
+</div>
+<h3 id="typical-cue-interactive-settings-mode-settings">Typical CUE Interactive settings mode settings</h3>
+<ul>
+<li>measure continuously at about 25 Hz. (Transmit Interval: <code>0</code>, Sensor Parameter: <code>03000000</code>)</li>
+<li>measure continuously at about 50 Hz. (Transmit Interval: <code>0</code>, Sensor Parameter: <code>03000100</code>)</li>
+<li>measure continuously at about 100 Hz. (Transmit Interval: <code>0</code>, Sensor Parameter: <code>03000200</code>)</li>
+<li>measure 128 samples at about 100Hz about every 10 seconds. (Transmit Interval: <code>10</code>, Sensor Parameter: <code>03000208</code>)</li>
+<li>measure 256 samples at about 100Hz about every 10 seconds. (Transmit Interval: <code>10</code>, Sensor Parameter: <code>03000210</code>)</li>
+<li>measure 64 samples at about 50Hz every 10 seconds. (Transmit Interval: <code>10</code>, Sensor Parameter: <code>03000104</code>)</li>
+<li>measure 128 samples at about 200Hz about every 10 seconds. (Transmit Interval: <code>10</code>, Sensor Parameter: <code>03000308</code>)</li>
+</ul>
+<h3 id="operation">Operation</h3>
+<table>
+<colgroup>
+<col style="width: 37%"></col>
+<col style="width: 62%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Right part of the <code>[(I)ID#]</code> button</td>
+<td>Switch IDs with each click. (Note: For continuous sample data in FIFO mode, operation with multiple IDs is not practical.</td>
+</tr>
+<tr class="even">
+<td>Right part <code>[(f)SMP#]</code> button</td>
+<td>Change the frequency analysis size to 64, 128, or 256 with each click.</td>
+</tr>
+<tr class="odd">
+<td>right part <code>[[&gt;PAUSE( )]</code> button</td>
+<td>aborts display update (sample acquisition is performed until the internal temporary sample buffer is full)</td>
+</tr>
+<tr class="even">
+<td>right part <code>[(c)SAVE DISPLAYED DATA]</code> button</td>
+<td>output data in CSV format (log folder). Outputs data from the sample displayed on the rightmost side of the screen to the oldest sample in the buffer. The number of output is always 5120, and the sample displayed on the rightmost side of the screen is the last data.</td>
+</tr>
+<tr class="odd">
+<td>Mouse drag (graph section)</td>
+<td>Move the position of the displayed sample</td>
+</tr>
+<tr class="even">
+<td>Mouse drag (bottom scroll bar)</td>
+<td>Move the position of the displayed sample (in larger steps)</td>
+</tr>
+<tr class="odd">
+<td>Cursor→, ←</td>
+<td>Move sample display</td>
+</tr>
+<tr class="even">
+<td>Cursor↑, ↓</td>
+<td>Zoom in/out on the sample horizontal axis (Equal, 2x, 3x, 4x; for 256 analysis samples, 2x). (Equal, 2x, 3x, 4x, up to 2x if the number of samples is 256)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-rate-estimation">Sample Rate Estimation</h3>
+<p>The sampling rate is calculated from the packet reception time. Since the reception time of multiple past samples is averaged to obtain one sample, the error will be larger if there are packet skips, etc.</p>
+<p>After the sample rate is estimated, the graph display scrolls smoothly.</p>
+<p>The timestamp of the related log record (T_SMPL) is also estimated in the same way, and the timestamp is after the time of packet acquisition.</p>
+<h3 id="open-at-startup-of-cue-graph-mode.">Open at startup of CUE graph mode.</h3>
+<p>Specify <code>31</code> in [STAGE Common Settings→Designate Startup Application].</p>
+<h3 id="log-output-data-save">Log Output (Data Save)</h3>
+<p>By clicking the <code>[Data Save]</code> button, data for up to 512 samples will be output starting from the display position on the screen (rightmost sample). Note that the most recent sample comes last, so there may be no data at the beginning.</p>
+<ul>
+<li>The most recent sample on the right end is the 512th data (at the end of the file).</li>
+<li>When frequency analysis is performed, the number of frequency analysis samples is the number of frequency analysis samples from the last sample.</li>
+<li>The frequency analysis results are added to the line where the sample subject to frequency analysis is recorded (in the case of 64 samples, the 32nd line from the 449th sample is the result, from DC component to high frequency component).</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 9%"></col>
+<col style="width: 31%"></col>
+<col style="width: 58%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th>Item</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#</td>
+<td>Sample number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>T_PKT[ms]</td>
+<td>Packet reception time</td>
+<td>Since one packet contains multiple samples, samples with the same timestamp are lined up.</td>
+</tr>
+<tr class="odd">
+<td>SEQ</td>
+<td>Packet Sequence Number</td>
+<td>Packets are assigned and if they are consecutive, there is no missing packet.</td>
+</tr>
+<tr class="even">
+<td>T_SMPL[ms]</td>
+<td>Sample time (virtual or estimated)</td>
+<td>Timestamp of each sample generated from the packet reception time. It does not match the actual time the sample was taken. (The error is large because the sample rate is estimated from the received packet interval, and the timestamp is one packet period later than the actual sample time because the sample period is calculated by adding the sample period to the received sample.</td>
+</tr>
+<tr class="odd">
+<td>X[G]</td>
+<td>Sample value on the X-axis</td>
+<td>Based on the value from the sensor, the unit is [G].</td>
+</tr>
+<tr class="even">
+<td>Y[G]</td>
+<td>sample value of Y axis</td>
+<td>based on the value from the sensor, unit is [G].</td>
+</tr>
+<tr class="odd">
+<td>Z[G]</td>
+<td>sample value of Z-axis</td>
+<td>based on the value from the sensor, unit is [G].</td>
+</tr>
+<tr class="even">
+<td>FD#</td>
+<td>Number of the frequency analysis calculated value</td>
+<td>If the number of frequency analysis samples is 64, they are ordered in the order of <code>DC,1,2,...,31</code>. ,31<code>if the number of frequency analysis samples is 64. | Hz | Hz | Frequency axis value of the frequency analysis calculation result | Approximate frequency. The frequency is calculated by</code>(FD# / FD_Len) * FD_Freq`.</td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td>Frequency analysis calculated value of X-axis</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Y</td>
+<td>Frequency analysis calculated value of Y-axis</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td>X-axis frequency analysis calculated value</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Label</td>
+<td>additional information name</td>
+<td>see table below</td>
+</tr>
+<tr class="odd">
+<td>Info</td>
+<td>additional information</td>
+<td>see table below</td>
+</tr>
+<tr class="even">
+<td>Label</td>
+<td>Additional Information</td>
+<td>Refer to the table below</td>
+</tr>
+</tbody>
+</table>
+<h4 id="additional-information">Additional Information</h4>
+<table>
+<colgroup>
+<col style="width: 13%"></col>
+<col style="width: 58%"></col>
+<col style="width: 27%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th>Item</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ModuleSID</td>
+<td>Serial number of the sending side</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tick[ms]</td>
+<td>System on TWELITE STAGE app side at log file open [ms]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Date</td>
+<td>Date when log file was opened</td>
+<td>Time</td>
+</tr>
+<tr class="even">
+<td>Time</td>
+<td>Time_Msec_part</td>
+<td>Time when log file was opened</td>
+</tr>
+<tr class="odd">
+<td>Time_Msec_part</td>
+<td>Less-than-seconds portion of log file open [ms]</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Samples</td>
+<td>Valid sample data</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FD_Len</td>
+<td>Number of frequency analysis samples</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FD_Start#</td>
+<td>Frequency analysis start sample number</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>FD_Freq</td>
+<td>Frequency estimate of frequency analysis range [Hz]</td>
+<td>Estimated value from sample reception interval</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>FD_Freq</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-output-auto-save">Log output (auto save)</h3>
+<table>
+<colgroup>
+<col style="width: 10%"></col>
+<col style="width: 27%"></col>
+<col style="width: 62%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th>Item</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#</td>
+<td>Sample number</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>T_PKT[ms]</td>
+<td>Packet reception time</td>
+<td>Since one packet contains multiple samples, samples with the same timestamp are lined up.</td>
+</tr>
+<tr class="odd">
+<td>SEQ</td>
+<td>Packet Sequence Number</td>
+<td>Packets are assigned and if they are consecutive, there is no missing packet.</td>
+</tr>
+<tr class="even">
+<td>T_SMPL[ms]</td>
+<td>Sample time (virtual or estimated)</td>
+<td>Timestamp of each sample generated from the packet reception time. It does not match the actual time the sample was taken. (The error is large because the sample rate is estimated from the received packet interval, and the timestamp is one packet period later than the actual sample time because the sample period is calculated by adding the sample period to the received sample.</td>
+</tr>
+<tr class="odd">
+<td>X[G]</td>
+<td>Sample value on the X-axis</td>
+<td>Based on the value from the sensor, the unit is [G].</td>
+</tr>
+<tr class="even">
+<td>Y[G]</td>
+<td>sample value of Y axis</td>
+<td>based on the value from the sensor, unit is [G].</td>
+</tr>
+<tr class="odd">
+<td>Z[G]</td>
+<td>sample value of Z-axis</td>
+<td>based on the value from the sensor, unit is [G].</td>
+</tr>
+<tr class="even">
+<td>Label</td>
+<td>Additional information name</td>
+<td>Refer to the following table</td>
+</tr>
+<tr class="odd">
+<td>Info</td>
+<td>Additional Information</td>
+<td>Refer to the table below</td>
+</tr>
+</tbody>
+</table>
+<h4 id="additional-information-1">Additional Information</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th>Item</th>
+<th>Desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ModuleSID</td>
+<td>Serial number of the sending side</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tick[ms]</td>
+<td>System on TWELITE STAGE app side at log file open [ms]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Date</td>
+<td>Date when log file was opened</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Time</td>
+<td>Time_Msec_part</td>
+<td>Time when log file was opened</td>
+</tr>
+<tr class="odd">
+<td>Time_Msec_part</td>
+<td>Less-than-second part of log file open [ms]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

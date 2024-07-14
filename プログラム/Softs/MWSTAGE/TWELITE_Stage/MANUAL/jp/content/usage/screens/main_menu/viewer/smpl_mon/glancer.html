@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>CUE/ARIA ビューア</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CUE/ARIA ビューア</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#グランサー">グランサー</a></li>
+</ul>
+</nav>
+<h1 id="グランサー">グランサー</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>Glancerは、<a target=_blank href="https://wings.twelite.info/how-to-use/parent-mode/receive-message">受信メッセージ中の情報</a>を簡易的に表示します。接続する TWELITE には App_Wings を書き込んでおき、通信相手のTWELITE (App_Twelite, TWELITE PAL, … アプリケーションIDとチャネルを一致させれば混在も可) からの情報を表示します。</p>
+<div class="info">
+<p>Glancer は、glance（＝ちらりと見る、一瞥）する人という意味の英単語です。</p>
+</div>
+<p>画面は以下の２種類の構成になっています。</p>
+<h4 id="section"></h4>
+<h4 id="一覧表示">一覧表示</h4>
+<p><img src="data:image/png;base64,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BoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCA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" /></p>
+<p>通信相手からの情報を列挙します。表示内容は（メッセージの種別、論理ID、シリアルID、LQI(Lq)、電源電圧(情報に含まれていれば)、受信時間）です。</p>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>リストの前項目に移動します。</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜け、前メニューに戻ります。</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>選択表示に移行します。</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>項目をソートします。ソートを実行するたびに、ソートキーは順に変わります。</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>リストの次項目に移動します。</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>TWELITE のリセットピンを制御し、リセットします。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>ESCキーを入力することで、この画面を抜けます。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="選択表示">選択表示</h4>
+<p><img src="data:image/png;base64,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DAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQwAAQIYAAIEMAAECCAASBAAANAgAAGgAABDAABAhgAAgQw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" /></p>
+<p>一覧表示で項目を移動し反転表示になったところで選択操作を行うことで、この画面に遷移します。特定の通信相手に関する情報を到着順に表示します。</p>
+<p>選択されてからの受信パケット数と LQI の平均値が表示されます。</p>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜け、選択画面に戻る。</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>割当なし</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>TWELITE のリセットピンを制御し、リセットします。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>この画面を抜け、選択画面に戻る。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
