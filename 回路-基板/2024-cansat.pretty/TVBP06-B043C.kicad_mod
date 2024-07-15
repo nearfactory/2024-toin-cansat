@@ -36,6 +36,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -48,6 +49,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -60,6 +62,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -159,6 +162,17 @@
 		)
 	)
 	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/TVBP06-B043CW-B.step"
+		(offset
+			(xyz -3 1.75 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/TVBP06-B043CW-B.step"
 		(offset
 			(xyz -3 1.75 0)
 		)

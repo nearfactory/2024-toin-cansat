@@ -36,6 +36,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -48,6 +49,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -60,6 +62,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -156,6 +159,17 @@
 		(uuid "154185ad-bcd2-4d2b-aab8-0e3e2912e8b7")
 	)
 	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/KiCad Owns/FootPrints/@2023_PowerSupply.pretty/SS12D01G4.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/SS12D01G4.step"
 		(offset
 			(xyz 0 0 0)
 		)

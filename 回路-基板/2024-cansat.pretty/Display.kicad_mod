@@ -35,6 +35,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -47,6 +48,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -59,6 +61,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -109,7 +112,7 @@
 	)
 	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/Display.step"
 		(offset
-			(xyz 0 -11.5 4)
+			(xyz 0 -11.5 4.18)
 		)
 		(scale
 			(xyz 1 1 1)
@@ -120,7 +123,18 @@
 	)
 	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/Display.step"
 		(offset
-			(xyz 0 -11.5 2.68)
+			(xyz 0 -11.5 4.18)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/Display.step"
+		(offset
+			(xyz 0 -11.5 4.18)
 		)
 		(scale
 			(xyz 1 1 1)
