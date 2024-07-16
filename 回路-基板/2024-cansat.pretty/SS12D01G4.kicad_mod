@@ -180,4 +180,15 @@
 			(xyz -90 0 0)
 		)
 	)
+	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/SS12D01G4.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
 )

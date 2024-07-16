@@ -172,4 +172,26 @@
 			(xyz -90 0 90)
 		)
 	)
+	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA-.step"
+		(offset
+			(xyz 48.5 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA+.step"
+		(offset
+			(xyz -0.15 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
 )
