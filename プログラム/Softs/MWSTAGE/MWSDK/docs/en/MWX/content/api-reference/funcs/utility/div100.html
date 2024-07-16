@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>div100()</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">div100()</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#div100">div100()</a><ul>
+<li><a href="#usage-examples">Usage examples</a></li>
+<li><a href="#calculation-speed">Calculation speed</a></li>
+<li><a href="#output-results">Output results</a><ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+<li><a href="#background">Background</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="div100">div100()</h1>
+<p>The quotient divided by 10, 100 or 1000 and the remainder Calculate the quotient and remainder.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">struct</span> div_result_i32 {</a>
+<a class="sourceLine" id="cb1-2" title="2">        <span class="dt">int32_t</span> quo; <span class="co">// quotient</span></a>
+<a class="sourceLine" id="cb1-3" title="3">        <span class="dt">int16_t</span> rem; <span class="co">// remainder</span></a>
+<a class="sourceLine" id="cb1-4" title="4">        <span class="dt">uint8_t</span> b_neg;  <span class="co">// true if negative</span></a>
+<a class="sourceLine" id="cb1-5" title="5">        <span class="dt">uint8_t</span> digits_rem; <span class="co">// digits of remainder</span></a>
+<a class="sourceLine" id="cb1-6" title="6">};</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8">div_result_i32 div10(<span class="dt">int32_t</span> val);</a>
+<a class="sourceLine" id="cb1-9" title="9">div_result_i32 div100(<span class="dt">int32_t</span> val);</a>
+<a class="sourceLine" id="cb1-10" title="10">div_result_i32 div1000(<span class="dt">int32_t</span> val);</a></code></pre></div>
+<p>In some cases, such as sensor values, the value multiplied by 100 may be passed as a <code>uint16_t</code> type, but since calculation processing on a microcontroller without a division circuit takes a reasonable amount of time, the calculation is performed by approximate calculation and correction using addition, subtraction, multiplication and bit shift.</p>
+<p>Pass <code>val</code> as the value to be calculated, <code>rem</code> as the variable to store the remainder, and <code>neg</code> as the variable to store the sign.</p>
+<p>The return value is the quotient value (always positive), <code>rem</code> stores the remainder value (always positive), and <code>neg</code> is <code>true</code> if negative.</p>
+<p>The constraints of the calculation algorithm (overflow) determine the range of possible values for <code>div100()</code> and <code>div1000()</code>. The <code>div100()</code> corresponds to values from -9999999 to 9999999, and the <code>div1000()</code> corresponds to values from -999999999 to 99999999.</p>
+<div class="info">
+<p>Approximate formula to obtain the quotient</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">div100()</a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="dt">int</span> dv = val * <span class="dv">1311</span> &gt;&gt; <span class="dv">17</span>;</a>
+<a class="sourceLine" id="cb2-3" title="3">  </a>
+<a class="sourceLine" id="cb2-4" title="4">div1000()</a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="dt">int</span> dv = val * <span class="dv">131</span> &gt;&gt; <span class="dv">17</span>;</a></code></pre></div>
+</div>
+<h3 id="usage-examples">Usage examples</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">auto</span> d1 = div100(sns_val.u16temp_object);</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">auto</span> d2 = div100(sns_val.u16temp_object);</a>
+<a class="sourceLine" id="cb3-3" title="3"></a>
+<a class="sourceLine" id="cb3-4" title="4">Serial</a>
+<a class="sourceLine" id="cb3-5" title="5">    &lt;&lt; crlf &lt;&lt; format(<span class="st">&quot;..Object  = </span><span class="sc">%c</span><span class="st">%2d.%02d&quot;</span></a>
+<a class="sourceLine" id="cb3-6" title="6">                                    , d1.b_neg ? <span class="ch">&#39;-&#39;</span> : <span class="ch">&#39;+&#39;</span>, d1.quo, d1.rem)</a>
+<a class="sourceLine" id="cb3-7" title="7">            &lt;&lt; format(<span class="st">&quot;  Ambient = </span><span class="sc">%c</span><span class="st">%2d.%02d&quot;</span></a>
+<a class="sourceLine" id="cb3-8" title="8">                                    , d2.b_neg ? <span class="ch">&#39;-&#39;</span> : <span class="ch">&#39;+&#39;</span>, d2.quo, d2.rem);</a></code></pre></div>
+<h3 id="calculation-speed">Calculation speed</h3>
+<p>Approx. 10 times faster.</p>
+<h2 id="output-results">Output results</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="co">// Conversion Options</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">struct</span> DIVFMT {</a>
+<a class="sourceLine" id="cb4-3" title="3">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> STD = <span class="dv">0</span>; <span class="co">// displays with minimul digits (no padding, no positive sign)</span></a>
+<a class="sourceLine" id="cb4-4" title="4">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> PAD_ZERO = <span class="dv">1</span>; <span class="co">// set padding character as &#39;0&#39; instead of &#39; &#39;.</span></a>
+<a class="sourceLine" id="cb4-5" title="5">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> SIGN_PLUS = <span class="dv">2</span>; <span class="co">// put &#39;+&#39; sign if value is positive or 0.</span></a>
+<a class="sourceLine" id="cb4-6" title="6">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> PAD_ZERO_SIGN_PLUS = <span class="dv">3</span>; <span class="co">// PAD_ZERO &amp; SIGN_PLUS</span></a>
+<a class="sourceLine" id="cb4-7" title="7">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> SIGN_SPACE = <span class="dv">4</span>; <span class="co">// put &#39; &#39; sign if value is positive or 0.</span></a>
+<a class="sourceLine" id="cb4-8" title="8">  <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> PAD_ZERO_SIGN_SPACE = <span class="dv">5</span>; <span class="co">// PAD_ZERO &amp; SIGN_SPACE</span></a>
+<a class="sourceLine" id="cb4-9" title="9">};</a>
+<a class="sourceLine" id="cb4-10" title="10"></a>
+<a class="sourceLine" id="cb4-11" title="11"><span class="co">// Class for storing string conversion results</span></a>
+<a class="sourceLine" id="cb4-12" title="12"><span class="kw">class</span> _div_chars {</a>
+<a class="sourceLine" id="cb4-13" title="13">  ...</a>
+<a class="sourceLine" id="cb4-14" title="14">  <span class="at">const</span> <span class="dt">char</span>* begin() <span class="at">const</span> {...}</a>
+<a class="sourceLine" id="cb4-15" title="15">  <span class="at">const</span> <span class="dt">char</span>* end() <span class="at">const</span> {...}</a>
+<a class="sourceLine" id="cb4-16" title="16">  <span class="at">const</span> <span class="dt">char</span>* c_str() <span class="at">const</span> { <span class="cf">return</span> begin(); }</a>
+<a class="sourceLine" id="cb4-17" title="17">  <span class="kw">operator</span> <span class="at">const</span> <span class="dt">char</span>*() <span class="at">const</span> { <span class="cf">return</span> begin(); }</a>
+<a class="sourceLine" id="cb4-18" title="18">};</a>
+<a class="sourceLine" id="cb4-19" title="19"></a>
+<a class="sourceLine" id="cb4-20" title="20"><span class="co">// format() method</span></a>
+<a class="sourceLine" id="cb4-21" title="21">_div_chars div_result_i32::format(</a>
+<a class="sourceLine" id="cb4-22" title="22">    <span class="dt">int</span> dig_quo = <span class="dv">0</span>, <span class="dt">uint32_t</span> opt = DIVFMT::STD) <span class="at">const</span>;</a>
+<a class="sourceLine" id="cb4-23" title="23"></a>
+<a class="sourceLine" id="cb4-24" title="24"><span class="co">// Implement an interface to Serial</span></a>
+<a class="sourceLine" id="cb4-25" title="25"><span class="kw">template</span> &lt;<span class="kw">class</span> D&gt; <span class="kw">class</span> stream {</a>
+<a class="sourceLine" id="cb4-26" title="26">...</a>
+<a class="sourceLine" id="cb4-27" title="27">        <span class="kw">inline</span> D&amp; <span class="kw">operator</span> &lt;&lt; (<span class="at">const</span> mwx::_div_chars&amp;&amp; divc);   </a>
+<a class="sourceLine" id="cb4-28" title="28">        <span class="kw">inline</span> D&amp; <span class="kw">operator</span> &lt;&lt; (<span class="at">const</span> mwx::div_result_i32&amp;&amp;);</a>
+<a class="sourceLine" id="cb4-29" title="29">        <span class="kw">inline</span> D&amp; <span class="kw">operator</span> &lt;&lt; (<span class="at">const</span> mwx::div_result_i32&amp;);</a>
+<a class="sourceLine" id="cb4-30" title="30">};</a></code></pre></div>
+<p>The <code>div_result_i32</code> class, which stores the result of division, has a <code>format()</code> method to obtain a <code>_div_chars</code> class object. The <code>_div_chars()</code> class object contains a string buffer and has methods to access the string buffer as <code>const char*</code> type. It also implements the <code>&lt;&lt;</code> operator for <code>Serial</code> objects.</p>
+<p>The first parameter <code>dig_quo</code> of the <code>format()</code> method specifies the number of output digits (not including the sign part). If the number of output digits is not sufficient (hereafter referred to as <code>missing digits</code>), it is filled with blanks or <code>0</code>. The second parameter <code>opt</code> specifies the format.</p>
+<table>
+<colgroup>
+<col style="width: 43%"></col>
+<col style="width: 56%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>opt parameter</th>
+<th>content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>DIVFMT::STD</code></td>
+<td>Standard output, with missing digits filled in with spaces and <code>-</code> appended only for negative values.</td>
+</tr>
+<tr class="even">
+<td><code>DIVFMT::PAD_ZERO</code></td>
+<td>Missing digits are filled with <code>0</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>DIVFMT::SIGN_PLUS</code></td>
+<td>A <code>+</code> sign is also added to positive values.</td>
+</tr>
+<tr class="even">
+<td><code>DIVFMT::PAD_ZERO_SIGN_PLUS</code></td>
+<td>Missing digits are filled with <code>0</code> and a <code>+</code> sign is also added to positive values.</td>
+</tr>
+<tr class="odd">
+<td><code>DIVFMT::SIGN_SPACE</code></td>
+<td>For positive values, a space is added in place of the <code>+</code> sign.</td>
+</tr>
+<tr class="even">
+<td><code>DIVFMT::PAD_ZERO_SIGN_SPACE</code></td>
+<td>Missing digits are filled with <code>0</code>, and a space is added in place of the <code>+</code> sign for positive values.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="co">//// Direct output from div_result_i32 object</span></a>
+<a class="sourceLine" id="cb5-2" title="2">Serial &lt;&lt; div100(-<span class="dv">1234</span>) &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="co">// Result: -12.34 </span></a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="co">//// Output in 3 digits</span></a>
+<a class="sourceLine" id="cb5-6" title="6">Serial &lt;&lt; div100(<span class="dv">3456</span>).format(<span class="dv">3</span>, DIVFMT::PAD_ZERO_SIGN_PLUE) &lt;&lt; crlf;</a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="co">// Result: +034.56 </span></a>
+<a class="sourceLine" id="cb5-8" title="8"></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="co">//// Use c_str() to get const char*.</span></a>
+<a class="sourceLine" id="cb5-10" title="10"><span class="dt">char</span> str1[<span class="dv">128</span>];</a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="kw">auto</span> x = div100(-<span class="dv">5678</span>);</a>
+<a class="sourceLine" id="cb5-12" title="12">mwx_snprintf(str1, <span class="dv">16</span>, <span class="st">&quot;VAL=</span><span class="sc">%s</span><span class="st">&quot;</span>, x.format.c_str()); <span class="co">// const char*</span></a>
+<a class="sourceLine" id="cb5-13" title="13">Serial &lt;&lt; str1;</a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="co">// Result: VAL=-56.78</span></a></code></pre></div>
+<h2 id="background">Background</h2>
+<p>Since division is a costly operation in the TWELITE wireless microcontroller, we added a division algorithm with a limited purpose.</p>
+<p>In the library, some sensor values such as temperature and humidity are expressed using 100 times the value (2512 for 25.12°C), so we defined a simple procedure to obtain the quotient divided by 100 and the remainder.</p>
+<p>As for <code>dev_result_i32::format()</code>, it is to avoid complications when formatting output.</p>
+</body>
+</html>

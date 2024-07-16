@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=Actのテンプレート（スリープ周期実行）
+DESC=スリープ→起床→無線送信→スリープを繰り返す処理を実装したテンプレートです。
+URL=jp/MWX/content/act_samples/slp_wk_and_tx.html
+[ENGLISH]
+TITLE=Act sleeping template
+DESC=Act template that sleeps and wake up periodically.
+URL=en/MWX/content/act_samples/slp_wk_and_tx.html

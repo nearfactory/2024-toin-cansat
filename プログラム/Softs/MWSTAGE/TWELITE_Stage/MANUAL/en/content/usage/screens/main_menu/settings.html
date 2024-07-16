@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Setting up a TWELITE STAGE</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Setting up a TWELITE STAGE</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#setting-up-a-twelite-stage">Setting up a TWELITE STAGE</a><ul>
+<li><a href="#root-menu">root menu</a></li>
+<li><a href="#common-setting">common setting</a></li>
+<li><a href="#wrt-firmware">Wrt Firmware</a></li>
+<li><a href="#saved-data-utility">Saved Data Utility</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="setting-up-a-twelite-stage">Setting up a TWELITE STAGE</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>Configure various settings.</p>
+<figure>
+<img src="data:image/png;base64,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" alt="Setup screen" /><figcaption>Setup screen</figcaption>
+</figure>
+<div class="warning">
+<ul>
+<li>Menus on this screen cannot be operated with the mouse.</li>
+<li>It may be difficult to see if you change the color of the screen.</li>
+</ul>
+</div>
+<p>In the menus in the following explanations, there are items that do not exist on some platforms, but all are enumerated and explained.</p>
+<p>Color settings other than those in the common menu are omitted.</p>
+<h3 id="root-menu">root menu</h3>
+<pre class="text"><code>Common settings
+ Terminal
+ Std App Viewer
+ Graph Viewer(Accl, Sensors)
+ Simple monitor (CUA/ARIA/Glancer)
+ Simple monitor (CUA/ARIA/Glancer)
+ Commander
+ Wrt Firmware
+ Interactive settings mode
+Save Data Utility ( Dump/Erase)
+Information</code></pre>
+<h3 id="common-setting">common setting</h3>
+<pre class="text"><code>a: (      0x00) Startup App.
+G: (      0x00) Screen size and drawing method
+F: (          ) Serial Device ID
+f: (0x00FFFFFF) FG color
+b: (0x005A0032) BG color
+B: (    115200) Baud Rate</code></pre>
+<table>
+<colgroup>
+<col style="width: 28%"></col>
+<col style="width: 71%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Settings</th>
+<th style="text-align: left;">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Startup App.</td>
+<td style="text-align: left;">This is the setting for moving to the viewer application when TWELITE STAGE is started. The value is 1… {numbers listed in the viewer app menu}. If the serial device ID is not set, it will wait for input on the serial device selection screen when starting.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Screen size and drawing method</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> Specify by 2-digit XY character (X:Screen size Y:Drawing method)X 0:640x480 1:1280x720 2:1280x960 3:1920x1440 4:2560x1440 5:320x240, Y 0:LCD-like 1:CRT-like 2:Blurred 3:Block</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Serial Device ID</td>
+<td style="text-align: left;">The <code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> setting is a serial device name or a numeric value of 1…9. For numerical values, the order of device enumeration is used.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FG, BG color</td>
+<td style="text-align: left;">Specify the text color and background color. The color setting values of the common settings are inherited by the settings of other screens. If other screens have not yet been set, the color settings in the common settings will be used. Colors are specified as 24-bit RGB hexadecimal numbers, but the values are internally rounded to 16-bit 565 format.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Baud Rate</td>
+<td style="text-align: left;">TWELITE Set the baud rate on the radio module side so that the terminal and other displays will not be corrupted if the baud rate on the radio module side is not 115200.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wrt-firmware">Wrt Firmware</h3>
+<pre class="text"><code>f: (0x00FFFFFF) FG color
+b: (0x005A0032) BG color
+j: (         0) Number of make jobs at build time
+v: (         0) Open a folder with VSCode
+l: (         0) LNo LTO
+n: (         0) Screen after rewriting is completed</code></pre>
+<table>
+<colgroup>
+<col style="width: 32%"></col>
+<col style="width: 67%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of make jobs at build time</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> This is the number of parallel jobs for builds. Setting an appropriate number can be expected to reduce build time. The default value of 0 is calculated by (number of physical processors - 1). As a rough guide, the number of logical processors should be used as the upper limit.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Open a folder with VSCode</td>
+<td style="text-align: left;"><code>Windows</code> <code>macOS</code> <code>Linux</code> Setting 1 opens the folder with the code command (VS Code) instead of the standard OS folder window.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Screen after rewriting is completed</td>
+<td style="text-align: left;">Set <code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code> 1 to open the terminal instead of the Interactive settings mode screen. 2 to return to the rewrite menu.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LNo LTO</td>
+<td style="text-align: left;">The <code>Windows</code> Window compiler can generate slightly smaller binaries through the LTO mechanism, but linking takes time. This procedure can be eliminated, allowing for faster linking.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="saved-data-utility">Saved Data Utility</h3>
+<pre class="text"><code>r: Read sector.
+R: Read ALL sectors.
+e: Erase sector.
+E: Erase ALL sectors.</code></pre>
+<p>This screen is a utility that performs maintenance of the data save area, emulating an EEPROM(64 bytes as one sector, up to 60 sectors, 3840 bytes).</p>
+<table>
+<colgroup>
+<col style="width: 50%"></col>
+<col style="width: 50%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Settings</th>
+<th style="text-align: left;">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">r</td>
+<td style="text-align: left;">Reads a sector. 0..59 is entered, the contents of the sector with the entered sector number are displayed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">(Entering YES reads all sectors, but only the last one is displayed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">Erase Sector (0xFFFF) (Entering 0…59 will erase the sector with the entered sector number.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">Entering YES erases all sectors.</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>On <code>Windows</code> <code>macOS</code> <code>Linux</code> it is stored in the file <code>{executable name}.sav</code>, i.e. <code>TWELITE_Stage.sav</code>.</p>
+</div>
+</body>
+</html>

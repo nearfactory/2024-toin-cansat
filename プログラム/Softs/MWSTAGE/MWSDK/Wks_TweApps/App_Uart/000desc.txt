@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=シリアル通信アプリ（App_Uart）
+DESC=UART（シリアル）通信を無線化するアプリです。
+UARTは多くのマイコンで一般的に利用されています。
+URL=https://twelite.gitbook.io/mw-pug-uart/
+[ENGLISH]
+TITLE=App_Uart
+DESC=Designed for UART (Serial) communications.
+UART is commonly used on uC.
+URL=https://twelite.gitbook.io/mw-pug-uart/

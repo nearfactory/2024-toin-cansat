@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=無線タグアプリ （App_Tag）
+DESC=中継器用です。MONOSTICKなど常時給電のデバイスに接続します。
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Tag/index.html
+[ENGLISH]
+TITLE=App_Tag (Router)
+DESC=This is routers devices application. Connect to a permanently powered device such as MONOSTICK.
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Tag/index.html

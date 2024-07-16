@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>pktparser</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">pktparser</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pktparser">pktparser</a><ul>
+<li><a href="#parset">parse&lt;T&gt;</a></li>
+<li><a href="#usert">user&lt;T&gt;</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pktparser">pktparser</h1>
+<p>pktparser(parser_packet) performs content interpretation on the byte sequence converted by <a href="../ser_parser.html">serparser</a> performs content interpretation on the byte sequence converted by <a href="../ser_parser.html">serparser</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1">serparser_heap parser_ser;</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="co">// init ser parser (heap alloc)</span></a>
+<a class="sourceLine" id="cb1-5" title="5">    parser_ser.begin(PARSER::ASCII, <span class="dv">256</span>);</a>
+<a class="sourceLine" id="cb1-6" title="6">}</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="dt">int</span> c;</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="cf">while</span> ((c = Serial.read()) &gt;= <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb1-11" title="11">        parser_ser.parse(c);</a>
+<a class="sourceLine" id="cb1-12" title="12">        <span class="cf">if</span> (parser_ser.available()) {</a>
+<a class="sourceLine" id="cb1-13" title="13">            <span class="co">// get buffer object</span></a>
+<a class="sourceLine" id="cb1-14" title="14">            <span class="kw">auto</span>&amp;&amp; payl = parser_ser.get_buf();</a>
+<a class="sourceLine" id="cb1-15" title="15">            <span class="co">// identify packet type</span></a>
+<a class="sourceLine" id="cb1-16" title="16">            <span class="kw">auto</span>&amp;&amp; typ = <span class="dt">identify_packet_type</span>(payl.begin(), payl.end());</a>
+<a class="sourceLine" id="cb1-17" title="17">            </a>
+<a class="sourceLine" id="cb1-18" title="18">            <span class="co">// if packet type is TWELITE standard 0x81 message</span></a>
+<a class="sourceLine" id="cb1-19" title="19">            <span class="cf">if</span> (typ == E_PKT::PKT_TWELITE) {</a>
+<a class="sourceLine" id="cb1-20" title="20">                pktparser pkt; <span class="co">// packet parser object</span></a>
+<a class="sourceLine" id="cb1-21" title="21">                <span class="co">// analyze packet data</span></a>
+<a class="sourceLine" id="cb1-22" title="22">                typ = pkt.parse&lt;TwePacketTwelite&gt;(payl.begin(), payl.end());</a>
+<a class="sourceLine" id="cb1-23" title="23">                </a>
+<a class="sourceLine" id="cb1-24" title="24">                <span class="cf">if</span> (typ != E_PKT::PKT_ERROR) { <span class="co">// success!</span></a>
+<a class="sourceLine" id="cb1-25" title="25">                    <span class="co">// get data object</span></a>
+<a class="sourceLine" id="cb1-26" title="26">                    <span class="kw">auto</span>&amp;&amp; atw = pkt.use&lt;TwePacketTwelite&gt;();</a>
+<a class="sourceLine" id="cb1-27" title="27">                    </a>
+<a class="sourceLine" id="cb1-28" title="28">                    <span class="co">// display packet inforamtion</span></a>
+<a class="sourceLine" id="cb1-29" title="29">                    Serial &lt;&lt; crlf &lt;&lt; format(<span class="st">&quot;TWELITE: SRC=%08X LQI=%03d &quot;</span></a>
+<a class="sourceLine" id="cb1-30" title="30">                        , app.u32addr_src, app.u8lqi);</a>
+<a class="sourceLine" id="cb1-31" title="31">                      Serial &lt;&lt; <span class="st">&quot; DI1..4=&quot;</span></a>
+<a class="sourceLine" id="cb1-32" title="32">                          &lt;&lt; atw.DI1 ? <span class="ch">&#39;L&#39;</span> : <span class="ch">&#39;H&#39;</span> &lt;&lt; atw.DI2 ? <span class="ch">&#39;L&#39;</span> : <span class="ch">&#39;H&#39;</span> </a>
+<a class="sourceLine" id="cb1-33" title="33">                        &lt;&lt; atw.DI3 ? <span class="ch">&#39;L&#39;</span> : <span class="ch">&#39;H&#39;</span> &lt;&lt; atw.DI4 ? <span class="ch">&#39;L&#39;</span> : <span class="ch">&#39;H&#39;</span>;</a>
+<a class="sourceLine" id="cb1-34" title="34">                }</a>
+<a class="sourceLine" id="cb1-35" title="35">            }</a>
+<a class="sourceLine" id="cb1-36" title="36">        }</a>
+<a class="sourceLine" id="cb1-37" title="37">    }</a>
+<a class="sourceLine" id="cb1-38" title="38">}</a></code></pre></div>
+<p>The above example interprets <a target=_blank href="https://wings.twelite.info/how-to-use/parent-mode/receive-message/app_twelite">standard application 0x81 message</a>. parser_ser object converts the message input from Serial into a byte string. This byte string is first identified by <a href="identify_packet_type.html"><code>identify_packet_type()</code></a> to determine the type of the message <a href="e_pkt.html"><code>E_PKT</code></a>. Once the message type is determined, the message is parsed by <code>.parse&lt;TwePacketTwelite&gt;()</code>. The parsed result will be of type <code>TwePacketTwelite</code>, and <code>.use&lt;TwePacketTwelite&gt;()</code> is the procedure to extract this object. The <code>TwePacketTwelite</code> type is a class, but it refers to its member variables directly as a structure.</p>
+<h3 id="parset">parse&lt;T&gt;</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;</a>
+<a class="sourceLine" id="cb2-2" title="2">E_PKT parse(<span class="at">const</span> <span class="dt">uint8_t</span>* p, <span class="at">const</span> <span class="dt">uint8_t</span>* e)</a></code></pre></div>
+<p>Parses a sequence of bytes.</p>
+<p>The <code>T</code> specifies the packet type to be parsed. For example, <code>TwePacketTwelite</code> is specified for 0x81 messages in standard applications.</p>
+<p><code>p</code> and <code>e</code> specify the next to the beginning and the end of the byte sequence.</p>
+<p>The return value is of type <code>E_PKT</code>. In case of an error, <code>E_PKT::PKT_ERROR</code> is returned.</p>
+<h3 id="usert">user&lt;T&gt;</h3>
+<pre><code>template &lt;class T&gt; 
+T&amp; use()</code></pre>
+<p>Returns a reference to an object corresponding to the packet type of the interpreted byte sequence. It can be called if <code>parse&lt;T&gt;</code> was executed beforehand and there were no errors.</p>
+<p>The <code>T</code> can be the same type as the one executed with <code>parse&lt;T&gt;</code>, or a <code>TwePacket</code> from which only basic information can be obtained.</p>
+</body>
+</html>

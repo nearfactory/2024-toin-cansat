@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#energy-scan">ENERGY SCAN</a><ul>
+<li><a href="#定義">定義</a></li>
+<li><a href="#関数">関数</a><ul>
+<li><a href="#toconet_energyscan_bstart">ToCoNet_EnergyScan_bStart()</a></li>
+</ul></li>
+<li><a href="#イベント">イベント</a></li>
+<li><a href="#サンプル">サンプル</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="energy-scan">ENERGY SCAN</h1>
+<div class="danger">
+<p>現SDK (2018-05, TWELITE NET 1.2.0以降)では、未サポートです。</p>
+</div>
+<p><a href="../../twelite-net-api-expl/mojru.html">モジュール</a>定義 ToCoNet_REG_MOD_ENERGYSCAN により有効化されます。指定したチャネルレベル（ノイズ・信号を含めた値）を計測します。</p>
+<p>チャネルレベルが低いチャネルは通信が少なくまたノイズも小さいことが示唆されますが、その瞬間のチャネルレベルがチャネルの空きを保証するわけではありません。長時間に渡る複数回の評価を行わない限り判定は困難です。</p>
+<div class="warning">
+<p>単純ネットのみ利用可能です。</p>
+</div>
+<div class="danger">
+<p>本機能は使用するタイミングなどによりハングアップを招く場合があります。無線パケット通信を行わないタイミングでの利用を推奨します。</p>
+</div>
+<h2 id="定義">定義</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// define modules</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#define ToCoNet_USE_MOD_ENERGYSCAN</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">// includes</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="pp">#include </span><span class="im">&quot;ToCoNet.h&quot;</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="pp">#include </span><span class="im">&quot;ToCoNet_mod_prototype.h&quot;</span></a></code></pre></div>
+<h2 id="関数">関数</h2>
+<h3 id="toconet_energyscan_bstart">ToCoNet_EnergyScan_bStart()</h3>
+<p>エナジースキャンを開始します。完了後 E_EVENT_TOCONET_ENERGY_SCAN_COMPLETE イベントが発生します。</p>
+<pre><code>bool_t ToCoNet_EnergyScan_bStart(uint32 u32ChMask, uint8 u8Scale)</code></pre>
+<h4 id="引数">引数</h4>
+<table>
+<colgroup>
+<col style="width: 7%"></col>
+<col style="width: 11%"></col>
+<col style="width: 81%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>型</th>
+<th>名前</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>uint32</code></td>
+<td><code>u32ChMask</code></td>
+<td>測定するチャネルマスク(ch16のみなら <code>1UL&lt;&lt;16</code> を指定、ch16,17なら <code>1UL&lt;&lt;16\|1UL&lt;&lt;17</code> を指定)</td>
+</tr>
+<tr class="even">
+<td><code>uint8</code></td>
+<td><code>u8PreScale</code></td>
+<td>測定時間。およそ<code>(2^u8PreScale)*16</code>[ms]。測定チャネルの数分必要です。測定時間は１秒程度で内部タイム・アウトするため、これを越えないようにしてください。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="戻り値">戻り値</h4>
+<table>
+<thead>
+<tr class="header">
+<th>型</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>boot_t</code></td>
+<td><code>TRUE</code> なら要求は受け付けられ、<code>FALSE</code> なら要求は受け付けられなかった。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="イベント">イベント</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb3-1" title="1"><span class="cf">case</span> E_EVENT_TOCONET_ENERGY_SCAN_COMPLETE:</a>
+<a class="sourceLine" id="cb3-2" title="2">    _C {</a>
+<a class="sourceLine" id="cb3-3" title="3">        uint8 *pu8Result = (uint8*)u32arg;</a>
+<a class="sourceLine" id="cb3-4" title="4">    }</a></code></pre></div>
+<p>pu8Result の値</p>
+<table>
+<thead>
+<tr class="header">
+<th>バイト位置</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0]</td>
+<td>計測されたチャネル数[N]。</td>
+</tr>
+<tr class="even">
+<td>[1]</td>
+<td>計測された一番若い番号のチャネルレベル</td>
+</tr>
+<tr class="odd">
+<td>[2]</td>
+<td>次に若いチャネルレベル</td>
+</tr>
+<tr class="even">
+<td>… [N]</td>
+<td>Nまでデータが続く</td>
+</tr>
+</tbody>
+</table>
+<p>レベルは 0..255 の値を取り、0 が最弱、255が最強となる。値が高いほどノイズの多いチャネルとなります。</p>
+<h2 id="サンプル">サンプル</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb4-1" title="1"><span class="co">// define module</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="pp">#define ToCoNet_USE_MOD_ENERGYSCAN</span></a>
+<a class="sourceLine" id="cb4-3" title="3"></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="co">// includes</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="pp">#include </span><span class="im">&quot;ToCoNet.h&quot;</span></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="pp">#include </span><span class="im">&quot;ToCoNet_mod_prototype.h&quot;</span></a>
+<a class="sourceLine" id="cb4-7" title="7"></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="dt">void</span> inSomeFunc() {</a>
+<a class="sourceLine" id="cb4-9" title="9">    <span class="co">// start energy scan (scan 1ch only)</span></a>
+<a class="sourceLine" id="cb4-10" title="10">    ToCoNet_EnergyScan_bStart(<span class="dv">1</span> &lt;&lt; sAppData.u8channel, <span class="dv">2</span>); </a>
+<a class="sourceLine" id="cb4-11" title="11">    sAppData.bTxBusy = TRUE; <span class="co">// set internal busy flag.</span></a>
+<a class="sourceLine" id="cb4-12" title="12">}</a>
+<a class="sourceLine" id="cb4-13" title="13"></a>
+<a class="sourceLine" id="cb4-14" title="14"><span class="dt">void</span> cbToCoNet_vNwkEvent(teEvent eEvent, uint32 u32arg) {</a>
+<a class="sourceLine" id="cb4-15" title="15">    <span class="dt">int</span> i;</a>
+<a class="sourceLine" id="cb4-16" title="16">    <span class="cf">switch</span>(eEvent) {</a>
+<a class="sourceLine" id="cb4-17" title="17">    <span class="cf">case</span> E_EVENT_TOCONET_ENERGY_SCAN_COMPLETE:</a>
+<a class="sourceLine" id="cb4-18" title="18">        _C {</a>
+<a class="sourceLine" id="cb4-19" title="19">            uint8 *pu8Result = (uint8*)u32arg;</a>
+<a class="sourceLine" id="cb4-20" title="20">            sAppData.u8ChEnergy = pu8Result[<span class="dv">1</span>];</a>
+<a class="sourceLine" id="cb4-21" title="21">            </a>
+<a class="sourceLine" id="cb4-22" title="22">            <span class="co">//save history...</span></a>
+<a class="sourceLine" id="cb4-23" title="23">            <span class="dt">int</span> i, max = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb4-24" title="24">            <span class="dt">static</span> uint8 u8Hist[<span class="dv">8</span>] = { <span class="dv">0</span> };</a>
+<a class="sourceLine" id="cb4-25" title="25">            <span class="dt">static</span> uint8 u8Idx = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb4-26" title="26">            u8Hist[(u8Idx++) &amp; <span class="bn">0x7</span>] = pu8Result[<span class="dv">1</span>];</a>
+<a class="sourceLine" id="cb4-27" title="27">            <span class="cf">for</span> (i = <span class="dv">0</span>; i &lt; <span class="dv">8</span>; i++) {</a>
+<a class="sourceLine" id="cb4-28" title="28">                <span class="cf">if</span> (u8Hist[i] &gt; max) max = u8Hist[i];</a>
+<a class="sourceLine" id="cb4-29" title="29">            }</a>
+<a class="sourceLine" id="cb4-30" title="30">            sAppData.u8ChEnergyMax = max;</a>
+<a class="sourceLine" id="cb4-31" title="31">            sAppData.bTxBusy = FALSE;</a>
+<a class="sourceLine" id="cb4-32" title="32">        }</a>
+<a class="sourceLine" id="cb4-33" title="33">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb4-34" title="34">    <span class="cf">default</span>:</a>
+<a class="sourceLine" id="cb4-35" title="35">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb4-36" title="36">    }</a>
+<a class="sourceLine" id="cb4-37" title="37">}</a></code></pre></div>
+</body>
+</html>

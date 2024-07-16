@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Creating a new project</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Creating a new project</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#creating-a-new-project">Creating a new project</a><ul>
+<li><a href="#edit-build-definition">Edit Build Definition</a></li>
+<li><a href="#configuration-for-vscode">Configuration for VSCode</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="creating-a-new-project">Creating a new project</h1>
+<p>To create a new project, copy the folder of an already existing sample act with a different name and edit the file name.</p>
+<div class="warning">
+<p>The destination folder does not have to be a folder under the MWSDK. However, the folder name <strong>must not contain any whitespace characters or Japanese names</strong>.</p>
+</div>
+<p>The file structure of the project is as follows (we’ll use <code>PingPong</code> as an example)</p>
+<pre><code>Act_samples
+  +-PingPong
+    +-PingPong.cpp   : ACT file
+    +-build          : build dir
+    +-.vscode        : setting fils for VSCode    </code></pre>
+<p>Copy this <code>PingPong</code> folder to another location (but without Japanese characters or spaces in the folder name).</p>
+<pre><code>SomeDir
+  +-AlphaBravo
+    +-PingPong.cpp -&gt; AplhaBravo.cpp (Note: Changed file name)
+    +-build          : build dir
+    +-.vscode        : setting files for VSCode</code></pre>
+<p>The only thing you need to edit is the file name <code>PingPong.cpp</code>. Change it to <code>AlphaBravo.cpp</code>, the same as the folder name.</p>
+<div class="success">
+<p>Run <code>build\build-BLUE.cmd</code> and if a BIN file is generated, it’ is done (Windows 10).</p>
+<p>On Linux/macOS, run <code>make TWELITE=BLUE</code> to see if the build succeeds.</p>
+</div>
+<h2 id="edit-build-definition">Edit Build Definition</h2>
+<p>To add files to be built, edit <code>build/Makefile</code>. The <code>.c</code> <code>.cpp</code> files directly under the project will be added automatically, but other files will need to be edited.</p>
+<p>See <a href="makefile.html">Makefile Description</a> for how to edit the file.。</p>
+<h2 id="configuration-for-vscode">Configuration for VSCode</h2>
+<p>If you use VSCode, edit the definition under .vscode as necessary.</p>
+<p>Most of the examples included in the TWELITE STAGE SDK are as follows * The source code for the TWELITE STAGE SDK library cites <code>${env:MWSDK_TWENET_LIBSRC}/include/**</code> <code>${env:MWSDK_TWENET_LIBSRC}/src/**</code>. This environment variable <code>MWSDK_TWENET_LIBSRC</code> is automatically set when the project is opened in VSCode from the TWELITE STAGE app. * For the build task, no additional options such as <code>-D</code> are set by default.</p>
+</body>
+</html>

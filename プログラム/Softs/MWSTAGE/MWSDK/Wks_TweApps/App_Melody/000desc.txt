@@ -1,0 +1,6 @@
+[JAPANESE]
+TITLE=メロディ
+DESC=圧電ブザーを接続してメロディを奏でるアプリです。
+[ENGLISH]
+TITLE=App_Melody
+DESC=Play melodies using a piezoelectric buzzer.

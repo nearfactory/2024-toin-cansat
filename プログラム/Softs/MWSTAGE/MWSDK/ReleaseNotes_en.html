@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>MWSDK Library Revision History (English)</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">MWSDK Library Revision History (English)</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#mwsdk-library-revision-history">MWSDK Library Revision History</a></li>
+<li><a href="#mwsdk2022_08">MWSDK2022_08</a><ul>
+<li><a href="#twelite-apps">TWELITE APPS</a><ul>
+<li><a href="#app_cueapp_cue_ota-v1.1.1">App_CUE/App_CUE_OTA v1.1.1</a></li>
+<li><a href="#app_ariaapp_aria_ota-v1.1.1">App_ARIA/App_ARIA_OTA v1.1.1</a></li>
+<li><a href="#app_pal-v1.5.2">App_PAL v1.5.2</a></li>
+<li><a href="#app_pal-v1.2.1">App_PAL v1.2.1</a></li>
+<li><a href="#app_uart-v1.4.7">App_Uart v1.4.7</a></li>
+</ul></li>
+<li><a href="#act_extras">Act_extras</a><ul>
+<li><a href="#actex_aqm0802">ActEx_AQM0802</a></li>
+</ul></li>
+<li><a href="#twesettings---0.2.7">twesettings - 0.2.7</a></li>
+</ul></li>
+<li><a href="#mwsdk2022_07">MWSDK2022_07</a><ul>
+<li><a href="#twelite-apps-1">TWELITE APPS</a><ul>
+<li><a href="#cue-app-app_cueapp_cue_ota-v1.1.0">Cue App (App_CUE/App_CUE_OTA) v1.1.0</a></li>
+<li><a href="#aria-appapp_ariaapp_aria_ota-v1.1.0">Aria App(App_ARIA/App_ARIA_OTA) v1.1.0</a></li>
+<li><a href="#pal-app-app_pal-v1.5.1">Pal App (App_PAL) v1.5.1</a></li>
+<li><a href="#parent-node-and-repeater-application-app_pal-v1.2.0">Parent Node and Repeater Application (App_PAL) v1.2.0</a></li>
+</ul></li>
+<li><a href="#act_samples">Act_samples</a></li>
+<li><a href="#act_extras-1">Act_extras</a></li>
+<li><a href="#mwx---0.2.0">mwx - 0.2.0</a></li>
+<li><a href="#twesettings---0.2.6">twesettings - 0.2.6</a></li>
+<li><a href="#twenet-c---1.3.05-l1305">TWENET C - 1.3.05 (L1305)</a></li>
+</ul></li>
+<li><a href="#mwsdk2021_12">MWSDK2021_12</a><ul>
+<li><a href="#tweapps">TweApps</a><ul>
+<li><a href="#app_pal-1.3.4">App_PAL (1.3.4)</a></li>
+<li><a href="#app_uart-1.4.6">App_UART (1.4.6)</a></li>
+<li><a href="#app_aria-1.0.0">App_ARIA (1.0.0)</a></li>
+<li><a href="#app_aria_ota-1.0.0">App_ARIA_OTA (1.0.0)</a></li>
+<li><a href="#app_wings-1.1.6">App_Wings (1.1.6)</a></li>
+</ul></li>
+<li><a href="#act_samples-1">Act_samples</a><ul>
+<li><a href="#brd_aria">BRD_ARIA</a></li>
+<li><a href="#unit_brd_aria">Unit_brd_ARIA</a></li>
+</ul></li>
+<li><a href="#mwx---0.1.9">mwx - 0.1.9</a></li>
+<li><a href="#twesettings---0.2.6-1">twesettings - 0.2.6</a></li>
+<li><a href="#twenet-c---1.3.05-l1305-1">TWENET C - 1.3.05 (L1305)</a></li>
+</ul></li>
+<li><a href="#mwsdk2021_09">MWSDK2021_09</a><ul>
+<li><a href="#tweapps-1">TweApps</a><ul>
+<li><a href="#app_cue-1.0.3">App_CUE (1.0.3)</a></li>
+<li><a href="#app_io-1.3.2">App_IO (1.3.2)</a></li>
+<li><a href="#app_pal-1.3.3">App_PAL (1.3.3)</a></li>
+<li><a href="#app_tag-2.2.4-2525a">App_Tag (2.2.4) (2525A)</a></li>
+<li><a href="#app_uart-1.4.1---1.4.5">App_UART (1.4.1 -&gt; 1.4.5)</a></li>
+</ul></li>
+<li><a href="#act_samples-2">Act_samples</a></li>
+<li><a href="#mwx---0.1.8">mwx - 0.1.8</a></li>
+<li><a href="#twesettings---0.2.6-2">twesettings - 0.2.6</a></li>
+<li><a href="#twenet-c---1.3.05-l1305-2">TWENET C - 1.3.05 (L1305)</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_12">MWSDK2020_12</a><ul>
+<li><a href="#tweapps-2">TweApps</a><ul>
+<li><a href="#app_cue-1.0.1">App_CUE 1.0.1</a></li>
+<li><a href="#app_cue_ota-1.0.1">App_CUE_OTA 1.0.1</a></li>
+<li><a href="#app_wings-1.1.4">App_Wings 1.1.4</a></li>
+<li><a href="#app_pal-1.3.2">App_PAL 1.3.2</a></li>
+</ul></li>
+<li><a href="#act_samples-3">Act_samples</a></li>
+<li><a href="#mwx---0.1.7">mwx - 0.1.7</a></li>
+<li><a href="#twesettings---0.2.6-3">twesettings - 0.2.6</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_10">MWSDK2020_10</a><ul>
+<li><a href="#tweapps.">TweApps.</a><ul>
+<li><a href="#app_pal-1.2.1">App_PAL 1.2.1</a></li>
+<li><a href="#app_tag-2.2.2">App_Tag 2.2.2</a></li>
+<li><a href="#app_twelite-1.9.1">App_Twelite 1.9.1</a></li>
+<li><a href="#app_uart-1.4.1">App_UART 1.4.1</a></li>
+<li><a href="#app_wings-1.1.3">App_Wings 1.1.3</a></li>
+</ul></li>
+<li><a href="#act_samples-4">Act_samples</a></li>
+<li><a href="#act_extras-2">Act_extras</a></li>
+<li><a href="#mwx---0.1.6">mwx - 0.1.6</a><ul>
+<li><a href="#b4">[0.1.6b4]</a></li>
+<li><a href="#b3">[0.1.6b3]</a></li>
+<li><a href="#fd542c">[6fd542c]</a></li>
+<li><a href="#b2">[0.1.6b2]</a></li>
+<li><a href="#d8ce8b">[4d8ce8b]</a></li>
+</ul></li>
+<li><a href="#twesettings---0.2.5">twesettings - 0.2.5</a></li>
+<li><a href="#twenet-c---1.3.04-l1304">TWENET C - 1.3.04 (L1304)</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_08_unofficial---2020-08-05">MWSDK2020_08_UNOFFICIAL - 2020-08-05</a><ul>
+<li><a href="#mwx---0.1.5">mwx - 0.1.5</a></li>
+<li><a href="#twesettings---0.2.5-1">twesettings - 0.2.5</a></li>
+<li><a href="#twenet-c---1.3.04-l1304-1">TWENET C - 1.3.04 (L1304)</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_07_unofficial---2020-07-27">MWSDK2020_07_UNOFFICIAL - 2020-07-27</a><ul>
+<li><a href="#mwx---0.1.4">mwx - 0.1.4</a></li>
+<li><a href="#twesettings---0.2.4">twesettings - 0.2.4</a></li>
+<li><a href="#twenet-c---1.3.03-l1303">TWENET C - 1.3.03 (L1303)</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_05---2020-05-29">MWSDK2020_05 - 2020-05-29</a><ul>
+<li><a href="#mwx---0.1.3">mwx - 0.1.3</a></li>
+<li><a href="#twesettings---0.2.3">twesettings - 0.2.3</a></li>
+<li><a href="#twenet-c---1.3.03-l1303-1">TWENET C - 1.3.03 (L1303)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="mwsdk-library-revision-history">MWSDK Library Revision History</h1>
+<p>Major modifications for each library are listed.</p>
+<p>See also the individual libraries below.</p>
+<ul>
+<li>MWX library (<a target=_blank href="https://mwx.twelite.info/v/latest_en/">Manual</a>|<a target=_blank href="https://github.com/monowireless/mwx">repository</a>)</li>
+<li>twesettings library (<a target=_blank href="https://github.com/monowireless/twesettings">repository</a>)</li>
+</ul>
+<p>The version name is MWSDK{YYYYY}_{MMM} including the year and month of release, with UNOFFICIAL indicating that the release does not include comprehensive validation work.</p>
+<h1 id="mwsdk2022_08">MWSDK2022_08</h1>
+<h2 id="twelite-apps">TWELITE APPS</h2>
+<h3 id="app_cueapp_cue_ota-v1.1.1">App_CUE/App_CUE_OTA v1.1.1</h3>
+<ul>
+<li>Fixed unintended output of PALID in MOTION SENSE PAL mode (single shot).</li>
+</ul>
+<h3 id="app_ariaapp_aria_ota-v1.1.1">App_ARIA/App_ARIA_OTA v1.1.1</h3>
+<ul>
+<li>Fixed an anomalous value when the measured temperature reaches 42°C or higher.</li>
+</ul>
+<h3 id="app_pal-v1.5.2">App_PAL v1.5.2</h3>
+<ul>
+<li>Fixed unintended output of PALID in MOTION SENSE PAL (single shot).</li>
+<li>Fixed an anomalous value when the measured temperature reaches 42°C or higher. (This is a modification for TWELITE ARIA. There are no modifications to the AMBIENT SENSE PAL program.)</li>
+</ul>
+<h3 id="app_pal-v1.2.1">App_PAL v1.2.1</h3>
+<ul>
+<li>Fixed a problem in which the output of App_PAL data sometimes resulted in unintended values.</li>
+</ul>
+<h3 id="app_uart-v1.4.7">App_Uart v1.4.7</h3>
+<ul>
+<li>Changed default retransmission count to 2 times.</li>
+</ul>
+<h2 id="act_extras">Act_extras</h2>
+<h3 id="actex_aqm0802">ActEx_AQM0802</h3>
+<ul>
+<li>Supported MWX stream output.</li>
+<li>Supported AQM1602 (16x2 row LCD).</li>
+<li>Added of a contrast adjustment function.</li>
+</ul>
+<h2 id="twesettings---0.2.7">twesettings - 0.2.7</h2>
+<ul>
+<li>fixed TWESYSUTL_vWaitPoll() wait time doubling.</li>
+</ul>
+<h1 id="mwsdk2022_07">MWSDK2022_07</h1>
+<p>Addition of sample Act, new functions for TWELITE ARIA/TWELITE CUE/TWELITE PAL, etc.</p>
+<h2 id="twelite-apps-1">TWELITE APPS</h2>
+<ul>
+<li>Added English translation to 000desc.txt</li>
+<li>Changed Samp_PingPong and Samp_I2C to newly adopted deprecated</li>
+</ul>
+<h3 id="cue-app-app_cueapp_cue_ota-v1.1.0">Cue App (App_CUE/App_CUE_OTA) v1.1.0</h3>
+<ul>
+<li>Added ability to send one sample of acceleration at each specified interval</li>
+<li>Addition of function to send average, minimum and maximum values of acceleration measured for a certain period of time</li>
+</ul>
+<h3 id="aria-appapp_ariaapp_aria_ota-v1.1.0">Aria App(App_ARIA/App_ARIA_OTA) v1.1.0</h3>
+<ul>
+<li>Added the ability to multiply measured temperature and humidity values by an offset and a factor</li>
+</ul>
+<h3 id="pal-app-app_pal-v1.5.1">Pal App (App_PAL) v1.5.1</h3>
+<ul>
+<li>Added ability to send acceleration one sample at a time with motion sensor PAL</li>
+<li>Added ability to send average, minimum and maximum values of acceleration measured for a certain period of time in motion sensor PAL</li>
+<li>Add function to multiply measured values of temperature and humidity by offset and coefficient in environment sensor pal</li>
+</ul>
+<h3 id="parent-node-and-repeater-application-app_pal-v1.2.0">Parent Node and Repeater Application (App_PAL) v1.2.0</h3>
+<ul>
+<li>Added function to output average, maximum and minimum values of acceleration</li>
+</ul>
+<h2 id="act_samples">Act_samples</h2>
+<ul>
+<li>Added English translation to 000desc.txt</li>
+<li>Add BRD_I2C_TEMPHUMID
+<ul>
+<li>Sample using I2C sensor device to measure and transmit from periodic wake-up</li>
+</ul></li>
+</ul>
+<h2 id="act_extras-1">Act_extras</h2>
+<ul>
+<li>Add English translation to 000desc.txt</li>
+<li>Add ActEx_AQM0802
+<ul>
+<li>Sample using LCD module AQM0802 implementing Sitronix I2C connected LCD controller ST7032</li>
+</ul></li>
+</ul>
+<h2 id="mwx---0.2.0">mwx - 0.2.0</h2>
+<ul>
+<li>Changed Wire object to allocate memory to heap area</li>
+<li>Changed function name from G_OCTET() to G_BYTE() to avoid name conflict in utils.h</li>
+<li>Changed the order of vAHI_DioInterruptEnable() in attachIntDio()</li>
+<li>Added the_twelite.network2 to support universal receivers (NWK_LAYERED, NWK_SIMPLE or networkless packets in the same executable code)</li>
+<li>Added NWK_LAYERED (only Parent Node reception is supported at this time)</li>
+<li>Introduced MWX_Set_Usder_App_Ver() function to set application version at MWX initialization</li>
+<li>mwx::pnew() was added to simplify description of deployment new</li>
+<li>added support for EASTL</li>
+<li>added new[] operator for EASTL</li>
+<li>Precompiled most of the MWX source code to speed up compilation</li>
+<li>Fixed DIO events being passed to unrelated ports</li>
+</ul>
+<h2 id="twesettings---0.2.6">twesettings - 0.2.6</h2>
+<p>No changes since MWSDK2021_09. Compiled libraries remain 2.5. Source code only.</p>
+<h2 id="twenet-c---1.3.05-l1305">TWENET C - 1.3.05 (L1305)</h2>
+<p>No changes since MWSDK2021_09.</p>
+<h1 id="mwsdk2021_12">MWSDK2021_12</h1>
+<p>Fixes for TWELITE ARIA support, etc.</p>
+<h2 id="tweapps">TweApps</h2>
+<h3 id="app_pal-1.3.4">App_PAL (1.3.4)</h3>
+<ul>
+<li>Added support for TWELITE ARIA</li>
+</ul>
+<h3 id="app_uart-1.4.6">App_UART (1.4.6)</h3>
+<ul>
+<li>Fixed to not output NUL characters at the end.</li>
+<li><code>&gt;</code> (end of checksum range) now works in output customization.
+<ul>
+<li>For example, setting <code>MSG;&lt;*&gt;;%X\\n</code> will output “<code>MSG;HELLO;nn&lt;newline&gt;</code>” (nn is the XOR checksum of <code>HELLO</code>) for the transmission string “<code>HELLO</code>”.</li>
+</ul></li>
+</ul>
+<h3 id="app_aria-1.0.0">App_ARIA (1.0.0)</h3>
+<ul>
+<li>New additions</li>
+</ul>
+<h3 id="app_aria_ota-1.0.0">App_ARIA_OTA (1.0.0)</h3>
+<ul>
+<li>New additions</li>
+</ul>
+<h3 id="app_wings-1.1.6">App_Wings (1.1.6)</h3>
+<ul>
+<li>Fixed a problem that App_Wings in the repeater setting does not relay when the Parent Node is not App_Wings.</li>
+</ul>
+<h2 id="act_samples-1">Act_samples</h2>
+<h3 id="brd_aria">BRD_ARIA</h3>
+<p>Sample that performs measurement and wireless transmission while driving intermittently with sleep.</p>
+<h3 id="unit_brd_aria">Unit_brd_ARIA</h3>
+<p>This sample uses SHT4x sensor object <code>.sns_SHT4x</code> included in board BEHAVIOR <code>ARIA</code> to operate only the sensor.</p>
+<h2 id="mwx---0.1.9">mwx - 0.1.9</h2>
+<ul>
+<li>Add TWELITE ARIA support.
+<ul>
+<li>Add board BEHAVIOR <code>&lt;ARIA&gt;</code> (<code>BrdARIA</code> class)</li>
+<li>added <code>SnsSHT4x</code> sensor definition</li>
+</ul></li>
+<li>Modified Interactive settings mode <code>&lt;STG_STD&gt;</code> to work with Extra Menu (* In mwx0.1.8, the output via Serial is automatically suppressed when Interactive mode is displayed, but we prepared a procedure to allow output from the code of the built-in function). (* In mwx0.1.8, the output via Serial is automatically suppressed during interactive mode display.)</li>
+</ul>
+<h2 id="twesettings---0.2.6-1">twesettings - 0.2.6</h2>
+<p>No changes since MWSDK2021_09. Compiled libraries are still 2.5. Source code only.</p>
+<h2 id="twenet-c---1.3.05-l1305-1">TWENET C - 1.3.05 (L1305)</h2>
+<p>No changes since MWSDK2021_09.</p>
+<h1 id="mwsdk2021_09">MWSDK2021_09</h1>
+<ul>
+<li>Enhanced VS Code support for each sample.
+<ul>
+<li>Enabled code interpretation and build execution in VS Code without special name settings when environment variables are set from TWELITE STAGE and VS Code is opened via STAGE.</li>
+</ul></li>
+</ul>
+<h2 id="tweapps-1">TweApps</h2>
+<h3 id="app_cue-1.0.3">App_CUE (1.0.3)</h3>
+<ul>
+<li>Fixed problem that occurs when sleep time is set to 61 seconds or longer.</li>
+</ul>
+<h3 id="app_io-1.3.2">App_IO (1.3.2)</h3>
+<ul>
+<li>Fixed a problem that only up to 8 ports are reflected in UART command processing.</li>
+</ul>
+<h3 id="app_pal-1.3.3">App_PAL (1.3.3)</h3>
+<ul>
+<li>Adjusted OTA messages</li>
+<li>Ensured that the MC3630 accelerometer initialization procedure waits for a certain amount of time.</li>
+<li>Added a setting to change the threshold value for MC3630 accelerometer interrupt.</li>
+</ul>
+<h3 id="app_tag-2.2.4-2525a">App_Tag (2.2.4) (2525A)</h3>
+<ul>
+<li>When obtaining the sensor value for each sleep recovery time with the ADXL345 accelerometer, there were cases where the appropriate sensor value could not be obtained, so multiple samples were obtained to eliminate the influence of inappropriate samples.</li>
+<li>Explicitly gave appropriate parameters to the DUPCHK module for packet de-duplication.</li>
+<li>explicitly wait processing for sensor acquisition for MAX31855</li>
+</ul>
+<h3 id="app_uart-1.4.1---1.4.5">App_UART (1.4.1 -&gt; 1.4.5)</h3>
+<ul>
+<li>Added dedicated build for TWELITE UART</li>
+<li>Added a new option bit 0x0000:4000 to set the packet ID for high frequency transmission.</li>
+<li>Added Mode E and made it the default. In the previous Mode D (transparent mode), it was not possible to obtain information obtained from wireless packets, such as address information of arriving packets, but now various information can be included in the output in a customizable form.</li>
+</ul>
+<h2 id="act_samples-2">Act_samples</h2>
+<ul>
+<li>Samples are maintained for easy understanding in the following step-by-step manner
+<ul>
+<li>act0..4</li>
+<li>Scratch (send by serial input)</li>
+<li>Slp_Wk_and_Tx (sleep -&gt; wake -&gt; send)</li>
+<li>Parent_MONOSTICK (receive)</li>
+<li>…</li>
+</ul></li>
+<li>Expanded samples supporting Interactive settings mode.</li>
+<li>Support for <code>on_rx_packet()</code> and <code>on_tx_comp()</code> callback functions</li>
+<li>Enhanced <code>Parent_MONOSTICK</code> sample, interprets packet contents and displays sensor values, etc.</li>
+<li>Sleep samples now use the <code>SM_SIMPLE</code> state machine to complete the <code>loop()</code>.</li>
+<li>Addition of <code>Unit_Cue_MagBuz</code> sample (sounds piezoelectric buzzer when magnet leaves)</li>
+<li>Add <code>Unit_doint-bhv</code> sample (DIO interrupt detection using BEHAVIOR)</li>
+<li>Renaming of sample names
+<ul>
+<li>Rename <code>PAL_MOT</code> -&gt; <code>PAL_MOT-fifo</code>.</li>
+<li><code>PAL_MOT-oneshot</code> -&gt; <code>PAL_MOT-single</code>.</li>
+<li><code>PAL_AMB-behave</code> -&gt; <code>PAL_AMB_bhv</code>.</li>
+</ul></li>
+</ul>
+<h2 id="mwx---0.1.8">mwx - 0.1.8</h2>
+<ul>
+<li>Port and alternate port definitions for <code>Serial1</code> were not appropriate.</li>
+<li>Added the ability to change the baud rate of <code>Serial</code> (UART0).</li>
+<li>Added event callbacks to notify received packets (<code>on_rx_packet()</code>) and completed transmission (<code>on_tx_comp()</code>)
+<ul>
+<li>Previous procedures can be used if callback functions are not defined.</li>
+</ul></li>
+<li>Wrong definition ID for <code>&lt;STG_STD&gt;</code> Interactive settings mode settings and some default values changed.</li>
+<li>added the ability to change default values of CHANNEL and logical device ID in addition to AppID in <code>&lt;STG_STD&gt;</code> Interactive settings mode.</li>
+<li>Added the ability to configure <code>the_twelite</code> and <code>&lt;NWK_SIMPLE&gt;</code> objects with the <code>&lt;STG_STD&gt;</code> object in Interactive mode for some settings.</li>
+<li>added support for setting the default value of retransmission count in <code>&lt;NWK_SIMPLE&gt;</code>.</li>
+<li>Do not input/output <code>Serial</code>(UART0) from the application while the <code>&lt;STG_STD&gt;</code> Interactive settings mode screen is displayed.</li>
+<li><code>CUE::PIN_SET</code>, <code>PAL???&quot;&quot;&quot; Add</code>:PIN_SET<code>(because</code>PIN_BTN` is unnatural to use in CUE without buttons).</li>
+<li>moved namespace of <code>random()</code> to <code>mwx::</code> (Elias to global name)</li>
+<li>modified MONOSTICK’s watchdog setting to be done in 32ms units</li>
+</ul>
+<h2 id="twesettings---0.2.6-2">twesettings - 0.2.6</h2>
+<p>No changes. Compiled libraries remain 2.5. Source code only.</p>
+<h2 id="twenet-c---1.3.05-l1305-2">TWENET C - 1.3.05 (L1305)</h2>
+<ul>
+<li>Fixed problem with radio operation not working until the first CHANNEL change cycle when CHANNEL manager is used.</li>
+<li>When a channel switchover fails, the variable indicating the pending channel switchover is not cleared to 0, but the channel is switched again within 64ms (currently the channel waits for polling until it can be switched, so the pending operation is not performed. (Currently, the channel waits for polling until it can be switched, so there is no pending operation.)</li>
+<li>(Currently, the channel waits for polling until it can be switched, so there is no pending behavior, but it is a natural process in the implementation.</li>
+<li>Stricter handling of interrupts in <code>ByteQyeue</code>.</li>
+<li>When multiple hardware interrupts occur almost at the same time and there are multiple events in the hardware event queue, there was a possibility that the event behind the event queue would be delayed (only the first event is processed and once it exits the processing loop).</li>
+</ul>
+<h1 id="mwsdk2020_12">MWSDK2020_12</h1>
+<h2 id="tweapps-2">TweApps</h2>
+<h3 id="app_cue-1.0.1">App_CUE 1.0.1</h3>
+<ul>
+<li>New</li>
+</ul>
+<h3 id="app_cue_ota-1.0.1">App_CUE_OTA 1.0.1</h3>
+<ul>
+<li>New</li>
+</ul>
+<h3 id="app_wings-1.1.4">App_Wings 1.1.4</h3>
+<ul>
+<li>TWELITE CUE support</li>
+</ul>
+<h3 id="app_pal-1.3.2">App_PAL 1.3.2</h3>
+<ul>
+<li>Added code for TWELITE CUE</li>
+<li>Implemented receive-only mode in NOTICEPAL</li>
+</ul>
+<h2 id="act_samples-3">Act_samples</h2>
+<ul>
+<li>Add Unit_PktParser (serial telegram parser)</li>
+<li>Add Unit_EEPROM (read/write EEPROM)</li>
+<li>Add Unit_ADC (read ADC)</li>
+<li>Unit_CUE (Act support for TWELITE CUE)</li>
+</ul>
+<h2 id="mwx---0.1.7">mwx - 0.1.7</h2>
+<ul>
+<li>See https://mwx.twelite.info/v/latest/ for details</li>
+<li>Add pkt_parser (interpret serial messages)</li>
+<li>Add EEPROM class (read/write EEPROM)</li>
+<li>Added receive_nwkless_pkt option, under NWK_SIMPLE network, Application ID of wireless packet, CHANNEL can receive matched normal packets.</li>
+</ul>
+<h2 id="twesettings---0.2.6-3">twesettings - 0.2.6</h2>
+<p>Compiled library is still 2.5. Source code only.</p>
+<ul>
+<li>Fixed a problem with the list display and selection behavior when the number of items exceeds 10 in the menu provided by tweinteractive_defmenus.c.</li>
+</ul>
+<h1 id="mwsdk2020_10">MWSDK2020_10</h1>
+<p>Updated mwx library, added and updated samples, more practical samples Act Extra (ActEx_????) recorded.</p>
+<h2 id="tweapps.">TweApps.</h2>
+<h3 id="app_pal-1.2.1">App_PAL 1.2.1</h3>
+<ul>
+<li>NOTICE PAL support</li>
+<li>Enabled to set sending interval every second.</li>
+</ul>
+<h3 id="app_tag-2.2.2">App_Tag 2.2.2</h3>
+<ul>
+<li>Fixed sensor value calculation formula for BME280.</li>
+</ul>
+<h3 id="app_twelite-1.9.1">App_Twelite 1.9.1</h3>
+<ul>
+<li>Added ACK response to determine life or death by serial message</li>
+</ul>
+<h3 id="app_uart-1.4.1">App_UART 1.4.1</h3>
+<ul>
+<li>Adjusted timeout for duplicate packets (can receive at 100ms intervals, timeout for duplicate determination is 1 second and if the same packet arrives beyond this timeout, it will be displayed again)</li>
+</ul>
+<h3 id="app_wings-1.1.3">App_Wings 1.1.3</h3>
+<ul>
+<li>NOTICE PAL support</li>
+<li>Other fixes</li>
+</ul>
+<h2 id="act_samples-4">Act_samples</h2>
+<ul>
+<li>Check only single function Unit_???? Add sample</li>
+<li>Add sample for LED driver control of Notify PAL (NOTICE PAL) (Unit_using_PAL_NOTICE)</li>
+<li>Add template code Slp_Wk_and_Tx to send after sleep wake-up</li>
+<li>Re-wrote loop() of Pal_MOT_oneshot with state transitions</li>
+<li>Added a sample Setting that uses settings (Interactive settings mode) in Act</li>
+</ul>
+<h2 id="act_extras-2">Act_extras</h2>
+<ul>
+<li>Added ActEx_DIO_Trans (fast sample of DI state and reproduce to destination DO)</li>
+<li>Added ActEx_Sns_BME280_SHT30 (environmental sensor BME280, SHT30 device)</li>
+<li>ActEx_Sns_MLX90614 (uses infrared temperature sensor MLX90614)</li>
+<li>ActEx_Sns_VL53L1X (use of laser distance sensor VL53L1X)</li>
+</ul>
+<h2 id="mwx---0.1.6">mwx - 0.1.6</h2>
+<h3 id="b4">[0.1.6b4]</h3>
+<ul>
+<li>Added output of div100(), which calculates the quotient and remainder, to Serial, etc.</li>
+<li>Changed implementation of smplbuf&lt;&gt; array class. Inheritance of mwx::stream was stopped for the purpose of reducing memory consumption, etc. Inheritance class and helper class were defined separately.</li>
+<li>added mwx_printf() mwx_snprintf() function</li>
+<li>added the_twelite.stop_watchdog() and the_twelite.restart_watchdog()</li>
+<li>mwx::stream maintenance: removed operator bool(). Disable timeout when 0xff is specified (.set_timeout(0xff)) in read timeout setting. Other &lt;&lt; operator definitions added.</li>
+</ul>
+<h3 id="b3">[0.1.6b3]</h3>
+<ul>
+<li>Added NOTICE PAL / PCA9632 support (description https://mwx.twelite.info/v/latest/boards/pal/pal_notice, Samples https://github.com/monowireless/Act_samples/tree/master/Unit_using_PAL_NOTICE)</li>
+<li>Added scale function between 8bit and 0..1000 without division.</li>
+</ul>
+<h3 id="fd542c">[6fd542c]</h3>
+<ul>
+<li>Divisions by 10, 100, and 1000 (simultaneous computation of quotient and remainder) div10(), div100(), div1000() added. Restricted the value range and focused on multiplication and bit shifting.</li>
+<li>Added methods for encrypted packets
+<ul>
+<li>packet_rx::is_secure_pkt() : Checks if a received packet is encrypted or not.</li>
+<li>STG_STD::u8encmode() : Obtain encryption settings in Interactive settings mode</li>
+<li>STG_STD::pu8enckeystr() : Obtain encryption key byte sequence in Interactive settings mode</li>
+</ul></li>
+</ul>
+<h3 id="b2">[0.1.6b2]</h3>
+<ul>
+<li><p>Serial1: Default ports are DIO11(TxD) and DIO9(RxD) because they are usually assigned to I2C, although DIO14 and 15 overlap with I2C in the semiconductor specification.</p></li>
+<li><p>Serial: The baud rate specification generates /100, but this calculation is omitted for the main baud rates.</p></li>
+<li><p>Serial: The proxy function to execute available() and read() externally is held only in void*, and the specification memory is reduced by 8 bytes.</p></li>
+<li><p>Added typedef boolean.</p></li>
+<li><p>Network: Added support for encryption.</p>
+<ul>
+<li>To enable encryption, set NWK_SIMPLE::secure_pkt(const uint8_t*, bool = false). If the second parameter is true, plaintext packets are also received.</li>
+</ul></li>
+</ul>
+<pre><code>    auto&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();
+    nwk &lt;&lt; NWK_SIMPLE::logical_id(0xFE) // set Logical ID. (0xFE means a child device with no ID)
+        &lt;&lt; NWK_SIMPLE::secure_pkt((const uint8_t*)&quot;0123456789ABCDEF&quot;);
+        ;</code></pre>
+<ul>
+<li><p>Added sensor support for SHT3x and BME280</p></li>
+<li><p>Sensor: added a mechanism to exchange configuration parameters and status in legacy code (C library wrapper class).</p></li>
+<li><p>Sensor: I2C address can be specified for SHT3x and BME280.</p></li>
+<li><p>Configuration: added hide_items(). Unnecessary items can be deleted.</p></li>
+<li><p>Configuration: added H/W UTIL menu to display DI status, I2C probe, and PAL EEPROM contents.</p></li>
+<li><p>Configuration: Encryption related menus added.</p></li>
+</ul>
+<h3 id="d8ce8b">[4d8ce8b]</h3>
+<ul>
+<li>I2C-related fixes (fixes to improve compatibility with code implemented using the TwoWire class)
+<ul>
+<li>Processing was not normal because there was no code to send NO_STOP message when processing requestFrom(false).</li>
+<li>Added TwoWire class name aliases.</li>
+<li>The begin() process is now not multiply initialized.</li>
+<li>Added setClock() method (but it is a dummy function and does nothing).</li>
+<li>Added WIRE_CONF::WIRE_?KHZ added. Added major setting values for bus clocks.</li>
+</ul></li>
+</ul>
+<h2 id="twesettings---0.2.5">twesettings - 0.2.5</h2>
+<p>No updates.</p>
+<h2 id="twenet-c---1.3.04-l1304">TWENET C - 1.3.04 (L1304)</h2>
+<p>No update</p>
+<h1 id="mwsdk2020_08_unofficial---2020-08-05">MWSDK2020_08_UNOFFICIAL - 2020-08-05</h1>
+<p>Added settings (Interactive settings mode) to the mwx library.</p>
+<h2 id="mwx---0.1.5">mwx - 0.1.5</h2>
+<ul>
+<li>Added setting BEHAVIOR <STG_STD>.
+<ul>
+<li>Added settings behavior to main loop processing since there are now 4 built-in BEHAVIORs in the mwx library: network board application settings</li>
+<li>BEHAVIOR takes Serial input, so a separate FIFO queue for input was added, and Serail.read() now retrieves data from this queue.</li>
+<li>Added an interface to replace <STG_STD> table with fixed item name and label settings.</li>
+</ul></li>
+<li>Added support for channel managers (using multiple CHANNELs)</li>
+</ul>
+<h2 id="twesettings---0.2.5-1">twesettings - 0.2.5</h2>
+<ul>
+<li>Maintained mwx to add Interactive settings mode.
+<ul>
+<li>Added table definitions for configuration name swapping</li>
+<li>Moved table definitions for mwx to the mwx library</li>
+</ul></li>
+</ul>
+<h2 id="twenet-c---1.3.04-l1304-1">TWENET C - 1.3.04 (L1304)</h2>
+<ul>
+<li>Added support functions for registering internal modules from mwx</li>
+<li>Added header definitions to allow parametrization of MOD_Duplicate checker timeout and time scale values</li>
+</ul>
+<h1 id="mwsdk2020_07_unofficial---2020-07-27">MWSDK2020_07_UNOFFICIAL - 2020-07-27</h1>
+<p>Added some issues and mwx library API.</p>
+<h2 id="mwx---0.1.4">mwx - 0.1.4</h2>
+<ul>
+<li>Enhanced initialization process for MC3630</li>
+<li>Improved accuracy of delay() during setup() and wakeup()</li>
+<li>Added declaration of Serial1 instance</li>
+<li>Addition of delayMilliseconds()</li>
+<li>Addition of digitalReadBitmap()</li>
+<li>Alalogue callback function was not called in some cases</li>
+</ul>
+<h2 id="twesettings---0.2.4">twesettings - 0.2.4</h2>
+<ul>
+<li>Added μsec wait API TWESYSUTIL_vWaitPollMicro()</li>
+</ul>
+<h2 id="twenet-c---1.3.03-l1303">TWENET C - 1.3.03 (L1303)</h2>
+<p>No change</p>
+<h1 id="mwsdk2020_05---2020-05-29">MWSDK2020_05 - 2020-05-29</h1>
+<p>The following is a list of subsequent changes starting with MWSDK2020_05.</p>
+<h2 id="mwx---0.1.3">mwx - 0.1.3</h2>
+<h2 id="twesettings---0.2.3">twesettings - 0.2.3</h2>
+<h2 id="twenet-c---1.3.03-l1303-1">TWENET C - 1.3.03 (L1303)</h2>
+</body>
+</html>

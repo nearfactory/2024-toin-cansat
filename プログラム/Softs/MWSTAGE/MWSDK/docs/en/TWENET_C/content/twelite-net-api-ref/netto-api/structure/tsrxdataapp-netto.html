@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#tsrxdataapp-中継ネット">tsRxDataApp (中継ネット)</a><ul>
+<li><a href="#can-i-become-who-i-want-to-be">Can I become who I want to be?</a></li>
+<li><a href="#have-you-had-a-chance-to-answer-the-previous-question">Have you had a chance to answer the previous question?</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="tsrxdataapp-中継ネット">tsRxDataApp (中継ネット)</h1>
+<p><a href="../../../twelite-net-api-expl/nettowkunitsuite/netto-1/README.html">中継ネット</a>でパケットを受信した時に cbToCoNet_vRxEvent() に渡される構造体。</p>
+<div class="warning">
+<p><a href="../../../twelite-net-api-expl/nettowkunitsuite/netto/README.html">単純ネット</a>と共通の構造体です。中継ネット、単純ネットどちらかでしか使用されないメンバーもあります。</p>
+</div>
+<table>
+<colgroup>
+<col style="width: 25%"></col>
+<col style="width: 74%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>定義名</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>uint8 u8Cmd</code></td>
+<td>パケット種別。送信元で任意に指定できます。データ用、コマンド用といった区分けに使います。値域：0-7</td>
+</tr>
+<tr class="even">
+<td><code>uint8 u8Len</code></td>
+<td>ペイロード長。後述の <code>au8Data[]</code> に格納されるデータ長。</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 u8Seq</code></td>
+<td>シーケンス番号。送信元で任意に設定できます。重複パケットの判定などに使用します。値域: 0-255</td>
+</tr>
+<tr class="even">
+<td><code>uint32 u32SrcAddr</code><br><code>uint32 u32DstAddr</code></td>
+<td>送信元、送信先アドレス。拡張アドレスが格納されます。</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 auData[]</code></td>
+<td>ペイロード。送信元で任意に設定できます。</td>
+</tr>
+<tr class="even">
+<td><code>uint8 u8Lqi</code></td>
+<td>受信品質 LQI 値。中継されてきた場合は、最後の中継機のパケットの受信強度になります。値域：0..255 （受信時の電界強度に対応し 0 が最弱、255 が最強）</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 u8Tick</code></td>
+<td>受信時のミリ秒カウンタ</td>
+</tr>
+<tr class="even">
+<td><code>uint8 u8Hops</code></td>
+<td>中継ホップ数（直接受信した場合は 0）</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 u8RouteXOR</code></td>
+<td>中継経路の中継機のアドレスの XOR 値で中継経路の推定に使用します。<br>直接受信した場合は 0 となり、<code>0x81234567</code> と <code>0x82345678</code> の中継機を経由した場合、<code>0x81 0x23 0x45 0x67 0x82 0x34 0x56 0x78</code> の XOR 値 <code>0x18</code> が格納されます。</td>
+</tr>
+<tr class="even">
+<td><code>uint8 u8Lqi1st</code></td>
+<td>最初の中継機が受信したときの LQI 値が格納されます。</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 bSecurePkt</code></td>
+<td>パケットが暗号化されていた場合 <code>TRUE</code> になります。この時点で既に <code>auData[]</code> は平文に復号されています。このメンバーが <code>FALSE</code> で受信されたパケットの処理をしなければ、平文パケットを無視し、より安全な暗号化パケットのみを処理することになります。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="can-i-become-who-i-want-to-be">Can I become who I want to be?</h2>
+<p>That’s a tough question but thankfully, our team is on it. Please bear with us while we’re investigating.</p>
+<h2 id="have-you-had-a-chance-to-answer-the-previous-question">Have you had a chance to answer the previous question?</h2>
+<p>Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I’m afraid we are not able to provide the answer at this point.</p>
+</body>
+</html>

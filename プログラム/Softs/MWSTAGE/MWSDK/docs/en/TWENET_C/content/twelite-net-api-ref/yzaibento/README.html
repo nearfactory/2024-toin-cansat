@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#user-defined-event-handling-functions">User defined event handling functions</a><ul>
+<li><a href="#register">Register</a></li>
+<li><a href="#the-notified-event">The notified event</a></li>
+<li><a href="#about-state-transitions">About state transitions</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="user-defined-event-handling-functions">User defined event handling functions</h1>
+<p>A user-defined event handling function is a function defined by the user for the purpose of performing event handling in the form of a callback from TWENET. Although we call them functions, they behave as state transition machines.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> cbAppColdStart(bool_t bInit) {</a>
+<a class="sourceLine" id="cb1-2" title="2">    <span class="cf">if</span> (bInit == FALSE) {</a>
+<a class="sourceLine" id="cb1-3" title="3">        ...</a>
+<a class="sourceLine" id="cb1-4" title="4">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-5" title="5">        ...</a>
+<a class="sourceLine" id="cb1-6" title="6">        ToCoNet_Event_Register_State_Machine(vProcessEvCore);</a>
+<a class="sourceLine" id="cb1-7" title="7">    }</a>
+<a class="sourceLine" id="cb1-8" title="8">}</a>
+<a class="sourceLine" id="cb1-9" title="9"></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="dt">void</span> vProcessEvCore(</a>
+<a class="sourceLine" id="cb1-11" title="11">        tsEvent *pEv,</a>
+<a class="sourceLine" id="cb1-12" title="12">        teEvent eEvent,</a>
+<a class="sourceLine" id="cb1-13" title="13">        uint32 u32evarg) {</a>
+<a class="sourceLine" id="cb1-14" title="14">    <span class="co">// check boot seq</span></a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="cf">if</span> (eEvent == E_EVENT_START_UP) {</a>
+<a class="sourceLine" id="cb1-16" title="16">        <span class="cf">if</span> (u32evarg &amp; EVARG_START_UP_WAKEUP_RAMHOLD_MASK) {</a>
+<a class="sourceLine" id="cb1-17" title="17">            <span class="co">// woke from NORMAL SLEEP (RAMHOLD)</span></a>
+<a class="sourceLine" id="cb1-18" title="18">        }</a>
+<a class="sourceLine" id="cb1-19" title="19">        <span class="cf">if</span> (u32evarg &amp; EVARG_START_UP_WAKEUP_MASK) {</a>
+<a class="sourceLine" id="cb1-20" title="20">            <span class="co">// woke from DEEP SLEEP</span></a>
+<a class="sourceLine" id="cb1-21" title="21">        } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb1-22" title="22">            <span class="co">// COLD boot</span></a>
+<a class="sourceLine" id="cb1-23" title="23">        }</a>
+<a class="sourceLine" id="cb1-24" title="24">    }</a>
+<a class="sourceLine" id="cb1-25" title="25">    </a>
+<a class="sourceLine" id="cb1-26" title="26">    <span class="cf">switch</span> (pEv-&gt;eState) {</a>
+<a class="sourceLine" id="cb1-27" title="27">    <span class="cf">case</span> E_STATE_IDLE:</a>
+<a class="sourceLine" id="cb1-28" title="28">        ; <span class="co">// some task</span></a>
+<a class="sourceLine" id="cb1-29" title="29">        ToCoNet_Event_SetState(pEv, E_STATE_APP_NORMAL);</a>
+<a class="sourceLine" id="cb1-30" title="30">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb1-31" title="31">    <span class="cf">case</span> E_STATE_APP_NORMAL:</a>
+<a class="sourceLine" id="cb1-32" title="32">        ; <span class="co">// some task (e.g. send s Tx packet)</span></a>
+<a class="sourceLine" id="cb1-33" title="33">        <span class="cf">if</span> (cond) {</a>
+<a class="sourceLine" id="cb1-34" title="34">            ToCoNet_Event_SetState(pEv, E_STATE_APP_WAIT_TX);</a>
+<a class="sourceLine" id="cb1-35" title="35">        }</a>
+<a class="sourceLine" id="cb1-36" title="36">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb1-37" title="37">    <span class="cf">case</span> E_STATE_APP_WAIT_TX:</a>
+<a class="sourceLine" id="cb1-38" title="38">        ; <span class="co">// some task (e.g. wait until Tx finishes)</span></a>
+<a class="sourceLine" id="cb1-39" title="39">        <span class="cf">if</span> (cond) {</a>
+<a class="sourceLine" id="cb1-40" title="40">            ToCoNet_Event_SetState(pEv, E_STATE_APP_NORMAL);</a>
+<a class="sourceLine" id="cb1-41" title="41">        }</a>
+<a class="sourceLine" id="cb1-42" title="42">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb1-43" title="43">    }</a>
+<a class="sourceLine" id="cb1-44" title="44">}</a></code></pre></div>
+<h3 id="register">Register</h3>
+<p>Up to two user-defined event processing functions can be registered with <a href="toconet_event-api/toconet_event_register_state_machine.html"><code>ToCoNet_Event_Register_State_Machine()</code></a>.</p>
+<div class="info">
+<p>User-defined event handling functions must be registered to receive <a href="ibento.html"><code>E_EVENT_START_UP</code></a> events.</p>
+</div>
+<h3 id="the-notified-event">The notified event</h3>
+<p>The following three events are notified. Other events are passed on as function callback calls by the <a href="toconet_event-api/toconet_event_process.html#%22toconet_event_process"><code>ToCoNet_Event_Process()</code></a> function.</p>
+<ul>
+<li><a href="ibento.html">E_EVENT_START_UP</a> : on start-up</li>
+<li><a href="ibento.html">E_EVENT_TICK_TIMER</a> : every tick timer fired (4ms default)</li>
+<li><a href="ibento.html">E_EVENT_TICK_SECOND</a> : every 1sec</li>
+</ul>
+<p>The following code is an example of communicating the completion of a transmission to the user-defined event processing function <code>vProcessEvCore()</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb2-1" title="1">cbToCoNet_vTxEvent(uint8 u8CbId, uint8 u8Stat) {</a>
+<a class="sourceLine" id="cb2-2" title="2">    ToCoNet_Event_Process(E_EVENT_APP_TX_COMPLETE, </a>
+<a class="sourceLine" id="cb2-3" title="3">        u8CbId, vProcessEvCore);</a>
+<a class="sourceLine" id="cb2-4" title="4">}</a></code></pre></div>
+<div class="warning">
+<p>Calling <code>vProcessEvCore()</code> without using <code>ToCoNet_Event_Process()</code> should be avoided. The state transitions shown in <a href="../../twelite-net-api-expl/twenet-fur/yzaibentofur.html">the flow diagram</a> will not take place and there will be inconsistencies in the information contained in the management structure of the user-defined event processing function.</p>
+<p>It must not be called from an interrupt handler.</p>
+</div>
+<h3 id="about-state-transitions">About state transitions</h3>
+<p>The state machine of user-defined event handling functions starts from <code>E_STATE_IDLE (0)</code>.</p>
+<p>When a user-defined event processing function is called, a state transition is declared by calling the <code>ToCoNet_Event_SetState()</code> function. After declaring the state transition and exiting the user defined event handling function, the function is called again with the <code>E_EVENT_NEW_STATE</code> event as a parameter. This process is continuous as long as the state transition continues (<a href="../../twelite-net-api-expl/twenet-fur/yzaibentofur.html">flow diagram</a>).</p>
+<div class="info">
+<p>You can keep the previous state by calling <a href="toconet_event-api/toconet_event_vkeepstateonramholdsleep.html"><code>ToCoNet_Event_vKeepStateOnRamHoldSleep()</code></a> before sleep (hold RAM), and receive <code>E_EVENT_START_UP</code> event after sleep is restored.</p>
+</div>
+</body>
+</html>

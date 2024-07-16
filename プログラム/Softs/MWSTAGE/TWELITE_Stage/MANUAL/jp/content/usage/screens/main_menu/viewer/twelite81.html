@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>標準アプリ ビューア</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">標準アプリ ビューア</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#標準アプリ-ビューア">標準アプリ ビューア</a></li>
+</ul>
+</nav>
+<h1 id="標準アプリ-ビューア">標準アプリ ビューア</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p><a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/">App_Twelite(標準アプリ)</a>の<a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/step3-81.html">0x81コマンド</a>を解釈して表示します。</p>
+<p><img src="data:image/png;base64,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" /></p>
+<p>PCに接続する TWELITE に App_Twelite（標準アプリ） または App_Wings（親機・中継機アプリ） を書き込んでおき、通信相手のTWELITEから受信したデータがターミナルに表示されることを確認してから使用します。</p>
+<p>通信相手の TWELITE には App_Twelite（標準アプリ）を書き込んでおきます。標準アプリのボタンやアナログ入力の状態のメッセージ (0x81メッセージ) を受信すると、その内容を mwm5 のパーサーライブラリにより解釈して表示します。</p>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜けて、前メニューに戻ります。</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>フォントを変更します。</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>テスト用のダミーデータによる画面表示を行います。</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>TWELITE のリセットピンを制御し、リセットします。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>ESCキーを入力することで、この画面を抜けます。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

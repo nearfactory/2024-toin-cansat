@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#単純ネット">単純ネット</a><ul>
+<li><a href="#中継について">中継について</a></li>
+<li><a href="#役割と宛先について">役割と宛先について</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="単純ネット">単純ネット</h1>
+<p>単純ネットでは、TWENET 内での中継配送手続きの介在を行わず、単純なノード間通信を行います。通信方法はアドレス指定によるもの、同報通信による２種類を利用します。標準アプリケーション <a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/index.html">App_Twelite</a> など多くのアプリケーションはこの単純ネットを用いています。</p>
+<h3 id="中継について">中継について</h3>
+<p>単純ネットでサポートする通信自体は中継を実施しないスター型のネットワークになりますが、簡単で実用的な中継を実装する方法もあります。</p>
+<div class="info">
+<p>中継配送を行う場合は、いくつかの方法があります。代表的な中継方法を紹介します。</p>
+<p>同報通信により中継を実施する方法。受信したパケット内に中継回数にあたる寿命データを含めておいて、中継ごとに寿命カウントを減少させて、一定回数無条件に中継する。</p>
+</div>
+<div class="info">
+<p>特定の要求に基づいたネットワークの実装も可能です。例えばショートアドレスを決め打ちにしたリニア型のネットワークです。</p>
+<p>親局は 0x0000 のアドレスとし、親局から順に 0x0001 0x0002 … とショートアドレスを振っていきます。自局の前後のアドレスは常に通信可能という前提をおきます。</p>
+<p>こうすれば、子局から親局の配送は、自局のアドレスより１小さいアドレスに配送します。</p>
+</div>
+<div class="danger">
+<h4 id="ネットワークの自動構成について">ネットワークの自動構成について</h4>
+<p>周囲の中継器を探索し、中継局を決定することは、無線通信においては非常にオーバヘッドが大きいため、多くのアプリケーションでは推奨されません。</p>
+<ul>
+<li>通信相手先を決定するのに多くの無線通信が必要になる。
+<ul>
+<li>電池の消耗</li>
+<li>起動後から通信可能になるまでの時間がかかる</li>
+</ul></li>
+<li>安定性が高くない中継局が選ばれてしまう場合がある。
+<ul>
+<li>通信相手先の探索条件を、その時もっとも良い通信とした場合、偶然条件が良かった遠くの局が選ばれてしまう。</li>
+</ul></li>
+<li>通信相手先の途絶を知るにも時間がかかる。
+<ul>
+<li>通信失敗が連続したといった条件を成立するまでは、通信相手先の途絶とすることができないため、通信相手先の再探索まで長い時間が必要（または動的に通信相手先を切り替えるといった処方が必要）</li>
+</ul></li>
+<li>中継ネットワークを維持するために多くの無線通信が必要になる。
+<ul>
+<li>帯域の圧迫となり、結果として、収容可能ノード数が減少する。</li>
+</ul></li>
+</ul>
+<p>上記のような中継局を決定・維持するための原理的な問題があります。どのような手法を取っても一長一短があり、要求に合わせて考慮する必要があります。</p>
+<p>一般に電池駆動のノードでは、こういった中継のための通信は現実的でありません。</p>
+</div>
+<h3 id="役割と宛先について">役割と宛先について</h3>
+<p>単純ネットであっても、通常は親子といった役割を定めたネットワークとします。この役割についても、無線パケット通信ではいくつかの実装方法があります。</p>
+<div class="info">
+<h4 id="アドレスによるもの">アドレスによるもの。</h4>
+<p>無線パケットでサポートするアドレス方式をそのまま用いて、アプリケーションでの役割を実現する方法です。具体的には<a href="../../paketto/adoresuno.html#%22nettono">ショートアドレス</a>を用いて、親局のアドレスを 0x0000 とし、子局のアドレスを 0x0001 … とする方法です。</p>
+<p>子局は親局に配送する場合は、常に 0x0000 宛に配送すればよく、また、中継を必要としない場合は、ACK 通信を用いて効率的な無線配送が可能です。</p>
+</div>
+<div class="info">
+<h4 id="パケット内のデータによるもの">パケット内のデータによるもの。</h4>
+<p>中継を実現したい場合は、アドレスや役割に相当するもの（ここでは論理アドレスと言います）を無線パケット内のデータとして格納します。</p>
+<p>親局には 0x00 という論理アドレスを割り振ります。子局には0x01…という論理アドレスを割り振ります。この論理アドレスは、無線送信時のパケット内のデータとして、送り主・宛先として格納します。</p>
+<p>ショートアドレスの仕組みを使用したいところですが、中継を行う時に都合が良くないため（中継局のショートアドレスを送信元アドレスとして中継パケットを送るため）、パケット内のデータとして格納します。</p>
+<p>無線パケットは全て同報通信として送信します。同報通信であるため、電波到達可能範囲の全てのノードがそのパケットを受信します。（注：宛先を指定したパケットであっても、その内容は電波到達範囲であれば全てのノードが受信します。宛先が違うためその受信データを無視しているだけです。）</p>
+<p>受信されたパケットのデータを参照して、自局で処理すべきか、中継すべきかといったことをアプリケーション側で決定します。</p>
+</div>
+</body>
+</html>

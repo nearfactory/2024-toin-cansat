@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Linux</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Linux</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#linux">Linux</a><ul>
+<li><a href="#environment">Environment</a></li>
+<li><a href="#device-driver">device driver</a></li>
+<li><a href="#application-registration">Application Registration</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="linux">Linux</h1>
+<p><code>Linux</code></p>
+<div class="warning">
+<p>USB device ID for TWELITE R2 has changed from 0403:6001 to 0403:6015. udev setting needs to be added.</p>
+</div>
+<div class="danger">
+<p>32bit version is not available.</p>
+</div>
+<div class="warning">
+<p>The Linux environment has different types of packages available depending on the distribution and version. You may need to install and configure packages individually.</p>
+<p>Please refer to general information by referring to the error messages.</p>
+</div>
+<h3 id="environment">Environment</h3>
+<p>TWELITE STAGE is developed and tested in the following environment.</p>
+<ul>
+<li>Ubuntu 16.04, 18.04, 20.04</li>
+<li>NNLinux Beta8 64bit</li>
+<li>Centos7</li>
+</ul>
+<h3 id="device-driver">device driver</h3>
+<p>In order to recognize MONOSTICK or TWELITE-R from TWELITE STAGE, you must unload the ftdi_sio module and also have read/write permission to the USB device.</p>
+<div class="info">
+<p>The ID of the USB device will be as follows.</p>
+<ul>
+<li>Vendor ID 0x0403</li>
+<li>Product ID 0x6001(MONOSTICK,TWELITE R) or 0x6015 (TWELITE R2)</li>
+</ul>
+</div>
+<p>We have a udev configuration script Ј(Ubuntu, CentOS Ј) to automate this configuration. It copies the definition to <code>/etc/udev/rules.d</code> and reloads the configuration. After configuration, unplug and plug the USB device before running <code>TWELITE_Stage.run</code>. If the USB device appears on the screen right after startup, the configuration is reflected.</p>
+<h4 id="ubuntu-16.04-18.04.-20.04">Ubuntu 16.04, 18.04. 20.04</h4>
+<pre class="text"><code>$ cd ./MWSTAGE/TWELITE_Stage/INSTALL/ubuntu/
+$ sudo ./set_udev_sudo.sh</code></pre>
+<p>Definition file (line breaks for easier reading)</p>
+<pre class="text"><code>ACTION==&quot;add&quot;,
+   ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6001&quot;,
+   MODE=&quot;0666&quot;,
+   RUN+=&quot;/bin/sh -c &#39;rmmod ftdi_sio &amp;&amp; rmmod usbserial&#39;&quot;
+ACTION==&quot;add&quot;,
+   ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6015&quot;,
+   MODE=&quot;0666&quot;,
+   RUN+=&quot;/bin/sh -c &#39;rmmod ftdi_sio &amp;&amp; rmmod usbserial&#39;&quot;</code></pre>
+<h4 id="centos-7">Centos 7</h4>
+<pre class="text"><code>$ cd ./MWSTAGE/TWELITE_Stage/INSTALL/centos/
+$ sudo ./set_udev_sudo.sh</code></pre>
+<p>Definition file (line breaks for easier reading)</p>
+<pre class="text"><code>ACTION==&quot;add&quot;,
+   ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6001&quot;,
+   MODE=&quot;0666&quot;, 
+   RUN+=&quot;/bin/sh -c &#39;/usr/sbin/rmmod ftdi_sio&#39;&quot;
+ACTION==&quot;add&quot;,
+   ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6015&quot;,
+   MODE=&quot;0666&quot;, 
+   RUN+=&quot;/bin/sh -c &#39;/usr/sbin/rmmod ftdi_sio&#39;&quot;</code></pre>
+<h3 id="application-registration">Application Registration</h3>
+<p>Register your program according to your desktop environment if necessary.</p>
+<div class="info">
+<p>You may not be able to run <code>TWELITE_Stage.run</code> from the file icon on your desktop. This is because the system may not recognize <code>TWELITE_Stage.run</code> as an executable.</p>
+</div>
+<h4 id="ubuntu-16.04-18.04-20.04">Ubuntu 16.04, 18.04, 20.04</h4>
+<p>Definition file generation scripts for Ubuntu are available.</p>
+<pre class="text"><code>$ cd ./MWSTAGE/TWELITE_Stage/INSTALL/ubuntu/
+$ ./make_launch_icon.sh</code></pre>
+<p>This script creates a <code>.desktop</code> file (app definition) in <code>$HOME/.local/share/applications</code>.</p>
+<p>After the script is executed, the TWELITE STAGE icon will be added to the application list.</p>
+</body>
+</html>

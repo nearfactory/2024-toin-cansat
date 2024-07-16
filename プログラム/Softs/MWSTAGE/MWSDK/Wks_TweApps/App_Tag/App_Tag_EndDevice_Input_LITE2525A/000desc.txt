@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=無線タグアプリ（App_Tag）
+DESC=TWELITE 2525A (終売) 用です。
+URL=https://mono-wireless.com/jp/products/TWE-Lite-2525A/index.html
+[ENGLISH]
+TITLE=App_Tag (EndDevice Input) for TWELITE 2525A
+DESC=For the TWELITE 2525A (Deprecated).
+URL=https://mono-wireless.com/jp/products/TWE-Lite-2525A/index.html

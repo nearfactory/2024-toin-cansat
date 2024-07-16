@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=Actのテンプレート
+DESC=中身が何もない setup(), loop() を実装したテンプレートです。
+新しく Act を記述するのに利用してください。
+URL=jp/MWX/content/act_samples/act_opening.html
+[ENGLISH]
+TITLE=Act empty template
+DESC=Act template with empty setup() and loop() functions.
+Useful for creating a new Act.
+URL=en/MWX/content/act_samples/act_opening.html

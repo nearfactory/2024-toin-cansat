@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Installing the TWELITE SDK</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Installing the TWELITE SDK</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#installing-the-twelite-sdk">Installing the TWELITE SDK</a><ul>
+<li><a href="#set-environmental-variables">Set Environmental variables</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="installing-the-twelite-sdk">Installing the TWELITE SDK</h1>
+<p>Download the TWELITE STAGE SDK distribution archive (e.g. ZIP) and extract it to an appropriate folder.</p>
+<div class="warning">
+<p>The folder names of each level of the destination folder must not contain anything other than one-byte numbers <code>0..9</code>, one-byte alphabets <code>a..zA..Z</code>, and some symbols <code>-_.</code>. In short, it must not contain spaces, Kanji characters, Hiragana characters, etc.</p>
+</div>
+<p>The following is an example folder after extracting the TWELITE STAGE SDK archive. (Windows, <code>c:\work\MWSTAGE...</code>) <img src="data:image/png;base64,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" /></p>
+<p><strong>See <a target=_blank href="https://stage.twelite.info/v/eng/install/">Installing the TWELITE STAGE SDK</a> for more information.</strong></p>
+<div class="warning">
+<p>This is the end of the normal installation process. Refer to the following “Set Environmental variables” and below as necessary.</p>
+</div>
+<h2 id="set-environmental-variables">Set Environmental variables</h2>
+<p>If you want to build with other than TWELITE STAGE application, please set the environment variables (e.g. <code>MWSDK_ROOT</code>).</p>
+<div class="info">
+<p>If you are using the TWELITE STAGE application, you <strong>do not need</strong> to set these environment variables. Inside the TWELITE STAGE application, those environment variables will be set appropriately.</p>
+</div>
+<p><code>MWSDK_ROOT</code>, <code>MWSDK_ROOT_WINNAME</code>(for Windows10) need to be set.</p>
+<h4 id="windows1011">Windows10,11</h4>
+<p>In this example, the name of the extracted folder is <code>C:\MWSTAGE</code>. If you have installed the software in a different folder, please change the name.</p>
+<p>Run <code>C:\MWSTAGE\Tools\SET_ENV.CMD</code> to set the following environment variables:</p>
+<ul>
+<li><code>MWSDK_ROOT</code></li>
+<li><code>MWSDK_ROOT_WINNAME</code></li>
+</ul>
+<p>For example, the following variables are set:</p>
+<pre><code>MWSDK_ROOT=C:/MWSTAGE/MWSDK/
+MW_ROOT_WINNAME=C:\MWSTAGE\MWSDK\</code></pre>
+<div class="warning">
+<p>To uninstall the TWELITE STAGE SDK from the installed PC, please do the following:</p>
+<ul>
+<li>Run <code>UNSET_ENV.cmd</code>. This will unset the environment variables.</li>
+<li>Delete the MWSTAGE folder.</li>
+</ul>
+</div>
+<h4 id="linux">Linux</h4>
+<p>Set the development environment and shell to reflect the MWX_ROOT environment variable.</p>
+<p>There are several ways to do this, but add the following setting to the <code>.profile</code> of your home folder (if the file does not exist, please create a new one). You can even build VSCode with this setting.</p>
+<p><code>MWSDK_ROOT=/foo/bar/MWSTAGE/MWSDK/</code><br />
+<code>export MWSDK_ROOT</code></p>
+<p>To add it without using the editor, enter the command as follows. The $ is a prompt and will be displayed differently depending on your environment. The <code>/foo/bar/MSWSDK</code> part should be rewritten according to the installed folder.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">$ <span class="bu">cd</span> <span class="va">$HOME</span></a>
+<a class="sourceLine" id="cb2-2" title="2">$ <span class="bu">echo</span> MWSDK_ROOT=/foo/bar/MWSTAGE/MWSDK<span class="op">&gt;&gt;</span>.profile</a>
+<a class="sourceLine" id="cb2-3" title="3">$ <span class="bu">echo</span> export MWSDK_ROOT<span class="op">&gt;&gt;</span>.profile</a></code></pre></div>
+<h4 id="macos">macOS</h4>
+<p>Set the development environment and shell to reflect the <code>MWX_ROOT</code> environment variable.</p>
+<p>There are several ways to do this, but add the following settings to <code>.profile</code> in your home folder (create a new file if you don’t have one). You can even build VSCode with this setting.</p>
+<p><code>MWSDK_ROOT=/foo/bar/MWSTAGE/MWSDK/</code><br />
+<code>export MWSDK_ROOT</code></p>
+<p>To add it without using the editor, enter the command as follows. The $ is a prompt and will be displayed differently depending on your environment. The <code>/foo/bar/MSWSDK</code> part should be rewritten according to the installed folder.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">$ <span class="bu">cd</span> <span class="va">$HOME</span></a>
+<a class="sourceLine" id="cb3-2" title="2">$ <span class="bu">echo</span> MWSDK_ROOT=/foo/bar/MWSTAGE/MWSDK<span class="op">&gt;&gt;</span>.profile</a>
+<a class="sourceLine" id="cb3-3" title="3">$ <span class="bu">echo</span> export MWSDK_ROOT<span class="op">&gt;&gt;</span>.profile</a></code></pre></div>
+<div class="info">
+<p>Use LaunchD to apply <code>MWSDK_ROOT</code> to the entire environment.</p>
+<p>Some settings in VSCode refer to environment variables, but they are not required for the build.</p>
+</div>
+</body>
+</html>

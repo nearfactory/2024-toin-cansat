@@ -1,0 +1,9 @@
+[JAPANESE]
+TITLE=ピンポン
+DESC=相手から受信したパケットをそのまま相手に送信するサンプルです。
+複数のTWELITEにこのActを書き込みます。
+URL=jp/MWX/content/act_samples/pingpong.html
+[ENGLISH]
+TITLE=PingPong
+DESC=Act sample that sends received packets as they are. Write this act to multiple devices.
+URL=en/MWX/content/act_samples/pingpong.html

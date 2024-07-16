@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Scratch</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Scratch</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#scratch">Scratch</a><ul>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#loop">loop()</a><ul>
+<li><a href="#input-detection-of-buttons-switches.">Input detection of buttons (switches).</a></li>
+<li><a href="#input-from-serial.">Input from serial.</a></li>
+</ul></li>
+<li><a href="#wakeup">wakeup()</a></li>
+<li><a href="#transmit">Transmit()</a></li>
+<li><a href="#on_tx_comp">on_tx_comp()</a></li>
+<li><a href="#on_rx_packet">on_rx_packet()</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="scratch">Scratch</h1>
+<p>Template code.</p>
+<div class="success">
+<p>This act includes</p>
+<ul>
+<li>Sending radio packets (‘<code>t</code>’ key)</li>
+<li>Sleep (‘<code>s</code>’ key)</li>
+<li>Input from serial port - <a href="../api-reference/classes/twe-stream/#read">Serial</a></li>
+<li>Digital (button) input - <a href="../api-reference/predefined_objs/buttons.html">Buttons</a></li>
+</ul>
+</div>
+<h2 id="setup">setup()</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-2" title="2">    <span class="co">/*** SETUP section */</span></a>
+<a class="sourceLine" id="cb1-3" title="3">    tx_busy = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">    <span class="co">// the twelite main class</span></a>
+<a class="sourceLine" id="cb1-6" title="6">    the_twelite</a>
+<a class="sourceLine" id="cb1-7" title="7">        &lt;&lt; TWENET::appid(APP_ID)    <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb1-8" title="8">        &lt;&lt; TWENET::channel(CHANNEL) <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb1-9" title="9">        &lt;&lt; TWENET::rx_when_idle();  <span class="co">// open receive circuit (if not set, it can&#39;t listen packts from others)</span></a>
+<a class="sourceLine" id="cb1-10" title="10"></a>
+<a class="sourceLine" id="cb1-11" title="11">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb1-13" title="13">    nwk &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0xFE</span>); <span class="co">// set Logical ID. (0xFE means a child device with no ID)</span></a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="co">/*** </span><span class="re">BEGIN</span><span class="co"> section */</span></a>
+<a class="sourceLine" id="cb1-16" title="16">    Buttons.begin(pack_bits(PIN_BTN), <span class="dv">5</span>, <span class="dv">10</span>); <span class="co">// check every 10ms, a change is reported by 5 consequent values.</span></a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18">    the_twelite.begin(); <span class="co">// start twelite!</span></a>
+<a class="sourceLine" id="cb1-19" title="19"></a>
+<a class="sourceLine" id="cb1-20" title="20">    <span class="co">/*** INIT message */</span></a>
+<a class="sourceLine" id="cb1-21" title="21">    Serial &lt;&lt; <span class="st">&quot;--- Scratch act ---&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb1-22" title="22">}</a></code></pre></div>
+<p>Set <code>the_twelite</code> to set the application ID <code>APP_ID</code>, the radio channel <code>CHANNEL</code> and the receive presence.</p>
+<p>It also generates <code>nwk</code> and specifies the child machine address <code>0xFE</code>. This address means that this is an unnamed child machine that has not been addressed by a child machine.</p>
+<div class="info">
+<p>The addresses that can be set are 0x00: parent unit, 0x01~0xEF: child unit, 0xFE: unspecified child unit address range.</p>
+<p>The address to be specified as the transmission destination is 0x00 for the parent machine, 0x01~0xEF for the specified parent machine address, 0xFE for any child machine address, and 0xFF for any address including the parent machine.</p>
+</div>
+<p>It also initializes the Buttons object. This is a chatter-suppressing algorithm by successive references, which determines HI or LOW of the target port (PIN_BTN only) if the value is the same 5 times in 10ms. <a href="../api-reference/funcs/utility/pack_bits.html"><code>pack_bits</code></a><code>(N1, N2, ...)</code> pack_bits(N1, N2, …)’ does <code>1UL&lt;&lt;N1 | 1UL &lt;&lt; N2 | ...</code> to make a bitmap.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">the_twelite.begin(); <span class="co">// start twelite!</span></a></code></pre></div>
+<p>This is the procedure to start <code>the_twelite</code>, it didn’t appear in act0..4, but you should call it if you set up <code>the_twelite</code> or register various behaviors.</p>
+<h2 id="begin">begin()</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> begin() {</a>
+<a class="sourceLine" id="cb3-2" title="2">    Serial &lt;&lt; <span class="st">&quot;..begin (run once at boot)&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb3-3" title="3">}</a></code></pre></div>
+<p>Called only once after <code>setup()</code> on startup. Only displays a message.</p>
+<h2 id="loop">loop()</h2>
+<h3 id="input-detection-of-buttons-switches.">Input detection of buttons (switches).</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="cf">if</span> (Buttons.available()) {</a>
+<a class="sourceLine" id="cb4-2" title="2">    <span class="dt">uint32_t</span> bm, cm;</a>
+<a class="sourceLine" id="cb4-3" title="3">    Buttons.read(bm, cm);</a>
+<a class="sourceLine" id="cb4-4" title="4"></a>
+<a class="sourceLine" id="cb4-5" title="5">    <span class="cf">if</span> (cm &amp; <span class="bn">0x80000000</span>) {</a>
+<a class="sourceLine" id="cb4-6" title="6">        <span class="co">// the first capture.</span></a>
+<a class="sourceLine" id="cb4-7" title="7">    }</a>
+<a class="sourceLine" id="cb4-8" title="8"></a>
+<a class="sourceLine" id="cb4-9" title="9">    Serial &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:BTN&quot;</span> &lt;&lt; format(<span class="st">&quot;%b&quot;</span>) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb4-10" title="10">}</a></code></pre></div>
+<p>The state is determined by continuous reference to <a href="../api-reference/predefined_objs/buttons.html">Buttons</a>. When the button state changes, it is output serially.</p>
+<h3 id="input-from-serial.">Input from serial.</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="cf">while</span>(Serial.available()) {</a>
+<a class="sourceLine" id="cb5-2" title="2">  <span class="dt">int</span> c = Serial.read();</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4">    Serial &lt;&lt; <span class="ch">&#39;[&#39;</span> &lt;&lt; <span class="dt">char</span>(c) &lt;&lt; <span class="ch">&#39;]&#39;</span>;</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6">  <span class="cf">switch</span>(c) {</a>
+<a class="sourceLine" id="cb5-7" title="7">  <span class="cf">case</span> <span class="ch">&#39;p&#39;</span>: ... <span class="co">// display millis()</span></a>
+<a class="sourceLine" id="cb5-8" title="8">  <span class="cf">case</span> <span class="ch">&#39;t&#39;</span>: ... <span class="co">// transmit radio packet (vTransmit)</span></a>
+<a class="sourceLine" id="cb5-9" title="9">        <span class="cf">if</span> (!tx_busy) {</a>
+<a class="sourceLine" id="cb5-10" title="10">                    tx_busy = Transmit();</a>
+<a class="sourceLine" id="cb5-11" title="11">                    <span class="cf">if</span> (tx_busy) {</a>
+<a class="sourceLine" id="cb5-12" title="12">                        Serial  &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:tx request success! (&quot;</span> </a>
+<a class="sourceLine" id="cb5-13" title="13">                                        &lt;&lt; <span class="dt">int</span>(tx_busy.get_value()) &lt;&lt; <span class="ch">&#39;)&#39;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb5-14" title="14">                    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb5-15" title="15">                        Serial &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:tx request failed&quot;</span> &lt;&lt; mwx::crlf;;</a>
+<a class="sourceLine" id="cb5-16" title="16">                    }</a>
+<a class="sourceLine" id="cb5-17" title="17">                }</a>
+<a class="sourceLine" id="cb5-18" title="18">  <span class="cf">case</span> <span class="ch">&#39;s&#39;</span>: ... <span class="co">// sleeping</span></a>
+<a class="sourceLine" id="cb5-19" title="19">                Serial &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:sleeping for &quot;</span> &lt;&lt; <span class="dv">5000</span> &lt;&lt; <span class="st">&quot;ms&quot;</span> &lt;&lt; mwx::crlf &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb5-20" title="20">                the_twelite.sleep(<span class="dv">5000</span>);</a>
+<a class="sourceLine" id="cb5-21" title="21">                <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb5-22" title="22">  }</a>
+<a class="sourceLine" id="cb5-23" title="23">}</a></code></pre></div>
+<p>If <code>Serial.available()</code> is <code>true</code>, the input from the serial port is stored. It reads one character from the serial and processes it according to the input character.</p>
+<h4 id="enter-t-for-wireless-transmission">Enter <code>t</code> for wireless transmission</h4>
+<p>When ‘<code>t</code>’ is input, sending is done. In this sample, the tx_busy flag is used to prevent continuous input.</p>
+<div class="info">
+<p>Send requests are stored in a queue up to a certain number of packets, so it is possible to stack requests in the range of the queue (3 packets).</p>
+<p>The following is an example of what happens when you don’t check <code>if(!tx_busy)</code> and type ‘<code>tttt</code>’ continuously: the queue fills up at the fourth request and the request fails. The pkt object obtained by <code>.prepare_tx_packet()</code> in <code>Transmit()</code> will be <code>false</code>.</p>
+<p>The timing of the transmissions is randomised, so the completion of transmissions is not in the order in which they are requested.</p>
+<pre><code>--- Scratch act ---
+..begin (run once at boot)
+[t]11591:Transmit()
+11592:tx request success! (1)
+[t]11593:Transmit()
+11593:tx request success! (2)
+[t]11594:Transmit()
+11595:tx request success! (3)
+[t]11595:Transmit()
+TX QUEUE is FULL
+11596:tx request failed
+11654:tx completed!(id=2, stat=1)
+11719:tx completed!(id=3, stat=1)
+11745:tx completed!(id=1, stat=1)</code></pre>
+</div>
+<h4 id="type-s-to-sleep.">Type <code>s</code> to sleep.</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">the_twelite.sleep(<span class="dv">5000</span>);</a></code></pre></div>
+<p>The system will sleep for 5000ms=5 seconds. After recovery, <code>wakeup()</code> is executed.</p>
+<h2 id="wakeup">wakeup()</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">void</span> wakeup() {</a>
+<a class="sourceLine" id="cb8-2" title="2">    Serial &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:wake up!&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb8-3" title="3">}</a></code></pre></div>
+<p>First to be called on sleep wake up. Display of message only.</p>
+<h2 id="transmit">Transmit()</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1">MWX_APIRET Transmit() {</a>
+<a class="sourceLine" id="cb9-2" title="2">    Serial &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:Transmit()&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4">    <span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; pkt = the_twelite.network.use&lt;NWK_SIMPLE&gt;().prepare_tx_packet()) {</a>
+<a class="sourceLine" id="cb9-5" title="5">        <span class="co">// set tx packet behavior</span></a>
+<a class="sourceLine" id="cb9-6" title="6">        pkt &lt;&lt; tx_addr(<span class="bn">0xFF</span>)  <span class="co">// Broadcast communications</span></a>
+<a class="sourceLine" id="cb9-7" title="7">            &lt;&lt; tx_retry(<span class="bn">0x1</span>)    <span class="co">// 1 resend</span></a>
+<a class="sourceLine" id="cb9-8" title="8">            &lt;&lt; tx_packet_delay(<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">20</span>); <span class="co">// Transmission delay between 100-200 ms, retransmission interval 20 ms</span></a>
+<a class="sourceLine" id="cb9-9" title="9"></a>
+<a class="sourceLine" id="cb9-10" title="10">        <span class="co">// Specification of the data to be sent (to be determined for each application)</span></a>
+<a class="sourceLine" id="cb9-11" title="11">        pack_bytes(pkt.get_payload()</a>
+<a class="sourceLine" id="cb9-12" title="12">            , make_pair(<span class="st">&quot;SCRT&quot;</span>, <span class="dv">4</span>) <span class="co">// 4-character identifier</span></a>
+<a class="sourceLine" id="cb9-13" title="13">            , <span class="dt">uint32_t</span>(millis())   <span class="co">// Timestamp</span></a>
+<a class="sourceLine" id="cb9-14" title="14">        );</a>
+<a class="sourceLine" id="cb9-15" title="15">        </a>
+<a class="sourceLine" id="cb9-16" title="16">        <span class="co">// Make a request to send</span></a>
+<a class="sourceLine" id="cb9-17" title="17">        <span class="cf">return</span> pkt.transmit(); </a>
+<a class="sourceLine" id="cb9-18" title="18">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb9-19" title="19">        <span class="co">// Failed at .prepare_tx_packet() (send queue is full)</span></a>
+<a class="sourceLine" id="cb9-20" title="20">        Serial &lt;&lt; <span class="st">&quot;TX QUEUE is FULL&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb9-21" title="21">      <span class="cf">return</span> MWX_APIRET(<span class="kw">false</span>, <span class="dv">0</span>);</a>
+<a class="sourceLine" id="cb9-22" title="22">    }</a>
+<a class="sourceLine" id="cb9-23" title="23">}</a></code></pre></div>
+<p>This is the minimum procedure for making a transmission request.</p>
+<p>When you leave this function, the request has not yet been executed. You need to wait a while. In this example we have set a delay of 100-200ms for the start of the transmission, so the transmission will not start until 100ms at the earliest.</p>
+<h2 id="on_tx_comp">on_tx_comp()</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">void</span> on_tx_comp(mwx::packet_ev_tx&amp; ev, <span class="dt">bool_t</span> &amp;b_handled) {</a>
+<a class="sourceLine" id="cb10-2" title="2">    Serial  &lt;&lt; <span class="dt">int</span>(millis()) &lt;&lt; <span class="st">&quot;:tx completed!&quot;</span></a>
+<a class="sourceLine" id="cb10-3" title="3">            &lt;&lt; format(<span class="st">&quot;(id=</span><span class="sc">%d</span><span class="st">, stat=</span><span class="sc">%d</span><span class="st">)&quot;</span>, ev.u8CbId, ev.bStatus) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb10-4" title="4">    tx_busy = <span class="kw">false</span>; <span class="co">// clear tx busy flag.</span></a>
+<a class="sourceLine" id="cb10-5" title="5">}</a></code></pre></div>
+<p>Called on completion of a transmission; ev contains the transmission ID and completion status.</p>
+<h2 id="on_rx_packet">on_rx_packet()</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">void</span> on_rx_packet(packet_rx&amp; rx, <span class="dt">bool_t</span> &amp;handled) {</a>
+<a class="sourceLine" id="cb11-2" title="2">    Serial &lt;&lt; format(<span class="st">&quot;rx from %08x/</span><span class="sc">%d</span><span class="st">&quot;</span>, </a>
+<a class="sourceLine" id="cb11-3" title="3">                    rx.get_addr_src_long(), rx.get_addr_src_lid()) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb11-4" title="4">}</a></code></pre></div>
+<p>When a packet is received, the sender’s address information is displayed.</p>
+</body>
+</html>

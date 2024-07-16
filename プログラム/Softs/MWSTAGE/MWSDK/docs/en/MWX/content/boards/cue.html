@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>&lt;CUE&gt;</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">&lt;CUE&gt;</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#cue">&lt;CUE&gt;</a><ul>
+<li><a href="#accelerometer">Accelerometer</a></li>
+<li><a href="#magnetic-sensor">Magnetic sensor</a></li>
+<li><a href="#led">LED</a><ul>
+<li><a href="#set_led">set_led()</a></li>
+<li><a href="#led_one_shot">led_one_shot()</a></li>
+</ul></li>
+<li><a href="#watchdog-timer">watchdog timer</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="cue">&lt;CUE&gt;</h1>
+<p>Board BEHAVIOR for peripherals on <a target=_blank href="https://mono-wireless.com/cue">TWELITE CUE</a>.</p>
+<p>It can handle accelerometers, magnetic sensors, and LEDs on the board.</p>
+<ul>
+<li>Accelerometer</li>
+<li>Magnetic sensor</li>
+<li>LEDs</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;CUE&gt;();</a>
+<a class="sourceLine" id="cb1-3" title="3">}</a></code></pre></div>
+<h2 id="accelerometer">Accelerometer</h2>
+<p>The <a href="../sensor_object/mc3630.html">MC3630 sensor</a> member object (sns_MC3630) is defined.</p>
+<h2 id="magnetic-sensor">Magnetic sensor</h2>
+<p>The sensor of the open/close sensor pal is a magnetic sensor, which is the only input for the interrupt of the two signal lines.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="at">const</span> <span class="dt">uint8_t</span> CUE::PIN_SNS_NORTH = <span class="dv">16</span>;</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="at">const</span> <span class="dt">uint8_t</span> CUE::PIN_SNS_OUT1 = <span class="dv">16</span>;</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="at">const</span> <span class="dt">uint8_t</span> CUE::PIN_SNS_SOUTH = <span class="dv">8</span>;</a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="at">const</span> <span class="dt">uint8_t</span> CUE::PIN_SNS_OUT2 = <span class="dv">8</span>;</a></code></pre></div>
+<p>The <code>PAL_MAG::PIN_SNS_NORTH</code> is interrupted when the sensor detects an N-pole and the <code>PAL_MAG::PIN_SNS_SOUTH</code> is interrupted when the sensor detects an N-pole.</p>
+<p>The following settings should be made before sleep</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">pinMode(CUE::PIN_SNS_OUT1, PIN_MODE::WAKE_FALLING);</a>
+<a class="sourceLine" id="cb3-2" title="2">pinMode(CUE::PIN_SNS_OUT2, PIN_MODE::WAKE_FALLING);</a></code></pre></div>
+<p>Check the IO of the waking factor upon waking.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">uint8_t</span> b_north = </a>
+<a class="sourceLine" id="cb4-2" title="2">  the_twelite.is_wokeup_by_dio(CUE::PIN_SNS_NORTH);</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="dt">uint8_t</span> b_south = </a>
+<a class="sourceLine" id="cb4-4" title="4">  the_twelite.is_wokeup_by_dio(CUE::PIN_SNS_SOUTH);</a></code></pre></div>
+<h2 id="led">LED</h2>
+<h3 id="set_led">set_led()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> set_led(<span class="dt">uint8_t</span> mode, <span class="dt">uint16_t</span> tick)</a></code></pre></div>
+<p>LED (D1) control.</p>
+<div class="warning">
+<p>Do not call this method if you do not want to control with board BEHAVIOR.</p>
+</div>
+<p>The <code>mode</code> takes the following parameters. <code>tick</code> specifies the lighting time [ms], see the description of <code>mode</code> for details.</p>
+<table>
+<colgroup>
+<col style="width: 23%"></col>
+<col style="width: 76%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Designation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>LED_TIMER::BLINK</code></td>
+<td>Blinks the LED. ON/OFF is toggled every [ms] of time given to <code>tick</code>. After returning from sleep, it resets the count and starts from the lit state.</td>
+</tr>
+<tr class="even">
+<td><code>LED_TIMER::ON_RX</code></td>
+<td>When a packet is received, it turns on for the time given to the <code>tick</code>, <code>LED_TIMER::ON_RX</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>LED_TIMER::ON_TX_COMP</code></td>
+<td>Turns on for the time given to the <code>tick</code> when the transmission is completed.</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>The setting before the return to sleep is maintained after the return to sleep.</p>
+</div>
+<h3 id="led_one_shot">led_one_shot()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> led_one_shot(<span class="dt">uint16_t</span> tick)</a></code></pre></div>
+<p>Turns on the LED for a specified period of time. Cannot be used with <code>set_led()</code> function at the same time.</p>
+<h2 id="watchdog-timer">watchdog timer</h2>
+<p>Resets the external watchdog timer at startup, sleep wakeup, and after a certain period of time after startup.</p>
+<div class="warning">
+<p>Wake TWELITE within 60 seconds (when using calibrated internal CR timer) to avoid watchdog timer timeout.</p>
+</div>
+</body>
+</html>

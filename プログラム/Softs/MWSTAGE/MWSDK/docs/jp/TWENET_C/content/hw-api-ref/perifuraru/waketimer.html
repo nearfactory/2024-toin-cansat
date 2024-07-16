@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#waketimer">WakeTimer</a><ul>
+<li><a href="#カウント値と実時間の関係">カウント値と実時間の関係</a></li>
+<li><a href="#section"><a href="yin-shu" id="yin-shu"></a></a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="waketimer">WakeTimer</h1>
+<p>WakeTimer は 32KHz (外部オシレータの場合 32768Hz でも可) オシレータにより駆動し、２つのハードウェアカウンタが用意されています。WakeTimer を用いたスリープを実行するには <a href="../../twelite-net-api-ref/twelite-net-guan-shu/toconet_vsleep.html">ToCoNet_vSleep</a>() を利用します。</p>
+<p>カウンタは減算式で、値が 0 になったとき割り込み発生を行い、そのまま減算を続けます。</p>
+<div class="info">
+<p>スリープ起床につかった WakeTimer の値を確認すれば、起床後の経過時間を知ることが出来ます。この値を次回の周期起床のタイミングの調整に利用することが出来ます。</p>
+<p><a href="../../twelite-net-api-ref/twelite-net-guan-shu/toconet_vsleep.html">ToCoNet_vSleep</a>() での周期起床のオプションは、この仕組を利用して次回起床タイミングを調整しています</p>
+</div>
+<h3 id="カウント値と実時間の関係">カウント値と実時間の関係</h3>
+<p>WakeTimer のカウント値と実時間の計算は以下のようになります。</p>
+<div class="info">
+<p>キャリブレーション値は WakeTimer によるスリープを実行する際のカウント補正に利用します。</p>
+<p>Tms のカウント数は以下の式で計算できます。</p>
+<pre><code>Ct = Tms * 32 * 10000 / cal
+  Ct  : 補正後のカウント数
+  Tms : 時間
+  cal : キャリブレーション値</code></pre>
+</div>
+<div class="info">
+<p>外部オシレータを利用する場合は、以下の計算を行います。</p>
+<pre><code>Ct = (Tms * 32768) / 1000
+  Ct  : 補正後のカウント数
+  Tms : 時間
+  cal : キャリブレーション値</code></pre>
+</div>
+<h2 id="section"><a href="yin-shu" id="yin-shu"></a></h2>
+</body>
+</html>

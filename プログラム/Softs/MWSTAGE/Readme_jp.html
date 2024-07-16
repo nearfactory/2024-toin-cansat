@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>TWELITE STAGE SDK (Japanese)</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TWELITE STAGE SDK (Japanese)</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-stage-sdk">TWELITE STAGE SDK</a><ul>
+<li><a href="#インストール">インストール</a></li>
+<li><a href="#ファイル一覧">ファイル一覧</a></li>
+<li><a href="#twelite-stage-アプリの英語対応">TWELITE STAGE アプリの英語対応</a></li>
+<li><a href="#参照資料">参照資料</a></li>
+<li><a href="#vscode-visual-studio-codeの利用">VSCode (Visual Studio Code)の利用</a></li>
+<li><a href="#ライセンス">ライセンス</a></li>
+<li><a href="#リリースノート">リリースノート</a><ul>
+<li><a href="#mwstage2022_08-202281">MWSTAGE2022_08 (2022/8/1)</a></li>
+<li><a href="#mwstage2022_07-2022712">MWSTAGE2022_07 (2022/7/12)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-stage-sdk">TWELITE STAGE SDK</h1>
+<p>TWELITE STAGE SDK は TWELITE STAGE アプリを核として、TWELITE 無線モジュールの開発や動作確認などを行うための総合パッケージです。</p>
+<h2 id="インストール">インストール</h2>
+<p>TWELITE STAGE SDK のアーカイブを適当なフォルダに展開します。</p>
+<p><strong>TWELITE STAGE SDK の展開先のフォルダには、空白や日本語文字列や <code>.</code> <code>-</code> <code>_</code>以外の記号文字が含まれてはいけません。</strong></p>
+<h2 id="ファイル一覧">ファイル一覧</h2>
+<pre><code>TWELITE_Stage.xxx  : TWELITE STAGE APP 実行ファイル（このファイルを起動してください）
+  TWELITE_stage.exe（Windows）
+  TWELITE_stage.command（macOS）
+  TWELITE_stage.run（Linux/Raspberry Pi 2+）
+TWELITE_Stage.sav  : TWELITE STAGE APP 設定ファイル
+TWELITE_Stage.ini  : MWSDKディレクトリの選択など、追加的な設定
+
+TWELTIE_Stage_VSCode.xxx : VSCode利用の設定での TWELITE STAGE APP
+  TWELITE_stage_VSCode.exe（Windows）
+  TWELITE_stage_VSCode.command（macOS）
+  TWELITE_stage_VSCode.run（Linux）
+TWELTIE_Stage_VSCode.sav : VSCode利用の設定済みの設定ファイル
+TWELITE_Stage_VSCode.ini : MWSDKディレクトリの選択など、追加的な設定
+※設定ファイルや追加設定ファイルは実行形式のファイル名に合わせます。
+
+以下のTWELITE STAGE APP はRasbperry Pi 版のみ含まれます。
+TWELITE_Stage_nox.run      : X11未使用時のTWELITE STAGE APP 実行ファイル (Rasbperry Pi 2+)
+TWELITE_Stage_nox.sav      : X11未使用時のTWELITE STAGE APP 設定ファイル (Rasbperry Pi 2+)
+TWELITE_Stage_nox.ini      : MWSDKディレクトリの選択など、追加的な設定 (Rasbperry Pi2+)
+TWELITE_Stage_Zero.run  : X11使用時のTWELITE STAGE APP 実行ファイル (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero.sav  : X11使用時のTWELITE STAGE APP 設定ファイル (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero.ini  : MWSDKディレクトリの選択など、追加的な設定 (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_nox.run   : X11未使用時のTWELITE STAGE APP 実行ファイル (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_nox.sav   : X11未使用時のTWELITE STAGE APP 設定ファイル (Raspberry Pi Zero/1A/1B)
+TWELITE_Stage_Zero_nox.ini   : MWSDKディレクトリの選択など、追加的な設定 (Raspberry Pi Zero/1A/1B)
+
+flask_wsns_db/           : Python, Flask, sqlite3 による簡易的なサーバ
+  _readme/               : 本ドキュメントの画像など
+  static/                : CSS など
+  templates/             : html ひな型
+  app.py                 : サーバー用のスクリプト
+  README.md/.html        : ドキュメント
+
+ftd2xx.dll         : 上記実行形式を実行するために必要なライブラリ (Windows版のみ)
+
+BIN/               : [BINから選択]メニューで参照されるTWELITE無線マイコン向け.BINファイル
+
+log/               : TWELITE STAGE APP のログ機能の保存先
+
+MWSDK/             : MWSDK 環境ファイル、サンプルファイル
+  000manifest      : MWSDKのバージョン情報
+  LICENSE          : MWSDKのライセンス記述
+  README.md        : README
+  ReleaseNotes.md  : 更新履歴(トップページ)
+  ReleaseNotes_en.md  : 更新履歴(英語)
+  ReleaseNotes_jp.md  : 更新履歴(日本語)
+
+  Act_samples/     : アクト(Act)のビルドプロジェクト
+  Wks_TweApps/     : TWELITE APPS (レディメードソフトウェア) のビルドプロジェクト
+  Act_extras/      : 追加的なアクトのビルドプロジェクト
+
+  TWENET/          : TWENET C/C++ ライブラリ・ソースコード
+  ChipLib/         : 半導体チップライブラリ
+  MkFiles/         : Makefileの本体処理部
+
+MWSDK{YYYY}_{MM}/  : 古いバージョン (TWELITE_Stage.iniで指定可能)
+
+Tools/             : コンパイル用のツールチェインなど
+
+TWELITE_Stage/     : TWELITE STAGE APP 関連ファイル
+  readme-j.txt     : TWELITE STAGE APP ライセンス記述
+  INSTALL/         : TWELITE STAGE APP インストール補足
+  LICENSE/         : TWELITE STAGE APP ライセンス
+  MANUAL/            : TWELITE STAGE APP ドキュメント</code></pre>
+<h2 id="twelite-stage-アプリの英語対応">TWELITE STAGE アプリの英語対応</h2>
+<p>TWELITE STAGEアプリは、英語版ユーザーインターフェースに切り替えることができます。設定ファイルを以下のように編集してください。</p>
+<ol type="1">
+<li>アプリが起動している場合は、アプリを終了します。</li>
+<li>使用する TWELITE_Stage の <code>.ini</code> ファイルを開く。 例：<code>TWELITE_Stage.ini</code>。</li>
+<li>以下の行を追加します。</li>
+</ol>
+<pre><code>LANG=en</code></pre>
+<ol start="4" type="1">
+<li><code>.ini</code> ファイルを保存して閉じます。</li>
+<li>アプリを（再）起動する。</li>
+</ol>
+<p>※ 参考 - <a href="TWELITE_Stage/MANUAL/jp/content/misc/cmdargs_and_ini.html">コマンドライン引数と ini ファイル</a></p>
+<h2 id="参照資料">参照資料</h2>
+<ul>
+<li><a href="TWELITE_Stage/MANUAL/jp/index.html">TWELITE STAGE アプリマニュアル</a></li>
+<li><a href="MWSDK/docs/jp/MWX/index.html">TWELITE STAGE SDK, MWX ライブラリマニュアル</a> - MWXライブラリのインストール、クイック開発ガイド、リファレンスマニュアルです。</li>
+<li><a href="MWSDK/docs/jp/TWENET_C/index.html">(TWELITE NET C Library Manual)</a> - (注意: 最初に参照する必要はありません。TWENTE C APIで開発する場合やSDK構造などの情報が必要な場合に参照ください)</li>
+<li><a href="flask_wsns_db/README.html">Python, Flask, sqlite3 による簡易的なサーバ</a> - Python, Flask, sqlite3 による簡易的なサーバのマニュアルです。</li>
+</ul>
+<p>注： 上記のリンクは <code>MWSDK/docs/</code> を参照しています。このフォルダには対応するMWSDKライブラリ資料が格納されます。</p>
+<h2 id="vscode-visual-studio-codeの利用">VSCode (Visual Studio Code)の利用</h2>
+<p>TWELITE STAGE SDK では VSCode を利用したときの利便性を向上するため、TWELITE STAGE アプリの機能（要設定）や、設定済みのプロジェクト設定があります。そのため VSCode の適切なインストールと設定が必要になります。特に code コマンドで VSCode を起動できるようにする設定が必要で、一部システムでは追加的な設定が必要になります。</p>
+<p><a href="MWSDK/docs/jp/MWX/content/install_n_build/install_vscode.html">Installing VSCode</a></p>
+<p>詳しくは Installing VSCodeを参照ください。</p>
+<h2 id="ライセンス">ライセンス</h2>
+<ul>
+<li>TWELITE STAGE APP 実行ファイルには MW-SLA-1J,E が適用されます。</li>
+<li>TWELITE 無線マイコン用の実行形式(ファームウェア,アプリ)は MW-SLA-1J,Eが適用されます。</li>
+<li>本パッケージに含まれるソースファイルは、ソースファイル中で記載されたライセンスに従います。</li>
+<li>toolchain などオープンソースプロジェクトの成果物は、各々のライセンスが適用されます。</li>
+</ul>
+<p>特に記述がない場合は MW-SLA-1J,1E 記載の条項が適用されます。</p>
+<h2 id="リリースノート">リリースノート</h2>
+<h3 id="mwstage2022_08-202281">MWSTAGE2022_08 (2022/8/1)</h3>
+<ul>
+<li>TWELITE STAGE APPのドキュメントを一部修正</li>
+</ul>
+<h4 id="twelite-apps">TWELITE APPS</h4>
+<h5 id="キューアプリapp_cueapp_cue_ota-v1.1.1">キューアプリ(App_CUE/App_CUE_OTA) v1.1.1</h5>
+<ul>
+<li>動作センサーパルモード(シングルショット) 時にパルIDが意図しない値が出力される点を修正</li>
+</ul>
+<h5 id="アリアアプリapp_ariaapp_aria_ota-v1.1.1">アリアアプリ(App_ARIA/App_ARIA_OTA) v1.1.1</h5>
+<ul>
+<li>計測した温度が42℃以上になったときに、異常な値が出力される点をを修正</li>
+</ul>
+<h5 id="パルアプリapp_pal-v1.5.2">パルアプリ(App_PAL) v1.5.2</h5>
+<ul>
+<li>動作センサーパルのシングルショットモード時に意図しないパルIDが出る点を修正</li>
+<li>計測した温度が一定以上になったときに、異常な値が出力される点を修正(TWELITE ARIA用の修正なので、環境センサーパルのコードの修正はありません。)</li>
+</ul>
+<h5 id="親機中継機アプリapp_pal-v1.2.1">親機・中継機アプリ(App_PAL) v1.2.1</h5>
+<ul>
+<li>パルアプリ(キューアプリ、パルアプリ)のデータの出力が意図しない値が出力される場合がある点を修正</li>
+</ul>
+<h5 id="シリアル通信アプリapp_uart-v1.4.7">シリアル通信アプリ(App_Uart) v1.4.7</h5>
+<ul>
+<li>デフォルトの再送回数を2回に変更</li>
+</ul>
+<h4 id="act_extras">Act_extras</h4>
+<h5 id="actex_aqm0802">ActEx_AQM0802</h5>
+<ul>
+<li>MWXストリーム出力に対応</li>
+<li>AQM1602(16x2行の液晶)に対応</li>
+<li>コントラスト調整機能の追加</li>
+</ul>
+<h3 id="mwstage2022_07-2022712">MWSTAGE2022_07 (2022/7/12)</h3>
+<ul>
+<li>flask_wsns_db の追加
+<ul>
+<li>TWELITE STAGE APPのセンサーグラフビューアで作成したデータベースにアクセスするためのPythonのサンプルスクリプト
+<ul>
+<li>本サンプルではデータを表やグラフに変換し、Webブラウザで閲覧可能</li>
+</ul></li>
+</ul></li>
+<li>TWELITE STAGE APP、MWXライブラリ、TWELITE NET Cライブラリのドキュメントを本SDKに含めるように変更</li>
+</ul>
+<h4 id="twelite-stage-app-v1.3.8">TWELITE STAGE APP v1.3.8</h4>
+<ul>
+<li>TWELITE CUEのリアルタイムグラフを描画する機能の追加</li>
+<li>TWELITE ARIA、TWELITE PAL、TWELITE CUEから受信したセンサーのデータをSQLiteに保存してからグラフ化する機能を追加</li>
+<li>ウインドウサイズを 640x480 に拡大</li>
+<li>起動時にウィンドウの位置を指定する機能を追加</li>
+<li>ヘルプ選択時にローカルのHTMLを表示するように変更</li>
+<li>英語に一部対応</li>
+<li>メニューの構成を変更</li>
+</ul>
+<h4 id="mwx-ライブラリ-v0.2.0">MWX ライブラリ v0.2.0</h4>
+<ul>
+<li>ヒープ領域へのメモリ確保を行う Wire オブジェクトを変更</li>
+<li>utils.hでの名前の衝突を避けるため、関数名をG_OCTET()からG_BYTE()に変更</li>
+<li>attachIntDio()において、vAHI_DioInterruptEnable()の順番を変更</li>
+<li>ユニバーサルレシーバ (NWK_LAYERED, NWK_SIMPLE またはネットワークレスパケットを同一実行コードで受信する) をサポートするために the_twelite.network2 を追加</li>
+<li>NWK_LAYERED を追加 (現時点では親機受信のみ対応)</li>
+<li>MWXの初期化時にアプリケーションのバージョンを設定する MWX_Set_Usder_App_Ver() 関数を導入</li>
+<li>mwx::pnew() を追加し配置newの記述の簡素化</li>
+<li>EASTLのサポート追加</li>
+<li>EASTL用のnew[]演算子の追加</li>
+<li>MWXのソースコードのほとんどをプリコンパイルし、コンパイルの高速化を図った</li>
+<li>DIOイベントが無関係なポートに引き渡されていたのを修正</li>
+</ul>
+<h4 id="twelite-apps-1">TWELITE APPS</h4>
+<ul>
+<li>000desc.txtに英訳を追加</li>
+<li>Samp_PingPong、Samp_I2Cを新規採用非推奨に変更</li>
+</ul>
+<h5 id="キューアプリapp_cueapp_cue_ota-v1.1.0">キューアプリ(App_CUE/App_CUE_OTA) v1.1.0</h5>
+<ul>
+<li>指定した間隔ごとに加速度を1サンプルずつ送信する機能の追加</li>
+<li>一定期間計測した加速度の平均、最小最大値を送信する機能の追加</li>
+</ul>
+<h5 id="アリアアプリapp_ariaapp_aria_ota-v1.1.0">アリアアプリ(App_ARIA/App_ARIA_OTA) v1.1.0</h5>
+<ul>
+<li>温湿度の計測値にオフセットと係数を掛ける機能を追加</li>
+</ul>
+<h5 id="パルアプリapp_pal-v1.5.1">パルアプリ(App_PAL) v1.5.1</h5>
+<ul>
+<li>動作センサーパルで加速度を1サンプルずつ送信する機能の追加</li>
+<li>動作センサーパルで 一定期間計測した加速度の平均、最小最大値を送信する機能の追加</li>
+<li>環境センサーパルで温湿度の計測値にオフセットと係数を掛ける機能を追加</li>
+</ul>
+<h5 id="親機中継機アプリapp_pal-v1.2.0">親機・中継機アプリ(App_PAL) v1.2.0</h5>
+<ul>
+<li>加速度の平均、最大最小値を出力する機能の追加</li>
+</ul>
+<h4 id="act_samples">Act_samples</h4>
+<ul>
+<li>000desc.txtに英訳を追加</li>
+<li>BRD_I2C_TEMPHUMID の追加
+<ul>
+<li>I2C センサーデバイスを用いて、定期起床からの計測および送信を行うサンプル</li>
+</ul></li>
+</ul>
+<h4 id="act_extras-1">Act_extras</h4>
+<ul>
+<li>000desc.txtに英訳を追加</li>
+<li>ActEx_AQM0802 の追加
+<ul>
+<li>Sitronix社のI2C接続LCDコントローラ ST7032 を実装したLCDモジュール AQM0802 を使用するサンプル</li>
+</ul></li>
+</ul>
+</body>
+</html>

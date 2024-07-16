@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Parent_MONOSTICK</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Parent_MONOSTICK</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#parent_monostick">Parent_MONOSTICK</a><ul>
+<li><a href="#アクトの機能">アクトの機能</a></li>
+<li><a href="#アクトの使い方">アクトの使い方</a><ul>
+<li><a href="#必要なtweliteと配線">必要なTWELITEと配線</a></li>
+</ul></li>
+<li><a href="#アクトの解説">アクトの解説</a><ul>
+<li><a href="#宣言部">宣言部</a></li>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#on_rx_packet">on_rx_packet()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="parent_monostick">Parent_MONOSTICK</h1>
+<p>MONOSTICKを親機として使用するアクトです。子機からのパケットのデータペイロードをシリアルポートに出力します。サンプルアクトの多くのサンプルでのパケットを表示することが出来ます。</p>
+<div class="success">
+<p>このアクトには以下が含まれます。</p>
+<ul>
+<li>無線パケットの受信</li>
+<li>受信したパケットのデータ解釈</li>
+<li>インタラクティブモードの設定 - <a href="../settings/stg_std.html">&lt;STG_STD&gt;</a></li>
+<li>バイト列のアスキー形式への変換 - <a href="../api-reference/classes/ser_parser.html">serparser</a></li>
+</ul>
+</div>
+<h2 id="アクトの機能">アクトの機能</h2>
+<ul>
+<li>サンプルアクトの子機からのパケットを受信して、シリアルポートへ出力する。</li>
+</ul>
+<h2 id="アクトの使い方">アクトの使い方</h2>
+<h3 id="必要なtweliteと配線">必要なTWELITEと配線</h3>
+<table>
+<thead>
+<tr class="header">
+<th>役割</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>親機</td>
+<td><a target=_blank href="https://mono-wireless.com/jp/products/MoNoStick/">MONOSTICK BLUEまたはRED</a></td>
+</tr>
+<tr class="even">
+<td>子機</td>
+<td>サンプルアクトの子機設定 (例: <code>Slp_Wk_and_Tx</code>, <code>PAL_AMB</code>, <code>PAL_MAG</code>, <code>PAL_MOT???</code>など)</td>
+</tr>
+</tbody>
+</table>
+<p>最初は以下のデフォルトの設定にて確認してください。</p>
+<ul>
+<li>アプリケーションID: <code>0x1234abcd</code></li>
+<li>チャネル: <code>13</code></li>
+</ul>
+<h2 id="アクトの解説">アクトの解説</h2>
+<h3 id="宣言部">宣言部</h3>
+<h4 id="インクルード">インクルード</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// use twelite mwx c++ template library</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#include </span><span class="im">&lt;MONOSTICK&gt;</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="pp">#include </span><span class="im">&lt;STG_STD&gt;</span></a></code></pre></div>
+<p>MONOSTICK用のボードビヘイビア<a href="../boards/monostick.html"><code>&lt;MONOSTICK&gt;</code></a>をインクルードしています。このボードサポートには、LEDの制御、ウォッチドッグ対応が含まれます。</p>
+<ul>
+<li>&lt;NWK_SIMPLE&gt; 簡易中継ネットの定義を読み込みます</li>
+<li>&lt;STG_STD&gt; インタラクティブモードの定義を読み込みます。</li>
+</ul>
+<h4 id="その他">その他</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// application ID</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="at">const</span> <span class="dt">uint32_t</span> DEFAULT_APP_ID = <span class="bn">0x1234abcd</span>;</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">// channel</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="at">const</span> <span class="dt">uint8_t</span> DEFAULT_CHANNEL = <span class="dv">13</span>;</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co">// option bits</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="dt">uint32_t</span> OPT_BITS = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">/*** function prototype */</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="dt">bool</span> analyze_payload(packet_rx&amp; rx);</a></code></pre></div>
+<p>デフォルト値や関数プロトタイプなどの宣言をしています。</p>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;MONOSTICK&gt;();</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a></code></pre></div>
+<p><code>setup()</code>では、まず<code>&lt;MONOSTICK&gt;</code>ボードビヘイビア、<code>&lt;STG_STD&gt;</code>インタラクティブモード ビヘイビア、<code>&lt;NWK_SIMPLE&gt;</code>ビヘイビアを<code>use&lt;&gt;</code>を用い読み込みます。この手続きは必ずsetup()内で行います。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">set &lt;&lt; SETTINGS::appname(<span class="st">&quot;PARENT&quot;</span>); <span class="co">// 設定画面中のタイトル</span></a>
+<a class="sourceLine" id="cb4-2" title="2">set &lt;&lt; SETTINGS::appid_default(DEFAULT_APP_ID); <span class="co">// アプリケーションIDデフォルト</span></a>
+<a class="sourceLine" id="cb4-3" title="3">set &lt;&lt; SETTINGS::ch_default(DEFAULT_CHANNEL); <span class="co">// チャネルデフォルト</span></a>
+<a class="sourceLine" id="cb4-4" title="4">set &lt;&lt; SETTINGS::lid_default(<span class="bn">0x00</span>); <span class="co">// LIDデフォルト</span></a>
+<a class="sourceLine" id="cb4-5" title="5">set.hide_items(E_STGSTD_SETID::OPT_DWORD2, E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4, E_STGSTD_SETID::ENC_KEY_STRING, E_STGSTD_SETID::ENC_MODE);</a>
+<a class="sourceLine" id="cb4-6" title="6">set.reload(); <span class="co">// 設定を不揮発性メモリから読み出す</span></a>
+<a class="sourceLine" id="cb4-7" title="7">OPT_BITS = set.u32opt1(); <span class="co">// 読み込み例（オプションビット）</span></a></code></pre></div>
+<p>続いてインタラクティブモードの設定と設定値の読み出しを行います。<a href="../settings/stg_std.html"><code>&lt;STG_STD&gt;</code>インタラクティブモード</a>では、標準的な項目が用意されていますが、作成するアクトごとにいくつかのカスタマイズを行えるようになっています。</p>
+<ul>
+<li><code>appname</code>→ 設定画面中のタイトル行にでるアクト名称</li>
+<li><code>appid_default</code>→ デフォルトのアプリケーションID</li>
+<li><code>ch_default</code>→ デフォルトのチャネル</li>
+<li><code>lid_default</code>→ デバイスID(LID)のデフォルト値</li>
+<li>.<code>hide_items()</code>→ 項目の非表示設定</li>
+</ul>
+<p>設定値を読み出す前には必ず<code>.reload()</code>を呼び出します。設定値は<code>.u32opt1()</code>のように設定値ごとに読み出し用のメソッドが用意されています。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1">the_twelite</a>
+<a class="sourceLine" id="cb5-2" title="2">    &lt;&lt; set                    <span class="co">// インタラクティブモードの設定を反映</span></a>
+<a class="sourceLine" id="cb5-3" title="3">    &lt;&lt; TWENET::rx_when_idle() <span class="co">// 受信するように指定</span></a>
+<a class="sourceLine" id="cb5-4" title="4">    ;</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb5-7" title="7">nwk &lt;&lt; set;                         <span class="co">// インタラクティブモードの設定を反映</span></a>
+<a class="sourceLine" id="cb5-8" title="8">nwk &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0x00</span>) <span class="co">// LIDだけは再設定</span></a>
+<a class="sourceLine" id="cb5-9" title="9">    ;</a></code></pre></div>
+<p>いくつかの設定値は<a href="../settings/stg_std.html#%22no-1"><code>&lt;STG_STD&gt;</code>オブジェクトを用いて直接反映</a>することが出来ます。また、DIPスイッチの設定などにより特定の値を書き換えたいような場合などは、反映されたあとに別個に値を書き換えることも出来ます。上記の例では<a href="../api-reference/predefined_objs/the_twelite.html#%22yan-suan-zi-she-ding"><code>the_twelite</code></a>オブジェクトにアプリケーションID、チャネル、無線出力などを設定し、<a href="../networks/nwk_simple.html#%22yan-suan-zi-she-ding"><code>nwk</code></a>オブジェクトに対してLIDと再送回数の設定をしてから、再度LIDを0に設定し直しています。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">brd.set_led_red(LED_TIMER::ON_RX, <span class="dv">200</span>); <span class="co">// RED (on receiving)</span></a>
+<a class="sourceLine" id="cb6-2" title="2">brd.set_led_yellow(LED_TIMER::BLINK, <span class="dv">500</span>); <span class="co">// YELLOW (blinking)</span></a></code></pre></div>
+<p><code>&lt;MONOSTICK&gt;</code>ボードビヘイビアではLED点灯制御のための手続きを利用できます。</p>
+<p>1行目では赤色のLEDを無線パケットを受信したら200ms点灯する設定をしています。最初のパラメータは<code>LED_TIMER::ON_RX</code>が無線パケット受信時を意味します。２番目は点灯時間をmsで指定します。</p>
+<p>2行目はLEDの点滅指定です。１番目のパラメータは<code>LED_TIMER::BLINK</code>が点滅の指定で、２番目のパラメータは点滅のON/OFF切り替え時間です。500msごとにLEDが点灯、消灯(つまり１秒周期の点滅)を繰り返します。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">the_twelite.begin(); <span class="co">// start twelite!</span></a></code></pre></div>
+<p><code>the_twelite</code>を開始するための手続きです。act0..4では出てきませんでしたが<code>the_twelite</code>の設定や各種ビヘイビアの登録を行った場合は、必ず呼び出すようにしてください。</p>
+<h3 id="loop">loop()</h3>
+<p>このサンプルでは<code>loop()</code>中の処理はありません。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb8-2" title="2">}</a></code></pre></div>
+<h3 id="on_rx_packet">on_rx_packet()</h3>
+<p>パケットを受信したときに呼び出されるコールバック関数です。この例では受信したパケットデータに対していくつかの出力を行っています。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">void</span> on_rx_packet(packet_rx&amp; rx, <span class="dt">bool_t</span> &amp;handled) {  </a>
+<a class="sourceLine" id="cb9-2" title="2">    Serial &lt;&lt; <span class="st">&quot;.. coming packet (&quot;</span> &lt;&lt; <span class="dt">int</span>(millis()&amp;<span class="bn">0xffff</span>) &lt;&lt; <span class="ch">&#39;)&#39;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4">  ...</a>
+<a class="sourceLine" id="cb9-5" title="5">  </a>
+<a class="sourceLine" id="cb9-6" title="6">    <span class="co">// packet analyze</span></a>
+<a class="sourceLine" id="cb9-7" title="7">    analyze_payload(rx);</a>
+<a class="sourceLine" id="cb9-8" title="8">}</a></code></pre></div>
+<h4 id="analyze_payload">analyze_payload()</h4>
+<p>関数の末尾で呼び出されるanalyze_payload()は、いくつかのサンプルアクトのパケットを解釈するコードが含まれています。サンプルアクト中のパケット生成部分と対応させてコードを参照してください。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">bool</span> b_handled = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="dt">uint8_t</span> fourchars[<span class="dv">4</span>]{};</a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="kw">auto</span>&amp;&amp; np = expand_bytes(</a>
+<a class="sourceLine" id="cb10-5" title="5">        rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb10-6" title="6">        , fourchars</a>
+<a class="sourceLine" id="cb10-7" title="7">    );</a>
+<a class="sourceLine" id="cb10-8" title="8">    </a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="cf">if</span> (np == <span class="kw">nullptr</span>) <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb10-10" title="10"></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="co">// display fourchars at first</span></a>
+<a class="sourceLine" id="cb10-12" title="12">Serial</a>
+<a class="sourceLine" id="cb10-13" title="13">    &lt;&lt; fourchars </a>
+<a class="sourceLine" id="cb10-14" title="14">    &lt;&lt; format(<span class="st">&quot;(ID=</span><span class="sc">%d</span><span class="st">/LQ=</span><span class="sc">%d</span><span class="st">)&quot;</span>, rx.get_addr_src_lid(), rx.get_lqi())</a>
+<a class="sourceLine" id="cb10-15" title="15">    &lt;&lt; <span class="st">&quot;-&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb10-16" title="16">    </a></code></pre></div>
+<p>この関数では最初に４文字識別データを<code>fourchars[5]</code>配列に読み込みます。</p>
+<p>読み込みは<a href="../api-reference/funcs/utility/expand_bytes.html"><code>expand_bytes()</code></a>関数を用います。この関数の第１・第２パラメータはC++の標準ライブラリの作法に倣い、受信パケットのペイロード部の先頭ポインタ<code>.begin()</code>と末尾ポインタの次<code>.end()</code>を与えます。続くパラメータは可変引数として、読み込むデータ変数を与えます。戻り値はエラー時は_<code>nullptr</code>_、それ以外は次の解釈ポインタとなります。末尾まで解釈した場合は<code>.end()</code>が戻ります。ここでのパラメータは<code>uint8_t fourchars[4]</code>です。</p>
+<div class="info">
+<p>この記述で対応するのは配列長さ<code>N</code>が指定される<code>uint8_t[N]</code>型のみで、<code>uint8*</code>型、<code>char*</code>型、<code>char[]</code>型などを用いる場合は、<code>make_pair(char*,int)</code>を用いた指定が必要になります。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">char</span> fourchars[<span class="dv">5</span>]{}; <span class="co">// 終端文字\0も含め5バイト確保する</span></a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="kw">auto</span>&amp;&amp; np = expand_bytes(</a>
+<a class="sourceLine" id="cb11-3" title="3">        rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb11-4" title="4">        , make_pair((<span class="dt">char</span> *)fourchars, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb11-5" title="5">    );</a></code></pre></div>
+</div>
+<p>つづいて４バイトヘッダに対応した処理を行います。ここではサンプルアクトSlp_Wk_and_Txのパケットを解釈し内容を表示します。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="co">// Slp_Wk_and_Tx</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="cf">if</span> (!b_handled &amp;&amp; !strncmp(fourchars, <span class="st">&quot;TXSP&quot;</span>, <span class="dv">4</span>)) {</a>
+<a class="sourceLine" id="cb12-3" title="3">    b_handled = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb12-4" title="4">    <span class="dt">uint32_t</span> tick_ms;</a>
+<a class="sourceLine" id="cb12-5" title="5">    <span class="dt">uint16_t</span> u16work_ct;</a>
+<a class="sourceLine" id="cb12-6" title="6"></a>
+<a class="sourceLine" id="cb12-7" title="7">    np = expand_bytes(np, rx.get_payload().end()</a>
+<a class="sourceLine" id="cb12-8" title="8">        , tick_ms</a>
+<a class="sourceLine" id="cb12-9" title="9">        , u<span class="dv">16</span><span class="er">work_ct</span></a>
+<a class="sourceLine" id="cb12-10" title="10">    );</a>
+<a class="sourceLine" id="cb12-11" title="11"></a>
+<a class="sourceLine" id="cb12-12" title="12">    <span class="cf">if</span> (np != <span class="kw">nullptr</span>) {</a>
+<a class="sourceLine" id="cb12-13" title="13">        Serial &lt;&lt; format(<span class="st">&quot;Tick=</span><span class="sc">%d</span><span class="st"> WkCt=</span><span class="sc">%d</span><span class="st">&quot;</span>, tick_ms, u16work_ct);</a>
+<a class="sourceLine" id="cb12-14" title="14">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb12-15" title="15">        Serial &lt;&lt; <span class="st">&quot;.. error ..&quot;</span>;</a>
+<a class="sourceLine" id="cb12-16" title="16">    }</a>
+<a class="sourceLine" id="cb12-17" title="17">}</a></code></pre></div>
+<p>他の解釈部の判定をスキップするように<code>b_handled</code>を_<code>true</code>_に設定します。</p>
+<p><code>&quot;TXSP&quot;</code>のパケットでは<code>uint32_t</code>型のシステムタイマーカウントと、<code>uint16_t</code>型のダミーカウンタの値が格納されています。各々変数を宣言して<a href="../api-reference/funcs/utility/expand_bytes.html"><code>expand_bytes()</code></a>関数を用い読み込みます。上述と違うのは、読み出しの最初のポインタとして第一パラメータが<code>np</code>となっている点です。<code>tick_ms</code>と<code>u16work_ct</code>をパラメータとして与え、ビッグエンディアン形式のバイト列としてペイロードに格納された値を読み出します。</p>
+<p>読み出しに成功すれば内容を出力して終了です。</p>
+<h4 id="独自のアスキー書式を定義して出力する">独自のアスキー書式を定義して出力する</h4>
+<p>ユーザが定義した並び順で<a href="../api-reference/classes/ser_parser.html#%22asuk">アスキー形式</a>により構成します。</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1">smplbuf_u8&lt;<span class="dv">128</span>&gt; buf;</a>
+<a class="sourceLine" id="cb13-2" title="2">mwx::pack_bytes(buf</a>
+<a class="sourceLine" id="cb13-3" title="3">    , <span class="dt">uint8_t</span>(rx.get_addr_src_lid())           <span class="co">// 送信元の論理ID</span></a>
+<a class="sourceLine" id="cb13-4" title="4">    , <span class="dt">uint8_t</span>(<span class="bn">0xCC</span>)                                            <span class="co">// 0xCC</span></a>
+<a class="sourceLine" id="cb13-5" title="5">    , <span class="dt">uint8_t</span>(rx.get_psRxDataApp()-&gt;u8Seq) <span class="co">// パケットのシーケンス番号</span></a>
+<a class="sourceLine" id="cb13-6" title="6">    , <span class="dt">uint32_t</span>(rx.get_addr_src_long())       <span class="co">// 送信元のシリアル番号</span></a>
+<a class="sourceLine" id="cb13-7" title="7">    , <span class="dt">uint32_t</span>(rx.get_addr_dst())                <span class="co">// 宛先アドレス</span></a>
+<a class="sourceLine" id="cb13-8" title="8">    , <span class="dt">uint8_t</span>(rx.get_lqi())                        <span class="co">// LQI:受信品質</span></a>
+<a class="sourceLine" id="cb13-9" title="9">    , <span class="dt">uint16_t</span>(rx.get_length())                  <span class="co">// 以降のバイト数</span></a>
+<a class="sourceLine" id="cb13-10" title="10">    , rx.get_payload()                               <span class="co">// データペイロード</span></a>
+<a class="sourceLine" id="cb13-11" title="11">);</a>
+<a class="sourceLine" id="cb13-12" title="12"></a>
+<a class="sourceLine" id="cb13-13" title="13">serparser_attach pout;</a>
+<a class="sourceLine" id="cb13-14" title="14">pout.begin(PARSER::ASCII, buf.begin(), buf.size(), buf.size());</a>
+<a class="sourceLine" id="cb13-15" title="15"></a>
+<a class="sourceLine" id="cb13-16" title="16">Serial &lt;&lt; <span class="st">&quot;FMT PACKET -&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb13-17" title="17">pout &gt;&gt; Serial;</a>
+<a class="sourceLine" id="cb13-18" title="18">Serial &lt;&lt; mwx::flush;</a></code></pre></div>
+<p>1行目はアスキー書式に変換する前のデータ列を格納するバッファをローカルオブジェクトとして宣言しています。</p>
+<p>2行目は<code>pack_bytes()</code>を用いてデータ列を先ほどの<code>buf</code>に格納します。データ構造はソースコードのコメントを参照ください。<code>pack_bytes()</code>のパラメータには<code>smplbuf_u8 (smplbuf&lt;uint8_t, ???&gt;)</code>形式のコンテナを指定することもできます。</p>
+<div class="info">
+<p>パケットのシーケンス番号は、<code>&lt;NWK_SIMPLE&gt;</code>で自動設定され、送信パケット順に割り振られます。この値はパケットの重複検出に用いられます。</p>
+<p>LQI (Link Quality Indicator)は受信時の電波強度に相当する値で、値が大きければ大きいほどより強い電界強度で受信できていることになります。ただしこの値と物理量との厳格な関連は定義されていませんし、環境のノイズと相対的なものでLQIがより大きな値であってもノイズも多ければ通信の成功率も低下することになります。</p>
+</div>
+<p>13,14,17行目は、シリアルパーサーの宣言と設定、出力です。</p>
+<h4 id="nwk_simpleのヘッダを含めてダンプ出力する">NWK_SIMPLEのヘッダを含めてダンプ出力する</h4>
+<p>最初の出力（<code>if(0)</code>により実行されないようになっています)は<code>&lt;NWK_SIMPLE&gt;</code>の制御データを含めたデータをすべて表示します。制御データは11バイトあります。通常は制御情報を直接参照することはありませんが、あくまでも参考です。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1">serparser_attach pout;</a>
+<a class="sourceLine" id="cb14-2" title="2">pout.begin(PARSER::ASCII, rx.get_psRxDataApp()-&gt;auData, </a>
+<a class="sourceLine" id="cb14-3" title="3">    rx.get_psRxDataApp()-&gt;u8Len, rx.get_psRxDataApp()-&gt;u8Len);</a>
+<a class="sourceLine" id="cb14-4" title="4"></a>
+<a class="sourceLine" id="cb14-5" title="5">Serial &lt;&lt; <span class="st">&quot;RAW PACKET -&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb14-6" title="6">pout &gt;&gt; Serial;</a>
+<a class="sourceLine" id="cb14-7" title="7">Serial &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb14-8" title="8"></a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="co">// 参考：制御部のパケット構造</span></a>
+<a class="sourceLine" id="cb14-10" title="10"><span class="co">// uint8_t  : 0x01 固定</span></a>
+<a class="sourceLine" id="cb14-11" title="11"><span class="co">// uint8_t  : 送信元のLID</span></a>
+<a class="sourceLine" id="cb14-12" title="12"><span class="co">// uint32_t : 送信元のロングアドレス(シリアル番号)</span></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="co">// uint32_t : 宛先アドレス</span></a>
+<a class="sourceLine" id="cb14-14" title="14"><span class="co">// uint8_t  : 中継回数</span></a></code></pre></div>
+<p>1行目は出力用のシリアルパーサをローカルオブジェクトとして宣言しています。内部にバッファを持たず、外部のバッファを流用し、パーサーの出力機能を用いて、バッファ内のバイト列を<a href="../api-reference/classes/ser_parser.html#%22asuk">アスキー形式</a>出力します。</p>
+<p>２行目はシリアルパーサーのバッファを設定します。すでにあるデータ配列、つまり受信パケットのペイロード部を指定します。<code>serparser_attach pout</code>は、既にあるバッファを用いたシリアルパーサーの宣言です。<code>pout.begin()</code>の１番目のパラメータは、パーサーの対応書式を<code>PARSER::ASCII</code>つまりアスキー形式として指定しています。２番目はバッファの先頭アドレス。３番目はバッファ中の有効なデータ長、４番目はバッファの最大長を指定します。出力用で書式解釈に使わないため４番目のパラメータは３番目と同じ値を入れています。</p>
+<p>6行目でシリアルポートへ<code>&gt;&gt;</code>演算子を用いて出力しています。</p>
+<p>7行目の<code>Serial &lt;&lt; mwx::flush</code>は、ここで出力が終わっていないデータの出力が終わるまで待ち処理を行う指定です。(<code>Serial.flush()</code>も同じ処理です)</p>
+</body>
+</html>

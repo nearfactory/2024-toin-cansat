@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Installation</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Installation</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#extract-twelite-stage-sdk">extract TWELITE STAGE SDK</a></li>
+<li><a href="#settings-unique-to-each-system-etc.">Settings unique to each system, etc.</a></li>
+<li><a href="#folder-structure-of-twelite-stage-sdk">Folder structure of TWELITE STAGE SDK</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="installation">Installation</h1>
+<p>Depending on the environment, this application may not work or may require various settings. If you encounter any problems, please refer to the description in this document to improve your environment.</p>
+<div class="warning">
+<p>In order to build a development environment, you must install the software suite and agree to the license agreement. In addition, you may need to configure security settings on your PC or workstation.</p>
+<ul>
+<li>Although we take all due precautions when distributing the software, we ask that you take care to check for viruses, etc.</li>
+<li>Please check with the administrator of your environment regarding your security policy and operations (e.g., whether or not to install external applications).</li>
+</ul>
+<p>In addition, please see <a target=_blank href="https://twelite.gitbook.io/general/appinstall">“Application Distribution and Execution”</a>. Topics include topics related to the following</p>
+<ul>
+<li>Confirmation of identity with downloaded files</li>
+<li>Handling of code signatures on macOS/Windows</li>
+</ul>
+</div>
+<h2 id="extract-twelite-stage-sdk">extract TWELITE STAGE SDK</h2>
+<ol type="1">
+<li><a target=_blank href="https://mono-wireless.com/jp/products/stage/">Download</a> the TWELITE STAGE SDK for your system (Windows, macOS, Linux, etc.).</li>
+<li>Extract the downloaded archive file (e.g. ZIP). <strong>The folder name of each level of the destination folder should not contain any characters other than one-byte numbers <code>0..9</code>, one-byte alphabets <code>a..zA..Z</code>, and some symbols <code>-_.</code>. It must not contain spaces, Kanji characters, Hiragana characters, etc.</strong> Example(Windows): × <code>C:\work\作業\</code> × <code>C:\Users\user1\work dir\</code> 〇 <code>C:\Work\Work1</code></li>
+<li>Check the folder after expansion. If you extract on <code>C:\Work</code>, the folder name will be something like <code>C:\Work\MWSTAGE</code>, but your extractor may create a folder with the archive file name. Rename or move the folder as needed.</li>
+</ol>
+<p>In the text, the expanded folder (e.g. <code>C:\WorkMWSTAGE</code> )} may be written as <code>{MWSTAGE installation}</code>.</p>
+<h2 id="settings-unique-to-each-system-etc.">Settings unique to each system, etc.</h2>
+<p>See below.</p>
+<ul>
+<li><a href="windows.html">Windows</a></li>
+<li><a href="macos.html">macOS</a></li>
+<li><a href="linux.html">linux</a></li>
+<li><a href="raspberrypi.html">RaspberryPi</a></li>
+</ul>
+<h2 id="folder-structure-of-twelite-stage-sdk">Folder structure of TWELITE STAGE SDK</h2>
+<p>The folder <code>{MWSTAGE installation}</code> where the TWELTIE STAGE SDK is installed contains the following</p>
+<ul>
+<li>TWELITE STAGE application executable</li>
+<li>MWSDK folder - libraries, source code, etc.</li>
+<li>Tools - toolchain for building, etc.</li>
+</ul>
+<p>For details, see <a href="../misc/directories.html">Folder Structure</a>&quot; for details.</p>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=SPI サンプル
+DESC=SPIバスを制御するサンプルです。
+URL=https://github.com/monowireless/Samp_SPI
+[ENGLISH]
+TITLE=Samp_SPI
+DESC=App sample for SPI. Write this app to multiple devices.
+URL=https://github.com/monowireless/Samp_SPI

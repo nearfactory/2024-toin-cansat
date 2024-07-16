@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#spi">SPI</a><ul>
+<li><a href="#主要関数">主要関数</a><ul>
+<li><a href="#vahi_spiconfigure">vAHI_SpiConfigure()</a></li>
+<li><a href="#vahi_spiselect">vAHI_SpiSelect()</a></li>
+<li><a href="#vahi_spistarttransfer">vAHI_SpiStartTransfer()</a></li>
+<li><a href="#bahi_spipollbusy">bAHI_SpiPollBusy()</a></li>
+<li><a href="#u32ahi_spireadtransfer32">u32AHI_SpiReadTransfer32()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="spi">SPI</h1>
+<p>SPIバスはセンサーやメモリデバイス等の読み書きに利用されます。I2C に比べ使用するピン数が多いものの、高速な転送が必要なデバイスによく使用されます。</p>
+<div class="info">
+<p>Samp_SPI サンプルを参考にしてください。</p>
+</div>
+<p>SPIバスを利用する場合、SPI セレクトピンを必要なデバイス分だけ確保されます。ピンは SEISEL0 のピンから順に割り当てられます。</p>
+<p>以下に初期化と読み書きの例を挙げます。SPIでは、書き込みと読み出しを同時に行うこともできます。</p>
+<p>センサーでのデータ取得時に一般的な例として、コマンド送信して続いて結果を得るという手続きを挙げます。</p>
+<ol type="1">
+<li>SPIの初期化（デバイス使用開始）</li>
+<li>SPI のセレクトピンの有効化</li>
+<li>SPI 転送１ (8ビット)、送信を目的とします。</li>
+<li>SPI 転送２ (16ビット)、受信を目的とします。</li>
+</ol>
+<div class="danger">
+<p>各転送で必ずポーリング待ち(<code>while(bAHI_SpiPollBusy());</code>)を行う必要があります。</p>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#define SLAVE_ENABLE2       (1)         </span><span class="co">//  DIO19とDIO0を用いる</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#define CS_DIO19            (0x01)      </span><span class="co">//  SPISEL0:DIO19に接続したものを使う</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#define CS_DIO0             (0x02)      </span><span class="co">//  SPISEL1:DIO0に接続したものを使う</span></a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">    ...</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="co">// SPI の初期化</span></a>
+<a class="sourceLine" id="cb1-7" title="7">    vAHI_SpiConfigure(SLAVE_ENABLE2, <span class="co">// SPISEL0,1 の２つを利用する</span></a>
+<a class="sourceLine" id="cb1-8" title="8">                      E_AHI_SPIM_MSB_FIRST,</a>
+<a class="sourceLine" id="cb1-9" title="9">                      TRUE,</a>
+<a class="sourceLine" id="cb1-10" title="10">                      TRUE,</a>
+<a class="sourceLine" id="cb1-11" title="11">                      <span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb1-12" title="12">                      E_AHI_SPIM_INT_DISABLE,</a>
+<a class="sourceLine" id="cb1-13" title="13">                      E_AHI_SPIM_AUTOSLAVE_DSABL);</a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">    ...</a>
+<a class="sourceLine" id="cb1-16" title="16">    <span class="co">// 転送１（8bitの書き出し)</span></a>
+<a class="sourceLine" id="cb1-17" title="17">    vAHI_SpiSelect(CS_DIO0); <span class="co">// SPISEL1 を有効にする</span></a>
+<a class="sourceLine" id="cb1-18" title="18">    vAHI_SpiStartTransfer(</a>
+<a class="sourceLine" id="cb1-19" title="19">                    <span class="dv">7</span>, <span class="co">// 7+1=8 bit の転送</span></a>
+<a class="sourceLine" id="cb1-20" title="20">                    <span class="bn">0x00000012</span><span class="bu">L</span> ); <span class="co">// 0x12 を送信</span></a>
+<a class="sourceLine" id="cb1-21" title="21">    <span class="cf">while</span>(bAHI_SpiPollBusy()); <span class="co">// 読み書きのポーリング待ち</span></a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="co">//uint8 u8val = u8AHI_SpiReadTransfer8();</span></a>
+<a class="sourceLine" id="cb1-23" title="23">        <span class="co">// SPIMISO の入力データを読み出しは可能。</span></a>
+<a class="sourceLine" id="cb1-24" title="24">        <span class="co">// この例では、u8val は使用しない。</span></a>
+<a class="sourceLine" id="cb1-25" title="25"></a>
+<a class="sourceLine" id="cb1-26" title="26">    <span class="co">// 必要なら少し時間を置く。</span></a>
+<a class="sourceLine" id="cb1-27" title="27">    vWait(<span class="dv">100</span>);</a>
+<a class="sourceLine" id="cb1-28" title="28">    </a>
+<a class="sourceLine" id="cb1-29" title="29">    <span class="co">//　転送２ (16bitの読み込み)</span></a>
+<a class="sourceLine" id="cb1-30" title="30">    vAHI_SpiStartTransfer(</a>
+<a class="sourceLine" id="cb1-31" title="31">                    <span class="dv">15</span>, <span class="co">// 15+1=16 bit の転送</span></a>
+<a class="sourceLine" id="cb1-32" title="32">                    <span class="bn">0x00000000</span><span class="bu">L</span> ); <span class="co">// ダミーの送信データ。</span></a>
+<a class="sourceLine" id="cb1-33" title="33">    <span class="cf">while</span>(bAHI_SpiPollBusy()); <span class="co">// 読み書きのポーリング待ち。</span></a>
+<a class="sourceLine" id="cb1-34" title="34">    uint16 u16val = u16AHI_SpiReadTransfer16();</a>
+<a class="sourceLine" id="cb1-35" title="35">        <span class="co">// 読み出した 16bit データ。</span></a>
+<a class="sourceLine" id="cb1-36" title="36"></a>
+<a class="sourceLine" id="cb1-37" title="37">    <span class="co">// セレクトを解除する</span></a>
+<a class="sourceLine" id="cb1-38" title="38">    vAHI_SpiStop();</a>
+<a class="sourceLine" id="cb1-39" title="39"></a>
+<a class="sourceLine" id="cb1-40" title="40">    ...</a>
+<a class="sourceLine" id="cb1-41" title="41">    <span class="co">// SPIデバイスの利用を中止する。</span></a>
+<a class="sourceLine" id="cb1-42" title="42">    vAHI_SpiDisable();</a></code></pre></div>
+<h2 id="主要関数">主要関数</h2>
+<h3 id="vahi_spiconfigure">vAHI_SpiConfigure()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> vAHI_SpiConfigure(</a>
+<a class="sourceLine" id="cb2-2" title="2">    uint8 u8SlaveEnable,</a>
+<a class="sourceLine" id="cb2-3" title="3">    bool_t bLsbFirst,</a>
+<a class="sourceLine" id="cb2-4" title="4">    bool_t bPolarity,</a>
+<a class="sourceLine" id="cb2-5" title="5">    bool_t bPhase,</a>
+<a class="sourceLine" id="cb2-6" title="6">    uint8 u8ClockDivider,</a>
+<a class="sourceLine" id="cb2-7" title="7">    bool_t bInterruptEnable,</a>
+<a class="sourceLine" id="cb2-8" title="8">    bool_t bAutoSlaveSelect);</a></code></pre></div>
+<p>本関数は SPI デバイスの初期化を行い利用可能にします。SPIデバイスを解放する場合は <code>vAHI_SpiDisable()</code> を呼びます。</p>
+<div class="warning">
+<p>セレクトピンは最低でも SPISEL0 がSPI専用として割り当てられます。つまり SPIを使用する場合 SPISEL0(DIO19) は他の用途には使用できません。</p>
+</div>
+<table>
+<colgroup>
+<col style="width: 15%"></col>
+<col style="width: 84%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>引数名</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u8SalveEnable</code></td>
+<td>有効にするチップセレクトピンを指定する。<code>0</code>を指定すると SPISEL0を予約、<code>1</code>を指定すると SPISEL0,1 を予約し、<code>2</code>を指定すると SPISEL0,1,2 を予約します。</td>
+</tr>
+<tr class="even">
+<td><code>bLsbFirst</code></td>
+<td><code>TRUE</code> ならLSB(下位ビット)からデータが始まる</td>
+</tr>
+<tr class="odd">
+<td><code>bPolarity</code></td>
+<td><code>TRUE</code> ならクロックを反転する</td>
+</tr>
+<tr class="even">
+<td><code>bPhase</code></td>
+<td><code>TRUE</code> なら立ち下がりエッジを用いる</td>
+</tr>
+<tr class="odd">
+<td><code>u8ClockDiviser</code></td>
+<td>クロック周波数の指定。0..63 を指定する。0 では 16MHz 駆動し、それ以外は <code>2*u8ClockDiviser</code> で分周する。</td>
+</tr>
+<tr class="even">
+<td><code>bInterruptEnable</code></td>
+<td>SPI転送終了時に割り込みを発生させる。※ サンプル等では使用していません。</td>
+</tr>
+<tr class="odd">
+<td><code>bAutoSlaveSelect</code></td>
+<td><code>TRUE</code>の場合セレクトピンの制御をSPI転送中のみの自動制御とする。<code>FALSE</code>の場合 <code>vAHI_SpiSelect()</code> の呼び出しタイミングで設定されます。</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p><code>bLsbFirst</code>, <code>bPolarity</code>, <code>bPhase</code>, <code>u8ClockDiviser</code> は接続するデバイスのデータシートより値を決めてください。</p>
+</div>
+<h4 id="spi-mode-と-bpolarity-bphase-の関係">SPI Mode と <code>bPolarity</code>, <code>bPhase</code> の関係</h4>
+<table>
+<thead>
+<tr class="header">
+<th>SPI Mode</th>
+<th><code>bPolarity</code></th>
+<th><code>bPhase</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td><code>FALSE</code></td>
+<td><code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td><code>FALSE</code></td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><code>TRUE</code></td>
+<td><code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><code>TRUE</code></td>
+<td><code>TRUE</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vahi_spiselect">vAHI_SpiSelect()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> vAHI_SpiSelect(uint8 u8SlaveMask);</a></code></pre></div>
+<p>セレクトピンを有効化します。</p>
+<table>
+<thead>
+<tr class="header">
+<th>引数名</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u8SalveMask</code></td>
+<td><code>1</code>: SPISEL0, <code>2</code>:SPISEL1, <code>4</code>:SPISEL3, <code>0</code>: セレクトを解除します。</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p><code>vAHI_SpiStop()</code> は <code>vAHI_SpiSelect(0)</code> の呼び出しと同じです。</p>
+</div>
+<h3 id="vahi_spistarttransfer">vAHI_SpiStartTransfer()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> vAHI_SpiStartTransfer(uint8 u8CharLen, uint32 u32Out);</a></code></pre></div>
+<p>SPI転送を開始します。本関数呼び出し直後に転送を開始しますが、転送の終了を待たずに制御を返します。後述の <code>bAHI_SpiPollBusy()</code> により転送終了を待ちます。</p>
+<table>
+<colgroup>
+<col style="width: 13%"></col>
+<col style="width: 86%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>引数名</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u8CharLen</code></td>
+<td>転送長を指定する。<code>0..31</code> が指定でき、指定した数 + 1 ビットの転送を行う。例えば 16 ビットの転送であれば <code>15</code> を指定する。</td>
+</tr>
+<tr class="even">
+<td><code>u32Out</code></td>
+<td>出力するビット列。32bitに満たない転送の場合、データは LSB 側に右詰めする。（8bit の場合、bit0 〜 bit7 に格納する）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bahi_spipollbusy">bAHI_SpiPollBusy()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb5-1" title="1">bool_t bAHI_SpiPollBusy(<span class="dt">void</span>);</a></code></pre></div>
+<p>SPI 転送のポーリング待ちを行う。<code>TRUE</code> の間は SPI の転送中を意味します。</p>
+<h3 id="u32ahi_spireadtransfer32">u32AHI_SpiReadTransfer32()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb6-1" title="1"> uint32 u32AHI_SpiReadTransfer32(<span class="dt">void</span>);</a>
+<a class="sourceLine" id="cb6-2" title="2"> uint16 u16AHI_SpiReadTransfer16(<span class="dt">void</span>);</a>
+<a class="sourceLine" id="cb6-3" title="3"> uint8 u8AHI_SpiReadTransfer8(<span class="dt">void</span>);</a></code></pre></div>
+<p>SPI転送が終了した後に呼び出し、転送時の受信データ (SPIMISO) を読み出します。読み出したデータは LSB 側に右詰めされています。</p>
+</body>
+</html>

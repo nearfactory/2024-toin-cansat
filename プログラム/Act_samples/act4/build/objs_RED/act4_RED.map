@@ -1,0 +1,1495 @@
+Archive member included because of file (symbol)
+
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_main.o)
+                              objs_RED/act4.o (symbol from plugin) (sToCoNet_Context)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_utils.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_u32GetVersion)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Nwk_Common.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_vRxProc_Mod)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Channel_Mgr.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_ChMgr_bCh_Reconfig)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetVersionInfo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(AppQueueApi_ToCoNet.o)
+                              ToCoNet_main.o (symbol from plugin) (_u32_INT_ticktimer)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_event.o)
+                              ToCoNet_main.o (symbol from plugin) (PRSEV_vInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(AppStart.o)
+                              (AppColdStart)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(getMacAddr.o)
+                              ToCoNet_main.o (symbol from plugin) (ToCoNet_u32GetSerialOnBoot)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(mac.o)
+                              ToCoNet_main.o (symbol from plugin) (Mac_vInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(AES_CCM.o)
+                              AppStart.o (symbol from plugin) (bAES_CCM_KeyReg)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(no_ack_handler.o)
+                              AppStart.o (symbol from plugin) (vInstallNoAckHandler)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetExtVersionInfo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(serial.o)
+                              objs_RED/act4.o (symbol from plugin) (SERIAL_bTxChar)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(uart.o)
+                              serial.o (symbol from plugin) (UART_vInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ByteQueue.o)
+                              ToCoNet_main.o (symbol from plugin) (QUEUE__vInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ccitt8.o)
+                              AppStart.o (symbol from plugin) (u8CCITT8)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(utils.o)
+                              ToCoNet_main.o (symbol from plugin) (vTimerConfig)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(ccm.o)
+                              AES_CCM.o (symbol from plugin) (ccm_init_and_key)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(Version.o)
+                              ToCoNet_utils.o (symbol from plugin) (au8ToCoNetUtilsVersionInfo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aescrypt.o)
+                              ccm.o (symbol from plugin) (aes_encrypt)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aeskey.o)
+                              ccm.o (symbol from plugin) (aes_encrypt_key)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a(aestab.o)
+                              aeskey.o (symbol from plugin) (t_im)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweinteractive.o)
+                              objs_RED/act4.o (symbol from plugin) (TWEINTRCT_bIsVerbose)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweprintf.o)
+                              tweinteractive.o (symbol from plugin) (TWE_fprintf)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(twesercmd_plus3.o)
+                              tweinteractive.o (symbol from plugin) (TWESERCMD_Plus3_u8Parse)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweserial.o)
+                              tweinteractive.o (symbol from plugin) (_TWE_fputs)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweserial_jen.o)
+                              objs_RED/act4.o (symbol from plugin) (TWETERM_vInitJen)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(twesysutils.o)
+                              objs_RED/act4.o (symbol from plugin) (TWESYSUTL_vWaitPoll)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(printf.o)
+                              objs_RED/act4.o (symbol from plugin) (fctprintf)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a(tweinputstring.o)
+                              tweinteractive.o (symbol from plugin) (TWEINPSTR_vInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_debug.o)
+                              objs_RED/act4.o (symbol from plugin) (MWX_DebugMsg)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_appcore.o)
+                              ToCoNet_main.o (symbol from plugin) (cbToCoNet_vMain)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_memory.o)
+                              mwx_appcore.o (symbol from plugin) (operator new(unsigned long))
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_dio.o)
+                              objs_RED/act4.o (symbol from plugin) (pinMode(unsigned char, mwx::L1::enum_wapper<PIN_MODE::eMWX_DIO_MODE, unsigned char>))
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_buttons.o)
+                              mwx_appcore.o (symbol from plugin) (mwx::L1::periph_buttons::begin(unsigned long, unsigned char, unsigned short))
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_periph_analogue.o)
+                              mwx_appcore.o (symbol from plugin) (mwx::L1::periph_analogue::ADC_handler(unsigned long, unsigned long))
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a(mwx_stgs_standard.o)
+                              objs_RED/_mwx_version.o (symbol from plugin) (INTRCT_USER_APP_ID)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppApi.o)
+                              (pvAppApiDefGetMacHandle)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppApiSleep.o)
+                              (vAppApiDefSaveMacSettings)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_main.o)
+                              AppApi.o (symbol from plugin) (MAC_pvCtor)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_mcps.o)
+                              AppApi.o (symbol from plugin) (MAC_vHandleMcpsReqRsp)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_mlme.o)
+                              AppApi.o (symbol from plugin) (MAC_vHandleMlmeReqRsp)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pib.o)
+                              AppStart.o (symbol from plugin) (MAC_psPibGetHandle)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pib_mlme.o)
+                              mac_main.o (symbol from plugin) (mac_vPibSetDefaults)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_pmic.o)
+                              mac_main.o (symbol from plugin) (vPMICreset)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_ind.o)
+                              AppApi.o (symbol from plugin) (MAC_vRegisterMlmeDcfmIndCallbacks)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_scan.o)
+                              mac_main.o (symbol from plugin) (mac_eScanInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_lp.o)
+                              mac_pmic.o (symbol from plugin) (g_sLP)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(MCPS.o)
+                              mac_mcps.o (symbol from plugin) (vTAM_MCPSdataRequest)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(phy_pib.o)
+                              AppApi.o (symbol from plugin) (phy_ePibGet)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM.o)
+                              MCPS.o (symbol from plugin) (bTAMinPAN)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMCO.o)
+                              TAM.o (symbol from plugin) (vTAMCOsetCoordinator)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMDE.o)
+                              TAM.o (symbol from plugin) (vTAMDEdetermineNullState)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_MEM.o)
+                              TAM.o (symbol from plugin) (vMEMreset)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_MLME.o)
+                              mac_scan.o (symbol from plugin) (vMLMEbeaconNotify)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAH.o)
+                              TAMCO.o (symbol from plugin) (vTAHsetCutOff)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAI.o)
+                              TAM.o (symbol from plugin) (vTAIsetCapTime)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_TAT.o)
+                              TAMDE.o (symbol from plugin) (vTATstartReceiveAt)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMcommon.o)
+                              mac_scan.o (symbol from plugin) (bTACassessBeaconForPayload)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMevent.o)
+                              mac_lp.o (symbol from plugin) (vTAMinsertEvent)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMqueue.o)
+                              TAMcommon.o (symbol from plugin) (vTAQaddToFifo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMrxEnable.o)
+                              TAMevent.o (symbol from plugin) (vTAMRXEint2Fired)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMsecurity.o)
+                              TAMcommon.o (symbol from plugin) (vTSCgetIncomingInfo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMsideways.o)
+                              mac_pmic.o (symbol from plugin) (eTAStransmitRequest)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAMtime.o)
+                              TAM.o (symbol from plugin) (vTTIBLETimerExpired)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(TAM_AES.o)
+                              TAMsecurity.o (symbol from plugin) (u8TAM_AES_WriteAuxilliarySecurityHeaderIntoBuffer)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(Endian.o)
+                              TAM_AES.o (symbol from plugin) (vFromU16ToLe)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_acl.o)
+                              TAMsecurity.o (symbol from plugin) (MAC_u8AclFindInfo)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a(mac_misc.o)
+                              mac_mlme.o (symbol from plugin) (vMAC_MISCpollRequest)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTimerServer_JN516x.a(tsv_main.o)
+                              AppApiSleep.o (symbol from plugin) (s_sTimerList)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_main.o)
+                              AppApi.o (symbol from plugin) (XCV_vCtor)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_access.o)
+                              mac_main.o (symbol from plugin) (XCV_vDevWriteIER)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a(xcv_isr.o)
+                              AppApi.o (symbol from plugin) (vXCV_IntHandlerPhy)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                              phy_pib.o (symbol from plugin) (vMMAC_SetChannelAndPower)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a(MMAC_RadioInit_JN5169.o)
+                              xcv_main.o (symbol from plugin) (vMMAC_ConfigureRadio)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                              AppApi.o (symbol from plugin) (vJPT_CustomBmodTable)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
+                              MMAC_RadioInit_JN5169.o (symbol from plugin) (bJPT_InitRadio_JN5169)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorCCM.o)
+                              AES_CCM.o (symbol from plugin) (bACI_CCMstar)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AES_CCM_Star.o)
+                              TAM_AES.o (symbol from plugin) (vACI_OptimisedCcmStar)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorAPI.o)
+                              AES_CCM_Star.o (symbol from plugin) (vACI_CmdWaitBusy)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Analogue.o)
+                              utils.o (symbol from plugin) (bAHI_APRegulatorEnabled)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_BrownOut.o)
+                              mwx_appcore.o (symbol from plugin) (vAHI_BrownOutConfigure)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Dio.o)
+                              mwx_periph_dio.o (symbol from plugin) (vAHI_DioSetDirection)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_PulseCounter.o)
+                              mwx_appcore.o (symbol from plugin) (bAHI_Read16BitCounter)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Reset.o)
+                              ToCoNet_main.o (symbol from plugin) (vAHI_SwReset)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Spi.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_SpiRegisterCallback)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_System.o)
+                              AppApiSleep.o (symbol from plugin) (u8AHI_PowerStatus)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Timer.o)
+                              utils.o (symbol from plugin) (vAHI_TimerEnable)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_TimerInt.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_Timer0RegisterCallback)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                              objs_RED/act4.o (symbol from plugin) (vAHI_UartSetBaudDivisor)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+                              ToCoNet_utils.o (symbol from plugin) (vAHI_WakeTimerEnable)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Flash.o)
+                              AHI_System.o (symbol from plugin) (vAHI_FlashAndEEPROMControllerIntHandler)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Infrared.o)
+                              AHI_TimerInt.o (symbol from plugin) (vAHI_IntHandlerInfrared)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_DO.o)
+                              mwx_periph_dio.o (symbol from plugin) (bAHI_DoEnableOutputs)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(InternalFlashApi.o)
+                              AHI_Flash.o (symbol from plugin) (bFlashErase)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_FlashIndexSector.o)
+                              AppStart.o (symbol from plugin) (bAHI_ReadMACID)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Si.o)
+                              objs_RED/act4.o (symbol from plugin) (vAHI_SiMasterConfigure)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                              AppQueueApi_ToCoNet.o (symbol from plugin) (vAHI_TickTimerInit)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+                              AppApi.o (symbol from plugin) (vAHI_InterruptSetPriority)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Init.o)
+                              AppStart.o (symbol from plugin) (u32AHI_Init)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_SpiSlave.o)
+                              AHI_Init.o (symbol from plugin) (vAHI_IntHandlerSpiSlave)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
+                              ToCoNet_main.o (symbol from plugin) (vMicroIntEnableOnly)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                              AHI_Reset.o (symbol from plugin) (vMicroSyscall)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(Heap.o)
+                              (u32HeapStart)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                              (_exception_external_interrupt)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_Tx.o)
+                              mwx_appcore.o (symbol from plugin) (ToCoNet_vReg_mod_Tx_Standard)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a(ToCoNet_mod_TxRxQueue.o)
+                              mwx_appcore.o (symbol from plugin) (ToCoNet_vReg_mod_TxRxQueueSmall)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a(AppHousekeeping.o)
+                              mac_scan.o (symbol from plugin) (sAppHousekeeping)
+C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a(AEScoprocessorAPIinterrupts.o)
+                              AHI_Init.o (symbol from plugin) (vACI_IntHandlerAes)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                              mwx_periph_buttons.o (symbol from plugin) (memset)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o (memcmp)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o (memcpy)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o (__udivsi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o (__divsi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__umodsi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__modsi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__fixunsdfsi)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__udivdi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__umoddi3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o (__adddf3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o (__divdf3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__nedf2)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o (__gedf2)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__ledf2)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__muldf3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__subdf3)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__fixdfsi)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__floatsidf)
+c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                              C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o (__floatunsidf)
+
+Allocating common symbols
+Common symbol       size              file
+
+apvHwIndBufferData  0x2c              AppQueueApi_ToCoNet.o (symbol from plugin)
+prMAC_TofMlmeReqHandler
+                    0x4               mac_mlme.o (symbol from plugin)
+apvMlmeIndBufferData
+                    0x14              AppQueueApi_ToCoNet.o (symbol from plugin)
+_TWENET_TX_POWER_VALUE
+                    0x1               AppStart.o (symbol from plugin)
+g_tSpiConfiguration
+                    0x4               AHI_Flash.o (symbol from plugin)
+prMAC_TofRxHandler  0x4               TAMcommon.o (symbol from plugin)
+_MAC_u8TxFailReason
+                    0x1               mac.o (symbol from plugin)
+apvMcpsIndBufferData
+                    0x14              AppQueueApi_ToCoNet.o (symbol from plugin)
+bAHI_ExtendedTemperatureOperation
+                    0x1               AHI_System.o (symbol from plugin)
+bMAC_DiscardUnsuccessfulAssocResponses
+                    0x1               mac_pmic.o (symbol from plugin)
+u8Msq               0x1               TAM_TAT.o (symbol from plugin)
+g_bLegacyHwBugEmulation
+                    0x1               AES_CCM_Star.o (symbol from plugin)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 objs_RED/_mwx_version.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+ .bss           0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+ .bss           0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans17.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+ .data          0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+ .text.exit     0x0000000000000000        0x3 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+ .text.startup  0x0000000000000000      0x106 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+ .ctors         0x0000000000000000        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x38 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .eh_frame      0x0000000000000000       0x38 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .text          0x0000000000000000        0x0 objs_RED/act4.o (symbol from plugin)
+ .gnu.linkonce.t._ZN3mwx2L110serial_jen7vOutputEcPv
+                0x0000000000000000        0x0 objs_RED/act4.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_utils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Nwk_Common.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Channel_Mgr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppQueueApi_ToCoNet.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_event.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppStart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 getMacAddr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AES_CCM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 no_ack_handler.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 serial.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 uart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ByteQueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ccitt8.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 utils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ccm.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Version.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aescrypt.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aeskey.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 aestab.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweinteractive.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweprintf.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 twesercmd_plus3.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweserial.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweserial_jen.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 twesysutils.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 printf.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tweinputstring.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_debug.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_appcore.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_memory.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_dio.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_buttons.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_periph_analogue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mwx_stgs_standard.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppApi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppApiSleep.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_mcps.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_mlme.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pib.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pib_mlme.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_pmic.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_ind.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_scan.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_lp.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MCPS.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 phy_pib.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMCO.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMDE.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_MEM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_MLME.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAH.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAI.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_TAT.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMcommon.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMevent.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMqueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMrxEnable.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMsecurity.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMsideways.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAMtime.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 TAM_AES.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 Endian.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_acl.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 mac_misc.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 tsv_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_main.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_access.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 xcv_isr.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MMAC.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MMAC_RadioInit_JN5169.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 JPT_RadioTxPowerTests.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 JPT_RadioSettings_JN5169.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorCCM.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AES_CCM_Star.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorAPI.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Analogue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_BrownOut.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Dio.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_PulseCounter.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Reset.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Spi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_System.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Timer.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_TimerInt.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Uart.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_WakeTimer.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Flash.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Infrared.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_DO.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 InternalFlashApi.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_FlashIndexSector.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_Si.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_TickTimer.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+ .bss           0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+ .text          0x0000000000000000        0x0 AHI_Init.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AHI_SpiSlave.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 MicroInt_ba.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .data          0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .bss           0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+ .text          0x0000000000000000        0x0 Heap.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .data          0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .bss           0x0000000000000000        0x0 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_Tx.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 ToCoNet_mod_TxRxQueue.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AppHousekeeping.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 AEScoprocessorAPIinterrupts.o (symbol from plugin)
+ .data          0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x0000000000080000 0x0000000000080000
+ram              0x000000000400004c 0x0000000000007fb4
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD objs_RED/_mwx_version.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans17.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+LOAD C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD objs_RED/act4.o
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libEASTL_RED.a
+START GROUP
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAppApi_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMAC_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTimerServer_JN516x.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libTOF_JN516x.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libXcv_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMMAC_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libJPT_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libAes_JN516x.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libPDM_EEPROM_JN516x_NO_RTOS.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENET_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENEText_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETutils_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libTWENETstgs_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libmwx_RED.a
+LOAD C:/Users/koumu/Desktop/MWSTAGE/MWSDK/TWENET/current/lib/libEASTL_RED.a
+END GROUP
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libstdc++.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libm.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a
+LOAD c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a
+                0x0000000000000800                _stack_size = 0x800
+                0x0000000000080038                exception_vsr_table = 0x80038
+                0x0000000004000000                pSPIflashFncTable = 0x4000000
+                0x0000000000000044                restore_state = 0x44
+                0x000000000000004a                bZSPIWaitWIPClear = 0x4a
+                0x0000000000000050                u16ZSPIflashRDID = 0x50
+                0x0000000000000056                u8SelectFlashChipType = 0x56
+                0x000000000000005c                memcpy = 0x5c
+                0x0000000000000066                vBootFlashProg = 0x66
+                [0x0000000000000d16]                __minimum_heap_size = DEFINED (__minimum_heap_size)?__minimum_heap_size:0xd16
+                [0x0000000000000800]                __stack_size = DEFINED (__stack_size)?__stack_size:0x800
+                0x0000000000000000                _SwConfig = (DEFINED (g_bSWConf_Debug) | (DEFINED (g_bSWConf_AltDebugPort) << 0x1))
+
+.version        0x000000000007fffc        0x4
+                0x000000000007fffc        0x4 LONG 0xf03000b
+
+.bir            0x0000000000080000       0x10
+                0x0000000000080000                _flash_start = ABSOLUTE (.)
+                0x0000000000080000                _flash_beg = ABSOLUTE (.)
+                0x0000000000080000        0x4 LONG 0x12345678
+                0x0000000000080004        0x4 LONG 0x11223344
+                0x0000000000080008        0x4 LONG 0x55667788
+                0x000000000008000c        0x1 BYTE 0x8
+                0x000000000008000d        0x1 BYTE 0x1
+                0x000000000008000e        0x2 SHORT 0x0
+
+.flashheader    0x0000000000080010       0x28
+                0x0000000000080010        0x4 LONG 0x0
+                0x0000000000080014        0x4 LONG 0x0
+                0x0000000000080018        0x4 LONG 0x0
+                0x000000000008001c        0x2 SHORT 0x0
+                0x000000000008001e        0x2 SHORT 0x0 ABSOLUTE (_SwConfig)
+                0x0000000000080020                _enc_start = ABSOLUTE (.)
+                0x0000000000080020        0x4 LONG 0xf0a8 ABSOLUTE (_image_len)
+                0x0000000000080024        0x4 LONG 0x8f07c ABSOLUTE (_flash_data_start)
+                0x0000000000080028        0x2 SHORT 0x13 ((ABSOLUTE (_ram_data_start) / 0x4) & 0xffff)
+                0x000000000008002a        0x2 SHORT 0xb ((ABSOLUTE (_ram_data_len) / 0x4) & 0xffff)
+                0x000000000008002c        0x2 SHORT 0x1e ((ABSOLUTE (_bss_start) / 0x4) & 0xffff)
+                0x000000000008002e        0x2 SHORT 0x586 ((ABSOLUTE (_bss_len) / 0x4) & 0xffff)
+                0x0000000000080030        0x4 LONG 0x85604 ABSOLUTE (AppWarmStart)
+                0x0000000000080034        0x4 LONG 0x82033 ABSOLUTE (AppColdStart)
+                0x0000000000000000                _enc_offset = (_enc_start & 0xf)
+                0x0000000000000044                PROVIDE (vException_BusError, restore_state)
+                0x0000000000000044                PROVIDE (vException_UnalignedAccess, restore_state)
+                0x0000000000000044                PROVIDE (vException_IllegalInstruction, restore_state)
+                0x0000000000000044                PROVIDE (vException_SysCall, restore_state)
+                0x0000000000000044                PROVIDE (vException_Trap, restore_state)
+                0x0000000000000044                PROVIDE (vException_StackOverflow, restore_state)
+                0x0000000000080038                . = ABSOLUTE (exception_vsr_table)
+
+.vsr_table      0x0000000000080038       0x18
+                0x0000000000080038        0x4 LONG 0x44 ABSOLUTE (vException_BusError)
+                0x000000000008003c        0x4 LONG 0x44 ABSOLUTE (vException_UnalignedAccess)
+                0x0000000000080040        0x4 LONG 0x44 ABSOLUTE (vException_IllegalInstruction)
+                0x0000000000080044        0x4 LONG 0x44 ABSOLUTE (vException_SysCall)
+                0x0000000000080048        0x4 LONG 0x44 ABSOLUTE (vException_Trap)
+                0x000000000008004c        0x4 LONG 0x44 ABSOLUTE (vException_StackOverflow)
+
+.vsr_handlers   0x0000000000080050       0xaa
+ *(.vsr_handlers)
+ .vsr_handlers  0x0000000000080050       0xaa C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                0x0000000000080050                _exception_external_interrupt
+                0x00000000000800f8                _default_vsr_dummy
+
+.rodata         0x0000000000080100      0x844
+ *(.rodata*)
+ .rodata        0x0000000000080100        0xc C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .rodata        0x000000000008010c       0x44 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+                0x000000000008010c                s_aprScanHandleEvt.13360
+                0x000000000008013c                aprLPBMacVectorRamTable
+ .rodata.str1.1
+                0x0000000000080150       0x11 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+ *fill*         0x0000000000080161        0x3 00
+ .rodata        0x0000000000080164       0x7c C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+                0x0000000000080198                u32MacLow_TOCOS
+                0x000000000008019c                u32MacHigh_TOCOS
+ .rodata        0x00000000000801e0        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+ .rodata.str1.1
+                0x00000000000801e4       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+ *fill*         0x00000000000801f6        0x2 00
+ .rodata        0x00000000000801f8       0xc0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+ .rodata.str1.1
+                0x00000000000802b8       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+ .rodata        0x00000000000802ca       0x14 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+ .rodata        0x00000000000802de        0x3 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+ .rodata        0x00000000000802e1        0x6 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+                0x00000000000802e1                aeXcvPhyEvtToScanEvt.5424.13363
+ *fill*         0x00000000000802e7        0x1 00
+ .rodata        0x00000000000802e8       0x24 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+                0x00000000000802f0                psTamXcvContext
+ .rodata        0x000000000008030c        0xa C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+                0x000000000008030c                CSWTCH.7.21336.21336
+ .rodata.str1.1
+                0x0000000000080316       0x11 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+ .rodata        0x0000000000080327      0x300 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+ .rodata        0x0000000000080627      0x131 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+ .rodata.str1.1
+                0x0000000000080758       0x10 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+ .rodata        0x0000000000080768       0x50 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+                0x000000000008077c                au32TimerBaseAddress
+                0x0000000000080790                CSWTCH.35.23949.23949
+ .rodata        0x00000000000807b8       0x9a C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+ .rodata        0x0000000000080852       0x10 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+ .rodata.str1.1
+                0x0000000000080862       0x11 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+                                         0x22 (size before relaxing)
+ *fill*         0x0000000000080873        0x1 00
+ .rodata        0x0000000000080874       0x38 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+                0x0000000000080874                asStateFuncTbl.25114
+ .rodata        0x00000000000808ac        0x8 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+                0x00000000000808ac                au32UartAddrOffset
+ .rodata        0x00000000000808b4       0x90 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+                0x00000000000808b4                psTamMacContext
+                0x00000000000808b8                apvActionCalls
+                0x0000000000080940                psTAMcontext
+
+.text           0x0000000000080944     0xe737
+ *(.text*)
+ .text          0x0000000000080944      0xafb C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+                0x0000000000080944                mac_vLPBStartTimer
+                0x0000000000080c4f                vTimerCallback.23596
+                0x0000000000080c5a                vProcessEvCoreTx.25051
+                0x0000000000080d4a                _ZN3mwx2L115periph_analogue10_adc_startEv.local.7.constprop.189
+                0x0000000000080e33                vTimerStart
+                0x0000000000080f4c                vAHI_TimerEnable.part.1.23816.constprop.172
+                0x0000000000080fb7                _ZN3mwx2L16twenet5beginEv.local.76.constprop.147
+                0x0000000000080ffc                bAES_CCMstar
+                0x00000000000810c8                pvHeap_Alloc
+                0x00000000000810cb                operator new(unsigned long)
+                0x00000000000810ee                u32AHI_Init
+                0x00000000000811b0                vMicroIntRestoreState
+                0x00000000000811bc                bAHI_DoEnableOutputs
+                0x00000000000811e5                u8AHI_WakeTimerFiredStatus
+                0x00000000000811f9                vAHI_WakeTimerStop.part.3.24281
+                0x0000000000081219                mac_vLPBStopTimer
+                0x0000000000081223                vAHI_UartSetClocksPerBit.part.18.24077
+                0x000000000008124a                vAHI_UartSetRTSCTS.part.15.24062
+                0x0000000000081271                vAHI_UartReset.part.4.24035
+                0x00000000000812a9                vAHI_UartSetControl.part.2.24019
+                0x00000000000812fa                vAHI_UartSetBaudDivisor.part.1.24015
+                0x0000000000081339                vAHI_WatchdogStop
+                0x0000000000081350                _ZN3mwx2L120periph_pulse_counter10_on_wakeupEv.part.18.6266
+                0x00000000000813c6                u32AHI_DioWakeStatus
+                0x00000000000813d7                vAHI_DioWakeEdge
+                0x00000000000813f7                vAHI_DioSetPullup
+                0x0000000000081417                vAHI_DioSetOutput
+                0x000000000008142b                vAHI_DioSetDirection
+ .text.unlikely
+                0x000000000008143f       0x24 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+                0x000000000008143f                vAHI_CpuDoze
+                0x0000000000081452                vStartXtal32kExternalRc.23610
+ *fill*         0x0000000000081463        0x1 00
+ .text          0x0000000000081464      0xb68 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+                0x0000000000081464                eWBRTTxDone.13017
+                0x0000000000081482                vTAMCOframeTXgoingIdle
+                0x000000000008149b                vTAMCOframeTXcap
+                0x00000000000814c0                vTAMDEframeTXDEnull
+                0x00000000000814e5                vTAMDEframeTXtrackingCAPgts
+                0x0000000000081513                vTAMCOframeTXnobeacon
+                0x0000000000081529                vTAMCOframeStarting
+                0x0000000000081542                eWCoRRxDone.13008
+                0x00000000000815ec                eWBcnRxDone.13020
+                0x00000000000817bc                bTACprocessFrameRXcomplete
+                0x0000000000081bd6                vTAMCOframeTXbeacon
+                0x0000000000081c9d                vTAMDEframeRXsyncReq
+                0x0000000000081eed                vTAMDEint1FiredTrackingCAPgts
+                0x0000000000081f9e                eWONTTxDone.13014
+ .text          0x0000000000081fcc      0x5c3 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+                0x0000000000081fcc                vProcessEvCoreMac
+                0x0000000000082033                AppColdStart
+ .text.unlikely
+                0x000000000008258f      0x43b C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+                0x000000000008258f                ToCoNet_vStart
+ .text          0x00000000000829ca      0xa2c C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+                0x00000000000829ca                vAHI_IntHandlerTickTimer
+                0x0000000000082a11                vTACintRXheader
+                0x000000000008320c                cbAppColdStart.part.32.6892
+ .text          0x00000000000833f6      0xe62 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+                0x00000000000835ee                mwx::L1::periph_analogue::ADC_handler(unsigned long, unsigned long)
+                0x0000000000083636                u8HwEventHandler.2059
+                0x00000000000836de                _ftoa.5551.constprop.249
+                0x0000000000083a37                _ntoa_long_long.5525.constprop.246
+                0x0000000000083b0c                _ntoa_long.5513.constprop.251
+                0x0000000000083bd9                vAHI_SiMasterConfigure.constprop.239
+                0x0000000000083c0d                vMicroIntEnableOnly.constprop.226
+                0x0000000000083c39                vMMAC_SetChannelAndPower
+                0x0000000000083de2                vPhySetChannel
+                0x0000000000083e01                QUEUE__u8RemoveItem.part.1.4584
+                0x0000000000083e3c                QUEUE__vAddItem.constprop.225
+                0x0000000000083e6e                _ToCoNet_bRfChChannel
+                0x0000000000083f03                ToCoNet_ChMgr_bCh_Reconfig
+                0x0000000000083f6b                ToCoNet_ChMgr_vCh_TxFin
+                0x0000000000083f97                vHnd_E_STATE_WAIT_TX.25082
+                0x0000000000084007                vHnd_E_STATE_IDLE.25074
+                0x000000000008406b                vAHI_DoSetPullup.constprop.217
+                0x000000000008408b                vAHI_DioWakeEnable.constprop.216
+                0x000000000008409f                vAHI_ProtocolPower.constprop.199
+                0x00000000000840ad                vMMAC_ConfigureRadio
+ .text          0x0000000000084258      0xa94 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+                0x0000000000084258                UART_vHandleUartInterrupt.4509
+                0x00000000000842df                bAES_CCM_DecodeKey
+                0x000000000008439b                vXCV_IntHandlerBbc
+                0x000000000008443e                _ZN3mwx2L115periph_analogue5setupEbhPFvvE.local.88.constprop.159
+                0x00000000000844d8                vMLMEbeaconNotify
+                0x0000000000084636                vMCPSframeReceived
+                0x00000000000846f9                _ZN3mwx2L114periph_twowire9busy_waitEv.isra.5.1507
+                0x0000000000084742                vTAMRXEsetPhy
+                0x0000000000084805                vTAHsetPhyState
+                0x0000000000084835                vTAMCOint2Fired
+                0x0000000000084855                vSetPHYfromMacValue.16138
+                0x0000000000084887                vTAMDEint1FiredWaitDR
+                0x0000000000084894                vTACsetPHYfromMacValue
+                0x00000000000848b5                vTAMRXEsetReceiveForPibChange
+                0x00000000000848f5                bAHI_ReadMACID
+                0x000000000008493b                _ZN3mwx2L114periph_twowireC1Eh.local.40
+                0x0000000000084978                ToCoNet_vInit
+                0x0000000000084cbb                _ZN3mwx2L114periph_twowire8_init_hwEb.isra.11.1519.constprop.237
+ .text.unlikely
+                0x0000000000084cec        0xf C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+                0x0000000000084cec                u32AppQApiInitInt_PATCH
+ .text          0x0000000000084cfb      0x7bc C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+                0x0000000000084cfb                vHnd_E_STATE_RUNNING.25090
+                0x0000000000084f45                SERIAL_vTxReady
+                0x0000000000084fa6                vAppQApiPostHwIntT.2958
+                0x0000000000085079                TWETERM_iGetC.5376
+                0x00000000000850dc                vRxChar.4407
+                0x000000000008512d                vXCV_IntHandlerPhy
+                0x00000000000851df                vScanHandleTimer.12617
+                0x00000000000851e4                ToCoNet_vMacStart
+                0x00000000000851fd                _ZN3mwx2L114periph_twowire15endTransmissionEb.part.10.1517
+                0x0000000000085219                _ZN3mwx2L110serial_jen13_set_baudrateEt.isra.2.6232
+                0x00000000000852ca                u8TAM_AES_WriteAuxilliarySecurityHeaderIntoBuffer
+                0x000000000008533c                u32AHI_ReadIndexSectorBits.constprop.149
+                0x000000000008539d                _ZN3mwx2L114periph_twowire14cmd_tx_no_stopEb.isra.8.1511.constprop.241
+                0x00000000000853ab                _ZN3mwx2L114periph_twowire5writeEh.local.124.constprop.232
+                0x00000000000853e8                _ZN3mwx2L114periph_twowire17beginTransmissionEh.local.123.constprop.230
+                0x000000000008541d                vTAIsetRxEnableTime
+                0x000000000008543e                vDoGoActive.19304
+                0x0000000000085460                vTAMRXEint2Fired
+                0x0000000000085496                vTAIsetCapTime
+ .text.unlikely
+                0x00000000000854b7       0x79 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+                0x00000000000854b7                Delay.23614.constprop.169
+ *fill*         0x0000000000085530        0x0 00
+ .text          0x0000000000085530      0xa84 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+                0x0000000000085530                vPostDcfm.13004
+                0x0000000000085604                AppWarmStart
+                0x00000000000856d4                vSetNextChannel.13052
+                0x000000000008572d                MAC_vHandleMlmeReqRsp
+                0x0000000000085edd                vTAMDEint1FiredTracking
+                0x0000000000085f4d                vTAMDEint1FiredSyncReq
+ .text          0x0000000000085fb4      0x9a4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+                0x0000000000085fb4                vTAMDEint2FiredTrackingDR
+                0x0000000000085fda                vTAMDEint2FiredPollActive
+                0x000000000008600f                vTAMDEreqTXnullTrackingCAP
+                0x0000000000086029                eTAMselect
+                0x0000000000086168                MAC_pvCtor
+                0x0000000000086591                u32AppApiDefInit
+                0x000000000008665c                _ToCoNet_vMacInit
+                0x00000000000866c2                _ToCoNet_vRfConfig
+                0x000000000008685d                vTAMDEint1FiredTrackingBeacon
+                0x00000000000868fd                vTAMDEframeTXtrackingDR
+ .text          0x0000000000086958      0xb2f C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+                0x0000000000086a9b                vHnd_E_STATE_FINISH_TX_FAIL.25059
+                0x0000000000086b56                vHnd_E_STATE_FINISH_TX_SUCCESS.25064
+                0x0000000000086bed                bTAM_AES_CCMstarPatch
+                0x0000000000086f09                bTATsendFrame
+                0x0000000000086f5c                vTrySendFromDirectCAP.15595
+                0x0000000000086f77                vTrySendFromDirectNoBeacon.15599
+                0x0000000000086fa2                vTAMCOint1Fired
+                0x00000000000870be                vTAMCOstartBeacon
+                0x00000000000870f9                vStartStoreValues.15663
+                0x00000000000871b0                bStartCallback.15692
+                0x00000000000871df                vTAMCOint1FiredCAP
+                0x0000000000087252                vTAMCOreqTXnoBeacon
+                0x0000000000087264                vTAMCOreqTXinCAP
+                0x000000000008728a                vTrySendUnslotted.16140
+                0x00000000000872a4                bSendDataRequest.16142
+                0x00000000000873b6                bProcessBeaconRX.16145
+ .text          0x0000000000087487      0x6fd C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+                0x0000000000087487                bAES_CCM_EncodeKey
+                0x00000000000877b9                u8Write802_15_4HeaderIntoBuffer.21311
+                0x0000000000087919                bTAM_AES_CCMstarPatch2006
+                0x0000000000087a20                _ZN3mwx2L110serial_jen5beginEmh.part.26.6395
+                0x0000000000087a9d                _ZN3mwx2L110serial_jen10_on_wakeupEv.part.27.6410
+                0x0000000000087ac8                _MWX_periph_init()
+ .text.unlikely
+                0x0000000000087b84      0x108 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+                0x0000000000087b84                bStartXtal32k.23620
+ .text          0x0000000000087c8c      0x9e3 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+                0x0000000000087c8c                ToCoNet_vMain
+ .text          0x000000000008866f      0xab7 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+                0x000000000008866f                mac_vLPBAdjustBeaconOffset
+                0x00000000000886cc                mac_u32LPBGetBeaconTimeout
+                0x00000000000886d5                eWEnDTmrExpiry.13001
+                0x00000000000886e0                eWEnDEdDone.12998
+                0x000000000008873b                eGenlDontCare.12995
+                0x0000000000088740                eGenlIllegal.12620
+                0x0000000000088747                u32GetTimer0
+                0x000000000008874e                vSetTimer0
+                0x000000000008875d                _out_fct.5477
+                0x000000000008876f                _out_null.5483
+                0x0000000000088772                vOutputStream.5269
+                0x000000000008877e                vHandlerPatch.4382
+                0x00000000000887b5                vTACu32ToPayloadM
+                0x00000000000887cd                bTACframeInProgress
+                0x00000000000887f7                bTACassessBeaconForPayload
+                0x0000000000088848                bIsBbcSafeForTx
+                0x000000000008887d                vTATwriteAclMaterialToHardware
+                0x00000000000888a2                vTATsetBLE
+                0x00000000000888d9                vTATgetFramePayload
+                0x00000000000888f6                eTATreadTXstatus
+                0x000000000008893c                vTAHsetPhyStateDirect.part.0.17481
+                0x0000000000088958                vMEMreturn
+                0x00000000000889c9                vTACinformOriginator
+                0x00000000000889eb                pvMEMget
+                0x0000000000088a17                vTAMDEdetermineNullState
+                0x0000000000088a31                vTAMCOupdatePendingList
+                0x0000000000088b03                vTAMCOsetCoordinator
+                0x0000000000088b29                eScanHandleEvt.part.0.13031
+                0x0000000000088b52                mac_eDcfmIndPost
+                0x0000000000088b73                mac_psDcfmIndGetBuf
+                0x0000000000088b94                vMLMErxEnableConfirm
+                0x0000000000088bc6                vMLMEcommStatus
+                0x0000000000088c29                vMLMEcommStatusFromFrame
+                0x0000000000088c6d                vMLMEsyncLoss
+                0x0000000000088ca0                vPMICpostFailedAssocDcfm
+                0x0000000000088cd8                vPMICassocReqTO_2.11448
+                0x0000000000088cef                MAC_vPibSetPanId
+                0x0000000000088d0a                vHandleTofRequest.9554
+                0x0000000000088d0d                vAppApiDefSetPrbsSeed
+                0x0000000000088d31                _ZN3mwx2L113serial_parserINS0_10alloc_heapIhEEEC1Ev.local.16
+                0x0000000000088d53                _ZN3mwx2L16twenetC1Ev.local.22
+                0x0000000000088dea                _ZN3mwx2L110serial_jenC1Eh.local.71
+                0x0000000000088e1a                _ZN3mwx2L115periph_analogueC1Ev.local.89
+                0x0000000000088e45                _ZN3mwx2L112appdefs_virt8on_eventEmRm.local.98
+                0x0000000000088e5d                _ZN3mwx2L112appdefs_virt18cbToCoNet_vHwEventEmm.local.100
+                0x0000000000088e75                _ZN3mwx2L112appdefs_virt18cbToCoNet_vTxEventERNS0_12packet_ev_txE.local.101
+                0x0000000000088e8d                _ZN3mwx2L112appdefs_virt19cbToCoNet_vNwkEventERNS0_13packet_ev_nwkE.local.103
+                0x0000000000088ea5                u8CCITT8
+                0x0000000000088ecb                bAES_CCM_KeyReg
+                0x0000000000088f0a                PRSEV_vSetState
+                0x0000000000088f1a                PRSEV_vProcessEv_core.3238
+                0x0000000000088fbc                PRSEV_vProcessEvPost
+                0x0000000000088fee                bFifoPush.2979
+                0x0000000000089027                vAppQApiPostMlme.2965
+                0x0000000000089046                vAppQApiPostMcps.2972
+                0x0000000000089061                pvFifoPull.2976
+                0x0000000000089088                psAppQApiGetMlmeBuffer.2962
+                0x0000000000089090                psAppQApiGetMcpsBuffer.2969
+                0x0000000000089098                Display::Display()
+ .text.unlikely
+                0x0000000000089126       0x65 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+                0x0000000000089126                _ZN3mwx2L112appdefs_virt18cbToCoNet_vRxEventERNS0_9packet_rxE.local.102
+                0x000000000008913e                PRSEV_u8Register
+                0x000000000008917c                _PRSEV_vProcessEvSingleH
+ *fill*         0x000000000008918b        0x1 00
+ .text          0x000000000008918c      0x558 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+                0x000000000008918c                vAppApiDefMlmeRequest
+                0x00000000000891b7                pvAppApiDefGetMacHandle
+                0x00000000000891c0                vTimerConfig
+                0x00000000000893cd                cbAppWarmStart.part.28.6671
+                0x00000000000895f9                _ZN3mwx2L16streamINS0_10serial_jenEE7printlnEv.local.121.constprop.220
+                0x000000000008960d                setup()
+ .text.unlikely
+                0x00000000000896e4      0x374 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+                0x0000000000089701                vProcessIncomingHwEvent.2228
+                0x00000000000899fb                _ZN3mwx2L16streamINS0_10serial_jenEE6_printEONS3_13_value_type_sEhb.local.118.constprop.206
+ .text          0x0000000000089a58      0xa8d C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+                0x0000000000089a58                vAHI_IntHandlerAnalogPeriph
+                0x0000000000089a78                vTTIBLETimerExpired
+                0x0000000000089a83                vACI_CmdWaitBusy
+                0x0000000000089ae7                vACI_OptimisedCcmStar
+                0x0000000000089cff                vTAIdisableInterrupt
+                0x0000000000089d18                psRemove.part.0.22560
+                0x0000000000089d47                vMAC_MISCpollConfirm
+                0x0000000000089d78                MAC_u8AclFindInfo
+                0x0000000000089ea2                vTASretrieveSecurity
+                0x0000000000089ec4                MAC_bLookUpKeyDescriptor.20112
+                0x0000000000089f3e                u8TSCframeIncrease
+                0x0000000000089f77                vTSCpostTransmitUpdate
+                0x0000000000089fa7                vCopyToDataFromMacAddr.20022
+                0x0000000000089fda                bTSCgetOutgoingInfo
+                0x000000000008a0e3                vDoGoOff.19302
+                0x000000000008a0fd                psTAQsearchFifo
+                0x000000000008a146                bTAQremoveFromFifo
+                0x000000000008a183                vTTITransactionTimerExpired
+                0x000000000008a1ac                vTAMinsertEvent
+                0x000000000008a212                vTTITimer2Expired
+                0x000000000008a216                vTTITimer1Expired
+                0x000000000008a21a                vTAM_TxRetryTimeout
+                0x000000000008a21e                vTACsetTxFrameDefaults
+                0x000000000008a244                u8TACgetHeaderSize
+                0x000000000008a281                bUpdateTime.18340
+                0x000000000008a2bc                vTACbuildBeacon
+                0x000000000008a4c4                u32TACpayloadToU32M
+ .text          0x000000000008a4e5      0x9e6 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+                0x000000000008a4e5                TSV_eStart
+                0x000000000008a5c9                vTAMDEstartSync
+                0x000000000008a647                vDeterminePowerState.16262
+                0x000000000008a6ca                vTAM_TxRetryTimer
+                0x000000000008a6d6                eTAStransmitRequest
+                0x000000000008aa71                vPMICassocReqTO_1.11441
+                0x000000000008aaf9                vTAM_MCPSdataRequest
+                0x000000000008ab3c                bTACcheckPANconflict
+                0x000000000008abf5                TSV_eOpen
+                0x000000000008abfd                vAppApiDefRestoreMacSettings
+                0x000000000008ace4                vAppApiDefSaveMacSettings
+                0x000000000008ad41                mac_vLPBSleep
+                0x000000000008adff                pvAppApiDefGetMacAddrLocation
+                0x000000000008ae08                eAppApiDefPlmeGet
+                0x000000000008ae5a                eAppApiDefPlmeSet
+ .text          0x000000000008aecb      0xb41 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+                0x000000000008aecb                _ZN3mwx2L110serial_jen7vOutputEcPv.local.128
+                0x000000000008af07                vExpireHead.22565
+                0x000000000008af37                bAHI_SetClockRate
+                0x000000000008b042                _etoa.5571.constprop.247
+                0x000000000008ba00                MWX_DebugMsg.constprop.242
+ .text.unlikely
+                0x000000000008ba0c       0x6d C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+                0x000000000008ba0c                vAHI_MemoryHold.23713
+                0x000000000008ba51                fctprintf.constprop.207
+ *fill*         0x000000000008ba79        0x3 00
+ .text          0x000000000008ba7c      0x704 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans17.ltrans.o
+                0x000000000008ba7c                eGenTmrExpiry.13313
+                0x000000000008babe                eWEDTEdDone.13316
+                0x000000000008bae2                TSV_eStop
+                0x000000000008bba0                bPMICdisassocReqSent.11437
+                0x000000000008bc5a                MAC_vHandleMcpsReqRsp
+                0x000000000008bce7                bMCPSframeTXcomplete.14048
+                0x000000000008bd3c                bSendSyncLoss.18275
+                0x000000000008bd54                bPollReqSent.21871
+                0x000000000008bd6c                bTASsendCommStatusInd
+                0x000000000008bd81                bAssocRespSent.11433
+                0x000000000008bd94                eTACprocessFrameTXcomplete
+                0x000000000008bf11                bPMICassocReqSent.11429
+                0x000000000008bf93                bPMICassocReqPollSent.11444
+                0x000000000008bfe7                eWChCChanChgd.13028
+ .text          0x000000000008c180      0x523 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+                0x000000000008c180                vAppApiDefMcpsRequest
+                0x000000000008c1ab                vHnd_E_STATE_PREPARE_TX.25069
+ *fill*         0x000000000008c6a3        0x1 00
+ .text          0x000000000008c6a4      0x358 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+                0x000000000008c6ef                SERIAL_bTxChar
+                0x000000000008c7a0                TWETERM_iPutS.5368
+                0x000000000008c7c5                TWETERM_iPutC.5372
+                0x000000000008c7d6                TWETERM_vFlush.5345
+                0x000000000008c854                eGenRxHdrDone.13011
+                0x000000000008c864                _ZN3mwx2L110serial_jen5writeEi.local.110.constprop.221
+                0x000000000008c876                pinMode(unsigned char, mwx::L1::enum_wapper<PIN_MODE::eMWX_DIO_MODE, unsigned char>)
+ .text          0x000000000008c9fc       0xbe C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+                0x000000000008c9fc                vTAMCOframeRXcap
+                0x000000000008ca0e                vTAMCOframeRXgoingIdle
+                0x000000000008ca24                vTAMCOframeRXnobeacon
+                0x000000000008ca36                vTAMDEframeRX
+                0x000000000008ca5f                vTAMDEframePreSyncReq
+                0x000000000008ca77                vTAMDEframeRXtrackingDR
+ .text          0x000000000008caba       0x25 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                0x000000000008caba                memcmp
+ .text          0x000000000008cadf       0x19 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ *fill*         0x000000000008caf8        0x0 00
+ .text          0x000000000008caf8      0x204 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+                0x000000000008caf8                __udivsi3
+ .text          0x000000000008ccfc       0x30 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+                0x000000000008ccfc                __divsi3
+ .text          0x000000000008cd2c      0x1b0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+                0x000000000008cd2c                __umodsi3
+ .text          0x000000000008cedc       0x24 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+                0x000000000008cedc                __modsi3
+ .text          0x000000000008cf00       0x39 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                0x000000000008cf00                __fixunsdfsi
+ .text          0x000000000008cf39      0x350 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                0x000000000008cf39                __udivdi3
+ .text          0x000000000008d289      0x312 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                0x000000000008d289                __umoddi3
+ .text          0x000000000008d59b      0x682 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                0x000000000008d59b                __adddf3
+ *fill*         0x000000000008dc1d        0x3 00
+ .text          0x000000000008dc20      0x5c8 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                0x000000000008dc20                __divdf3
+ .text          0x000000000008e1e8       0x7f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                0x000000000008e1e8                __nedf2
+                0x000000000008e1e8                __eqdf2
+ .text          0x000000000008e267       0xca c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                0x000000000008e267                __gedf2
+                0x000000000008e267                __gtdf2
+ .text          0x000000000008e331       0xcb c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                0x000000000008e331                __ledf2
+                0x000000000008e331                __ltdf2
+ .text          0x000000000008e3fc      0x488 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                0x000000000008e3fc                __muldf3
+ .text          0x000000000008e884      0x693 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                0x000000000008e884                __subdf3
+ .text          0x000000000008ef17       0x64 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                0x000000000008ef17                __fixdfsi
+ .text          0x000000000008ef7b       0x61 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                0x000000000008ef7b                __floatsidf
+ .text          0x000000000008efdc       0x4f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                0x000000000008efdc                __floatunsidf
+ .text          0x000000000008f02b       0x27 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libHardwareApi_JN5169.a(AHI_Interrupt.o)
+                0x000000000008f02b                vAHI_InterruptSetPriority
+                0x000000000008f049                vAHI_InterruptSetActivePriorityLevel
+ .text.vMicroSyscall
+                0x000000000008f052       0x17 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                0x000000000008f052                vMicroSyscall
+ .text          0x000000000008f069       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                0x000000000008f069                memset
+                0x000000000008f07b                _flash_end = ABSOLUTE (.)
+
+.rela.dyn       0x000000000008f07c        0x0
+ .rela.text     0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .rela.data     0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .rela.rodata   0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .rela.text.unlikely
+                0x0000000000000000        0x0 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+                0x000000000400004c                . = ORIGIN (ram)
+
+.data           0x000000000400004c       0x2c load address 0x000000000008f07c
+                0x000000000400004c                _ram_data_start = ABSOLUTE (.)
+ *(.data*)
+ .data          0x000000000400004c        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+                0x000000000400004c                u32HeapStart
+ .data          0x0000000004000050        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+                0x0000000004000050                _toconet_tx_u8_init_queue_flag
+ .data          0x0000000004000051        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+ .data          0x0000000004000052        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+ .data.initinboot
+                0x0000000004000053        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+                0x0000000004000053                gMAC_u8MaxBuffers
+ .data          0x0000000004000054        0x2 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+ .data          0x0000000004000056       0x21 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+ .data          0x0000000004000077        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+                0x0000000004000077                u8TxWkrNow.25192
+ *(.data.*)
+                0x0000000004000078                . = ALIGN (0x4)
+                0x0000000004000078                _ram_data_end = ABSOLUTE (.)
+
+.bss            0x0000000004000078     0x1618 load address 0x000000000008f0a8
+                0x0000000004000078                _bss_start = ABSOLUTE (.)
+ *(.bss*)
+ .bss           0x0000000004000078        0x8 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .bss.dontinitinboot
+                0x0000000004000080        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .bss           0x0000000004000084       0x40 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+                0x0000000004000084                g_sLP
+                0x00000000040000c0                g_pvMac
+ .bss.initinboot
+                0x00000000040000c4        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+ .bss           0x00000000040000c8      0x1f8 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+                0x00000000040000c8                u8AppId_Pkt_head.4255
+                0x00000000040000cc                u32AppId.4252
+                0x00000000040000d0                u32MyAddr.4254
+                0x00000000040000d4                bRxQueue_Init.4253
+                0x00000000040000d8                psRxQueueList.4251
+                0x00000000040000ec                asEventHandler.3305
+                0x000000000400018c                sEvVars
+                0x00000000040001a8                u32TickCount_ms
+                0x00000000040001ac                au8Txdatabuff_idx_sTxQueue
+                0x00000000040001b0                u8TxBuffSiz_sTxQueue
+                0x00000000040001b4                sTxdatabuff_sTxQueue
+                0x00000000040001b8                sTxQueue
+                0x00000000040001d4                au8Rxdatabuff_idx_sRxQueue
+                0x00000000040001d8                u8RxBuffSiz_sRxQueue
+                0x00000000040001dc                sRxdatabuff_sRxQueue
+                0x00000000040001e0                sRxQueue
+                0x00000000040001fc                au8Rxdatabuff_idx_sRxQueueCmd
+                0x0000000004000200                u8RxBuffSiz_sRxQueueCmd
+                0x0000000004000204                sRxdatabuff_sRxQueueCmd
+                0x0000000004000208                sRxQueueCmd.2367
+                0x0000000004000224                sContext.4376
+                0x0000000004000250                TWENET_u8RFdevice_minor.3676
+                0x0000000004000251                TWENET_u8RFdevice_major.3675
+                0x0000000004000252                _TWENET_TX_POWER_MAX
+                0x0000000004000254                sToCoNet_Modules
+ .bss           0x00000000040002c0      0x618 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+ .bss           0x00000000040008d8       0x18 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+                0x00000000040008d8                bAccumulateModeFlag.23349
+ .bss           0x00000000040008f0      0x73c C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+                0x00000000040008f0                prSpiAppCallback.23584
+                0x00000000040008f4                prSiAppCallback.24819
+                0x00000000040008f8                prAppMcpsCallback.3201
+                0x00000000040008fc                prAppMlmeCallback.3202
+                0x0000000004000900                bTxEventQueued.19170
+                0x0000000004000901                u8TxEventStatus.19171
+                0x0000000004000904                sAppHousekeeping
+                0x000000000400091c                prApAppCallback.23350
+                0x0000000004000920                bIntEnableFlag.23347
+ .bss.initinboot
+                0x000000000400102c        0x4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+                0x000000000400102c                prSysCtrlAppCallback.23792
+ .bss           0x0000000004001030        0x8 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+                0x0000000004001030                prAppHwCallback.3203
+                0x0000000004001034                TxWorker_u8Num.25149
+                0x0000000004001035                gbTimeOutFlag.23788
+ .bss           0x0000000004001038       0x90 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+                0x0000000004001038                _ZL5_vcbs.7044
+                0x000000000400104c                sToCoNet_AppContext
+                0x0000000004001068                sToCoNet_Context
+                0x00000000040010b0                sAssocSecurity.12058
+                0x00000000040010bc                g_bJenieBackwardsCompatibilityMode
+ .bss           0x00000000040010c8       0x24 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+                0x00000000040010c8                i8TxPower.14848
+                0x00000000040010cc                g_sXcv
+                0x00000000040010d0                prMcpsRequest.8442
+                0x00000000040010d4                prMlmeRequest.8441
+                0x00000000040010d8                prOriginalHandler.4386
+ .bss.initinboot
+                0x00000000040010ec        0x8 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+                0x00000000040010ec                g_u32MacAddrLocation
+                0x00000000040010f0                prvUserTxStartedCallback
+ .bss.dontinitinboot
+                0x00000000040010f4        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+                0x00000000040010f4                u8SecurityMode.21338
+ *fill*         0x00000000040010f5        0x3 00
+ .bss           0x00000000040010f8       0x64 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+                0x00000000040010f8                prUart1AppCallback.24256
+                0x00000000040010fc                prUart0AppCallback.24255
+                0x0000000004001100                sOpt.4558
+                0x0000000004001110                _psSerial
+ .bss           0x000000000400115c       0x78 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+                0x000000000400115c                sMcpsIndQueue.3197
+                0x000000000400116c                sMcpsIndBufferQueue.3195
+                0x000000000400117c                sMlmeIndQueue.3198
+                0x000000000400118c                sMlmeIndBufferQueue.3196
+                0x000000000400119c                sHwIndQueue.3199
+                0x00000000040011ac                sHwIndBufferQueue.3200
+                0x00000000040011bc                _u32_INT_adc_comp
+                0x00000000040011c0                _u32_INT_ticktimer
+                0x00000000040011c4                _periph_availmap
+ .bss           0x00000000040011d4       0x18 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+ .bss           0x00000000040011ec       0x28 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+                0x00000000040011ec                apfTimerAppCallback.24001
+                0x0000000004001200                prTickTimeAppCallback
+                0x0000000004001204                au16TimerSettings.23950
+ .bss           0x0000000004001214        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+                0x0000000004001214                u8TAM_TxStatusOverride
+ *fill*         0x0000000004001215        0x3 00
+ .bss           0x0000000004001218       0x1c C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+ .bss.initinboot
+                0x0000000004001234        0x1 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+ *fill*         0x0000000004001235        0x3 00
+ .bss           0x0000000004001238       0x14 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans17.ltrans.o
+                0x0000000004001238                s_sTimerList
+                0x0000000004001248                u8AssocResponsesInProgress.12057
+ .bss           0x000000000400124c        0xc C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+                0x000000000400124c                sCh_Context.2835
+                0x0000000004001250                asTx.25148
+ .bss           0x0000000004001258       0x68 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+                0x0000000004001258                asUARTS.4551
+                0x0000000004001278                _SERIAL_bmTxIntEnabled
+                0x000000000400127c                asSerialPorts
+                0x00000000040012b4                sSerCmd_P3.5221
+ .bss           0x00000000040012c0      0x1d4 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+                0x00000000040012c0                the_mac
+                0x00000000040012dc                Buttons
+                0x00000000040012e4                Timer4
+                0x00000000040012ec                Timer3
+                0x00000000040012f4                Timer2
+                0x00000000040012fc                Timer1
+                0x0000000004001304                Timer0
+                0x000000000400130c                PulseCounter1
+                0x0000000004001310                PulseCounter0
+                0x0000000004001314                Analogue
+                0x000000000400132c                SPI
+                0x0000000004001330                Wire
+                0x0000000004001348                SerialParser
+                0x0000000004001384                Serial1
+                0x00000000040013a4                Serial
+                0x00000000040013c4                the_vnet2
+                0x00000000040013c8                the_vnet
+                0x00000000040013cc                the_vhw
+                0x00000000040013d0                the_vsettings
+                0x00000000040013d4                the_vapp
+                0x00000000040013d8                the_twelite
+ .bss.initinboot
+                0x0000000004001494      0x1bc C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+                0x0000000004001494                g_sMac
+ .bss.dontinitinboot
+                0x0000000004001650       0x40 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                0x0000000004001650                isr_handlers
+ *(.bss.*)
+ *(.scommon*)
+ *(.scommon.*)
+ *(COMMON)
+                0x0000000004001690                . = ALIGN (0x4)
+                0x0000000004001690                _bss_end = ABSOLUTE (.)
+                0x0000000004001690                end = .
+
+.heap           0x0000000004001690      0xd16 load address 0x00000000000906c0
+                0x0000000004001690                _heap_start = ABSOLUTE (.)
+                0x00000000040023a6                . = (. + __minimum_heap_size)
+ *fill*         0x0000000004001690      0xd16 00
+
+.stack          0x0000000004007800      0x800 load address 0x0000000000096830
+                0x0000000004007800                _heap_end = ABSOLUTE (.)
+                0x0000000004007800                _stack_low_water_mark = ABSOLUTE (.)
+                0x0000000004008000                . = (. + __stack_size)
+ *fill*         0x0000000004007800      0x800 00
+                0x0000000004008000                _stack = .
+
+.test           0x000000000008f0a8        0x1
+                0x000000000008f0a8        0x1 BYTE 0xff
+                0x000000000008f07c                _flash_data_start = LOADADDR (.data)
+                0x000000000000002c                _ram_data_len = (((_ram_data_end - _ram_data_start) + 0x3) & 0xfffffffffffffffc)
+                0x0000000000001618                _bss_len = (((_bss_end - _bss_start) + 0x3) & 0xfffffffffffffffc)
+                0x000000000000f0a8                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
+                0x0000000004008000                _ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
+                0x0000000004008000                ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
+                0x0000000001001580                _app_ram_start = 0x1001580
+                0x000000000400004c                PROVIDE (_heap_location, u32HeapStart)
+                0x000000000400004c                PROVIDE (heap_location, u32HeapStart)
+                0x000000000008abf5                TSV_eOpenVector = TSV_eOpen
+                0x000000000008a4e5                TSV_eStartVector = TSV_eStart
+                0x000000000008bae2                TSV_eStopVector = TSV_eStop
+                0x00000000000891b7                pvAppApiGetMacHandle = pvAppApiDefGetMacHandle
+                0x0000000000086591                u32AppApiInit = u32AppApiDefInit
+                0x000000000008918c                vAppApiMlmeRequest = vAppApiDefMlmeRequest
+                0x000000000008c180                vAppApiMcpsRequest = vAppApiDefMcpsRequest
+                0x000000000008ae5a                eAppApiPlmeSet = eAppApiDefPlmeSet
+                0x000000000008ae08                eAppApiPlmeGet = eAppApiDefPlmeGet
+                0x000000000008adff                pvAppApiGetMacAddrLocation = pvAppApiDefGetMacAddrLocation
+                0x000000000008ace4                vAppApiSaveMacSettings = vAppApiDefSaveMacSettings
+                0x000000000008abfd                vAppApiRestoreMacSettings = vAppApiDefRestoreMacSettings
+OUTPUT(objs_RED/act4_RED_L1305_V0-1-0.elf elf32-ba)
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans1.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans2.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans3.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans4.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans5.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans6.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans7.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans8.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans9.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans10.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans11.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans12.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans13.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans14.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans15.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans16.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans17.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans18.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans19.ltrans.o
+ .comment       0x0000000000000000       0x12 C:\Users\koumu\AppData\Local\Temp\cc2hszZA.ltrans20.ltrans.o
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .comment       0x0000000000000000       0x11 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libMicroSpecific_JN516x.a(MicroSyscall_ba.o)
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_info     0x0000000000000000     0x3453
+ .debug_info    0x0000000000000000       0xf3 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_info    0x00000000000000f3      0x106 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_info    0x00000000000001f9       0xb7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_info    0x00000000000002b0       0xb7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_info    0x0000000000000367       0xb7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_info    0x000000000000041e       0xb7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_info    0x00000000000004d5       0xd3 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_info    0x00000000000005a8      0x648 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000000bf0      0x69d c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_info    0x000000000000128d      0x4b2 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_info    0x000000000000173f      0x5c5 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_info    0x0000000000001d04      0x1e7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_info    0x0000000000001eeb      0x20b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_info    0x00000000000020f6      0x20b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_info    0x0000000000002301      0x5c7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_info    0x00000000000028c8      0x4b2 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_info    0x0000000000002d7a      0x1b7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_info    0x0000000000002f31      0x1d6 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_info    0x0000000000003107      0x1cb c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_info    0x00000000000032d2       0xaa C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_info    0x000000000000337c       0xd7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_abbrev   0x0000000000000000     0x113e
+ .debug_abbrev  0x0000000000000000       0x8e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x000000000000008e       0xa4 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000132       0x14 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_abbrev  0x0000000000000146       0x14 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_abbrev  0x000000000000015a       0x14 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_abbrev  0x000000000000016e       0x14 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_abbrev  0x0000000000000182       0x60 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_abbrev  0x00000000000001e2      0x15d c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000000000000033f      0x175 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x00000000000004b4      0x133 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_abbrev  0x00000000000005e7      0x12f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_abbrev  0x0000000000000716      0x128 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_abbrev  0x000000000000083e      0x137 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_abbrev  0x0000000000000975      0x139 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_abbrev  0x0000000000000aae      0x141 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_abbrev  0x0000000000000bef      0x133 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_abbrev  0x0000000000000d22      0x12a c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_abbrev  0x0000000000000e4c      0x128 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_abbrev  0x0000000000000f74      0x128 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_abbrev  0x000000000000109c       0x14 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_abbrev  0x00000000000010b0       0x8e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_loc      0x0000000000000000     0x599c
+ .debug_loc     0x0000000000000000       0x73 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_loc     0x0000000000000073       0x39 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_loc     0x00000000000000ac       0x48 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_loc     0x00000000000000f4      0xa7b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_loc     0x0000000000000b6f      0x985 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_loc     0x00000000000014f4     0x10f3 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_loc     0x00000000000025e7     0x117e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_loc     0x0000000000003765       0x83 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_loc     0x00000000000037e8      0x154 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_loc     0x000000000000393c       0xe6 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_loc     0x0000000000003a22      0xa0e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_loc     0x0000000000004430     0x114e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_loc     0x000000000000557e       0xa8 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_loc     0x0000000000005626      0x1be c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_loc     0x00000000000057e4      0x179 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_loc     0x000000000000595d       0x3f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_aranges  0x0000000000000000      0x2a0
+ .debug_aranges
+                0x0000000000000000       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000020       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000040       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_aranges
+                0x0000000000000060       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_aranges
+                0x0000000000000080       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_aranges
+                0x0000000000000100       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_aranges
+                0x0000000000000120       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_aranges
+                0x0000000000000140       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_aranges
+                0x0000000000000160       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_aranges
+                0x0000000000000180       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_aranges
+                0x0000000000000200       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_aranges
+                0x0000000000000220       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_aranges
+                0x0000000000000240       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_aranges
+                0x0000000000000260       0x20 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_aranges
+                0x0000000000000280       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_line     0x0000000000000000     0x2bd2
+ .debug_line    0x0000000000000000      0x15a c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_line    0x000000000000015a      0x14e c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_line    0x00000000000002a8      0x47b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__udivsi3.o)
+ .debug_line    0x0000000000000723       0xbb c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__divsi3.o)
+ .debug_line    0x00000000000007de      0x3c7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__umodsi3.o)
+ .debug_line    0x0000000000000ba5       0xa3 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(__modsi3.o)
+ .debug_line    0x0000000000000c48       0x9f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_line    0x0000000000000ce7      0x1b7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_line    0x0000000000000e9e      0x1b7 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_line    0x0000000000001055      0x63d c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_line    0x0000000000001692      0x3b5 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_line    0x0000000000001a47       0xf1 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_line    0x0000000000001b38      0x15f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_line    0x0000000000001c97      0x15f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_line    0x0000000000001df6      0x269 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_line    0x000000000000205f      0x656 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_line    0x00000000000026b5       0xc8 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_line    0x000000000000277d       0xbc c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_line    0x0000000000002839       0xbe c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_line    0x00000000000028f7      0x197 C:/Users/koumu/Desktop/MWSTAGE/MWSDK/ChipLib/SW4063V1416/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+ .debug_line    0x0000000000002a8e      0x144 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_str      0x0000000000000000      0x6be
+ .debug_str     0x0000000000000000       0x49 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+                                        0x155 (size before relaxing)
+ .debug_str     0x0000000000000049       0x5d c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+                                        0x169 (size before relaxing)
+ .debug_str     0x00000000000000a6       0xc5 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+                                        0x169 (size before relaxing)
+ .debug_str     0x000000000000016b       0x7b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+                                        0x1d7 (size before relaxing)
+ .debug_str     0x00000000000001e6        0xa c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+                                        0x1d7 (size before relaxing)
+ .debug_str     0x00000000000001f0       0xc6 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+                                        0x1ba (size before relaxing)
+ .debug_str     0x00000000000002b6       0x7a c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+                                        0x1f9 (size before relaxing)
+ .debug_str     0x0000000000000330       0x3f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+                                        0x16e (size before relaxing)
+ .debug_str     0x000000000000036f       0x57 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+                                        0x186 (size before relaxing)
+ .debug_str     0x00000000000003c6       0x3f c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+                                        0x186 (size before relaxing)
+ .debug_str     0x0000000000000405       0x72 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+                                        0x1eb (size before relaxing)
+ .debug_str     0x0000000000000477       0x41 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+                                        0x1ba (size before relaxing)
+ .debug_str     0x00000000000004b8       0x4b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+                                        0x17f (size before relaxing)
+ .debug_str     0x0000000000000503       0x54 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+                                        0x188 (size before relaxing)
+ .debug_str     0x0000000000000557       0x4b c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+                                        0x185 (size before relaxing)
+ .debug_str     0x00000000000005a2      0x11c c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+                                        0x155 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x24c
+ .debug_frame   0x0000000000000000       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000020       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000040       0x2c c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x000000000000006c       0x30 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_frame   0x000000000000009c       0x34 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_frame   0x00000000000000d0       0x30 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_frame   0x0000000000000100       0x34 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_frame   0x0000000000000134       0x34 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_frame   0x0000000000000168       0x34 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_frame   0x000000000000019c       0x30 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_frame   0x00000000000001cc       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)
+ .debug_frame   0x00000000000001ec       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatsidf.o)
+ .debug_frame   0x000000000000020c       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(floatunsidf.o)
+ .debug_frame   0x000000000000022c       0x20 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/lib/mcpu_jn51xx_sizeopt\libc.a(lib_a-memset.o)
+
+.debug_ranges   0x0000000000000000      0x558
+ .debug_ranges  0x0000000000000000       0xa0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_udivdi3.o)
+ .debug_ranges  0x00000000000000a0       0x80 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(_umoddi3.o)
+ .debug_ranges  0x0000000000000120       0x80 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(adddf3.o)
+ .debug_ranges  0x00000000000001a0       0xb0 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(divdf3.o)
+ .debug_ranges  0x0000000000000250       0x38 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(eqdf2.o)
+ .debug_ranges  0x0000000000000288       0x58 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(gedf2.o)
+ .debug_ranges  0x00000000000002e0       0x40 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(ledf2.o)
+ .debug_ranges  0x0000000000000320      0x1a8 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(muldf3.o)
+ .debug_ranges  0x00000000000004c8       0x78 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(subdf3.o)
+ .debug_ranges  0x0000000000000540       0x18 c:/users/koumu/desktop/mwstage/tools/ba-elf-ba2-r36379.w10/bin/../lib/gcc/ba-elf/4.7.4/mcpu_jn51xx_sizeopt\libgcc.a(fixdfsi.o)

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Parent_MONOSTICK</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Parent_MONOSTICK</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#parent_monostick">Parent_MONOSTICK</a><ul>
+<li><a href="#act-features">Act Features</a></li>
+<li><a href="#how-to-use-act">How to use Act</a><ul>
+<li><a href="#twelite-and-wiring-required">TWELITE and wiring required</a></li>
+</ul></li>
+<li><a href="#act-explanation">Act Explanation</a><ul>
+<li><a href="#declaration-part">Declaration part</a></li>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#on_rx_packet">on_rx_packet()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="parent_monostick">Parent_MONOSTICK</h1>
+<p>This act uses MONOSTICK as a parent device. It outputs the data payload of packets from the child machine to the serial port. It can display packets in many samples of sample acts.</p>
+<div class="success">
+<p>This act includes</p>
+<ul>
+<li>Receiving wireless packets</li>
+<li>Data interpretation of received packets</li>
+<li>Interactive mode settings - <a href="../settings/stg_std.html">&lt;STG_STD&gt;</a></li>
+<li>Conversion of byte strings to ASCII format - <a href="../api-reference/classes/ser_parser.html">serparser</a></li>
+</ul>
+</div>
+<h2 id="act-features">Act Features</h2>
+<ul>
+<li>Receives packets from the child of the sample act and outputs them to the serial port.</li>
+</ul>
+<h2 id="how-to-use-act">How to use Act</h2>
+<h3 id="twelite-and-wiring-required">TWELITE and wiring required</h3>
+<table>
+<colgroup>
+<col style="width: 12%"></col>
+<col style="width: 87%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Parent Device</td>
+<td><a target=_blank href="https://mono-wireless.com/jp/products/MoNoStick/">MONOSTICK BLUE or RED</a></td>
+</tr>
+<tr class="even">
+<td>Child Device</td>
+<td>Sample Act Child Setup (e.g. <code>Slp_Wk_and_Tx</code>, <code>PAL_AMB</code>, <code>PAL_MAG</code>, <code>PAL_MOT???, etc...</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Please check the following default settings at first.</p>
+<ul>
+<li>Application ID: <code>0x1234abcd</code></li>
+<li>Channel: <code>13</code></li>
+</ul>
+<h2 id="act-explanation">Act Explanation</h2>
+<h3 id="declaration-part">Declaration part</h3>
+<h4 id="includes">includes</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="co">// use twelite mwx c++ template library</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#include </span><span class="im">&lt;MONOSTICK&gt;</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="pp">#include </span><span class="im">&lt;STG_STD&gt;</span></a></code></pre></div>
+<p>Include board behavior for <a href="../boards/monostick.html"><code>&lt;MONOSTICK&gt;</code></a>. This board support includes LED control and watchdog support.</p>
+<ul>
+<li>&lt;NWK_SIMPLE&gt; Loads the definition of a simple relay net</li>
+<li>&lt;STG_STD&gt; Loads the interactive mode definition</li>
+</ul>
+<h4 id="other">Other</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="co">// application ID</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="at">const</span> <span class="dt">uint32_t</span> DEFAULT_APP_ID = <span class="bn">0x1234abcd</span>;</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">// channel</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="at">const</span> <span class="dt">uint8_t</span> DEFAULT_CHANNEL = <span class="dv">13</span>;</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co">// option bits</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="dt">uint32_t</span> OPT_BITS = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">/*** function prototype */</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="dt">bool</span> analyze_payload(packet_rx&amp; rx);</a></code></pre></div>
+<p>Declaration of default values, function prototypes, etc.</p>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;MONOSTICK&gt;();</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a></code></pre></div>
+<p>In <code>setup()</code>, first load the <code>&lt;MONOSTICK&gt;</code> board behavior, the <code>&lt;STG_STD&gt;</code> interactive mode behavior, and the <code>&lt;NWK_SIMPLE&gt;</code> behavior using <code>use&lt;&gt;</code>. This procedure is always done in <code>setup()</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">set &lt;&lt; SETTINGS::appname(<span class="st">&quot;PARENT&quot;</span>); <span class="co">// Title in the settings screen</span></a>
+<a class="sourceLine" id="cb4-2" title="2">set &lt;&lt; SETTINGS::appid_default(DEFAULT_APP_ID); <span class="co">// Application ID Default</span></a>
+<a class="sourceLine" id="cb4-3" title="3">set &lt;&lt; SETTINGS::ch_default(DEFAULT_CHANNEL); <span class="co">// channel default</span></a>
+<a class="sourceLine" id="cb4-4" title="4">set &lt;&lt; SETTINGS::lid_default(<span class="bn">0x00</span>); <span class="co">//LID Default</span></a>
+<a class="sourceLine" id="cb4-5" title="5">set.hide_items(E_STGSTD_SETID::OPT_DWORD2, E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4, E_STGSTD_SETID::ENC_KEY_STRING, E_STGSTD_SETID::ENC_MODE);</a>
+<a class="sourceLine" id="cb4-6" title="6">set.reload(); <span class="co">// Read settings from non-volatile memory</span></a>
+<a class="sourceLine" id="cb4-7" title="7">OPT_BITS = set.u32opt1(); <span class="co">// Example of reading (option bits)</span></a></code></pre></div>
+<p>The interactive mode is then set up and the settings are read out. The <a href="../settings/stg_std.html"><code>&lt;STG_STD&gt;</code></a> interactive mode provides standard items, but allows for some customization for each act you create.</p>
+<ul>
+<li><code>appname</code>→ Act name that appears in the title line of the configuration screen</li>
+<li><code>appid_default</code>→ Default Application ID</li>
+<li><code>ch_default</code>→ Default channel</li>
+<li><code>lid_default</code>→ Default value of device ID (LID)</li>
+<li>.<code>hide_items()</code>→ Item Hide Settings</li>
+</ul>
+<p>Always call <code>.reload()</code> before reading the configuration values. Each set value has its own method for reading, such as <code>.u32opt1()</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1">the_twelite</a>
+<a class="sourceLine" id="cb5-2" title="2">    &lt;&lt; set                    <span class="co">// Reflects interactive mode settings</span></a>
+<a class="sourceLine" id="cb5-3" title="3">    &lt;&lt; TWENET::rx_when_idle() <span class="co">// Set RF to receive when idle.</span></a>
+<a class="sourceLine" id="cb5-4" title="4">    ;</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb5-7" title="7">nwk &lt;&lt; set;                 <span class="co">// Reflects interactive mode settings</span></a>
+<a class="sourceLine" id="cb5-8" title="8">nwk &lt;&lt; NWK_SIMPLE::logical_id(<span class="bn">0x00</span>) <span class="co">// Only the LID is reconfigured.</span></a>
+<a class="sourceLine" id="cb5-9" title="9">    ;</a></code></pre></div>
+<p>Some settings can be directly reflected using <a href="../settings/stg_std.html#%22no-1"><code>&lt;STG_STD&gt;</code></a> objects. In addition, if you want to rewrite a specific value due to a DIP switch setting, for example, you can rewrite the value separately after it is reflected. In the above example, the application ID, channel, radio output, etc. are set in <a href="../api-reference/predefined_objs/the_twelite.html#%22yan-suan-zi-she-ding"><code>the_twelite</code></a> object, the LID and the retransmission count are set in the <a href="../networks/nwk_simple.html#%22yan-suan-zi-she-ding"><code>nwk</code></a>object, and then the LID is set to 0 again.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">brd.set_led_red(LED_TIMER::ON_RX, <span class="dv">200</span>); <span class="co">// RED (on receiving)</span></a>
+<a class="sourceLine" id="cb6-2" title="2">brd.set_led_yellow(LED_TIMER::BLINK, <span class="dv">500</span>); <span class="co">// YELLOW (blinking)</span></a></code></pre></div>
+<p>Procedures for controlling LED lighting are available in the <code>&lt;MONOSTICK&gt;</code> board behaviour.</p>
+<p>The first line sets the red LED to switch on for 200 ms after receiving a radio packet. The first parameter <code>LED_TIMER::ON_RX</code> means when a radio packet is received; the second specifies the lighting time in ms.</p>
+<p>The second line specifies the blinking of the LEDs: the first parameter <code>LED_TIMER::BLINK</code> specifies the blinking, the second parameter is the blinking on/off switching time: every 500ms the LEDs are switched on and off (i.e. Repeat blinking with a 1 s cycle).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">the_twelite.begin(); <span class="co">// start twelite!</span></a></code></pre></div>
+<p>Procedure for starting <code>the_twelite</code>, which did not appear in act0..4, but must be called if you have configured <code>the_twelite</code> or registered various behaviours.</p>
+<h3 id="loop">loop()</h3>
+<p>There is no processing during <code>loop()</code> in this sample.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb8-2" title="2">}</a></code></pre></div>
+<h3 id="on_rx_packet">on_rx_packet()</h3>
+<p>Callback function called when a packet is received. In this example, some output is produced for the received packet data.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">void</span> on_rx_packet(packet_rx&amp; rx, <span class="dt">bool_t</span> &amp;handled) {  </a>
+<a class="sourceLine" id="cb9-2" title="2">    Serial &lt;&lt; <span class="st">&quot;.. coming packet (&quot;</span> &lt;&lt; <span class="dt">int</span>(millis()&amp;<span class="bn">0xffff</span>) &lt;&lt; <span class="ch">&#39;)&#39;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4">  ...</a>
+<a class="sourceLine" id="cb9-5" title="5">  </a>
+<a class="sourceLine" id="cb9-6" title="6">    <span class="co">// packet analyze</span></a>
+<a class="sourceLine" id="cb9-7" title="7">    analyze_payload(rx);</a>
+<a class="sourceLine" id="cb9-8" title="8">}</a></code></pre></div>
+<h4 id="analyze_payload">analyze_payload()</h4>
+<p>The <code>analyze_payload()</code> called at the end of the function contains code to interpret some sample act packets. Refer to the code in correspondence with the packet generation part in the sample act.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">bool</span> b_handled = <span class="kw">false</span>;</a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="dt">uint8_t</span> fourchars[<span class="dv">4</span>]{};</a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="kw">auto</span>&amp;&amp; np = expand_bytes(</a>
+<a class="sourceLine" id="cb10-5" title="5">        rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb10-6" title="6">        , fourchars</a>
+<a class="sourceLine" id="cb10-7" title="7">    );</a>
+<a class="sourceLine" id="cb10-8" title="8">    </a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="cf">if</span> (np == <span class="kw">nullptr</span>) <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb10-10" title="10"></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="co">// display fourchars at first</span></a>
+<a class="sourceLine" id="cb10-12" title="12">Serial</a>
+<a class="sourceLine" id="cb10-13" title="13">    &lt;&lt; fourchars </a>
+<a class="sourceLine" id="cb10-14" title="14">    &lt;&lt; format(<span class="st">&quot;(ID=</span><span class="sc">%d</span><span class="st">/LQ=</span><span class="sc">%d</span><span class="st">)&quot;</span>, rx.get_addr_src_lid(), rx.get_lqi())</a>
+<a class="sourceLine" id="cb10-15" title="15">    &lt;&lt; <span class="st">&quot;-&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb10-16" title="16">    </a></code></pre></div>
+<p>This function first reads the four-character identification data into the <code>fourchars[4]</code> array.</p>
+<p>Reading is done using the <a href="../api-reference/funcs/utility/expand_bytes.html"><code>expand_bytes()</code></a> function.The first and second parameters of this function follow the C++ standard library’s practice of giving the first pointer <code>.begin()</code> and the next <code>.end()</code> of the payload section of the incoming packet. The following parameters are variable arguments, giving the data variables to be read. The return value is <em>nullptr</em> in case of an error, otherwise the next interpretation pointer. If interpreted to the end, <code>.end()</code> is returned. The parameter here is <code>uint8_t fourchars[4]</code>.</p>
+<div class="info">
+<p>This description only supports the <code>uint8_t[N]</code> type, where the array length <code>N</code> is specified; when using the <code>uint8*</code>, <code>char*</code>, <code>char[]</code> types, etc., the specification must be made using <code>make_pair(char*,int)</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="dt">char</span> fourchars[<span class="dv">5</span>]{}; <span class="co">// Allocate 5 bytes including the terminating character `\0`.</span></a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="kw">auto</span>&amp;&amp; np = expand_bytes(</a>
+<a class="sourceLine" id="cb11-3" title="3">        rx.get_payload().begin(), rx.get_payload().end()</a>
+<a class="sourceLine" id="cb11-4" title="4">        , make_pair((<span class="dt">char</span> *)fourchars, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb11-5" title="5">    );</a></code></pre></div>
+</div>
+<p>Processing is then carried out for the 4-byte header. Here, the packets of the sample act Slp_Wk_and_Tx are interpreted and the contents are displayed.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="co">// Slp_Wk_and_Tx</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="cf">if</span> (!b_handled &amp;&amp; !strncmp(fourchars, <span class="st">&quot;TXSP&quot;</span>, <span class="dv">4</span>)) {</a>
+<a class="sourceLine" id="cb12-3" title="3">    b_handled = <span class="kw">true</span>;</a>
+<a class="sourceLine" id="cb12-4" title="4">    <span class="dt">uint32_t</span> tick_ms;</a>
+<a class="sourceLine" id="cb12-5" title="5">    <span class="dt">uint16_t</span> u16work_ct;</a>
+<a class="sourceLine" id="cb12-6" title="6"></a>
+<a class="sourceLine" id="cb12-7" title="7">    np = expand_bytes(np, rx.get_payload().end()</a>
+<a class="sourceLine" id="cb12-8" title="8">        , tick_ms</a>
+<a class="sourceLine" id="cb12-9" title="9">        , u<span class="dv">16</span><span class="er">work_ct</span></a>
+<a class="sourceLine" id="cb12-10" title="10">    );</a>
+<a class="sourceLine" id="cb12-11" title="11"></a>
+<a class="sourceLine" id="cb12-12" title="12">    <span class="cf">if</span> (np != <span class="kw">nullptr</span>) {</a>
+<a class="sourceLine" id="cb12-13" title="13">        Serial &lt;&lt; format(<span class="st">&quot;Tick=</span><span class="sc">%d</span><span class="st"> WkCt=</span><span class="sc">%d</span><span class="st">&quot;</span>, tick_ms, u16work_ct);</a>
+<a class="sourceLine" id="cb12-14" title="14">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb12-15" title="15">        Serial &lt;&lt; <span class="st">&quot;.. error ..&quot;</span>;</a>
+<a class="sourceLine" id="cb12-16" title="16">    }</a>
+<a class="sourceLine" id="cb12-17" title="17">}</a></code></pre></div>
+<p>Set <code>b_handled</code> to <em>true</em> so that the other interpreters’ decisions are skipped.</p>
+<p>“TXSP” packets contain the values of a system timer count of type <code>uint32_t</code> and a dummy counter of type <code>uint16_t</code>. Each variable is declared and read using the <code>expand_bytes()</code> function. The difference from the above is that the first parameter is <code>np</code> as the first pointer to read. The <code>tick_ms</code> and <code>u16work_ct</code> are given as parameters and the value stored in the payload is read as a big-endian format byte sequence.</p>
+<p>If the readout is successful, the contents are output and the process is complete.</p>
+<h4 id="define-and-output-your-own-ascii-format">Define and output your own ASCII format</h4>
+<p>It is structured by ASCII format in a user-defined order.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1">smplbuf_u8&lt;<span class="dv">128</span>&gt; buf;</a>
+<a class="sourceLine" id="cb13-2" title="2">mwx::pack_bytes(buf</a>
+<a class="sourceLine" id="cb13-3" title="3">    , <span class="dt">uint8_t</span>(rx.get_addr_src_lid()     <span class="co">// Logical ID of the sender</span></a>
+<a class="sourceLine" id="cb13-4" title="4">    , <span class="dt">uint8_t</span>(<span class="bn">0xCC</span>)                                            <span class="co">// 0xCC</span></a>
+<a class="sourceLine" id="cb13-5" title="5">    , <span class="dt">uint8_t</span>(rx.get_psRxDataApp()-&gt;u8Seq)  <span class="co">// Sequence number of the packet</span></a>
+<a class="sourceLine" id="cb13-6" title="6">    , <span class="dt">uint32_t</span>(rx.get_addr_src_long())  <span class="co">// Serial number of the sender.</span></a>
+<a class="sourceLine" id="cb13-7" title="7">    , <span class="dt">uint32_t</span>(rx.get_addr_dst())       <span class="co">// destination address</span></a>
+<a class="sourceLine" id="cb13-8" title="8">    , <span class="dt">uint8_t</span>(rx.get_lqi())         <span class="co">// LQI:Link Quality Indicator</span></a>
+<a class="sourceLine" id="cb13-9" title="9">    , <span class="dt">uint16_t</span>(rx.get_length())     <span class="co">// Number of following bytes</span></a>
+<a class="sourceLine" id="cb13-10" title="10">    , rx.get_payload()          <span class="co">// data payload</span></a>
+<a class="sourceLine" id="cb13-11" title="11">);</a>
+<a class="sourceLine" id="cb13-12" title="12"></a>
+<a class="sourceLine" id="cb13-13" title="13">serparser_attach pout;</a>
+<a class="sourceLine" id="cb13-14" title="14">pout.begin(PARSER::ASCII, buf.begin(), buf.size(), buf.size());</a>
+<a class="sourceLine" id="cb13-15" title="15"></a>
+<a class="sourceLine" id="cb13-16" title="16">Serial &lt;&lt; <span class="st">&quot;FMT PACKET -&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb13-17" title="17">pout &gt;&gt; Serial;</a>
+<a class="sourceLine" id="cb13-18" title="18">Serial &lt;&lt; mwx::flush;</a></code></pre></div>
+<p>The first line declares a buffer as a local object to store the data sequence before conversion to ASCII format.</p>
+<p>The second line uses <code>pack_bytes()</code> to store the data sequence into the buf mentioned earlier. See comments in the source code for the data structure. The <code>pack_bytes()</code> parameter can also be a container of the form <code>smplbuf_u8 (smplbuf&lt;uint8_t, ALLOC&gt;)</code>.</p>
+<div class="info">
+<p>The sequence number of the packet is automatically set by <code>&lt;NWK_SIMPLE&gt;</code> and is assigned in the order of the transmitted packets. This value is used for packet duplication detection.</p>
+<p>The LQI (Link Quality Indicator) is a value corresponding to the signal strength at the time of reception; the higher the value, the stronger the field strength. However, there is no strict relationship defined between this value and the physical quantity, and even if the LQI is higher relative to the noise in the environment, more noise will also reduce the success rate of communication.</p>
+</div>
+<p>Lines 13, 14 and 17 are the declaration, configuration and output of the serial parser.</p>
+<h4 id="dump-output-including-nwk_simple-header.">Dump output including NWK_SIMPLE header.</h4>
+<p>The first output (which is prevented from being executed by <code>if(0)</code>) displays all data including the control data of <code>&lt;NWK_SIMPLE&gt;</code>. There are 11 bytes of control data. Normally, the control information is not directly referenced.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1">serparser_attach pout;</a>
+<a class="sourceLine" id="cb14-2" title="2">pout.begin(PARSER::ASCII, rx.get_psRxDataApp()-&gt;auData, </a>
+<a class="sourceLine" id="cb14-3" title="3">    rx.get_psRxDataApp()-&gt;u8Len, rx.get_psRxDataApp()-&gt;u8Len);</a>
+<a class="sourceLine" id="cb14-4" title="4"></a>
+<a class="sourceLine" id="cb14-5" title="5">Serial &lt;&lt; <span class="st">&quot;RAW PACKET -&gt; &quot;</span>;</a>
+<a class="sourceLine" id="cb14-6" title="6">pout &gt;&gt; Serial;</a>
+<a class="sourceLine" id="cb14-7" title="7">Serial &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb14-8" title="8"></a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="co">// Reference: packet structure of the control unit.</span></a>
+<a class="sourceLine" id="cb14-10" title="10"><span class="co">// uint8_t  : 0x01 fixws</span></a>
+<a class="sourceLine" id="cb14-11" title="11"><span class="co">// uint8_t  : LID of sender</span></a>
+<a class="sourceLine" id="cb14-12" title="12"><span class="co">// uint32_t : Long address (Serial Number) of sender</span></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="co">// uint32_t : Destination address</span></a>
+<a class="sourceLine" id="cb14-14" title="14"><span class="co">// uint8_t  : Number of repeating</span></a></code></pre></div>
+<p>The first line declares the serial parser for output as a local object. It does not have an internal buffer, but diverts an external buffer and uses the output function of the parser to output the byte sequence in the buffer in <a href="../api-reference/classes/ser_parser.html#%22asuk">ASCII format</a></p>
+<p>The second line sets the buffer for the serial parser. It specifies an already existing data array, i.e. the payload part of the incoming packet. <code>serparser_attach pout</code> declares the serial parser using an already existing buffer. The first parameter of <code>pout.begin()</code> specifies the corresponding format of the parser as <code>PARSER::ASCII</code>, i.e. ASCII format; the second specifies the first address of the buffer; the third specifies the The length of valid data in the buffer and the fourth specifies the maximum length of the buffer. The fourth parameter has the same value as the third, as it is for output and is not used for format interpretation.</p>
+<p>Output to the serial port in line 6 using the <code>&gt;&gt;</code> operator.</p>
+<p>The <code>Serial &lt;&lt; mwx::flush</code> in line 7 is a specification to wait until the output of data that has not been output here is finished. (<code>Serial.flush()</code> is the same process.)</p>
+</body>
+</html>

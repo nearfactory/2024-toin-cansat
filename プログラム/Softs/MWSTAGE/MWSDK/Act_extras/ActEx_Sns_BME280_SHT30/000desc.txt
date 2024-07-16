@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=Actエクストラ — Sns_BME280_SHT30
+DESC=Bosch の環境センサー BME280/BMP280 と Senserion の温湿度センサー SHT3x を利用したサンプルです。
+URL=https://github.com/monowireless/ActEx_Sns_BME280_SHT30
+[ENGLISH]
+TITLE=Act Extra — Sns_BME280_SHT30
+DESC=Act sample using Bosch BME280/BMP280 environment sensors and Senserion SHT3x humidity sensors
+URL=https://github.com/monowireless/ActEx_Sns_BME280_SHT30

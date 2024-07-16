@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=超簡単！標準アプリ（App_Twelite）
+DESC=すばやく簡単にお使いいただけます。
+TWELITE (SMD) および TWELITE DIP にプリインストールされています。
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/index.html
+[ENGLISH]
+TITLE=App_Twelite
+DESC=Easy and immediate use.
+Pre-installed on TWELITE (SMD) and TWELITE DIP.
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/index.html

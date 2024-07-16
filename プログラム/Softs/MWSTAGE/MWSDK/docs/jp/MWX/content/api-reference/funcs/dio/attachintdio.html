@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>attachIntDio()</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">attachIntDio()</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#attachintdio">attachIntDio()</a><ul>
+<li><a href="#例">例</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="attachintdio">attachIntDio()</h1>
+<p>DIO割り込みを有効にします。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> attachIntDio(<span class="dt">uint8_t</span> u8pin, E_PIN_INT_MODE mode)</a></code></pre></div>
+<p>事前に入力設定したピンに対して、１番目のパラメータは割り込みを有効にしたいピン番号で、２番目は割り込み方向（<a href="./#pinnochigariri">立ち上がり、立ち下がり</a>）を指定します。</p>
+<div class="info">
+<p>割り込みハンドラ、イベントハンドラの記述は<a href="../../behavior/README.html">アプリケーションビヘイビア</a>で行います。</p>
+</div>
+<h2 id="例">例</h2>
+<p>DIO5のピンがHIGHからLOWに変化したときに割り込みが発生する設定を行う。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-2" title="2">  the_twelite.app.use&lt;myAppClass&gt;();</a>
+<a class="sourceLine" id="cb2-3" title="3">  </a>
+<a class="sourceLine" id="cb2-4" title="4">  pinMode(PIN_DIGITAL::DIO5, PIN_MODE::INPUT_PULLUP);</a>
+<a class="sourceLine" id="cb2-5" title="5">  attachIntDio(PIN_DIGITAL::DIO5, PIN_INT_MODE::FALLING);</a>
+<a class="sourceLine" id="cb2-6" title="6">}</a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb2-9" title="9">  ;</a>
+<a class="sourceLine" id="cb2-10" title="10">}</a></code></pre></div>
+<h4 id="myappclass.hpp">myAppClass.hpp</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">class</span> myAppClass: <span class="kw">public</span> mwx::BrdPal, MWX_APPDEFS_CRTP(myAppClasslMot)</a>
+<a class="sourceLine" id="cb3-2" title="2">{</a>
+<a class="sourceLine" id="cb3-3" title="3"></a>
+<a class="sourceLine" id="cb3-4" title="4">};</a></code></pre></div>
+<p>アプリケーションビヘイビア<code>myAppClass</code>の基本定義。詳細は省略している。</p>
+<h4 id="myappclass.cpp">myAppClass.cpp</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="co">/*****************************************************************/</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="co">// MUST DEFINE CLASS NAME HERE</span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="pp">#define __MWX_APP_CLASS_NAME </span>myAppClass</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="pp">#include </span><span class="im">&quot;_mwx_cbs_cpphead.hpp&quot;</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="co">/*****************************************************************/</span></a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7">MWX_DIO_INT(PIN_DIGITAL::DIO5, <span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled) {</a>
+<a class="sourceLine" id="cb4-8" title="8">  <span class="at">static</span> <span class="dt">uint8_t</span> ct;</a>
+<a class="sourceLine" id="cb4-9" title="9">  digitalWrite(PIN_DIGITAL::DIO12, (++ct &amp; <span class="dv">1</span>) ? HIGH : LOW);</a>
+<a class="sourceLine" id="cb4-10" title="10">    handled = <span class="kw">false</span>; <span class="co">// if true, no further event.</span></a>
+<a class="sourceLine" id="cb4-11" title="11">}</a>
+<a class="sourceLine" id="cb4-12" title="12"></a>
+<a class="sourceLine" id="cb4-13" title="13">MWX_DIO_EVENT(PIN_DIGITAL::DIO5, <span class="dt">uint32_t</span> arg) {</a>
+<a class="sourceLine" id="cb4-14" title="14">  Serial &lt;&lt; <span class="ch">&#39;*&#39;</span>;    </a>
+<a class="sourceLine" id="cb4-15" title="15">}</a>
+<a class="sourceLine" id="cb4-16" title="16"></a>
+<a class="sourceLine" id="cb4-17" title="17"><span class="co">/*****************************************************************/</span></a>
+<a class="sourceLine" id="cb4-18" title="18"><span class="co">// common procedure (DO NOT REMOVE)</span></a>
+<a class="sourceLine" id="cb4-19" title="19"><span class="pp">#include </span><span class="im">&quot;_mwx_cbs_cpptail.cpp&quot;</span></a>
+<a class="sourceLine" id="cb4-20" title="20"><span class="co">// MUST UNDEF CLASS NAME HERE</span></a>
+<a class="sourceLine" id="cb4-21" title="21"><span class="pp">#undef __MWX_APP_CLASS_NAME</span></a>
+<a class="sourceLine" id="cb4-22" title="22">} <span class="co">// mwx</span></a>
+<a class="sourceLine" id="cb4-23" title="23"><span class="co">/*****************************************************************/</span></a></code></pre></div>
+<p>アプリケーションビヘイビア<code>myAppClass</code>の割り込みハンドラの記述。DIO5の割り込み発生時にDIO12の出力設定を反転させ、割り込みハンドラが終了してから発生するイベントではシリアルポート<code>Serial</code>に<code>*</code>を表示する。</p>
+</body>
+</html>

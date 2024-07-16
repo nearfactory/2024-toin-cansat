@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-sdk-revision-history">TWELITE SDK revision history</a><ul>
+<li><a href="#mwsdk2020_05">MWSDK2020_05</a><ul>
+<li><a href="#更新内容">更新内容</a></li>
+<li><a href="#manifest">000manifest</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_04">MWSDK2020_04</a><ul>
+<li><a href="#twelite-net-1.2.0-1.3.0-changes">TWELITE NET 1.2.0-&gt;1.3.0 changes</a></li>
+</ul></li>
+<li><a href="#twelite-net-1.2.0-2018-05-14">TWELITE NET 1.2.0 (2018-05-14)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-sdk-revision-history">TWELITE SDK revision history</h1>
+<p>The history information for MWSDK2020_05 and later is listed below.</p>
+<div class="pageref">
+<a target=_blank href="https://github.com/monowireless/MWSDK_COMMON/blob/master/ReleaseNotes%2Emd">https://github.com/monowireless/MWSDK_COMMON/blob/master/ReleaseNotes%2Emd</a>
+</div>
+<h2 id="mwsdk2020_05">MWSDK2020_05</h2>
+<div class="danger">
+<p>Updating is recommended if you are using the MWSDK for 2019/12, 2020/04 releases。</p>
+</div>
+<h3 id="更新内容">更新内容</h3>
+<ul>
+<li>[TWENET] Event queue could get stuck in some cases.</li>
+<li>[TWENET] There was a case that the serial port output did not work after sleep recovery.</li>
+<li>[TWENET] Clearing the queue for sending and receiving wireless packets after recovering from sleep is now the default behavior.</li>
+<li>[TWENET] Added support for changing the parameters of the duplicate checker DUPCHK module.</li>
+<li>[MWX] Duplicate checker duplicate_checker was not initialized properly and did not remove duplicates as expected.</li>
+<li>[MWX] The implementation of format() has been made less model-dependent. The number of arguments is limited to 8 when 64-bit arguments are included.</li>
+<li>MWSDK and below (excluding the Tools folder) are stored in the GitHub repository.</li>
+</ul>
+<h3 id="manifest">000manifest</h3>
+<pre><code>NAME: MWSDK2020_05
+DATE: 2020-05-29
+
+COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2020_05
+  CHIP LIBRARY VERSION: SW4063V1416
+  TWENET (TWELITE NET) C LIBRARY VERSION: L1303
+  MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.1.3
+  TWESETTINGS LIBRARY: https://github.com/monowireless/twesettings/releases/tag/0.2.3</code></pre>
+<h2 id="mwsdk2020_04">MWSDK2020_04</h2>
+<p>The environment has been changed to support TWELITE STAGE.</p>
+<ul>
+<li>Changed to Makefile, which has less description.<br />
+※ You will need to rewrite the Makefile from the previous project.</li>
+<li>Added support for the mwx library.</li>
+</ul>
+<h3 id="twelite-net-1.2.0-1.3.0-changes">TWELITE NET 1.2.0-&gt;1.3.0 changes</h3>
+<ul>
+<li>Addressed a problem where <code>Utils/Source/serial.[ch], uart.[ch]UART</code> would sometimes behave abnormally (garbled characters, etc.) when flushed.</li>
+<li>Implemented to suppress the disappearance of TickTimer and ADC completion events. The following variables can be disabled by setting them to 0 during cbAppColdStart(FALSE). <code>volatile uint32 _u32_INT_ticktimer; volatile uint32 _u32_INT_adc_comp;</code></li>
+<li>It judges whether the queue for packet transmission requests is full or not, and returns an error if it is full.</li>
+<li>Fixed an issue where random number generation did not resume during WarmStart.</li>
+<li>Add pvExtraData to tsEvent structure (fix to make PRSEV state transition machine work with mwx library)</li>
+<li><code>volatile uint32 u32TickCount_ms</code>(added volatile)</li>
+<li>Added <code>bool_t _b_cpu_doze_dirty</code> variable to control CPU_Doze in the main loop; if set to TRUE, it will skip the main loop DOZE.</li>
+<li>Modified some function header definitions to be able to be referenced externally in order to use the mwx library (user not disclosed: PRSEV: event-related, internal structures, etc.)</li>
+<li>Header file maintenance (extern “C”) for mwx library usage</li>
+<li><code>Utils/Source/utils.[ch]</code>: Fixed the PWM setting so that the DUTY tick can be set in detail. By setting a value to structure member u16duty_max, the tick value can be set to a value other than 1024. If the tick value is1024,4096,16384の場合に除算実行の替わりにビットシフトにするようにした。</li>
+<li>Fixed some related code to use MSB of <code>sToCoNet_AppContext.u32ChMask</code> internally.</li>
+<li>Fixed a code in the internal channel change function that could change to the current set channel in the source code.</li>
+</ul>
+<h2 id="twelite-net-1.2.0-2018-05-14">TWELITE NET 1.2.0 (2018-05-14)</h2>
+<ul>
+<li>Changed toolchain from SDK toolchain for TWELITE BLUE to toolchain for TWELITE RED
+<ul>
+<li>For Windows, it is cygwin to msys.</li>
+</ul></li>
+<li>Changed the recommended development environment from eclipse to VSCode.</li>
+<li>Changed the library set to 1.2.0 (since v1.0.6)
+<ul>
+<li>Support for TWELITE RED</li>
+<li>Organize the parameters of make(<code>make TWLIET={BLUE|RED}</code>)</li>
+<li>Changed the method of determining the upper node in relay from active search to passive method using periodic packets (NB beacons) (implemented in App_Tag repeater)</li>
+<li>Add <code>sToCoNet_AppContext.u8Osc32Kmode</code> to use 32K oscillator</li>
+<li>Transmission function to the network outside the application ID (experimental implementation)</li>
+<li>Other minor corrections
+<ul>
+<li>Improved timestamp update method for duplicate checker (ToCoNet_USE_MOD_DUPCHK)</li>
+<li>Fixed a rare problem where the channel would not switch properly.</li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

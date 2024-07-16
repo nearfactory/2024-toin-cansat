@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=キューアプリ
+DESC=TWELITE CUEにプリインストールされています。
+※親機・中継機には App_Wings を用います。
+URL=https://twelite.gitbook.io/mw-pug-cue/
+[ENGLISH]
+TITLE=App_CUE
+DESC=Pre-installed on the TWELITE CUE.
+*Please use the App_Wings for the parent device or routers.
+URL=https://twelite.gitbook.io/mw-pug-cue/

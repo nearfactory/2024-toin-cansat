@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>PAL_AMB</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PAL_AMB</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#pal_amb">PAL_AMB</a><ul>
+<li><a href="#act-features.">ACT FEATURES.</a></li>
+<li><a href="#how-to-use-act">how to use act</a><ul>
+<li><a href="#required-twelite">Required TWELITE</a></li>
+</ul></li>
+<li><a href="#explanation-of-act">Explanation of ACT</a><ul>
+<li><a href="#include">Include</a></li>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#on_tx_comp">on_tx_comp()</a></li>
+<li><a href="#sleepnow">sleepNow()</a></li>
+<li><a href="#wakeup">wakeup()</a></li>
+</ul></li>
+<li><a href="#applications">Applications</a><ul>
+<li><a href="#reduction-of-energy-consumption">Reduction of energy consumption</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pal_amb">PAL_AMB</h1>
+<p><a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/amb-pal.html">Environmental Sensor Pal AMBIENT SENSE PAL</a> is used to acquire sensor values.</p>
+<div class="success">
+<p>This ACT includes</p>
+<ul>
+<li>Sending and receiving wireless packets</li>
+<li>Configuring settings via Interactive settings mode - <a href="../settings/stg_std.html">&lt;STG_STD&gt;</a></li>
+<li>State transition control by state machine - <a href="../api-reference/classes/smsimple-suttomashin.html">&lt;SM_SIMPLE&gt;</a></li>
+<li><a href="../boards/pal/pal_amb.html">&lt;PAL_AMB&gt;</a>Board operation with board behavior</li>
+</ul>
+</div>
+<h2 id="act-features.">ACT FEATURES.</h2>
+<ul>
+<li>Uses the environmental sensor PAL AMPIENT SENSE PAL to acquire sensor values.</li>
+<li>Use the sleep function to operate with coin cell batteries.</li>
+</ul>
+<h2 id="how-to-use-act">how to use act</h2>
+<h3 id="required-twelite">Required TWELITE</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+| Parent Node | <a target=_blank href="https://mono-wireless.com/jp/products/MoNoStick/">MONOSTICK BLUE or RED</a></br> ACT <a href="parent_monostick.html">Parent_MONOSTICK</a> in action.
+</p>
+<div class="line-block"><br />
+Child Node | <a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/BnR/index.html">BLUE PAL or RED PAL</a> +<a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/amb-pal.html">Environmental Sensor Pal AMBIENT SENSE PAL</a> |</div>
+<h2 id="explanation-of-act">Explanation of ACT</h2>
+<h3 id="include">Include</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#include </span><span class="im">&lt;NWK_SIMPLE&gt;</span><span class="co">// network support</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="pp">#include </span><span class="im">&lt;PAL_AMB&gt;</span><span class="pp"> </span><span class="co">// PAL_AMB</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="pp">#include </span><span class="im">&lt;STG_STD&gt;</span><span class="pp"> </span><span class="co">// Interactive settings mode</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="pp">#include </span><span class="im">&lt;SM_SIMPLE&gt;</span><span class="pp"> </span><span class="co">// Simple State Machine</span></a></code></pre></div>
+<p>Environment sensor pal <a href="../boards/pal/pal_amb.html"><code>&lt;PAL_AMB&gt;</code></a>) include board behavior.</p>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="co">/*** SETUP section */</span></a>
+<a class="sourceLine" id="cb2-3" title="3">    step.setup(); <span class="co">// State machine initialization</span></a>
+<a class="sourceLine" id="cb2-4" title="4">        </a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="co">// Load PAL_AMB board behavior</span></a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb2-7" title="7">    </a>
+<a class="sourceLine" id="cb2-8" title="8">    <span class="co">// Load Interactive settings mode</span></a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb2-10" title="10">    set &lt;&lt; SETTINGS::appname(FOURCHARS);</a>
+<a class="sourceLine" id="cb2-11" title="11">    set &lt;&lt; SETTINGS::appid_default(APP_ID); <span class="co">// set default appID</span></a>
+<a class="sourceLine" id="cb2-12" title="12">    set.hide_items(E_STGSTD_SETID::POWER_N_RETRY, E_STGSTD_SETID::OPT_DWORD2, E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4, E_STGSTD_SETID::ENC_KEY_STRING, E_STGSTD_SETID::ENC_MODE);</a>
+<a class="sourceLine" id="cb2-13" title="13"></a>
+<a class="sourceLine" id="cb2-14" title="14">    <span class="co">// Activate Interactive settings mode when SET pin is detected</span></a>
+<a class="sourceLine" id="cb2-15" title="15">    <span class="cf">if</span> (digitalRead(brd.PIN_BTN) == PIN_STATE::LOW) {</a>
+<a class="sourceLine" id="cb2-16" title="16">        set &lt;&lt; SETTINGS::open_at_start();</a>
+<a class="sourceLine" id="cb2-17" title="17">        step.next(STATE::INTERACTIVE);</a>
+<a class="sourceLine" id="cb2-18" title="18">        <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb2-19" title="19">    }</a>
+<a class="sourceLine" id="cb2-20" title="20"></a>
+<a class="sourceLine" id="cb2-21" title="21">    <span class="co">// Read data from Interactive settings mode</span></a>
+<a class="sourceLine" id="cb2-22" title="22">    set.reload();</a>
+<a class="sourceLine" id="cb2-23" title="23">    APP_ID = set.u32appid();</a>
+<a class="sourceLine" id="cb2-24" title="24">    CHANNEL = set.u8ch();</a>
+<a class="sourceLine" id="cb2-25" title="25">    OPT_BITS = set.u32opt1();</a>
+<a class="sourceLine" id="cb2-26" title="26"></a>
+<a class="sourceLine" id="cb2-27" title="27">    <span class="co">// Determine LID from DIP switches and Interactive settings mode</span></a>
+<a class="sourceLine" id="cb2-28" title="28">    LID = (brd.get_DIPSW_BM() &amp; <span class="bn">0x07</span>); <span class="co">// 1st priority is DIP SW</span></a>
+<a class="sourceLine" id="cb2-29" title="29">    <span class="cf">if</span> (LID == <span class="dv">0</span>) LID = set.u8devid(); <span class="co">// 2nd is setting.</span></a>
+<a class="sourceLine" id="cb2-30" title="30">    <span class="cf">if</span> (LID == <span class="dv">0</span>) LID = <span class="bn">0xFE</span>; <span class="co">// if still 0, set 0xFE (anonymous child)</span></a>
+<a class="sourceLine" id="cb2-31" title="31">    </a>
+<a class="sourceLine" id="cb2-32" title="32">    <span class="co">// LED initialization</span></a>
+<a class="sourceLine" id="cb2-33" title="33">    brd.set_led(LED_TIMER::BLINK, <span class="dv">10</span>); <span class="co">// blink (on 10ms/ off 10ms)</span></a>
+<a class="sourceLine" id="cb2-34" title="34"></a>
+<a class="sourceLine" id="cb2-35" title="35">    <span class="co">// the twelite main object.</span></a>
+<a class="sourceLine" id="cb2-36" title="36">    the_twelite</a>
+<a class="sourceLine" id="cb2-37" title="37">        &lt;&lt; TWENET::appid(APP_ID)     <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb2-38" title="38">        &lt;&lt; TWENET::channel(CHANNEL); <span class="co">// set channel (pysical channel)</span></a>
+<a class="sourceLine" id="cb2-39" title="39"></a>
+<a class="sourceLine" id="cb2-40" title="40">    <span class="co">// Register Network</span></a>
+<a class="sourceLine" id="cb2-41" title="41">    <span class="kw">auto</span>&amp;&amp; nwk = the_twelite.network.use&lt;NWK_SIMPLE&gt;();</a>
+<a class="sourceLine" id="cb2-42" title="42">    nwk &lt;&lt; NWK_SIMPLE::logical_id(u8ID); <span class="co">// set Logical ID. (0xFE means a child device with no ID)</span></a>
+<a class="sourceLine" id="cb2-43" title="43"></a>
+<a class="sourceLine" id="cb2-44" title="44">    <span class="co">/*** </span><span class="re">BEGIN</span><span class="co"> section */</span></a>
+<a class="sourceLine" id="cb2-45" title="45">    Wire.begin(); <span class="co">// start two wire serial bus.</span></a>
+<a class="sourceLine" id="cb2-46" title="46">    Analogue.begin(pack_bits(PIN_ANALOGUE::A1, PIN_ANALOGUE::VCC)); <span class="co">// _start continuous adc capture.</span></a>
+<a class="sourceLine" id="cb2-47" title="47"></a>
+<a class="sourceLine" id="cb2-48" title="48">    the_twelite.begin(); <span class="co">// start twelite!</span></a>
+<a class="sourceLine" id="cb2-49" title="49"></a>
+<a class="sourceLine" id="cb2-50" title="50">    startSensorCapture(); <span class="co">// start sensor capture!</span></a>
+<a class="sourceLine" id="cb2-51" title="51"></a>
+<a class="sourceLine" id="cb2-52" title="52">    <span class="co">/*** INIT message */</span></a>
+<a class="sourceLine" id="cb2-53" title="53">    Serial &lt;&lt; <span class="st">&quot;--- PAL_AMB:&quot;</span> &lt;&lt; FOURCHARS &lt;&lt; <span class="st">&quot; ---&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb2-54" title="54">}</a></code></pre></div>
+<p>The first step is to initialize variables, etc. Here we are initializing the state machine step.</p>
+<p>First, the board support <a href="parent_monostick.html"><code>&lt;PAL_AMB&gt;</code></a> is registered. The sensors and DIOs are initialized when the board support is initialized. The reason for doing this first is that it is common to check the status of the board’s DIP SW, etc., and then configure network settings, etc.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a></code></pre></div>
+<p>The next step is to initialize and read out the Interactive settings mode.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="co">// Load Interactive settings mode</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">auto</span>&amp;&amp; set = the_twelite.settings.use&lt;STG_STD&gt;();</a>
+<a class="sourceLine" id="cb4-3" title="3">set &lt;&lt; SETTINGS::appname(FOURCHARS);</a>
+<a class="sourceLine" id="cb4-4" title="4">set &lt;&lt; SETTINGS::appid_default(APP_ID); <span class="co">// set default appID</span></a>
+<a class="sourceLine" id="cb4-5" title="5">set.hide_items(E_STGSTD_SETID::POWER_N_RETRY, E_STGSTD_SETID::OPT_DWORD2, E_STGSTD_SETID::OPT_DWORD3, E_STGSTD_SETID::OPT_DWORD4, E_STGSTD_SETID::ENC_KEY_STRING, E_STGSTD_SETID::ENC_MODE);</a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="co">// If SET pin is detected, activate Interactive settings mode</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="cf">if</span> (digitalRead(brd.PIN_BTN) == PIN_STATE::LOW) {</a>
+<a class="sourceLine" id="cb4-9" title="9">    set &lt;&lt; SETTINGS::open_at_start();</a>
+<a class="sourceLine" id="cb4-10" title="10">    step.next(STATE::INTERACTIVE);</a>
+<a class="sourceLine" id="cb4-11" title="11">    <span class="cf">return</span>;</a>
+<a class="sourceLine" id="cb4-12" title="12">}</a>
+<a class="sourceLine" id="cb4-13" title="13"></a>
+<a class="sourceLine" id="cb4-14" title="14"><span class="co">// Read data from Interactive settings mode</span></a>
+<a class="sourceLine" id="cb4-15" title="15">set.reload();</a>
+<a class="sourceLine" id="cb4-16" title="16">APP_ID = set.u32appid();</a>
+<a class="sourceLine" id="cb4-17" title="17">CHANNEL = set.u8ch();</a>
+<a class="sourceLine" id="cb4-18" title="18">OPT_BITS = set.u32opt1();</a>
+<a class="sourceLine" id="cb4-19" title="19"></a>
+<a class="sourceLine" id="cb4-20" title="20"><span class="co">// Determine LID from DIP switches and Interactive settings mode</span></a>
+<a class="sourceLine" id="cb4-21" title="21">LID = (brd.get_DIPSW_BM() &amp; <span class="bn">0x07</span>); <span class="co">// 1st priority is DIP SW</span></a>
+<a class="sourceLine" id="cb4-22" title="22"><span class="cf">if</span> (LID == <span class="dv">0</span>) LID = set.u8devid(); <span class="co">// 2nd is setting.</span></a>
+<a class="sourceLine" id="cb4-23" title="23"><span class="cf">if</span> (LID == <span class="dv">0</span>) LID = <span class="bn">0xFE</span>; <span class="co">// if still 0, set 0xFE (anonymous child)</span></a></code></pre></div>
+<p>Here you can get the set object, reflect the application name, reflect the default Application ID, and delete unnecessary items in the settings menu.</p>
+<p>Next, the state of the SET pin is read. Since this sample operates intermittently in sleep mode, Interactive settings mode transition by +++ input is not possible. Instead, the sample transitions to Interactive settings mode with the SET pin = LO state at startup. In this case, <code>SETTINGS::open_at_start()</code> is specified, which means that the interactive mode screen will be displayed as soon as <code>setup()</code> is finished.</p>
+<p>Finally, <code>.reload()</code> is executed to read the set values from the EEPROM. The configuration values are copied to each variable.</p>
+<p>Next, configure the LED settings. (In an application that sleeps and wakes for a short period of time, this is almost the same as setting the LED to turn on during wake-up.)</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1">    brd.set_led(LED_TIMER::BLINK, <span class="dv">10</span>); <span class="co">// blink (on 10ms/ off 10ms)</span></a></code></pre></div>
+<p>Since this ACT exclusively transmits wireless packets, the TWENET configuration does not include a specification (<code>TWENET::rx_when_idle()</code>) to open the receive circuit during operation.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">    the_twelite</a>
+<a class="sourceLine" id="cb6-2" title="2">        &lt;&lt; TWENET::appid(APP_ID)     <span class="co">// set application ID (identify network group)</span></a>
+<a class="sourceLine" id="cb6-3" title="3">        &lt;&lt; TWENET::channel(CHANNEL); <span class="co">// set channel (pysical channel)</span></a></code></pre></div>
+<p>The sensors on the board use the I2C bus, so start using the bus.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">Wire.begin(); <span class="co">// start two wire serial bus.</span></a></code></pre></div>
+<p>Starts the acquisition of a sensor on the board. See the description of <a href="pal_amb.html#%22startsensorsorcapture"><code>startSensorCapture()</code></a>.</p>
+<pre><code>startSensorCapture();</code></pre>
+<h3 id="loop">loop()</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb9-2" title="2">    <span class="kw">auto</span>&amp;&amp; brd = the_twelite.board.use&lt;PAL_AMB&gt;();</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4">    <span class="cf">do</span> {</a>
+<a class="sourceLine" id="cb9-5" title="5">        <span class="cf">switch</span> (step.state()) {</a>
+<a class="sourceLine" id="cb9-6" title="6">         <span class="co">// Behavior of each state</span></a>
+<a class="sourceLine" id="cb9-7" title="7">        <span class="cf">case</span> STATE::INIT:</a>
+<a class="sourceLine" id="cb9-8" title="8">        ...</a>
+<a class="sourceLine" id="cb9-9" title="9">        <span class="cf">break</span>;</a>
+<a class="sourceLine" id="cb9-10" title="10">        ...</a>
+<a class="sourceLine" id="cb9-11" title="11">        }</a>
+<a class="sourceLine" id="cb9-12" title="12">    <span class="cf">while</span>(step.b_more_loop());</a>
+<a class="sourceLine" id="cb9-13" title="13">}   </a></code></pre></div>
+<p>The <code>loop()</code> is controlled by the <a href="../api-reference/classes/smsimple-suttomashin.html">SMSMSIMPLE_SIMPLE state machine</a><code>step</code> for control. This is to concisely represent the sequence of events from sleep recovery, sensor value acquisition, wireless packet transmission, waiting for transmission to complete, and sleep. In the combat of the loop, a <code>brd</code> object is acquired.</p>
+<h4 id="case-stateinteractive">case STATE::INTERACTIVE:</h4>
+<p>It is not convenient to have the main loop running during Interactive settings mode, so it is fixed in this state.</p>
+<h4 id="case-stateinit">case STATE::INIT:</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">brd.sns_SHTC3.begin();</a>
+<a class="sourceLine" id="cb10-2" title="2">brd.sns_LTR308ALS.begin();</a>
+<a class="sourceLine" id="cb10-3" title="3"></a>
+<a class="sourceLine" id="cb10-4" title="4">step.next(STATE::SENSOR);</a></code></pre></div>
+<p>Start sensor data acquisition.</p>
+<h4 id="case-statesensor">case STATE::SENSOR:</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1">    <span class="cf">if</span> (!brd.sns_LTR308ALS.available()) {</a>
+<a class="sourceLine" id="cb11-2" title="2">        brd.sns_LTR308ALS.process_ev(E_EVENT_TICK_TIMER);</a>
+<a class="sourceLine" id="cb11-3" title="3">    }</a>
+<a class="sourceLine" id="cb11-4" title="4"></a>
+<a class="sourceLine" id="cb11-5" title="5">    <span class="cf">if</span> (!brd.sns_SHTC3.available()) {</a>
+<a class="sourceLine" id="cb11-6" title="6">        brd.sns_SHTC3.process_ev(E_EVENT_TICK_TIMER);</a>
+<a class="sourceLine" id="cb11-7" title="7">    }</a></code></pre></div>
+<p>The sensors on the board can be accessed with the name <code>.sns_LTR308ALS</code> or <code>.sns_SHTC3</code>, and operations are performed on this object. Wait for the sensor to complete. If the sensor has not yet been acquired (<code>.available()</code> is <code>false</code>), a time elapsed event (<code>.process_ev(E_EVENT_TICK_TIMER)</code>) is sent to the sensor.</p>
+<p>When the above two sensors become available, the sensor value is retrieved and a transition is made to STATE TOK_TX.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1"><span class="co">// now sensor data is ready.</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="cf">if</span> (brd.sns_LTR308ALS.available() &amp;&amp; brd.sns_SHTC3.available()) {</a>
+<a class="sourceLine" id="cb12-3" title="3">    sensor.u32luminance = brd.sns_LTR308ALS.get_luminance();</a>
+<a class="sourceLine" id="cb12-4" title="4">    sensor.i16temp = brd.sns_SHTC3.get_temp_cent();</a>
+<a class="sourceLine" id="cb12-5" title="5">    sensor.i16humid = brd.sns_SHTC3.get_humid_per_dmil();</a>
+<a class="sourceLine" id="cb12-6" title="6"></a>
+<a class="sourceLine" id="cb12-7" title="7">    Serial &lt;&lt; <span class="st">&quot;..finish sensor capture.&quot;</span> &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb12-8" title="8">        &lt;&lt; <span class="st">&quot;  LTR308ALS: lumi=&quot;</span> &lt;&lt; <span class="dt">int</span>(sensor.u32luminance) &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb12-9" title="9">        &lt;&lt; <span class="st">&quot;  SHTC3    : temp=&quot;</span> &lt;&lt; div100(sensor.i16temp) &lt;&lt; <span class="ch">&#39;C&#39;</span> &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb12-10" title="10">        &lt;&lt; <span class="st">&quot;             humd=&quot;</span> &lt;&lt; div100(sensor.i16humid) &lt;&lt; <span class="ch">&#39;%&#39;</span> &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb12-11" title="11">        ;</a>
+<a class="sourceLine" id="cb12-12" title="12">    Serial.flush();</a>
+<a class="sourceLine" id="cb12-13" title="13"></a>
+<a class="sourceLine" id="cb12-14" title="14">    step.next(STATE::TX);</a>
+<a class="sourceLine" id="cb12-15" title="15">}</a></code></pre></div>
+<p>The illuminance sensor can be obtained with <code>.get_luminance() : uint32_t</code>.</p>
+<p>The temperature and humidity sensor can be obtained as follows.</p>
+<ul>
+<li><code>.get_temp_cent()</code> : <code>int16_t</code> : temperature with 1℃ as 100 (2560 for 25.6℃)</li>
+<li><code>.get_temp()</code> : <code>float</code> : float value (25.6 for 25.6 ℃)</li>
+<li><code>.get_humid_dmil()</code> : <code>int16_t</code> : humidity at 1% as 100 (5680 for 56.8%)</li>
+<li><code>.get_temp()</code> : <code>float</code> : float value (56.8 for 56.8%)</li>
+</ul>
+<h4 id="case-statetx">case STATE::TX:</h4>
+<p>The transmission procedure is the same as in the other ACT samples. Here, the settings are set to minimize one retransmission and retransmission delay.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1">    pkt &lt;&lt; tx_addr(<span class="bn">0x00</span>)  <span class="co">// Parent Node 0x00</span></a>
+<a class="sourceLine" id="cb13-2" title="2">        &lt;&lt; tx_retry(<span class="bn">0x1</span>)    <span class="co">// 1 retry</span></a>
+<a class="sourceLine" id="cb13-3" title="3">        &lt;&lt; tx_packet_delay(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>); <span class="co">// minimul delay</span></a></code></pre></div>
+<p>The identifier <code>FOURCHARS</code> and the sensor data are stored in the payload part of the packet. Of the values obtained, the temperature value is <code>int16_t</code>, but is cast to <code>uint16_t</code> because the data structure of the outgoing packet is to be stored unsigned.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1">pack_bytes(pkt.get_payload() </a>
+<a class="sourceLine" id="cb14-2" title="2">    , make_pair(FOURCHARS, <span class="dv">4</span>)  </a>
+<a class="sourceLine" id="cb14-3" title="3">    , <span class="dt">uint32_t</span>(sensor.u32luminance)</a>
+<a class="sourceLine" id="cb14-4" title="4">    , <span class="dt">uint16_t</span>(sensor.i16temp)</a>
+<a class="sourceLine" id="cb14-5" title="5">    , <span class="dt">uint16_t</span>(sensor.i16humid)</a>
+<a class="sourceLine" id="cb14-6" title="6">);</a></code></pre></div>
+<p>Requests transmission. If the send request succeeds, prepare the send completion city. Specify <code>.clear_flag()</code> to wait for the completion event and <code>set_timeout(100)</code> for timeout in case of emergency. The unit of 100 in the parameter is milliseconds [ms].</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="co">// do transmit</span></a>
+<a class="sourceLine" id="cb15-2" title="2">MWX_APIRET ret = pkt.transmit();</a>
+<a class="sourceLine" id="cb15-3" title="3"></a>
+<a class="sourceLine" id="cb15-4" title="4"><span class="cf">if</span> (ret) {</a>
+<a class="sourceLine" id="cb15-5" title="5">    step.clear_flag(); <span class="co">// waiting for flag is set.</span></a>
+<a class="sourceLine" id="cb15-6" title="6">    step.set_timeout(<span class="dv">100</span>); <span class="co">// set timeout</span></a>
+<a class="sourceLine" id="cb15-7" title="7">    step.next(STATE::TX_WAIT_COMP);</a>
+<a class="sourceLine" id="cb15-8" title="8">}</a></code></pre></div>
+<h4 id="case-statetx_wait_comp">case STATE::TX_WAIT_COMP:</h4>
+<p>This section determines timeouts and transmission completion events.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1"><span class="cf">if</span> (step.is_timeout()) { <span class="co">// maybe fatal error.</span></a>
+<a class="sourceLine" id="cb16-2" title="2">    the_twelite.reset_system();</a>
+<a class="sourceLine" id="cb16-3" title="3">}</a>
+<a class="sourceLine" id="cb16-4" title="4"><span class="cf">if</span> (step.is_flag_ready()) { <span class="co">// when tx is performed</span></a>
+<a class="sourceLine" id="cb16-5" title="5">    Serial &lt;&lt; <span class="st">&quot;..transmit complete.&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb16-6" title="6">    Serial.flush();</a>
+<a class="sourceLine" id="cb16-7" title="7">    step.next(STATE::GO_SLEEP);</a>
+<a class="sourceLine" id="cb16-8" title="8">}</a></code></pre></div>
+<h4 id="statego_sleep">STATE::GO_SLEEP:</h4>
+<p>Processes <code>sleepNow()</code>.</p>
+<h3 id="on_tx_comp">on_tx_comp()</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="dt">void</span> on_tx_comp(mwx::packet_ev_tx&amp; ev, <span class="dt">bool_t</span> &amp;b_handled) {</a>
+<a class="sourceLine" id="cb17-2" title="2">    step.set_flag(ev.bStatus);</a>
+<a class="sourceLine" id="cb17-3" title="3">}</a></code></pre></div>
+<p>This is a system event called when transmission is complete. Here, <code>.set_flag()</code> is used to indicate completion.</p>
+<h3 id="sleepnow">sleepNow()</h3>
+<p>This section includes a collection of procedures for going to sleep.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1"><span class="dt">void</span> sleepNow() {</a>
+<a class="sourceLine" id="cb18-2" title="2">    step.on_sleep(<span class="kw">false</span>); <span class="co">// reset state machine.</span></a>
+<a class="sourceLine" id="cb18-3" title="3"></a>
+<a class="sourceLine" id="cb18-4" title="4">    <span class="co">// randomize sleep duration.</span></a>
+<a class="sourceLine" id="cb18-5" title="5">    <span class="dt">uint32_t</span> u32ct = <span class="dv">1750</span> + random(<span class="dv">0</span>,<span class="dv">500</span>);</a>
+<a class="sourceLine" id="cb18-6" title="6"></a>
+<a class="sourceLine" id="cb18-7" title="7">    <span class="co">// output message</span></a>
+<a class="sourceLine" id="cb18-8" title="8">    Serial &lt;&lt; <span class="st">&quot;..sleeping &quot;</span> &lt;&lt; <span class="dt">int</span>(u32ct) &lt;&lt; <span class="st">&quot;ms.&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb18-9" title="9">    Serial.flush(); <span class="co">// wait until all message printed.</span></a>
+<a class="sourceLine" id="cb18-10" title="10">    </a>
+<a class="sourceLine" id="cb18-11" title="11">    <span class="co">// do sleep.</span></a>
+<a class="sourceLine" id="cb18-12" title="12">    the_twelite.sleep(u32ct);</a>
+<a class="sourceLine" id="cb18-13" title="13">}</a></code></pre></div>
+<p>Initialize the state of the state machine by <code>.on_sleep(false)</code> before sleep. The parameter <code>false&#39; starts from</code>STATE::INIT(=0)` after returning from sleep.</p>
+<p>Here, the time to wake up is set between 1750ms and 2250ms by a random number. This avoids continuous collisions with packets from other devices transmitting at a similar period.</p>
+<div class="info">
+<p>If the cycles are exactly the same, packets from each other will collide and communication will be difficult. Usually, the timer cycles shift with each other over time, so that communication is restored after a short period of time, and then collisions occur again after another period of time.</p>
+</div>
+<p>Lines 8 and 9, this example goes to sleep waiting for output from the serial port. Usually, we want to minimize energy consumption, so we minimize (or eliminate) output from the serial port before sleep.</p>
+<p>Line 12, to enter sleep, call <code>the_twelite.sleep()</code>. In this call, the pre-sleep procedures of the hardware on the board are performed. For example, LEDs are turned off.</p>
+<p>The sleep time is specified in ms as a parameter.</p>
+<div class="danger">
+<p>TWELITE PAL must always wake up once within 60 seconds to reset the watchdog timer. The sleep time must be specified not to exceed <code>60000</code>.</p>
+</div>
+<h3 id="wakeup">wakeup()</h3>
+<p>When the program wakes up from sleep, <code>wakeup()</code> is called. After that, <code>loop()</code> is called each time. Before <code>wakeup()</code>, each peripheral such as UART and devices on the board are woken up. For example, it restarts the LED lighting control.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1"><span class="dt">void</span> wakeup() {</a>
+<a class="sourceLine" id="cb19-2" title="2">    Serial  &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb19-3" title="3">            &lt;&lt; <span class="st">&quot;--- PAL_AMB:&quot;</span> &lt;&lt; FOURCHARS &lt;&lt; <span class="st">&quot; wake up ---&quot;</span></a>
+<a class="sourceLine" id="cb19-4" title="4">            &lt;&lt; mwx::crlf</a>
+<a class="sourceLine" id="cb19-5" title="5">            &lt;&lt; <span class="st">&quot;..start sensor capture again.&quot;</span></a>
+<a class="sourceLine" id="cb19-6" title="6">            &lt;&lt; mwx::crlf;</a></code></pre></div>
+<h2 id="applications">Applications</h2>
+<h3 id="reduction-of-energy-consumption">Reduction of energy consumption</h3>
+<p>ACT <a href="pal_amb-usenap.html">PAL_AMB-UseNap</a> can operate with lower energy consumption by sleeping while waiting for sensor data acquisition.</p>
+</body>
+</html>

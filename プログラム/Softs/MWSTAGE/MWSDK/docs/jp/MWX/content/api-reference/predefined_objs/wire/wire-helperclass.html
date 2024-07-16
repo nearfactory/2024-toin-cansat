@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Wire (ヘルパークラス版)</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Wire (ヘルパークラス版)</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#wire-ヘルパークラス版">Wire (ヘルパークラス版)</a><ul>
+<li><a href="#読み込み">読み込み</a><ul>
+<li><a href="#get_readeraddr-read_count0">get_reader(addr, read_count=0)</a></li>
+</ul></li>
+<li><a href="#書き出し-writer">書き出し (writer)</a><ul>
+<li><a href="#get_writer">get_writer()</a></li>
+</ul></li>
+<li><a href="#ワーカーオブジェクト-writer">ワーカーオブジェクト (writer)</a><ul>
+<li><a href="#演算子">&lt;&lt;演算子</a></li>
+<li><a href="#演算子-1">()演算子</a></li>
+</ul></li>
+<li><a href="#ワーカーオブジェクト-reader">ワーカーオブジェクト (reader)</a><ul>
+<li><a href="#演算子-2">&gt;&gt;演算子</a></li>
+<li><a href="#演算子-3">()演算子</a></li>
+</ul></li>
+<li><a href="#例">例</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="wire-ヘルパークラス版">Wire (ヘルパークラス版)</h1>
+<p>ヘルパークラス版はより抽象度が高い実装です。読み書きに対応するオブジェクト <code>reader, writer</code>を生成することがバスの利用開始となり、オブジェクトを破棄するとバス利用の終了手続きを行います。</p>
+<p>if文の判定式内でオブジェクトの生成を行うことで、オブジェクトの有効期間はif節内のスコープに限定され、if節を抜けた時点でオブジェクトは破棄され、その時点でバスの利用終了の手続きを行います。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(...)) { <span class="co">// オブジェクトの生成とデバイスの通信判定</span></a>
+<a class="sourceLine" id="cb1-2" title="2">   <span class="co">// このスコープ(波かっこ)内が wrt の有効期間。</span></a>
+<a class="sourceLine" id="cb1-3" title="3">   wrt &lt;&lt; <span class="bn">0x00</span>; <span class="co">// 0x00 を mwx::stream インタフェースで書き出し</span></a>
+<a class="sourceLine" id="cb1-4" title="4">} </a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">// if 節を抜けるところで wrt は破棄され、バスの利用終了</span></a></code></pre></div>
+<p>また読み書きオブジェクトは<code>mwx::stream</code>インタフェースを実装しているため<code>&lt;&lt;</code>演算子などを利用することができます。</p>
+<ul>
+<li>バスの利用開始と終了をオブジェクトの有効期間と一致させることで、ソースコードの見通しを良くし、また終了手続きの記述漏れなどを防ぐ</li>
+<li><code>mwx::stream</code>インタフェースによる読み書き手続きの統一</li>
+</ul>
+<h2 id="読み込み">読み込み</h2>
+<p>読み込み処理とその終了手続きをスコープ内 <code>if() { ... }</code> で行うためのヘルパークラスを用いた読み込み方法です。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="at">const</span> <span class="dt">uint8_t</span> DEV_ADDR = <span class="bn">0x70</span>;</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="dt">uint8_t</span> au8data[<span class="dv">6</span>];</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; rdr = Wire.get_reader(DEV_ADDR, <span class="dv">6</span>)) {</a>
+<a class="sourceLine" id="cb2-4" title="4">        <span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; c: au8data) {</a>
+<a class="sourceLine" id="cb2-5" title="5">            c = rdr();</a>
+<a class="sourceLine" id="cb2-6" title="6">        }</a>
+<a class="sourceLine" id="cb2-7" title="7">}</a>
+<a class="sourceLine" id="cb2-8" title="8"></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">// same above</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="dt">uint16_t</span> u16temp, u16humd;</a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="dt">uint8_t</span> u8temp_csum, u8humd_csum;</a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; rdr = Wire.get_reader(SHTC3_ADDRESS, <span class="dv">6</span>)) {</a>
+<a class="sourceLine" id="cb2-13" title="13">        rdr &gt;&gt; u16temp;</a>
+<a class="sourceLine" id="cb2-14" title="14">        rdr &gt;&gt; u8temp_csum;</a>
+<a class="sourceLine" id="cb2-15" title="15">        rdr &gt;&gt; u16humd;</a>
+<a class="sourceLine" id="cb2-16" title="16">        rdr &gt;&gt; u8humd_csum;</a>
+<a class="sourceLine" id="cb2-17" title="17">}</a></code></pre></div>
+<p>上記では <code>get_readr()</code> メソッドにより生成された <code>rdr</code> オブジェクトを用いて１バイトずつ読み出しします。 メソッドのパラメータには読み込みたい二線シリアル ID を指定します。</p>
+<ol type="1">
+<li><code>if(...)</code> 内で <code>rdr</code> オブジェクトを生成。（型は、型推論によるユニバーサル参照 <code>auto&amp;&amp;</code> で解決しています。）</li>
+<li>生成した <code>rdr</code> オブジェクトには <code>operator bool ()</code> が定義されており、判定式の評価として利用される。指定された ID により通信が可能であれば <code>true</code> となる。</li>
+<li><code>rdr</code> オブジェクトには <code>int operator () (void)</code> 演算子が定義されていて、これを呼び出すことで２線シリアルバスから１バイトのデータを読み出す。読み込みに失敗したときは <code>-1</code> が戻り、成功した場合は読み込んだバイト値が戻る。</li>
+<li><code>if() { ... }</code> スコープの末尾で <code>rdr</code> のデストラクタが呼び出され、二線シリアルバスの <code>STOP</code> を行う。</li>
+</ol>
+<h3 id="get_readeraddr-read_count0">get_reader(addr, read_count=0)</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">periphe_wire::reader</a>
+<a class="sourceLine" id="cb3-2" title="2">get_reader(<span class="dt">uint8_t</span> addr, <span class="dt">uint8_t</span> read_count = <span class="dv">0</span>)</a></code></pre></div>
+<p>I2C 読み出しに用いるワーカーオブジェクトを取得します。</p>
+<table>
+<colgroup>
+<col style="width: 12%"></col>
+<col style="width: 87%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>パラメータ</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>addr</code></td>
+<td>読み込み用のI2Cアドレス</td>
+</tr>
+<tr class="even">
+<td><code>read_count</code></td>
+<td>読み出しバイト数（この値を指定すると最後の転送で STOP ビットを発行する）。0を指定した場合は STOP ビットなしとなる（デバイスによっては動作するものもあります）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="書き出し-writer">書き出し (writer)</h2>
+<p>書き出し処理とその終了手続きをスコープ内 <code>if() { ... }</code> で行うためのヘルパークラスを用いた読み込み方法です。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="at">const</span> <span class="dt">uint8_t</span> DEV_ADDR = <span class="bn">0x70</span>;</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(DEV_ADDR)) {</a>
+<a class="sourceLine" id="cb4-3" title="3">    wrt(SHTC3_TRIG_H);</a>
+<a class="sourceLine" id="cb4-4" title="4">    wrt(SHTC3_TRIG_L);</a>
+<a class="sourceLine" id="cb4-5" title="5">}</a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="co">// same above</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(DEV_ADDR)) {</a>
+<a class="sourceLine" id="cb4-9" title="9">    wrt &lt;&lt; SHTC3_TRIG_H; <span class="co">// int type is handled as uint8_t</span></a>
+<a class="sourceLine" id="cb4-10" title="10">    wrt &lt;&lt; SHTC3_TRIG_L;</a>
+<a class="sourceLine" id="cb4-11" title="11">}</a></code></pre></div>
+<p>上記では <code>get_writer()</code> メソッドにより生成された <code>wrt</code> オブジェクトを用いて１バイトずつ書き出す。 メソッドのパラメータには読み出したい二線シリアル ID を指定します。</p>
+<ol type="1">
+<li><code>if(...)</code> 内で <code>wrt</code> オブジェクトを生成する。（型名は長くなるため auto で解決）</li>
+<li>生成した <code>wrt</code> オブジェクトには <code>operator bool ()</code> が定義されており、判定式の評価として利用される。指定された ID により通信が可能であれば <code>true</code> となる。</li>
+<li><code>wrt</code> オブジェクトには <code>int operator () (void)</code> 演算子が定義されていて、これを呼び出すことで２線シリアルバスに１バイトのデータを書き出しす。失敗したときは <code>-1</code> が戻り、成功した場合は書き込んだバイト値が戻る。</li>
+<li><code>if() { ... }</code> スコープの末尾で <code>wrt</code> のデストラクタが呼び出され、二線シリアルバスの <code>STOP</code> を行う。</li>
+</ol>
+<h3 id="get_writer">get_writer()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1">periph_wire::writer</a>
+<a class="sourceLine" id="cb5-2" title="2">get_writer(<span class="dt">uint8_t</span> addr)</a></code></pre></div>
+<p>I2C書き出しに用いるワーカーオブジェクトを取得します。</p>
+<table>
+<thead>
+<tr class="header">
+<th>パラメータ</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>addr</code></td>
+<td>書き出し用のI2Cアドレス</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ワーカーオブジェクト-writer">ワーカーオブジェクト (writer)</h2>
+<h3 id="演算子">&lt;&lt;演算子</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">operator</span> &lt;&lt; (<span class="dt">int</span> c)</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">operator</span> &lt;&lt; (<span class="dt">uint8_t</span> c)</a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="kw">operator</span> &lt;&lt; (<span class="dt">uint16_t</span> c) </a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="kw">operator</span> &lt;&lt; (<span class="dt">uint32_t</span> c)</a></code></pre></div>
+<p><code>int</code>型,<code>uint8_t</code>型は8bitの転送を行います。データ並び順はビッグエンディアン形式（上位バイトが先に転送される）です。</p>
+<h3 id="演算子-1">()演算子</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">operator</span>() (<span class="dt">uint8_t</span> val)</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="kw">operator</span>() (<span class="dt">int</span> val)</a></code></pre></div>
+<p>１バイト書き出す。</p>
+<h2 id="ワーカーオブジェクト-reader">ワーカーオブジェクト (reader)</h2>
+<h3 id="演算子-2">&gt;&gt;演算子</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">operator</span> &gt;&gt; (<span class="dt">uint8_t</span>&amp; c)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="kw">operator</span> &gt;&gt; (<span class="dt">uint16_t</span>&amp; c)</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="kw">operator</span> &gt;&gt; (<span class="dt">uint32_t</span>&amp; c)</a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="kw">operator</span> &gt;&gt; (<span class="dt">uint8_t</span>(&amp;c)[N]) <span class="co">// Nバイトの固定配列</span></a></code></pre></div>
+<p>それぞれのデータ型のサイズ分だけ読み出します。データ並び順はビッグエンディアン形式（先に転送されたほうが上位バイトに格納される）です。</p>
+<h3 id="演算子-3">()演算子</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">int</span> <span class="kw">operator</span>() (<span class="dt">bool</span> b_stop = <span class="kw">false</span>)</a>
+<a class="sourceLine" id="cb9-2" title="2"></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="co">//例</span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="dt">uint8_t</span> dat[<span class="dv">6</span>];</a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; rdr = Wire.get_reader(<span class="bn">0x70</span>)) {</a>
+<a class="sourceLine" id="cb9-6" title="6">  <span class="cf">for</span>(<span class="dt">uint8_t</span>&amp; x : dat) {</a>
+<a class="sourceLine" id="cb9-7" title="7">    x = rdr();</a>
+<a class="sourceLine" id="cb9-8" title="8">  }</a>
+<a class="sourceLine" id="cb9-9" title="9">}</a></code></pre></div>
+<p>１バイト読み出します。エラーがある場合は-1を戻し、正常時は読み出したバイト値を戻します。</p>
+<p><code>b_stop</code>を<code>true</code>にすると、その読み出しにおいてSTOPビットを発行します。</p>
+<h2 id="例">例</h2>
+<p>以下の例は、環境センサーパルの温湿度センサーSHTC3の計測例です。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">Wire.begin();</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="co">// reset (may not necessary...)</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(<span class="bn">0x70</span>)) {</a>
+<a class="sourceLine" id="cb10-4" title="4">    wrt &lt;&lt; <span class="bn">0x80</span>; <span class="co">// SHTC3_SOFT_RST_H</span></a>
+<a class="sourceLine" id="cb10-5" title="5">    wrt &lt;&lt; <span class="bn">0x05</span>; <span class="co">// SHTC3_SOFT_RST_L</span></a>
+<a class="sourceLine" id="cb10-6" title="6">}</a>
+<a class="sourceLine" id="cb10-7" title="7"></a>
+<a class="sourceLine" id="cb10-8" title="8">delay(<span class="dv">5</span>); <span class="co">// wait some</span></a>
+<a class="sourceLine" id="cb10-9" title="9"></a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="co">// start read</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; wrt = Wire.get_writer(<span class="bn">0x70</span>)) {</a>
+<a class="sourceLine" id="cb10-12" title="12">    wrt &lt;&lt; <span class="bn">0x60</span>; <span class="co">// SHTC3_TRIG_H</span></a>
+<a class="sourceLine" id="cb10-13" title="13">    wrt &lt;&lt; <span class="bn">0x9C</span>; <span class="co">// SHTC3_TRIG_L</span></a>
+<a class="sourceLine" id="cb10-14" title="14">}</a>
+<a class="sourceLine" id="cb10-15" title="15"></a>
+<a class="sourceLine" id="cb10-16" title="16">delay(<span class="dv">10</span>); <span class="co">// wait some</span></a>
+<a class="sourceLine" id="cb10-17" title="17"></a>
+<a class="sourceLine" id="cb10-18" title="18"><span class="co">// read result</span></a>
+<a class="sourceLine" id="cb10-19" title="19"><span class="dt">uint16_t</span> u16temp, u16humd;</a>
+<a class="sourceLine" id="cb10-20" title="20"><span class="dt">uint8_t</span> u8temp_csum, u8humd_csum;</a>
+<a class="sourceLine" id="cb10-21" title="21"><span class="cf">if</span> (<span class="kw">auto</span>&amp;&amp; rdr = Wire.get_reader(<span class="bn">0x70</span>, <span class="dv">6</span>)) {</a>
+<a class="sourceLine" id="cb10-22" title="22">    rdr &gt;&gt; u16temp;</a>
+<a class="sourceLine" id="cb10-23" title="23">    rdr &gt;&gt; u8temp_csum;</a>
+<a class="sourceLine" id="cb10-24" title="24">    rdr &gt;&gt; u16humd;</a>
+<a class="sourceLine" id="cb10-25" title="25">    rdr &gt;&gt; u8humd_csum;</a>
+<a class="sourceLine" id="cb10-26" title="26">}</a>
+<a class="sourceLine" id="cb10-27" title="27"></a>
+<a class="sourceLine" id="cb10-28" title="28"><span class="co">// checksum 0x31, init=0xFF</span></a>
+<a class="sourceLine" id="cb10-29" title="29"><span class="cf">if</span> (CRC8_u8CalcU16(u16temp, <span class="bn">0xff</span>) != u8temp_csum) {</a>
+<a class="sourceLine" id="cb10-30" title="30">    Serial &lt;&lt; format(<span class="st">&quot;{SHTC3 T CKSUM </span><span class="sc">%x</span><span class="st">}&quot;</span>, u8temp_csum); }</a>
+<a class="sourceLine" id="cb10-31" title="31"><span class="cf">if</span> (CRC8_u8CalcU16(u16humd, <span class="bn">0xff</span>) != u8humd_csum) {</a>
+<a class="sourceLine" id="cb10-32" title="32">    Serial &lt;&lt; format(<span class="st">&quot;{SHTC3 H CKSUM </span><span class="sc">%x</span><span class="st">}&quot;</span>, u8humd_csum); }</a>
+<a class="sourceLine" id="cb10-33" title="33"></a>
+<a class="sourceLine" id="cb10-34" title="34"><span class="co">// calc temp/humid (degC x 100, % x 100)</span></a>
+<a class="sourceLine" id="cb10-35" title="35"><span class="dt">int16_t</span> i16Temp = (<span class="dt">int16_t</span>)(-<span class="dv">4500</span> + ((<span class="dv">17500</span> * <span class="dt">int32_t</span>(u16temp)) &gt;&gt; <span class="dv">16</span>));</a>
+<a class="sourceLine" id="cb10-36" title="36"><span class="dt">int16_t</span> i16Humd = (<span class="dt">int16_t</span>)((<span class="dt">int32_t</span>(u16humd) * <span class="dv">10000</span>) &gt;&gt; <span class="dv">16</span>);</a>
+<a class="sourceLine" id="cb10-37" title="37"></a>
+<a class="sourceLine" id="cb10-38" title="38">Serial &lt;&lt; <span class="st">&quot;temp=&quot;</span> &lt;&lt; <span class="dt">int</span>(i16Temp) </a>
+<a class="sourceLine" id="cb10-39" title="39">       &lt;&lt; <span class="st">&quot;,humid=&quot;</span> &lt;&lt; <span class="dt">int</span>(i16Humd) &lt;&lt; mwx::crlf;</a></code></pre></div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#the-callback-functions">The callback functions</a></li>
+</ul>
+</nav>
+<h1 id="the-callback-functions">The callback functions</h1>
+<p>Callback functions are the functions used to handle the various TWENET events as they occur (flow diagram), all of which need to be implemented when building an application with the TWENET library. The most important function is <a href="cbappcoldstart.html"><code>cbAppColdStart()</code></a>, which is the equivalent of the general main() function.</p>
+<ul>
+<li><a href="cbappcoldstart.html">cbAppColdStart</a>() – Function called on power up</li>
+<li><a href="cbappwarmstart.html">cbAppWarmStart</a>() – Function called when sleep is restored</li>
+<li><a href="cbtoconet_vmain.html">cbToCoNet_vMain</a>() – The main loop is not an infinite loop, but is called when an interrupt or other event occurs.</li>
+<li><a href="cbtoconet_vrxevent.html">cbToCoNet_vRxEvent</a>() – Called when a radio packet is received</li>
+<li><a href="cbtoconet_vtxevent.html">cbToCoNet_vTxEvent</a>() – Called when radio packet transmission is complete</li>
+<li><a href="cbtoconet_vnwkevent.html">cbToCoNet_vNwkEvent</a>() – Various event notifications at MAC and network layers</li>
+<li><a href="cbtoconet_vhwevent.html">cbToCoNet_vHwEvent</a> () – Delayed execution section of peripheral interrupt processing. Called after interrupt processing.</li>
+<li><a href="cbtoconet_u8hwint.html">cbToCoNet_u8HwInt</a>() – Peripheral interrupt handlers</li>
+<li>User defined event handling functions – 状Describes task processing with state transitions</li>
+</ul>
+<p>Both callback functions need to return control after they have been called, and writing very long processes will affect the overall behaviour. Particular care should be taken when writing interrupt handlers.</p>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>TITLE</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">TITLE</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#wire">Wire</a><ul>
+<li><a href="#hint-stylewarning">hint style=&quot;warning %}</a></li>
+<li><a href="#initialization-and-termination">Initialization and termination</a><ul>
+<li><a href="#wire-instance-creation">Wire Instance Creation</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#example">Example</a></li>
+</ul></li>
+<li><a href="#reading-and-writing">Reading and Writing</a></li>
+<li><a href="#others">Others</a><ul>
+<li><a href="#probedetermine-presence-of-device">Probe（Determine presence of device)</a></li>
+<li><a href="#setclock">setClock()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="wire">Wire</h1>
+<p>Reads and writes two-wire serial (I2C) master.</p>
+<h4 id="alias-definition">Alias Definition</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">using</span> TwoWire = mwx::periph_twowire&lt;MWX_TWOWIRE_RCVBUFF&gt;;</a></code></pre></div>
+<p>The <code>mwx::periph_wire&lt;MWX_TWOWIRE_RCVBUFF&gt;</code> can be referred as <code>TwoWire</code>.</p>
+<h4 id="type-definitions">Type Definitions</h4>
+<p>The following definition types describe the types of arguments and return values.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">typedef</span> <span class="dt">uint8_t</span> <span class="dt">size_type</span>;</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">typedef</span> <span class="dt">uint8_t</span> <span class="dt">value_type</span>;</a></code></pre></div>
+<h2 id="hint-stylewarning">hint style=&quot;warning %}</h2>
+<div class="warning">
+<p>Some APIs make calls where the STOP bit is not strictly handled.</p>
+</div>
+<div class="info">
+<p><code>write(), writer::operator() ()</code> has several arguments defined in addition to the ones described here.</p>
+<ul>
+<li>fixed array type<br />
+<code>uint8_t cmds[]={11,12};</code><br />
+<code>...</code><br />
+<code>Wire.write(cmds);</code></li>
+<li><code>initializer_list&lt;&gt;</code> 型<br />
+<code>Wire.write({11,12})</code></li>
+</ul>
+</div>
+<h2 id="initialization-and-termination">Initialization and termination</h2>
+<h3 id="wire-instance-creation">Wire Instance Creation</h3>
+<p>Instance creation and necessary initialization is done in the library. In user code, it is made available by calling <code>Wire.begin()</code>.</p>
+<p>When using the <code>requestFrom()</code> method, you can specify the size of the FIFO queue for temporary data storage. At compile time, compile the macro <code>MWX_TWOWIRE_BUFF</code> with the required number of bytes. The default is 32 bytes.</p>
+<blockquote>
+<p>Example: <code>-DMWX_TWOWIRE_BUFF=16</code></p>
+</blockquote>
+<h3 id="begin">begin()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> begin(</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="at">const</span> <span class="dt">size_type</span> u8mode = WIRE_100KHZ,</a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="dt">bool</span> b_portalt = <span class="kw">false</span>)</a></code></pre></div>
+<p>Initialize hardware.</p>
+<div class="danger">
+<p>Performing any Wire operation without initialization will cause the TWELITE radio module to hang.</p>
+</div>
+<div class="warning">
+<p>When waking from sleep, if the module was operating just before sleep, it will return to the previous state.</p>
+</div>
+<table>
+<colgroup>
+<col style="width: 3%"></col>
+<col style="width: 96%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>u8mode</code></td>
+<td>Specifies the bus frequency. Default is 100Khz (<code>WIRE_CONF::WIRE_100KHZ</code>)<br>The frequency is specified by <code>WIRE_CONF::WIRE_? KHZ</code> and <code>? KHZ</code> can be <code>50</code>,<code>66</code>,<code>80</code>,<code>100</code>,<code>133</code>,<code>160</code>,<code>200</code>,<code>266</code>,<code>320</code>,<code>400</code>.</td>
+</tr>
+<tr class="even">
+<td><code>b_portalt</code></td>
+<td>Change hardware pin assignments.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">void</span> setup() {</a>
+<a class="sourceLine" id="cb4-2" title="2">    ...</a>
+<a class="sourceLine" id="cb4-3" title="3">    Wire.begin();</a>
+<a class="sourceLine" id="cb4-4" title="4">    ...</a>
+<a class="sourceLine" id="cb4-5" title="5">}</a>
+<a class="sourceLine" id="cb4-6" title="6"></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="dt">void</span> wakeup() {</a>
+<a class="sourceLine" id="cb4-8" title="8">    ...</a>
+<a class="sourceLine" id="cb4-9" title="9">    Wire.begin();</a>
+<a class="sourceLine" id="cb4-10" title="10">    ...</a>
+<a class="sourceLine" id="cb4-11" title="11">}</a></code></pre></div>
+<h2 id="reading-and-writing">Reading and Writing</h2>
+<p>There are two types of read/write procedures. Select and use one of them.</p>
+<ul>
+<li><a href="wire-member.html">Member function (input/output using the following member functions)</a><br />
+<code>requestFrom(), beginTransmission(), endTransmission(), write()</code></li>
+<li><a href="wire-helperclass.html">Helper class (stream function available)</a><br />
+<code>reader, writer</code></li>
+</ul>
+<h4 id="section"></h4>
+<h2 id="others">Others</h2>
+<h3 id="probedetermine-presence-of-device">Probe（Determine presence of device)</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">bool</span> probe(<span class="dt">uint8_t</span> address)</a></code></pre></div>
+<p>Checks if the device specified by <code>address</code> is responding. If the device exists, <code>true</code> is returned.</p>
+<h3 id="setclock">setClock()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> setClock(<span class="dt">uint32_t</span> speed)</a></code></pre></div>
+<p>The procedure is originally intended to change the bus frequency, but no action is taken.</p>
+</body>
+</html>

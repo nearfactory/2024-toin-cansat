@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=***App_Wingsを利用ください***
+DESC=[37;41m※本ﾌﾟﾛｸﾞﾗﾑはApp_Wingsに統合されました。[0m
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Wings/
+[ENGLISH]
+TITLE=***Please use App_Wings***
+DESC=[37;41mThis program has been integrated into App_Wings.[0m
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Wings/

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#wireless-packets">Wireless packets</a><ul>
+<li><a href="#destination">Destination</a></li>
+<li><a href="#senders-address">Sender’s address</a></li>
+<li><a href="#maximum-packet-length">Maximum packet length</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="wireless-packets">Wireless packets</h1>
+<h2 id="destination">Destination</h2>
+<p>Destination information is required for the delivery of wireless packets. The destination needs to be aware of three elements</p>
+<ul>
+<li>Channel</li>
+<li>Application ID</li>
+<li>Destination address</li>
+</ul>
+<p>The channel is the physical communication channel. 16 channels can be specified in total, from ch11 to 26. If the communication channel is different, it cannot be physically received. In order to communicate, the communication channels must first match.</p>
+<p>It is necessary to be able to run more than one radio system on the same communication channel; if more than one system using TWENET is in the same location and may communicate on the same channel, they will be treated as separate networks according to their application ID.</p>
+<p>Finally, if both the channel and the application ID match, communication is possible by setting the destination address appropriately. There are three types of destination address: short address (which can be set arbitrarily in the range of 12-bit values), long address (communication by individual identification address) and broadcast communication.</p>
+<h2 id="senders-address">Sender’s address</h2>
+<p>TWELITE NET allows the sender’s address to be sent as a short or long address.</p>
+<h2 id="maximum-packet-length">Maximum packet length</h2>
+<p>Wireless packets are based on the packet structure of the IEEE802.15.4 standard, but the maximum data size that can be transmitted is the amount of data that is not directly used by the user, such as destination data and headers used by TWENET.</p>
+<p>By reducing the data size (saving payload, making active use of short addresses), the current-consuming radio transmission time can be reduced. Smaller packets are also relatively less likely to fail.</p>
+</body>
+</html>

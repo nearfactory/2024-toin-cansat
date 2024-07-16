@@ -1,0 +1,12 @@
+[JAPANESE]
+TITLE=MONOSTICK用 TWELITE CUE向け OTA設定アプリ
+DESC=MONOSTICKに書き込み、無線経由で TWELITE CUE の設定を行います。
+ターミナル画面上で TWELITE CUE に対する設定を入力します。
+MONOSTICK の近くで CUE の磁石を何度か近づける(または電池を入れる)と、設定が反映されます。
+URL=https://twelite.gitbook.io/mw-pug-cue/settings/settings-by-ota
+[ENGLISH]
+TITLE=App_CUE OTA-Setting-App for the MONOSTICK.
+DESC=Configure the TWELITE CUE in over-the-air with a MONOSTICK.
+At first, set parameters on the terminal for the TWELITE CUE.
+Next, put the device near the MONOSTICK and move a magnet close repeatedly (or insert a battery).
+URL=https://twelite.gitbook.io/mw-pug-cue/settings/settings-by-ota

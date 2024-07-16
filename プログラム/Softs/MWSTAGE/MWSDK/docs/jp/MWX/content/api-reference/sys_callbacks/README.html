@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>コールバック関数</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">コールバック関数</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#コールバック関数">コールバック関数</a><ul>
+<li><a href="#通常のコールバック呼び出し順序">通常のコールバック呼び出し順序</a></li>
+<li><a href="#スリープ復帰時のコールバック呼び出し順序">スリープ復帰時のコールバック呼び出し順序</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="コールバック関数">コールバック関数</h1>
+<p>アプリケーションの記述を行うコールバック関数です。コールバックはシステム（ライブラリ）から呼び出されるという意味です。ユーザがいくつかのコールバック関数を定義することでシステムの振る舞いを記述します。</p>
+<p>以下のコールバック関数は必須定義です。</p>
+<ul>
+<li><code>setup()</code></li>
+<li><code>loop()</code></li>
+</ul>
+<p>それ以外の関数は定義しない場合は、何も実行しない空の関数が替わりにリンクされます。</p>
+<h3 id="通常のコールバック呼び出し順序">通常のコールバック呼び出し順序</h3>
+<pre><code>init_coldboot()
+  ↓ (TWENET内部処理:初期化1)
+setup()
+  ↓（TWENET内部処理:初期化2)
+begin() --- 初回のみ
+  ↓
+loop() &lt;--+
+  ↓       |イベント処理、ビヘイビア処理
+CPU DOZE -+</code></pre>
+<div class="warning">
+<p>正確なふるまいを参照したい方はソースコード<code>mwx_appcore.cpp</code>を参照してください。</p>
+</div>
+<h3 id="スリープ復帰時のコールバック呼び出し順序">スリープ復帰時のコールバック呼び出し順序</h3>
+<pre><code>the_twelite.sleep()
+  ↓ sleeping...
+ 
+ 
+init_warmboot()
+  ↓ (TWENET内部処理:初期化3)
+wakeup()
+  ↓（TWENET内部処理:初期化4)
+loop() &lt;--+
+  ↓       |イベント処理、ビヘイビア処理
+CPU DOZE -+</code></pre>
+<div class="warning">
+<p>正確なふるまいを参照したい方はソースコード<code>mwx_appcore.cpp</code>を参照してください。</p>
+</div>
+</body>
+</html>

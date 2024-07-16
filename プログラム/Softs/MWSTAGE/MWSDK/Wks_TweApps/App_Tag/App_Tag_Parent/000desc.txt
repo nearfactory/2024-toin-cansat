@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=無線タグアプリ （App_Tag）
+DESC=親機用です。
+TWELITE DIP+TWELITE R2など常時給電かるシリアル接続している端末に書き込みます。
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Tag/index.html
+[ENGLISH]
+TITLE=App_Tag (Parent)
+DESC=For parent devices.
+Have to write this app to a device that is always powered and can be connected serially.
+URL=https://mono-wireless.com/jp/products/TWE-APPS/App_Tag/index.html

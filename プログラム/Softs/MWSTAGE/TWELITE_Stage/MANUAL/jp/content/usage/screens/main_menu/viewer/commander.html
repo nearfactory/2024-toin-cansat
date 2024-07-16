@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>コマンダー</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">コマンダー</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#コマンダー">コマンダー</a></li>
+</ul>
+</nav>
+<h1 id="コマンダー">コマンダー</h1>
+<p><code>Windows</code> <code>macOS</code> <code>Linux</code> <code>RasPi</code></p>
+<p>コマンダーは、TWELITE にシリアルメッセージを送付するものです。コマンダーの最初の画面は留意事項について記載しています。</p>
+<p>画面上部にはテキストで表現されたタブがあり、これをマウスでクリックすることでタブ中の画面に移動します。</p>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[ A ]</td>
+<td>タブの移動（左）</td>
+</tr>
+<tr class="even">
+<td>[ A ] 長押し</td>
+<td>この画面を抜けて、選択画面に戻ります。</td>
+</tr>
+<tr class="odd">
+<td>[ B ]</td>
+<td>割当なし</td>
+</tr>
+<tr class="even">
+<td>[ B ] 長押し</td>
+<td>割当なし</td>
+</tr>
+<tr class="odd">
+<td>[ C ]</td>
+<td>タブの移動（右）</td>
+</tr>
+<tr class="even">
+<td>[ C ] 長押し</td>
+<td>TWELITE のリセットピンを制御し、リセットします。</td>
+</tr>
+<tr class="odd">
+<td>ESC</td>
+<td>この画面を抜けて、選択画面に戻ります。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="タブtwelite">タブ：TWELITE</h4>
+<p>この画面では、 <a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/">App_Twelite(標準アプリ)</a> の <a target=_blank href="https://mono-wireless.com/jp/products/TWE-APPS/App_Twelite/step3-80.html">0x80 コマンド</a>を生成し、送信します。接続する TWELITE には App_Twelite または App_Wings を書き込んでおき、アプリケーションID・チャネルを設定した上で、通信相手からメッセージが受信されていることを確認します。</p>
+<p><img src="data:image/png;base64,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AAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQ4DG6AgBH9/L6LroKF/F8f4quwoEYAQNAAAEMMFNrPJczvDMEpGYKGiDX8/2pOR398vqu9cikolqPZJbTfca6qKHH0+Un/oTMkrvbzG6WoghggFyJxJ0aObNju5uF9SPd3y4JxfySu5acmpRDAAPMV2XMpLAZnYXOH6pOGpH3/rZ6ZLT+MwJVBo8SwAATNAeFzceb/ztjsvdopg55mUEAA8yxcHZ3tMzuLjlPcaiYNAhOE8AAe8gZIk9VJVxmgYkZbEkZQgADZNkiQZerL0Lf+mq1XZ0zl1iTIIABsjSv/nbnkNOBVK916t14aK+pddvzwq3EXU4AA0zW+7nYRCbtk4szZpLdGCSQAAZYpM68/PBbawS85MLt6Iea2JoABpivGVqTBqDp67Xhun+LeF6de0EDTFaFZe81141ytLfk1oPbZeS8kmV2mhEwwATN5VRHSJdmBq9bn3TJs+9lTe3h7e1NdB0ADq33lsgzMrh5tTj9RKMlHF9vVQ81zR7OCBggS/fGy7e5Ubrk40anyOBTVDKcETDACFmyFiPgJouwACCAETAABDACBoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAD598+kl0HQCgOEbAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEeoyuwrS/++b9Ht/npP33Su1f1+LwS5tUkv25LagKwRPMImf/IkvKvyggYAAJcZAScPmNafiY1dGaXP65d62wuPV6nBF5x9qfXbcEIGAACXGQEnJZ/3bS55byrtktq0pU+33ROChxZ84jnSNVlBAwAAU4/As4ZBeafeTWv7DZ/7o5c02PZ5dekc8rPeS6uxGvN/qb2uu6od95sYgm93QgYAAKEjYCHzonSZ0zzxo7LP8s7dRV0zrXbqdJXU0o4WzyvPXv7WiVzdlF9I13+0PGz+7zd+cjrMQIGgABhI+DlV22HzozSo9X8e7VssQq6W8OcmnT36p45lnC2eF779PZ5JXNV2/W6dWuSs+9Vj2xGwAAQ4PSroPPlnEkNrd9bvgo658px9/GcsfJVzw2BY1r3vn5r3W//jN779NNPo+sAAGW53++Pn3362Z///OfomkyzZMyXHgfnrM1b/snj/KvU+YyDr8ory/7ye93U/mn2rvbRhx+999Of/DS6GgBQlo/uHz3+8h9++R9/+N2f/vO/oiuzsqG7OnfXDDcf33rlc/oq79TPxg2VAxArfTQrfOx7u90+/sHHf/e3n7z387/82+v/fRBdGQAowsPDw89+8rMvv/yfh9/+9rdffvnl7//997/7/Hd//NMfoysGAJf18Q8+/vGPfvzB+x9+8cUXf/OrX/3q8fHxsx9/9ou//8WHH3z4wQcffPXXr7766qvoSgLARbz//vs//PiHP/rkRz//2c//8uX/Vmuf/x/KlfHc7SwLKwAAAABJRU5ErkJggg==" /></p>
+<table>
+<colgroup>
+<col style="width: 5%"></col>
+<col style="width: 94%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>宛先</td>
+<td>送信先の TWELITE を指定します。自身が子機の場合は「親機:0」宛を指定してください。自身が親機の場合は「全子機＝0x78」または特定の子機ID(1..8まで指定可能)を指定します。</td>
+</tr>
+<tr class="even">
+<td>DI1..DI4</td>
+<td>DI1からDI4までの設定状態です。■は選択（LOW=GNDレベル）、□は(HIGH=VCCレベル)を意味します。下項目のSELを指定してください。</td>
+</tr>
+<tr class="odd">
+<td>SEL</td>
+<td>各DIの選択ビット（0ならDIの指定を無視し、1なら指定を有効化）</td>
+</tr>
+<tr class="even">
+<td>PWM1..4</td>
+<td>PWMのデューティ比を設定します。0はGNDレベル相当、1024(100%)はVCCレベル相当です。N.A.にしたPWMポートは変更しません。※ TWESTAGE基板のPWM1のLEDはVCCからの吸い込みとなっているため、0で最も明るく点灯し、100%では消灯となります。</td>
+</tr>
+</tbody>
+</table>
+<p>各項目を変更するたびにコマンドが生成されます。送信ボタンを押すと、現在の設定のコマンドを再度送信します。</p>
+<h4 id="タブnotice">タブ:NOTICE</h4>
+<p>この画面では、<a target=_blank href="https://mono-wireless.com/jp/products/twelite-pal/sense/notice-pal.html">通知PAL(NOTICE PAL)</a> の <a target=_blank href="https://wings.twelite.info/how-to-use/parent-mode/transemit-command/0x90-command">LED制御用のコマンド</a> を生成します。接続する TWELITE には App_Wings を書き込んでおき、アプリケーションID・チャネルを設定した上で、通信相手からメッセージが受信されていることを確認します。</p>
+<p><img src="data:image/png;base64,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ASCAChgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAIIYAAIIIABIIAABoAAAhgAAghgAAgggAEggAAGgAACGAACCGAACCCAASCAAAaAAAIYAAK8+c2//ya6DwBQHRUwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQAABDAABBDAABBDAABBAAANAAAEMAAEEMAAEEMAAEEAAA0AAAQwAAQQwAAQQwAAQQAADQIC30R3Y1//85z/uLvP1f/xmdK3m8WUtLOtJft/W9ARgje4Imf/ImvavSgUMAAEuUgGnj5jWH0lNHdnl17VbHc2l63VqYI9zPJ+6PaiAASDARSrgtPzzpt0ll521XdOTofTxpmNSoGTdEc9INaQCBoAAp6+Ac6rA/COv7pnd7u/DyjVdy64/J53Tfs5rcSX2Nceb+6kbVr3LZhNr+LSrgAEgQFgFPHVMlD5iWlY7rv8u79yroHPO3c6VPptSw9HieR35ad+qZc4u6rORbn9q/By+7nA+8npUwAAQIKwCXn/WdurIKF2t5t+rZY+roIc9zOnJcK3hkWMNR4vndcynfVnLXNV+n7pte5Kz7lVHNhUwAAQ4/VXQ+XKOpKau31t/FXTOmePh4zm18lWPDYEybXtfv63ut39Gn7x79y66DwBQl3fv3r39/N3n//znP6N7Ms+ami9dB+dcm7f+m8f5Z6nzqYOvyp7lePmfurmfT7N3rc/fff7Jw7uH6G4AQF0e3j28/fWvfv3xu4/f/e930Z3Z2NRdnYfXDHcf3/vK5/RZ3rnfjZtqByBWejSrvPa93W5f/PKLX//q1598/Pjxq99/Fd0ZAKjCmzdvvvr9Vx8/fnzz9ddf/+lPf/rX//3r7//4+7fffRvdMQC4rC9++cXvfvu7z95+9te//vXTL7/88ttvv/3FZ7/4w1d/+PSTTz/59JPvf/j++++/j+4kAFzEZ5999uUXX/723377x6//+N233/3tb3/74Ycf/h/+o1USypNhFQAAAABJRU5ErkJggg==" /></p>
+<table>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>子機ID</td>
+<td>送信先の TWELITE PAL のIDを指定します。値の範囲は 1..8 です。</td>
+</tr>
+<tr class="even">
+<td>色</td>
+<td>点灯色を７色から指定します。白は２種類ありますが、１つはRGBの混色で１つは白色LED単体の点灯です。</td>
+</tr>
+<tr class="odd">
+<td>明るさ</td>
+<td>0..15で指定します。0は消灯です。</td>
+</tr>
+<tr class="even">
+<td>点灯点滅</td>
+<td>点灯または点滅パターンを選択します。</td>
+</tr>
+<tr class="odd">
+<td>点灯時間</td>
+<td>コマンド発行後、一定時間経過すると自動的に消灯する機能です。</td>
+</tr>
+<tr class="even">
+<td>消灯ボタン</td>
+<td>消灯メッセージを生成します。</td>
+</tr>
+<tr class="odd">
+<td>点灯ボタン</td>
+<td>現在の設定を送信します。</td>
+</tr>
+</tbody>
+</table>
+<p>各項目を変更するたびにコマンドが生成されます。点灯ボタンを押すと、現在の設定のコマンドを再度送信します。</p>
+<h4 id="画面下部の表示">画面下部の表示</h4>
+<p>画面下部には、コマンドが生成されたタイムスタンプと <code>:</code>で始まるコマンドが表示されます。クリップボードにはこの画面の内容がコピーされます。</p>
+</body>
+</html>

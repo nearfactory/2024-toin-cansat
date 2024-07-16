@@ -6,7 +6,7 @@
 	(descr "1xAAA Battery Holder, Keystone, Plastic Case, http://www.keyelco.com/product-pdf.cfm?p=1031")
 	(tags "AAA battery holder Keystone")
 	(property "Reference" "REF**"
-		(at 24.13 0 180)
+		(at 25 0 180)
 		(layer "F.SilkS")
 		(uuid "5906348c-3d7e-4f17-9177-6b379b3deff0")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "BatteryHolder_Keystone_2466_1xAAA"
-		(at 22 0 0)
+		(at 22.87 0 0)
 		(layer "F.Fab")
 		(hide yes)
 		(uuid "251fc499-25d0-448f-b2d2-9ac501bd0690")
@@ -37,6 +37,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -49,6 +50,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -61,6 +63,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -86,17 +89,6 @@
 		(fill solid)
 		(layer "F.SilkS")
 		(uuid "7866e90d-47ba-440b-b2bf-89cf4c1e43f2")
-	)
-	(fp_rect
-		(start 1 -5.25)
-		(end 45.5 5.25)
-		(stroke
-			(width 0.12)
-			(type default)
-		)
-		(fill none)
-		(layer "F.SilkS")
-		(uuid "4e7259b4-6b68-4d45-8a5a-028cb07ad7b1")
 	)
 	(fp_rect
 		(start 49.75 -0.25)
@@ -148,6 +140,28 @@
 		)
 	)
 	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA-.step"
+		(offset
+			(xyz 48.5 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA+.step"
+		(offset
+			(xyz -0.15 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/AAA-.step"
 		(offset
 			(xyz 48.5 0 0)
 		)

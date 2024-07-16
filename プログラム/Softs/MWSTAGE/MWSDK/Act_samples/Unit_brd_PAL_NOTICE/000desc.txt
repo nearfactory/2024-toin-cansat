@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=通知パルのLED制御
+DESC=通知パルのLEDを制御するサンプルです。
+入力キーに応じて点灯状態を変化させます。
+URL=jp/MWX/content/act_samples/unit_acts.html
+[ENGLISH]
+TITLE=Control LEDs on the NOTICE PAL
+DESC=Act sample that controls LEDs on the NOTICE PAL.
+Change the lighting by key inputs.
+URL=en/MWX/content/act_samples/unit_acts.html

@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=汎用パケット受信サンプル
+DESC=標準アプリやパルアプリなどからパケットを受信するサンプルです。
+URL=jp/MWX/content/act_samples/README.html
+[ENGLISH]
+TITLE=Universal packet receiving sample
+DESC=Act sample receives packets from App_Twelite or App_PAL, etc.
+URL=en/MWX/content/act_samples/README.html

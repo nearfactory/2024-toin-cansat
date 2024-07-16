@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#フォルダ構成">フォルダ構成</a><ul>
+<li><a href="#wks_twelite-ワークスペースについて">Wks_TWELITE ワークスペースについて</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="フォルダ構成">フォルダ構成</h1>
+<p>TWELITE SDK は、インストール先のフォルダを基準にして、所定の場所にソースコードなどプロジェクトファイルを格納するように用意されています。</p>
+<div class="danger">
+<p>SDKインストールフォルダを含め、フォルダ名・ファイル名は英数文字 <strong><code>a-z A-Z 0-9 _ -</code></strong>と拡張子を区切る <strong><code>.</code></strong> ピリオドとし、空白・その他特殊記号や多バイト圏文字列（日本語など）が含まないようにしてください。</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th>フォルダ</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.../MWSDK</code></td>
+<td>TWELITE SDK の最上位フォルダ。</td>
+</tr>
+<tr class="even">
+<td><code>.../MWSDK/ChipLib</code></td>
+<td>半導体ライブラリ</td>
+</tr>
+<tr class="odd">
+<td><code>.../MWSDK/License</code></td>
+<td>モノワイヤレスソフトウェア仕様許諾書</td>
+</tr>
+<tr class="even">
+<td><code>.../MWSDK/MkFiles</code></td>
+<td>makefile ライブラリ</td>
+</tr>
+<tr class="odd">
+<td><code>.../MWSDK/Tools</code></td>
+<td>toolchain、書き込みツールなど</td>
+</tr>
+<tr class="even">
+<td><code>.../MWSDK/TWENET</code></td>
+<td>TWELITE NET ライブラリ</td>
+</tr>
+<tr class="odd">
+<td><code>.../????_libTWENET</code></td>
+<td>libTWENETUtils ソースコード</td>
+</tr>
+<tr class="even">
+<td><code>.../MWSDL/Wks_TWELITE</code></td>
+<td>アプリ・サンプルのワークスペース</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wks_twelite-ワークスペースについて">Wks_TWELITE ワークスペースについて</h3>
+<div class="danger">
+<p>ワークスペースを格納するフォルダはMWSDK 直下で、かつ、後述する Makefile の相対フォルダも変更してはいけません。</p>
+<p><code>.../MWSDK/{ワークススペースフォルダ}/{プロジェクトフォルダ}/{構成フォルダ}/Build/Makefile</code></p>
+</div>
+<p>プログラムをビルドするためのワークスペースには、複数のプロジェクトが格納されています。Wks_TWELITE 内に格納されるプロジェクトは各々個別のアプリケーションをビルドするものです。</p>
+<pre><code>.../MWSDK/Wks_TWELITE/ProjectName1/...
+.../MWSDK/Wks_TWELITE/ProjectName2/...
+...</code></pre>
+<p>プロジェクト内は以下のような構成になっています。</p>
+<pre><code>.../ProjectNameX/
+    Variant1/          : 構成１(var1)のビルド
+       Source/         : var1 特有のソースコード
+       Build/          : 生成バイナリの格納場所
+           Makefile    : var1 の生成ルール
+           Version.mk  : var1 のバージョン情報
+    Variant2/...       : 構成2
+    Common/            : 構成間共通のソースなど</code></pre>
+<ul>
+<li>同じプロジェクトでも、構成が一つのみの場合もあれば、親機・子機・中継機と構成が別れたソースコードになる場合もあります。</li>
+</ul>
+</body>
+</html>

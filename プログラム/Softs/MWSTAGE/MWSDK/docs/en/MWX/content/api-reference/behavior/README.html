@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>BEHAVIOR</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BEHAVIOR</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#behavior">BEHAVIOR</a><ul>
+<li><a href="#class-definition-.hpp">Class Definition (.hpp)</a></li>
+<li><a href="#methods">methods</a><ul>
+<li><a href="#loop">loop()</a></li>
+<li><a href="#on_create">on_create()</a></li>
+<li><a href="#on_begin">on_begin()</a></li>
+<li><a href="#on_sleep">on_sleep()</a></li>
+<li><a href="#warmboot">warmboot()</a></li>
+<li><a href="#wakeup">wakeup()</a></li>
+<li><a href="#receive">receive()</a></li>
+<li><a href="#transmit_complete">transmit_complete()</a></li>
+</ul></li>
+<li><a href="#define-handlers-.cpp">Define handlers (.cpp)</a></li>
+<li><a href="#interrupt-and-event-handlers">Interrupt and Event Handlers</a><ul>
+<li><a href="#dio">DIO</a></li>
+<li><a href="#ticktimer">TICKTIMER</a></li>
+<li><a href="#timer">TIMER</a></li>
+<li><a href="#other">Other</a></li>
+</ul></li>
+<li><a href="#state-machine">State Machine</a><ul>
+<li><a href="#pev_setstate">PEV_SetState()</a></li>
+<li><a href="#pev_u32elaspsed_ms">PEV_u32Elaspsed_ms()</a></li>
+<li><a href="#pev_process">PEV_Process()</a></li>
+<li><a href="#pev_keepstateonwakeup">PEV_KeepStateOnWakeup()</a></li>
+<li><a href="#pev_is_coldboot">PEV_is_coldboot()</a></li>
+<li><a href="#pev_is_warmboot">PEV_is_warmboot()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="behavior">BEHAVIOR</h1>
+<p>BEHAVIOR can be defined by defining the class in the specified way, so that <a href="../predefined_objs/the_twelite.html"><code>the_twelite</code></a> class object. The registered BEHAVIOR will be embedded in TWENET, allowing the user code to describe the application’s behavior. It is possible to define callback functions for interrupts and events from TWENET, which is not possible in a loop description. Although it requires more definitions than a loop description, it is suitable for describing more complex applications.</p>
+<div class="success">
+<p>See sample BEHAVIOR <a href="pal_amb-behavior.html">PAL_AMB-behavior</a>.</p>
+</div>
+<h2 id="class-definition-.hpp">Class Definition (.hpp)</h2>
+<p>BEHAVIOR definition requires a class definition as shown below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">class</span> MY_APP_CLASS: MWX_APPDEFS_CRTP(MY_APP_CLASS)</a>
+<a class="sourceLine" id="cb1-2" title="2">{</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="at">static</span> <span class="at">const</span> <span class="dt">uint8_t</span> TYPE_ID = <span class="bn">0x01</span>;</a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="co">// load common definition for handlers</span></a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="pp">#define __MWX_APP_CLASS_NAME </span>MY_APP_CLASS</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="pp">#include </span><span class="im">&quot;_mwx_cbs_hpphead.hpp&quot;</span></a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="pp">#undef __MWX_APP_CLASS_NAME</span></a>
+<a class="sourceLine" id="cb1-10" title="10"></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="co">// constructor</span></a>
+<a class="sourceLine" id="cb1-13" title="13">    MY_APP_CLASS() {}</a>
+<a class="sourceLine" id="cb1-14" title="14"></a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="dt">void</span> _setup() {}    </a>
+<a class="sourceLine" id="cb1-16" title="16">    <span class="dt">void</span> _begin() {}</a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="co">// TWENET callback handler (mandate)</span></a>
+<a class="sourceLine" id="cb1-20" title="20">    <span class="dt">void</span> loop() {}</a>
+<a class="sourceLine" id="cb1-21" title="21">    <span class="dt">void</span> on_sleep(<span class="dt">uint32_t</span> &amp; val) {}</a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="dt">void</span> warmboot(<span class="dt">uint32_t</span> &amp; val) {}</a>
+<a class="sourceLine" id="cb1-23" title="23">    <span class="dt">void</span> wakeup(<span class="dt">uint32_t</span> &amp; val) {}</a>
+<a class="sourceLine" id="cb1-24" title="24"></a>
+<a class="sourceLine" id="cb1-25" title="25">    <span class="dt">void</span> on_create(<span class="dt">uint32_t</span>&amp; val) { _setup();  }</a>
+<a class="sourceLine" id="cb1-26" title="26">    <span class="dt">void</span> on_begin(<span class="dt">uint32_t</span>&amp; val) { _begin(); }</a>
+<a class="sourceLine" id="cb1-27" title="27">    <span class="dt">void</span> on_message(<span class="dt">uint32_t</span>&amp; val) { }</a>
+<a class="sourceLine" id="cb1-28" title="28"></a>
+<a class="sourceLine" id="cb1-29" title="29"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb1-30" title="30">    <span class="dt">void</span> network_event(mwx::packet_ev_nwk&amp; pEvNwk) {}</a>
+<a class="sourceLine" id="cb1-31" title="31">    <span class="dt">void</span> receive(mwx::packet_rx&amp; rx) {}</a>
+<a class="sourceLine" id="cb1-32" title="32">    <span class="dt">void</span> transmit_complete(mwx::packet_ev_tx&amp; evTx) {}</a>
+<a class="sourceLine" id="cb1-33" title="33">};</a></code></pre></div>
+<p>The above example defines a BEHAVIOR class with the name MY_APP_CLASS. MY_APP_CLASS must be described in several places.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">class</span> MY_APP_CLASS: MWX_APPDEFS_CRTP(MY_APP_CLASS)</a></code></pre></div>
+<p>Define the class name and the base (parent) class. <code>MWX_APPDEFS_CRTP()</code> is a macro.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">    <span class="pp">#define __MWX_APP_CLASS_NAME </span>MY_APP_CLASS</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="pp">#include </span><span class="im">&quot;_mwx_cbs_hpphead.hpp&quot;</span></a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="pp">#undef __MWX_APP_CLASS_NAME</span></a></code></pre></div>
+<p>Here, the necessary definitions are imported by <code>#include</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1">MY_APP_CLASS() {}</a></code></pre></div>
+<p>Constructor definition.</p>
+<h2 id="methods">methods</h2>
+<h3 id="loop">loop()</h3>
+<p>This is the main loop and has the same role as <code>loop()</code> in the global definition.</p>
+<h3 id="on_create">on_create()</h3>
+<p><code>on_create()</code> is called at object creation time (<code>use&lt;&gt;()</code> method). The <code>val</code> is a parameter for future extension.</p>
+<h3 id="on_begin">on_begin()</h3>
+<p>on_begin()<code>is called after</code>setup()<code>ends.</code>val` is a parameter for future extension.</p>
+<h3 id="on_sleep">on_sleep()</h3>
+<p>Called before sleep. <code>val</code> is a parameter for future extension.</p>
+<h3 id="warmboot">warmboot()</h3>
+<p>Called in the initial stage when returning from sleep. The <code>val</code> is a parameter for future expansion.</p>
+<p>At this point, the peripherals have not yet been initialized. The sleep wake-up factor can be checked.</p>
+<h3 id="wakeup">wakeup()</h3>
+<p>Called when waking up from sleep. The <code>val</code> is a parameter for future extension.</p>
+<div class="info">
+<p>Sleep can also be called here.</p>
+</div>
+<h3 id="receive">receive()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">void</span> receive(mwx::packet_rx&amp; rx)</a></code></pre></div>
+<p>When a packet is received, it is called with the received packet information as <code>rx</code>.</p>
+<h3 id="transmit_complete">transmit_complete()</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">void</span> transmit_complete(mwx::packet_ev_tx&amp; evTx)</a></code></pre></div>
+<p>The transmission information is called as <code>evTx</code> when packet transmission is completed. The <code>evTx.u8CbId</code> is the ID at the time of transmission and <code>evTx.bStatus</code> is the flag indicating success (<code>1</code>) or failure (<code>0</code>) of the transmission.</p>
+<h2 id="define-handlers-.cpp">Define handlers (.cpp)</h2>
+<p>BEHAVIOR handlers (interrupt, event, and state definitions) are defined in a cpp file. The file cannot be split and all handler definitions must be in one file.</p>
+<div class="warning">
+<p>Even in the case of BEHAVIORs that do not define handlers, be sure to create the following cpp file.</p>
+</div>
+<p>The required definitions of the MWX library (<code>#include &quot;_mwx_cbs_cpphead.hpp&quot;</code>) must be included at the beginning and end of the cpp file.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="pp">#include </span><span class="im">&lt;TWELITE&gt;</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="pp">#include </span><span class="im">&quot;myAppClass.hpp&quot;</span><span class="pp"> </span><span class="co">// BEHAVIOR definition file</span></a>
+<a class="sourceLine" id="cb7-3" title="3"></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="co">/*****************************************************************/</span></a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="co">// MUST DEFINE CLASS NAME HERE</span></a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="pp">#define __MWX_APP_CLASS_NAME </span>MY_APP_CLASS</a>
+<a class="sourceLine" id="cb7-7" title="7"><span class="pp">#include </span><span class="im">&quot;_mwx_cbs_cpphead.hpp&quot;</span><span class="pp"> </span><span class="co">// Definition at the beginning</span></a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="co">/*****************************************************************/</span></a></code></pre></div>
+<p>At the beginning of the file, include the .hpp file of the BEHAVIOR definition as shown above. Specify the class name of the behavior in <code>__MWX_APP_CLASS_NAME</code>. In the above, it is <code>MY_APP_CLASS</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="co">/*****************************************************************/</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="co">// common procedure (DO NOT REMOVE)</span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="pp">#include </span><span class="im">&quot;_mwx_cbs_cpptail.cpp&quot;</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="co">// MUST UNDEF CLASS NAME HERE</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="pp">#undef __MWX_APP_CLASS_NAME</span></a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="co">/*****************************************************************/</span></a></code></pre></div>
+<p>At the end of the file, include the necessary definitions (<code>#include &quot;_mwx_cbs_cpptail.cpp&quot;</code>).</p>
+<p>The handler definition is written as shown in the following example. Types of definitions are described later. The definition of the handler to be used is described by using the macro for definition. Do not write handlers that are not used.</p>
+<p>The <code>MWX_????? _INT()</code> is the definition of an interrupt handler, and <code>MWX_? _EVENT()</code> is the definition of an event handler, and <code>MWX_STATE()</code> is the state definition of a state machine.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="co">// TickTimer interrupt</span></a>
+<a class="sourceLine" id="cb9-2" title="2">MWX_TICKTIMER_INT(<span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled) {</a>
+<a class="sourceLine" id="cb9-3" title="3">    <span class="co">// blink LED</span></a>
+<a class="sourceLine" id="cb9-4" title="4">    digitalWrite(PAL_AMB::PIN_LED, </a>
+<a class="sourceLine" id="cb9-5" title="5">          ((millis() &gt;&gt; <span class="dv">9</span>) &amp; <span class="dv">1</span>) ? PIN_STATE::HIGH : PIN_STATE::LOW);</a>
+<a class="sourceLine" id="cb9-6" title="6">}</a>
+<a class="sourceLine" id="cb9-7" title="7"></a>
+<a class="sourceLine" id="cb9-8" title="8"><span class="co">// PAL_AMB::PIN_BIN(12) event</span></a>
+<a class="sourceLine" id="cb9-9" title="9">MWX_DIO_EVENT(PAL_AMB::PIN_BTN, <span class="dt">uint32_t</span> arg) {</a>
+<a class="sourceLine" id="cb9-10" title="10">    Serial &lt;&lt; <span class="st">&quot;Button Pressed&quot;</span> &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb9-11" title="11">    </a>
+<a class="sourceLine" id="cb9-12" title="12">    <span class="at">static</span> <span class="dt">uint32_t</span> u32tick_last;</a>
+<a class="sourceLine" id="cb9-13" title="13">    <span class="dt">uint32_t</span> tick = millis();</a>
+<a class="sourceLine" id="cb9-14" title="14"></a>
+<a class="sourceLine" id="cb9-15" title="15">    <span class="cf">if</span> (tick - u32tick_last &gt; <span class="dv">100</span>) {</a>
+<a class="sourceLine" id="cb9-16" title="16">        PEV_Process(E_ORDER_KICK, <span class="dv">0</span><span class="bu">UL</span>);</a>
+<a class="sourceLine" id="cb9-17" title="17">    }</a>
+<a class="sourceLine" id="cb9-18" title="18"></a>
+<a class="sourceLine" id="cb9-19" title="19">    u32tick_last = tick;</a>
+<a class="sourceLine" id="cb9-20" title="20">}</a>
+<a class="sourceLine" id="cb9-21" title="21"></a>
+<a class="sourceLine" id="cb9-22" title="22"><span class="co">// Operation definition of state STATE_0</span></a>
+<a class="sourceLine" id="cb9-23" title="23">MWX_STATE(E_MWX::STATE_0, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb9-24" title="24">    <span class="cf">if</span> (ev == E_EVENT_START_UP) {</a>
+<a class="sourceLine" id="cb9-25" title="25">        Serial &lt;&lt; <span class="st">&quot;[STATE_0:START_UP]&quot;</span> &lt;&lt; mwx::crlf;    </a>
+<a class="sourceLine" id="cb9-26" title="26">    } <span class="cf">else</span></a>
+<a class="sourceLine" id="cb9-27" title="27">    <span class="cf">if</span> (ev == E_ORDER_KICK) {</a>
+<a class="sourceLine" id="cb9-28" title="28">        PEV_SetState(E_MWX::STATE_1);</a>
+<a class="sourceLine" id="cb9-29" title="29">    }</a>
+<a class="sourceLine" id="cb9-30" title="30">}</a>
+<a class="sourceLine" id="cb9-31" title="31"></a>
+<a class="sourceLine" id="cb9-32" title="32"><span class="co">// Operation definition for state STATE_1</span></a>
+<a class="sourceLine" id="cb9-33" title="33">MWX_STATE(E_MWX::STATE_1, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb9-34" title="34">    <span class="cf">if</span> (ev == E_EVENT_NEW_STATE) {</a>
+<a class="sourceLine" id="cb9-35" title="35">        Serial &lt;&lt; <span class="st">&quot;[STATE_1]&quot;</span> &lt;&lt; mwx::crlf; </a>
+<a class="sourceLine" id="cb9-36" title="36">    } <span class="cf">else</span></a>
+<a class="sourceLine" id="cb9-37" title="37">    <span class="cf">if</span> (ev == E_ORDER_KICK) {</a>
+<a class="sourceLine" id="cb9-38" title="38">        PEV_SetState(E_MWX::STATE_2);</a>
+<a class="sourceLine" id="cb9-39" title="39">    } <span class="cf">else</span></a>
+<a class="sourceLine" id="cb9-40" title="40">    <span class="cf">if</span> (ev == E_EVENT_TICK_SECOND) {</a>
+<a class="sourceLine" id="cb9-41" title="41">        Serial &lt;&lt; <span class="st">&quot;&lt;1&gt;&quot;</span>;</a>
+<a class="sourceLine" id="cb9-42" title="42">    }   </a>
+<a class="sourceLine" id="cb9-43" title="43">}</a></code></pre></div>
+<h2 id="interrupt-and-event-handlers">Interrupt and Event Handlers</h2>
+<p>Interrupt handlers are executed when a microcontroller interrupt occurs, interrupting the code currently being executed. For this reason, it is desirable to write as short a process as possible, and great care must also be taken with regard to manipulation of variables and the like.</p>
+<p>The interrupt handler has a parameter <code>uint8_t&amp; handled</code>, and setting this value to <code>true</code> will prevent subsequent event calls from being made.</p>
+<p>If the interrupt handler exits with <code>handled</code> set to <code>false</code>, the event handler will be called in the application loop (normal code). The event handler has no <code>handled</code> parameter. Since the event handler is normal code, it can perform relatively large processing. However, the event handler also incurs overhead, so it may not be able to handle the processing that is called at each frequent interrupt. In addition, since events are processed by the system’s internal FIFO queue, events may be lost if they cannot be processed within a certain period of time.</p>
+<p>The following is an explanation of macros for defining handler functions.</p>
+<h3 id="dio">DIO</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1">MWX_DIO_INT(N, <span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled)</a>
+<a class="sourceLine" id="cb10-2" title="2">MWX_DIO_EVENT(N, arg)</a></code></pre></div>
+<p>DIO (digital IO) interrupt event. <code>N</code> specifies the target DIO number. The <code>arg</code> is a definition for future extension.</p>
+<p>To generate an interrupt, use <a href="../funcs/dio/pinmode.html"><code>pinMode()</code></a>, <a href="../funcs/dio/attachintdio.html"><code>attachDioInt()</code></a>.</p>
+<h3 id="ticktimer">TICKTIMER</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1">MWX_TICKTIMER_INT(<span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled)</a>
+<a class="sourceLine" id="cb11-2" title="2">MWX_TICKTIMER_EVENT(<span class="dt">uint32_t</span> arg)</a></code></pre></div>
+<p>TickTimer interrupt and event. The <code>arg</code> is a definition for future extension.</p>
+<div class="danger">
+<p>The <code>handled</code> flag of the TickTimer must not be set to <code>true</code>, otherwise TWENET will not work.</p>
+</div>
+<h3 id="timer">TIMER</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb12-1" title="1">MWX_TIMER_INT(N, <span class="dt">uint32_t</span> arg, <span class="dt">uint8_t</span>&amp; handled)</a>
+<a class="sourceLine" id="cb12-2" title="2">MWX_TIMER_EVENT(N, <span class="dt">uint32_t</span> arg)</a></code></pre></div>
+<p>Timer interrupt event. The<code>N</code> specifies the number of the target timer. The <code>arg</code> is a definition for future extension.</p>
+<p>In order to generate an interrupt, the <a href="../predefined_objs/timers.html">Timer object</a> is started with software interrupts enabled.</p>
+<h3 id="other">Other</h3>
+<div class="warning">
+<p>Definition of other interrupts and events that are not defined standardly in the MWX library and require an understanding of the AHI Peripherals Manual.</p>
+</div>
+<p>Other interrupt events can be received by the following handler functions. These will not be available in the future when dedicated handlers are defined.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb13-1" title="1">MWX_MISC_INT(<span class="dt">uint32_t</span> arg, <span class="dt">uint32_t</span> arg2, handled)</a>
+<a class="sourceLine" id="cb13-2" title="2">MWX_MISC_EVENT(<span class="dt">auint32_t</span> rg, <span class="dt">uint32_t</span> arg2)</a></code></pre></div>
+<p>Peripheral (AHI) interrupt handler <code>u32DeviceId</code> corresponds to <code>arg</code> and <code>u32ItemBitmap</code> corresponds to <code>arg2</code>.</p>
+<h2 id="state-machine">State Machine</h2>
+<p>A state machine (state machine) is a method of describing an application that receives messages and operates by transitioning its state in response to those messages.</p>
+<p>The <a href="pal_amb-behavior.html">PAL_AMB-behavior</a> sample describes the flow of the application’s operation, including the start of sensor operation, acquisition of sensor values, wireless packet transmission to completion of transmission, and sleep transition. Please refer to it as an actual example.</p>
+<p>The events to be received are as follows.</p>
+<table>
+<colgroup>
+<col style="width: 25%"></col>
+<col style="width: 74%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Event Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>E_EVENT_START_UP</code></td>
+<td>It is called at system startup. Immediately after power-on, it is called with <code>0</code> parameters. <strong>Because it is in the initial stage of execution, <code>PEV_Process()</code> is called once from the begin() method to start the operation when transitioning to the normal processing state. </strong><br><strong></strong><br><strong></strong>It is still called after returning from sleep, but with parameters other than <code>0</code>. <strong>Normal processing can be performed from this state. </strong></td>
+</tr>
+<tr class="even">
+<td><code>E_EVENT_NEW_STATE</code></td>
+<td>It is called in a new state immediately after a state transition. Describes the process that is first executed when a transition is made to a certain state.</td>
+</tr>
+<tr class="odd">
+<td><code>E_EVENT_TICK_TIMER</code></td>
+<td>Called by TickTimer every 1ms</td>
+</tr>
+<tr class="even">
+<td><code>E_EVENT_TICK_SECOND</code></td>
+<td>It is called every second.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pev_setstate">PEV_SetState()</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb14-1" title="1"><span class="dt">void</span> PEV_SetState(<span class="dt">uint32_t</span> s)</a></code></pre></div>
+<p>The state is set to <code>s</code>.</p>
+<p>Exiting the state handler causes a transition to the next state, followed by a state handler being called with the <code>E_EVENTS_NEW_STATE</code> event.</p>
+<h3 id="pev_u32elaspsed_ms">PEV_u32Elaspsed_ms()</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb15-1" title="1"><span class="dt">uint32_t</span> PEV_u32Elaspsed_ms()</a></code></pre></div>
+<p>Returns the elapsed time ≪ ms] since the state transition. It is used for purposes such as managing timeouts.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb16-1" title="1">MWX_STATE(MY_APP_CHILD::STATE_TX, <span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> evarg) {</a>
+<a class="sourceLine" id="cb16-2" title="2">  ...</a>
+<a class="sourceLine" id="cb16-3" title="3">  </a>
+<a class="sourceLine" id="cb16-4" title="4">    <span class="cf">if</span> (PEV_u32Elaspsed_ms() &gt; <span class="dv">100</span>) {</a>
+<a class="sourceLine" id="cb16-5" title="5">        <span class="co">// does not finish TX!</span></a>
+<a class="sourceLine" id="cb16-6" title="6">        Serial &lt;&lt; <span class="st">&quot;[STATE_TX] FATAL, TX does not finish!&quot;</span> &lt;&lt; mwx::crlf &lt;&lt; mwx::flush;</a>
+<a class="sourceLine" id="cb16-7" title="7">        the_twelite.reset_system();</a>
+<a class="sourceLine" id="cb16-8" title="8">    }</a>
+<a class="sourceLine" id="cb16-9" title="9">}</a></code></pre></div>
+<p>In the above example, a system reset is performed after 100 ms.</p>
+<h3 id="pev_process">PEV_Process()</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb17-1" title="1"><span class="dt">void</span> PEV_Process(<span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> u32evarg) {</a></code></pre></div>
+<p>Called from outside the state handler. Execute the state handler with the event <code>ev</code> parameter <code>u32evarg</code>.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb18-1" title="1"><span class="dt">void</span> transmit_complete(mwx::packet_ev_tx&amp; txev) {</a>
+<a class="sourceLine" id="cb18-2" title="2">    Serial &lt;&lt; <span class="st">&quot;..txcomp=&quot;</span> &lt;&lt; <span class="dt">int</span>(txev.u8CbId) &lt;&lt; mwx::crlf;</a>
+<a class="sourceLine" id="cb18-3" title="3">    PEV_Process(E_ORDER_KICK, txev.u8CbId); <span class="co">// pass the event to state machine</span></a>
+<a class="sourceLine" id="cb18-4" title="4">}</a></code></pre></div>
+<p>The transmission completion event is communicated to the state machine. In other words, call the state handler.</p>
+<div class="danger">
+<p>Do not call the state handler directly. It will cause problems such as <code>E_EVENT_NEW_STATE</code> not being executed.</p>
+</div>
+<h3 id="pev_keepstateonwakeup">PEV_KeepStateOnWakeup()</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb19-1" title="1"><span class="dt">void</span> PEV_KeepStateOnWakeup()</a></code></pre></div>
+<p>Set just before sleep. After returning from sleep, the previous state is maintained. That is, the state handler is called with <code>E_EVENT_START_UP</code> with sleep started.</p>
+<h3 id="pev_is_coldboot">PEV_is_coldboot()</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb20-1" title="1"><span class="dt">bool</span> PEV_is_coldboot(<span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> u32evarg)</a></code></pre></div>
+<p>Determine if the event is <code>E_EVENT_START_UP</code> on wake-up.</p>
+<h3 id="pev_is_warmboot">PEV_is_warmboot()</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb21-1" title="1"><span class="dt">bool</span> PEV_is_warmboot(<span class="dt">uint32_t</span> ev, <span class="dt">uint32_t</span> u32evarg)</a></code></pre></div>
+<p>Judges whether the event is <code>E_EVENT_START_UP</code> when returning from sleep.</p>
+</body>
+</html>

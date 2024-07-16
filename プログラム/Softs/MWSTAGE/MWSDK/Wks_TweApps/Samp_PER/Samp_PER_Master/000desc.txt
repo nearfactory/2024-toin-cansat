@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=サンプル-パケットエラー率計測
+DESC=親機側です。ｼﾘｱﾙ接続と常時給電が必要です。
+URL=https://github.com/monowireless/Samp_PER
+[ENGLISH]
+TITLE=Samp_PER (Parent)
+DESC=This application is for the parent device. Requires serial connection and constant power supply.
+URL=https://github.com/monowireless/Samp_PER

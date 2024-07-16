@@ -80,25 +80,27 @@
 		(uuid "0c7ace34-0a1f-44a6-bdb9-6f20418542b1")
 	)
 	(fp_line
-		(start 0 -10.9)
-		(end 10.9 -10.9)
+		(start -10.4 -8.8)
+		(end -8.8 -10.4)
 		(stroke
-			(width 0.12)
+			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3c1b45bd-2f72-4989-9f1e-c58b42e00ef5")
+		(uuid "2a5fd249-2fa6-480e-96bc-dca6ad9b3bd0")
 	)
-	(fp_rect
-		(start -10.9 -10.9)
-		(end 10.9 10.9)
+	(fp_poly
+		(pts
+			(xy -8.8 -10.4) (xy -10.4 -8.8) (xy -10.4 8.8) (xy -8.8 10.4) (xy 8.8 10.4) (xy 10.4 8.8) (xy 10.4 -8.8)
+			(xy 8.8 -10.4)
+		)
 		(stroke
-			(width 0.12)
-			(type default)
+			(width 0.1)
+			(type solid)
 		)
 		(fill none)
 		(layer "F.SilkS")
-		(uuid "508dc27e-ced6-424b-96cc-cd53e0627f4b")
+		(uuid "1b15e054-37b6-4d6a-af07-524483c47317")
 	)
 	(fp_rect
 		(start -8 -9.3)
@@ -133,6 +135,34 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(pad "" np_thru_hole oval
+		(at -10.2 0 90)
+		(size 3 1)
+		(drill oval 1.5 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "3b1b877e-1085-47ec-aa59-dd7404f25b79")
+	)
+	(pad "" np_thru_hole oval
+		(at 0 -10.2)
+		(size 3 1)
+		(drill oval 1.5 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "9225618c-de19-4d25-a7d7-7723e2435ce0")
+	)
+	(pad "" np_thru_hole oval
+		(at 0 10.2 180)
+		(size 3 1)
+		(drill oval 1.5 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "f6fe2b8c-730a-49d4-9a69-952cb7942745")
+	)
+	(pad "" np_thru_hole oval
+		(at 10.2 0 270)
+		(size 3 1)
+		(drill oval 1.5 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "24d92a3e-1b7e-49b0-96de-d8ba99d2d878")
 	)
 	(pad "1" thru_hole rect
 		(at -7 -8.5)
@@ -211,6 +241,17 @@
 		)
 	)
 	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-toin-cansat/回路-基板/2024-cansat.pretty/GPS.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "C:/Users/桐蔭高校科学部/Desktop/GitHub/2024-toin-cansat/回路-基板/2024-cansat.pretty/GPS.step"
 		(offset
 			(xyz 0 0 0)
 		)

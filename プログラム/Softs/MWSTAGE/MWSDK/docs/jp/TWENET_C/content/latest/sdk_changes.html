@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#twelite-sdk-改版履歴">TWELITE SDK 改版履歴</a><ul>
+<li><a href="#mwsdk2020_05">MWSDK2020_05</a><ul>
+<li><a href="#更新内容">更新内容</a></li>
+<li><a href="#manifest">000manifest</a></li>
+</ul></li>
+<li><a href="#mwsdk2020_04">MWSDK2020_04</a><ul>
+<li><a href="#twelite-net-1.2.0-1.3.0-の変更">TWELITE NET 1.2.0-&gt;1.3.0 の変更</a></li>
+</ul></li>
+<li><a href="#twelite-net-1.2.0-2018-05-14">TWELITE NET 1.2.0 (2018-05-14)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="twelite-sdk-改版履歴">TWELITE SDK 改版履歴</h1>
+<p>MWSDK2020_05以降の履歴情報は以下に記載します。</p>
+<div class="pageref">
+<a target=_blank href="https://github.com/monowireless/MWSDK_COMMON/blob/master/ReleaseNotes%2Emd">https://github.com/monowireless/MWSDK_COMMON/blob/master/ReleaseNotes%2Emd</a>
+</div>
+<h2 id="mwsdk2020_05">MWSDK2020_05</h2>
+<div class="danger">
+<p>2019/12, 2020/04リリースのMWSDKを利用の場合は、更新を推奨します。</p>
+</div>
+<h3 id="更新内容">更新内容</h3>
+<ul>
+<li>[TWENET] イベントキューがスタックする場合があった</li>
+<li>[TWENET] スリープ復帰後にシリアルポート出力がしない場合があった</li>
+<li>[TWENET] スリープ復帰後に無線パケットの送受信キューのクリアをデフォルトの振る舞いとした</li>
+<li>[TWENET] 重複チェッカ DUPCHK モジュールのパラメータを変更できるようにした</li>
+<li>[MWX] 重複チェッカ duplicate_checker の初期化等に不備があり期待通りの除去を行っていなかった</li>
+<li>[MWX] format() の実装を機種依存の少ないものとした。また、引数を最大８までとした。64bit引数が含まれる場合は引数の数は制限される。</li>
+<li>MWSDK 以下 (Toolsフォルダ除く) を GitHub のレポジトリに格納した。</li>
+</ul>
+<h3 id="manifest">000manifest</h3>
+<pre><code>NAME: MWSDK2020_05
+DATE: 2020-05-29
+
+COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2020_05
+  CHIP LIBRARY VERSION: SW4063V1416
+  TWENET (TWELITE NET) C LIBRARY VERSION: L1303
+  MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.1.3
+  TWESETTINGS LIBRARY: https://github.com/monowireless/twesettings/releases/tag/0.2.3</code></pre>
+<h2 id="mwsdk2020_04">MWSDK2020_04</h2>
+<p>TWELITE STAGE に対応にした環境に変更しました。</p>
+<ul>
+<li>より記述内容が少なくなる Makefile に変更しました。<br />
+※ 従来のプロジェクトでの Makefile から書き換えが必要になります。</li>
+<li><a target=_blank href="https://mwx.twelite.info">mwx ライブラリ</a>に対応しました。</li>
+</ul>
+<h3 id="twelite-net-1.2.0-1.3.0-の変更">TWELITE NET 1.2.0-&gt;1.3.0 の変更</h3>
+<ul>
+<li><code>Utils/Source/serial.[ch], uart.[ch]</code>UARTのflush時に異常なふるまい（文字化けなど）が発生する場合があった問題に対処。</li>
+<li>TickTimer, ADC完了イベントの消滅を抑制する実装をした。他のハードイベントが重なったときに内部キューに貯められず消滅する場合があるため、これら割り込み発生時には内部変数をを設定し優先してイベントコールバックを呼び出すようにした。cbAppColdStart(FALSE) 時に以下の変数を0に設定すれば無効化できる。 <code>volatile uint32 _u32_INT_ticktimer; volatile uint32 _u32_INT_adc_comp;</code></li>
+<li>パケット送信要求のキューがフルかどうか判定して、フルの場合はエラーを返すようにした。</li>
+<li>WarmStart時に乱数生成が再開しなかった問題を修正。</li>
+<li><code>tsEvent</code>構造体に<code>pvExtraData</code>を追加 (mwxライブラリでPRSEV状態遷移マシンを動作させるための修正)</li>
+<li><code>volatile uint32 u32TickCount_ms</code>に変更(volatile の追加)</li>
+<li>メインループで CPU_Doze をコントロールするための <code>bool_t _b_cpu_doze_dirty</code>変数を追加。<code>TRUE</code>にセットしておくと、メインループのDOZEをスキップする。</li>
+<li>mwx ライブラリ利用のため、一部関数ヘッダ定義を外部参照可能に修正 (ユーザー非開示：PRSEV:イベント関連、内部構造体など)</li>
+<li>mwx ライブラリ利用のため、ヘッダファイルのメンテナンス (extern “C”)</li>
+<li><code>Utils/Source/utils.[ch]</code>: PWM設定で DUTY の刻みを細かく設定できるように修正。構造体メンバー u16duty_max に値を設定することで、刻み値を 1024 以外にも設定可能。刻みが1024,4096,16384の場合に除算実行の替わりにビットシフトにするようにした。</li>
+<li><code>sToCoNet_AppContext.u32ChMask</code> の MSB を内部利用するように関連コードを一部修正。</li>
+<li>内部チャネル変更関数中で、ソースコード上、現在の設定チャネルに変更される可能性があったコードを修正。</li>
+</ul>
+<h2 id="twelite-net-1.2.0-2018-05-14">TWELITE NET 1.2.0 (2018-05-14)</h2>
+<ul>
+<li>TWELITE BLUE 用のSDKのツールチェインから、TWELITE RED 共用のツールチェインに変更
+<ul>
+<li>Windows用では cygwin から msys になります。</li>
+</ul></li>
+<li>推奨開発環境を eclipse から VSCode に変更</li>
+<li>ライブラリ一式を 1.2.0 へ変更 (v1.0.6より)
+<ul>
+<li>TWELITE RED に対応</li>
+<li>make のパラメータの整理 (make TWLIET={BLUE|RED})</li>
+<li>中継における上位ノードを決定する方法を、アクティブ方式の探索から、定期パケット（NBビーコン）を用いるパッシブ方式に変更 (App_Tagの中継器に実装)</li>
+<li>32Kオシレータを利用する sToCoNet_AppContext.u8Osc32Kmode を追加</li>
+<li>アプリケーションID外のネットワークへの送信機能（実験的実装）</li>
+<li>その他軽微な修正
+<ul>
+<li>重複チェッカ(ToCoNet_USE_MOD_DUPCHK)のタイムスタンプ更新方法の改良</li>
+<li>稀にチャネルが正しく切り替わらなかった問題の修正</li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

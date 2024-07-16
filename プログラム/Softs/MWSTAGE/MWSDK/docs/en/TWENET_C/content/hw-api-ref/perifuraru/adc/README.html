@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#adc">ADC</a><ul>
+<li><a href="#adc-overview">ADC Overview</a></li>
+<li><a href="#source-code-in-twenet">Source code in TWENET</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="adc">ADC</h1>
+<p>An explanation of TWELITE’s ADC.</p>
+<h3 id="adc-overview">ADC Overview</h3>
+<p>The TWELITE has a 10-bit, 4-channel ADC (ADC2 is shared with the VREF input, ADC3 and 4 are shared with DIO). (ADC2 is shared with the VREF input, and ADC3 and 4 are shared with DIO.</p>
+<ul>
+<li>The reference voltage of the ADC, Vref, is approximately 1.235V and there is no external output. No information on temperature characteristics is available.</li>
+<li>The ADC range is 0-Vref or 0-2Vref. (It is not a relative scale of 0-Vcc)</li>
+<li>For ADC measurements, the Vref or range determines the supply voltage required to achieve the performance on the datasheet. (&gt;2.2V for 0-Vref, &gt;2.6V for 0-2Vref)</li>
+<li>Although the ADC can measure multiple ports, it cannot measure multiple ports at the same time because it is switched by a multiplexer. To measure multiple ports, the ports are switched sequentially.</li>
+<li>If accuracy is required, the use of an external ADC is recommended.</li>
+<li>The ADC allows you to set the sampling clock of the sampling circuit at 2Mhz, 1Mhz, 500khz, 250khz (500khz recommended). This is not the actual sampling clock, it is the frequency of the internal circuitry. If you want to sample at regular intervals, you can use a periodic timer (TickTimer or TIMER0/1/2) interrupt as the starting point for the software to acquire the sample values. However, at high periods, it is necessary to take into account jitter in the timer’s time axis.</li>
+<li>Each sample acquisition requires (2, 4, 6, 8) x 3 + 14 sampling clocks.</li>
+<li>t 500khz and 2 clocks, this gives 2x3+14 = 20 sampling clocks = 40 usec.</li>
+</ul>
+<h4 id="adc-ports">ADC Ports</h4>
+<table>
+<colgroup>
+<col style="width: 9%"></col>
+<col style="width: 90%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ports</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Supply voltage</td>
+<td>To measure the supply voltage, which is divided by 2/3, the ADC value is converted to mV and then multiplied by 3/2. For simplicity, it is <code>{ADC value (0-1023)} x 3705 / 1024</code>.</td>
+</tr>
+<tr class="even">
+<td>Temperature sensor</td>
+<td>A built-in temperature sensor measures in the 0-Vref range. It has a large offset error and requires calibration. <strong>It is not used in TWENET.</strong></td>
+</tr>
+<tr class="odd">
+<td>ADC1</td>
+<td>This is a dedicated analogue port.</td>
+</tr>
+<tr class="even">
+<td>ADC2 (VREF)</td>
+<td>This is a dedicated analogue port. Note: ADC2 can be used as a reference voltage input as VREF (VREF external input is not used on TWENET).</td>
+</tr>
+<tr class="odd">
+<td>ADC3,4</td>
+<td>It is shared with DIO(digital port), so the internal pull-up must be disabled.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-circuit">Input circuit</h4>
+<p>The input circuit of the ADC can be modelled as shown in the diagram. The series resistance is between 5kΩ and 10kΩ (in the diagram it is 5kΩ). This can be used as a reference for designing the external circuit.</p>
+<p><img src="data:image/png;base64,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" /></p>
+<div class="info">
+<p>When measuring a voltage value that is divided by a high resistance value, for example 1 MΩ, a capacitor is added to the output end. This capacitor reduces the response to voltage changes but stabilises the measured voltage.</p>
+</div>
+<h3 id="source-code-in-twenet">Source code in TWENET</h3>
+<p>For ADC measurements, we use <a href="adc.c.html"><code>adc.c</code></a>, which summarizes the Peripheral API procedures.</p>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>About the MWX library</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">About the MWX library</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#about-the-mwx-library">About the MWX library</a><ul>
+<li><a href="#section"></a></li>
+<li><a href="#notation-etc.">Notation, etc.</a></li>
+<li><a href="#restrictions-twenet">Restrictions (TWENET)</a></li>
+<li><a href="#restrictions-using-c">Restrictions (Using C++)</a></li>
+<li><a href="#about-the-library-source-code">about the library source code</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="about-the-mwx-library">About the MWX library</h1>
+<p>The MWX library is designed to make the programming of TWELITE modules easier and more extensible. Based on the TWENET C library that has been used in the MWSDK, the MWX library has been developed as a library for the application development layer.</p>
+<pre><code>   Act (USER APPs)... 
++-----------------------+
+| MWX C++ LIB           |
++---------------+       |
+| TWENET C LIB  |       |
++------------+----------+
+| MAC LAYER  | AHI APIs |
++-----------------------+
+| TWELITE HARDWARE      |
++-----------------------+</code></pre>
+<p>The name of the MWX library is Mono Wireless C++ Library for TWELITE, where MW comes from MonoWireless, and C++ -&gt; CXX -&gt; double X -&gt; WX, where MW and WX are combined to form MWX.</p>
+<p>The code written using this library is called “ACT”.</p>
+<h3 id="section"></h3>
+<h3 id="notation-etc.">Notation, etc.</h3>
+<p>This section describes the notation used in this explanation.</p>
+<h4 id="auto">auto&amp;&amp;</h4>
+<p>This is called a universal reference, and is often used in standard libraries. In our library, auto&amp;&amp; is used in most cases</p>
+<div class="info">
+<p>The <strong>&quot;</strong><code>auto</code>&quot; is a keyword used to declare local variables (automatic variables) in the C language, but in this case it means to declare them by type inference. <code>auto</code> is useful in situations where the C++ template syntax often results in very cumbersome type names, and at the same time can be implemented without explicitly stating the type name.</p>
+<p>The following example uses <code>std::minmax_element</code>, a standard library algorithm for finding the maximum-minimum value for a type v, and declares the resulting return value by auto. In this case, the type deduced by auto will be <code>std::pair&lt;int, int&gt;</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="pp">#include </span><span class="im">&lt;algorithm&gt;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="dt">int</span> v[] = { <span class="dv">1</span>, <span class="dv">3</span>, -<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span> };</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="kw">auto</span>&amp;&amp; result = <span class="bu">std::</span>minmax_element(<span class="bu">std::</span>begin(v), <span class="bu">std::</span>end(v));</a>
+<a class="sourceLine" id="cb2-4" title="4">Serial &lt;&lt; <span class="st">&quot;min=&quot;</span> &lt;&lt; <span class="dt">int</span>(result.first)</a>
+<a class="sourceLine" id="cb2-5" title="5">       &lt;&lt; <span class="st">&quot;,max=&quot;</span> &lt;&lt; <span class="dt">int</span>(result.second);</a></code></pre></div>
+<p>For the strict meaning of <code>&amp;&amp;</code> in <code>auto &amp;&amp;</code>, you will need to refer to technical books, etc. Here, please think of it as &quot;you can declare the return value without worrying about whether it is a reference type (similar to pointer passing in C) or a value.</p>
+</div>
+<h4 id="about-namespace">about namespace</h4>
+<p>The <code>namespace</code>, <code>inline namespace</code>, and <code>using</code> are used to redefine names and so on. Some of them are abbreviated in the explanation.</p>
+<h3 id="restrictions-twenet">Restrictions (TWENET)</h3>
+<p>The MWX library has not been developed to support all the functions of the underlying libraries and functions (functions in the TWNET C library, microcontroller peripheral functions provided by semiconductor vendors, and IEEE802.15.4 functions).</p>
+<h3 id="restrictions-using-c">Restrictions (Using C++)</h3>
+<p>The MWX library is written in the C++ language, and the act description is also written in C++. However, not all functions are available even in the C++ language. Please pay particular attention to the following points.</p>
+<ul>
+<li>You can allocate memory with the <code>new</code> and <code>new[]</code> operators, but you cannot destroy the allocated memory, and most C++ libraries that allocate memory dynamically are virtually unusable.</li>
+<li>The constructor of the global object is not called.<br />
+Note： If necessary, initialization can be done including a call to the constructor by initializing it as in the initialization function ((<code>void*)&amp;obj_global) class_foo();</code>).</li>
+<li><code>exception</code> cannot be used.</li>
+<li>Unable to use <code>virtual</code> functions.</li>
+<li>Due to the above limitations, only some of the C++ standard libraries such as STL can be used.</li>
+</ul>
+<p>※ This is a description of what we know.</p>
+<div class="warning">
+<p>We have not conducted a comprehensive verification of the standard library as to whether it can be used or not, nor what might be available. If you find any inconvenience in operation, please try to implement it in another way.</p>
+</div>
+<h3 id="about-the-library-source-code">about the library source code</h3>
+<p>The source code can be found at the followings:</p>
+<ul>
+<li><code>{MWSDK install dir}/TWENET/current/src/mwx</code></li>
+<li><a target=_blank href="https://github.com/monowireless/mwx"><code>https://github.com/monowireless/mwx</code></a></li>
+</ul>
+</body>
+</html>

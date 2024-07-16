@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>Buttons</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Buttons</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#buttons">Buttons</a><ul>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#setup">setup()</a></li>
+<li><a href="#begin">begin()</a></li>
+<li><a href="#end">end()</a></li>
+<li><a href="#available">available()</a></li>
+<li><a href="#read">read()</a></li>
+</ul></li>
+<li><a href="#about-operation">About operation</a><ul>
+<li><a href="#initial-value-determination">Initial value determination</a></li>
+<li><a href="#sleep">Sleep</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="buttons">Buttons</h1>
+<p>Detects changes in digital inputs. This class detects changes when the same detected value is obtained multiple times. This is useful for reducing the effect of chattering on mechanical buttons.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="setup">setup()</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">void</span> setup(<span class="dt">uint8_t</span> max_history);</a></code></pre></div>
+<p>The parameter <code>max_history</code> is the maximum number of references that can be set with <code>begin()</code>. Memory is allocated and initialized here.</p>
+<h3 id="begin">begin()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> begin(<span class="dt">uint32_t</span> bmPortMask,</a>
+<a class="sourceLine" id="cb2-2" title="2">                   <span class="dt">uint8_t</span> u8HistoryCount,</a>
+<a class="sourceLine" id="cb2-3" title="3">                   <span class="dt">uint16_t</span> tick_delta);</a></code></pre></div>
+<p>Starts the <code>Buttons</code> operation, the first parameter <code>bmPortMask</code> specifies the bitmap of digital inputs to be monitored. bit 0 corresponds to DIO 0, … , bit N corresponds to DIO N. More than one can be specified: the second <code>u8HistoryCount</code> is the number of times required to confirm the value; the third <code>tick_delta</code> specifies the interval in ms between value checks; the fourth <code>u8HistoryCount</code> is the number of times to confirm the value.</p>
+<p>It will take <code>u8HistoryCount*tick_delta</code>[ms] to confirm the value. For example, if <code>u8HistoryCount</code>=5 and <code>tick_delta</code>=4, it will take at least 20ms to confirm the state.</p>
+<p>The confirmation is done in the <code>TickTimer</code> event handler. Since it is not an interrupt handler, it is affected by delays in processing, etc., but it is sufficient to suppress chattering of mechanical buttons, etc.</p>
+<h3 id="end">end()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> end()</a></code></pre></div>
+<p>Terminates the <code>Buttons</code> operation.</p>
+<h3 id="available">available()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">inline</span> <span class="dt">bool</span> available()</a></code></pre></div>
+<p>Returns <code>true</code> when a change is detected. It is cleared when <code>read()</code> is executed.</p>
+<h3 id="read">read()</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">bool</span> read(<span class="dt">uint32_t</span>&amp; u32port, <span class="dt">uint32_t</span>&amp; u32changed)</a></code></pre></div>
+<p>Called when <code>u32port</code> becomes available. u32port<code>is the bitmap of the current input DIO and</code>u32changed` is the bitmap of the DIO where the change was detected.</p>
+<p>Returns <code>false</code> if Buttons is not working.</p>
+<h2 id="about-operation">About operation</h2>
+<h3 id="initial-value-determination">Initial value determination</h3>
+<p>When Buttons starts to operate, the input status of DIO is not yet determined. When the value is determined, it becomes available. At this time, the MSB (bit31) of the bitmap read by <code>read()</code> is set to 1.</p>
+<p>Since this function requires the operation to be determined, it cannot be used to monitor ports whose input values change constantly.</p>
+<h3 id="sleep">Sleep</h3>
+<p>If Buttons is in operation before Sleep, it will resume after it is restored. After resumption, initial determination is performed.</p>
+</body>
+</html>

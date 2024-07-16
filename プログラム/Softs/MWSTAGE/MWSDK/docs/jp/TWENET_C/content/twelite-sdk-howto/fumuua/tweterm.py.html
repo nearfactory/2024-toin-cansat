@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#tweterm.py">tweterm.py</a><ul>
+<li><a href="#保証ライセンス">保証・ライセンス</a></li>
+<li><a href="#動作環境必要パッケージ">動作環境・必要パッケージ</a><ul>
+<li><a href="#開発環境">開発環境</a></li>
+</ul></li>
+<li><a href="#インストール">インストール</a><ul>
+<li><a href="#パッケージのインストール">パッケージのインストール</a></li>
+<li><a href="#実行">実行</a></li>
+</ul></li>
+<li><a href="#利用方法">利用方法</a><ul>
+<li><a href="#usbドライバのアンロード">USBドライバのアンロード</a></li>
+<li><a href="#コマンドパラメータ">コマンドパラメータ</a></li>
+<li><a href="#キーボード操作">キーボード操作</a></li>
+</ul></li>
+<li><a href="#実行例">[実行例]</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="tweterm.py">tweterm.py</h1>
+<p>本プログラムは pyftdi (<a target=_blank href="https://github.com/eblot/pyftdi">https://github.com/eblot/pyftdi</a>) ライブラリサンプルスクリプト pyterm.py に TWELITE 用のファームウェア書き込みスクリプトを組み込んだものです。以下の機能があります。</p>
+<ul>
+<li>TWELITE 用ファームウェアの書き込み　(TWELITE R/MONOSTICK)</li>
+<li>シリアルポートでの動作振る舞いの確認</li>
+</ul>
+<div class="warning">
+<p>本スクリプトの OS X での実行には Python3 インタプリタが必要です。コマンドライン環境ならびに Python インタプリタの取り扱いに慣れた方を対象とします。</p>
+</div>
+<div class="warning">
+<p>本スクリプトを Linux で動作させるには同等のパッケージ (libusb-dev, pyserial, pyftdi) を用意します。コマンドライン環境ならびに Python インタプリタの取り扱いに慣れた方を対象とします。</p>
+<ul>
+<li>参考環境：Ubuntu 16.04 (i386 32bit), Python3.5.2 / Ubuntu 18.04 (x86-64 64bit), Python 3.6.5</li>
+</ul>
+</div>
+<h2 id="保証ライセンス">保証・ライセンス</h2>
+<p>本パッケージ内で、ライセンス上特別な記述のないものは、<a href="../../overview/mwsla.html">モノワイヤレスソフトウェア使用許諾契約書</a>を適用します。</p>
+<p>本ソフトウェアについては、モノワイヤレス株式会社が正式にサポートを行うものではありません。お問い合わせにはご回答できない場合もございます。予めご了承ください。</p>
+<p>不具合などのご報告に対してモノワイヤレス株式会社は、修正や改善をお約束するものではありません。</p>
+<p>また導入パッケージなどお客様の環境に依存して動作しない場合もございます。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># Copyright (C) 2017 Mono Wireless Inc. All Rights Reserved.</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># Released under MW-SLA-*J,*E (MONO WIRELESS SOFTWARE LICENSE</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># AGREEMENT)</span></a></code></pre></div>
+<h2 id="動作環境必要パッケージ">動作環境・必要パッケージ</h2>
+<ul>
+<li>Mac OS X または Linux</li>
+<li>python3.5 以降</li>
+<li>libusb</li>
+<li>pyserial</li>
+<li>pyftdi</li>
+</ul>
+<h3 id="開発環境">開発環境</h3>
+<p>以下の環境で開発、動作確認を実施しました。ただし、これら環境で動作を保証するものではありません。</p>
+<table>
+<thead>
+<tr class="header">
+<th>環境</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mac OS X 10.11.6, Python3.5.1 (2018/05)</td>
+</tr>
+<tr class="even">
+<td>Ubuntu 18.04, Python3.6.7 (2018/05)</td>
+</tr>
+<tr class="odd">
+<td>Mac OS X 10.14.2, Python3.7.2 (2019/01)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li></li>
+</ul>
+<h2 id="インストール">インストール</h2>
+<h3 id="パッケージのインストール">パッケージのインストール</h3>
+<h4 id="macos">macOS</h4>
+<p>以下では、Homebrew を用いた新しく全パッケージをインストールする例をご紹介します。</p>
+<h4 id="homebrew">Homebrew</h4>
+<p>Homebrew をインストールします。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">/usr/bin/ruby</span> -e <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="va">)</span><span class="st">&quot;</span></a></code></pre></div>
+<h4 id="python3">Python3</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">$ <span class="ex">brew</span> install python3</a></code></pre></div>
+<h4 id="libusb">libusb</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1">$ <span class="ex">brew</span> install libusb</a></code></pre></div>
+<h4 id="pyserial">pyserial</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">$ <span class="ex">pip3</span> install pyserial</a></code></pre></div>
+<h4 id="pyftdi">pyftdi</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">$ <span class="ex">pip3</span> install pyftdi</a></code></pre></div>
+<h4 id="linux">Linux</h4>
+<p>お使いのディストリビューションのパッケージ導入法を調べてください。以下のパッケージが必要です。</p>
+<ul>
+<li>python3.5 以降 (多くの場合導入されています)</li>
+<li>libusb-dev</li>
+<li>pyserial</li>
+<li>pyftdi</li>
+</ul>
+<p>パッケージ導入コマンド例。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1">$ <span class="fu">sudo</span> apt-get install libusb-dev</a>
+<a class="sourceLine" id="cb7-2" title="2">$ <span class="fu">sudo</span> apt-get install python3-pip</a>
+<a class="sourceLine" id="cb7-3" title="3">$ <span class="ex">pip3</span> install pyserial</a>
+<a class="sourceLine" id="cb7-4" title="4">$ <span class="ex">pip3</span> install pyftdi</a></code></pre></div>
+<h3 id="実行">実行</h3>
+<p>TWELITE SDK をインストールしたフォルダを <code>${TWELITESDK}</code> と記載します。</p>
+<p>スクリプトは以下になります。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="va">${TWELITESDK}</span><span class="ex">/Tools/tweterm/tweterm.py</span></a></code></pre></div>
+<p>スクリプトに実行許可を与えます。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1">$ <span class="fu">chmod</span> +x <span class="va">${TWELITESDK}</span>/Tools/tweterm/tweterm.py</a></code></pre></div>
+<p>必要に応じて環境変数 PATH に追加しておきます。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1">$ <span class="va">PATH=${TWELITESDK}</span>/Tools/tweterm:<span class="va">$PATH</span></a></code></pre></div>
+<h2 id="利用方法">利用方法</h2>
+<h3 id="usbドライバのアンロード">USBドライバのアンロード</h3>
+<div class="warning">
+<p>libusb と OS のドライバが競合するため、ドライバをアンロードしておきます。</p>
+</div>
+<h4 id="macos-1">macOS</h4>
+<p>FTDI 関連のドライバをアンロードします。</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1">$ <span class="fu">sudo</span> kextunload -b com.apple.driver.AppleUSBFTDI</a></code></pre></div>
+<h4 id="linux-1">Linux</h4>
+<p>ドライバのアンロードは不要です。</p>
+<div class="warning">
+<p>エラーが出る場合は、ドライバをアンロードを試してみてください。</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1">$ <span class="fu">sudo</span> rmmod ftdi_sio</a>
+<a class="sourceLine" id="cb12-2" title="2">$ <span class="fu">sudo</span> rmmod usbserial</a></code></pre></div>
+</div>
+<h3 id="コマンドパラメータ">コマンドパラメータ</h3>
+<table>
+<thead>
+<tr class="header">
+<th>パラメータ</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-p ftdi:///?</code> または <code>-p</code></td>
+<td>デバイス一覧を表示します。</td>
+</tr>
+<tr class="even">
+<td><code>-p [デバイス名]</code></td>
+<td>デバイスを指定します。</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>ftdi:///1</code> 他にデバイスがない時。</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>ftdi://::MW19ZZUB/1</code>シリアル番号による指定。`</td>
+</tr>
+<tr class="odd">
+<td><code>-b [ボーレート]</code></td>
+<td>ボーレートを指定します。</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>-b 115200</code> 115200bps を指定。</td>
+</tr>
+<tr class="odd">
+<td><code>-F [ファームウェア]</code></td>
+<td>ファームウェアを書き込みます。</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>-F App_Twelite.bin</code> ファイル名が App_Twelite.binを書き込みます。</td>
+</tr>
+<tr class="odd">
+<td><code>--no-color</code></td>
+<td>文字のカラー出力を抑制します。</td>
+</tr>
+<tr class="even">
+<td><code>--no-term</code></td>
+<td>ファームウェアの書き込みのみを実施しターミナルを開きません。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="キーボード操作">キーボード操作</h3>
+<p><code>Ctrl+C</code> キーを入力することで制御プロンプトを表示し、いくつかの特別な操作が可能です。それ以外の場合は、直接 TWELITE 無線モジュールに入力文字列が送付されます。</p>
+<table>
+<colgroup>
+<col style="width: 33%"></col>
+<col style="width: 67%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>入力キー</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+C Ctrl+C</code></td>
+<td>ターミナルを終了します。</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+C Ctrl+R</code> または <code>Ctrl+C r</code></td>
+<td>TWELITE 無線マイコンをリセットします。</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+C Ctrl+I</code> または <code>Ctrl+C i</code></td>
+<td>インタラクティブモードへ遷移する + + + コマンドを入力します。インタラクティブモード対応ファームウェアのみ有効です。</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+C A</code></td>
+<td>書式の解釈を開始します。TWELITE無線マイコンからの出力とキー入力に対して、アスキー形式の解釈を行います。</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+C B</code></td>
+<td>書式の解釈を開始します。TWELITE無線マイコンからの出力に対してバイナリ形式の解釈を行います。キー入力はアスキー形式で解釈します。</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+C N</code></td>
+<td>書式の解釈を停止します。</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>書式解釈中は TWELITE からの電文は解釈できた電文のみ表示し、キーボードの入力はエコーバックされますが、アスキー形式の電文が完成した時に TWELITE に送付されます。</p>
+</div>
+<h2 id="実行例">[実行例]</h2>
+<p>実行例中では、適宜改行を挟んでいます。</p>
+<div class="warning">
+<p>エラーが発生する場合は、シリアルポートの権限の問題かもしれません。root権限(sudo等)で実行します。</p>
+</div>
+<h4 id="最初にデバイスがリストされるかを確認します">＜最初にデバイスがリストされるかを確認します＞</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1">$ <span class="ex">tweterm.py</span> -p ftdi:///?</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="ex">Available</span> interfaces:</a>
+<a class="sourceLine" id="cb13-3" title="3">  <span class="ex">ftdi</span>://ftdi:232:MW19ZZUB/1   (MONOSTICK)</a>
+<a class="sourceLine" id="cb13-4" title="4">  <span class="ex">Please</span> specify the USB device</a></code></pre></div>
+<h4 id="ファームウェアを書き込んでターミナルを起動します">＜ファームウェアを書き込んでターミナルを起動します＞</h4>
+<p>以下の例では App_UART (UART 通信アプリ) を書き込み、起動メッセージを確認しています。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1">$ <span class="ex">tweterm.py</span> -p ftdi://ftdi:232:MW19ZZUB/1 -b 115200 -F ../App_Uart_Master_RED_L1101_V1-2-15.bin </a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="ex">***</span> TWE Wrting firmware ... ../App_Uart_Master_RED_L1101_V1-2-15.bin</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="ex">MODEL</span>: TWEModel.TWELite</a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="ex">SER</span>: 102eebd</a>
+<a class="sourceLine" id="cb14-5" title="5"></a>
+<a class="sourceLine" id="cb14-6" title="6"> <span class="fu">file</span> info: 0f 03 000b</a>
+<a class="sourceLine" id="cb14-7" title="7"><span class="ex">erasing</span> sect <span class="co">#0..#1..#2..</span></a>
+<a class="sourceLine" id="cb14-8" title="8"><span class="ex">0%..10%..20%..30%..40%..50%..60%..70%..80%..90%..done</span> - 10.24 kb/s</a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="ex">Entering</span> minicom mode</a>
+<a class="sourceLine" id="cb14-10" title="10"></a>
+<a class="sourceLine" id="cb14-11" title="11">!<span class="ex">INF</span> TWE UART APP V1-02-15, SID=0x8102EEBD, LID=0x78</a>
+<a class="sourceLine" id="cb14-12" title="12"><span class="ex">8102EEBD</span>:<span class="op">0&gt;</span> </a></code></pre></div>
+<h4 id="ctrlcを入力すると制御プロンプトが表示されます">＜Ctrl+Cを入力すると制御プロンプトが表示されます＞</h4>
+<pre><code>*** r:reset i:+++ A:ASCFMT B:BINFMT x:exit&gt;</code></pre>
+<h4 id="続けて-i-を入力しますインタラクティブモードに入ります">＜続けて i を入力します。インタラクティブモードに入ります＞</h4>
+<pre><code>*** r:reset i:+++ A:ASCFMT B:BINFMT x:exit&gt;[+ + +]
+--- CONFIG/TWE UART APP V1-02-15/SID=0x8102eebd/LID=0x00 -E ---
+ a: set Application ID (0x67720103) 
+ i: set Device ID (121=0x79) 
+... ＜省略＞ </code></pre>
+<p>通常通り + + + と３回入力しても同じ結果になります。</p>
+<h4 id="書式の解釈の例app_uart-をバイナリ形式に設定しておきます">＜書式の解釈の例：App_UART をバイナリ形式に設定しておきます＞</h4>
+<p>インタラクティブモードで <code>m</code> <code>B</code> <code>Enter</code> <code>S</code> と順に入力します。</p>
+<pre><code>--- CONFIG/TWE UART APP V1-02-15/SID=0x8102eebd/LID=0x00 -E ---
+ a: set Application ID (0x67720103) 
+ i: set Device ID (121=0x79) 
+ c: set Channels (18) 
+ x: set RF Conf (3) 
+ r: set Role (0x0) 
+ l: set Layer (0x1) 
+ b: set UART baud (38400) 
+ B: set UART option (8N1) 
+ m: set UART mode (B)*
+ h: set handle name [sadkasldja] 
+ C: set crypt mode (0) 
+ o: set option bits (0x00000000) 
+---
+ S: save Configuration
+ R: reset to Defaults
+ 
+!INF Write config Success
+!INF RESET SYSTEM...</code></pre>
+<h4 id="書式の解釈の例">＜書式の解釈の例＞</h4>
+<p>以下の例ではApp_UARTがバイナリ形式で入出力を行ないます。<code>Ctrl+C B</code> を入力します。</p>
+<pre><code>*** r:reset i:+++ A:ASCFMT B:BINFMT x:exit&gt;
+[FMT: console ASCII, serial BINARY]</code></pre>
+<p>この状態では入出力は書式形式となります。キーボードの入力はアスキー形式、 TWELITE からの電文はバイナリ形式として解釈します。</p>
+<p>TWELITE からの電文を受け取る例を示します。一番簡単な方法は TWELITE をリセットします。<code>Ctrl+C r</code> を入力します。</p>
+<pre><code>*** r:reset i:+++ A:ASCFMT B:BINFMT x:exit&gt;[RESET TWE]
+[dbf1677201030001020f008102eebd0000]</code></pre>
+<p>出力された <code>[dbf...]</code> がTWELITEからの電文で実際は<code>0xdb 0xf1 0x67...</code> と続くバイナリ列になります。</p>
+<p>反対に TWELITE に電文を送る場合はアスキー書式で入力します。<code>:7800112233AABBCCDDX</code> と入力します。 ここでは ペイロードが 0x7800112233AABBCCDD のデータをバイナリ形式で TWELITE に送付しています。直後に応答として <code>[dba18001]</code> が戻ってきています。</p>
+<pre><code>:7800112233AABBCCDDX[dba18001]</code></pre>
+<h4 id="終了します">＜終了します＞</h4>
+<p><code>Ctrl+C Ctrl+C</code> を入力します。</p>
+<pre><code>*** r:reset i:+++ A:ASCFMT B:BINFMT x:exit&gt;[
+[EXIT]
+Bye.</code></pre>
+</body>
+</html>

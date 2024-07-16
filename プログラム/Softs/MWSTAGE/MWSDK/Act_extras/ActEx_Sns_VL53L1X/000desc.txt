@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=Actエクストラ — Sns_VL53L1X
+DESC=STマイクロのToF距離測定モジュール VL53L1X を利用したサンプルです。
+URL=https://github.com/monowireless/ActEx_Sns_VL53L1X
+[ENGLISH]
+TITLE=Act Extra — Sns_VL53L1X
+DESC=Act sample using STMicroelectronics VL531L1X ToF distance ranging sensors
+URL=https://github.com/monowireless/ActEx_Sns_VL53L1X

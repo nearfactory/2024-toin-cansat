@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#tstxdataapp">tsTxDataApp</a><ul>
+<li><a href="#list-of-members-simple-net">List of members (<span>simple net</span>)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="tstxdataapp">tsTxDataApp</h1>
+<p>When performing wireless transmission, the data to be transmitted, the destination, and various settings for transmission are stored in a structure and passed to the transmission API as a pointer.</p>
+<h3 id="list-of-members-simple-net">List of members (<a href="../../twelite-net-api-expl/nettowkunitsuite/netto/README.html">simple net</a>)</h3>
+<table>
+<colgroup>
+<col style="width: 7%"></col>
+<col style="width: 92%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Members</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>uint32 u32SrcAddr</code></td>
+<td>送Source address. If less than <code>0xFFFF</code>, short address. If it is less than <code>0xFFFF</code>, it is a short address; if it is <code>0x8000000</code> or more, it is an extended address. Normally, the source address is specified by <a href="stoconet_appcontext.html"><code>sToCoNet_AppContext.u16ShortAddress</code></a> or <a href="../twelite-net-guan-shu/toconet_u32getserial.html"><code>ToCoNet_u32GetSerial()</code></a>.</td>
+</tr>
+<tr class="even">
+<td><code>uint32 u32DstAddr</code></td>
+<td>Destination address. Short address if less than <code>0xFFFF</code>. If it is less than or equal to 0xFFFF, it is a short address; if it is greater than or equal to <code>0x8000000</code>, it is an extended address. A <code>TOCONET_MAC_ADDR_BROADCAST</code> (<code>0xFFFF</code>) indicates a broadcast transmission.</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 u8Cmd</code></td>
+<td>Packet type. Can be freely set by the application. Value range: <code>0..7</code>.</td>
+</tr>
+<tr class="even">
+<td><code>uint8 u8CbId</code></td>
+<td>Callback ID, the value of which is set at the time of the transmission request and is passed by cbToCoNet_TxEvent(). This value maps the packet sent to the transmission completion event. This value is not included in the transmitted packet. Value range: <code>0-255</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 au8Data[]</code></td>
+<td>Packet payload (<a href="../../twelite-net-api-expl/paketto/pakettono.html">maximum packet size</a>)</td>
+</tr>
+<tr class="even">
+<td>bool_t bAckReq</td>
+<td>If <code>TRUE</code> set the ACK transmission request. Set to <code>FALSE</code> for broadcast communication.</td>
+</tr>
+<tr class="odd">
+<td><code>uint8 u8Retry</code></td>
+<td>The number of retransmissions performed by ToCoNet. if retransmissions at the MAC layer fail, ToCoNet will attempt to send the packet again. if MSB is set, the specified number of retransmissions will be performed regardless of success or failure. This bit should be set if more than one transmission is required, as most successful transmissions occur in broadcast communications. For example, if <code>0x83</code> is specified, the transmission is performed four times. The value range is from <code>0x0</code> to <code>0xF</code>, <code>0x80</code> to <code>0x8F</code>.</td>
+</tr>
+<tr class="even">
+<td><code>uint16 u16DelayMin, u16DelayMax, u16RetryDur</code></td>
+<td>Delay <code>u16DelayMin</code> [ms] until transmission starts, then wait a maximum of <code>u16DelayMax</code> [ms]. The maximum value is determined by a random number and is used to create a deliberate blur in the timing of the transmission. After transmission starts, retransmissions are made at <code>u16RetryDur</code> [ms] intervals (this interval is fixed). This process is controlled by a system timer and is therefore performed with the precision of the timer ticks (standard is 4ms). There is no limit to the range of values, but in general it is around 1000ms at most.</td>
+</tr>
+<tr class="odd">
+<td><code>uint16 bSecurePkt</code></td>
+<td>Specify <code>FALSE</code> to send in plaintext, or <code>TRUE</code> to encrypt. Register the encryption key in advance with <a href="../twelite-net-guan-shu/toconet_bregisteraeskey.html"><code>ToCoNet_bRegisterAesKey()</code></a>. The maximum number of bytes used is reduced by 2 bytes. (Maximum packet size)</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

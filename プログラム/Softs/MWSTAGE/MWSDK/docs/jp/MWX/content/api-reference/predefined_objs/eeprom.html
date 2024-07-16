@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mono Wireless Inc." />
+  <title>EEPROM</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body { line-height: 1.3em; }
+p { line-height: 1.5em; }
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 66%;
+}
+h1, h2, h3 {
+padding: 1em 1em; border-left: 0.5em solid #000;
+background: #f4f4f4;
+}
+h1.title {
+all: initial;
+font-size: 1em;
+border-left: 3em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.author, h2.author {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.date, h3.date {
+all: initial;
+font-size: 1em;
+border-left: 0.5em solid #000;
+border-right: 10em solid #000;
+padding: 0em 0.5em 0em 0.5em;
+font-weight: bold;
+}
+p.caption {
+text-align: center;
+font-weight: bold;
+}
+table {
+width: 85%;
+margin: auto;
+border-collapse: collapse;
+border-spacing: 4px;
+}
+pre {
+width: 85%;
+padding: 0.5em 1em;
+margin: auto;
+border:1px solid #333;
+padding: 4px;
+}
+td, th {
+border-collapse: collapse;
+border:1px solid #333;
+}
+div.success {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #408040;
+background-color: #e0FFe0;
+}
+div.warning {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #807060;
+background-color: #FFF8E8;
+}
+div.danger {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #FF0000;
+background-color: #FFE0E0;
+}
+div.info {
+width: 90%;
+margin: 0.5em 1em;
+margin-left: auto;
+margin-right: auto;
+padding: 0.5em 1em;
+border: dashed 2px #404080;
+background-color: #e8e8FF;
+}
+div.pageref {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+code {
+
+padding: 0.2em 0.2em 0.2em 0.2em; background: #f0f0f0;
+border: solid 1px #808080;
+border-radius: 0.2em;
+}
+pre code {
+background: #ffffff;
+border: none;
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">EEPROM</h1>
+<p class="author">Mono Wireless Inc.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#eeprom">EEPROM</a><ul>
+<li><a href="#メソッド">メソッド</a><ul>
+<li><a href="#read">read()</a></li>
+<li><a href="#write">write()</a></li>
+<li><a href="#update">update()</a></li>
+<li><a href="#get_stream_helper">get_stream_helper()</a></li>
+</ul></li>
+<li><a href="#mwxstreamインタフェースを用いた入出力">mwx::streamインタフェースを用いた入出力</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="eeprom">EEPROM</h1>
+<p>TWELITE 無線マイコンの内蔵EEPROMに対して読み書きを実行します。</p>
+<p>内蔵EEPROMはアドレス0x000～0xEFFまでの3480バイトが利用可能です。</p>
+<p>先頭部分は<a href="../../settings/README.html">設定（インタラクティブモード）</a>に利用されるため、併用する場合は後半のアドレスの利用を推奨します。設定（インタラクティブモード）でどの程度の領域を消費するかは、その実装に依存します。最小限度の設定であっても先頭から256バイトまでは利用されるため、それ以降の利用を推奨します。</p>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="read">read()</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">uint8_t</span> read(<span class="dt">uint16_t</span> address)</a></code></pre></div>
+<p>EEPROMから<code>address</code>に対応するデータを読み出します。</p>
+<div class="warning">
+<p>エラーの検出は行いません。</p>
+</div>
+<h3 id="write">write()</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> write(<span class="dt">uint16_t</span> address, <span class="dt">uint8_t</span> value)</a></code></pre></div>
+<p>EEPROMから<code>address</code>に対して<code>value</code>を書き込みます。</p>
+<div class="warning">
+<p>エラーの検出は行いません。</p>
+</div>
+<h3 id="update">update()</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">void</span> update(<span class="dt">uint16_t</span> address, <span class="dt">uint8_t</span> value)</a></code></pre></div>
+<p><code>write()</code>と同じく書き込みを行いますが、先に<code>address</code>にあるデータを読み出して<code>value</code>と違う場合のみ、書き込みを行います。EEPROMの書き換え寿命を考慮し、書換回数を減らしたいときに用います。</p>
+<h3 id="get_stream_helper">get_stream_helper()</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">auto</span>&amp;&amp; get_stream_helper()</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="co">// 戻り値型は長くなるためauto&amp;&amp;と省略しています。</span></a></code></pre></div>
+<p>後述の<code>mwx::stream</code>を用いた読み書きを行うために、ヘルパーオブジェクトを取得します。</p>
+<h2 id="mwxstreamインタフェースを用いた入出力">mwx::streamインタフェースを用いた入出力</h2>
+<p><a href="../classes/twe-stream/stream_helper.html">stream_helper</a> <a href="../classes/twe-stream/stream_helper.html">ヘルパーオブジェクト</a>を経由して、<a href="../classes/twe-stream/README.html"><code>mwx::stream</code></a>による演算子やメソッドを用います。<code>mwx::stream</code>を用いると<code>uint16_t</code>や<code>uint32_t</code>型といった整数型の読み書き、<code>uint8_t</code>の固定長配列型の読み書き、<code>format()</code>オブジェクトによる書式整形などが可能になります。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">auto</span>&amp;&amp; strm = EEPROM.get_stream_helper();</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="co">// ヘルパーオブジェクトの型名は長くなるためauto&amp;&amp;により解決しています。</span></a></code></pre></div>
+<p>このオブジェクトに対して<code>&lt;&lt;</code>演算子など<code>mwx::stream</code>で定義されたインタフェースを利用できます。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1">strm.seek(<span class="dv">1024</span>); <span class="co">// 1024バイト目に移動</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3">strm &lt;&lt; format(<span class="st">&quot;%08x&quot;</span>, <span class="dv">12345678</span>); <span class="co">// 12345678を16進数の8文字で記録</span></a>
+<a class="sourceLine" id="cb6-4" title="4">strm &lt;&lt; <span class="dt">uint32_t</span>(<span class="bn">0x12ab34cd</span>);     <span class="co">// 0x12ab34cd の4バイトを記録</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="dt">uint8_t</span> msg_hello[<span class="dv">16</span>] = <span class="st">&quot;HELLO WORLD!&quot;</span>;</a>
+<a class="sourceLine" id="cb6-6" title="6">strm &lt;&lt; msg_hello;                <span class="co">// バイト列 &quot;HELLO WORLD!&quot; を記録(終端なし)</span></a>
+<a class="sourceLine" id="cb6-7" title="7"></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="co">// 結果</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="co">// 0400: 30 30 62 63 36 31 34 65 12 ab 34 cd 48 45 4c 4c</span></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="co">//        0  0  b  c  6  1  4  e  0x12ab34cd  H  E  L  L</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="co">// 0410: 4f 20 57 4f 52 4c 44 21 00 00 00 00 ff ff ff ff</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="co">//        O SP  W  O  R  L  D  ! </span></a></code></pre></div>
+<p><code>.seek()</code>を用いてEEPROMのアドレスを1024に移動しています。</p>
+<p>上記では８バイト文字列(<code>00bc614e</code>)、４バイト整数(<code>0x12ab34cd</code>)、16バイトバイト列(<code>HELLO WORLD!...</code>)、1バイト終端文字を書き込んでいます。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1">strm.seek(<span class="dv">1024</span>);</a>
+<a class="sourceLine" id="cb7-2" title="2"></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="dt">uint8_t</span> msg1[<span class="dv">8</span>];</a>
+<a class="sourceLine" id="cb7-4" title="4">strm &gt;&gt; msg1;</a>
+<a class="sourceLine" id="cb7-5" title="5">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;MSG1=&quot;</span> &lt;&lt; msg1;</a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="co">// MSG1=00bc614e</span></a>
+<a class="sourceLine" id="cb7-7" title="7"></a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="dt">uint32_t</span> var1;</a>
+<a class="sourceLine" id="cb7-9" title="9">strm &gt;&gt; var1;</a>
+<a class="sourceLine" id="cb7-10" title="10">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;VAR1=&quot;</span> &lt;&lt; format(<span class="st">&quot;%08x&quot;</span>, var1);</a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="co">// VAR1=12ab34cd</span></a>
+<a class="sourceLine" id="cb7-12" title="12"></a>
+<a class="sourceLine" id="cb7-13" title="13"><span class="dt">uint8_t</span> msg2[<span class="dv">16</span>]; <span class="co">// &quot;HELLO WORLD!&quot;の文字数</span></a>
+<a class="sourceLine" id="cb7-14" title="14">strm &gt;&gt; msg2;</a>
+<a class="sourceLine" id="cb7-15" title="15">Serial &lt;&lt; crlf &lt;&lt; <span class="st">&quot;MSG2=&quot;</span> &lt;&lt; msg2;</a>
+<a class="sourceLine" id="cb7-16" title="16"><span class="co">// MSG2=HELLO WORLD!</span></a></code></pre></div>
+<p><code>.seek()</code>を用いてEEPROMのアドレスを1024に移動しています。</p>
+<p>先ほど書き出したデータ列を読み出します。順番に8バイト文字、4バイト整数、16バイト文字列を<code>&gt;&gt;</code>演算子を用いて読み出します。</p>
+</body>
+</html>

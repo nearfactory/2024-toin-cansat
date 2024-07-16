@@ -1,0 +1,8 @@
+[JAPANESE]
+TITLE=サンプル-省電力子機の下り通信
+DESC=子機用です。
+URL=https://github.com/monowireless/Samp_Wayback
+[ENGLISH]
+TITLE=Samp_Wayback (EndDevice)
+DESC=This is for EndDevice.
+URL=https://github.com/monowireless/Samp_Wayback

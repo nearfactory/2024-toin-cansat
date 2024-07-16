@@ -1,0 +1,10 @@
+[JAPANESE]
+TITLE=Actのテンプレート（スクラッチ）
+DESC=act0とは異なり、無線パケットの送受信処理を実装したテンプレートです。
+新しく Act を記述するのに利用してください。
+URL=jp/MWX/content/act_samples/scratch.html
+[ENGLISH]
+TITLE=Act scratch template
+DESC=Act template with packet sending/receiving procedures.
+Useful for creating a new Act.
+URL=en/MWX/content/act_samples/scratch.html
