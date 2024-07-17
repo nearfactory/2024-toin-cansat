@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>webSerial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            margin: 0;
+        }
+        #output-container {
+            flex: 1;
+            padding: 10px;
+            border-right: 1px solid #000;
+            overflow-y: scroll;
+        }
+        #output {
+            border: 5px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+            height: calc(100vh - 240px); /* Adjust to fit the screen */
+            overflow-y: scroll;
+        }
+        #map-container {
+            flex: 1;
+            padding: 10px;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ8R-TsbmCb0jWusuGXKiXrEWeuAg3Uc8"></script>
+    <script>
+        let map;
+        let markers = [];
+        let firstUpdate = true; // フラグを追加
+
+        function initMap() {
+            // 初期位置を設定
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 0, lng: 0 }, // 初期中心を(0, 0)に設定
+                zoom: 2 // 初期ズームを2に設定
+            });
+        }
+
+        function addMarker(lat, lng) {
+            const marker = new google.maps.Marker({
+                position: { lat: lat, lng: lng },
+                map: map
+            });
+            markers.push(marker);
+            
+            if (firstUpdate) {
+                map.setCenter({ lat: lat, lng: lng }); // 最初の地点に中心を移動
+                map.setZoom(15); // ズームを適切な値に設定
+                firstUpdate = false; // フラグを更新
+            }
+        }
+
+        window.onload = initMap;
+    </script>
+</head>
+<body>
+    <div id="output-container">
+        <h1 style="color: blue">Web Serial API</h1>
+        <br>
+        <button onclick="startSerial()">接続</button>
+        <button onclick="stopSerial()">切断</button>
+        <div id="output"></div>
+    </div>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <script>
+        let stopFlag = false;
+        let I, K;
+        // 緯度経度の最小値最大値を設定
+        const Imin = 0;
+        const Imax = 90;
+        const Kmin = 0;
+        const Kmax = 180;
+        const outputElement = document.getElementById('output');
+        
+        // 元の console.log を保存
+        const originalConsoleLog = console.log;
+
+        // console.log をオーバーライドして出力をキャプチャ
+        console.log = function(message) {
+            // 元の console.log を呼び出す
+            originalConsoleLog.apply(console, arguments);
+            
+            // メッセージをページに表示
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            outputElement.appendChild(messageElement);
+
+            // 自動スクロール
+            outputElement.scrollTop = outputElement.scrollHeight;
+        };
+
+        async function startSerial() {
+            try {
+                console.log("INFO：接続が確立しました");
+                stopFlag = false;
+                const port = await navigator.serial.requestPort();
+                await port.open({ baudRate: 115200 });
+                while (port.readable) {
+                    const reader = port.readable.getReader();
+                    try {
+                        while (!stopFlag) {
+                            const { value, done } = await reader.read();
+                            if (done) {
+                                console.log("INFO：読込モード終了");
+                                break;
+                            }
+                            // 生データはバイナリなので、ユニコード文字へデコード
+                            const inputValue = new TextDecoder().decode(value);
+                            processInput(inputValue);
+                        }
+                    } catch (error) {
+                        console.log("ERROR：読み出し失敗");
+                        console.log(error);
+                    } finally {
+                        reader.releaseLock();
+                        await port.close();
+                        console.log("INFO：接続を切断しました");
+                    }
+                }
+            } catch (error) {
+                console.log("ERROR：ポートが開けません");
+                console.log(error);
+            }
+        }
+
+        function stopSerial() {
+            stopFlag = true;
+        }
+
+        function processInput(input) {
+            const regex = /^(\d+(\.\d+)?),\s*(\d+(\.\d+)?)$/;
+            const match = input.trim().match(regex);
+
+            if (match) {
+                I = parseFloat(match[1]);
+                K = parseFloat(match[3]);
+
+                if ((I <= Imin) || (Imax <= I)) {
+                    console.log("ERROR：緯度がきちんと出力されていません");
+                    console.log(`緯度：${I}, 経度：${K}`);
+                    console.log("INFO：出力を停止します");
+                    stopSerial();
+                } else if ((K <= Kmin) || (Kmax <= K)) {
+                    console.log("ERROR：経度がきちんと出力されていません");
+                    console.log(`緯度：${I}, 経度：${K}`);
+                    console.log("INFO：出力を停止します");
+                    stopSerial();
+                } else {
+                    console.log(`緯度：${I}, 経度：${K}`);
+                    addMarker(I, K);
+                }
+            } else {
+                console.log("ERROR：値が無効です");
+            }
+        }
+    </script>
+</body>
+</html>
