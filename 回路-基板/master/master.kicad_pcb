@@ -1046,7 +1046,11 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J2"
+<<<<<<< Updated upstream
 			(at 0 -2.33 360)
+=======
+			(at 0 -2.33 0)
+>>>>>>> Stashed changes
 			(layer "F.SilkS")
 			(uuid "9cefcafa-006d-467b-a00c-ee20500bf3a4")
 			(effects
@@ -1057,7 +1061,11 @@
 			)
 		)
 		(property "Value" "Ext. PWR"
+<<<<<<< Updated upstream
 			(at 0 4.87 360)
+=======
+			(at 0 4.87 0)
+>>>>>>> Stashed changes
 			(layer "F.Fab")
 			(uuid "5af9f4d4-e3fc-4c17-a3b2-abb6fcebe5ab")
 			(effects
@@ -8007,7 +8015,11 @@
 		(descr "Through hole straight socket strip, 1x14, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x14 2.54mm single row")
 		(property "Reference" "J1"
+<<<<<<< Updated upstream
 			(at 0 -2.77 360)
+=======
+			(at 0 -2.77 0)
+>>>>>>> Stashed changes
 			(layer "F.SilkS")
 			(uuid "81b64ebb-748e-403e-acec-d18531faa4b2")
 			(effects
@@ -8018,7 +8030,11 @@
 			)
 		)
 		(property "Value" "Conn_01x14_Pin"
+<<<<<<< Updated upstream
 			(at 0 35.79 360)
+=======
+			(at 0 35.79 0)
+>>>>>>> Stashed changes
 			(layer "F.Fab")
 			(uuid "18e9fe3b-899c-4e01-9fca-43df9cd17b35")
 			(effects
@@ -8614,7 +8630,11 @@
 			(uuid "17c525a5-de69-4fdc-95dd-ea41ce13cc3f")
 		)
 		(fp_text user "${REFERENCE}"
+<<<<<<< Updated upstream
 			(at 0 0 360)
+=======
+			(at 0 0 0)
+>>>>>>> Stashed changes
 			(layer "F.Fab")
 			(uuid "0d6a5166-f08b-4767-aa4b-9254f6ddd3c4")
 			(effects
