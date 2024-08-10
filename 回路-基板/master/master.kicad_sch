@@ -8951,7 +8951,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "@2024-cansat:SS12D01G4"
 			(at 187.96 135.89 0)
 			(effects
 				(font
@@ -9702,7 +9702,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "@2024-cansat:SS12D01G4"
 			(at 187.96 153.67 0)
 			(effects
 				(font
