@@ -34,7 +34,10 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+<<<<<<< Updated upstream
 				(thickness 0.15)
+=======
+>>>>>>> Stashed changes
 			)
 		)
 	)
@@ -47,7 +50,10 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+<<<<<<< Updated upstream
 				(thickness 0.15)
+=======
+>>>>>>> Stashed changes
 			)
 		)
 	)
@@ -60,7 +66,10 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+<<<<<<< Updated upstream
 				(thickness 0.15)
+=======
+>>>>>>> Stashed changes
 			)
 		)
 	)
@@ -327,6 +336,7 @@
 		(layer "F.Fab")
 		(uuid "1fe8b668-7616-4f1d-b178-d70050c92533")
 	)
+<<<<<<< Updated upstream
 	(fp_text user "Teensy 4.1"
 		(at -0.25 -0.34 0)
 		(layer "F.Fab")
@@ -338,6 +348,8 @@
 			)
 		)
 	)
+=======
+>>>>>>> Stashed changes
 	(pad "0" thru_hole circle
 		(at -26.67 7.62)
 		(size 1.308 1.308)
@@ -392,6 +404,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "5a71e11b-23bf-4ef7-b297-6d143d19f987")
 	)
+<<<<<<< Updated upstream
 	(pad "3.3V_3" thru_hole circle
 		(at 16.51 2.54)
 		(size 1.308 1.308)
@@ -401,6 +414,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "371d8b26-984a-4180-9ded-69d5f3dab864")
 	)
+=======
+>>>>>>> Stashed changes
 	(pad "4" thru_hole circle
 		(at -16.51 7.62)
 		(size 1.308 1.308)
@@ -419,6 +434,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "4b5f1fb3-246c-4506-ba95-ac9322297545")
 	)
+<<<<<<< Updated upstream
 	(pad "5V" thru_hole circle
 		(at -22.86 4.57)
 		(size 1.258 1.258)
@@ -428,6 +444,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "b99edce7-c00e-457b-aff2-a921c1492160")
 	)
+=======
+>>>>>>> Stashed changes
 	(pad "6" thru_hole circle
 		(at -11.43 7.62)
 		(size 1.308 1.308)
@@ -752,6 +770,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "349e6322-773c-43a2-a5fb-4ee445c6dc6e")
 	)
+<<<<<<< Updated upstream
 	(pad "D+" thru_hole circle
 		(at -17.78 4.57)
 		(size 1.258 1.258)
@@ -770,6 +789,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "53f18833-4f73-42a1-a141-ea998b49ca88")
 	)
+=======
+>>>>>>> Stashed changes
 	(pad "GND1" thru_hole circle
 		(at -29.21 7.62)
 		(size 1.308 1.308)
@@ -797,6 +818,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "4baacbb2-b00c-42d0-8b2a-79745b7e80de")
 	)
+<<<<<<< Updated upstream
 	(pad "GND4" thru_hole circle
 		(at 16.51 0)
 		(size 1.308 1.308)
@@ -905,6 +927,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "14026660-0e0c-42aa-816a-0687822ad53d")
 	)
+=======
+>>>>>>> Stashed changes
 	(pad "VIN" thru_hole circle
 		(at -29.21 -7.62)
 		(size 1.308 1.308)
@@ -914,6 +938,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "bb7cc5d8-0cf7-42a0-a1aa-e7842bca6483")
 	)
+<<<<<<< Updated upstream
 	(pad "VUSB" thru_hole circle
 		(at -26.67 -5.08)
 		(size 1.308 1.308)
@@ -923,6 +948,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "3a803643-a23d-40b2-9151-87ae6452b770")
 	)
+=======
+>>>>>>> Stashed changes
 	(model "C:/Users/h13-k/OneDrive/デスクトップ/2024-TOINIOT2/Schematic-PCB/@footprint/@2024-Main.pretty/DEV-16771.step"
 		(offset
 			(xyz 0 0 0)
@@ -936,7 +963,11 @@
 	)
 	(model "C:/Users/寺田侑史/OneDrive/デスクトップ/GitHub/2024-TOINIOT2/Schematic-PCB/@footprint/@2024-Main.pretty/DEV-16771.step"
 		(offset
+<<<<<<< Updated upstream
 			(xyz 0 0 0)
+=======
+			(xyz 0 0 7)
+>>>>>>> Stashed changes
 		)
 		(scale
 			(xyz 1 1 1)
@@ -945,4 +976,30 @@
 			(xyz -90 0 0)
 		)
 	)
+<<<<<<< Updated upstream
 )
+=======
+	(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x24_P2.54mm_Vertical.wrl"
+		(offset
+			(xyz 29.2 7.6 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x24_P2.54mm_Vertical.wrl"
+		(offset
+			(xyz 29.2 -7.6 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)
+>>>>>>> Stashed changes

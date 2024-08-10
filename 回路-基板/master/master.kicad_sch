@@ -4320,151 +4320,6 @@
 				)
 			)
 		)
-		(symbol "Jumper:Jumper_2_Small_Open"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim yes)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Jumper_2_Small_Open"
-				(at 0 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Jumper, 2-pole, small symbol, open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Jumper_2_Small_Open_0_0"
-				(circle
-					(center -1.016 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.016 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_2_Small_Open_0_1"
-				(arc
-					(start 0.762 1.0196)
-					(mid 0 1.2729)
-					(end -0.762 1.0196)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_2_Small_Open_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "RF_ZigBee:TWE-L-DP-W"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5720,141 +5575,25 @@
 				)
 			)
 		)
-		(symbol "power:VBUS"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "VBUS"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VBUS\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VBUS_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VBUS_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(junction
+<<<<<<< Updated upstream
 		(at 67.31 110.49)
+=======
+		(at 72.39 110.49)
+>>>>>>> Stashed changes
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0cfc332b-5787-4aed-ac43-164a3da41bc1")
 	)
 	(junction
-		(at 54.61 120.65)
+		(at 59.69 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10448107-6294-4834-a5f5-d489bbd4362c")
 	)
 	(junction
-		(at 34.29 120.65)
+		(at 39.37 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23e9ef34-9c53-4ffe-81c0-d5b8767a3a01")
@@ -5872,13 +5611,7 @@
 		(uuid "47b84300-4280-49c0-93b9-d4df4d8813f7")
 	)
 	(junction
-		(at 86.36 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6df14056-39fc-4e75-9b64-7be41e098d64")
-	)
-	(junction
-		(at 39.37 120.65)
+		(at 44.45 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "916edd55-439d-43ff-9bae-23dbeb10cb8f")
@@ -5908,6 +5641,7 @@
 		(uuid "e037efd6-68c3-4e5e-babf-8544ed11bdaf")
 	)
 	(junction
+<<<<<<< Updated upstream
 		(at 256.54 129.54)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5915,6 +5649,9 @@
 	)
 	(junction
 		(at 39.37 110.49)
+=======
+		(at 44.45 110.49)
+>>>>>>> Stashed changes
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f24f5344-2000-44c4-a58f-11ff7effbd56")
@@ -5924,6 +5661,33 @@
 		(uuid "02d54664-8bb9-4f6a-8f91-bd4234b7cdb3")
 	)
 	(no_connect
+<<<<<<< Updated upstream
+=======
+		(at 113.03 109.22)
+		(uuid "1646c261-1294-46b4-86eb-ebb13a92fc62")
+	)
+	(no_connect
+		(at 153.67 93.98)
+		(uuid "1ceae92b-37fe-4a5b-89ef-b76c6fcf6a05")
+	)
+	(no_connect
+		(at 113.03 114.3)
+		(uuid "1e6baaf4-fb37-457b-b788-b0842d28c3de")
+	)
+	(no_connect
+		(at 153.67 104.14)
+		(uuid "284f9e40-c482-4598-8c64-9bf669544f3d")
+	)
+	(no_connect
+		(at 153.67 91.44)
+		(uuid "2d40de81-b8a0-406f-8b04-eae46fa3fcfa")
+	)
+	(no_connect
+		(at 234.95 39.37)
+		(uuid "2ffd6905-9fa1-4a24-9fd1-a8705a88b9d2")
+	)
+	(no_connect
+>>>>>>> Stashed changes
 		(at 153.67 63.5)
 		(uuid "30cd18b1-5ca6-4de0-b956-7cbac9344784")
 	)
@@ -5940,6 +5704,33 @@
 		(uuid "47f118d3-6aa0-40db-9f16-84fc0afef958")
 	)
 	(no_connect
+<<<<<<< Updated upstream
+=======
+		(at 153.67 81.28)
+		(uuid "5a4de590-99a7-433a-931a-d5d499168f73")
+	)
+	(no_connect
+		(at 113.03 93.98)
+		(uuid "6683c54d-2a80-46ae-8e82-27d9a4e404fc")
+	)
+	(no_connect
+		(at 113.03 91.44)
+		(uuid "674788fb-3876-4209-843d-632aa6bf10ca")
+	)
+	(no_connect
+		(at 153.67 111.76)
+		(uuid "6bbb56dc-c8d8-4815-b299-0c4c0066d59d")
+	)
+	(no_connect
+		(at 113.03 111.76)
+		(uuid "7793a988-b325-4f16-a17b-1421b08b6c0b")
+	)
+	(no_connect
+		(at 153.67 35.56)
+		(uuid "7b7d4eb8-a1dd-4862-b765-862559a1efd6")
+	)
+	(no_connect
+>>>>>>> Stashed changes
 		(at 153.67 55.88)
 		(uuid "7f213da7-fa75-4eb4-a4c0-e5ece7e965b2")
 	)
@@ -5964,7 +5755,27 @@
 		(uuid "b0fee82c-a95b-49f0-8ad7-dfbcac3cd9b0")
 	)
 	(no_connect
+<<<<<<< Updated upstream
 		(at 189.23 147.32)
+=======
+		(at 113.03 104.14)
+		(uuid "b28da7af-0899-437d-8f03-13b184bda1b9")
+	)
+	(no_connect
+		(at 153.67 119.38)
+		(uuid "b7a5cd7b-22b7-4663-9ce4-f76d7cb2d9df")
+	)
+	(no_connect
+		(at 113.03 76.2)
+		(uuid "b9247321-d2e8-4701-81e6-e13554fd1069")
+	)
+	(no_connect
+		(at 113.03 88.9)
+		(uuid "bd227574-547b-4c88-9261-0dfec437d67b")
+	)
+	(no_connect
+		(at 229.87 41.91)
+>>>>>>> Stashed changes
 		(uuid "c08e0bab-d783-4140-b3e2-f8111954c1bd")
 	)
 	(no_connect
@@ -6043,12 +5854,17 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 139.7) (xy 113.03 139.7)
+=======
+			(xy 229.87 31.75) (xy 234.95 31.75)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
+<<<<<<< Updated upstream
 		(uuid "049bef77-03f5-40ff-b5b8-7eb861ed25ef")
 	)
 	(wire
@@ -6074,6 +5890,13 @@
 	(wire
 		(pts
 			(xy 240.03 43.18) (xy 240.03 60.96)
+=======
+		(uuid "14b68827-8c16-4339-a920-1cb679ec6263")
+	)
+	(wire
+		(pts
+			(xy 195.58 138.43) (xy 195.58 156.21)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6103,6 +5926,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 254 106.68) (xy 261.62 106.68)
 		)
 		(stroke
@@ -6124,6 +5948,9 @@
 	(wire
 		(pts
 			(xy 34.29 120.65) (xy 39.37 120.65)
+=======
+			(xy 39.37 120.65) (xy 44.45 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6143,6 +5970,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 30.48 273.05) (xy 38.1 273.05)
 		)
 		(stroke
@@ -6224,6 +6052,9 @@
 	(wire
 		(pts
 			(xy 189.23 147.32) (xy 194.31 147.32)
+=======
+			(xy 229.87 41.91) (xy 234.95 41.91)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6293,6 +6124,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 228.6 152.4) (xy 236.22 152.4)
 		)
 		(stroke
@@ -6304,6 +6136,9 @@
 	(wire
 		(pts
 			(xy 39.37 118.11) (xy 39.37 120.65)
+=======
+			(xy 44.45 118.11) (xy 44.45 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6413,6 +6248,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 254 121.92) (xy 261.62 121.92)
 		)
 		(stroke
@@ -6434,6 +6270,9 @@
 	(wire
 		(pts
 			(xy 34.29 113.03) (xy 34.29 120.65)
+=======
+			(xy 39.37 113.03) (xy 39.37 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6503,6 +6342,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 228.6 139.7) (xy 236.22 139.7)
 		)
 		(stroke
@@ -6603,6 +6443,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 63.5 66.04) (xy 60.96 66.04)
 		)
 		(stroke
@@ -6613,6 +6455,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 135.89 152.4) (xy 133.35 152.4)
 		)
 		(stroke
@@ -6623,6 +6466,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 63.5 50.8) (xy 60.96 50.8)
 		)
 		(stroke
@@ -6633,6 +6478,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 83.82 140.97) (xy 86.36 140.97)
 		)
 		(stroke
@@ -6664,6 +6510,9 @@
 	(wire
 		(pts
 			(xy 274.32 55.88) (xy 267.97 55.88)
+=======
+			(xy 143.51 151.13) (xy 143.51 157.48)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6673,7 +6522,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 147.32) (xy 50.8 149.86)
+			(xy 59.69 147.32) (xy 59.69 149.86)
 		)
 		(stroke
 			(width 0)
@@ -6733,7 +6582,11 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 36.83 139.7) (xy 36.83 142.24)
+=======
+			(xy 45.72 139.7) (xy 45.72 142.24)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6793,6 +6646,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 67.31 273.05) (xy 69.85 273.05)
 		)
 		(stroke
@@ -6844,12 +6698,25 @@
 	(wire
 		(pts
 			(xy 54.61 120.65) (xy 67.31 120.65)
+=======
+			(xy 59.69 120.65) (xy 72.39 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "570d1bf1-1875-4898-81d5-66b7a18e7cc5")
+	)
+	(wire
+		(pts
+			(xy 234.95 26.67) (xy 232.41 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59e972cd-6716-4ef9-b82c-e0140fc814b9")
 	)
 	(wire
 		(pts
@@ -6863,6 +6730,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 30.48 270.51) (xy 38.1 270.51)
 		)
 		(stroke
@@ -6914,6 +6782,9 @@
 	(wire
 		(pts
 			(xy 39.37 120.65) (xy 54.61 120.65)
+=======
+			(xy 44.45 120.65) (xy 59.69 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -6943,6 +6814,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 254 132.08) (xy 261.62 132.08)
 		)
 		(stroke
@@ -6983,6 +6855,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 22.86 43.18) (xy 25.4 43.18)
 		)
 		(stroke
@@ -7003,17 +6877,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 110.49) (xy 67.31 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "658ec6b0-b864-4e0d-925c-9151eec326e6")
-	)
-	(wire
-		(pts
-			(xy 62.23 110.49) (xy 67.31 110.49)
+			(xy 67.31 110.49) (xy 72.39 110.49)
 		)
 		(stroke
 			(width 0)
@@ -7023,6 +6887,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 153.67 76.2) (xy 156.21 76.2)
 		)
 		(stroke
@@ -7074,6 +6939,9 @@
 	(wire
 		(pts
 			(xy 36.83 147.32) (xy 36.83 149.86)
+=======
+			(xy 45.72 147.32) (xy 45.72 149.86)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7223,6 +7091,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 154.94) (xy 113.03 154.94)
 		)
 		(stroke
@@ -7264,6 +7133,9 @@
 	(wire
 		(pts
 			(xy 31.75 110.49) (xy 39.37 110.49)
+=======
+			(xy 36.83 110.49) (xy 44.45 110.49)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7283,6 +7155,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 153.67 81.28) (xy 156.21 81.28)
 		)
 		(stroke
@@ -7303,6 +7176,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 43.18 78.74) (xy 43.18 81.28)
 		)
 		(stroke
@@ -7333,6 +7208,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 86.36 133.35) (xy 86.36 140.97)
 		)
 		(stroke
@@ -7353,6 +7229,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 77.47 59.69) (xy 80.01 59.69)
 		)
 		(stroke
@@ -7373,6 +7251,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 189.23 144.78) (xy 194.31 144.78)
 		)
 		(stroke
@@ -7393,6 +7272,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 22.86 58.42) (xy 25.4 58.42)
 		)
 		(stroke
@@ -7413,7 +7294,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 113.03) (xy 34.29 113.03)
+			(xy 36.83 113.03) (xy 39.37 113.03)
 		)
 		(stroke
 			(width 0)
@@ -7423,7 +7304,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 139.7) (xy 50.8 142.24)
+			(xy 59.69 139.7) (xy 59.69 142.24)
 		)
 		(stroke
 			(width 0)
@@ -7453,6 +7334,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 123.19 261.62) (xy 125.73 261.62)
 		)
 		(stroke
@@ -7464,6 +7346,9 @@
 	(wire
 		(pts
 			(xy 36.83 154.94) (xy 36.83 157.48)
+=======
+			(xy 45.72 154.94) (xy 45.72 157.48)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7523,6 +7408,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 76.2 130.81) (xy 76.2 133.35)
 		)
 		(stroke
@@ -7553,6 +7439,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 110.49 60.96) (xy 113.03 60.96)
 		)
 		(stroke
@@ -7633,6 +7521,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 83.82) (xy 113.03 83.82)
 		)
 		(stroke
@@ -7654,6 +7543,9 @@
 	(wire
 		(pts
 			(xy 186.69 142.24) (xy 194.31 142.24)
+=======
+			(xy 229.87 36.83) (xy 234.95 36.83)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7663,6 +7555,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 254 111.76) (xy 261.62 111.76)
 		)
 		(stroke
@@ -7674,6 +7567,9 @@
 	(wire
 		(pts
 			(xy 186.69 139.7) (xy 194.31 139.7)
+=======
+			(xy 229.87 34.29) (xy 234.95 34.29)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7733,6 +7629,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 228.6 147.32) (xy 236.22 147.32)
 		)
 		(stroke
@@ -7774,6 +7671,9 @@
 	(wire
 		(pts
 			(xy 67.31 113.03) (xy 67.31 110.49)
+=======
+			(xy 72.39 113.03) (xy 72.39 110.49)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7783,6 +7683,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 153.67 71.12) (xy 156.21 71.12)
 		)
 		(stroke
@@ -7834,6 +7735,9 @@
 	(wire
 		(pts
 			(xy 34.29 120.65) (xy 34.29 123.19)
+=======
+			(xy 39.37 120.65) (xy 39.37 123.19)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -7893,6 +7797,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 45.72) (xy 113.03 45.72)
 		)
 		(stroke
@@ -7924,12 +7829,15 @@
 	(wire
 		(pts
 			(xy 78.74 133.35) (xy 76.2 133.35)
+=======
+			(xy 72.39 107.95) (xy 72.39 110.49)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ba35c23d-2e34-437f-ab27-87b57a99e16d")
+		(uuid "b5598d2a-4fc7-4ae4-8521-d490d113660b")
 	)
 	(wire
 		(pts
@@ -8053,6 +7961,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 30.48 255.27) (xy 38.1 255.27)
 		)
 		(stroke
@@ -8083,6 +7992,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 110.49 63.5) (xy 113.03 63.5)
 		)
 		(stroke
@@ -8093,6 +8004,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 228.6 134.62) (xy 236.22 134.62)
 		)
 		(stroke
@@ -8123,6 +8035,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 182.88 97.79) (xy 182.88 100.33)
 		)
 		(stroke
@@ -8173,7 +8087,11 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 39.37 110.49) (xy 46.99 110.49)
+=======
+			(xy 44.45 110.49) (xy 52.07 110.49)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8203,6 +8121,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 26.67) (xy 232.41 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cddadd3e-306b-499d-8f8a-5de70521d0c5")
+	)
+	(wire
+		(pts
 			(xy 63.5 55.88) (xy 60.96 55.88)
 		)
 		(stroke
@@ -8213,7 +8141,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 118.11) (xy 67.31 120.65)
+			(xy 72.39 118.11) (xy 72.39 120.65)
 		)
 		(stroke
 			(width 0)
@@ -8233,6 +8161,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 35.56 250.19) (xy 35.56 267.97)
 		)
 		(stroke
@@ -8254,6 +8183,9 @@
 	(wire
 		(pts
 			(xy 39.37 113.03) (xy 39.37 110.49)
+=======
+			(xy 44.45 113.03) (xy 44.45 110.49)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8263,6 +8195,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 153.67 83.82) (xy 156.21 83.82)
 		)
 		(stroke
@@ -8284,6 +8217,9 @@
 	(wire
 		(pts
 			(xy 274.32 38.1) (xy 274.32 40.64)
+=======
+			(xy 125.73 151.13) (xy 128.27 151.13)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8313,6 +8249,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 254 137.16) (xy 261.62 137.16)
 		)
 		(stroke
@@ -8344,6 +8281,9 @@
 	(wire
 		(pts
 			(xy 237.49 60.96) (xy 240.03 60.96)
+=======
+			(xy 193.04 156.21) (xy 195.58 156.21)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8373,6 +8313,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 114.3) (xy 113.03 114.3)
 		)
 		(stroke
@@ -8404,6 +8345,9 @@
 	(wire
 		(pts
 			(xy 186.69 134.62) (xy 194.31 134.62)
+=======
+			(xy 229.87 29.21) (xy 234.95 29.21)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8523,6 +8467,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 132.08 146.05) (xy 134.62 146.05)
 		)
 		(stroke
@@ -8534,6 +8479,9 @@
 	(wire
 		(pts
 			(xy 54.61 118.11) (xy 54.61 120.65)
+=======
+			(xy 59.69 118.11) (xy 59.69 120.65)
+>>>>>>> Stashed changes
 		)
 		(stroke
 			(width 0)
@@ -8563,6 +8511,7 @@
 	)
 	(wire
 		(pts
+<<<<<<< Updated upstream
 			(xy 110.49 91.44) (xy 113.03 91.44)
 		)
 		(stroke
@@ -8573,6 +8522,8 @@
 	)
 	(wire
 		(pts
+=======
+>>>>>>> Stashed changes
 			(xy 77.47 63.5) (xy 80.01 63.5)
 		)
 		(stroke
@@ -10368,7 +10319,11 @@
 	)
 	(global_label "TX-TWE"
 		(shape bidirectional)
+<<<<<<< Updated upstream
 		(at 186.69 134.62 180)
+=======
+		(at 229.87 29.21 180)
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10378,6 +10333,7 @@
 		)
 		(uuid "4b00f114-583b-4884-808a-9bcbbce0527e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< Updated upstream
 			(at 175.2151 134.62 0)
 			(effects
 				(font
@@ -10599,6 +10555,9 @@
 		(uuid "57347c5a-0e2e-4b6d-8e5b-d079cd9c86db")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 66.2074 140.97 0)
+=======
+			(at 218.3951 29.21 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11578,7 +11537,11 @@
 	)
 	(global_label "RST"
 		(shape bidirectional)
+<<<<<<< Updated upstream
 		(at 186.69 142.24 180)
+=======
+		(at 229.87 36.83 180)
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11588,7 +11551,11 @@
 		)
 		(uuid "8e1deead-950e-4a90-91f2-fdfb98115bb3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< Updated upstream
 			(at 178.8679 142.24 0)
+=======
+			(at 222.0479 36.83 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11754,7 +11721,11 @@
 	)
 	(global_label "PRG"
 		(shape bidirectional)
+<<<<<<< Updated upstream
 		(at 186.69 137.16 180)
+=======
+		(at 229.87 31.75 180)
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11764,7 +11735,11 @@
 		)
 		(uuid "964f9547-18fb-47b3-8725-bc6d784c4422")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< Updated upstream
 			(at 178.7029 137.16 0)
+=======
+			(at 221.8829 31.75 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11796,6 +11771,7 @@
 			)
 		)
 	)
+<<<<<<< Updated upstream
 	(global_label "T-39"
 		(shape bidirectional)
 		(at 156.21 106.68 0)
@@ -12016,6 +11992,8 @@
 			)
 		)
 	)
+=======
+>>>>>>> Stashed changes
 	(global_label "12"
 		(shape bidirectional)
 		(at 63.5 45.72 0)
@@ -12106,6 +12084,7 @@
 	)
 	(global_label "T-26"
 		(shape bidirectional)
+<<<<<<< Updated upstream
 		(at 236.22 137.16 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12151,6 +12130,9 @@
 	(global_label "T-27"
 		(shape bidirectional)
 		(at 133.35 160.02 180)
+=======
+		(at 229.87 34.29 180)
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12160,7 +12142,11 @@
 		)
 		(uuid "a927615a-394c-4d6a-bc8e-e1eb433dbae5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+<<<<<<< Updated upstream
 			(at 125.3517 160.02 0)
+=======
+			(at 218.2958 34.29 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13688,6 +13674,7 @@
 			)
 		)
 	)
+<<<<<<< Updated upstream
 	(global_label "T-39"
 		(shape bidirectional)
 		(at 261.62 137.16 0)
@@ -13799,6 +13786,77 @@
 		)
 	)
 	(symbol
+=======
+	(symbol
+		(lib_id "Device:LED_Small_Filled")
+		(at 138.43 151.13 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00f09369-8c60-47bb-88f2-9403709a3d7f")
+		(property "Reference" "D2"
+			(at 138.43 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED1"
+			(at 138.3665 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 138.43 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol, filled shape"
+			(at 138.43 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5294a033-2290-4c02-8ae1-b3bdd0936e50")
+		)
+		(pin "2"
+			(uuid "1ea5b38f-ef1e-4753-a1d2-436359a1b5ff")
+		)
+		(instances
+			(project "master"
+				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+>>>>>>> Stashed changes
 		(lib_id "@2024-Main:DEV-16771")
 		(at 133.35 81.28 0)
 		(unit 1)
@@ -14177,24 +14235,41 @@
 		)
 	)
 	(symbol
+<<<<<<< Updated upstream
 		(lib_id "Jumper:Jumper_2_Small_Open")
 		(at 158.75 35.56 0)
+=======
+		(lib_id "Connector:Conn_01x07_Pin")
+		(at 240.03 34.29 0)
+		(mirror y)
+>>>>>>> Stashed changes
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+<<<<<<< Updated upstream
 		(uuid "0de14fcb-6906-4ea6-8849-c40d210e409d")
 		(property "Reference" "JP3"
 			(at 158.75 31.75 0)
+=======
+		(uuid "14cbcd3c-b8e2-4193-a595-3b8db7c60807")
+		(property "Reference" "J2"
+			(at 237.236 22.098 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Value" "Jumper_2_Small_Open"
 			(at 158.75 31.75 0)
+=======
+		(property "Value" "Conn_01x07_Pin"
+			(at 239.395 24.13 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14202,8 +14277,13 @@
 				(hide yes)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 158.75 35.56 0)
+=======
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical"
+			(at 240.03 34.29 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14212,6 +14292,7 @@
 			)
 		)
 		(property "Datasheet" "~"
+<<<<<<< Updated upstream
 			(at 158.75 35.56 0)
 			(effects
 				(font
@@ -14348,6 +14429,9 @@
 		)
 		(property "Datasheet" "~"
 			(at 199.39 139.7 0)
+=======
+			(at 240.03 34.29 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14356,7 +14440,11 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x07, script generated"
+<<<<<<< Updated upstream
 			(at 199.39 139.7 0)
+=======
+			(at 240.03 34.29 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14404,8 +14492,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15b89176-8f1e-4886-81d4-a0580b0d0a41")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR026"
 			(at 242.57 31.75 0)
+=======
+		(property "Reference" "#PWR016"
+			(at 198.12 127 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14454,6 +14547,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR026")
 					(unit 1)
 				)
@@ -14525,6 +14619,9 @@
 			(project ""
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "D3")
+=======
+					(reference "#PWR016")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -14540,7 +14637,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "202f559a-6c43-4d28-b9a4-f2f649494e34")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR08"
+=======
+		(property "Reference" "#PWR03"
+>>>>>>> Stashed changes
 			(at 43.18 87.63 0)
 			(effects
 				(font
@@ -14590,6 +14691,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR08")
 					(unit 1)
 				)
@@ -14659,6 +14761,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "JP1")
+=======
+					(reference "#PWR03")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -14666,7 +14771,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 39.37 115.57 0)
+		(at 44.45 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14675,7 +14780,7 @@
 		(fields_autoplaced yes)
 		(uuid "260221ac-af45-44f2-a188-145acf5d3551")
 		(property "Reference" "C1"
-			(at 41.91 114.3063 0)
+			(at 46.99 114.3063 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14684,7 +14789,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 41.91 116.8463 0)
+			(at 46.99 116.8463 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14693,7 +14798,11 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 39.37 115.57 0)
+=======
+			(at 44.45 115.57 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14702,7 +14811,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 115.57 0)
+			(at 44.45 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14711,7 +14820,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 39.37 115.57 0)
+			(at 44.45 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14742,10 +14851,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+<<<<<<< Updated upstream
 		(fields_autoplaced yes)
 		(uuid "26793b6b-a298-478c-ad93-108b49d034bd")
 		(property "Reference" "#PWR013"
 			(at 125.73 270.51 0)
+=======
+		(uuid "2c74b8bf-6b6d-4efb-9341-1b71fbd7a34c")
+		(property "Reference" "D3"
+			(at 138.43 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED2"
+			(at 138.3665 161.29 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14753,6 +14876,7 @@
 				(hide yes)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Value" "GND"
 			(at 125.73 269.24 0)
 			(effects
@@ -14763,6 +14887,10 @@
 		)
 		(property "Footprint" ""
 			(at 125.73 264.16 0)
+=======
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 138.43 157.48 90)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14928,7 +15056,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "J5")
+=======
+					(reference "D3")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -14944,7 +15076,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37d45b54-5490-4ab9-babb-6e116427198f")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR017"
+=======
+		(property "Reference" "#PWR012"
+>>>>>>> Stashed changes
 			(at 180.34 91.44 0)
 			(effects
 				(font
@@ -14994,6 +15130,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR017")
 					(unit 1)
 				)
@@ -15061,6 +15198,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "#PWR015")
+=======
+					(reference "#PWR012")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15215,6 +15355,7 @@
 		)
 	)
 	(symbol
+<<<<<<< Updated upstream
 		(lib_id "Device:Buzzer")
 		(at 120.65 259.08 0)
 		(mirror y)
@@ -15556,8 +15697,10 @@
 		)
 	)
 	(symbol
+=======
+>>>>>>> Stashed changes
 		(lib_id "power:+3.3V")
-		(at 36.83 139.7 0)
+		(at 45.72 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15565,8 +15708,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "556e019a-5a17-4df2-8c33-20d5be689266")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR05"
 			(at 36.83 143.51 0)
+=======
+		(property "Reference" "#PWR04"
+			(at 45.72 143.51 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15575,7 +15723,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 36.83 134.62 0)
+			(at 45.72 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15583,7 +15731,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 139.7 0)
+			(at 45.72 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15592,7 +15740,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 139.7 0)
+			(at 45.72 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15601,7 +15749,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 36.83 139.7 0)
+			(at 45.72 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15615,7 +15763,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR05")
+=======
+					(reference "#PWR04")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15623,7 +15775,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 50.8 144.78 0)
+		(at 59.69 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15632,7 +15784,7 @@
 		(fields_autoplaced yes)
 		(uuid "583a7db2-d8cb-4135-a84a-d5af2874192c")
 		(property "Reference" "C2"
-			(at 53.34 143.5163 0)
+			(at 62.23 143.5163 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15641,7 +15793,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 53.34 146.0563 0)
+			(at 62.23 146.0563 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15650,7 +15802,11 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 50.8 144.78 0)
+=======
+			(at 59.69 144.78 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15659,7 +15815,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 50.8 144.78 0)
+			(at 59.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15668,7 +15824,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 50.8 144.78 0)
+			(at 59.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15702,7 +15858,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bfccd61-8045-4bce-9457-d89b1cb6305b")
+<<<<<<< Updated upstream
 		(property "Reference" "R3"
+=======
+		(property "Reference" "R4"
+>>>>>>> Stashed changes
 			(at 177.8 93.98 0)
 			(effects
 				(font
@@ -15756,7 +15916,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R3")
+=======
+					(reference "R4")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15764,7 +15928,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 86.36 130.81 0)
+		(at 72.39 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15772,8 +15936,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67429ca5-bbe7-48ac-9d63-f0fc636e3e04")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR012"
 			(at 86.36 134.62 0)
+=======
+		(property "Reference" "#PWR08"
+			(at 72.39 111.76 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15782,7 +15951,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 86.36 125.73 0)
+			(at 72.39 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15790,7 +15959,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 130.81 0)
+			(at 72.39 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15799,7 +15968,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 130.81 0)
+			(at 72.39 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15808,7 +15977,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 86.36 130.81 0)
+			(at 72.39 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15822,7 +15991,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR012")
+=======
+					(reference "#PWR08")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15838,8 +16011,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b8a492f-8b38-4c5a-9b14-6fc254685d45")
+<<<<<<< Updated upstream
 		(property "Reference" "R6"
 			(at 245.11 31.75 0)
+=======
+		(property "Reference" "R7"
+			(at 200.66 127 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15857,7 +16035,11 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 242.57 33.02 0)
+=======
+			(at 198.12 128.27 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15892,7 +16074,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R6")
+=======
+					(reference "R7")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15908,7 +16094,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73a5596f-d8d7-480b-8fd9-98fa4f297083")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR014"
+=======
+		(property "Reference" "#PWR010"
+>>>>>>> Stashed changes
 			(at 156.21 138.43 0)
 			(effects
 				(font
@@ -15958,7 +16148,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR014")
+=======
+					(reference "#PWR010")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -15974,7 +16168,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "784aaab8-045d-415f-b52c-011a2ca4f8aa")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR016"
+=======
+		(property "Reference" "#PWR011"
+>>>>>>> Stashed changes
 			(at 179.07 80.01 0)
 			(effects
 				(font
@@ -16024,6 +16222,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR016")
 					(unit 1)
 				)
@@ -16157,6 +16356,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "#PWR04")
+=======
+					(reference "#PWR011")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16164,7 +16366,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 34.29 123.19 0)
+		(at 39.37 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16172,8 +16374,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c3bc20b-631a-4ca0-ac70-8c4ef85f4059")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR03"
 			(at 34.29 129.54 0)
+=======
+		(property "Reference" "#PWR01"
+			(at 39.37 129.54 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16182,7 +16389,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.29 128.27 0)
+			(at 39.37 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16190,7 +16397,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 123.19 0)
+			(at 39.37 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16199,7 +16406,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 123.19 0)
+			(at 39.37 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16208,7 +16415,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.29 123.19 0)
+			(at 39.37 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16222,7 +16429,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR03")
+=======
+					(reference "#PWR01")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16238,8 +16449,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c523a53-b503-4986-a678-92fc7a873616")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR027"
 			(at 242.57 49.53 0)
+=======
+		(property "Reference" "#PWR017"
+			(at 198.12 144.78 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16288,7 +16504,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR027")
+=======
+					(reference "#PWR017")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16304,7 +16524,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93af8f4f-b761-4ea0-9170-3396d185c4ee")
+<<<<<<< Updated upstream
 		(property "Reference" "SW2"
+=======
+		(property "Reference" "SW3"
+>>>>>>> Stashed changes
 			(at 194.31 34.29 0)
 			(effects
 				(font
@@ -16320,7 +16544,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "@2024-cansat:Tactile1"
+=======
+		(property "Footprint" "@2024-cansat:TVBP06-B043C"
+>>>>>>> Stashed changes
 			(at 194.31 36.83 0)
 			(effects
 				(font
@@ -16356,7 +16584,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "SW2")
+=======
+					(reference "SW3")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16364,7 +16596,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LM1117MP-3.3")
-		(at 54.61 110.49 0)
+		(at 59.69 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16373,7 +16605,7 @@
 		(fields_autoplaced yes)
 		(uuid "9c05e1c9-29ca-4ce0-806f-68caf3c58d68")
 		(property "Reference" "U2"
-			(at 54.61 104.14 0)
+			(at 59.69 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16381,7 +16613,7 @@
 			)
 		)
 		(property "Value" "LM1117MP-3.3"
-			(at 54.61 106.68 0)
+			(at 59.69 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16389,7 +16621,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 54.61 110.49 0)
+			(at 59.69 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16398,7 +16630,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf"
-			(at 54.61 110.49 0)
+			(at 59.69 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16407,7 +16639,7 @@
 			)
 		)
 		(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, SOT-223"
-			(at 54.61 110.49 0)
+			(at 59.69 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16443,8 +16675,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d46ff1f-e471-4dee-8699-0a58d5271654")
+<<<<<<< Updated upstream
 		(property "Reference" "R7"
 			(at 245.11 49.53 0)
+=======
+		(property "Reference" "R8"
+			(at 200.66 144.78 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16462,7 +16699,11 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 242.57 50.8 0)
+=======
+			(at 198.12 146.05 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16497,7 +16738,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R7")
+=======
+					(reference "R8")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16505,7 +16750,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 36.83 144.78 0)
+		(at 45.72 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16513,8 +16758,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f6e76fa-25c3-43da-bddb-06cbabc0f250")
-		(property "Reference" "R2"
-			(at 39.37 143.51 0)
+		(property "Reference" "R1"
+			(at 48.26 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16523,7 +16768,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 39.37 146.05 0)
+			(at 48.26 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16532,7 +16777,11 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 36.83 144.78 0)
+=======
+			(at 45.72 144.78 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16541,7 +16790,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 144.78 0)
+			(at 45.72 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16550,7 +16799,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 36.83 144.78 0)
+			(at 45.72 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16567,7 +16816,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
-					(reference "R2")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -16641,7 +16890,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small_Filled")
-		(at 36.83 152.4 90)
+		(at 45.72 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16649,8 +16898,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9df4a85-570b-4b6b-9f1c-44b208f42e66")
-		(property "Reference" "D2"
-			(at 39.37 151.0665 90)
+		(property "Reference" "D1"
+			(at 48.26 151.0665 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16659,7 +16908,7 @@
 			)
 		)
 		(property "Value" "PWR"
-			(at 39.37 153.6065 90)
+			(at 48.26 153.6065 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16667,8 +16916,13 @@
 				(justify right)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 36.83 152.4 90)
+=======
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 45.72 152.4 90)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16677,7 +16931,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 152.4 90)
+			(at 45.72 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16686,7 +16940,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol, filled shape"
-			(at 36.83 152.4 0)
+			(at 45.72 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16703,7 +16957,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
-					(reference "D2")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -16719,7 +16973,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac64d8dd-a626-42bb-9f49-277a982ea0ab")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR07"
+=======
+		(property "Reference" "#PWR02"
+>>>>>>> Stashed changes
 			(at 43.18 34.29 0)
 			(effects
 				(font
@@ -16769,7 +17027,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR07")
+=======
+					(reference "#PWR02")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16777,7 +17039,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 149.86 0)
+		(at 59.69 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16785,8 +17047,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af67f3ff-0ab0-474a-83ef-7d2e0ee8332d")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR010"
 			(at 50.8 156.21 0)
+=======
+		(property "Reference" "#PWR07"
+			(at 59.69 156.21 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16795,7 +17062,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 50.8 154.94 0)
+			(at 59.69 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16803,7 +17070,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 149.86 0)
+			(at 59.69 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16812,7 +17079,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 149.86 0)
+			(at 59.69 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16821,7 +17088,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 149.86 0)
+			(at 59.69 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16835,6 +17102,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR010")
 					(unit 1)
 				)
@@ -16902,6 +17170,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "#PWR029")
+=======
+					(reference "#PWR07")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16917,7 +17188,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b41c11fc-9270-4a53-8a3b-ea34f53f72e5")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR019"
+=======
+		(property "Reference" "#PWR014"
+>>>>>>> Stashed changes
 			(at 187.96 87.63 0)
 			(effects
 				(font
@@ -16967,7 +17242,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR019")
+=======
+					(reference "#PWR014")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -16983,8 +17262,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "babde24c-798e-4fd5-b552-2514ba4f9ee6")
+<<<<<<< Updated upstream
 		(property "Reference" "SW3"
 			(at 232.41 31.75 0)
+=======
+		(property "Reference" "SW1"
+			(at 187.96 127 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17000,7 +17284,11 @@
 			)
 		)
 		(property "Footprint" "@2024-cansat:SS12D01G4"
+<<<<<<< Updated upstream
 			(at 232.41 40.64 0)
+=======
+			(at 187.96 135.89 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17038,7 +17326,76 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "SW3")
+=======
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 232.41 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc5a30c4-5715-4079-b2a7-91f21fd40f9d")
+		(property "Reference" "#PWR019"
+			(at 232.41 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 232.41 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 232.41 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2803b90e-8a4f-4a91-82ac-1d6a4f741b27")
+		)
+		(instances
+			(project "master"
+				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+					(reference "#PWR019")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17046,7 +17403,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 67.31 115.57 0)
+		(at 72.39 115.57 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17056,7 +17413,7 @@
 		(fields_autoplaced yes)
 		(uuid "c1352703-9f38-4a62-a607-17bc3bcbf652")
 		(property "Reference" "C3"
-			(at 64.77 114.3063 0)
+			(at 69.85 114.3063 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17065,7 +17422,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 64.77 116.8463 0)
+			(at 69.85 116.8463 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17074,7 +17431,11 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 67.31 115.57 0)
+=======
+			(at 72.39 115.57 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17083,7 +17444,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 115.57 0)
+			(at 72.39 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17092,7 +17453,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 67.31 115.57 0)
+			(at 72.39 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17116,6 +17477,7 @@
 		)
 	)
 	(symbol
+<<<<<<< Updated upstream
 		(lib_id "Connector:Conn_01x14_Pin")
 		(at 25.4 265.43 0)
 		(unit 1)
@@ -17286,6 +17648,8 @@
 		)
 	)
 	(symbol
+=======
+>>>>>>> Stashed changes
 		(lib_id "@cansat:Display")
 		(at 191.77 67.31 0)
 		(unit 1)
@@ -17370,7 +17734,11 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cb3045fb-3259-4356-a4b7-d2d9f3014fe3")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR022"
+=======
+		(property "Reference" "#PWR018"
+>>>>>>> Stashed changes
 			(at 201.93 50.8 0)
 			(effects
 				(font
@@ -17420,7 +17788,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR022")
+=======
+					(reference "#PWR018")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17435,7 +17807,11 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cd10e2ba-d47e-4131-be65-2120d3531e87")
+<<<<<<< Updated upstream
 		(property "Reference" "R4"
+=======
+		(property "Reference" "R5"
+>>>>>>> Stashed changes
 			(at 185.42 93.98 0)
 			(effects
 				(font
@@ -17489,7 +17865,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R4")
+=======
+					(reference "R5")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17497,7 +17877,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 157.48 0)
+		(at 45.72 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17505,8 +17885,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cdeaadc7-ccd4-46ff-aa35-9dc8679dbab7")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR06"
 			(at 36.83 163.83 0)
+=======
+		(property "Reference" "#PWR05"
+			(at 45.72 163.83 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17515,7 +17900,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 162.56 0)
+			(at 45.72 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17523,7 +17908,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 157.48 0)
+			(at 45.72 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17532,7 +17917,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 157.48 0)
+			(at 45.72 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17541,7 +17926,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 157.48 0)
+			(at 45.72 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17555,7 +17940,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR06")
+=======
+					(reference "#PWR05")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17571,7 +17960,11 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d05e4279-7b9e-4b92-a34a-22269d6c3abe")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR018"
+=======
+		(property "Reference" "#PWR013"
+>>>>>>> Stashed changes
 			(at 186.69 35.56 0)
 			(effects
 				(font
@@ -17621,7 +18014,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR018")
+=======
+					(reference "#PWR013")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17629,7 +18026,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 26.67 110.49 0)
+		(at 31.75 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17637,8 +18034,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d183a195-80e5-4f52-aea0-6c68a67a54a0")
+<<<<<<< Updated upstream
 		(property "Reference" "J2"
 			(at 27.305 105.41 0)
+=======
+		(property "Reference" "J1"
+			(at 32.385 105.41 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17646,15 +18048,20 @@
 			)
 		)
 		(property "Value" "Ext. PWR"
-			(at 27.305 107.95 0)
+			(at 32.385 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 26.67 110.49 0)
+=======
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal"
+			(at 31.75 110.49 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17663,7 +18070,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 26.67 110.49 0)
+			(at 31.75 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17672,7 +18079,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 26.67 110.49 0)
+			(at 31.75 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17839,8 +18246,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5da08e4-b0ce-48cb-87a9-55403b0f89fe")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR025"
 			(at 240.03 69.85 0)
+=======
+		(property "Reference" "#PWR015"
+			(at 195.58 165.1 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17889,7 +18301,79 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR025")
+=======
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 130.81 151.13 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8541740-3a39-45cc-a9dc-063d19356b87")
+		(property "Reference" "R2"
+			(at 130.81 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "330"
+			(at 130.81 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 130.81 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 130.81 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b0feb5e5-1002-40c1-9c47-65789f346604")
+		)
+		(pin "1"
+			(uuid "714306da-65f9-4155-89bd-a56407e6248c")
+		)
+		(instances
+			(project "master"
+				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+					(reference "R2")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17905,8 +18389,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dbefa9f2-b9b7-41b9-a297-0f555868510a")
+<<<<<<< Updated upstream
 		(property "Reference" "SW4"
 			(at 232.41 49.53 0)
+=======
+		(property "Reference" "SW2"
+			(at 187.96 144.78 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17922,7 +18411,11 @@
 			)
 		)
 		(property "Footprint" "@2024-cansat:SS12D01G4"
+<<<<<<< Updated upstream
 			(at 232.41 58.42 0)
+=======
+			(at 187.96 153.67 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17960,7 +18453,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "SW4")
+=======
+					(reference "SW2")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -17976,7 +18473,11 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de2a7ce3-5589-4d13-8fa8-fe93f5a3ece1")
+<<<<<<< Updated upstream
 		(property "Reference" "R5"
+=======
+		(property "Reference" "R6"
+>>>>>>> Stashed changes
 			(at 184.15 35.56 0)
 			(effects
 				(font
@@ -18030,7 +18531,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R5")
+=======
+					(reference "R6")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -18046,8 +18551,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "df119160-db95-4c50-ac9e-32c1a368ceba")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR030"
 			(at 267.97 64.77 0)
+=======
+		(property "Reference" "#PWR09"
+			(at 143.51 166.37 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18097,6 +18607,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR030")
 					(unit 1)
 				)
@@ -18167,6 +18678,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "D4")
+=======
+					(reference "#PWR09")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -18174,7 +18688,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 50.8 139.7 0)
+		(at 59.69 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18182,8 +18696,13 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3f927ac-6069-4980-9d0c-8c09b180c4a9")
+<<<<<<< Updated upstream
 		(property "Reference" "#PWR09"
 			(at 50.8 143.51 0)
+=======
+		(property "Reference" "#PWR06"
+			(at 59.69 143.51 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18192,7 +18711,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 50.8 134.62 0)
+			(at 59.69 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18200,7 +18719,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 139.7 0)
+			(at 59.69 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18209,7 +18728,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 139.7 0)
+			(at 59.69 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18218,7 +18737,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 50.8 139.7 0)
+			(at 59.69 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18232,7 +18751,11 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "#PWR09")
+=======
+					(reference "#PWR06")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -18246,9 +18769,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+<<<<<<< Updated upstream
 		(uuid "e930281b-5593-4bc1-8472-19610699c911")
 		(property "Reference" "R9"
 			(at 276.86 41.91 0)
+=======
+		(uuid "e4adb762-5344-4600-9503-090fc2816d67")
+		(property "Reference" "R3"
+			(at 130.81 162.56 90)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18266,7 +18795,11 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+<<<<<<< Updated upstream
 			(at 274.32 43.18 0)
+=======
+			(at 130.81 157.48 0)
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18301,6 +18834,7 @@
 		(instances
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
+<<<<<<< Updated upstream
 					(reference "R9")
 					(unit 1)
 				)
@@ -18502,6 +19036,9 @@
 			(project "master"
 				(path "/ac9a4e20-633e-4cca-aa03-40bb18849d2a"
 					(reference "JP2")
+=======
+					(reference "R3")
+>>>>>>> Stashed changes
 					(unit 1)
 				)
 			)

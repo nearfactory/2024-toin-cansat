@@ -1,4 +1,232 @@
+<<<<<<< Updated upstream
 23767705938381794
+=======
+23260251369878434
+@2023-2_MotorDriver
+DRV8874
+
+
+0
+0
+0
+@2023-2_PowerSupply
+Fuse
+
+
+0
+4
+2
+@2023-2_PowerSupply
+OKL-T6-W12N-C
+
+
+0
+9
+7
+@2023-2_PowerSupply
+RA1113112R
+
+
+0
+0
+0
+@2023-2_PowerSupply
+SS12D01G4
+
+
+0
+3
+3
+@2023-2_PowerSupply
+VoltMeter
+
+
+0
+2
+2
+@2023_BallSensor
+TSSP58038
+
+
+0
+3
+3
+@2023_BallSensor
+WS2812B
+
+
+0
+4
+4
+@2023_KickerAdjust
+XL6009
+
+
+0
+4
+4
+@2023_LineSensor
+NJL7502L
+
+
+0
+2
+2
+@2023_LineSensor
+OSWT3166B
+
+
+0
+2
+2
+@2023_LineSensor
+TSR-C3305
+
+
+0
+3
+3
+@2023_MainBoard
+BNO055
+
+
+0
+8
+8
+@2023_MainBoard
+MODULE_MEGA_PRO_EMBED_CH340G___ATMEGA2560
+
+
+0
+86
+86
+@2023_MainBoard
+PKM13EPYH4000-A0
+
+
+0
+2
+2
+@2023_MainBoard
+SS12D01G4
+
+
+0
+3
+3
+@2023_MainBoard
+TVBP06-B043C
+
+
+0
+2
+2
+@2023_MotorDriver
+JST_VH_B2P-VH-B_1x02_P3.96mm_Vertical
+
+
+0
+2
+2
+@2023_MotorDriver
+JST_VH_B2PS-VH_1x02_P3.96mm_Horizontal
+
+connector JST VH top entry
+0
+2
+2
+@2023_MotorDriver
+JST_VH_S2P-VH_1x02_P3.96mm_Horizontal
+JST VH series connector, S2P-VH (http://www.jst-mfg.com/product/pdf/eng/eVH.pdf), generated with kicad-footprint-generator
+connector JST VH top entry
+0
+2
+2
+@2023_MotorDriver
+Joint
+
+
+0
+0
+0
+@2023_MotorDriver
+TB6612FNG
+
+
+0
+16
+16
+@2023_PowerSupply
+Fuse
+
+
+0
+4
+2
+@2023_PowerSupply
+JST_VH_B2P-VH-B_1x02_P3.96mm_Vertical
+
+
+0
+2
+2
+@2023_PowerSupply
+N
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+@2023_PowerSupply
+OKL-T6-W12N-C
+
+
+0
+9
+7
+@2023_PowerSupply
+P
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+@2023_PowerSupply
+PKM13EPYH4000-A0
+
+
+0
+2
+2
+@2023_PowerSupply
+RA1113112R
+
+
+0
+0
+0
+@2023_PowerSupply
+SS12D01G4
+
+
+0
+3
+3
+@2023_PowerSupply
+VoltMeter
+
+
+0
+2
+2
+@2023__Common
+Joint
+
+
+0
+0
+0
+>>>>>>> Stashed changes
 @2024-cansat
 AAA-holder
 1xAAA Battery Holder, Keystone, Plastic Case, http://www.keyelco.com/product-pdf.cfm?p=1031
@@ -32,6 +260,7 @@ MODULE_DEV-16771
 
 
 0
+<<<<<<< Updated upstream
 65
 65
 @2024-cansat
@@ -41,6 +270,10 @@ PKM13EPYH4000-A0
 0
 2
 2
+=======
+48
+48
+>>>>>>> Stashed changes
 @2024-cansat
 Pin-Extender
 
@@ -112,6 +345,16 @@ LED-3mm
 2
 2
 @2024TOINIOT2-Line
+<<<<<<< Updated upstream
+=======
+LM339
+
+
+0
+14
+14
+@2024TOINIOT2-Line
+>>>>>>> Stashed changes
 NJL7502L
 
 
@@ -133,6 +376,16 @@ Tactile1
 2
 2
 @2024TOINIOT2-MD
+<<<<<<< Updated upstream
+=======
+1.0K-FX-15PWB
+
+
+0
+17
+16
+@2024TOINIOT2-MD
+>>>>>>> Stashed changes
 JST_VH_B2P-VH-B_1x02_P3.96mm_Vertical
 JST VH PBT series connector, B2P-VH-B (http://www.jst-mfg.com/product/pdf/eng/eVH.pdf), generated with kicad-footprint-generator
 connector JST VH vertical
@@ -140,6 +393,23 @@ connector JST VH vertical
 2
 2
 @2024TOINIOT2-MD
+<<<<<<< Updated upstream
+=======
+JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+JST XH series connector, B2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH vertical
+0
+2
+2
+@2024TOINIOT2-MD
+KH-CL1.0-H2.5-15PIN
+
+
+0
+17
+16
+@2024TOINIOT2-MD
+>>>>>>> Stashed changes
 XT30U-M
 
 
@@ -147,12 +417,41 @@ XT30U-M
 2
 2
 @2024TOINIOT2-Main
+<<<<<<< Updated upstream
+=======
+2MS1-T1-B4-M2-Q-E
+
+
+0
+3
+3
+@2024TOINIOT2-Main
+BNO055
+
+
+0
+8
+8
+@2024TOINIOT2-Main
+Connector
+
+
+0
+5
+5
+@2024TOINIOT2-Main
+>>>>>>> Stashed changes
 MODULE_DEV-16771
 
 
 0
+<<<<<<< Updated upstream
 65
 65
+=======
+48
+48
+>>>>>>> Stashed changes
 @2024TOINIOT2-Main
 Vishay_MINICAST-3Pin
 IR Receiver Vishay TSOP-xxxx, MINICAST package, see https://www.vishay.com/docs/82669/tsop32s40f.pdf
@@ -167,6 +466,23 @@ XIAO ESP32C3
 0
 14
 14
+<<<<<<< Updated upstream
+=======
+@2024TOINIOT2-NeoPixel
+Connector
+
+
+0
+5
+5
+@2024TOINIOT2-NeoPixel
+WS2812B 5.0x5.0mm
+
+
+0
+6
+4
+>>>>>>> Stashed changes
 @2024TOINIOT2-Power
 2MS1-T1-B4-VS2-Q-E-S
 
@@ -1806,6 +2122,7 @@ SPST Button Switch
 4
 2
 Button_Switch_SMD
+<<<<<<< Updated upstream
 SW_SPST_PTS647_Sx38
 C&K Components SPST SMD PTS647 Series 4.5mm Tact Switch, 3.8mm Height, see https://www.ckswitches.com/media/2567/pts647.pdf
 SPST Button Switch
@@ -1827,6 +2144,8 @@ SPST Button Switch
 4
 2
 Button_Switch_SMD
+=======
+>>>>>>> Stashed changes
 SW_SPST_PTS810
 C&K Components, PTS 810 Series, Microminiature SMT Top Actuated, http://www.ckswitches.com/media/1476/pts810.pdf
 SPST Button Switch
@@ -8533,6 +8852,7 @@ barreljack switchcraftconxall dc power
 2
 2
 Connector_BarrelJack
+<<<<<<< Updated upstream
 BarrelJack_Wuerth_694102107102_1.0x3.9mm
 Wuerth Elektronik barrel jack connector, SMD, 3.9mm OD, 1.0mm ID, with switch, 18V, 5A, dimensions: 9.3 x 8 x 5.3 mm (L x W x H), datasheet: https://www.farnell.com/datasheets/2130962.pdf
 barrel jack Wuerth Elektronik 694102107102
@@ -8547,6 +8867,8 @@ barrel jack Wuerth Elektronik 694103107102
 4
 3
 Connector_BarrelJack
+=======
+>>>>>>> Stashed changes
 BarrelJack_Wuerth_694106106102_2.0x5.5mm
 Wuerth Elektronik 694106106102 Barrel Jack, 2.0x5.5mm, https://www.we-online.com/components/products/datasheet/694106106102.pdf
 barrel jack Wuerth Elektronik 694106106102
@@ -8862,7 +9184,11 @@ SMA THT Female Jack Horizontal
 5
 2
 Connector_Coaxial
+<<<<<<< Updated upstream
 SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount
+=======
+SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount
+>>>>>>> Stashed changes
 Connector SMA, 0Hz to 20GHz, 50Ohm, Edge Mount (http://suddendocs.samtec.com/prints/sma-j-p-x-st-em1-mkt.pdf)
 SMA Straight Samtec Edge Mount
 0
@@ -11696,6 +12022,58 @@ Wuerth FPC 68611214422 connector 12 bottom-side contacts 1.0mm pitch 1.0mm heigh
 0
 14
 13
+<<<<<<< Updated upstream
+=======
+Connector_HDMI
+HDMI_A_Amphenol_10029449-x01xLF_Horizontal
+HDMI Type A connector, Amphenol 10029449-001TLF 10029449-001RLF 10029449-101TLF 10029449-101RLF, Right Angle(https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10029449.pdf)
+hdmi right angle
+0
+23
+20
+Connector_HDMI
+HDMI_A_Contact_Technology_HDMI-19APL2_Horizontal
+HDMI Contact Technology Type A http://www.contactswitch.com/en/download.aspx?id=1449
+HDMI Contact Technology Type A
+0
+23
+20
+Connector_HDMI
+HDMI_A_Kycon_KDMIX-SL1-NS-WS-B15_VerticalRightAngle
+HDMI, Type A, Kycon KDMIX-SL1-NS-WS-B15, Vertical Right Angle, http://www.kycon.com/Pub_Eng_Draw/KDMIX-SL1-NS-WS-B15.pdf
+hdmi type a
+0
+23
+20
+Connector_HDMI
+HDMI_A_Molex_208658-1001_Horizontal
+HDMI Molex Type A https://www.molex.com/pdm_docs/sd/2086581001_sd.pdf
+HDMI Molex Type A
+0
+23
+20
+Connector_HDMI
+HDMI_Micro-D_Molex_46765-0x01
+HDMI, Micro, Type D, SMD, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
+hdmi micro type d right angle smd
+0
+23
+20
+Connector_HDMI
+HDMI_Micro-D_Molex_46765-1x01
+HDMI, Micro, Type D, THT, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
+hdmi micro type d right angle tht
+0
+23
+20
+Connector_HDMI
+HDMI_Micro-D_Molex_46765-2x0x
+HDMI, Micro, Type D, THT/SMD hybrid, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
+hdmi micro type d right angle tht smd hybrid 
+0
+23
+20
+>>>>>>> Stashed changes
 Connector_Harting
 Harting_har-flexicon_14110213001xxx_1x02-MP_P2.54mm_Vertical
 Harting har-flexicon series connector, 14110213001xxx (https://b2b.harting.com/files/download/PRD/PDF_TS/1411XX13001XXX_100228421DRW046C.pdf), generated with kicad-footprint-generator
@@ -12586,6 +12964,7 @@ connector Harwin M20 side entry
 40
 40
 Connector_Hirose
+<<<<<<< Updated upstream
 Hirose_BM23FR0.6-16DP-0.35V_2x08_1MP_Vertical
 Hirose BM23 series connector, BM23FR0.6-16DP-0.35V (https://www.hirose.com/fr/product/document?clcode=CL0480-0290-0-95&productname=BM23FR0.6-16DP-0.35V(895)&series=BM23FR&documenttype=2DDrawing&lang=fr&documentid=D164551_en)
 connector Hirose BM23 16pin header
@@ -12600,6 +12979,8 @@ connector Hirose 16pin receptacle vertical
 20
 17
 Connector_Hirose
+=======
+>>>>>>> Stashed changes
 Hirose_BM24_BM24-40DP-2-0.35V_2x20_P0.35mm_PowerPin2_Vertical
 Hirose BM24 series connector, BM24-40DP/2-0.35V (https://www.hirose.com/product/en/download_file/key_name/BM24/category/Catalog/doc_file_id/47680/?file_category_id=4&item_id=50&is_series=1)
 connector Hirose  BM24 40pin header
@@ -13811,6 +14192,7 @@ SMD vertical IDC box header  2x08 2.54mm double row
 16
 16
 Connector_IDC
+<<<<<<< Updated upstream
 IDC-Header_2x09_P2.54mm_Horizontal
 Through hole IDC box header, 2x09, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole horizontal IDC box header THT 2x09 2.54mm double row
@@ -13832,6 +14214,8 @@ SMD vertical IDC box header  2x09 2.54mm double row
 18
 18
 Connector_IDC
+=======
+>>>>>>> Stashed changes
 IDC-Header_2x10-1MP_P2.54mm_Latch6.5mm_Vertical
 Through hole IDC header, 2x10, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, 6.5mm latches, mounting holes, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole vertical IDC header THT 2x10 2.54mm double row
@@ -13923,6 +14307,7 @@ SMD vertical IDC box header  2x10 2.54mm double row
 20
 20
 Connector_IDC
+<<<<<<< Updated upstream
 IDC-Header_2x11_P2.54mm_Horizontal
 Through hole IDC box header, 2x11, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole horizontal IDC box header THT 2x11 2.54mm double row
@@ -13944,6 +14329,8 @@ SMD vertical IDC box header  2x11 2.54mm double row
 22
 22
 Connector_IDC
+=======
+>>>>>>> Stashed changes
 IDC-Header_2x12-1MP_P2.54mm_Latch6.5mm_Vertical
 Through hole IDC header, 2x12, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, 6.5mm latches, mounting holes, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole vertical IDC header THT 2x12 2.54mm double row
@@ -14385,6 +14772,7 @@ SMD vertical IDC box header  2x20 2.54mm double row
 40
 40
 Connector_IDC
+<<<<<<< Updated upstream
 IDC-Header_2x22_P2.54mm_Horizontal
 Through hole IDC box header, 2x22, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole horizontal IDC box header THT 2x22 2.54mm double row
@@ -14406,6 +14794,8 @@ SMD vertical IDC box header  2x22 2.54mm double row
 44
 44
 Connector_IDC
+=======
+>>>>>>> Stashed changes
 IDC-Header_2x25-1MP_P2.54mm_Latch6.5mm_Vertical
 Through hole IDC header, 2x25, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, 6.5mm latches, mounting holes, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole vertical IDC header THT 2x25 2.54mm double row
@@ -18535,6 +18925,7 @@ connector JST ZE horizontal
 0
 18
 17
+<<<<<<< Updated upstream
 Connector_JST
 JST_ZH_B2B-ZR-SM4-TF_1x02-1MP_P1.50mm_Vertical
 JST ZH series connector, B2B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
@@ -18780,6 +19171,8 @@ connector JST ZH horizontal
 0
 15
 14
+=======
+>>>>>>> Stashed changes
 Connector_Molex
 Molex_CLIK-Mate_502382-0270_1x02-1MP_P1.25mm_Vertical
 Molex CLIK-Mate series connector, 502382-0270 (http://www.molex.com/pdm_docs/sd/5023820270_sd.pdf), generated with kicad-footprint-generator
@@ -22498,6 +22891,7 @@ connector Molex Pico-EZmate_Slim side entry
 4
 3
 Connector_Molex
+<<<<<<< Updated upstream
 Molex_Pico-Lock_205338-0002_1x02-1MP_P2.00mm_Horizontal
 Molex Pico-Lock series connector, 205338-0002 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22547,6 +22941,8 @@ connector Molex Pico-Lock horizontal
 5
 4
 Connector_Molex
+=======
+>>>>>>> Stashed changes
 Molex_Pico-Lock_504050-0491_1x04-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-0491 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22582,6 +22978,7 @@ connector Molex Pico-Lock horizontal
 10
 9
 Connector_Molex
+<<<<<<< Updated upstream
 Molex_Pico-Lock_504050-0991_1x09-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-0991 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22589,6 +22986,8 @@ connector Molex Pico-Lock horizontal
 11
 10
 Connector_Molex
+=======
+>>>>>>> Stashed changes
 Molex_Pico-Lock_504050-1091_1x10-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-1091 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22596,6 +22995,7 @@ connector Molex Pico-Lock horizontal
 12
 11
 Connector_Molex
+<<<<<<< Updated upstream
 Molex_Pico-Lock_504050-1191_1x11-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-1191 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22603,6 +23003,8 @@ connector Molex Pico-Lock horizontal
 13
 12
 Connector_Molex
+=======
+>>>>>>> Stashed changes
 Molex_Pico-Lock_504050-1291_1x12-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-1291 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -48761,6 +49163,7 @@ conn samtec discrete wire terminal
 0
 22
 21
+<<<<<<< Updated upstream
 Connector_Samtec_MicroPower
 Samtec_UMPS-02-XX.X-X-V-S-W_1x02-1MP_P2.0mm_Socket_WeldTab
 2.00 mm mPOWER Ultra Micro Power Socket (source: https://suddendocs.samtec.com/prints/umps-xx-xx.x-xx-v-x-x-xr-footprint.pdf)
@@ -49013,6 +49416,8 @@ conn samtec ultra-mirco-power terminal
 0
 10
 10
+=======
+>>>>>>> Stashed changes
 Connector_Stocko
 Stocko_MKS_1651-6-0-202_1x2_P2.50mm_Vertical
 Stocko MKS 16xx series connector, (https://www.stocko-contact.com/downloads/steckverbindersystem-raster-2,5-mm.pdf#page=15), generated with kicad-footprint-generator
@@ -49812,6 +50217,7 @@ USB C Type-C Receptacle SMD
 20
 17
 Connector_USB
+<<<<<<< Updated upstream
 USB_C_Receptacle_G-Switch_GT-USB-7025
 USB Type C, right-angle, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2312191005_G-Switch-GT-USB-7025_C963213.pdf
 USB C Type-C Receptacle SMD
@@ -49819,6 +50225,8 @@ USB C Type-C Receptacle SMD
 22
 18
 Connector_USB
+=======
+>>>>>>> Stashed changes
 USB_C_Receptacle_G-Switch_GT-USB-7051x
 USB Type C, vertical, SMT, https://datasheet.lcsc.com/lcsc/2108072030_G-Switch-GT-USB-7051A_C2843970.pdf
 USB C Type-C Receptacle SMD GT-USB-7051A GT-USB-7051B
@@ -50084,6 +50492,7 @@ Mini USB 2.0 Type B
 0
 9
 6
+<<<<<<< Updated upstream
 Connector_Video
 DVI-D_Molex_74320-4004_Horizontal
 DVI-D Dual Link connector, horizontal, 24 pins, Molex P/N 74320-4004, https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/743/74320/743204004_sd.pdf?inline
@@ -50147,6 +50556,8 @@ hdmi micro type d right angle tht smd hybrid
 0
 23
 20
+=======
+>>>>>>> Stashed changes
 Connector_Wago
 Wago_734-132_1x02_P3.50mm_Vertical
 Molex 734 Male header (for PCBs); Straight solder pin 1 x 1 mm, 734-132 , 2 Pins (http://www.farnell.com/datasheets/2157639.pdf), generated with kicad-footprint-generator
@@ -52416,6 +52827,7 @@ MesurementPoint Square SMDPad 5mmx10mm
 1
 1
 Connector_Wuerth
+<<<<<<< Updated upstream
 Wuerth_WR-PHD_613004216921_Large_2x02_P2.54mm_Vertical
 Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613004216921 (https://katalog.we-online.de/em/datasheet/613004216921.pdf), generated with kicad-footprint-generator
 Connector Wuerth WR-PHD 2.54mm 613004216921
@@ -52675,6 +53087,8 @@ Connector Wuerth WR-PHD 2.54mm 61303425721
 34
 34
 Connector_Wuerth
+=======
+>>>>>>> Stashed changes
 Wuerth_WR-WTB_64800211622_1x02_P1.50mm_Vertical
 Wuerth WR-WTB series connector, 64800211622 (https://katalog.we-online.com/em/datasheet/6480xx11622.pdf), generated with kicad-footprint-generator
 connector Wuerth WR-WTB vertical
@@ -52961,6 +53375,7 @@ Vigortronix VTX-214-010-xxx serie of ACDC converter
 0
 5
 5
+<<<<<<< Updated upstream
 Converter_ACDC
 Converter_ACDC_ZETTLER_ZPI03Sxx00WC_THT
 PCB mounted switching power module, AC input voltage range: 90VAC-264VAC, Class II Construction, https://www.zettlermagnetics.com/pdfs/ZPI03SXX00WC.pdf
@@ -52968,6 +53383,8 @@ ACDC-Converter 3W ZETTLER ZPI
 0
 4
 4
+=======
+>>>>>>> Stashed changes
 Converter_DCDC
 Converter_DCDC_Artesyn_ATA_SMD
 DCDC-Converter, Artesyn, ATA Series, 3W Single and Dual Output, 1500VDC Isolation, 24.0x13.7x8.0mm https://www.artesyn.com/power/assets/ata_series_ds_01apr2015_79c25814fd.pdf https://www.artesyn.com/power/assets/trn_dc-dc_ata_3w_series_releas1430412818_techref.pdf
@@ -53487,6 +53904,7 @@ DCDC-Converter TRACO TMU3 THT SIP-4 3W
 4
 4
 Converter_DCDC
+<<<<<<< Updated upstream
 Converter_DCDC_TRACO_TOS06-05SIL_THT
 DCDC-Converter, TRACO, TOS06-05SIL, 6A, Rev. March 20. 2024 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tos06sil.pdf)
 DCDC-Converter POL TRACO TOS06SIL 2.54MM THT SIP-9 6A
@@ -53501,6 +53919,8 @@ DCDC-Converter POL TRACO TOS06SIL 2.54MM THT SIP-9 6A
 5
 5
 Converter_DCDC
+=======
+>>>>>>> Stashed changes
 Converter_DCDC_TRACO_TRI1-xxxx_THT
 DCDC-Converter, TRACO, TRI1-xxxx, 1W, Rev. November 13. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tri1.pdf)
 DCDC-Converter TRACO TRI1 THT SIP-7 1W
@@ -58324,6 +58744,7 @@ Inductor LMLP
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_Abracon_ASPI-0425
 Inductor, Abracon, ASPI-0425, 4.0x4.0x2.5mm, https://abracon.com/Magnetics/new/ASPI-0425.pdf
 Inductor power shielded low-profile
@@ -58331,6 +58752,8 @@ Inductor power shielded low-profile
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Abracon_ASPI-0630LR
 smd shielded power inductor https://abracon.com/Magnetics/power/ASPI-0630LR.pdf
 inductor abracon smd shielded
@@ -58352,6 +58775,7 @@ inductor abracon smd shielded
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_Abracon_ASPIAIG-F4020
 Inductor, Abracon, ASPIAIG-F4020, 4.4x4.4x1.9mm, https://abracon.com/Magnetics/power/ASPIAIG-F4020.pdf
 Inductor power shielded
@@ -58359,6 +58783,8 @@ Inductor power shielded
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Bourns-SRN1060
 Bourns SRN1060 series SMD inductor https://www.bourns.com/docs/Product-Datasheets/SRN1060.pdf
 Bourns SRN1060 SMD inductor
@@ -58415,6 +58841,7 @@ Bourns SRU8043 SMD inductor
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_Bourns_SDR0604
 SMD Power Inductor, https://www.bourns.com/pdfs/SDR0604.pdf
 SMD Power Inductor SDR0604
@@ -58422,6 +58849,8 @@ SMD Power Inductor SDR0604
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Bourns_SDR1806
 https://www.bourns.com/docs/Product-Datasheets/SDR1806.pdf
 Bourns SDR1806
@@ -58821,6 +59250,7 @@ Inductor wirewound power shielded
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_Changjiang_FXL1365
 Inductor, Changjiang, FXL1365, 12.9x12.6x6.5mm, https://www.lcsc.com/datasheet/lcsc_datasheet_2303201000_cjiang--Changjiang-Microelectronics-Tech-FXL1365-330-M_C5359277.pdf
 Inductor power shielded cjiang fxl
@@ -58828,6 +59258,8 @@ Inductor power shielded cjiang fxl
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Chilisin_BMRA00040415
 Inductor, Chilisin, BMRA00040415, 4.6x4.1x1.5mm, https://www.chilisin.com/upload/media/product/power/file/BMRx_Series.pdf
 Inductor bmrx mchi
@@ -59017,6 +59449,7 @@ inductor
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_Coilcraft_MOS6020-XXX
 Inductor, Coilcraft, MOS6020-XXX, 6.8x6.0x2.4mm, (https://www.coilcraft.com/getmedia/c3eb212d-a1a9-4db6-9f14-a01f21fd984c/mos6020.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor mss
@@ -59157,6 +59590,8 @@ Inductor mss
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Coilcraft_XAL1010-XXX
 Inductor, Coilcraft, XAL1010-XXX, 10.5x11.8x10.0mm, https://www.coilcraft.com/getmedia/dd74e670-e705-456a-9a69-585fe02eaf3c/xal1010.pdf
 Inductor xal
@@ -59745,6 +60180,7 @@ smd inductor dlg-1005
 2
 2
 Inductor_SMD
+<<<<<<< Updated upstream
 L_KOHERelec_MDA7030
 Inductor, KOHERelec, MDA7030, 7.1x6.6x2.8mm, https://www.lcsc.com/datasheet/lcsc_datasheet_2401252310_KOHERelec-MDA7030-220M_C2847487.pdf
 Inductor high-current power shielded
@@ -59752,6 +60188,8 @@ Inductor high-current power shielded
 2
 2
 Inductor_SMD
+=======
+>>>>>>> Stashed changes
 L_Murata_DEM35xxC
 https://www.murata.com/~/media/webrenewal/products/inductor/chip/tokoproducts/wirewoundferritetypeforpl/m_dem3518c.ashx
 Inductor SMD DEM35xxC
@@ -64008,6 +64446,7 @@ LED Dialight 591
 2
 2
 LED_SMD
+<<<<<<< Updated upstream
 LED_Inolux_IN-P55TATRGB_PLCC6_5.0x5.5mm_P1.8mm
 5.0x5.0mm PLCC-6 RGB LED, Inolux, https://www.inolux-corp.com/datasheet/SMDLED/RGB%20Top%20View/IN-P55TATRGB.pdf
 LED RGB
@@ -64015,6 +64454,8 @@ LED RGB
 6
 6
 LED_SMD
+=======
+>>>>>>> Stashed changes
 LED_Inolux_IN-PI554FCH_PLCC4_5.0x5.0mm_P3.2mm
 5.0mm x 5.0mm PLCC4 Addressable RGB LED, http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI554FCH.pdf
 LED RGB NeoPixel addressable PLCC-4 5050
@@ -66346,6 +66787,7 @@ mounting hole 8.4mm m8
 9
 1
 Mounting_Wuerth
+<<<<<<< Updated upstream
 Mounting_Wuerth_WA-SMRA-D3.3mm_L7mm_7466300R_Horizontal
 Right-angle SMD mounting hardware, inside through hole 3.3mm, lenght 7mm, total height 5mm, Würth electronics 7466300R (https://www.we-online.com/components/products/datasheet/7466300R.pdf)
 screw
@@ -66360,6 +66802,8 @@ threaded screw
 4
 1
 Mounting_Wuerth
+=======
+>>>>>>> Stashed changes
 Mounting_Wuerth_WA-SMSE-ExternalM3_H5mm_9771050360
 Mounting Hardware, external M3, height 5, Wuerth electronics 9771050360 (https://katalog.we-online.com/em/datasheet/9771050360.pdf), generated with kicad-footprint-generator
 Mounting M3 9771050360
@@ -68284,6 +68728,7 @@ IR Receiver Vishay TSOP-xxxx MOLD
 0
 3
 3
+<<<<<<< Updated upstream
 OptoDevice
 Vishay_TCRT5000
 IR Reflective Optical Sensor with Transistor Output TCRT5000 https://www.vishay.com/docs/83760/tcrt5000.pdf
@@ -68291,6 +68736,8 @@ IR Reflective Optical Sensor with Transistor Output TCRT5000 Vishay Distance Sen
 0
 4
 4
+=======
+>>>>>>> Stashed changes
 Oscillator
 Oscillator_DIP-8
 Oscillator, DIP8,http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf
@@ -68739,6 +69186,7 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 0
 4
 4
+<<<<<<< Updated upstream
 PCM_arduino-library
 Arduino_101_Shield
 https://docs.arduino.cc/retired/boards/arduino-101-619
@@ -68984,6 +69432,8 @@ https://www.addicore.com/Pro-Mini-p/ad249.htm
 0
 29
 29
+=======
+>>>>>>> Stashed changes
 Package_BGA
 Alliance_TFBGA-54_8x8mm_Layout9x9_P0.8mm
 Alliance TFBGA 54 pins, 8x8mm, 54 Ball, 9x9 Layout, 0.8mm Pitch, https://www.alliancememory.com/wp-content/uploads/pdf/dram/Alliance_Memory_64M-AS4C4M16SA-CI_v5.0_October_2018.pdf#page=54
@@ -69538,6 +69988,7 @@ BGA 361 0.5
 361
 361
 Package_BGA
+<<<<<<< Updated upstream
 ST_UFBGA-59_5x5mm_Layout8x8_P0.5mm
 ST UFBGA-59, 5.0x5.0mm, 59 Ball, 8x8 Layout, 0.5mm Pitch, https://www.st.com/resource/en/datasheet/stm32wba55ug.pdf
 BGA 59 0.5
@@ -69545,6 +69996,8 @@ BGA 59 0.5
 59
 59
 Package_BGA
+=======
+>>>>>>> Stashed changes
 ST_UFBGA-73_5x5mm_Layout9x9_P0.5mm
 ST UFBGA-73, 5.0x5.0mm, 73 Ball, 9x9 Layout, 0.5mm Pitch, https://www.st.com/resource/en/datasheet/stm32wl54jc.pdf
 BGA 73 0.5
@@ -69552,6 +70005,7 @@ BGA 73 0.5
 73
 73
 Package_BGA
+<<<<<<< Updated upstream
 ST_UFBGA-81_5x5mm_Layout9x9_P0.5mm
 ST UFBGA-81, 5.0x5.0mm, 81 Ball, 9x9 Layout, 0.5mm Pitch, https://www.st.com/resource/en/datasheet/stm32u073mb.pdf
 BGA 81 0.5
@@ -69559,6 +70013,8 @@ BGA 81 0.5
 81
 81
 Package_BGA
+=======
+>>>>>>> Stashed changes
 ST_UFBGA-121_6x6mm_Layout11x11_P0.5mm
 ST UFBGA-121, 6.0x6.0mm, 121 Ball, 11x11 Layout, 0.5mm Pitch, https://www.st.com/resource/en/datasheet/stm32g473pb.pdf
 BGA 121 0.5
@@ -69860,6 +70316,7 @@ BGA 113 0.5
 113
 113
 Package_BGA
+<<<<<<< Updated upstream
 Texas_YFP0020_DSBGA-20_1.56x1.96mm_Layout4x5_P0.4mm
 Texas Instruments, YFP0020, DSBGA-20, area grid, 1.588x1.988mm, 20 Ball, 4x5 Layout, 0.4mm Pitch, https://www.ti.com/lit/ds/symlink/txs0206.pdf
 BGA 20 0.4
@@ -69867,6 +70324,8 @@ BGA 20 0.4
 20
 20
 Package_BGA
+=======
+>>>>>>> Stashed changes
 UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm
 UCBGA-36, 2.5x2.5mm, 36 Ball, 6x6 Layout, 0.4mm Pitch, https://www.latticesemi.com/view_document?document_id=213
 BGA 36 0.4
@@ -70364,6 +70823,7 @@ Analog LFCSP-UQ NoLead
 10
 10
 Package_CSP
+<<<<<<< Updated upstream
 Dialog_WLCSP-34_4.54x1.66mm_Stagger
 Dialog Semiconductor (Renesas) WLCSP-34, staggered array, 4.54x1.66mm, 34 Ball, 17x4 Layout, 0.25x0.34mm Pitch, https://www.renesas.com/us/en/document/dst/da7212-datasheet
 CSP 34 0.25x0.34 34-ball
@@ -70371,6 +70831,8 @@ CSP 34 0.25x0.34 34-ball
 34
 34
 Package_CSP
+=======
+>>>>>>> Stashed changes
 DiodesInc_GEA20_WLCSP-20_1.70x2.10mm_Layout4x5_P0.4mm
 Diodes Incorporated WLCSP-20, GEA20, 1.7x2.1mm, 20 Ball, 4x5 Layout, 0.4mm Pitch, https://www.diodes.com/assets/Package-Files/GEA20.pdf
 CSP 20 0.4
@@ -70434,6 +70896,7 @@ LFCSP 8pin 2x2mm Pitch 0.5mm
 8
 8
 Package_CSP
+<<<<<<< Updated upstream
 LFCSP-10_2x2mm_P0.5mm
 LFCSP, 10 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-10/cp_10_11.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -70441,6 +70904,8 @@ LFCSP NoLead
 10
 10
 Package_CSP
+=======
+>>>>>>> Stashed changes
 LFCSP-16-1EP_3x3mm_P0.5mm_EP1.3x1.3mm
 LFCSP, 16 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-16/CP_16_21.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -70455,6 +70920,7 @@ LFCSP NoLead
 26
 17
 Package_CSP
+<<<<<<< Updated upstream
 LFCSP-16-1EP_3x3mm_P0.5mm_EP1.5x1.5mm
 LFCSP, 16 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-16/cp_16_27.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -70462,6 +70928,8 @@ LFCSP NoLead
 21
 17
 Package_CSP
+=======
+>>>>>>> Stashed changes
 LFCSP-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm
 LFCSP, 16 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-16/CP_16_22.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -70721,6 +71189,7 @@ LFCSP NoLead
 75
 49
 Package_CSP
+<<<<<<< Updated upstream
 LFCSP-56-1EP_8x8mm_P0.5mm_EP6.6x6.6mm
 LFCSP, 56 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-56/CP_56_9.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead Analog-LFCSP_WQ-CP-56-9
@@ -70735,6 +71204,8 @@ LFCSP NoLead Analog-LFCSP_WQ-CP-56-9
 71
 57
 Package_CSP
+=======
+>>>>>>> Stashed changes
 LFCSP-64-1EP_9x9mm_P0.5mm_EP5.21x5.21mm
 LFCSP, 64 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp_64_7.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -70812,6 +71283,7 @@ LFCSP-WD NoLead
 24
 11
 Package_CSP
+<<<<<<< Updated upstream
 Macronix_WLCSP-12_2.02x2.09mm_P0.5mm
 WLCSP-12, 2.02x2.09mm, 12 Ball, 4x4 Layout, 0.5mm Pitch, https://www.macronix.com/Lists/Datasheet/Attachments/8909/MX25U3232F,%201.8V,%2032Mb,%20v1.2.pdf#page=93
 CSP 12 0.5
@@ -70819,6 +71291,8 @@ CSP 12 0.5
 12
 12
 Package_CSP
+=======
+>>>>>>> Stashed changes
 Maxim_WLCSP-35_3.0x2.17mm_Layout7x5_P0.4mm_Ball0.27mm_Pad0.25mm
 WLCSP-35, 2.998x2.168mm, 35 Ball, 7x5 Layout, 0.4mm Pitch, https://pdfserv.maximintegrated.com/package_dwgs/21-100489.PDF
 CSP 35 0.4
@@ -70889,6 +71363,7 @@ CSP 25 0.4
 25
 25
 Package_CSP
+<<<<<<< Updated upstream
 ST_WLCSP-27_2.34x2.55mm_P0.40mm_Stagger
 ST WLCSP-27, ST Die ID 459, 2.34x2.55mm, 27 Ball, X-staggered 9x6 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32u031g6.pdf
 CSP 27 0.4
@@ -70903,6 +71378,8 @@ CSP 27 0.4
 27
 27
 Package_CSP
+=======
+>>>>>>> Stashed changes
 ST_WLCSP-36_2.58x3.07mm_Layout6x6_P0.4mm
 ST WLCSP-36, ST die ID 464, 2.58x3.07mm, 36 Ball, 6x6 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32l412t8.pdf
 CSP 36 0.4
@@ -70938,6 +71415,7 @@ CSP 36 0.4
 36
 36
 Package_CSP
+<<<<<<< Updated upstream
 ST_WLCSP-42_2.82x2.93mm_P0.40mm_Stagger
 ST WLCSP-42, ST Die ID 489, 2.82x2.93mm, 42 Ball, X-staggered 12x7 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32u073rc.pdf
 CSP 42 0.4
@@ -70952,6 +71430,8 @@ CSP 42 0.4
 42
 42
 Package_CSP
+=======
+>>>>>>> Stashed changes
 ST_WLCSP-49_3.15x3.13mm_Layout7x7_P0.4mm
 ST WLCSP-49, ST die ID 468, 3.15x3.13mm, 49 Ball, 7x7 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32g431c6.pdf
 CSP 49 0.4
@@ -71183,6 +71663,7 @@ CSP 90 0.4
 90
 90
 Package_CSP
+<<<<<<< Updated upstream
 ST_WLCSP-99_4.42x3.77mm_Layout9x11_P0.35mm
 ST WLCSP-99, ST die ID 415, 4.42x3.77mm, 99 Ball, 11x9 Layout, 0.35mm Pitch, https://www.st.com/resource/en/datasheet/stm32l476vg.pdf
 CSP 99 0.35
@@ -71190,6 +71671,8 @@ CSP 99 0.35
 99
 99
 Package_CSP
+=======
+>>>>>>> Stashed changes
 ST_WLCSP-100_4.40x4.38mm_Layout10x10_P0.4mm_Offcenter
 ST WLCSP-100, off-center ball grid, ST die ID 495, 4.4x4.38mm, 100 Ball, 10x10 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32wb55vc.pdf
 CSP 100 0.4
@@ -71232,6 +71715,7 @@ CSP 100 0.4
 100
 100
 Package_CSP
+<<<<<<< Updated upstream
 ST_WLCSP-101_3.86x3.79mm_P0.35mm_Stagger
 ST WLCSP-101, ST Die ID 485, 3.86x3.79mm, 101 Ball, Y-staggered 11x19 Layout, 0.35mm Pitch, https://www.st.com/resource/en/datasheet/stm32h7r3v8.pdf
 CSP 101 0.35
@@ -71239,6 +71723,8 @@ CSP 101 0.35
 101
 101
 Package_CSP
+=======
+>>>>>>> Stashed changes
 ST_WLCSP-104_Die437
 WLCSP-104, 4.095x5.094mm, 104 Ball, 9x12 Layout, 0.4mm Pitch, http://www.st.com/resource/en/datasheet/stm32l152ze.pdf#page=127
 CSP 104 0.4
@@ -71365,6 +71851,7 @@ CSP 8 0.5
 8
 8
 Package_CSP
+<<<<<<< Updated upstream
 WLCSP-9_1.21x1.22mm_P0.4mm
 WLCSP-9, 1.21x1.22mm, 9 Ball, 3x3 Layout, 0.4mm Pitch, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/wlcspcb/cb_9_3.pdf
 CSP 9 0.4
@@ -71372,6 +71859,8 @@ CSP 9 0.4
 9
 9
 Package_CSP
+=======
+>>>>>>> Stashed changes
 WLCSP-12_1.56x1.56mm_P0.4mm
 WLCSP 12 1.56x1.56 https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMM150-DS001-01.pdf
 BMM150 WLCSP
@@ -71526,6 +72015,7 @@ DFN NoLead
 9
 7
 Package_DFN_QFN
+<<<<<<< Updated upstream
 DFN-6-1EP_2x2mm_P0.5mm_EP0.7x1.6mm
 DFN, 6 Pin (http://www.junmintech.com/UploadFiles/Product/20211129145204_37021.pdf#page=10), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -71533,6 +72023,8 @@ DFN NoLead
 9
 7
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 DFN-6-1EP_2x2mm_P0.5mm_EP0.61x1.42mm
 DC6 Package; 6-Lead Plastic DFN (2mm x 2mm) (see Linear Technology DFN_6_05-08-1703.pdf)
 DFN 0.5
@@ -71582,6 +72074,7 @@ DFN 0.4
 6
 6
 Package_DFN_QFN
+<<<<<<< Updated upstream
 DFN-8-1EP_1.5x1.5mm_P0.4mm_EP0.7x1.2mm
 DFN, 8 Pin (https://www.kinet-ic.com/uploads/KTD2026-7-04h.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -71589,6 +72082,8 @@ DFN NoLead
 13
 9
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 DFN-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm
 DFN, 8 Pin (https://www.onsemi.com/pub/Collateral/506AQ.PDF), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead 506AQ
@@ -71638,13 +72133,29 @@ DFN 0.45
 11
 9
 Package_DFN_QFN
+<<<<<<< Updated upstream
 DFN-8-1EP_2x3mm_P0.5mm_EP0.61x2.2mm
 DFN, 8 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/05081702_c_ddb8.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead Linear-DDB
+=======
+DFN-8-1EP_2x3mm_P0.5mm_EP0.56x2.15mm
+DFN, 8 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/2451fg.pdf#page=17), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN NoLead
+>>>>>>> Stashed changes
 0
 11
 9
 Package_DFN_QFN
+<<<<<<< Updated upstream
+=======
+DFN-8-1EP_2x3mm_P0.5mm_EP0.61x2.2mm
+DDB Package; 8-Lead Plastic DFN (3mm x 2mm) (see Linear Technology DFN_8_05-08-1702.pdf)
+DFN 0.5
+0
+12
+9
+Package_DFN_QFN
+>>>>>>> Stashed changes
 DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm
 8-Lead Plastic Dual Flat, No Lead Package (8MA2) - 2x3x0.6 mm Body [UDFN] (see Atmel-8815-SEEPROM-AT24CS01-02-Datasheet.pdf)
 DFN 0.5
@@ -71687,6 +72198,7 @@ DFN 0.45
 13
 9
 Package_DFN_QFN
+<<<<<<< Updated upstream
 DFN-8-1EP_3x3mm_P0.5mm_EP1.7x2.4mm
 DFN, 8 Pin (https://stcmicro.com/datasheet/STC8G-en.pdf#page=81), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead STC8G1K08A-36I-DFN8
@@ -71701,6 +72213,8 @@ DFN NoLead STC8G1K08A-36I-DFN8
 20
 9
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 DFN-8-1EP_3x3mm_P0.5mm_EP1.65x2.38mm
 DFN, 8 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/4320fb.pdf#page=10), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -71904,6 +72418,16 @@ DFN NoLead
 24
 13
 Package_DFN_QFN
+<<<<<<< Updated upstream
+=======
+DFN-12-1EP_3x3mm_P0.45mm_EP1.66x2.38mm
+DD Package; 12-Lead Plastic DFN (3mm x 3mm) (see Linear Technology DFN_12_05-08-1725.pdf)
+DFN 0.45
+0
+17
+13
+Package_DFN_QFN
+>>>>>>> Stashed changes
 DFN-12-1EP_3x4mm_P0.5mm_EP1.7x3.3mm
 DE/UE Package; 12-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_12_05-08-1695.pdf)
 DFN 0.5
@@ -72086,6 +72610,7 @@ U-DFN2020-6 (Type F)
 8
 8
 Package_DFN_QFN
+<<<<<<< Updated upstream
 Diodes_ZL32_TQFN-32-1EP_3x6mm_P0.4mm_EP1.25x3.5mm
 Diodes ZL32 TQFN, 32 Pin (https://www.diodes.com/assets/Package-Files/ZL32.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 Diodes TQFN NoLead
@@ -72093,6 +72618,8 @@ Diodes TQFN NoLead
 41
 33
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 HVQFN-16-1EP_3x3mm_P0.5mm_EP1.5x1.5mm
 HVQFN, 16 Pin (https://www.nxp.com/docs/en/package-information/SOT758-1.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 HVQFN NoLead
@@ -74286,7 +74813,11 @@ TDFN NoLead
 Package_DFN_QFN
 TQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm
 TQFN, 16 Pin (https://www.diodes.com/assets/Datasheets/PI6C5946002.pdf#page=12), generated with kicad-footprint-generator ipc_noLead_generator.py
+<<<<<<< Updated upstream
 TQFN NoLead Pericom-TQFN-16-ZH Analog-CP-16-22
+=======
+TQFN NoLead
+>>>>>>> Stashed changes
 0
 21
 17
@@ -74529,6 +75060,7 @@ TQFN NoLead
 55
 41
 Package_DFN_QFN
+<<<<<<< Updated upstream
 TQFN-44-1EP_7x7mm_P0.5mm_EP4.7x4.7mm
 TQFN, 44 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/tqfn/21-0144.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 TQFN NoLead T4477+2 T4477+2C T4477+3
@@ -74543,6 +75075,8 @@ TQFN NoLead T4477+2 T4477+2C T4477+3
 71
 45
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 TQFN-48-1EP_7x7mm_P0.5mm_EP5.1x5.1mm
 TQFN, 48 Pin (https://pdfserv.maximintegrated.com/package_dwgs/21-0144.PDF), generated with kicad-footprint-generator ipc_noLead_generator.py
 TQFN NoLead
@@ -74858,6 +75392,7 @@ Texas VQFN NoLead
 24
 21
 Package_DFN_QFN
+<<<<<<< Updated upstream
 Texas_RMG0012A_WQFN-12_1.8x1.8mm_P0.4mm
 Texas RMG0012A WQFN, 12 Pin (https://www.ti.com/lit/ds/symlink/tmux131.pdf#page=18), generated with kicad-footprint-generator ipc_noLead_generator.py
 Texas WQFN NoLead
@@ -74865,6 +75400,8 @@ Texas WQFN NoLead
 12
 12
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 Texas_RNN0018A
 Texas Instruments, VQFN-HR RNN0018A (http://www.ti.com/lit/ds/symlink/tps568215.pdf)
 ti vqfn-hr rnn0018a
@@ -74900,6 +75437,7 @@ Texas WQFN NoLead
 47
 33
 Package_DFN_QFN
+<<<<<<< Updated upstream
 Texas_RTE0016D_WQFN-16-1EP_3x3mm_P0.5mm_EP0.8x0.8mm
 Texas RTE0016D WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/dac80504.pdf#page=47), generated with kicad-footprint-generator ipc_noLead_generator.py
 Texas WQFN NoLead
@@ -74914,6 +75452,8 @@ Texas WQFN NoLead
 20
 17
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 Texas_RTE_WQFN-16-1EP_3x3mm_P0.5mm_EP1.2x0.8mm
 Texas RTE WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/tps43060.pdf#page=40), generated with kicad-footprint-generator ipc_noLead_generator.py
 Texas WQFN NoLead
@@ -74977,6 +75517,7 @@ Texas WQFN NoLead
 10
 10
 Package_DFN_QFN
+<<<<<<< Updated upstream
 Texas_RVA_VQFN-16-1EP_3.5x3.5mm_P0.5mm_EP2.14x2.14mm
 Texas RVA VQFN, 16 Pin (https://www.ti.com/lit/pdf/MPQF232), generated with kicad-footprint-generator ipc_noLead_generator.py
 Texas VQFN NoLead
@@ -74991,6 +75532,8 @@ Texas VQFN NoLead
 26
 17
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 Texas_RVE0028A_VQFN-28-1EP_3.5x4.5mm_P0.4mm_EP2.1x3.1mm
 Texas RVE0028A VQFN, 28 Pin (http://www.ti.com/lit/ds/symlink/tps51363.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
 Texas VQFN NoLead
@@ -75622,14 +76165,22 @@ VQFN NoLead
 49
 Package_DFN_QFN
 VQFN-64-1EP_9x9mm_P0.5mm_EP5.4x5.4mm
+<<<<<<< Updated upstream
 VQFN, 64 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+=======
+VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+>>>>>>> Stashed changes
 VQFN NoLead
 0
 74
 65
 Package_DFN_QFN
 VQFN-64-1EP_9x9mm_P0.5mm_EP5.4x5.4mm_ThermalVias
+<<<<<<< Updated upstream
 VQFN, 64 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+=======
+VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+>>>>>>> Stashed changes
 VQFN NoLead
 0
 100
@@ -75719,6 +76270,7 @@ WDFN NoLead
 13
 9
 Package_DFN_QFN
+<<<<<<< Updated upstream
 WDFN-8-1EP_8x6mm_P1.27mm_EP6x4.8mm
 WDFN, 8 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/8L_WDFN_6x8mm_MN_C04172A.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 WDFN NoLead Microchip-8L-WDFN-6x8mm-MN-C04172A
@@ -75733,6 +76285,8 @@ WDFN NoLead Microchip-8L-WDFN-6x8mm-MN-C04172A
 42
 9
 Package_DFN_QFN
+=======
+>>>>>>> Stashed changes
 WDFN-8_2x2mm_P0.5mm
 DFN8 2x2, 0.5P; No exposed pad (http://www.onsemi.com/pub/Collateral/NCP4308-D.PDF)
 DFN 0.5
@@ -75840,14 +76394,22 @@ WQFN-20 4.5mm 2.5mm 0.5mm
 Package_DFN_QFN
 WQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm
 WQFN, 20 Pin (https://www.ti.com/lit/ds/symlink/ts3ds10224.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
+<<<<<<< Updated upstream
 WQFN NoLead Texas_RUK0020B
+=======
+WQFN NoLead
+>>>>>>> Stashed changes
 0
 25
 21
 Package_DFN_QFN
 WQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm_ThermalVias
 WQFN, 20 Pin (https://www.ti.com/lit/ds/symlink/ts3ds10224.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
+<<<<<<< Updated upstream
 WQFN NoLead Texas_RUK0020B
+=======
+WQFN NoLead
+>>>>>>> Stashed changes
 0
 30
 21
@@ -77336,6 +77898,7 @@ LSOP 2.54mm 300mil
 8
 8
 Package_DIP
+<<<<<<< Updated upstream
 IXYS_Flatpak-8_6.3x9.7mm_P2.54mm
 IXYS  Flatpak, 8 Pin (https://www.littelfuse.com/media?resourcetype=datasheets&itemid=996c6e8f-cc1b-44f6-811e-251c6e004c56&filename=littelfuse-integrated-circuits-loc112-datasheet), generated with kicad-footprint-generator ipc_gullwing_generator.py
 IXYS Flatpak DIP
@@ -77350,6 +77913,8 @@ IXYS Flatpak DIP
 8
 8
 Package_DIP
+=======
+>>>>>>> Stashed changes
 PowerIntegrations_PDIP-8B
 Power Integrations variant of 8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads, see https://www.power.com/sites/default/files/product-docs/lnk520.pdf
 THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads
@@ -78337,7 +78902,11 @@ NXP LGA NoLead
 8
 8
 Package_LGA
+<<<<<<< Updated upstream
 Rohm_MLGA010V020A_LGA-10_2x2mm_P0.45mm_LayoutBorder2x3y
+=======
+Rohm_MLGA010V020A_LGA-10_2x2mm_P0.45mm_LayoutBorder_3x2y
+>>>>>>> Stashed changes
 Rohm  LGA, 10 Pin (https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_MLGA010V020A-1-2_Rev005s_E2(MSL3).pdf)
 Rohm LGA NoLead
 0
@@ -78645,6 +79214,7 @@ LQFP QFP
 128
 128
 Package_QFP
+<<<<<<< Updated upstream
 LQFP-144-1EP_20x20mm_P0.5mm_EP6.5x6.5mm
 LQFP, 144 Pin (https://www.infineon.com/cms/en/product/packages/PG-LQFP/PG-LQFP-144-22), generated with kicad-footprint-generator ipc_gullwing_generator.py
 LQFP QFP Infineon-PG-LQFP-144-24 Infineon-PG-LQFP-144-26
@@ -78659,6 +79229,8 @@ LQFP QFP Infineon-PG-LQFP-144-24 Infineon-PG-LQFP-144-26
 171
 145
 Package_QFP
+=======
+>>>>>>> Stashed changes
 LQFP-144_20x20mm_P0.5mm
 LQFP, 144 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#page=425), generated with kicad-footprint-generator ipc_gullwing_generator.py
 LQFP QFP
@@ -79555,6 +80127,7 @@ HVSSOP SO
 20
 11
 Package_SO
+<<<<<<< Updated upstream
 Infineon_PG-DSO-8-24_4x5mm
 Infineon  PG-DSO, 8 Pin (https://www.infineon.com/dgdl/Infineon-BSP752R-DS-v01_02-EN.pdf?fileId=db3a304316f112290116f233cbd271e9#page=17), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Infineon PG-DSO SO
@@ -79562,6 +80135,8 @@ Infineon PG-DSO SO
 8
 8
 Package_SO
+=======
+>>>>>>> Stashed changes
 Infineon_PG-DSO-8-27_3.9x4.9mm_EP2.65x3mm
 Infineon  PG-DSO, 8 Pin (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-8-27), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Infineon PG-DSO SO
@@ -79583,6 +80158,7 @@ DSO DSO-8 SOIC SOIC-8
 12
 9
 Package_SO
+<<<<<<< Updated upstream
 Infineon_PG-DSO-8-59_7.5x6.3mm
 Infineon  PG-DSO, 8 Pin (https://www.infineon.com/dgdl/Infineon-1EDCxxI12AH-DS-v02_00-EN.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Infineon PG-DSO SO
@@ -79590,6 +80166,8 @@ Infineon PG-DSO SO
 8
 8
 Package_SO
+=======
+>>>>>>> Stashed changes
 Infineon_PG-DSO-12-9
 Infineon PG-DSO 12 pin, exposed pad: 4.5x8.1mm, (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-12-9/)
 PG-DSO
@@ -79996,6 +80574,7 @@ PowerPAK SO-8 Single
 9
 5
 Package_SO
+<<<<<<< Updated upstream
 PowerSSO-16-1EP_3.9x4.9mm_P0.5mm_EP2.5x3.61mm
 PowerSSO, 16 Pin (https://www.st.com/resource/en/datasheet/vnd7020aj.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 PowerSSO SO
@@ -80010,6 +80589,8 @@ PowerSSO SO
 27
 17
 Package_SO
+=======
+>>>>>>> Stashed changes
 QSOP-16_3.9x4.9mm_P0.635mm
 QSOP, 16 Pin (https://pdfserv.maximintegrated.com/package_dwgs/21-0055.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
 QSOP SO
@@ -80073,6 +80654,7 @@ SO SOIC 2.54
 4
 4
 Package_SO
+<<<<<<< Updated upstream
 SO-5-6_4.55x3.7mm_P1.27mm
 SO, 5 Pin (https://toshiba.semicon-storage.com/us/semiconductor/design-development/package/detail.5pin%20SO6.html), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SO SO TLP2310 Toshiba
@@ -80080,6 +80662,8 @@ SO SO TLP2310 Toshiba
 5
 5
 Package_SO
+=======
+>>>>>>> Stashed changes
 SO-5_4.4x3.6mm_P1.27mm
 5-Lead Plastic Small Outline (SO), see https://docs.broadcom.com/cs/Satellite?blobcol=urldata&blobheader=application%2Fpdf&blobheadername1=Content-Disposition&blobheadername2=Content-Type&blobheadername3=MDT-Type&blobheadervalue1=attachment%3Bfilename%3DIPD-Selection-Guide_AV00-0254EN_030617.pdf&blobheadervalue2=application%2Fx-download&blobheadervalue3=abinary%253B%2Bcharset%253DUTF-8&blobkey=id&blobnocache=true&blobtable=MungoBlobs&blobwhere=1430884105675&ssbinary=true
 SO SOIC 1.27
@@ -80354,8 +80938,13 @@ SOIC 1.27 16 12 Wide
 12
 Package_SO
 SOIC-16W_5.3x10.2mm_P1.27mm
+<<<<<<< Updated upstream
 SOIC, 16 Pin (http://www.ti.com/lit/ml/msop002a/msop002a.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SOIC SO
+=======
+16-Lead Plastic Small Outline (SO) - Wide, 5.3 mm Body (http://www.ti.com/lit/ml/msop002a/msop002a.pdf)
+SOIC 1.27
+>>>>>>> Stashed changes
 0
 16
 16
@@ -80549,6 +81138,7 @@ SOP SO
 24
 24
 Package_SO
+<<<<<<< Updated upstream
 SOP-28_8.4x18.16mm_P1.27mm
 SOP, 28 Pin (https://www.issi.com/WW/pdf/62-65C256AL.pdf#page=12), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SOP SO
@@ -80556,6 +81146,8 @@ SOP SO
 28
 28
 Package_SO
+=======
+>>>>>>> Stashed changes
 SOP-44_12.6x28.5mm_P1.27mm
 SOP, 44 Pin (https://www.mxic.com.tw/Lists/Datasheet/Attachments/8177/MX23C6410,%205V,%2064Mb,%20v3.1.pdf#page=5), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SOP SO
@@ -80591,6 +81183,7 @@ SSO SO
 7
 7
 Package_SO
+<<<<<<< Updated upstream
 SSO-8-7_6.4x9.7mm_P2.54mm
 SSO, 7 Pin (https://gitlab.com/Sirdel/public/-/blob/3a5b5234461aee14649dc0eb10cbdef84d37b29e/Datasheets/BC2213A-EN.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SSO SO
@@ -80598,6 +81191,8 @@ SSO SO
 7
 7
 Package_SO
+=======
+>>>>>>> Stashed changes
 SSO-8_6.7x9.8mm_P2.54mm_Clearance8mm
 8-Lead Plastic Stretched Small Outline (SSO/Stretched SO), see https://www.vishay.com/docs/83831/lh1533ab.pdf
 SSO Stretched SO SOIC Pitch 2.54
@@ -80661,6 +81256,7 @@ SSOP SO
 8
 8
 Package_SO
+<<<<<<< Updated upstream
 SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm
 SSOP, 10 Pin (http://download.py32.org/%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C/zh-CN/PY32F002A%20%E7%B3%BB%E5%88%97%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C_Rev1.0.pdf#page=44), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SSOP SO ESSOP-10
@@ -80675,6 +81271,8 @@ SSOP SO ESSOP-10
 15
 11
 Package_SO
+=======
+>>>>>>> Stashed changes
 SSOP-10_3.9x4.9mm_P1.00mm
 10-Lead SSOP, 3.9 x 4.9mm body, 1.00mm pitch (http://www.st.com/resource/en/datasheet/viper01.pdf)
 SSOP 3.9 4.9 1.00
@@ -80725,8 +81323,13 @@ SSOP 0.635
 20
 Package_SO
 SSOP-20_4.4x6.5mm_P0.65mm
+<<<<<<< Updated upstream
 SSOP, 20 Pin (https://www.jedec.org/system/files/docs/Mo-152c.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SSOP SO JEDEC-MO-152-AC SOT266-1 Nisshinbo-PI-SSOP20-E-A Rohm-SSOP-B20
+=======
+SSOP20: plastic shrink small outline package; 20 leads; body width 4.4 mm; (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot266-1_po.pdf)
+SSOP 0.65
+>>>>>>> Stashed changes
 0
 20
 20
@@ -81550,6 +82153,7 @@ TSSOP SO
 100
 100
 Package_SO
+<<<<<<< Updated upstream
 Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm
 Texas DGN0008B VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tps7a4101.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Texas VSSOP SO
@@ -81599,6 +82203,8 @@ TSSOP SO
 16
 16
 Package_SO
+=======
+>>>>>>> Stashed changes
 Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm
 Texas Instruments HSOP 9, 1.27mm pitch, 3.9x4.9mm body, exposed pad, DDA0008J (http://www.ti.com/lit/ds/symlink/tps5430.pdf)
 HSOP 1.27
@@ -81663,15 +82269,33 @@ SSOP 0.75
 56
 Package_SO
 VSSOP-8_2.3x2mm_P0.5mm
+<<<<<<< Updated upstream
 VSSOP, 8 Pin (https://www.jedec.org/standards-documents/docs/mo-187-f), generated with kicad-footprint-generator ipc_gullwing_generator.py
 VSSOP SO JEDEC-MO-187-CA TI-DCU0008A
+=======
+VSSOP-8 2.3x2mm Pitch 0.5mm
+VSSOP-8 2.3x2mm Pitch 0.5mm
+>>>>>>> Stashed changes
 0
 8
 8
 Package_SO
+<<<<<<< Updated upstream
 VSSOP-8_3x3mm_P0.65mm
 VSSOP, 8 Pin (https://www.jedec.org/standards-documents/docs/mo-187-f), generated with kicad-footprint-generator ipc_gullwing_generator.py
 VSSOP SO JEDEC-MO-187-AA TI-DGK0008A
+=======
+VSSOP-8_2.4x2.1mm_P0.5mm
+http://www.ti.com/lit/ml/mpds050d/mpds050d.pdf
+VSSOP DCU R-PDSO-G8 Pitch0.5mm
+0
+8
+8
+Package_SO
+VSSOP-8_3.0x3.0mm_P0.65mm
+VSSOP-8 3.0 x 3.0, http://www.ti.com/lit/ds/symlink/lm75b.pdf
+VSSOP-8 3.0 x 3.0
+>>>>>>> Stashed changes
 0
 8
 8
@@ -81809,6 +82433,7 @@ tison
 34
 8
 Package_SON
+<<<<<<< Updated upstream
 MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm
 MicroCrystal C7 SON, 8 Pin (https://www.microcrystal.com/fileadmin/Media/Products/RTC/App.Manual/RV-3028-C7_App-Manual.pdf#page=107), generated with kicad-footprint-generator ipc_noLead_generator.py
 MicroCrystal SON NoLead MicroCrystal-RV3028-C7
@@ -81816,6 +82441,8 @@ MicroCrystal SON NoLead MicroCrystal-RV3028-C7
 8
 8
 Package_SON
+=======
+>>>>>>> Stashed changes
 NXP_XSON-16
 http://www.nxp.com/documents/outline_drawing/SOT1341-1.pdf
 NXP XSON SOT-1341
@@ -82334,6 +82961,7 @@ WSON-12
 19
 13
 Package_SON
+<<<<<<< Updated upstream
 WSON-12-1EP_3x3mm_P0.5mm_EP1.5x2.5mm
 WSON, 12 Pin (https://www.ti.com/lit/ds/symlink/tps63710.pdf#page=33), generated with kicad-footprint-generator ipc_noLead_generator.py
 WSON NoLead
@@ -82348,6 +82976,8 @@ WSON NoLead
 24
 13
 Package_SON
+=======
+>>>>>>> Stashed changes
 WSON-12-1EP_4x4mm_P0.5mm_EP2.6x3mm
 WSON, 12 Pin (http://www.ti.com/lit/ds/symlink/ldc1312.pdf#page=62), generated with kicad-footprint-generator ipc_noLead_generator.py
 WSON NoLead
@@ -82376,6 +83006,7 @@ WSON-16 3.3 x 1.35mm  Pitch 0.4mm
 20
 17
 Package_SON
+<<<<<<< Updated upstream
 Winbond_USON-8-1EP_3x2mm_P0.5mm_EP0.2x1.6mm
 Winbond  USON, 8 Pin (https://www.lcsc.com/datasheet/lcsc_datasheet_2205122030_Winbond-Elec-W25Q16JVUXIQ_C2843335.pdf#page=66f), generated with kicad-footprint-generator ipc_noLead_generator.py
 Winbond USON NoLead
@@ -82383,6 +83014,8 @@ Winbond USON NoLead
 10
 9
 Package_SON
+=======
+>>>>>>> Stashed changes
 X2SON-8_1.4x1mm_P0.35mm
 X2SON-8 1.4x1mm Pitch0.35mm http://www.ti.com/lit/ds/symlink/pca9306.pdf
 X2SON-8 1.4x1mm Pitch0.35mm
@@ -84281,43 +84914,70 @@ TO-100-10_Window Window
 10
 Package_TO_SOT_THT
 TO-126-2_Horizontal_TabDown
+<<<<<<< Updated upstream
 TO-126-2, Horizontal, RM 5.08mm, see https://www.caddock.com/online_catalog/mrktg_lit/MP9000_Series.pdf
+=======
+TO-126-2, Horizontal, RM 5.08mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+>>>>>>> Stashed changes
 TO-126-2 Horizontal RM 5.08mm
 0
 2
 2
 Package_TO_SOT_THT
 TO-126-2_Horizontal_TabUp
+<<<<<<< Updated upstream
 TO-126-2, Horizontal, RM 5.08mm, see https://www.caddock.com/online_catalog/mrktg_lit/MP9000_Series.pdf
+=======
+TO-126-2, Horizontal, RM 5.08mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+>>>>>>> Stashed changes
 TO-126-2 Horizontal RM 5.08mm
 0
 2
 2
 Package_TO_SOT_THT
 TO-126-2_Vertical
+<<<<<<< Updated upstream
 TO-126-2, Vertical, RM 5.08mm, see https://www.caddock.com/online_catalog/mrktg_lit/MP9000_Series.pdf
+=======
+TO-126-2, Vertical, RM 5.08mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+>>>>>>> Stashed changes
 TO-126-2 Vertical RM 5.08mm
 0
 2
 2
 Package_TO_SOT_THT
 TO-126-3_Horizontal_TabDown
+<<<<<<< Updated upstream
 TO-126-3, Horizontal, RM 2.28mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
 TO-126-3 Horizontal RM 2.28mm
+=======
+TO-126-3, Horizontal, RM 2.54mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+TO-126-3 Horizontal RM 2.54mm
+>>>>>>> Stashed changes
 0
 3
 3
 Package_TO_SOT_THT
 TO-126-3_Horizontal_TabUp
+<<<<<<< Updated upstream
 TO-126-3, Horizontal, RM 2.28mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
 TO-126-3 Horizontal RM 2.28mm
+=======
+TO-126-3, Horizontal, RM 2.54mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+TO-126-3 Horizontal RM 2.54mm
+>>>>>>> Stashed changes
 0
 3
 3
 Package_TO_SOT_THT
 TO-126-3_Vertical
+<<<<<<< Updated upstream
 TO-126-3, Vertical, RM 2.28mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
 TO-126-3 Vertical RM 2.28mm
+=======
+TO-126-3, Vertical, RM 2.54mm, see https://www.diodes.com/assets/Package-Files/TO126.pdf
+TO-126-3 Vertical RM 2.54mm
+>>>>>>> Stashed changes
 0
 3
 3
@@ -85966,6 +86626,7 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
+<<<<<<< Updated upstream
 Potentiometer_THT
 Potentiometer_Vishay_T93XA_Horizontal
 Potentiometer, horizontal, Vishay, https://www.vishay.com/docs/51026/t93.pdf, 3/8" x 3/8" x 3/16" (9.7 x 9.8 x 5mm max.)
@@ -85980,6 +86641,8 @@ Potentiometer vertical vishay
 0
 3
 3
+=======
+>>>>>>> Stashed changes
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -86786,6 +87449,7 @@ Bluetooth BLE NFC
 39
 39
 RF_Module
+<<<<<<< Updated upstream
 MCU_Seeed_ESP32C3
 ESP32C3 Seeed Xiao RF Wifi Shield (https://www.seeedstudio.com/blog/wp-content/uploads/2022/08/Seeed-Studio-XIAO-Series-Package-and-PCB-Design.pdf)
 wifi bluetooth microcontroller
@@ -86793,6 +87457,8 @@ wifi bluetooth microcontroller
 27
 23
 RF_Module
+=======
+>>>>>>> Stashed changes
 MOD-nRF8001
 BLE module, https://www.olimex.com/Products/Modules/RF/MOD-nRF8001/
 BLE module
@@ -87382,8 +88048,13 @@ AXICOM IM-Series Relay SPDT
 8
 Relay_THT
 Relay_DPDT_Finder_40.52
+<<<<<<< Updated upstream
 DPDT relay, Finder 40.52, 8A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
 2-Form-C
+=======
+Relay DPDT Finder 40.52, Pitch 5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+Relay DPDT Finder 40.52 Pitch 5mm
+>>>>>>> Stashed changes
 0
 8
 8
@@ -87395,6 +88066,7 @@ relay dpdt fujitsu tht
 8
 8
 Relay_THT
+<<<<<<< Updated upstream
 Relay_DPDT_Hongfa_HF115F-2Z-x4
 Hongfa DPDT power relay, 8A, 250VAC, body size 29x127.x15.7mm, https://source.hongfa.com//pdf/web/viewer.html?file=/Uploads/Product/PDF/HF115F_I_en.pdf
 2-Form-C
@@ -87402,6 +88074,8 @@ Hongfa DPDT power relay, 8A, 250VAC, body size 29x127.x15.7mm, https://source.ho
 8
 8
 Relay_THT
+=======
+>>>>>>> Stashed changes
 Relay_DPDT_Kemet_EC2
 Kemet signal relay, DPDT, non-latching, single coil latching, https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf
 Kemet EC2 signal relay DPDT non single coil latching through hole THT
@@ -87430,6 +88104,7 @@ Omron G5V-2 Relay DPDT
 8
 8
 Relay_THT
+<<<<<<< Updated upstream
 Relay_DPDT_Omron_G6A
 DPDT signal relay, Omron G6A/G6AU, 20x9.9x8.2mm https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6a.pdf
 Omron G6A Relay DPDT
@@ -87444,6 +88119,8 @@ Omron G6AK Relay DPDT
 10
 10
 Relay_THT
+=======
+>>>>>>> Stashed changes
 Relay_DPDT_Omron_G6H-2
 Omron relay G6H-2, see http://cdn-reichelt.de/documents/datenblatt/C300/G6H%23OMR.pdf
 Omron relay G6H-2
@@ -87564,29 +88241,49 @@ spdt relay
 5
 Relay_THT
 Relay_SPDT_Finder_40.11
+<<<<<<< Updated upstream
 Relay SPDT Finder 40.11, 10/16A, 250V, body size 28.5x26.3mm, height 12.7mm, https://web.archive.org/web/20170816081018if_/https://www.finder-relais.net/de/finder-relais-serie-40.pdf
 1-Form-C
+=======
+Relay SPDT Finder 40.11, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+Relay SPDT Finder 40.11 
+>>>>>>> Stashed changes
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.31
+<<<<<<< Updated upstream
 DPDT relay, Finder 40.52, 10/12A, 250V, body size 29x12.4mm, height 25mm, pitch 3.5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
 1-Form-C
+=======
+Relay DPDT Finder 40.31, Pitch 3.5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+Relay DPDT Finder 40.31 Pitch 3.5mm
+>>>>>>> Stashed changes
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.41
+<<<<<<< Updated upstream
 Relay SPDT Finder 40.11, 10A, 250V, body size 28.5x12.3mm, height 26.3mm, https://web.archive.org/web/20170816081018if_/https://www.finder-relais.net/de/finder-relais-serie-40.pdf
 1-Form-C
+=======
+Relay DPDT Finder 40.41, Pitch 3.5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+Relay DPDT Finder 40.41 Pitch 3.5mm
+>>>>>>> Stashed changes
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.51
+<<<<<<< Updated upstream
 SPDT relay, Finder 40.52, 10/12A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
 1-Form-C
+=======
+Relay DPDT Finder 40.51, Pitch 5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+Relay DPDT Finder 40.51 Pitch 5mm
+>>>>>>> Stashed changes
 0
 5
 5
@@ -87605,6 +88302,7 @@ Relay SPDT IM-relay HJR-4102
 6
 6
 Relay_THT
+<<<<<<< Updated upstream
 Relay_SPDT_Hongfa_HF3F-L-xx-1ZL1T
 Hongfa subminature high power latching relay 5, 6, 9, 12, 24, 48VDC. 10A switching current, Form-C https://source.hongfa.com//Api/DownloadPdf/362
 relays Hongfa form-c 1-coil 
@@ -87626,6 +88324,8 @@ relays Hongfa form-c 2-coil reverse-polarity
 6
 6
 Relay_THT
+=======
+>>>>>>> Stashed changes
 Relay_SPDT_HsinDa_Y14
 http://www.hsinda.com.tw/upload/file/Y14-20200430135145.pdf
 Relay Y14
@@ -87780,6 +88480,7 @@ Finder 32.21-x300 Relay SPST
 4
 4
 Relay_THT
+<<<<<<< Updated upstream
 Relay_SPST_Hongfa_HF3F-L-xx-1HL1T
 Hongfa subminature high power latching relay 5, 6, 9, 12, 24, 48VDC. 15A switching current, Form-A https://source.hongfa.com//Api/DownloadPdf/362
 relays Hongfa form-a 1-coil 
@@ -87801,6 +88502,8 @@ relays Hongfa form-a 2-coil reverse-polarity
 5
 5
 Relay_THT
+=======
+>>>>>>> Stashed changes
 Relay_SPST_Omron-G5Q-1A
 Relay SPST-NO Omron Serie G5Q, http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5q.pdf
 Relay SPST-NO Omron Serie G5Q
@@ -87829,6 +88532,7 @@ Omron G5NB Relay SPST-NO
 4
 4
 Relay_THT
+<<<<<<< Updated upstream
 Relay_SPST_Omron_G5PZ
 Relay Omron G5PZ, see https://components.omron.com/us-en/sites/components.omron.com.us/files/datasheet_pdf/K320-E1.pdf
 Relay Omron G5PZ
@@ -87836,6 +88540,8 @@ Relay Omron G5PZ
 4
 4
 Relay_THT
+=======
+>>>>>>> Stashed changes
 Relay_SPST_Panasonic_ADW11
 Panasonic power relay, SPST, latching, 10x24mm, 18.8mm height, https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/270
 Panasonic Relay SPST
@@ -89313,6 +90019,7 @@ rotary encoder
 7
 6
 Rotary_Encoder
+<<<<<<< Updated upstream
 RotaryEncoder_Bourns_Horizontal_PEL12D-2x16F-Sxxxx
 Rotary encoder with switch and illuminated 4mm shaft, dual-led, https://www.bourns.com/docs/product-datasheets/PEL12D.pdf
 rotary encoder illuminated switch horizontal
@@ -89355,6 +90062,8 @@ rotary encoder illuminated switch horizontal
 9
 8
 Rotary_Encoder
+=======
+>>>>>>> Stashed changes
 RotaryEncoder_Bourns_Vertical_PEC12R-3x17F-Nxxxx
 Bourns rotary encoder, PEC12R, without switch, with bushing, vertical shaft, 17.5mm shaft, https://www.bourns.com/docs/product-datasheets/pec12r.pdf
 rotary encoder
@@ -89368,6 +90077,7 @@ rotary encoder
 0
 7
 6
+<<<<<<< Updated upstream
 Rotary_Encoder
 RotaryEncoder_Bourns_Vertical_PEL12D-4x25S-Sxxxx
 Rotary encoder with switch and illuminated 13mm shaft, dual-led, https://www.bourns.com/docs/product-datasheets/PEL12D.pdf
@@ -89382,6 +90092,8 @@ rotary encoder illuminated switch vertical
 0
 9
 8
+=======
+>>>>>>> Stashed changes
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -91070,6 +91782,7 @@ Wuerth WR-TBL Series 3114 terminal block pitch 7.62mm
 2
 2
 TerminalBlock
+<<<<<<< Updated upstream
 TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal
 Terminal Block Xinya XY308-2.54-2P, 2 pins, pitch 2.54mm, size 5.58x6.5mm^2, drill diameter 1.2mm, pad diameter 2mm, see http://www.xinyaelectronic.com/product/xy308-254, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_Xinya
 THT Terminal Block Xinya XY308-2.54-2P pitch 2.54mm size 5.58x6.5mm^2 drill 1.2mm pad 2mm
@@ -91224,6 +91937,8 @@ THT Terminal Block Xinya XY308-2.54-23P pitch 2.54mm size 58.9x6.5mm^2 drill 1.2
 23
 23
 TerminalBlock
+=======
+>>>>>>> Stashed changes
 TerminalBlock_bornier-2_P5.08mm
 simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2
 terminal block bornier2
@@ -95620,6 +96335,7 @@ Transformer current sense SMD
 8
 8
 Transformer_SMD
+<<<<<<< Updated upstream
 Transformer_ED8_4-Lead_10.5x8mm_P5mm
 Isolated audio transformer, ED8, 4-lead, body 10.5x8mm body, pitch 5mm, height 5mm, https://gitlab.com/kicad/libraries/kicad-footprints/-/merge_requests/3626
 permalloy core 
@@ -95627,6 +96343,8 @@ permalloy core
 4
 4
 Transformer_SMD
+=======
+>>>>>>> Stashed changes
 Transformer_Ethernet_Bel_S558-5999-T7-F
 Ethernet Transformer, Bel S558-5999-T7-F, https://www.belfuse.com/resources/ICMs/lan-/S558-5999-T7-F.pdf
 Ethernet Transformer
@@ -96194,6 +96912,7 @@ Transformer Toroid tapped horizontal laying Diameter 14mm Amidon T50
 6
 6
 Transformer_THT
+<<<<<<< Updated upstream
 Transformer_Triad_VPP16-310
 Power transformer, 2x Pri, 2x Sec, 230/115 VAC to 16/8V (0.31/0.62 A)
 power center-tap
@@ -96201,6 +96920,8 @@ power center-tap
 8
 8
 Transformer_THT
+=======
+>>>>>>> Stashed changes
 Transformer_Wuerth_750343373
 Transformer, horizontal core with bobbin, 10 pin, 3.81mm pitch, 15.24mm row spacing, 22x23x17.53mm (https://katalog.we-online.com/ctm/datasheet/750343373.pdf)
 transformer flyback
