@@ -6850,7 +6850,7 @@
 				)
 			)
 		)
-		(property "Footprint" "@2024-cansat:MODULE_DEV-16771"
+		(property "Footprint" "2024-cansat:MODULE_DEV-16771"
 			(at 133.35 81.28 0)
 			(effects
 				(font
@@ -8404,7 +8404,7 @@
 				)
 			)
 		)
-		(property "Footprint" "@2024-cansat:TVBP06-B043C"
+		(property "Footprint" "2024-cansat:TVBP06-B043C"
 			(at 194.31 36.83 0)
 			(effects
 				(font
@@ -8951,7 +8951,7 @@
 				)
 			)
 		)
-		(property "Footprint" "@2024-cansat:SS12D01G4"
+		(property "Footprint" "2024-cansat:SS12D01G4"
 			(at 187.96 135.89 0)
 			(effects
 				(font
@@ -9160,7 +9160,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "@2024-cansat:Display"
+		(property "Footprint" "2024-cansat:Display"
 			(at 191.77 60.198 0)
 			(effects
 				(font
@@ -9702,7 +9702,7 @@
 				)
 			)
 		)
-		(property "Footprint" "@2024-cansat:SS12D01G4"
+		(property "Footprint" "2024-cansat:SS12D01G4"
 			(at 187.96 153.67 0)
 			(effects
 				(font
