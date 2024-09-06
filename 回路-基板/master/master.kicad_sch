@@ -6850,7 +6850,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "2024-cansat:MODULE_DEV-16771"
+=======
+		(property "Footprint" "@2024-cansat:MODULE_DEV-16771"
+>>>>>>> Stashed changes
 			(at 133.35 81.28 0)
 			(effects
 				(font
@@ -7936,7 +7940,11 @@
 				(justify right)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 180.34 95.25 0)
 			(effects
 				(font
@@ -8072,7 +8080,11 @@
 				(justify right)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 198.12 128.27 0)
 			(effects
 				(font
@@ -8404,7 +8416,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "2024-cansat:TVBP06-B043C"
+=======
+		(property "Footprint" "@2024-cansat:TVBP06-B043C"
+>>>>>>> Stashed changes
 			(at 194.31 36.83 0)
 			(effects
 				(font
@@ -8545,7 +8561,11 @@
 				(justify right)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 198.12 146.05 0)
 			(effects
 				(font
@@ -8615,7 +8635,11 @@
 				(justify left)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 45.72 144.78 0)
 			(effects
 				(font
@@ -8951,7 +8975,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "2024-cansat:SS12D01G4"
+=======
+		(property "Footprint" "@2024-cansat:SS12D01G4"
+>>>>>>> Stashed changes
 			(at 187.96 135.89 0)
 			(effects
 				(font
@@ -9160,7 +9188,11 @@
 				(justify left)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "2024-cansat:Display"
+=======
+		(property "Footprint" "@2024-cansat:Display"
+>>>>>>> Stashed changes
 			(at 191.77 60.198 0)
 			(effects
 				(font
@@ -9300,7 +9332,11 @@
 				(justify right)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 182.88 95.25 0)
 			(effects
 				(font
@@ -9634,7 +9670,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 130.81 151.13 0)
 			(effects
 				(font
@@ -9702,7 +9742,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "2024-cansat:SS12D01G4"
+=======
+		(property "Footprint" "@2024-cansat:SS12D01G4"
+>>>>>>> Stashed changes
 			(at 187.96 153.67 0)
 			(effects
 				(font
@@ -9775,7 +9819,11 @@
 				(justify left)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 186.69 36.83 0)
 			(effects
 				(font
@@ -9975,7 +10023,11 @@
 				)
 			)
 		)
+<<<<<<< Updated upstream
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+=======
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+>>>>>>> Stashed changes
 			(at 130.81 157.48 0)
 			(effects
 				(font
