@@ -1,0 +1,283 @@
+/*
+  5機体分全て google map 上に表示される
+  現在地は手入力（デフォルトは潮岬青少年の家）
+　緯度経度情報は補正、要確認
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ToinCanSat-Map</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            margin: 0;
+        }
+        #output-container {
+            flex: 1;
+            padding: 10px;
+            border-right: 1px solid #000;
+            overflow-y: scroll;
+        }
+        #output {
+            border: 5px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+            height: calc(100vh - 240px);
+            overflow-y: scroll;
+        }
+        #map-container {
+            flex: 1;
+            padding: 10px;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        let apiKey = 'AIzaSyBQ8R-TsbmCb0jWusuGXKiXrEWeuAg3Uc8'; // ここに Google Maps API キーを設定
+        let map;
+        let markers = {};  // 識別番号ごとのマーカーを保存
+        let messages = {}; // 識別番号ごとのメッセージを保存
+
+        // 最初に設定する緯度・経度（現在地とします）
+        let userLat = 33.446534050604626; // 潮岬青少年の家の緯度
+        let userLng = 135.78055032766204; // 潮岬青少年の家の経度
+
+        function initMap() {
+            // 初期位置を設定
+            const userLocation = { lat: userLat, lng: userLng };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: userLocation,
+                zoom: 15 // ズームを適切な値に設定
+            });
+
+            // 現在地に白い円を描画
+            const userLocationCircle = new google.maps.Circle({
+                strokeColor: "#5555FF", // 青色
+                strokeOpacity: 0.4,
+                strokeWeight: 1.5,
+                fillColor: "#7777FF", // 青色
+                fillOpacity: 0.15,
+                map: map,
+                center: userLocation,
+                radius: 50 // 半径50メートルの円
+            });
+
+            // 現在地にマーカーを追加
+            addMarker(userLat, userLng, "現在地", "#0000FF"); // 現在地は青色のマーカー
+        }
+
+        // 識別番号に応じて異なる色のマーカーを追加、既存のマーカーは削除して更新
+        function addMarker(lat, lng, color, id = null) {
+            // 同じ識別番号のマーカーが存在する場合は削除
+            if (id && markers[id]) {
+                markers[id].setMap(null);
+            }
+
+            const marker = new google.maps.Marker({
+                position: { lat: lat, lng: lng },
+                map: map,
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillColor: color,
+                    fillOpacity: 1,
+                    strokeColor: color,
+                    strokeWeight: 2,
+                    scale: 7 // 丸のサイズ
+                }
+            });
+
+            // メッセージが存在する場合は表示、無い場合は識別番号のみ表示
+            let displayInfo = messages[id] || `識別番号: ${id}`;
+
+            const infowindow = new google.maps.InfoWindow({
+                content: displayInfo
+            });
+
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+
+            if (id) {
+                markers[id] = marker; // 新しいマーカーを識別番号ごとに保存
+            }
+        }
+
+        window.onload = function() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+            script.defer = true;
+            script.async = true;
+            document.head.appendChild(script);
+        };
+    </script>
+</head>
+<body>
+    <div id="output-container">
+        <h1 style="color: rgb(0, 110, 7)">Toin CanSat Map</h1>
+        <br>
+        <button onclick="startSerial()">接続</button>
+        <button onclick="stopSerial()">切断</button>
+        <div id="output"></div>
+    </div>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <script>
+        let stopFlag = false;
+        let I, K, status;
+        const outputElement = document.getElementById('output');
+        
+        // 元の console.log を保存
+        const originalConsoleLog = console.log;
+
+        // console.log をオーバーライドして出力をキャプチャ
+        console.log = function(message) {
+            originalConsoleLog.apply(console, arguments);
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            outputElement.appendChild(messageElement);
+            outputElement.scrollTop = outputElement.scrollHeight;
+        };
+    async function startSerial() {
+            try {
+                console.log("INFO: 接続が確立しました");
+                stopFlag = false;
+                const port = await navigator.serial.requestPort();
+                await port.open({ baudRate: 115200 });
+                while (port.readable) {
+                    const reader = port.readable.getReader();
+                    let buffer = "";
+                    try {
+                        while (!stopFlag) {
+                            const { value, done } = await reader.read();
+                            if (done) {
+                                console.log("INFO: 読込モード終了");
+                                break;
+                            }
+                            //生データはバイナリなので、ユニコード文字へデコード
+                            buffer += new TextDecoder().decode(value);
+                            while (buffer.includes('\n')) {
+                                const [data, ...rest] = buffer.split('\n');
+                                if (data.trim()) {
+                                    // 完全なデータを処理
+                                    console.log("受信データ:", data.trim());
+                                    const inputValue = data.trim();
+                                    processInput(inputValue);
+                                }
+                                buffer = rest.join('\n'); // 残りのデータをバッファに戻す
+                            }
+                        }
+                    } catch (error) {
+                        console.log("ERROR: 読み出し失敗");
+                        console.log(error);
+                    } finally {
+                        reader.releaseLock();
+                        await port.close();
+                        console.log("INFO: 接続を切断しました");
+                    }
+                }
+            } catch (error) {
+                console.log("ERRORR: ポートが開けません");
+                console.log(error);
+            }
+        }
+
+/*
+        async function startSerial() {
+            try {
+                console.log("INFO：接続が確立しました");
+                stopFlag = false;
+                const port = await navigator.serial.requestPort();
+                await port.open({ baudRate: 115200 });
+                const reader = port.readable.getReader();
+                try {
+                    while (!stopFlag) {
+                        const { value, done } = await reader.read();
+                        if (done) {
+                            console.log("INFO：読込モード終了");
+                            break;
+                        }
+                        const inputValue = new TextDecoder('utf-8').decode(value);
+                        processInput(inputValue);
+                    }
+                } catch (error) {
+                    console.log("ERROR：読み出し失敗");
+                    console.log(error);
+                } finally {
+                    reader.releaseLock();
+                    await port.close();
+                    console.log("INFO：接続を切断しました");
+                }
+            } catch (error) {
+                console.log("ERROR：ポートが開けません");
+                console.log(error);
+            }
+        }
+*/
+        function stopSerial() {
+            stopFlag = true;
+        }
+
+        function processInput(input) {
+            const gpsRegex = /^(\d):\s*(-?\d+(\.\d+)?),\s*(-?\d+(\.\d+)?)/;
+            const messageRegex = /^(\d):\s*(.+)/;
+            
+            const gpsMatch = input.trim().match(gpsRegex);
+            const messageMatch = input.trim().match(messageRegex);
+
+            if (gpsMatch) {
+                const id = parseInt(gpsMatch[1]);
+                I = ((parseFloat(gpsMatch[2])) / 100) + 0.18046;   // 補正
+                K = ((parseFloat(gpsMatch[4])) / 100) + 0.310586;  // 補正
+
+                let color;
+                switch (id) {
+                    case 1:
+                        color = "#FFA500"; // オレンジ色
+                        break;
+                    case 2:
+                        color = "#05B4FA"; // 黄緑色
+                        break;
+                    case 3:
+                        color = "#EE00EE"; // 紫色
+                        break;
+                    case 4:
+                        color = "3200E5";  // 青色
+                        break;
+                    case 5:
+                        color = "E53100";  // 赤色
+                        break;
+                    default:
+                        color = "#FFFFFF"; // デフォルトは白
+                }
+
+                console.log(`識別番号: ${id}, 緯度: ${I}, 経度: ${K}`);
+                // マーカー追加時は識別番号と位置情報を渡し、メッセージの表示は後で行う
+                addMarker(I, K, color, id);
+
+            } else if (messageMatch) {
+                const id = parseInt(messageMatch[1]);
+                const message = messageMatch[2];
+                messages[id] = message;  // 識別番号ごとにメッセージを保存
+                console.log(`識別番号: ${id}, メッセージ: ${message}`);
+                // 既存のマーカーにメッセージを更新して反映
+                if (markers[id]) {
+                    const infowindow = new google.maps.InfoWindow({
+                        content: message
+                    });
+                    infowindow.open(map, markers[id]);
+                }
+            } else {
+                console.log("ERROR：無効なデータ形式");
+            }
+        }
+    </script>
+</body>
+</html>
