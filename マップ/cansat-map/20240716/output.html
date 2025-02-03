@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="cansat-map.css">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>webSerial</title>
+    <style>
+        #output {
+            border: 5px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+            height: 700px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue">Web Serial API</h1>
+    <br>
+    <button onclick="startSerial()">接続</button>
+    <button onclick="stopSerial()">切断</button>
+    <div id="output"></div>
+    <script>
+        let stopFlag = false;
+        let I, K;
+        // 緯度経度の最小値最大値を設定
+        const Imin = 0;
+        const Imax = 90;
+        const Kmin = 0;
+        const Kmax = 180;
+        const outputElement = document.getElementById('output');
+        
+        // 元の console.log を保存
+        const originalConsoleLog = console.log;
+
+        // console.log をオーバーライドして出力をキャプチャ
+        console.log = function(message) {
+            // 元の console.log を呼び出す
+            originalConsoleLog.apply(console, arguments);
+            
+            // メッセージをページに表示
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            outputElement.appendChild(messageElement);
+
+            // 自動スクロール
+            outputElement.scrollTop = outputElement.scrollHeight;
+        };
+
+        async function startSerial() {
+            try {
+                console.log("INFO：接続が確立しました");
+                stopFlag = false;
+                const port = await navigator.serial.requestPort();
+                await port.open({ baudRate: 9600 });
+                while (port.readable) {
+                    const reader = port.readable.getReader();
+                    try {
+                        while (!stopFlag) {
+                            const { value, done } = await reader.read();
+                            if (done) {
+                                console.log("INFO：読込モード終了");
+                                break;
+                            }
+                            // 生データはバイナリなので、ユニコード文字へデコード
+                            const inputValue = new TextDecoder().decode(value);
+                            processInput(inputValue);
+                        }
+                    } catch (error) {
+                        console.log("ERROR：読み出し失敗");
+                        console.log(error);
+                    } finally {
+                        reader.releaseLock();
+                        await port.close();
+                        console.log("INFO：接続を切断しました");
+                    }
+                }
+            } catch (error) {
+                console.log("ERROR：ポートが開けません");
+                console.log(error);
+            }
+        }
+
+        function stopSerial() {
+            stopFlag = true;
+        }
+
+        function processInput(input) {
+            const regex = /^(\d+(\.\d+)?),\s*(\d+(\.\d+)?)$/;
+            const match = input.trim().match(regex);
+
+            if (match) {
+                I = parseFloat(match[1]);
+                K = parseFloat(match[3]);
+
+                if ((I <= Imin) || (Imax <= I)) {
+                    console.log("ERROR：緯度がきちんと出力されていません");
+                    console.log(`緯度：${I}, 経度：${K}`);
+                    console.log("INFO：出力を停止します")
+                    stopSerial();
+                } else if ((K <= Kmin) || (Kmax <= K)) {
+                    console.log("ERROR：経度がきちんと出力されていません");
+                    console.log(`緯度：${i}, 経度：${K}`);
+                    console.log("INFO：出力を停止します")
+                    stopSerial();
+                } else {
+                    console.log(`緯度：${I}, 経度：${K}`);
+                }
+
+                // if (I <= 0 || K <= 0) {
+                //     console.log("ERROR：緯度または経度がきちんと出力されていません");
+                //     stopSerial();
+                // } else {
+                //     console.log(`緯度: ${I}, 経度: ${K}`);
+                // }
+
+            } else {
+                console.log("ERROR：値が無効です");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
